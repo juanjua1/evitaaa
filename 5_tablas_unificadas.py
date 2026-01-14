@@ -97,7 +97,8 @@ columnas_a_mantener = [
     "Nombre Agente",
     "Tipificación",
     "Cliente",
-    "Causa Terminación"
+    "Causa Terminación",
+    "TalkingTime"
 ]
 
 resultado_filtrado = resultado[columnas_a_mantener].copy()
@@ -118,7 +119,8 @@ columnas_a_mantener_2 = [
     "idInteraccion",
     "Nombre Agente",
     "Tipificación",
-    "Causa Terminación"
+    "Causa Terminación",
+    "TalkingTime"
 ]
 
 resultado_filtrado = resultado_filtrado[columnas_a_mantener_2]

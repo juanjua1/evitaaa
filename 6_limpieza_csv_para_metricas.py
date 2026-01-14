@@ -7,7 +7,7 @@ df["Agente"] = df["Agente"].str.removesuffix(".json")
 
 df2 = pd.read_csv("resultado_final.csv", sep=";", encoding="utf-8")
 df2.head()
-columnas = ["Nombre Agente", "idInteraccion", "Fecha", "Hora", "Cliente"]
+columnas = ["Nombre Agente", "idInteraccion", "Fecha", "Hora", "Cliente", "Tipificación"]
 df2 = df2[columnas]
 
 df_final = df.merge(df2, 
