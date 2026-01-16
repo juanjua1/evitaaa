@@ -1,0 +1,39 @@
+# Carpeta de muestras de audio y transcripciones
+muestra eva/
+
+# Archivos de prueba
+test_correccion.py
+*_CORREGIDO.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Modelos descargados
+pretrained_models/
+
+# Logs y checkpoints
+*.log
+checkpoint.json
+
+# Configuración local
+config.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
