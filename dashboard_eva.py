@@ -1115,26 +1115,46 @@ def pagina_planes_ofrecidos(datos, df):
             st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        # Indicador visual
+        # Indicador visual con mejor legibilidad
         if pct_menciona < 50:
-            st.error(f"""
-            ### ⚠️ Alerta Crítica
-            Solo **{pct_menciona:.1f}%** de las llamadas en días de promoción mencionan el descuento del 80%.
-            
-            **{no_menciona}** llamadas perdieron la oportunidad de ofrecer la promo.
-            """)
+            st.markdown(f"""
+            <div style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%); 
+                        padding: 20px; border-radius: 12px; color: white; 
+                        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
+                <h3 style="margin: 0 0 10px 0; color: white;">🚨 Alerta Crítica</h3>
+                <p style="margin: 0; font-size: 1.1rem; color: white;">
+                    Solo <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento del 80%.
+                </p>
+                <p style="margin: 10px 0 0 0; color: rgba(255,255,255,0.9);">
+                    <strong>{no_menciona}</strong> llamadas perdieron la oportunidad de ofrecer la promo.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
         elif pct_menciona < 70:
-            st.warning(f"""
-            ### ⚠️ Área de Mejora
-            **{pct_menciona:.1f}%** de las llamadas en días de promoción mencionan el descuento.
-            
-            Todavía hay **{no_menciona}** llamadas que no ofrecieron la promo.
-            """)
+            st.markdown(f"""
+            <div style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); 
+                        padding: 20px; border-radius: 12px; color: #1E293B; 
+                        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
+                <h3 style="margin: 0 0 10px 0; color: #1E293B;">⚠️ Área de Mejora</h3>
+                <p style="margin: 0; font-size: 1.1rem; color: #1E293B;">
+                    <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento.
+                </p>
+                <p style="margin: 10px 0 0 0; color: #374151;">
+                    Todavía hay <strong>{no_menciona}</strong> llamadas que no ofrecieron la promo.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
         else:
-            st.success(f"""
-            ### ✅ Buen Desempeño
-            **{pct_menciona:.1f}%** de las llamadas en días de promoción mencionan el descuento del 80%.
-            """)
+            st.markdown(f"""
+            <div style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
+                        padding: 20px; border-radius: 12px; color: white; 
+                        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+                <h3 style="margin: 0 0 10px 0; color: white;">✅ Buen Desempeño</h3>
+                <p style="margin: 0; font-size: 1.1rem; color: white;">
+                    <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento del 80%.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
 
 
 def pagina_coaching_vendedores(datos):
