@@ -1,0 +1,160 @@
+{
+  "archivo": "amza73_1_260114113740078_ACD_22123.wav",
+  "duracion_segundos": 70.52,
+  "num_segmentos": 32,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 26.94,
+    "Cliente": 26.88
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.15,
+      "fin": 3.57,
+      "duracion": 2.42,
+      "texto": "¿Hola? ¿Buenos días?",
+      "confianza": 0.44,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 3.59,
+      "fin": 4.19,
+      "duracion": 0.6,
+      "texto": "Sí, buenos días.",
+      "confianza": 0.374,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.21,
+      "fin": 4.65,
+      "duracion": 0.44,
+      "texto": "¿Díame?",
+      "confianza": 0.693,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.33,
+      "fin": 25.27,
+      "duracion": 19.94,
+      "texto": "Tengo el pesar de comunicarme con Aldana Gabriela. Sí, ¿qué tal? Buenos días, soy yo. Buenos días, Gabriela. Mi nombre es Malena. Yo te estoy llamando de lo que es la compañía Movistar. Sí, para una promoción para tu línea. ¿Cómo estás? ¿Qué tal? Bien, bien. Me alegro. No te disculpa, te escucho muy lejitos.",
+      "confianza": 0.684,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.14,
+      "fin": 30.26,
+      "duracion": 1.12,
+      "texto": "Hola, ¿qué buen día? Hola, buenos días.",
+      "confianza": 0.072,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.27,
+      "fin": 38.51,
+      "duracion": 7.24,
+      "texto": "Sí, ¿cómo va? ¿Cómo le va? ¿Con quién tengo el gusto, perdón? Con Robert Sulta. Un gusto, Robert.",
+      "confianza": 0.224,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 38.53,
+      "fin": 39.44,
+      "duracion": 0.9,
+      "texto": "Mi nombre es Marlene.",
+      "confianza": 0.797,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 39.45,
+      "fin": 44.78,
+      "duracion": 5.33,
+      "texto": "Yo te estoy llamando de lo que es el área que le llamo Vistar, ¿sí? Es porque tenemos una promoción para su línea.",
+      "confianza": 0.611,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 46.48,
+      "fin": 49.73,
+      "duracion": 3.24,
+      "texto": "No sé si Aldana es la titular o es nada más la usuaria.",
+      "confianza": 0.622,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.25,
+      "fin": 60.94,
+      "duracion": 3.69,
+      "texto": "Sí, es la titular, pero ahora no está muy interesado en cambiarnos de línea. Bien, entiendo. Lo han llamado anteriormente.",
+      "confianza": 0.003,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.62,
+      "fin": 70.52,
+      "duracion": 8.9,
+      "texto": "Sí, ya me han llamado, así que te agradezco y gracias. Bien, entiendo, no hay problema.",
+      "confianza": 0.425,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Buenos días? Sí, buenos días. ¿Díame? Tengo el pesar de comunicarme con Aldana Gabriela. Sí, ¿qué tal? Buenos días, soy yo. Buenos días, Gabriela. Mi nombre es Malena. Yo te estoy llamando de lo que es la compañía Movistar. Sí, para una promoción para tu línea. ¿Cómo estás? ¿Qué tal? Bien, bien. Me alegro. No te disculpa, te escucho muy lejitos. Hola, ¿qué buen día? Hola, buenos días. Sí, ¿cómo va? ¿Cómo le va? ¿Con quién tengo el gusto, perdón? Con Robert Sulta. Un gusto, Robert. Mi nombre es Marlene. Yo te estoy llamando de lo que es el área que le llamo Vistar, ¿sí? Es porque tenemos una promoción para su línea. No sé si Aldana es la titular o es nada más la usuaria. Sí, es la titular, pero ahora no está muy interesado en cambiarnos de línea. Bien, entiendo. Lo han llamado anteriormente. Sí, ya me han llamado, así que te agradezco y gracias. Bien, entiendo, no hay problema.",
+  "calidad": {
+    "confianza_promedio": 0.492,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:54:51.323479",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 11,
+    "fecha_correccion": "2026-01-18T23:05:31.566731",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114113740078_ACD_22123",
+    "fecha_inicio": "14/1/2026 11:37:40",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 85,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

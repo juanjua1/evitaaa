@@ -1,0 +1,138 @@
+{
+  "archivo": "amza74_1_260115131832737_ACD_78555.wav",
+  "duracion_segundos": 116.54,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 79.72,
+    "Cliente": 28.07
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.63,
+      "fin": 29.06,
+      "duracion": 27.43,
+      "texto": "¿Me escucha caballero o no me escucha? Ahí se escucha un poco mejor. Bien, tiene buena señal con claro.",
+      "confianza": 0.472,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.33,
+      "fin": 39.29,
+      "duracion": 7.95,
+      "texto": "Por ahora, más o menos, porque estoy en la provincia, así que no agarra bien.",
+      "confianza": 0.382,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 39.79,
+      "fin": 51.14,
+      "duracion": 11.35,
+      "texto": "Yo soy ejecutiva de Movistar, ¿sí? Soy asesora y quería otorgarle un plan para que usted pueda volver a la compañía. ¿Sí?",
+      "confianza": 0.599,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 52.3,
+      "fin": 76.64,
+      "duracion": 24.34,
+      "texto": "Un plan. Es exactamente un plan en Movistar con su mismo número, sí, porque lo mantiene y le queda en un valor de 10.400 pesos, ¿bien? Con ruadamín, cartel 16Gb en total, llamadas ilimitadas, WhatsApp gratis, etcétera, ¿sí? ¿Usted qué tipo de plan tiene con Claro? No, no.",
+      "confianza": 0.11,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 76.66,
+      "fin": 77.3,
+      "duracion": 0.64,
+      "texto": "Por ahora no, no me interesa.",
+      "confianza": 0.119,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 77.32,
+      "fin": 81.74,
+      "duracion": 4.42,
+      "texto": "Ha tenido mala experiencia con nosotros. La verdad que sí.",
+      "confianza": 0.762,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 82.36,
+      "fin": 99.57,
+      "duracion": 17.21,
+      "texto": "Bueno, no hay problema. Tuve bastante tiempo con usted y todos los meses me cobraban 2.000, 3.000 pesos de más, 4.000 pesos de más, no sé por qué. La verdad que sí que tuve mala experiencia porque eso me cambió.",
+      "confianza": 0.047,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 100.77,
+      "fin": 114.78,
+      "duracion": 14.01,
+      "texto": "Pero ahora estamos iguales. Ahora las empresas son todas iguales y igual. De una a la otra pasan lo mismo. Pero igual que ahora dejo por ahora. Ok, no hay problema, que tenga linda tarde.",
+      "confianza": 0.455,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 116.09,
+      "fin": 116.54,
+      "duracion": 0.44,
+      "texto": "Gracias, Bárbaro.",
+      "confianza": 0.158,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Me escucha caballero o no me escucha? Ahí se escucha un poco mejor. Bien, tiene buena señal con claro. Por ahora, más o menos, porque estoy en la provincia, así que no agarra bien. Yo soy ejecutiva de Movistar, ¿sí? Soy asesora y quería otorgarle un plan para que usted pueda volver a la compañía. ¿Sí? Un plan. Es exactamente un plan en Movistar con su mismo número, sí, porque lo mantiene y le queda en un valor de 10.400 pesos, ¿bien? Con ruadamín, cartel 16Gb en total, llamadas ilimitadas, WhatsApp gratis, etcétera, ¿sí? ¿Usted qué tipo de plan tiene con Claro? No, no. Por ahora no, no me interesa. Ha tenido mala experiencia con nosotros. La verdad que sí. Bueno, no hay problema. Tuve bastante tiempo con usted y todos los meses me cobraban 2.000, 3.000 pesos de más, 4.000 pesos de más, no sé por qué. La verdad que sí que tuve mala experiencia porque eso me cambió. Pero ahora estamos iguales. Ahora las empresas son todas iguales y igual. De una a la otra pasan lo mismo. Pero igual que ahora dejo por ahora. Ok, no hay problema, que tenga linda tarde. Gracias, Bárbaro.",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:05:27.565187",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:32.234553",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115131832737_ACD_78555",
+    "fecha_inicio": "15/1/2026 13:18:32",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 155,
+    "tiempo_conversacion": 112,
+    "tiempo_hold": 0,
+    "tiempo_acw": 18,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Ocupado",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

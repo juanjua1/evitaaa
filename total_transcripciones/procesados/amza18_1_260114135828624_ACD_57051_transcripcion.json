@@ -1,0 +1,93 @@
+{
+  "archivo": "amza18_1_260114135828624_ACD_57051.wav",
+  "duracion_segundos": 72.46,
+  "num_segmentos": 21,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 8.99,
+    "Cliente": 59.8
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.38,
+      "fin": 12.58,
+      "duracion": 11.2,
+      "texto": "Hola. Hola, buenas tardes Francisco. ¿Quién habla? Maciel, en mi nombre nos comunicamos del área de beneficio movistar. Vemos Francisco que se encuentra en claro actualmente con sus líneas.",
+      "confianza": 0.19,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.66,
+      "fin": 22.65,
+      "duracion": 8.99,
+      "texto": "El motivo me llamaba para poder mejorarle lo que es la oferta que tiene usted actualmente en claro, para que pueda volver a la compañía con un plan más accesible, ¿sí?",
+      "confianza": 0.806,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.67,
+      "fin": 27.22,
+      "duracion": 4.55,
+      "texto": "Queríamos de igual manera consultarle a Francisco qué le ofrecen mensualmente en su compañía actual,",
+      "confianza": 0.739,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.41,
+      "fin": 72.46,
+      "duracion": 44.05,
+      "texto": "que le brindan. No, te agradezco, mío, te agradezco. Con esta línea que estoy, estoy bien, así que te agradezco. Bien, entiendo. Pero ¿por qué motivo trae no te he comentado el plan ni nada por el estilo? Tal vez te resulta... No, no, igual, ya me salió mal el monitor, así que de ahí no quiero más. Te agradezco. ¿Qué clasín conveniente habías tenido con la compañía, Francisco? Porque yo salí de la provincia y nunca tiene señal nada, no sé, de ahí y ya renunció totalmente. Así que te agradezco todo. Me entiendo. Actualmente, de igual manera, a mejorar lo que son las coberturas en todo el país, digamos, lo que es señal. Si quieres podemos chequear las coberturas, digamos, en las zonas que transitas regularmente.",
+      "confianza": 0.16,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas tardes Francisco. ¿Quién habla? Maciel, en mi nombre nos comunicamos del área de beneficio movistar. Vemos Francisco que se encuentra en claro actualmente con sus líneas. El motivo me llamaba para poder mejorarle lo que es la oferta que tiene usted actualmente en claro, para que pueda volver a la compañía con un plan más accesible, ¿sí? Queríamos de igual manera consultarle a Francisco qué le ofrecen mensualmente en su compañía actual, que le brindan. No, te agradezco, mío, te agradezco. Con esta línea que estoy, estoy bien, así que te agradezco. Bien, entiendo. Pero ¿por qué motivo trae no te he comentado el plan ni nada por el estilo? Tal vez te resulta... No, no, igual, ya me salió mal el monitor, así que de ahí no quiero más. Te agradezco. ¿Qué clasín conveniente habías tenido con la compañía, Francisco? Porque yo salí de la provincia y nunca tiene señal nada, no sé, de ahí y ya renunció totalmente. Así que te agradezco todo. Me entiendo. Actualmente, de igual manera, a mejorar lo que son las coberturas en todo el país, digamos, lo que es señal. Si quieres podemos chequear las coberturas, digamos, en las zonas que transitas regularmente.",
+  "calidad": {
+    "confianza_promedio": 0.37,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:31:15.394001",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:15.450396",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114135828624_ACD_57051",
+    "fecha_inicio": "14/1/2026 13:58:28",
+    "agente_nombre": "MZA 18",
+    "agente_login": "mza18",
+    "duracion_total": 98,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

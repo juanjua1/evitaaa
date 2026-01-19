@@ -1,0 +1,101 @@
+{
+  "archivo": "amza23_1_260116133345595_ACD_53363.wav",
+  "duracion_segundos": 62.81,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 3.27,
+    "Cliente": 55.44
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.23,
+      "fin": 3.5,
+      "duracion": 3.27,
+      "texto": "Hola, ¿qué tal? Buenas tardes.",
+      "confianza": 0.569,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.1,
+      "fin": 16.98,
+      "duracion": 11.88,
+      "texto": "Macarena es mi nombre, me estoy contactando para otorgarles una muy buena promoción en las líneas. ¿Hablo con Emma Raquel? No, muchas gracias. Pero no le he comentado nada por el momento.",
+      "confianza": 0.538,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.6,
+      "fin": 30.16,
+      "duracion": 12.56,
+      "texto": "Sí, pero no puedo porque el teléfono no es liberado. Bien. Perfecto. Y respecto al servicio de la internet, ¿le han comentado acerca de la promoción?",
+      "confianza": 0.515,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.82,
+      "fin": 45.77,
+      "duracion": 14.95,
+      "texto": "Vivo en un barrio de Mercencia y no entra en internet de claro, ni movistar, ni nada. ¿Ya se los pudieron corroborar anteriormente? Sí, sí, sí.",
+      "confianza": 0.494,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.76,
+      "fin": 62.81,
+      "duracion": 16.05,
+      "texto": "Pero eso igual nos informaron que se va renovando a diario. ¿Se lo pudieron informar? Sí, pero no. Vivo en un barrio de emergencia, en una villa.",
+      "confianza": 0.62,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buenas tardes. Macarena es mi nombre, me estoy contactando para otorgarles una muy buena promoción en las líneas. ¿Hablo con Emma Raquel? No, muchas gracias. Pero no le he comentado nada por el momento. Sí, pero no puedo porque el teléfono no es liberado. Bien. Perfecto. Y respecto al servicio de la internet, ¿le han comentado acerca de la promoción? Vivo en un barrio de Mercencia y no entra en internet de claro, ni movistar, ni nada. ¿Ya se los pudieron corroborar anteriormente? Sí, sí, sí. Pero eso igual nos informaron que se va renovando a diario. ¿Se lo pudieron informar? Sí, pero no. Vivo en un barrio de emergencia, en una villa.",
+  "calidad": {
+    "confianza_promedio": 0.635,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:23:48.201330",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:18.646469",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116133345595_ACD_53363",
+    "fecha_inicio": "16/1/2026 13:33:45",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 84,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

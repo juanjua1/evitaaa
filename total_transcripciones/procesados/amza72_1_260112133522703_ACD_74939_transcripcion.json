@@ -1,0 +1,92 @@
+{
+  "archivo": "amza72_1_260112133522703_ACD_74939.wav",
+  "duracion_segundos": 75.7,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.71,
+    "Cliente": 46.48
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 2.73,
+      "duracion": 2.7,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.784,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.3,
+      "fin": 25.28,
+      "duracion": 20.98,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.752,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 29.88,
+      "fin": 47.89,
+      "duracion": 18.01,
+      "texto": "Bueno, un día para el duerto. Estamos juntos.",
+      "confianza": 0.45,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.2,
+      "fin": 75.7,
+      "duracion": 25.5,
+      "texto": "¿Cuál es el problema?",
+      "confianza": 0.42,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. Bueno, un día para el duerto. Estamos juntos. ¿Cuál es el problema?",
+  "calidad": {
+    "confianza_promedio": 0.586,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:44:36.972095",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 5,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:30.935796",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112133522703_ACD_74939",
+    "fecha_inicio": "12/1/2026 13:35:22",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 106,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Problemas de señal MVS en su zona",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

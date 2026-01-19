@@ -1,0 +1,129 @@
+{
+  "archivo": "amza43_1_260112133735190_ACD_82959.wav",
+  "duracion_segundos": 86.59,
+  "num_segmentos": 27,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 18.04,
+    "Cliente": 60.19
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.5,
+      "fin": 12.77,
+      "duracion": 11.27,
+      "texto": "Hola, buenas tardes, ¿me comunico con Federico? Sí, él habla. ¿Cómo le va a Franco en mi nombre? Llamaba esta tarde para brindarle una promoción para su línea móvil, si actualmente están claros, ¿correcto?",
+      "confianza": 0.471,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.45,
+      "fin": 28.45,
+      "duracion": 14.0,
+      "texto": "Sí. ¿Fue el ser Federico que estás abonando alrededor de 30.000 pesos por tu línea móvil? Mira, no sabría decirte porque lo tengo directamente con débito automático. ¿Pero es solo tu línea o estás brindando o preparando algún otro servicio?",
+      "confianza": 0.523,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.49,
+      "fin": 60.13,
+      "duracion": 30.64,
+      "texto": "No, no, solo la línea. Bien, yo verificaba que estabas abonando eso aproximadamente. ¿Tenés idea por cuántos gigas? No, la verdad que no. Pero te sirven, digamos, para todo el mes, para tu consumo mensual. Sí. Cuando estás afuera y demás. Sí, sí. Bien. Yo te digo que por 8 gigas más 8 de regalo y 20 más que actualmente está regalando Movistar, o sea 36 gigas, estarías pagando 13.250, la mitad de lo que estás abonando al día de hoy.",
+      "confianza": 0.345,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 60.71,
+      "fin": 67.48,
+      "duracion": 6.77,
+      "texto": "con llamadas gratis, mensajes igual y WhatsApp gratis, que por ahí el WhatsApp suele consumir mucho, es lo que más usamos habitualmente.",
+      "confianza": 0.621,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 68.36,
+      "fin": 74.11,
+      "duracion": 5.75,
+      "texto": "Y esto es aparte y lo llevas. Ok, hagamos una conversación más tarde, porque justo ahora estoy trabajando.",
+      "confianza": 0.664,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 74.69,
+      "fin": 80.98,
+      "duracion": 6.29,
+      "texto": "Ya me dejó el E5 y charlamos bien. Perfecto, dale, te voy a dejar un mensajito para que te quede constancia en mi número, ¿sí?",
+      "confianza": 0.413,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 81.98,
+      "fin": 83.94,
+      "duracion": 1.96,
+      "texto": "Dale, genial. Perfecto, que tengas buen día.",
+      "confianza": 0.341,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 85.04,
+      "fin": 86.59,
+      "duracion": 1.55,
+      "texto": "Igualmente, saludo. Gracias.",
+      "confianza": 0.689,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes, ¿me comunico con Federico? Sí, él habla. ¿Cómo le va a Franco en mi nombre? Llamaba esta tarde para brindarle una promoción para su línea móvil, si actualmente están claros, ¿correcto? Sí. ¿Fue el ser Federico que estás abonando alrededor de 30.000 pesos por tu línea móvil? Mira, no sabría decirte porque lo tengo directamente con débito automático. ¿Pero es solo tu línea o estás brindando o preparando algún otro servicio? No, no, solo la línea. Bien, yo verificaba que estabas abonando eso aproximadamente. ¿Tenés idea por cuántos gigas? No, la verdad que no. Pero te sirven, digamos, para todo el mes, para tu consumo mensual. Sí. Cuando estás afuera y demás. Sí, sí. Bien. Yo te digo que por 8 gigas más 8 de regalo y 20 más que actualmente está regalando Movistar, o sea 36 gigas, estarías pagando 13.250, la mitad de lo que estás abonando al día de hoy. con llamadas gratis, mensajes igual y WhatsApp gratis, que por ahí el WhatsApp suele consumir mucho, es lo que más usamos habitualmente. Y esto es aparte y lo llevas. Ok, hagamos una conversación más tarde, porque justo ahora estoy trabajando. Ya me dejó el E5 y charlamos bien. Perfecto, dale, te voy a dejar un mensajito para que te quede constancia en mi número, ¿sí? Dale, genial. Perfecto, que tengas buen día. Igualmente, saludo. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.521,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:54:41.680554",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 27,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:27.976782",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112133735190_ACD_82959",
+    "fecha_inicio": "12/1/2026 13:37:35",
+    "agente_nombre": "MZA 43",
+    "agente_login": "mza43",
+    "duracion_total": 218,
+    "tiempo_conversacion": 84,
+    "tiempo_hold": 0,
+    "tiempo_acw": 120,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No Disp.",
+    "tipo_tipificacion": "nan"
+  }
+}

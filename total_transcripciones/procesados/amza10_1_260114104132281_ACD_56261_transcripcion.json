@@ -1,0 +1,102 @@
+{
+  "archivo": "amza10_1_260114104132281_ACD_56261.wav",
+  "duracion_segundos": 73.64,
+  "num_segmentos": 31,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 11.49,
+    "Cliente": 53.16
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.72,
+      "fin": 13.21,
+      "duracion": 11.49,
+      "texto": "Hola, buenos días. ¿Con Julieta? Hola, ¿qué tal? Me llamas de Movistar. Sí, ¿cómo estás, Juli? Me estoy convirtiendo en el área de Recupero de Movistar. ¿Todo bien? Todo bien, mira.",
+      "confianza": 0.523,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.08,
+      "fin": 25.63,
+      "duracion": 7.55,
+      "texto": "Me llaman todos los días. Yo se la había visto a una de las chicas. Este celular es corporativo. Y como no tengo las líneas, yo no pienso cambiar. Ah, ese es el nombre de tus dos, pero no la van a poner con Julieta.",
+      "confianza": 0.014,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 26.75,
+      "fin": 47.25,
+      "duracion": 20.5,
+      "texto": "Claro, lo aboné la empresa. Ah, ok. Bien, perfecto. ¿Y tenés algún servicio de internet en tu domicilio? Sí, tengo, así que te agradezco. Nosotros tenemos un servicio que te podemos ofrecer que es fibra óptica, en el caso de que a vos te interese, no sé cuánto estás abonando.",
+      "confianza": 0.37,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.91,
+      "fin": 63.79,
+      "duracion": 15.88,
+      "texto": "No, te agradezco. Te agradezco mucho, la verdad. ¿Hay alguna posibilidad de que puedan sacar mi número? Es más, porque me están matando las vías. Bueno, mira, voy a dejar asentado que no estáis interesados y no tengo acceso igual a sacarle el número, ¿sí? Pero lo haré para asentado.",
+      "confianza": 0.538,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 64.41,
+      "fin": 73.64,
+      "duracion": 9.23,
+      "texto": "Más que nada, que pongas que es un número corporativo por las dudas. Sí, eso voy a poner cliente corporativo. Dale. Dale, gracias. Muchas gracias. Adiós.",
+      "confianza": 0.51,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Con Julieta? Hola, ¿qué tal? Me llamas de Movistar. Sí, ¿cómo estás, Juli? Me estoy convirtiendo en el área de Recupero de Movistar. ¿Todo bien? Todo bien, mira. Me llaman todos los días. Yo se la había visto a una de las chicas. Este celular es corporativo. Y como no tengo las líneas, yo no pienso cambiar. Ah, ese es el nombre de tus dos, pero no la van a poner con Julieta. Claro, lo aboné la empresa. Ah, ok. Bien, perfecto. ¿Y tenés algún servicio de internet en tu domicilio? Sí, tengo, así que te agradezco. Nosotros tenemos un servicio que te podemos ofrecer que es fibra óptica, en el caso de que a vos te interese, no sé cuánto estás abonando. No, te agradezco. Te agradezco mucho, la verdad. ¿Hay alguna posibilidad de que puedan sacar mi número? Es más, porque me están matando las vías. Bueno, mira, voy a dejar asentado que no estáis interesados y no tengo acceso igual a sacarle el número, ¿sí? Pero lo haré para asentado. Más que nada, que pongas que es un número corporativo por las dudas. Sí, eso voy a poner cliente corporativo. Dale. Dale, gracias. Muchas gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.319,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T16:59:31.856173",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 31,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:13.446211",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114104132281_ACD_56261",
+    "fecha_inicio": "14/1/2026 10:41:32",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 100,
+    "tiempo_conversacion": 77,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Corporativo",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

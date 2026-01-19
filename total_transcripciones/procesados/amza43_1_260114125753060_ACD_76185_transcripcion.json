@@ -1,0 +1,130 @@
+{
+  "archivo": "amza43_1_260114125753060_ACD_76185.wav",
+  "duracion_segundos": 97.0,
+  "num_segmentos": 37,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 51.23,
+    "Cliente": 35.38
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.85,
+      "fin": 4.13,
+      "duracion": 2.28,
+      "texto": "Hola, ¿buenas tardes? ¿Me comunico con Griselda?",
+      "confianza": 0.535,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.16,
+      "fin": 29.68,
+      "duracion": 24.52,
+      "texto": "Sí. ¿Cómo le va, Franco? Mi nombre llamada al día de hoy para hacerte llegar una promoción para tu línea móvil, que actualmente es. ¿Te encuentras claro? ¿Es correcto? No, no, no. No, estoy bien movida. Así que te agradezco. Ah, ¿te pasó? Bien, lo voy a dejar asentado. Te hago una consulta. ¿Sólo con tu línea te pasaste? No, no, tres líneas. Las tres líneas que están a mi nombre. ¿Y te brindaron el servicio de fibra óptica?",
+      "confianza": 0.505,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.22,
+      "fin": 56.6,
+      "duracion": 25.38,
+      "texto": "No, no llega acá porque no tenemos cable de teléfono porque lo robaron. Así que tuve que darle baja. Yo tenía todo el servicio de movilizar, pero cuando se robaron los cables, chau. Ahora, supongo que cuando hicieron la venta, te hicieron el chequeo de cobertura, me imagino.",
+      "confianza": 0.521,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.36,
+      "fin": 65.84,
+      "duracion": 5.48,
+      "texto": "¿Cómo cuando? No entiendo. ¿Las líneas las pasaste de manera telefónica?",
+      "confianza": 0.3,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.97,
+      "fin": 68.79,
+      "duracion": 0.82,
+      "texto": "Sí, sí, sí, sí.",
+      "confianza": 0.238,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 68.83,
+      "fin": 83.35,
+      "duracion": 14.52,
+      "texto": "Está todo correcto. No te ofrecian nada bueno. Todo era malo, claro. Entonces, bueno, los pasamos. Claro, lo que yo te pregunto, la persona que te vendió, ¿te ofreció también el servicio? ¿Es decir, te chequeó cobertura por tu fibra óptica?",
+      "confianza": 0.266,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 83.37,
+      "fin": 85.65,
+      "duracion": 2.28,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.449,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 85.67,
+      "fin": 97.0,
+      "duracion": 11.33,
+      "texto": "No, por todo. Por todo, pero no puedo ponerlo en su cable. No tengo línea de teléfono. Gracias. Adiós.",
+      "confianza": 0.343,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿buenas tardes? ¿Me comunico con Griselda? Sí. ¿Cómo le va, Franco? Mi nombre llamada al día de hoy para hacerte llegar una promoción para tu línea móvil, que actualmente es. ¿Te encuentras claro? ¿Es correcto? No, no, no. No, estoy bien movida. Así que te agradezco. Ah, ¿te pasó? Bien, lo voy a dejar asentado. Te hago una consulta. ¿Sólo con tu línea te pasaste? No, no, tres líneas. Las tres líneas que están a mi nombre. ¿Y te brindaron el servicio de fibra óptica? No, no llega acá porque no tenemos cable de teléfono porque lo robaron. Así que tuve que darle baja. Yo tenía todo el servicio de movilizar, pero cuando se robaron los cables, chau. Ahora, supongo que cuando hicieron la venta, te hicieron el chequeo de cobertura, me imagino. ¿Cómo cuando? No entiendo. ¿Las líneas las pasaste de manera telefónica? Sí, sí, sí, sí. Está todo correcto. No te ofrecian nada bueno. Todo era malo, claro. Entonces, bueno, los pasamos. Claro, lo que yo te pregunto, la persona que te vendió, ¿te ofreció también el servicio? ¿Es decir, te chequeó cobertura por tu fibra óptica? Sí, sí, sí. No, por todo. Por todo, pero no puedo ponerlo en su cable. No tengo línea de teléfono. Gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.449,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:57:09.025539",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 37,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:28.127209",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114125753060_ACD_76185",
+    "fecha_inicio": "14/1/2026 12:57:53",
+    "agente_nombre": "MZA 43",
+    "agente_login": "mza43",
+    "duracion_total": 131,
+    "tiempo_conversacion": 92,
+    "tiempo_hold": 0,
+    "tiempo_acw": 9,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Ya tiene MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

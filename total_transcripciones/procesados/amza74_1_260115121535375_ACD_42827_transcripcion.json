@@ -1,0 +1,113 @@
+{
+  "archivo": "amza74_1_260115121535375_ACD_42827.wav",
+  "duracion_segundos": 139.49,
+  "num_segmentos": 10,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 30.88,
+    "Cliente": 99.69
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 22.02,
+      "duracion": 21.99,
+      "texto": "¿Poblía qué tal? ¿Poblía en Sebastián?",
+      "confianza": 0.483,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 26.66,
+      "fin": 30.18,
+      "duracion": 3.52,
+      "texto": "Bien.",
+      "confianza": 0.568,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.2,
+      "fin": 54.49,
+      "duracion": 24.29,
+      "texto": "Claro, puede ser eso. En este caso, lo que te puedo ofrecer ahora mismo para poder ver esto, es que me dirigen la dirección de donde te vamos a mover y yo te conseño que nos vamos con la distancia.",
+      "confianza": 0.484,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.3,
+      "fin": 104.55,
+      "duracion": 46.25,
+      "texto": "No, no, no, no, no, no, no, no, no, no. con calma, porque hay que ver quién, quién es. Bien,",
+      "confianza": 0.518,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 104.55,
+      "fin": 111.14,
+      "duracion": 6.59,
+      "texto": "bien, bien, bien, bien, bien, bien, bien.",
+      "confianza": 0.394,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 111.56,
+      "fin": 139.49,
+      "duracion": 27.93,
+      "texto": "Yo era combinada con los barrios, pero ella era mía, él era grande, también por mi supecito, porque era hambre. Y luego se me quedó y me llevó un corazón, entonces me aportó el servicio.",
+      "confianza": 0.358,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Poblía qué tal? ¿Poblía en Sebastián? Bien. Claro, puede ser eso. En este caso, lo que te puedo ofrecer ahora mismo para poder ver esto, es que me dirigen la dirección de donde te vamos a mover y yo te conseño que nos vamos con la distancia. No, no, no, no, no, no, no, no, no, no. con calma, porque hay que ver quién, quién es. Bien, bien, bien, bien, bien, bien, bien, bien. Yo era combinada con los barrios, pero ella era mía, él era grande, también por mi supecito, porque era hambre. Y luego se me quedó y me llevó un corazón, entonces me aportó el servicio.",
+  "calidad": {
+    "confianza_promedio": 0.452,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:05:07.553509",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 10,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:32.209518",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115121535375_ACD_42827",
+    "fecha_inicio": "15/1/2026 12:15:35",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 152,
+    "tiempo_conversacion": 133,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

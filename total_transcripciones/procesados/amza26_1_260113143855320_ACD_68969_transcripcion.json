@@ -1,0 +1,121 @@
+{
+  "archivo": "amza26_1_260113143855320_ACD_68969.wav",
+  "duracion_segundos": 217.2,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 32.6,
+    "Cliente": 6.82
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.23,
+      "fin": 8.62,
+      "duracion": 8.39,
+      "texto": "Hola. Hola. Hola, buen día.",
+      "confianza": 0.405,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.86,
+      "fin": 10.42,
+      "duracion": 0.56,
+      "texto": "Sí.",
+      "confianza": 0.492,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.44,
+      "fin": 27.42,
+      "duracion": 16.98,
+      "texto": "¿Cómo estás? Buen día, mi nombre es Alejandro. Me comunico de la área de recupero del cliente, vamos a visitar. ¿Cómo estás? Todo bien. Todo bien. El motivo de mi llamada es porque quería saber por qué te cambiaste de compañía en su momento. Dame un segundito que ahora te doy con las responsables.",
+      "confianza": 0.671,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.12,
+      "fin": 58.54,
+      "duracion": 5.42,
+      "texto": "Hola. ¿Hola? Sí. Sí.",
+      "confianza": 0.408,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.56,
+      "fin": 59.59,
+      "duracion": 1.02,
+      "texto": "¿Aguárdame un segundito?",
+      "confianza": 0.328,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.11,
+      "fin": 60.95,
+      "duracion": 0.84,
+      "texto": "No, oye, sí.",
+      "confianza": 0.604,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 210.99,
+      "fin": 217.2,
+      "duracion": 6.21,
+      "texto": "Hola, Alejandro. Le corto.",
+      "confianza": 0.556,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, buen día. Sí. ¿Cómo estás? Buen día, mi nombre es Alejandro. Me comunico de la área de recupero del cliente, vamos a visitar. ¿Cómo estás? Todo bien. Todo bien. El motivo de mi llamada es porque quería saber por qué te cambiaste de compañía en su momento. Dame un segundito que ahora te doy con las responsables. Hola. ¿Hola? Sí. Sí. ¿Aguárdame un segundito? No, oye, sí. Hola, Alejandro. Le corto.",
+  "calidad": {
+    "confianza_promedio": 0.47,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:38:09.416377",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 20,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:19.654365",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113143855320_ACD_68969",
+    "fecha_inicio": "13/1/2026 14:38:55",
+    "agente_nombre": "MZA 26",
+    "agente_login": "mza26",
+    "duracion_total": 238,
+    "tiempo_conversacion": 211,
+    "tiempo_hold": 0,
+    "tiempo_acw": 7,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

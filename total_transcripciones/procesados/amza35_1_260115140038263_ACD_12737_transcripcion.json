@@ -1,0 +1,130 @@
+{
+  "archivo": "amza35_1_260115140038263_ACD_12737.wav",
+  "duracion_segundos": 74.28,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 24.09,
+    "Cliente": 43.6
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.26,
+      "fin": 27.56,
+      "duracion": 26.3,
+      "texto": "¿Hola? ¿Hablo con María Florencia? Sí. ¿Qué tal? Un gusto María, te hablo Guadalupe. Me corto el día de hoy porque veo que tenés esta línea activa con cláreos, ¿así? Sí. Bien, quería darte lo que es un descuento para que pares menos y tengas más rigas. Es un plan que te quedan 10,400 y son 16 rigas en total, ¿sí? Porque te damos 8 de base más 8 de regalo.",
+      "confianza": 0.529,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.4,
+      "fin": 37.83,
+      "duracion": 9.43,
+      "texto": "tendrías lo que es esto con dos mil námenes en América, WhatsApp gratis, hables libre a cualquier compañía y es un descuento que tenés por seis meses.",
+      "confianza": 0.52,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.85,
+      "fin": 41.51,
+      "duracion": 3.66,
+      "texto": "¿Pero vos de dónde me estás llamando? Yo te hablo de la compañía de Movistar, María.",
+      "confianza": 0.465,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.83,
+      "fin": 53.36,
+      "duracion": 10.53,
+      "texto": "Ah, no, no te agradezco. Por el momento no quiero cambiar de compañía, nada. No te agradezco la información igual. Claro, bien. ¿Por algún particular es que no te interesa?",
+      "confianza": 0.459,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.84,
+      "fin": 57.31,
+      "duracion": 2.47,
+      "texto": "No, no, no. Estoy conforme con la compañía que tengo.",
+      "confianza": 0.537,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.94,
+      "fin": 65.14,
+      "duracion": 6.2,
+      "texto": "¿Y fibra óptica tenés en lo que es el domicilio?",
+      "confianza": 0.628,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 65.16,
+      "fin": 65.8,
+      "duracion": 0.64,
+      "texto": "Sí, sí, todo. Claro.",
+      "confianza": 0.14,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 65.82,
+      "fin": 74.28,
+      "duracion": 8.46,
+      "texto": "Bueno, entonces, si tengas miedo, y hasta luego.",
+      "confianza": 0.437,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Hablo con María Florencia? Sí. ¿Qué tal? Un gusto María, te hablo Guadalupe. Me corto el día de hoy porque veo que tenés esta línea activa con cláreos, ¿así? Sí. Bien, quería darte lo que es un descuento para que pares menos y tengas más rigas. Es un plan que te quedan 10,400 y son 16 rigas en total, ¿sí? Porque te damos 8 de base más 8 de regalo. tendrías lo que es esto con dos mil námenes en América, WhatsApp gratis, hables libre a cualquier compañía y es un descuento que tenés por seis meses. ¿Pero vos de dónde me estás llamando? Yo te hablo de la compañía de Movistar, María. Ah, no, no te agradezco. Por el momento no quiero cambiar de compañía, nada. No te agradezco la información igual. Claro, bien. ¿Por algún particular es que no te interesa? No, no, no. Estoy conforme con la compañía que tengo. ¿Y fibra óptica tenés en lo que es el domicilio? Sí, sí, todo. Claro. Bueno, entonces, si tengas miedo, y hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.491,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:02:32.469640",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:24.955887",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115140038263_ACD_12737",
+    "fecha_inicio": "15/1/2026 14:00:38",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 89,
+    "tiempo_conversacion": 76,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

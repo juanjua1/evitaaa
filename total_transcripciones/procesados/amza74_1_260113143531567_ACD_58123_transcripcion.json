@@ -1,0 +1,111 @@
+{
+  "archivo": "amza74_1_260113143531567_ACD_58123.wav",
+  "duracion_segundos": 63.97,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 17.07,
+    "Cliente": 43.44
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 4.66,
+      "duracion": 4.62,
+      "texto": "Hola.",
+      "confianza": 0.696,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.68,
+      "fin": 4.74,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.285,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.76,
+      "fin": 17.21,
+      "duracion": 12.45,
+      "texto": "Hola, ¿cómo estás? Hablé con Cassandra. Sí, soy yo. ¿Cómo estás, Cassandra? Un gusto. Mi nombre es Luz Mila. Sí, te estoy llamando hoy a la compañía, Voystar, ¿sí? Creo que te encontrarás actualmente en claro, ¿correcto?",
+      "confianza": 0.12,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.77,
+      "fin": 49.44,
+      "duracion": 30.67,
+      "texto": "Sí, sí. Perfecto. Tenemos un plan hoy en día para tu línea. Bien, es un plan de tan solo 16 gigas en 13.200 pesos. No sé cuánto estás pagando hoy en día en Claro, ¿me puedes comentar? Ah, sí, ya me ofrecieron los mismos precios y yo le dije que tengo todo un combo con Claro, porque tengo cable, tengo el Wi-Fi, tengo las dos líneas en abono y estoy pagando 38. Y ahí has acabado con tu compañía y estaría pagando, no, 35, estoy pagando en Claro, y con Movistar estaría pagando 47 mil. Y se me iba mucho.",
+      "confianza": 0.427,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.16,
+      "fin": 53.12,
+      "duracion": 2.96,
+      "texto": "Me dijeron que me iban a llamar cuando tenian una nueva oferta.",
+      "confianza": 0.426,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.22,
+      "fin": 63.97,
+      "duracion": 9.75,
+      "texto": "Perfecto. Bueno, entiendo. No hay problema. Cuando tengamos algo menor, obviamente me comunicaré con usted, ¿sí? Dale, muchas gracias. Hasta luego. Chao, chao.",
+      "confianza": 0.336,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Sí. Hola, ¿cómo estás? Hablé con Cassandra. Sí, soy yo. ¿Cómo estás, Cassandra? Un gusto. Mi nombre es Luz Mila. Sí, te estoy llamando hoy a la compañía, Voystar, ¿sí? Creo que te encontrarás actualmente en claro, ¿correcto? Sí, sí. Perfecto. Tenemos un plan hoy en día para tu línea. Bien, es un plan de tan solo 16 gigas en 13.200 pesos. No sé cuánto estás pagando hoy en día en Claro, ¿me puedes comentar? Ah, sí, ya me ofrecieron los mismos precios y yo le dije que tengo todo un combo con Claro, porque tengo cable, tengo el Wi-Fi, tengo las dos líneas en abono y estoy pagando 38. Y ahí has acabado con tu compañía y estaría pagando, no, 35, estoy pagando en Claro, y con Movistar estaría pagando 47 mil. Y se me iba mucho. Me dijeron que me iban a llamar cuando tenian una nueva oferta. Perfecto. Bueno, entiendo. No hay problema. Cuando tengamos algo menor, obviamente me comunicaré con usted, ¿sí? Dale, muchas gracias. Hasta luego. Chao, chao.",
+  "calidad": {
+    "confianza_promedio": 0.444,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:03:56.748453",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:32.138737",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113143531567_ACD_58123",
+    "fecha_inicio": "13/1/2026 14:35:31",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 83,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

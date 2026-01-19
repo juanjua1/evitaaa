@@ -1,0 +1,84 @@
+{
+  "archivo": "amza73_1_260116111221745_MIT_01992.wav",
+  "duracion_segundos": 75.45,
+  "num_segmentos": 27,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 73.49
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.55,
+      "fin": 28.99,
+      "duracion": 28.44,
+      "texto": "Hola. Estela, ¿se cortó? Sí. No hay problema. Estela, ¿su código era 3065?",
+      "confianza": 0.36,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.9,
+      "fin": 59.03,
+      "duracion": 29.13,
+      "texto": "¿Me escuchan? Sí, sí, sí, 3 de 75. Lo que pasa es que estoy trabajando y me están mirando en los ángeles, por eso no puedo hablar mucho. Te pedo disculpas, Estela. ¿No hicieron lo que decías de re-conversar ahí? Listo, perfecto, Estela. Entonces, ya que quedaría todo listo, bienvenida a Movistar. Bueno, gracias. Bien. La foto... Falte la foto y el documento, Estela. ¿Usted la tendrá a mano? No, no la tengo acá porque estoy trabajando, la tengo en mi casa. Bien, usted como alguien la podrá mandarle la foto.",
+      "confianza": 0.25,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.53,
+      "fin": 75.45,
+      "duracion": 15.92,
+      "texto": "Sí puedo en la tarde, más o menos estoy en mi casa, así que puedo mandar las fotos. Dale, perfecto. Estela, yo ahora te mando un mensajito por WhatsApp. Bueno, bueno, bueno. Gracias, Estela. Bienvenida en WhatsApp. Gracias. Hasta luego. Hasta luego.",
+      "confianza": 0.621,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    }
+  ],
+  "transcripcion_completa": "Hola. Estela, ¿se cortó? Sí. No hay problema. Estela, ¿su código era 3065? ¿Me escuchan? Sí, sí, sí, 3 de 75. Lo que pasa es que estoy trabajando y me están mirando en los ángeles, por eso no puedo hablar mucho. Te pedo disculpas, Estela. ¿No hicieron lo que decías de re-conversar ahí? Listo, perfecto, Estela. Entonces, ya que quedaría todo listo, bienvenida a Movistar. Bueno, gracias. Bien. La foto... Falte la foto y el documento, Estela. ¿Usted la tendrá a mano? No, no la tengo acá porque estoy trabajando, la tengo en mi casa. Bien, usted como alguien la podrá mandarle la foto. Sí puedo en la tarde, más o menos estoy en mi casa, así que puedo mandar las fotos. Dale, perfecto. Estela, yo ahora te mando un mensajito por WhatsApp. Bueno, bueno, bueno. Gracias, Estela. Bienvenida en WhatsApp. Gracias. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.42,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:59:51.652296",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 27,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:31.882440",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116111221745_MIT_01992",
+    "fecha_inicio": "16/1/2026 11:12:22",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 75,
+    "tiempo_conversacion": 74,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Venta",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

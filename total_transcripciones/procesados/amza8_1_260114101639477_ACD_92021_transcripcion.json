@@ -1,0 +1,92 @@
+{
+  "archivo": "amza8_1_260114101639477_ACD_92021.wav",
+  "duracion_segundos": 90.06,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 11.7,
+    "Cliente": 72.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.8,
+      "fin": 4.35,
+      "duracion": 2.54,
+      "texto": "o en la que está el buen diálogo con Patricia.",
+      "confianza": 0.43,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.17,
+      "fin": 14.32,
+      "duracion": 9.16,
+      "texto": "Mi nombre es Thiago, yo me estoy contactando de lo que es el área de recuperación de clientes movistar para saber por qué se había ido a la compañía, cuál fue su inconveniente.",
+      "confianza": 0.536,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.37,
+      "fin": 38.88,
+      "duracion": 22.51,
+      "texto": "Te pido un favor, vos sabés que nos están llamando entre 4 y 5 veces por día, ya dijimos que no y no entiendo por qué siguen llamando de esta manera. Te pido por favor que saque el teléfono de la base de datos o que pongas que ya no queremos recibir más llamadas, algo por el estilo, porque ya esto es como un acoso.",
+      "confianza": 0.645,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.2,
+      "fin": 90.06,
+      "duracion": 49.86,
+      "texto": "Es terrible, en serio. Yo quiero que me entiendan la parte nuestra. Si nosotros cambiamos de compañía es porque decimos que es lo mejor. Entonces, no puedo estar hablando de explicaciones cuatro veces por día. Pero si no, no te estoy pidiendo explicaciones de nada. Te estoy comentando cómo puedes hacer para que no te sigan llamando. Eso es lo que te quiero comentar. Perfecto. Lo que puedes hacer es ingresar al registro, no llames a través de Google, registrar lo que es tu número. y básicamente ya no te dejan de llamar, yo lo puedo dejar asentado, pero lo voy a dejar asentado en este call center nada más. Ok, dale buenísimo, no me llames, así se llama. Perfecto, muchas gracias, muy amables. Gracias a vos, hasta luego. Hasta luego, buen día.",
+      "confianza": 0.633,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "o en la que está el buen diálogo con Patricia. Mi nombre es Thiago, yo me estoy contactando de lo que es el área de recuperación de clientes movistar para saber por qué se había ido a la compañía, cuál fue su inconveniente. Te pido un favor, vos sabés que nos están llamando entre 4 y 5 veces por día, ya dijimos que no y no entiendo por qué siguen llamando de esta manera. Te pido por favor que saque el teléfono de la base de datos o que pongas que ya no queremos recibir más llamadas, algo por el estilo, porque ya esto es como un acoso. Es terrible, en serio. Yo quiero que me entiendan la parte nuestra. Si nosotros cambiamos de compañía es porque decimos que es lo mejor. Entonces, no puedo estar hablando de explicaciones cuatro veces por día. Pero si no, no te estoy pidiendo explicaciones de nada. Te estoy comentando cómo puedes hacer para que no te sigan llamando. Eso es lo que te quiero comentar. Perfecto. Lo que puedes hacer es ingresar al registro, no llames a través de Google, registrar lo que es tu número. y básicamente ya no te dejan de llamar, yo lo puedo dejar asentado, pero lo voy a dejar asentado en este call center nada más. Ok, dale buenísimo, no me llames, así se llama. Perfecto, muchas gracias, muy amables. Gracias a vos, hasta luego. Hasta luego, buen día.",
+  "calidad": {
+    "confianza_promedio": 0.521,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:08:05.092595",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 18,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:32.409026",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114101639477_ACD_92021",
+    "fecha_inicio": "14/1/2026 10:16:39",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 117,
+    "tiempo_conversacion": 88,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_Mza_ALT",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

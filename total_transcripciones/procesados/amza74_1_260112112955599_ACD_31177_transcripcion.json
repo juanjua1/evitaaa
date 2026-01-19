@@ -1,0 +1,143 @@
+{
+  "archivo": "amza74_1_260112112955599_ACD_31177.wav",
+  "duracion_segundos": 65.49,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 39.56,
+    "Cliente": 23.04
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 8.88,
+      "duracion": 8.85,
+      "texto": "Hola. Hola. Hola, ¿cómo estás? Mi nombre es Luz Mila. ¿Habla con Alexia?",
+      "confianza": 0.169,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.9,
+      "fin": 8.96,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.144,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.98,
+      "fin": 16.83,
+      "duracion": 7.85,
+      "texto": "¿Qué tal? Mi nombre es Luz Mila, soy de Movistar. Le estoy tomando por un descuento que tenemos especial para usted. Creo que están claros, ¿así?",
+      "confianza": 0.026,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.85,
+      "fin": 17.37,
+      "duracion": 0.52,
+      "texto": "Sí.",
+      "confianza": 0.506,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 17.39,
+      "fin": 27.84,
+      "duracion": 10.45,
+      "texto": "Perfecto, genial. Le comento un poquito, Alexia, cuánto es lo que estamos hoy en día otorgando en los planes. ¿Bien? ¿Usted con Claroté una sola línea o tiene algún otro servicio?",
+      "confianza": 0.572,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.85,
+      "fin": 38.23,
+      "duracion": 9.38,
+      "texto": "Internet, tengo concluido. Perfecto, Internet. ¿Y cuánto es lo que está buenando por todo el mundo? Quince.",
+      "confianza": 0.455,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 38.25,
+      "fin": 38.67,
+      "duracion": 0.42,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.2,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 38.69,
+      "fin": 41.71,
+      "duracion": 3.03,
+      "texto": "¿Veis alguna factura de 29.500 en otra línea, aparte?",
+      "confianza": 0.7,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.45,
+      "fin": 65.49,
+      "duracion": 22.04,
+      "texto": "No, tengo HBO y algunas boludeces más. Ah, perfecto, genial. Bueno, nosotros hoy en día, en Córdoba, por el momento no estamos llegando con cobertura de Internet. Bien, solamente le podíamos probar lo que es el plan sobre la línea, a ver si usted está bien interesado en eso. No, no me interesa, la verdad. Perfecto, no hay problema, que tengas una excelente tarde, sí, adiós. Igualmente, hasta luego.",
+      "confianza": 0.727,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, ¿cómo estás? Mi nombre es Luz Mila. ¿Habla con Alexia? Sí. ¿Qué tal? Mi nombre es Luz Mila, soy de Movistar. Le estoy tomando por un descuento que tenemos especial para usted. Creo que están claros, ¿así? Sí. Perfecto, genial. Le comento un poquito, Alexia, cuánto es lo que estamos hoy en día otorgando en los planes. ¿Bien? ¿Usted con Claroté una sola línea o tiene algún otro servicio? Internet, tengo concluido. Perfecto, Internet. ¿Y cuánto es lo que está buenando por todo el mundo? Quince. Bien, perfecto. ¿Veis alguna factura de 29.500 en otra línea, aparte? No, tengo HBO y algunas boludeces más. Ah, perfecto, genial. Bueno, nosotros hoy en día, en Córdoba, por el momento no estamos llegando con cobertura de Internet. Bien, solamente le podíamos probar lo que es el plan sobre la línea, a ver si usted está bien interesado en eso. No, no me interesa, la verdad. Perfecto, no hay problema, que tengas una excelente tarde, sí, adiós. Igualmente, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.431,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:00:53.299997",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:31.939168",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112112955599_ACD_31177",
+    "fecha_inicio": "12/1/2026 11:29:55",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 100,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 16,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

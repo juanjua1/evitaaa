@@ -1,0 +1,93 @@
+{
+  "archivo": "amza3_1_260114115522828_ACD_70143.wav",
+  "duracion_segundos": 64.87,
+  "num_segmentos": 15,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 51.15,
+    "Cliente": 9.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.39,
+      "fin": 30.54,
+      "duracion": 28.15,
+      "texto": "Mi nombre es Macarena, te contacto desde Movistar para mejorar el plan de la zona. Por el momento no puedo cambiarme. En esta zona Movistar no tiene todavía buen servicio.",
+      "confianza": 0.767,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.87,
+      "fin": 39.69,
+      "duracion": 7.82,
+      "texto": "El teléfono que corresponde al centro de salud en el Movistar lo echamos ahí. Y hay personas que llegan y se les corta.",
+      "confianza": 0.51,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.47,
+      "fin": 49.67,
+      "duracion": 9.2,
+      "texto": "Claro. Cuando yo tengo dos líneas, esta que la tengo con claro para usarlo en el trabajo y la otra línea que la uso siempre con un TAS.",
+      "confianza": 0.535,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.69,
+      "fin": 64.87,
+      "duracion": 15.18,
+      "texto": "Ah, bien. Y ahí podéis probar el teléfono. Exactamente. Cuando se conormalice, volvería con esta que es originalmente de movistar también. Bueno, dale, entonces lo vamos a dejar apuntado. Espero que tengas muy buen día. Gracias. Hasta luego.",
+      "confianza": 0.1,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Mi nombre es Macarena, te contacto desde Movistar para mejorar el plan de la zona. Por el momento no puedo cambiarme. En esta zona Movistar no tiene todavía buen servicio. El teléfono que corresponde al centro de salud en el Movistar lo echamos ahí. Y hay personas que llegan y se les corta. Claro. Cuando yo tengo dos líneas, esta que la tengo con claro para usarlo en el trabajo y la otra línea que la uso siempre con un TAS. Ah, bien. Y ahí podéis probar el teléfono. Exactamente. Cuando se conormalice, volvería con esta que es originalmente de movistar también. Bueno, dale, entonces lo vamos a dejar apuntado. Espero que tengas muy buen día. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.461,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:23:42.303114",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 15,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:26.145973",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114115522828_ACD_70143",
+    "fecha_inicio": "14/1/2026 11:55:22",
+    "agente_nombre": "MZA 3",
+    "agente_login": "mza3",
+    "duracion_total": 78,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Problemas de señal MVS en su zona",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "archivo": "amza9_1_260112133714077_ACD_81911.wav",
+  "duracion_segundos": 66.35,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 1.36,
+    "Cliente": 61.4
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.75,
+      "fin": 20.27,
+      "duracion": 18.52,
+      "texto": "Hola, habló con Cynthia. Hola. ¿Qué tal, Cynthia? ¿Cómo estás? ¿Todo bien? Sí, ¿qué me estás llamando de Movistar? Sí, Cynthia, ¿ya te he llamado? Tenemos un beneficio para vos. Me llamaron, no, mira, me llamaron y por día me llaman alrededor de tres, cuatro veces.",
+      "confianza": 0.051,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.17,
+      "fin": 43.76,
+      "duracion": 22.59,
+      "texto": "Estoy bien con la línea en que estoy, o sea, ya no quiero que me llamen más. Sé que ustedes no tienen la culpa, pero me gustaría que lo dejen asentado en algún lado porque ya es un montón, dice. No suelo atender las llamadas desconocidas, pero como tengo hijos que trabajan en la calle, lamentablemente, tengo que atender las llamadas desconocidas. Bien.",
+      "confianza": 0.592,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 43.78,
+      "fin": 45.15,
+      "duracion": 1.36,
+      "texto": "Cynthia, ¿vos por qué no estarás interesada en volver a la compañía?",
+      "confianza": 0.002,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 45.17,
+      "fin": 63.08,
+      "duracion": 17.91,
+      "texto": "No, o sea, no me... Escúchame. No me interesa. O sea, estoy bien con la compañía de que estoy. Así que no te voy a hacer perder el tiempo tampoco a vos. Pero me gustaría que dejes asentado que no me llames más porque me llaman de tres a cuatro veces por día. Es un montón ya. Bien. Dale. Te re agradezco igual.",
+      "confianza": 0.302,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 63.97,
+      "fin": 66.35,
+      "duracion": 2.38,
+      "texto": "Que tengas el día.",
+      "confianza": 0.52,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, habló con Cynthia. Hola. ¿Qué tal, Cynthia? ¿Cómo estás? ¿Todo bien? Sí, ¿qué me estás llamando de Movistar? Sí, Cynthia, ¿ya te he llamado? Tenemos un beneficio para vos. Me llamaron, no, mira, me llamaron y por día me llaman alrededor de tres, cuatro veces. Estoy bien con la línea en que estoy, o sea, ya no quiero que me llamen más. Sé que ustedes no tienen la culpa, pero me gustaría que lo dejen asentado en algún lado porque ya es un montón, dice. No suelo atender las llamadas desconocidas, pero como tengo hijos que trabajan en la calle, lamentablemente, tengo que atender las llamadas desconocidas. Bien. Cynthia, ¿vos por qué no estarás interesada en volver a la compañía? No, o sea, no me... Escúchame. No me interesa. O sea, estoy bien con la compañía de que estoy. Así que no te voy a hacer perder el tiempo tampoco a vos. Pero me gustaría que dejes asentado que no me llames más porque me llaman de tres a cuatro veces por día. Es un montón ya. Bien. Dale. Te re agradezco igual. Que tengas el día.",
+  "calidad": {
+    "confianza_promedio": 0.348,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:14:43.394569",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.817759",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112133714077_ACD_81911",
+    "fecha_inicio": "12/1/2026 13:37:14",
+    "agente_nombre": "MZA 9",
+    "agente_login": "mza9",
+    "duracion_total": 97,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 14,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "archivo": "amza5_1_260115144244373_ACD_59679.wav",
+  "duracion_segundos": 66.56,
+  "num_segmentos": 18,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 62.75
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.47,
+      "fin": 10.53,
+      "duracion": 10.06,
+      "texto": "Hola. Hola, ¿no te está el compañero hablando con Susana? Sí, ¿quién habla? Susana, la estoy llamando para brindarle lo que es una alborificación para su línea móvil. ¿Cómo le va?",
+      "confianza": 0.27,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.87,
+      "fin": 21.78,
+      "duracion": 9.91,
+      "texto": "¿De qué compañía me hablás? De Movistar la está llamando. Usted está con claro hoy en día, ¿cierto? Sí, ¿de qué me hace la corta? Porque estaba con otra persona y me la cortaste.",
+      "confianza": 0.308,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.86,
+      "fin": 31.24,
+      "duracion": 8.38,
+      "texto": "¿Cuál es el valor? Este comentario estamos ofreciendo lo que es un plan base de 4 gigas con 4 gigas real o 8 en total en $7,460 pesos.",
+      "confianza": 0.643,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.16,
+      "fin": 66.56,
+      "duracion": 34.4,
+      "texto": "Ah, claro. Bueno, yo te agradezco mucho porque yo tengo el internet, la televisión, el teléfono de línea, más el celular, todo en 20.000. Así que más bonificado que eso que con Clara no tengo. Y durante la línea sola, cuando ustedes la tenían en 7.800 como una oferta para mí, yo la tenía para 4.300. Que tengas muy buenos días y muy buenas ventas. Buen año.",
+      "confianza": 0.191,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿no te está el compañero hablando con Susana? Sí, ¿quién habla? Susana, la estoy llamando para brindarle lo que es una alborificación para su línea móvil. ¿Cómo le va? ¿De qué compañía me hablás? De Movistar la está llamando. Usted está con claro hoy en día, ¿cierto? Sí, ¿de qué me hace la corta? Porque estaba con otra persona y me la cortaste. ¿Cuál es el valor? Este comentario estamos ofreciendo lo que es un plan base de 4 gigas con 4 gigas real o 8 en total en $7,460 pesos. Ah, claro. Bueno, yo te agradezco mucho porque yo tengo el internet, la televisión, el teléfono de línea, más el celular, todo en 20.000. Así que más bonificado que eso que con Clara no tengo. Y durante la línea sola, cuando ustedes la tenían en 7.800 como una oferta para mí, yo la tenía para 4.300. Que tengas muy buenos días y muy buenas ventas. Buen año.",
+  "calidad": {
+    "confianza_promedio": 0.486,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:37:33.431814",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 18,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:30.501959",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115144244373_ACD_59679",
+    "fecha_inicio": "15/1/2026 14:42:44",
+    "agente_nombre": "MZA 5",
+    "agente_login": "mza5",
+    "duracion_total": 93,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

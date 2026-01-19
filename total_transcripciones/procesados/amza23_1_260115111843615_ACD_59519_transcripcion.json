@@ -1,0 +1,130 @@
+{
+  "archivo": "amza23_1_260115111843615_ACD_59519.wav",
+  "duracion_segundos": 90.81,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 52.1,
+    "Cliente": 30.34
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.85,
+      "fin": 17.91,
+      "duracion": 16.06,
+      "texto": "Hola, buen día con Carlos. ¿Cómo le va a Carlos Macarena? Me alegro mucho. Nos estamos contactando del área de beneficios de Movistar para otorgarle una promoción exclusiva en su línea.",
+      "confianza": 0.323,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 19.83,
+      "fin": 29.79,
+      "duracion": 9.96,
+      "texto": "Sí, por un plan. Me llaman siempre. Bien, pero en el día de hoy hay una nueva promoción. No sé qué promoción le había brindado anteriormente.",
+      "confianza": 0.122,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.39,
+      "fin": 49.03,
+      "duracion": 18.64,
+      "texto": "No, por momento no quiero cambiar, ¿viste? Bien, pero el costo se ha reducido. Por eso es que nos estamos contratando. Es un plan el más económico. Mira, le comento como para que tenga una idea. El más económico es de 8 gigas en total con 4 gigas de base más 4 gigas de regalo.",
+      "confianza": 0.13,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.55,
+      "fin": 63.85,
+      "duracion": 14.3,
+      "texto": "Bien, aquí el total de 8 gigas por 7.360. Está bueno, pero te vuelvo a repetir, la línea no... Ya tenían que dejarlo asentado ahí. La niña no lo pago, yo para la empresa.",
+      "confianza": 0.549,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 66.48,
+      "fin": 69.29,
+      "duracion": 2.81,
+      "texto": "Ah, es como una especie de corporativo, ¿verdad? Claro,",
+      "confianza": 0.139,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 69.29,
+      "fin": 78.49,
+      "duracion": 9.2,
+      "texto": "claro, entonces no... No me quiero meter ahí porque por ahí lo cambia y me perjudica, qué sé yo, el transporte o me jode, no sé.",
+      "confianza": 0.705,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 78.52,
+      "fin": 80.38,
+      "duracion": 1.86,
+      "texto": "Pero no lo puedo cambiar yo.",
+      "confianza": 0.756,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 81.2,
+      "fin": 90.81,
+      "duracion": 9.61,
+      "texto": "Eso es lo que le he dejado asentado. No, no, no, no hay problema. Ahora mismo lo dejamos en sistema, entonces. Dale, no hay problema, no, no. Que esté muy bien. Hasta luego. Gracias, chau.",
+      "confianza": 0.542,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día con Carlos. ¿Cómo le va a Carlos Macarena? Me alegro mucho. Nos estamos contactando del área de beneficios de Movistar para otorgarle una promoción exclusiva en su línea. Sí, por un plan. Me llaman siempre. Bien, pero en el día de hoy hay una nueva promoción. No sé qué promoción le había brindado anteriormente. No, por momento no quiero cambiar, ¿viste? Bien, pero el costo se ha reducido. Por eso es que nos estamos contratando. Es un plan el más económico. Mira, le comento como para que tenga una idea. El más económico es de 8 gigas en total con 4 gigas de base más 4 gigas de regalo. Bien, aquí el total de 8 gigas por 7.360. Está bueno, pero te vuelvo a repetir, la línea no... Ya tenían que dejarlo asentado ahí. La niña no lo pago, yo para la empresa. Ah, es como una especie de corporativo, ¿verdad? Claro, claro, entonces no... No me quiero meter ahí porque por ahí lo cambia y me perjudica, qué sé yo, el transporte o me jode, no sé. Pero no lo puedo cambiar yo. Eso es lo que le he dejado asentado. No, no, no, no hay problema. Ahora mismo lo dejamos en sistema, entonces. Dale, no hay problema, no, no. Que esté muy bien. Hasta luego. Gracias, chau.",
+  "calidad": {
+    "confianza_promedio": 0.491,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:19:47.131653",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:18.379987",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115111843615_ACD_59519",
+    "fecha_inicio": "15/1/2026 11:18:43",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 103,
+    "tiempo_conversacion": 87,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Corporativo",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

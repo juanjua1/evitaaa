@@ -1,0 +1,83 @@
+{
+  "archivo": "amza314_1_260113131953649_ACD_99637.wav",
+  "duracion_segundos": 66.69,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 64.3
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.64,
+      "fin": 49.78,
+      "duracion": 49.14,
+      "texto": "Hola, ¿qué tal? Buenas tardes, hablo con Carmen. ¿Cómo te vas? Soy Rocio. ¿Con quién tengo el gusto? Fernando. Fernando, para brindarte un beneficio en la línea, me asegura que la titular Carmen tiene dos líneas bajo su nombre, ¿verdad? La tuya y la de ella. Sí. Quería consultarles cómo se estaban manejando con el tema de, por ejemplo, el abono. Ustedes tienen lo que es la factura aproximadamente de 52.000 pesos. ¿Es que tú pagas solamente por las dos líneas o tienen internet también contratado? ¿De quién te están abrando? Yo me contacto el área de recupero de clientes de Movistar y quería armarte un combo justamente para economizarte lo que es el precio y, obviamente, la calidad. Yo ahora no puedo hablar porque estoy en mi trabajo.",
+      "confianza": 0.401,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.81,
+      "fin": 54.22,
+      "duracion": 3.41,
+      "texto": "Si me puedes llamar después de hacer la tarde y que salga de mi laburo, por favor.",
+      "confianza": 0.327,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.94,
+      "fin": 66.69,
+      "duracion": 11.75,
+      "texto": "Bueno, perfecto. De todas maneras, te voy a dejar mi número de asesor personal. Te voy a hacer la promoción que tengo. Y cualquier duda, consulta que tengas, me mandas ahí, ¿sí? Dale, dale. Gracias. Que tengas una excelentería. Hasta luego.",
+      "confianza": 0.786,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buenas tardes, hablo con Carmen. ¿Cómo te vas? Soy Rocio. ¿Con quién tengo el gusto? Fernando. Fernando, para brindarte un beneficio en la línea, me asegura que la titular Carmen tiene dos líneas bajo su nombre, ¿verdad? La tuya y la de ella. Sí. Quería consultarles cómo se estaban manejando con el tema de, por ejemplo, el abono. Ustedes tienen lo que es la factura aproximadamente de 52.000 pesos. ¿Es que tú pagas solamente por las dos líneas o tienen internet también contratado? ¿De quién te están abrando? Yo me contacto el área de recupero de clientes de Movistar y quería armarte un combo justamente para economizarte lo que es el precio y, obviamente, la calidad. Yo ahora no puedo hablar porque estoy en mi trabajo. Si me puedes llamar después de hacer la tarde y que salga de mi laburo, por favor. Bueno, perfecto. De todas maneras, te voy a dejar mi número de asesor personal. Te voy a hacer la promoción que tengo. Y cualquier duda, consulta que tengas, me mandas ahí, ¿sí? Dale, dale. Gracias. Que tengas una excelentería. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.5,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:23:03.144587",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:22.556281",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113131953649_ACD_99637",
+    "fecha_inicio": "13/1/2026 13:19:53",
+    "agente_nombre": "MZA 314",
+    "agente_login": "mza314",
+    "duracion_total": 209,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 118,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

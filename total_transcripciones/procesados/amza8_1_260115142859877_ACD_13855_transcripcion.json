@@ -1,0 +1,128 @@
+{
+  "archivo": "amza8_1_260115142859877_ACD_13855.wav",
+  "duracion_segundos": 66.89,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 25.53,
+    "Cliente": 32.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.58,
+      "fin": 17.02,
+      "duracion": 15.44,
+      "texto": "¿Qué tal, buen día, hablo con José? ¿Qué pasó, José? José, te comento, mi nombre es Diego, y yo me estoy contactando de lo que es el área de recuperación del cliente Movistar, para saber... Sí, siempre es por los días que voy de Movistar. ¿Cómo?",
+      "confianza": 0.494,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.14,
+      "fin": 20.97,
+      "duracion": 2.82,
+      "texto": "Todos los días voy de Movistar, y un rato me llaman vuelta.",
+      "confianza": 0.6,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.47,
+      "fin": 28.74,
+      "duracion": 7.27,
+      "texto": "¿Y había podido escuchar las promos? Sí, ya me dijeron, mira, un montón de veces, yo. ¿Y las podías escuchar o analizar?",
+      "confianza": 0.457,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.34,
+      "fin": 48.63,
+      "duracion": 18.29,
+      "texto": "Sí, igual que estoy bien con Clara. Pero está mucho más económico lo que estás abonando en claro. Sí, estoy bien por claro, cédico. Bueno, claro, estás abonando 29.000 pesos por dos líneas. Nosotros te brindamos 10.400 pesos. No soy por dos líneas, soy por una línea nomás, soy. No soy por dos líneas. Por una sola abonás 29.000 pesos.",
+      "confianza": 0.414,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 49.69,
+      "fin": 52.09,
+      "duracion": 2.4,
+      "texto": "¿Y qué es con eso? Una locura.",
+      "confianza": 0.588,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.67,
+      "fin": 53.73,
+      "duracion": 1.06,
+      "texto": "Podrías abonar menos.",
+      "confianza": 0.731,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.69,
+      "fin": 60.36,
+      "duracion": 5.67,
+      "texto": "Vienes mi plata, no estoy ya. Por eso. Y bueno, no es tu plata, está bien.",
+      "confianza": 0.333,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.52,
+      "fin": 66.89,
+      "duracion": 5.37,
+      "texto": "¡Eso es! ¡Eso es! ¡Joder!",
+      "confianza": 0.607,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Qué tal, buen día, hablo con José? ¿Qué pasó, José? José, te comento, mi nombre es Diego, y yo me estoy contactando de lo que es el área de recuperación del cliente Movistar, para saber... Sí, siempre es por los días que voy de Movistar. ¿Cómo? Todos los días voy de Movistar, y un rato me llaman vuelta. ¿Y había podido escuchar las promos? Sí, ya me dijeron, mira, un montón de veces, yo. ¿Y las podías escuchar o analizar? Sí, igual que estoy bien con Clara. Pero está mucho más económico lo que estás abonando en claro. Sí, estoy bien por claro, cédico. Bueno, claro, estás abonando 29.000 pesos por dos líneas. Nosotros te brindamos 10.400 pesos. No soy por dos líneas, soy por una línea nomás, soy. No soy por dos líneas. Por una sola abonás 29.000 pesos. ¿Y qué es con eso? Una locura. Podrías abonar menos. Vienes mi plata, no estoy ya. Por eso. Y bueno, no es tu plata, está bien. ¡Eso es! ¡Eso es! ¡Joder!",
+  "calidad": {
+    "confianza_promedio": 0.525,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:11:59.692599",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:32.653055",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115142859877_ACD_13855",
+    "fecha_inicio": "15/1/2026 14:28:59",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 97,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

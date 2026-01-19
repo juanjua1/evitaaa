@@ -1,0 +1,139 @@
+{
+  "archivo": "amza45_1_260116104938868_ACD_76043.wav",
+  "duracion_segundos": 74.35,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 43.68,
+    "Cliente": 20.85
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.7,
+      "fin": 7.89,
+      "duracion": 6.19,
+      "texto": "Hola, Eugenia. ¿Qué tal nos comunicamos con Eugenia?",
+      "confianza": 0.232,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.91,
+      "fin": 7.97,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.066,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.99,
+      "fin": 21.81,
+      "duracion": 13.82,
+      "texto": "¿Qué tal, Eugenia? ¿Cómo estás? Un gusto, mi nombre es Shaira. Nos comunicamos con usted porque teníamos una promoción para brindarle, sí, para hacer líneas. Vero que, bueno, usted ahora está con una moneda, ¿claro? Eh, sí.",
+      "confianza": 0.404,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.83,
+      "fin": 22.09,
+      "duracion": 0.26,
+      "texto": "Perfecto.",
+      "confianza": 0.228,
+      "_corregido": "respuesta_corta_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.11,
+      "fin": 30.64,
+      "duracion": 8.53,
+      "texto": "Yo me comunico, bueno, de ese modo de estar, obviamente queríamos mejorar en lo que es su promoción actualmente y en que pague el menos y que en lo posible tengamos adiós y beneficios, ¿bien?",
+      "confianza": 0.603,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.33,
+      "fin": 35.68,
+      "duracion": 4.35,
+      "texto": "Le consulto, Eugenia, ¿es usar muchas rilas, por ejemplo, ahora con su plan?",
+      "confianza": 0.544,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.2,
+      "fin": 45.33,
+      "duracion": 8.13,
+      "texto": "¿O utiliza, por ejemplo? Mira, la verdad es que no te escucho muy bien. Se corre y está todo. Viene de una zona que no tengo mucha señal.",
+      "confianza": 0.333,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 48.67,
+      "fin": 59.47,
+      "duracion": 10.79,
+      "texto": "Bueno, no sé si dentro de una horita más o menos estará disponible.",
+      "confianza": 0.313,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.95,
+      "fin": 74.35,
+      "duracion": 12.4,
+      "texto": "Sí, no sé si ahí me escucha bien. Si no, yo ahora le envío un mensajito, ¿bien?",
+      "confianza": 0.271,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, Eugenia. ¿Qué tal nos comunicamos con Eugenia? Sí. ¿Qué tal, Eugenia? ¿Cómo estás? Un gusto, mi nombre es Shaira. Nos comunicamos con usted porque teníamos una promoción para brindarle, sí, para hacer líneas. Vero que, bueno, usted ahora está con una moneda, ¿claro? Eh, sí. Perfecto. Yo me comunico, bueno, de ese modo de estar, obviamente queríamos mejorar en lo que es su promoción actualmente y en que pague el menos y que en lo posible tengamos adiós y beneficios, ¿bien? Le consulto, Eugenia, ¿es usar muchas rilas, por ejemplo, ahora con su plan? ¿O utiliza, por ejemplo? Mira, la verdad es que no te escucho muy bien. Se corre y está todo. Viene de una zona que no tengo mucha señal. Bueno, no sé si dentro de una horita más o menos estará disponible. Sí, no sé si ahí me escucha bien. Si no, yo ahora le envío un mensajito, ¿bien?",
+  "calidad": {
+    "confianza_promedio": 0.366,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:15:50.907206",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 19,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:29.276369",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116104938868_ACD_76043",
+    "fecha_inicio": "16/1/2026 10:49:38",
+    "agente_nombre": "MZA 45",
+    "agente_login": "mza45",
+    "duracion_total": 121,
+    "tiempo_conversacion": 76,
+    "tiempo_hold": 0,
+    "tiempo_acw": 23,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

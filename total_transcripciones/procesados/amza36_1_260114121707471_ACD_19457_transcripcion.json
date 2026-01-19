@@ -1,0 +1,120 @@
+{
+  "archivo": "amza36_1_260114121707471_ACD_19457.wav",
+  "duracion_segundos": 84.64,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 39.33,
+    "Cliente": 33.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.35,
+      "fin": 13.86,
+      "duracion": 13.51,
+      "texto": "Hola. Hola, buenos días. ¿Habló por una de las líneas de la señora Brenda? Eh, puede ser, sí. En gusto. Pero es mi carena, le queríamos hacer llegar un plan para su línea, le consulto. ¿Usted puede tomar decisiones sobre esta línea?",
+      "confianza": 0.185,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.26,
+      "fin": 19.47,
+      "duracion": 1.2,
+      "texto": "Sí, soy el... No soy el titular, pero soy el dueño, digamos.",
+      "confianza": 0.003,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.49,
+      "fin": 20.31,
+      "duracion": 0.82,
+      "texto": "Perfecto.",
+      "confianza": 0.576,
+      "_corregido": "respuesta_corta_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.33,
+      "fin": 55.26,
+      "duracion": 34.93,
+      "texto": "Bueno, le comento que le queríamos hacer llegar un plan de 10.000 pesos para su línea desde Movistar. el cual usted va a contar con otras chicas de dos y más ocho de regalo, o vas a pedir llamadas libres a todas las compañeras en América. Sí, dame. Bueno, yo ahora en este momento no estoy en Buenos Aires, pero... Bueno, cuando vuelva la semana que viene te... te podría estar llamando. No hay ningún problema, lo que sí está promocionado por hoy nada más. Ah, bueno, no, no, porque yo ahora no estoy en Buenos Aires, sí, estoy afuera. No hay ningún problema. ¿Usted se encuentra dentro de Argentina?",
+      "confianza": 0.664,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 56.98,
+      "fin": 62.01,
+      "duracion": 5.03,
+      "texto": "Sí, alímate ahí. Sí, el trámite se puede realizar tranquilamente, no hay ningún problema.",
+      "confianza": 0.26,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 64.75,
+      "fin": 67.95,
+      "duracion": 3.2,
+      "texto": "Bueno, no pasa que necesito el documento de ella y todo, es un quilombo.",
+      "confianza": 0.531,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 70.75,
+      "fin": 84.64,
+      "duracion": 13.89,
+      "texto": "Sí. Bueno, cuando llegue ya la voy a pasar a mi nombre, porque después la pasa a Mozart y se la pasa a mi nombre. No hay ningún problema, te dejo un mensajito por WhatsApp, cualquier duda que tengas me las daré. Dale, dale, dale, muchas gracias. Gracias.",
+      "confianza": 0.033,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. ¿Habló por una de las líneas de la señora Brenda? Eh, puede ser, sí. En gusto. Pero es mi carena, le queríamos hacer llegar un plan para su línea, le consulto. ¿Usted puede tomar decisiones sobre esta línea? Sí, soy el... No soy el titular, pero soy el dueño, digamos. Perfecto. Bueno, le comento que le queríamos hacer llegar un plan de 10.000 pesos para su línea desde Movistar. el cual usted va a contar con otras chicas de dos y más ocho de regalo, o vas a pedir llamadas libres a todas las compañeras en América. Sí, dame. Bueno, yo ahora en este momento no estoy en Buenos Aires, pero... Bueno, cuando vuelva la semana que viene te... te podría estar llamando. No hay ningún problema, lo que sí está promocionado por hoy nada más. Ah, bueno, no, no, porque yo ahora no estoy en Buenos Aires, sí, estoy afuera. No hay ningún problema. ¿Usted se encuentra dentro de Argentina? Sí, alímate ahí. Sí, el trámite se puede realizar tranquilamente, no hay ningún problema. Bueno, no pasa que necesito el documento de ella y todo, es un quilombo. Sí. Bueno, cuando llegue ya la voy a pasar a mi nombre, porque después la pasa a Mozart y se la pasa a mi nombre. No hay ningún problema, te dejo un mensajito por WhatsApp, cualquier duda que tengas me las daré. Dale, dale, dale, muchas gracias. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.401,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:09:07.119339",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:25.326877",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114121707471_ACD_19457",
+    "fecha_inicio": "14/1/2026 12:17:07",
+    "agente_nombre": "MZA 36",
+    "agente_login": "mza36",
+    "duracion_total": 118,
+    "tiempo_conversacion": 82,
+    "tiempo_hold": 0,
+    "tiempo_acw": 13,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

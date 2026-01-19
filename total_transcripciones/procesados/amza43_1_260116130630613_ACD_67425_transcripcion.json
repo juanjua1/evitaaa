@@ -1,0 +1,157 @@
+{
+  "archivo": "amza43_1_260116130630613_ACD_67425.wav",
+  "duracion_segundos": 60.41,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 25.54,
+    "Cliente": 21.55
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.53,
+      "fin": 4.36,
+      "duracion": 2.83,
+      "texto": "Hola, buenas tardes. ¿Me comunico con Concepción?",
+      "confianza": 0.568,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.72,
+      "fin": 8.06,
+      "duracion": 2.34,
+      "texto": "No, ella no se encuentra en este momento.",
+      "confianza": 0.74,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.62,
+      "fin": 11.72,
+      "duracion": 3.1,
+      "texto": "Ah, bien. ¿Pero esta es su línea móvil o es de otra persona?",
+      "confianza": 0.707,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.03,
+      "fin": 14.87,
+      "duracion": 0.84,
+      "texto": "Sí, sí, en realidad sí.",
+      "confianza": 0.477,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 15.79,
+      "fin": 35.27,
+      "duracion": 19.48,
+      "texto": "Ah, bien, porque me figura este número y otro más, por eso pregunto. Ah, claro. Bueno, si querés, no sé de dónde están llamando. ¿Tu nombre cómo has disculpado? Lucía. Lucía, yo te daría la benefición de movistar para brindarte o brindarles una promoción para sus líneas móviles.",
+      "confianza": 0.76,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 36.47,
+      "fin": 40.05,
+      "duracion": 3.58,
+      "texto": "Actualmente ustedes están en claro, ¿es correcto?",
+      "confianza": 0.665,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.08,
+      "fin": 40.9,
+      "duracion": 0.82,
+      "texto": "Sí, sí.",
+      "confianza": 0.481,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.92,
+      "fin": 43.4,
+      "duracion": 2.48,
+      "texto": "Bien, ¿y cuánto están abonando en relación a sus ligas?",
+      "confianza": 0.636,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.3,
+      "fin": 53.31,
+      "duracion": 6.01,
+      "texto": "No tengo mucha idea, pero si querés, le consulto cuando venga. Bueno, dale, no hay ningún problema. Yo te dejo un mensajito por WhatsApp, ¿sí?",
+      "confianza": 0.171,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.11,
+      "fin": 58.13,
+      "duracion": 4.02,
+      "texto": "A este mismo número. Dale, dale. Perfecto, que esté bien.",
+      "confianza": 0.327,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.82,
+      "fin": 60.41,
+      "duracion": 1.59,
+      "texto": "Igualmente muchas gracias.",
+      "confianza": 0.79,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. ¿Me comunico con Concepción? No, ella no se encuentra en este momento. Ah, bien. ¿Pero esta es su línea móvil o es de otra persona? Sí, sí, en realidad sí. Ah, bien, porque me figura este número y otro más, por eso pregunto. Ah, claro. Bueno, si querés, no sé de dónde están llamando. ¿Tu nombre cómo has disculpado? Lucía. Lucía, yo te daría la benefición de movistar para brindarte o brindarles una promoción para sus líneas móviles. Actualmente ustedes están en claro, ¿es correcto? Sí, sí. Bien, ¿y cuánto están abonando en relación a sus ligas? No tengo mucha idea, pero si querés, le consulto cuando venga. Bueno, dale, no hay ningún problema. Yo te dejo un mensajito por WhatsApp, ¿sí? A este mismo número. Dale, dale. Perfecto, que esté bien. Igualmente muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.586,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:00:12.587404",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 11,
+    "fecha_correccion": "2026-01-18T23:05:28.355428",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116130630613_ACD_67425",
+    "fecha_inicio": "16/1/2026 13:06:30",
+    "agente_nombre": "MZA 43",
+    "agente_login": "mza43",
+    "duracion_total": 157,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 72,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

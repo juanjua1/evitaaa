@@ -1,0 +1,129 @@
+{
+  "archivo": "amza313_1_260114101912305_ACD_98769.wav",
+  "duracion_segundos": 75.19,
+  "num_segmentos": 32,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 67.58,
+    "Cliente": 1.44
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.25,
+      "fin": 17.98,
+      "duracion": 16.73,
+      "texto": "Hola. Hola, buen día. Me presento. Mi nombre es Agustín. Yo le llamo por un desconto en su línea. ¿Cómo le va, Nelia? ¿Todo bien? ¿De Movistar? Así es, de Movistar. ¿Cómo sabías? Sí, decídme.",
+      "confianza": 0.35,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.54,
+      "fin": 23.41,
+      "duracion": 4.87,
+      "texto": "Básicamente, bueno, me espere que vendrías a la comunidad de Claro. No, no, no estoy en Movistar.",
+      "confianza": 0.668,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 24.36,
+      "fin": 44.07,
+      "duracion": 19.71,
+      "texto": "¿Ah, estás en Movistar? A ver, dame un segundo, porque acá el sistema amarrujado que estabas en claro. ¿Cuándo te cambiaste por última vez? Y no hace un mes hoy. Ah, no hace un mes. Ah, no, no, entonces no. Bueno, ya estás en Movistar. Yo lo voy a dejar sentado en el sistema porque, bueno, las promociones que tengo yo, bueno, son para clientes que actualmente están en claro.",
+      "confianza": 0.31,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 44.61,
+      "fin": 64.01,
+      "duracion": 19.4,
+      "texto": "Pero si no, Neria, lo que puedes hacer es mirar una aplicación de Movistar y también te puedes hacer varias promociones. Igual eso es resquen una vez que pasa el primer mes y traes la primera altura. a partir de ahí podés ver alguna otra promoción, eso sí. Ah, bueno, entonces. Igual lo que sí te consultaría, ¿te podrían consultar el tema de la fibra agustical que acaba de movistar?",
+      "confianza": 0.695,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 65.0,
+      "fin": 66.44,
+      "duracion": 1.44,
+      "texto": "Sí, yo tengo fibra.",
+      "confianza": 0.342,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 66.46,
+      "fin": 71.39,
+      "duracion": 4.93,
+      "texto": "Ah, tenés todos juntos. Bueno, perfecto, perfecto. Entonces ahí lo voy a dejarlo sentado, que tengas muy buen día.",
+      "confianza": 0.491,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 72.75,
+      "fin": 73.07,
+      "duracion": 0.32,
+      "texto": "Gracias.",
+      "confianza": 0.44,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 73.57,
+      "fin": 75.19,
+      "duracion": 1.62,
+      "texto": "Dale, esta noche ahora nos vemos, saludos.",
+      "confianza": 0.382,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día. Me presento. Mi nombre es Agustín. Yo le llamo por un desconto en su línea. ¿Cómo le va, Nelia? ¿Todo bien? ¿De Movistar? Así es, de Movistar. ¿Cómo sabías? Sí, decídme. Básicamente, bueno, me espere que vendrías a la comunidad de Claro. No, no, no estoy en Movistar. ¿Ah, estás en Movistar? A ver, dame un segundo, porque acá el sistema amarrujado que estabas en claro. ¿Cuándo te cambiaste por última vez? Y no hace un mes hoy. Ah, no hace un mes. Ah, no, no, entonces no. Bueno, ya estás en Movistar. Yo lo voy a dejar sentado en el sistema porque, bueno, las promociones que tengo yo, bueno, son para clientes que actualmente están en claro. Pero si no, Neria, lo que puedes hacer es mirar una aplicación de Movistar y también te puedes hacer varias promociones. Igual eso es resquen una vez que pasa el primer mes y traes la primera altura. a partir de ahí podés ver alguna otra promoción, eso sí. Ah, bueno, entonces. Igual lo que sí te consultaría, ¿te podrían consultar el tema de la fibra agustical que acaba de movistar? Sí, yo tengo fibra. Ah, tenés todos juntos. Bueno, perfecto, perfecto. Entonces ahí lo voy a dejarlo sentado, que tengas muy buen día. Gracias. Dale, esta noche ahora nos vemos, saludos.",
+  "calidad": {
+    "confianza_promedio": 0.461,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:16:52.142580",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:22.157986",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114101912305_ACD_98769",
+    "fecha_inicio": "14/1/2026 10:19:12",
+    "agente_nombre": "MZA 313",
+    "agente_login": "mza313",
+    "duracion_total": 92,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_Mza_ALT",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Ya tiene MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

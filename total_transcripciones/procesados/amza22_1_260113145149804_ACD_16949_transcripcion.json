@@ -1,0 +1,110 @@
+{
+  "archivo": "amza22_1_260113145149804_ACD_16949.wav",
+  "duracion_segundos": 77.93,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 26.11,
+    "Cliente": 45.15
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.29,
+      "fin": 8.0,
+      "duracion": 5.71,
+      "texto": "Hola, hoy en día hablo con Sergio. Sí, hola. Sergio, ¿cómo estás? Mi nombre es Belén, me presento.",
+      "confianza": 0.181,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.72,
+      "fin": 12.06,
+      "duracion": 3.34,
+      "texto": "Mire, yo le estoy llamando desde el área de recupero de clientes de movistar.",
+      "confianza": 0.62,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 12.58,
+      "fin": 29.64,
+      "duracion": 17.06,
+      "texto": "Queríamos saber por qué se ha ido de la compañía en su momento. Coménteme, ¿qué les pudo ayudar? No, no, por ahora estoy bien. No, no, era por una cuestión de precios, pero ya ahora estoy por ahí con un contrato nuevo. Bien, ¿y sabe cuánto sigas tienes que le da la compañía?",
+      "confianza": 0.637,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.41,
+      "fin": 32.05,
+      "duracion": 0.64,
+      "texto": "No, no sé, creo que una persona.",
+      "confianza": 0.051,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.58,
+      "fin": 52.41,
+      "duracion": 19.83,
+      "texto": "¿Y cuánto está bonando aproximadamente? Sí, pero ahora tiene un plan con Internet, por ahora te agradezco. Ah, bien, igual el plan que tenemos nosotros con Internet está saliendo $24,000 pesos con su línea de 8GB a $4,000 pesos y después en la fibra óptica de $20,000 pesos.",
+      "confianza": 0.681,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.25,
+      "fin": 77.93,
+      "duracion": 24.68,
+      "texto": "Y si quieres podemos ver si es alta competencia porque si es alta competencia tiene dos meses totalmente bonificados en la fibra. por ende usted podría pagar solamente 4.000 pesos de su línea y tiene dos meses totalmente bonificados también en lo que es la TR, si quiere el canal tiene bonificados también y las dos cosas estarían saliendo 24 mil pesos.",
+      "confianza": 0.66,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, hoy en día hablo con Sergio. Sí, hola. Sergio, ¿cómo estás? Mi nombre es Belén, me presento. Mire, yo le estoy llamando desde el área de recupero de clientes de movistar. Queríamos saber por qué se ha ido de la compañía en su momento. Coménteme, ¿qué les pudo ayudar? No, no, por ahora estoy bien. No, no, era por una cuestión de precios, pero ya ahora estoy por ahí con un contrato nuevo. Bien, ¿y sabe cuánto sigas tienes que le da la compañía? No, no sé, creo que una persona. ¿Y cuánto está bonando aproximadamente? Sí, pero ahora tiene un plan con Internet, por ahora te agradezco. Ah, bien, igual el plan que tenemos nosotros con Internet está saliendo $24,000 pesos con su línea de 8GB a $4,000 pesos y después en la fibra óptica de $20,000 pesos. Y si quieres podemos ver si es alta competencia porque si es alta competencia tiene dos meses totalmente bonificados en la fibra. por ende usted podría pagar solamente 4.000 pesos de su línea y tiene dos meses totalmente bonificados también en lo que es la TR, si quiere el canal tiene bonificados también y las dos cosas estarían saliendo 24 mil pesos.",
+  "calidad": {
+    "confianza_promedio": 0.468,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:08:04.277688",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 16,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:17.721971",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113145149804_ACD_16949",
+    "fecha_inicio": "13/1/2026 14:51:49",
+    "agente_nombre": "MZA 22",
+    "agente_login": "mza22",
+    "duracion_total": 108,
+    "tiempo_conversacion": 75,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

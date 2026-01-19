@@ -1,0 +1,124 @@
+{
+  "archivo": "amza31_1_260114143532159_ACD_65817.wav",
+  "duracion_segundos": 105.79,
+  "num_segmentos": 26,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 7.65,
+    "Cliente": 93.71
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.89,
+      "fin": 22.36,
+      "duracion": 20.47,
+      "texto": "Hola, buen día, Analía. Hola, ¿cómo te va, Jessica? Te hablé de lo que es Glareo de Beneficios en Movistar, Analía. Quería brindarte una promoción exclusiva para tu línea, si podés ahorrar los próximos seis meses. Eh, mira... Sí, dime. No, decime.",
+      "confianza": 0.181,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.38,
+      "fin": 23.26,
+      "duracion": 0.88,
+      "texto": "Ah, bien, mira, te comento.",
+      "confianza": 0.466,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 23.28,
+      "fin": 28.37,
+      "duracion": 5.09,
+      "texto": "Tenemos lo que es un plan de 16 GB, tendrás ocho de base más ocho de regalos con lo que es Rumin.",
+      "confianza": 0.686,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.58,
+      "fin": 35.35,
+      "duracion": 6.77,
+      "texto": "en América Incluido, también lo que es whatsapp gratis, llamadas libres a cualquier compañía, en 10.400 pesos al día de hoy.",
+      "confianza": 0.711,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.89,
+      "fin": 84.04,
+      "duracion": 48.15,
+      "texto": "Y te brindamos lo que es un descuento fijo por seis meses, para que lo puedas aprovechar. ¿Vos estás actualmente dentro del Claro? Sí, ya estoy en la empresa Claro. Mira, tengo que hablar mucho, pero por el momento no. Bien, pero ¿por qué? ¿Quiénes están brindando dentro del Claro? ¿Qué te tiene tan inconformes, digamos, o te cobran más? No, no, me cobran mucho menos, me cobran por dos niñas, mucho menos, más o menos, y queda prácticamente ilimitado, ni los gustos, los dos niños. Por el momento te lo agradezco,",
+      "confianza": 0.79,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 84.69,
+      "fin": 87.32,
+      "duracion": 2.63,
+      "texto": "Bien, perfecto. Bueno, yo lo voy a dejar registrado.",
+      "confianza": 0.601,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 88.42,
+      "fin": 105.79,
+      "duracion": 17.37,
+      "texto": "De igual manera, muchísimas gracias por tu atención y por tu amabilidad. Vamos, por favor. Que tengamos un día. Hasta luego. Muchas gracias. Hasta luego.",
+      "confianza": 0.796,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, Analía. Hola, ¿cómo te va, Jessica? Te hablé de lo que es Glareo de Beneficios en Movistar, Analía. Quería brindarte una promoción exclusiva para tu línea, si podés ahorrar los próximos seis meses. Eh, mira... Sí, dime. No, decime. Ah, bien, mira, te comento. Tenemos lo que es un plan de 16 GB, tendrás ocho de base más ocho de regalos con lo que es Rumin. en América Incluido, también lo que es whatsapp gratis, llamadas libres a cualquier compañía, en 10.400 pesos al día de hoy. Y te brindamos lo que es un descuento fijo por seis meses, para que lo puedas aprovechar. ¿Vos estás actualmente dentro del Claro? Sí, ya estoy en la empresa Claro. Mira, tengo que hablar mucho, pero por el momento no. Bien, pero ¿por qué? ¿Quiénes están brindando dentro del Claro? ¿Qué te tiene tan inconformes, digamos, o te cobran más? No, no, me cobran mucho menos, me cobran por dos niñas, mucho menos, más o menos, y queda prácticamente ilimitado, ni los gustos, los dos niños. Por el momento te lo agradezco, Bien, perfecto. Bueno, yo lo voy a dejar registrado. De igual manera, muchísimas gracias por tu atención y por tu amabilidad. Vamos, por favor. Que tengamos un día. Hasta luego. Muchas gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.468,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:30:38.340830",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:23.006739",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114143532159_ACD_65817",
+    "fecha_inicio": "14/1/2026 14:35:32",
+    "agente_nombre": "MZA 31",
+    "agente_login": "mza31",
+    "duracion_total": 160,
+    "tiempo_conversacion": 102,
+    "tiempo_hold": 0,
+    "tiempo_acw": 34,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

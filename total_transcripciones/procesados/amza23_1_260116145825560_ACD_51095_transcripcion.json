@@ -1,0 +1,124 @@
+{
+  "archivo": "amza23_1_260116145825560_ACD_51095.wav",
+  "duracion_segundos": 111.11,
+  "num_segmentos": 31,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 27.23,
+    "Cliente": 74.71
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 25.1,
+      "duracion": 25.07,
+      "texto": "Hola, ¿qué tal? Buenas tardes, ¿con Luis? Afirmativo. Mr. Macarena, es mi nombre, nos estamos contactando para otorgarle una muy buena promoción en el día de hoy a su línea. ¿Vemos que actualmente se encuentran claro, verdad? Así es. ¿Y cuánto está boleando por su línea, aproximadamente?",
+      "confianza": 0.423,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.59,
+      "fin": 27.83,
+      "duracion": 0.24,
+      "texto": "Veinticinco.",
+      "confianza": 0.084,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.92,
+      "fin": 69.43,
+      "duracion": 40.51,
+      "texto": "Bien. ¿Y qué cantidad de gigas le brinda la compañía? 36. ¿Cuánto? 36. Bien, perfecto. Perfecto. Dos de 15 y seis de regalo. Bien. ¿Qué son? ¿Dos líneas las que tiene su nombre? Una. Bien. Porque en este caso podemos brindarle un plan intermedio de 15 gigas más ocho de regalo. hacen un total de 23 gigas, los 8 de regalo tienen una durabilidad de 6 meses con todo bonificado, lo que es llamadas SMS y WhatsApp totalmente libres.",
+      "confianza": 0.193,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 70.91,
+      "fin": 89.91,
+      "duracion": 19.0,
+      "texto": "Además con el ROM incluido en el caso de que se ha de viajar por un costo de 23.850. ¿Usted me dijo que abonaba cuánto? 25. Bien, este plan tiene un costo de 23.850. y va a tener 23 gigas en total.",
+      "confianza": 0.802,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 90.92,
+      "fin": 92.8,
+      "duracion": 1.88,
+      "texto": "Díganme qué le ha parecido la propuesta.",
+      "confianza": 0.629,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 95.84,
+      "fin": 98.01,
+      "duracion": 2.16,
+      "texto": "Lo voy a pensar.",
+      "confianza": 0.202,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 98.03,
+      "fin": 111.11,
+      "duracion": 13.08,
+      "texto": "Bien, entonces lo que vamos a hacer, le voy a enviar ahora mismo un WhatsApp, sí, le voy a poner que soy Macarena de Movistar, enviándole la promoción para que usted decida si quiera acceder porque es",
+      "confianza": 0.586,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buenas tardes, ¿con Luis? Afirmativo. Mr. Macarena, es mi nombre, nos estamos contactando para otorgarle una muy buena promoción en el día de hoy a su línea. ¿Vemos que actualmente se encuentran claro, verdad? Así es. ¿Y cuánto está boleando por su línea, aproximadamente? Veinticinco. Bien. ¿Y qué cantidad de gigas le brinda la compañía? 36. ¿Cuánto? 36. Bien, perfecto. Perfecto. Dos de 15 y seis de regalo. Bien. ¿Qué son? ¿Dos líneas las que tiene su nombre? Una. Bien. Porque en este caso podemos brindarle un plan intermedio de 15 gigas más ocho de regalo. hacen un total de 23 gigas, los 8 de regalo tienen una durabilidad de 6 meses con todo bonificado, lo que es llamadas SMS y WhatsApp totalmente libres. Además con el ROM incluido en el caso de que se ha de viajar por un costo de 23.850. ¿Usted me dijo que abonaba cuánto? 25. Bien, este plan tiene un costo de 23.850. y va a tener 23 gigas en total. Díganme qué le ha parecido la propuesta. Lo voy a pensar. Bien, entonces lo que vamos a hacer, le voy a enviar ahora mismo un WhatsApp, sí, le voy a poner que soy Macarena de Movistar, enviándole la promoción para que usted decida si quiera acceder porque es",
+  "calidad": {
+    "confianza_promedio": 0.476,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:24:42.195233",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 31,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:18.709727",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116145825560_ACD_51095",
+    "fecha_inicio": "16/1/2026 14:58:25",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 166,
+    "tiempo_conversacion": 107,
+    "tiempo_hold": 0,
+    "tiempo_acw": 31,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_Respaldo",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

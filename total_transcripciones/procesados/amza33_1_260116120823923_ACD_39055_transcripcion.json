@@ -1,0 +1,111 @@
+{
+  "archivo": "amza33_1_260116120823923_ACD_39055.wav",
+  "duracion_segundos": 69.63,
+  "num_segmentos": 17,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 1.16,
+    "Cliente": 65.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 8.12,
+      "duracion": 8.09,
+      "texto": "Hola, ¿cómo estás? Buenas días, Federico. ¿Quién habla?",
+      "confianza": 0.558,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.14,
+      "fin": 9.3,
+      "duracion": 1.16,
+      "texto": "Federico, mi nombre es Katy.",
+      "confianza": 0.473,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.0,
+      "fin": 15.89,
+      "duracion": 5.89,
+      "texto": "Me contacto con vos porque quiero activarte un descuento en tu línea móvil si pagas menos en tu boleta mensual.",
+      "confianza": 0.69,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.25,
+      "fin": 18.43,
+      "duracion": 1.18,
+      "texto": "Tengo una consulta.",
+      "confianza": 0.448,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.93,
+      "fin": 23.24,
+      "duracion": 4.3,
+      "texto": "En cuanto al tiempo de los llegados, ¿cómo podés saber que hay recorto por mes?",
+      "confianza": 0.477,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 23.84,
+      "fin": 69.63,
+      "duracion": 45.79,
+      "texto": "En realidad te cuento, esta cuenta es empresa, o sea que no puedo tomar ninguna decisión para poder cambiar. Perfecto, no tengas problema. Que tengas muy bonitos días. ¿Podrás sentarlo? Lo puedo sentar desde la parte donde yo trabajo, obviamente, desde este sector no te van a hablar más, pero como hay muchos call centers, seguramente que te voy a estar sincero, se van a estar comunicando con vos. Perfecto, por lo menos a este sector no se va a venir a comunicar más. Que tengas bonito día. Gracias igualmente. ¿Tienes tiempo? No, por favor, saquenlo, por favor, se los pido.",
+      "confianza": 0.471,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿cómo estás? Buenas días, Federico. ¿Quién habla? Federico, mi nombre es Katy. Me contacto con vos porque quiero activarte un descuento en tu línea móvil si pagas menos en tu boleta mensual. Tengo una consulta. En cuanto al tiempo de los llegados, ¿cómo podés saber que hay recorto por mes? En realidad te cuento, esta cuenta es empresa, o sea que no puedo tomar ninguna decisión para poder cambiar. Perfecto, no tengas problema. Que tengas muy bonitos días. ¿Podrás sentarlo? Lo puedo sentar desde la parte donde yo trabajo, obviamente, desde este sector no te van a hablar más, pero como hay muchos call centers, seguramente que te voy a estar sincero, se van a estar comunicando con vos. Perfecto, por lo menos a este sector no se va a venir a comunicar más. Que tengas bonito día. Gracias igualmente. ¿Tienes tiempo? No, por favor, saquenlo, por favor, se los pido.",
+  "calidad": {
+    "confianza_promedio": 0.484,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:50:44.129812",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:24.174156",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116120823923_ACD_39055",
+    "fecha_inicio": "16/1/2026 12:08:23",
+    "agente_nombre": "MZA 33",
+    "agente_login": "mza33",
+    "duracion_total": 87,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Corporativo",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "archivo": "amza1_1_260115134850509_ACD_72581.wav",
+  "duracion_segundos": 64.55,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 1.03,
+    "Cliente": 55.27
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.36,
+      "fin": 29.73,
+      "duracion": 27.37,
+      "texto": "Hola, muy buenos días. Hablo con Rubén. Sí. ¿Qué tal, Rubén? ¿Cómo estás? Te habla Evangeline de este lado. Un placer hablar con vos. Es como tú, Rubén, te llamaba del área de beneficio de Movistar. Tenemos una promoción para tus líneas. ¿Se han llamado antes? Bueno, ya me llamaron y ya les contesté. Ah, bien, pero te han comentado la nueva promoción en 10.400 pesos del plan de 16 días o no? A ver, te la comentaron.",
+      "confianza": 0.228,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.66,
+      "fin": 39.27,
+      "duracion": 8.61,
+      "texto": "Me ofrecieron, pero ya por el momento nos quedamos, ¿dónde estamos? Después más adelante veremos.",
+      "confianza": 0.682,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.69,
+      "fin": 59.98,
+      "duracion": 19.29,
+      "texto": "Bueno, ¿y eso por qué? ¿Porque están justamente con alguna bonificación en la compañía o con el medio? Estamos, claro, sí, sí, estuvimos muchos años en Movistar, ya les expliqué y bueno. y ahora estamos cómodos acá por el momento. Después más tarde nos vemos. Te agradezco un montón el llamado. No hay ningún problema, yo le voy a dejar todas juntas por WhatsApp.",
+      "confianza": 0.457,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 63.52,
+      "fin": 64.55,
+      "duracion": 1.03,
+      "texto": "Gracias, muy amable. Hasta luego. Hasta luego.",
+      "confianza": 0.081,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, muy buenos días. Hablo con Rubén. Sí. ¿Qué tal, Rubén? ¿Cómo estás? Te habla Evangeline de este lado. Un placer hablar con vos. Es como tú, Rubén, te llamaba del área de beneficio de Movistar. Tenemos una promoción para tus líneas. ¿Se han llamado antes? Bueno, ya me llamaron y ya les contesté. Ah, bien, pero te han comentado la nueva promoción en 10.400 pesos del plan de 16 días o no? A ver, te la comentaron. Me ofrecieron, pero ya por el momento nos quedamos, ¿dónde estamos? Después más adelante veremos. Bueno, ¿y eso por qué? ¿Porque están justamente con alguna bonificación en la compañía o con el medio? Estamos, claro, sí, sí, estuvimos muchos años en Movistar, ya les expliqué y bueno. y ahora estamos cómodos acá por el momento. Después más tarde nos vemos. Te agradezco un montón el llamado. No hay ningún problema, yo le voy a dejar todas juntas por WhatsApp. Gracias, muy amable. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.468,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:47:27.980943",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:16.419228",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115134850509_ACD_72581",
+    "fecha_inicio": "15/1/2026 13:48:50",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 86,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

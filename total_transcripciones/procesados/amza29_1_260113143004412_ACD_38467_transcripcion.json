@@ -1,0 +1,142 @@
+{
+  "archivo": "amza29_1_260113143004412_ACD_38467.wav",
+  "duracion_segundos": 62.12,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 42.49,
+    "Cliente": 10.73
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.12,
+      "fin": 5.29,
+      "duracion": 3.17,
+      "texto": "Hola, buenos días, Graciela. Sí, ¿quién habla?",
+      "confianza": 0.05,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.07,
+      "fin": 7.49,
+      "duracion": 1.42,
+      "texto": "¿Qué tal? Un gusto, soy Luz.",
+      "confianza": 0.489,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.13,
+      "fin": 11.55,
+      "duracion": 3.42,
+      "texto": "Me estaba comunicando en el área de recupero de clientes de Movistar.",
+      "confianza": 0.713,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.28,
+      "fin": 14.28,
+      "duracion": 2.0,
+      "texto": "Me figuras tu línea en Claro, ¿es correcto?",
+      "confianza": 0.743,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.56,
+      "fin": 17.62,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.09,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 17.64,
+      "fin": 49.79,
+      "duracion": 32.15,
+      "texto": "Bien, Graciela. Y te hago una consulta actualmente con Claro. ¿Sabes cuál es el plan que te ofrece en cuanto estás abonando y demás para mejorarte la promoción? La verdad es que Me bajaron el precio solo, sin avisarme, no tengo que llamar a tanto para que me activen los descuentos y no sé, estoy pagando la mitad de lo que pagaba, así que estoy conforme. ¿Y en cuánto estás ganando próximamente, sabes? Y debo estar pagando 10.000 pesos.",
+      "confianza": 0.51,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.77,
+      "fin": 58.08,
+      "duracion": 7.31,
+      "texto": "Ajá, ¿y qué cantidad llegas te ofrecen en tu niña? Seis, y me sobran, uso dos.",
+      "confianza": 0.094,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.1,
+      "fin": 58.76,
+      "duracion": 0.66,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.556,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.09,
+      "fin": 62.12,
+      "duracion": 3.03,
+      "texto": "No hay problema, entonces, que tengas mismo día. Gracias.",
+      "confianza": 0.727,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días, Graciela. Sí, ¿quién habla? ¿Qué tal? Un gusto, soy Luz. Me estaba comunicando en el área de recupero de clientes de Movistar. Me figuras tu línea en Claro, ¿es correcto? Sí. Bien, Graciela. Y te hago una consulta actualmente con Claro. ¿Sabes cuál es el plan que te ofrece en cuanto estás abonando y demás para mejorarte la promoción? La verdad es que Me bajaron el precio solo, sin avisarme, no tengo que llamar a tanto para que me activen los descuentos y no sé, estoy pagando la mitad de lo que pagaba, así que estoy conforme. ¿Y en cuánto estás ganando próximamente, sabes? Y debo estar pagando 10.000 pesos. Ajá, ¿y qué cantidad llegas te ofrecen en tu niña? Seis, y me sobran, uso dos. Bien, perfecto. No hay problema, entonces, que tengas mismo día. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.524,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:54:30.325635",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 19,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:20.673235",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113143004412_ACD_38467",
+    "fecha_inicio": "13/1/2026 14:30:04",
+    "agente_nombre": "MZA 29",
+    "agente_login": "mza29",
+    "duracion_total": 83,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No usa o No tiene celular",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

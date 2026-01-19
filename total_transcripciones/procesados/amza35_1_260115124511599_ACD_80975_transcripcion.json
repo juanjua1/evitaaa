@@ -1,0 +1,143 @@
+{
+  "archivo": "amza35_1_260115124511599_ACD_80975.wav",
+  "duracion_segundos": 72.5,
+  "num_segmentos": 23,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 66.5,
+    "Cliente": 3.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.28,
+      "fin": 8.61,
+      "duracion": 8.33,
+      "texto": "Hola, ¿hablo con María Alicia? No, no elijo, de parte. Qué tal, un gusto. Te hablo de Guadalupe.",
+      "confianza": 0.176,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.25,
+      "fin": 16.84,
+      "duracion": 7.59,
+      "texto": "No sé cuál es tu nombre, pero bueno, me aseguré a ella como titular, María Alicia Alonso, en tu línea.",
+      "confianza": 0.627,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.86,
+      "fin": 17.78,
+      "duracion": 0.92,
+      "texto": "Sí, sí, sí. Bien, perfecto.",
+      "confianza": 0.025,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 17.8,
+      "fin": 23.97,
+      "duracion": 6.17,
+      "texto": "Más que nada, en realidad, el motivo de mis llamadas es para brindarles un descuento porque los que abonan, eh, arriba de los 15.000 pesos por cada línea.",
+      "confianza": 0.632,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 24.59,
+      "fin": 32.08,
+      "duracion": 7.49,
+      "texto": "Yo quería que para cada línea tengan 16.000 y bajan total, por tan solo 10.400. Tienen también lo que es Lumen incluido, por si les gusta viajar.",
+      "confianza": 0.683,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.58,
+      "fin": 41.05,
+      "duracion": 8.47,
+      "texto": "WhatsApp gratis, porque hoy en día es muy importante y esto, claro, no lo están orindando. Y tenés un descuento por seis meses, ¿bien?",
+      "confianza": 0.73,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.13,
+      "fin": 43.41,
+      "duracion": 2.28,
+      "texto": "Sí, mira, por el momento no está interesada.",
+      "confianza": 0.626,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 43.53,
+      "fin": 52.02,
+      "duracion": 8.49,
+      "texto": "Ella ya creo que lo había dejado, había pedido que lo dejaran asentado. Así que te agradezco. Bien, entiendo, claro.",
+      "confianza": 0.454,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 52.54,
+      "fin": 72.5,
+      "duracion": 19.96,
+      "texto": "Y por algo en particular es que no les interesa. No sé si estás al fondo, pero yo puedo dejarlo asentado. No, no. No, por ahí que no, que por el momento estamos bien con lo que estamos. Bien, entiendo. Disculpame, pero te tengo que dejar porque estoy con un tema laboral. Hasta luego.",
+      "confianza": 0.724,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿hablo con María Alicia? No, no elijo, de parte. Qué tal, un gusto. Te hablo de Guadalupe. No sé cuál es tu nombre, pero bueno, me aseguré a ella como titular, María Alicia Alonso, en tu línea. Sí, sí, sí. Bien, perfecto. Más que nada, en realidad, el motivo de mis llamadas es para brindarles un descuento porque los que abonan, eh, arriba de los 15.000 pesos por cada línea. Yo quería que para cada línea tengan 16.000 y bajan total, por tan solo 10.400. Tienen también lo que es Lumen incluido, por si les gusta viajar. WhatsApp gratis, porque hoy en día es muy importante y esto, claro, no lo están orindando. Y tenés un descuento por seis meses, ¿bien? Sí, mira, por el momento no está interesada. Ella ya creo que lo había dejado, había pedido que lo dejaran asentado. Así que te agradezco. Bien, entiendo, claro. Y por algo en particular es que no les interesa. No sé si estás al fondo, pero yo puedo dejarlo asentado. No, no. No, por ahí que no, que por el momento estamos bien con lo que estamos. Bien, entiendo. Disculpame, pero te tengo que dejar porque estoy con un tema laboral. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.482,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:01:10.912831",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:24.812732",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115124511599_ACD_80975",
+    "fecha_inicio": "15/1/2026 12:45:11",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 89,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

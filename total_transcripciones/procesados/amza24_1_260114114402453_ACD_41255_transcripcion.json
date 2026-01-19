@@ -1,0 +1,132 @@
+{
+  "archivo": "amza24_1_260114114402453_ACD_41255.wav",
+  "duracion_segundos": 90.31,
+  "num_segmentos": 29,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 24.4,
+    "Cliente": 56.93
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.18,
+      "fin": 10.23,
+      "duracion": 9.05,
+      "texto": "Hola. Sí, bien día. ¿Cómo estás? Buenos días. Hablo con Darío. ¿Quién habla? ¿Cómo estás? Darío Agustín es mi nombre.",
+      "confianza": 0.323,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.25,
+      "fin": 13.74,
+      "duracion": 3.49,
+      "texto": "Me estoy comunicando del área de recupero de clientes Movistar.",
+      "confianza": 0.672,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.34,
+      "fin": 26.51,
+      "duracion": 12.17,
+      "texto": "Nos figura que vos actualmente estás en claro, ¿verdad? Sí, la verdad no me interesa cruzarme a Movistar y a Agustina me dice esto, ¿verdad? Sí. Bien,",
+      "confianza": 0.659,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.51,
+      "fin": 30.56,
+      "duracion": 4.05,
+      "texto": "mira, Agustina, me llaman tres, cuatro veces por día.",
+      "confianza": 0.712,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.11,
+      "fin": 54.25,
+      "duracion": 23.14,
+      "texto": "No sé cómo decirles ya que no me interesa tener ningún trato comercial con Movistar. Bien, perfecto. Lo dejo registrado, entonces. Claro, pero siempre que me llaman me dicen lo mismo. No hay un lugar donde yo pueda llamar para que directamente no me llamen más.",
+      "confianza": 0.747,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.45,
+      "fin": 75.31,
+      "duracion": 16.86,
+      "texto": "¿Sí se puede hacer una revisión en no llames? Ok, eso es una aplicación de Movistar. No, eso es un ente público a través de Google.",
+      "confianza": 0.629,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 77.0,
+      "fin": 82.7,
+      "duracion": 5.7,
+      "texto": "Bien, a ti lo busco, no me llames. No llames. No llames.",
+      "confianza": 0.513,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 83.44,
+      "fin": 90.31,
+      "duracion": 6.87,
+      "texto": "Bueno, perfecto. Muchísimas gracias por toda la atención. No, por favor, que tengamos buenos días. Hasta luego. Hasta luego.",
+      "confianza": 0.69,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Sí, bien día. ¿Cómo estás? Buenos días. Hablo con Darío. ¿Quién habla? ¿Cómo estás? Darío Agustín es mi nombre. Me estoy comunicando del área de recupero de clientes Movistar. Nos figura que vos actualmente estás en claro, ¿verdad? Sí, la verdad no me interesa cruzarme a Movistar y a Agustina me dice esto, ¿verdad? Sí. Bien, mira, Agustina, me llaman tres, cuatro veces por día. No sé cómo decirles ya que no me interesa tener ningún trato comercial con Movistar. Bien, perfecto. Lo dejo registrado, entonces. Claro, pero siempre que me llaman me dicen lo mismo. No hay un lugar donde yo pueda llamar para que directamente no me llamen más. ¿Sí se puede hacer una revisión en no llames? Ok, eso es una aplicación de Movistar. No, eso es un ente público a través de Google. Bien, a ti lo busco, no me llames. No llames. No llames. Bueno, perfecto. Muchísimas gracias por toda la atención. No, por favor, que tengamos buenos días. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.523,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:29:28.214415",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 29,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:19.058197",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114114402453_ACD_41255",
+    "fecha_inicio": "14/1/2026 11:44:02",
+    "agente_nombre": "MZA 24",
+    "agente_login": "mza24",
+    "duracion_total": 110,
+    "tiempo_conversacion": 86,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

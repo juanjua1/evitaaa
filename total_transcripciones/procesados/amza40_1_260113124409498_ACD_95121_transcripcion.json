@@ -1,0 +1,179 @@
+{
+  "archivo": "amza40_1_260113124409498_ACD_95121.wav",
+  "duracion_segundos": 88.11,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 33.52,
+    "Cliente": 43.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.35,
+      "fin": 20.87,
+      "duracion": 19.52,
+      "texto": "¿Qué empresa es? Movistar.",
+      "confianza": 0.495,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.91,
+      "fin": 28.62,
+      "duracion": 7.71,
+      "texto": "Ajá.",
+      "confianza": 0.432,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.41,
+      "fin": 31.18,
+      "duracion": 0.77,
+      "texto": "Eh...",
+      "confianza": 0.11,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.18,
+      "fin": 35.67,
+      "duracion": 4.49,
+      "texto": "No, mira, por el momento no.",
+      "confianza": 0.11,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.69,
+      "fin": 42.82,
+      "duracion": 7.13,
+      "texto": "Bien. Le comento antes que tenemos una versión más económica también donde tiene 8 gigas por 11.400 pesos. Ajá.",
+      "confianza": 0.737,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 46.35,
+      "fin": 52.84,
+      "duracion": 6.49,
+      "texto": "Sí, es que estaré interesado yo para cambiar el número de mi señal.",
+      "confianza": 0.459,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.86,
+      "fin": 53.82,
+      "duracion": 0.96,
+      "texto": "Sí.",
+      "confianza": 0.502,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 53.84,
+      "fin": 55.72,
+      "duracion": 1.88,
+      "texto": "Puede ser el que termine en 8.29.",
+      "confianza": 0.65,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.26,
+      "fin": 73.14,
+      "duracion": 15.88,
+      "texto": "A ver, ya te digo. Eh... 3, 5, 6, 7, 8, 10. No, 10 está el número. En 29 y 10. Bien. ¿Y esa línea actualmente está en claro o está donde está? Está en claro.",
+      "confianza": 0.388,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 73.98,
+      "fin": 82.0,
+      "duracion": 8.02,
+      "texto": "Ah, bien. Bueno, si le parece, le puedo mandar ahora un mensaje con las promociones y mi nombre y usted me manda el número de su señora y cualquier cosa la llamo.",
+      "confianza": 0.731,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 83.26,
+      "fin": 84.4,
+      "duracion": 1.14,
+      "texto": "Dale, listo. Perfecto.",
+      "confianza": 0.447,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 84.42,
+      "fin": 85.56,
+      "duracion": 1.14,
+      "texto": "Mi nombre es Juliana, ¿sí?",
+      "confianza": 0.364,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 85.94,
+      "fin": 88.11,
+      "duracion": 2.17,
+      "texto": "Hasta luego. Bueno, listo. Gracias.",
+      "confianza": 0.212,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Qué empresa es? Movistar. Ajá. Eh... No, mira, por el momento no. Bien. Le comento antes que tenemos una versión más económica también donde tiene 8 gigas por 11.400 pesos. Ajá. Sí, es que estaré interesado yo para cambiar el número de mi señal. Sí. Puede ser el que termine en 8.29. A ver, ya te digo. Eh... 3, 5, 6, 7, 8, 10. No, 10 está el número. En 29 y 10. Bien. ¿Y esa línea actualmente está en claro o está donde está? Está en claro. Ah, bien. Bueno, si le parece, le puedo mandar ahora un mensaje con las promociones y mi nombre y usted me manda el número de su señora y cualquier cosa la llamo. Dale, listo. Perfecto. Mi nombre es Juliana, ¿sí? Hasta luego. Bueno, listo. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.474,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:32:09.676821",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 13,
+    "fecha_correccion": "2026-01-18T23:05:26.633700",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113124409498_ACD_95121",
+    "fecha_inicio": "13/1/2026 12:44:09",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 133,
+    "tiempo_conversacion": 88,
+    "tiempo_hold": 0,
+    "tiempo_acw": 18,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

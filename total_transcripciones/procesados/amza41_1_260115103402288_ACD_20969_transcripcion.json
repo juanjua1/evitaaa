@@ -1,0 +1,128 @@
+{
+  "archivo": "amza41_1_260115103402288_ACD_20969.wav",
+  "duracion_segundos": 116.66,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 32.15,
+    "Cliente": 56.36
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 3.94,
+      "duracion": 3.91,
+      "texto": "Hola, buen día. ¿Hablo con Aníbal?",
+      "confianza": 0.505,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.7,
+      "fin": 11.97,
+      "duracion": 6.27,
+      "texto": "Sí, acá estoy. Habla, Habla. Marina me comunicó a ese Movistar para brindarle una promoción en la línea.",
+      "confianza": 0.525,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.97,
+      "fin": 22.9,
+      "duracion": 9.93,
+      "texto": "No. No, gracias. Vos solo querés plata.",
+      "confianza": 0.963,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 37.88,
+      "fin": 38.58,
+      "duracion": 0.7,
+      "texto": "¿Hola?",
+      "confianza": 0.442,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.02,
+      "fin": 66.47,
+      "duracion": 25.45,
+      "texto": "¿La habla? ¿Hola? Sí, acá está el señor Aníbal. Hola.",
+      "confianza": 0.347,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 68.98,
+      "fin": 94.91,
+      "duracion": 25.92,
+      "texto": "Hola Hola Hola Hola Hola Hola Hola Hola Hola",
+      "confianza": 0.391,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 97.58,
+      "fin": 112.29,
+      "duracion": 14.71,
+      "texto": "Hola, acá estoy, señor Aníbal. Se comunica con señor Aníbal.",
+      "confianza": 0.334,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 115.03,
+      "fin": 116.66,
+      "duracion": 1.62,
+      "texto": "Te paso, Aníbal.",
+      "confianza": 0.715,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. ¿Hablo con Aníbal? Sí, acá estoy. Habla, Habla. Marina me comunicó a ese Movistar para brindarle una promoción en la línea. No. No, gracias. Vos solo querés plata. ¿Hola? ¿La habla? ¿Hola? Sí, acá está el señor Aníbal. Hola. Hola Hola Hola Hola Hola Hola Hola Hola Hola Hola, acá estoy, señor Aníbal. Se comunica con señor Aníbal. Te paso, Aníbal.",
+  "calidad": {
+    "confianza_promedio": 0.465,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:39:37.532308",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:27.102569",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115103402288_ACD_20969",
+    "fecha_inicio": "15/1/2026 10:34:02",
+    "agente_nombre": "MZA 41",
+    "agente_login": "mza41",
+    "duracion_total": 139,
+    "tiempo_conversacion": 112,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

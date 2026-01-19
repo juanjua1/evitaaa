@@ -1,0 +1,121 @@
+{
+  "archivo": "amza41_1_260114113820317_ACD_24095.wav",
+  "duracion_segundos": 67.7,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 18.53,
+    "Cliente": 42.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 19.72,
+      "duracion": 19.69,
+      "texto": "Hola, buen día. Hablo con Elizabeth. ¿Quién habla? ¿Qué tal? Marina me comunicó desde Movistar para brindarme una promoción en la línea. ¿De cuál? Desde Movistar nos comunicamos. Estáis para brindarme una promoción. ¿Qué línea?",
+      "confianza": 0.651,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.96,
+      "fin": 29.01,
+      "duracion": 7.05,
+      "texto": "De la línea a la que estamos llamando y te digo cuál es, la que termina en 404. Ah, para el celular.",
+      "confianza": 0.808,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.03,
+      "fin": 29.09,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.332,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.24,
+      "fin": 40.22,
+      "duracion": 7.97,
+      "texto": "Actualmente estamos brindando una promoción muy buena, son 16 liras, en 10.400 pesos, ¿sí?",
+      "confianza": 0.716,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 41.1,
+      "fin": 52.58,
+      "duracion": 11.48,
+      "texto": "Esta promoción le voy a incluir en WhatsApp gratis, además le agradezco a todas las compañías, América Precio Local y Roaming también en América, ¿sí?",
+      "confianza": 0.529,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.6,
+      "fin": 58.08,
+      "duracion": 5.48,
+      "texto": "Está bien, no, gracias. Bien, por algún motivo en especial, ¿ha tenido algún inconveniente con la compañía?",
+      "confianza": 0.154,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.7,
+      "fin": 67.7,
+      "duracion": 9.0,
+      "texto": "No, no recuerdo. Ahorita siempre. Pero no, por eso no, gracias. Bien. Bien, buenas, Elena. No hay problema. Muchas gracias. Chau.",
+      "confianza": 0.511,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hablo con Elizabeth. ¿Quién habla? ¿Qué tal? Marina me comunicó desde Movistar para brindarme una promoción en la línea. ¿De cuál? Desde Movistar nos comunicamos. Estáis para brindarme una promoción. ¿Qué línea? De la línea a la que estamos llamando y te digo cuál es, la que termina en 404. Ah, para el celular. Sí. Actualmente estamos brindando una promoción muy buena, son 16 liras, en 10.400 pesos, ¿sí? Esta promoción le voy a incluir en WhatsApp gratis, además le agradezco a todas las compañías, América Precio Local y Roaming también en América, ¿sí? Está bien, no, gracias. Bien, por algún motivo en especial, ¿ha tenido algún inconveniente con la compañía? No, no recuerdo. Ahorita siempre. Pero no, por eso no, gracias. Bien. Bien, buenas, Elena. No hay problema. Muchas gracias. Chau.",
+  "calidad": {
+    "confianza_promedio": 0.533,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:39:07.545832",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:27.077024",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114113820317_ACD_24095",
+    "fecha_inicio": "14/1/2026 11:38:20",
+    "agente_nombre": "MZA 41",
+    "agente_login": "mza41",
+    "duracion_total": 198,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 119,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

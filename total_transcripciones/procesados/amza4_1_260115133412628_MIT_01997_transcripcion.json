@@ -1,0 +1,92 @@
+{
+  "archivo": "amza4_1_260115133412628_MIT_01997.wav",
+  "duracion_segundos": 85.79,
+  "num_segmentos": 9,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 69.62
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 13.23,
+      "fin": 26.14,
+      "duracion": 12.91,
+      "texto": "Hola, Eduardo. Eduardo, lo último me parece decirle, le acabo de mandar un mensajito por WhatsApp hace unos minutitos.",
+      "confianza": 0.595,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.52,
+      "fin": 42.44,
+      "duracion": 14.92,
+      "texto": "Si usted lo puede leer y contestarme por ahí a WhatsApp, se lo voy a agradecer, ¿sí? Bueno, me están volviendo locos con los llamados. Yo laburo con el teléfono.",
+      "confianza": 0.533,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.13,
+      "fin": 71.87,
+      "duracion": 28.74,
+      "texto": "Me llaman gente y yo pienso que son gente... Me llaman de claro, que se escucha lo que me dicen, pero... No, no está bien es entenderlo. No, no, que es tranquilo, por eso le pido, Eduardo, por eso no le dame nuevamente. No acepté ninguna promoción porque si usted acepta una promo de claro y ya hizo la ficha conmigo, que ya está todo grabado correctamente, vale, después no va a tener ni acción ni conclaro, ni como voy a estar, pero sí va a tener dos facturas corriéndole a su nombre, ¿sí?",
+      "confianza": 0.04,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 72.75,
+      "fin": 85.79,
+      "duracion": 13.05,
+      "texto": "Yo le agradezco y si me puede responder ahora el mensajito de WhatsApp que le mandé y le agradecería, ¿sí?",
+      "confianza": 0.608,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, Eduardo. Eduardo, lo último me parece decirle, le acabo de mandar un mensajito por WhatsApp hace unos minutitos. Si usted lo puede leer y contestarme por ahí a WhatsApp, se lo voy a agradecer, ¿sí? Bueno, me están volviendo locos con los llamados. Yo laburo con el teléfono. Me llaman gente y yo pienso que son gente... Me llaman de claro, que se escucha lo que me dicen, pero... No, no está bien es entenderlo. No, no, que es tranquilo, por eso le pido, Eduardo, por eso no le dame nuevamente. No acepté ninguna promoción porque si usted acepta una promo de claro y ya hizo la ficha conmigo, que ya está todo grabado correctamente, vale, después no va a tener ni acción ni conclaro, ni como voy a estar, pero sí va a tener dos facturas corriéndole a su nombre, ¿sí? Yo le agradezco y si me puede responder ahora el mensajito de WhatsApp que le mandé y le agradecería, ¿sí?",
+  "calidad": {
+    "confianza_promedio": 0.396,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:27:47.773030",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 9,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:29.889933",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115133412628_MIT_01997",
+    "fecha_inicio": "15/1/2026 13:34:14",
+    "agente_nombre": "MZA 4",
+    "agente_login": "mza4",
+    "duracion_total": 86,
+    "tiempo_conversacion": 83,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Venta",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

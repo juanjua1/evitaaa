@@ -1,0 +1,111 @@
+{
+  "archivo": "amza43_1_260112143129780_ACD_64985.wav",
+  "duracion_segundos": 66.96,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 30.71,
+    "Cliente": 31.5
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.84,
+      "fin": 25.47,
+      "duracion": 23.63,
+      "texto": "Hola. Hola, buenas tardes. Hablo con Samuel. Sí, señor. ¿Quién sos? Franco, mi nombre. Trama de alineadores a brindar una promoción para tu línea móvil, que actualmente está en claro, ¿es correcto? Sí, señor. Hola, buenas noches. Samuel, ¿es la única línea a tu nombre, es verdad? Sí, creo que tengo otra más.",
+      "confianza": 0.245,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.49,
+      "fin": 25.67,
+      "duracion": 0.18,
+      "texto": "Perfecto.",
+      "confianza": 0.026,
+      "_corregido": "respuesta_corta_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.69,
+      "fin": 32.77,
+      "duracion": 7.08,
+      "texto": "¿Y cuándo llegaste a brindar tu compañía actualmente? ¿Cómo? ¿Cuántos gigabayes le brindas compañía actualmente?",
+      "confianza": 0.439,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 34.29,
+      "fin": 40.62,
+      "duracion": 6.33,
+      "texto": "Me está... yo sopoco dos. Dos, ¿no? Dos. ¿Dos gigas en la semana? Sí, señor.",
+      "confianza": 0.622,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.33,
+      "fin": 48.06,
+      "duracion": 6.73,
+      "texto": "¿Qué tan poco? Me acerco el mes ahora. ¿Por?",
+      "confianza": 0.334,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 48.7,
+      "fin": 66.96,
+      "duracion": 18.26,
+      "texto": "¿De qué proceso? Estoy en la estación, recién bajo del tren y estoy viajando.",
+      "confianza": 0.6,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas tardes. Hablo con Samuel. Sí, señor. ¿Quién sos? Franco, mi nombre. Trama de alineadores a brindar una promoción para tu línea móvil, que actualmente está en claro, ¿es correcto? Sí, señor. Hola, buenas noches. Samuel, ¿es la única línea a tu nombre, es verdad? Sí, creo que tengo otra más. Perfecto. ¿Y cuándo llegaste a brindar tu compañía actualmente? ¿Cómo? ¿Cuántos gigabayes le brindas compañía actualmente? Me está... yo sopoco dos. Dos, ¿no? Dos. ¿Dos gigas en la semana? Sí, señor. ¿Qué tan poco? Me acerco el mes ahora. ¿Por? ¿De qué proceso? Estoy en la estación, recién bajo del tren y estoy viajando.",
+  "calidad": {
+    "confianza_promedio": 0.439,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:54:51.584751",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:27.984361",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112143129780_ACD_64985",
+    "fecha_inicio": "12/1/2026 14:31:29",
+    "agente_nombre": "MZA 43",
+    "agente_login": "mza43",
+    "duracion_total": 92,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

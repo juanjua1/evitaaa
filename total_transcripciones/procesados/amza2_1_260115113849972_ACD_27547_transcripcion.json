@@ -1,0 +1,150 @@
+{
+  "archivo": "amza2_1_260115113849972_ACD_27547.wav",
+  "duracion_segundos": 63.89,
+  "num_segmentos": 29,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 12.78,
+    "Cliente": 33.85
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.04,
+      "fin": 4.4,
+      "duracion": 2.36,
+      "texto": "Abuela, ¿qué tal? Buenos días. Hablo con Milagros.",
+      "confianza": 0.411,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.66,
+      "fin": 6.48,
+      "duracion": 0.82,
+      "texto": "Sí.",
+      "confianza": 0.494,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.54,
+      "fin": 8.85,
+      "duracion": 2.31,
+      "texto": "Me gustó. ¿Cómo estás? Milagros. Mi nombre es Luciana.",
+      "confianza": 0.762,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.35,
+      "fin": 16.05,
+      "duracion": 6.71,
+      "texto": "Sí, me estoy contactando desde el área de recupero clientes de Modoizar para poder ofrecerte lo que es un nuevo descuento en tu ilimia.",
+      "confianza": 0.711,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.16,
+      "fin": 31.27,
+      "duracion": 12.11,
+      "texto": "No, te agradezco. Gracias. Bien. De todas maneras, no te he comentado nada. Dame dos minutitos, así me puedes escuchar. Te agradezco. Te agradezco. Bien. ¿Por algún motivo en especial no querés escuchar la propuesta que tengo?",
+      "confianza": 0.003,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.48,
+      "fin": 36.58,
+      "duracion": 4.1,
+      "texto": "No, no, porque estoy bien con la empresa que tengo ahora. Bien,",
+      "confianza": 0.381,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 36.58,
+      "fin": 37.07,
+      "duracion": 0.49,
+      "texto": "bien, bien, perfecto.",
+      "confianza": 0.17,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.09,
+      "fin": 53.75,
+      "duracion": 16.66,
+      "texto": "Entiendo. ¿Y qué es lo que te está ofreciendo actualmente de tu empresa? Disculpa, ahora no puedo hablar porque estoy manejando. Bien, perfecto. Bueno, no importa. Me preocupo más tarde. Que tengas buen día.",
+      "confianza": 0.793,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.75,
+      "fin": 54.91,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.144,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.98,
+      "fin": 63.89,
+      "duracion": 0.91,
+      "texto": "¿Qué pasa?",
+      "confianza": 0.203,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Abuela, ¿qué tal? Buenos días. Hablo con Milagros. Sí. Me gustó. ¿Cómo estás? Milagros. Mi nombre es Luciana. Sí, me estoy contactando desde el área de recupero clientes de Modoizar para poder ofrecerte lo que es un nuevo descuento en tu ilimia. No, te agradezco. Gracias. Bien. De todas maneras, no te he comentado nada. Dame dos minutitos, así me puedes escuchar. Te agradezco. Te agradezco. Bien. ¿Por algún motivo en especial no querés escuchar la propuesta que tengo? No, no, porque estoy bien con la empresa que tengo ahora. Bien, bien, bien, perfecto. Entiendo. ¿Y qué es lo que te está ofreciendo actualmente de tu empresa? Disculpa, ahora no puedo hablar porque estoy manejando. Bien, perfecto. Bueno, no importa. Me preocupo más tarde. Que tengas buen día. Gracias. ¿Qué pasa?",
+  "calidad": {
+    "confianza_promedio": 0.47,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:01:37.134500",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 29,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:21.149728",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115113849972_ACD_27547",
+    "fecha_inicio": "15/1/2026 11:38:49",
+    "agente_nombre": "MZA 2",
+    "agente_login": "mza2",
+    "duracion_total": 102,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

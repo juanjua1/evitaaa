@@ -1,0 +1,131 @@
+{
+  "archivo": "amza24_1_260114112924435_ACD_95257.wav",
+  "duracion_segundos": 68.82,
+  "num_segmentos": 19,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 3.79,
+    "Cliente": 62.27
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 11.67,
+      "duracion": 11.64,
+      "texto": "Hola. Hola. Hola, ¿cómo estás? Buenos días. Hablo con Juan. ¿Con quién hablas? ¿Cómo estás, Juan? ¿Aucín es mi nombre?",
+      "confianza": 0.181,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 11.73,
+      "fin": 15.07,
+      "duracion": 3.35,
+      "texto": "Me estoy comunicando de la área de recupero de clientes Movistar.",
+      "confianza": 0.674,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.1,
+      "fin": 17.6,
+      "duracion": 2.5,
+      "texto": "No figura que vos actualmente estás en claro, ¿verdad?",
+      "confianza": 0.564,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.08,
+      "fin": 26.71,
+      "duracion": 7.63,
+      "texto": "Sí, ya le dije ayer al muchacho que no me molestaran más, por favor. Que no... Movistar no tiene bien...",
+      "confianza": 0.608,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.35,
+      "fin": 34.92,
+      "duracion": 7.57,
+      "texto": "Una que no tiene precio muy alto y otra que no tiene señales en la zona.",
+      "confianza": 0.577,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.42,
+      "fin": 67.31,
+      "duracion": 31.89,
+      "texto": "Que por favor no me molestaran porque yo estoy trabajando y ustedes me llaman todos los días o a cada rato por el recupero, pero yo entiendo tu trabajo, te entiendo a vos, pero no me pueden estar todos los días llamando por lo que yo ya les dije que no quiero movistar porque no tienen señal, déjalo asentado y otra cosa que el precio de ustedes es muy caro. Te agradezco tu buena voluntad y disculpa que te haya atendido así de esta manera. Bien,",
+      "confianza": 0.699,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 67.31,
+      "fin": 67.75,
+      "duracion": 0.44,
+      "texto": "perfecto lo entiendo.",
+      "confianza": 0.008,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.78,
+      "fin": 68.82,
+      "duracion": 1.04,
+      "texto": "Muchas gracias, que tengamos buen día. Adiós.",
+      "confianza": 0.128,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, ¿cómo estás? Buenos días. Hablo con Juan. ¿Con quién hablas? ¿Cómo estás, Juan? ¿Aucín es mi nombre? Me estoy comunicando de la área de recupero de clientes Movistar. No figura que vos actualmente estás en claro, ¿verdad? Sí, ya le dije ayer al muchacho que no me molestaran más, por favor. Que no... Movistar no tiene bien... Una que no tiene precio muy alto y otra que no tiene señales en la zona. Que por favor no me molestaran porque yo estoy trabajando y ustedes me llaman todos los días o a cada rato por el recupero, pero yo entiendo tu trabajo, te entiendo a vos, pero no me pueden estar todos los días llamando por lo que yo ya les dije que no quiero movistar porque no tienen señal, déjalo asentado y otra cosa que el precio de ustedes es muy caro. Te agradezco tu buena voluntad y disculpa que te haya atendido así de esta manera. Bien, perfecto lo entiendo. Muchas gracias, que tengamos buen día. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.327,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:29:23.042777",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 19,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:19.054198",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114112924435_ACD_95257",
+    "fecha_inicio": "14/1/2026 11:29:24",
+    "agente_nombre": "MZA 24",
+    "agente_login": "mza24",
+    "duracion_total": 91,
+    "tiempo_conversacion": 69,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

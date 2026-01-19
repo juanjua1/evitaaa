@@ -1,0 +1,138 @@
+{
+  "archivo": "amza314_1_260112124712756_ACD_24115.wav",
+  "duracion_segundos": 80.41,
+  "num_segmentos": 29,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 15.17,
+    "Cliente": 54.45
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.72,
+      "fin": 2.84,
+      "duracion": 1.12,
+      "texto": "Hola, ¿qué tal? ¿Buen día?",
+      "confianza": 0.494,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.6,
+      "fin": 14.69,
+      "duracion": 10.09,
+      "texto": "Sí, buen día. ¿Cómo estás? Sí, Rocío. No tengo el gusto de hablar con alguna de las líneas de Sonia. Sí. Llamada para brindarte un beneficio en la línea. ¿Cómo estás? ¿Cuál es tu nombre?",
+      "confianza": 0.039,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 17.14,
+      "fin": 24.79,
+      "duracion": 7.65,
+      "texto": "Todavía. Todavía. ¿Tomas algún tipo de decisión sobre la línea? Por ejemplo, la cantidad de gigas que ocupas en el mes.",
+      "confianza": 0.467,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.81,
+      "fin": 25.03,
+      "duracion": 0.22,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.119,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.48,
+      "fin": 31.88,
+      "duracion": 6.4,
+      "texto": "Bien, genial. La idea era brindarte una promoción mucho mejor de la que vos tenés actualmente en claro. Yo me contacto de Movistar, ¿sí?",
+      "confianza": 0.226,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 33.43,
+      "fin": 37.17,
+      "duracion": 3.74,
+      "texto": "Ah, ok. No, está bien. Movistar no me interesa en este momento.",
+      "confianza": 0.363,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 38.11,
+      "fin": 48.96,
+      "duracion": 10.85,
+      "texto": "Y te puedo preguntar, ¿por qué? ¿Tuviste alguna mala experiencia? ¿Por qué no quisieran escuchar la promoción? Claro, sí, porque no me gusta la compañía, cómo funciona, malas experiencias.",
+      "confianza": 0.68,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.04,
+      "fin": 53.65,
+      "duracion": 3.61,
+      "texto": "No volvería. O sea, durante el servicio no volvería.",
+      "confianza": 0.838,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.47,
+      "fin": 80.41,
+      "duracion": 25.94,
+      "texto": "Entiendo, lamento mucho que hayas tenido ese inconveniente con nosotros. A mí me asegura que las líneas, la última vez que estuvieron con nosotros en la compañía fue en el 2024. Obviamente nos hemos reinventado mucho como empresa, la idea es acompañar a los clientes, no solamente en el trámite de portabilidad, sino estando ya en la compañía, que cualquier cosa que necesites directamente te contactes con un asesor, que cuentas con mi número de asesor personal.",
+      "confianza": 0.707,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buen día? Sí, buen día. ¿Cómo estás? Sí, Rocío. No tengo el gusto de hablar con alguna de las líneas de Sonia. Sí. Llamada para brindarte un beneficio en la línea. ¿Cómo estás? ¿Cuál es tu nombre? Todavía. Todavía. ¿Tomas algún tipo de decisión sobre la línea? Por ejemplo, la cantidad de gigas que ocupas en el mes. Sí, sí, sí. Bien, genial. La idea era brindarte una promoción mucho mejor de la que vos tenés actualmente en claro. Yo me contacto de Movistar, ¿sí? Ah, ok. No, está bien. Movistar no me interesa en este momento. Y te puedo preguntar, ¿por qué? ¿Tuviste alguna mala experiencia? ¿Por qué no quisieran escuchar la promoción? Claro, sí, porque no me gusta la compañía, cómo funciona, malas experiencias. No volvería. O sea, durante el servicio no volvería. Entiendo, lamento mucho que hayas tenido ese inconveniente con nosotros. A mí me asegura que las líneas, la última vez que estuvieron con nosotros en la compañía fue en el 2024. Obviamente nos hemos reinventado mucho como empresa, la idea es acompañar a los clientes, no solamente en el trámite de portabilidad, sino estando ya en la compañía, que cualquier cosa que necesites directamente te contactes con un asesor, que cuentas con mi número de asesor personal.",
+  "calidad": {
+    "confianza_promedio": 0.526,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:21:43.637460",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 29,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:22.464592",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112124712756_ACD_24115",
+    "fecha_inicio": "12/1/2026 12:47:12",
+    "agente_nombre": "MZA 314",
+    "agente_login": "mza314",
+    "duracion_total": 99,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

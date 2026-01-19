@@ -1,0 +1,167 @@
+{
+  "archivo": "amza23_1_260112120843108_ACD_57655.wav",
+  "duracion_segundos": 75.04,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 47.71,
+    "Cliente": 17.28
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.87,
+      "fin": 5.06,
+      "duracion": 3.19,
+      "texto": "Hola, buenos días. Me estoy comunicando con María.",
+      "confianza": 0.399,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.36,
+      "fin": 8.98,
+      "duracion": 1.62,
+      "texto": "Hola. ¿Quién habla?",
+      "confianza": 0.796,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.87,
+      "fin": 10.49,
+      "duracion": 0.62,
+      "texto": "Hola, María.",
+      "confianza": 0.19,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.51,
+      "fin": 11.45,
+      "duracion": 0.94,
+      "texto": "Mi nombre es Celeste.",
+      "confianza": 0.528,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.47,
+      "fin": 23.79,
+      "duracion": 12.32,
+      "texto": "Llamo para brindarle un nuevo beneficio para su línea. Me sale que actualmente usted está incluyendo eso, ¿correcto? No, gracias. Me agradezco. No estoy en el país.",
+      "confianza": 0.737,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.7,
+      "fin": 48.13,
+      "duracion": 22.43,
+      "texto": "No hay ningún problema con eso. Nosotros podemos llevar, o sea, le podemos hacer llevar el cheque de igual manera a donde usted esté. No, gracias, porque me va a ser imposible pagar desde otro país. Lo pueden abonar desde cualquier aplicación, sí.",
+      "confianza": 0.535,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.07,
+      "fin": 55.65,
+      "duracion": 6.58,
+      "texto": "Aquí se puede ir directo al banco, lo que sea, después. Usted lo va a ver en lo que es la aplicación de Movistar.",
+      "confianza": 0.622,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 56.95,
+      "fin": 64.02,
+      "duracion": 7.07,
+      "texto": "Ahí le va a salir. No, pero yo no estoy a donde está eso. Así que me va a complicar. Te agradezco.",
+      "confianza": 0.558,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 64.76,
+      "fin": 65.11,
+      "duracion": 0.34,
+      "texto": "OK.",
+      "confianza": 0.481,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 65.12,
+      "fin": 67.11,
+      "duracion": 1.99,
+      "texto": "Ya está bien. No hay ningún problema.",
+      "confianza": 0.75,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.13,
+      "fin": 69.51,
+      "duracion": 2.38,
+      "texto": "Sí.",
+      "confianza": 0.508,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 69.53,
+      "fin": 75.04,
+      "duracion": 5.51,
+      "texto": "Deladitos, que tengan un lindo día. Gracias. Hasta luego.",
+      "confianza": 0.288,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Me estoy comunicando con María. Hola. ¿Quién habla? Hola, María. Mi nombre es Celeste. Llamo para brindarle un nuevo beneficio para su línea. Me sale que actualmente usted está incluyendo eso, ¿correcto? No, gracias. Me agradezco. No estoy en el país. No hay ningún problema con eso. Nosotros podemos llevar, o sea, le podemos hacer llevar el cheque de igual manera a donde usted esté. No, gracias, porque me va a ser imposible pagar desde otro país. Lo pueden abonar desde cualquier aplicación, sí. Aquí se puede ir directo al banco, lo que sea, después. Usted lo va a ver en lo que es la aplicación de Movistar. Ahí le va a salir. No, pero yo no estoy a donde está eso. Así que me va a complicar. Te agradezco. OK. Ya está bien. No hay ningún problema. Sí. Deladitos, que tengan un lindo día. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.481,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:18:08.458558",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 12,
+    "fecha_correccion": "2026-01-18T23:05:18.281225",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112120843108_ACD_57655",
+    "fecha_inicio": "12/1/2026 12:08:43",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 100,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

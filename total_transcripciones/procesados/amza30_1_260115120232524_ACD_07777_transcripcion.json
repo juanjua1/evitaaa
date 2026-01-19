@@ -1,0 +1,131 @@
+{
+  "archivo": "amza30_1_260115120232524_ACD_07777.wav",
+  "duracion_segundos": 84.36,
+  "num_segmentos": 37,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 9.45,
+    "Cliente": 70.4
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.5,
+      "fin": 21.34,
+      "duracion": 19.84,
+      "texto": "Hola, ¿qué tal? Buen día, Eugenia. ¿Es mi nombre? ¿Hablo con Matías? No. Bien, ¿es usted la usuaria de la línea? ¿Con quién tengo el gusto de hablar? Sí, con mí, con la usuaria del teléfono. ¿Vos hablas encargada del teléfono? Buenísimo, entonces.",
+      "confianza": 0.522,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.77,
+      "fin": 22.49,
+      "duracion": 0.72,
+      "texto": "Bien, te comento.",
+      "confianza": 0.745,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.63,
+      "fin": 53.89,
+      "duracion": 31.26,
+      "texto": "El día de hoy estábamos con una promo exclusiva, justamente para las líneas de Matías, y por eso es el motivo de mi llamado, ¿sí? ¿Ustedes cuentan actualmente con lo que es factura mensual o realizan recargas, con claro? No, con la factura mensual. Bien. ¿Consumís muchos gigas o son usar poquitos? Te consulto para saber. No sé porque eso lo maneja todo mi hijo, así que no. Ah, bien. Lo maneja él. Yo no entiendo nada de eso, así que no. Ah, perfecto.",
+      "confianza": 0.708,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.65,
+      "fin": 59.2,
+      "duracion": 4.55,
+      "texto": "Bien. Y a Matías, ¿lo podré encontrar en la línea que termina en 70 o en 82?",
+      "confianza": 0.083,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.14,
+      "fin": 63.17,
+      "duracion": 3.03,
+      "texto": "En 82. En 82. Bien,",
+      "confianza": 0.576,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 63.17,
+      "fin": 71.9,
+      "duracion": 8.73,
+      "texto": "entonces le voy a decir que estuve hablando con usted y le voy a comentar entonces cuáles son las promos para ver si a él le gustan y le parecen accesibles, ¿sí?",
+      "confianza": 0.487,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 71.92,
+      "fin": 82.01,
+      "duracion": 10.09,
+      "texto": "Bueno, vale. Bueno, muy amable, espero que tenga muy bonito día. ¿Me dijo su nombre? Madi. Madi. Bien, buenísimo. Muchas gracias, Madi, que tenga un lindo día. Nos vemos.",
+      "confianza": 0.008,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 82.73,
+      "fin": 84.36,
+      "duracion": 1.63,
+      "texto": "Igualmente, hasta luego. Hasta luego.",
+      "confianza": 0.219,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, Eugenia. ¿Es mi nombre? ¿Hablo con Matías? No. Bien, ¿es usted la usuaria de la línea? ¿Con quién tengo el gusto de hablar? Sí, con mí, con la usuaria del teléfono. ¿Vos hablas encargada del teléfono? Buenísimo, entonces. Bien, te comento. El día de hoy estábamos con una promo exclusiva, justamente para las líneas de Matías, y por eso es el motivo de mi llamado, ¿sí? ¿Ustedes cuentan actualmente con lo que es factura mensual o realizan recargas, con claro? No, con la factura mensual. Bien. ¿Consumís muchos gigas o son usar poquitos? Te consulto para saber. No sé porque eso lo maneja todo mi hijo, así que no. Ah, bien. Lo maneja él. Yo no entiendo nada de eso, así que no. Ah, perfecto. Bien. Y a Matías, ¿lo podré encontrar en la línea que termina en 70 o en 82? En 82. En 82. Bien, entonces le voy a decir que estuve hablando con usted y le voy a comentar entonces cuáles son las promos para ver si a él le gustan y le parecen accesibles, ¿sí? Bueno, vale. Bueno, muy amable, espero que tenga muy bonito día. ¿Me dijo su nombre? Madi. Madi. Bien, buenísimo. Muchas gracias, Madi, que tenga un lindo día. Nos vemos. Igualmente, hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.445,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:10:00.147006",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 37,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:21.660342",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115120232524_ACD_07777",
+    "fecha_inicio": "15/1/2026 12:02:32",
+    "agente_nombre": "MZA 30",
+    "agente_login": "mza30",
+    "duracion_total": 124,
+    "tiempo_conversacion": 82,
+    "tiempo_hold": 0,
+    "tiempo_acw": 13,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No usa o No tiene celular",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

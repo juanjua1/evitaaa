@@ -1,0 +1,153 @@
+{
+  "archivo": "amza4_1_260112134324658_ACD_01115.wav",
+  "duracion_segundos": 60.95,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 56.32,
+    "Cliente": 1.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.79,
+      "fin": 4.11,
+      "duracion": 2.32,
+      "texto": "¿Hola?",
+      "confianza": 0.154,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.13,
+      "fin": 4.31,
+      "duracion": 0.18,
+      "texto": "Sí.",
+      "confianza": 0.414,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.33,
+      "fin": 7.43,
+      "duracion": 3.1,
+      "texto": "Hola, ¿qué tal? ¿María Laura?",
+      "confianza": 0.4,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.45,
+      "fin": 7.51,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.054,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.53,
+      "fin": 21.55,
+      "duracion": 14.02,
+      "texto": "María Laura, un gusto. Mi nombre es Gabriela. Me estoy comunicando de la Ría Recuperado del Cliente de la Compañía Monster. ¿Cómo está María Laura? ¿Vos sabés cómo puedo hacer para que no me llamen más? ¿Tenés idea?",
+      "confianza": 0.45,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.57,
+      "fin": 21.71,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.092,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.73,
+      "fin": 28.16,
+      "duracion": 6.43,
+      "texto": "Yo es la primera vez que me comunico acá de Casa Central. No sé si era la bien llamada. Mira, hoy es la tercera vez.",
+      "confianza": 0.53,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.36,
+      "fin": 29.35,
+      "duracion": 0.99,
+      "texto": "Bien, bien, bien.",
+      "confianza": 0.548,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 29.6,
+      "fin": 54.36,
+      "duracion": 24.76,
+      "texto": "Bueno, mire Laura, lo que tienen que hacer es, desde el buscador de internet en su mismo teléfono, ingresar a lo que es el buscador y poner registro no llame más. Entonces, al poner registro no llame más, la van a enviar a una página web, ustedes la página, que es un registro nacional, carga lo que es su número de teléfono, lo configura, entonces ya no le ingresan este tipo de llamadas.",
+      "confianza": 0.691,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.26,
+      "fin": 60.95,
+      "duracion": 5.69,
+      "texto": "Perfecto, buenísimo. Te agradezco mucho. No, por nada. Laura, que estén muy bien. Hasta luego. Adiós.",
+      "confianza": 0.47,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? Sí. Hola, ¿qué tal? ¿María Laura? Sí. María Laura, un gusto. Mi nombre es Gabriela. Me estoy comunicando de la Ría Recuperado del Cliente de la Compañía Monster. ¿Cómo está María Laura? ¿Vos sabés cómo puedo hacer para que no me llamen más? ¿Tenés idea? Sí, sí. Yo es la primera vez que me comunico acá de Casa Central. No sé si era la bien llamada. Mira, hoy es la tercera vez. Bien, bien, bien. Bueno, mire Laura, lo que tienen que hacer es, desde el buscador de internet en su mismo teléfono, ingresar a lo que es el buscador y poner registro no llame más. Entonces, al poner registro no llame más, la van a enviar a una página web, ustedes la página, que es un registro nacional, carga lo que es su número de teléfono, lo configura, entonces ya no le ingresan este tipo de llamadas. Perfecto, buenísimo. Te agradezco mucho. No, por nada. Laura, que estén muy bien. Hasta luego. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.434,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:19:10.839462",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:29.464479",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112134324658_ACD_01115",
+    "fecha_inicio": "12/1/2026 13:43:24",
+    "agente_nombre": "MZA 4",
+    "agente_login": "mza4",
+    "duracion_total": 82,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 7,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "archivo": "amza15_1_260112145803864_ACD_41665.wav",
+  "duracion_segundos": 62.69,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 11.26,
+    "Cliente": 46.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.31,
+      "fin": 18.3,
+      "duracion": 16.99,
+      "texto": "Hola, ¿qué tal? ¿Buenas tardes? Sí, ¿qué tal? Sí, ¿cómo va? ¿Buenas tardes? Sí, sí. Hola, Gabriela Macarena, en mi nombre nos estamos contactando para brindarle una muy buena promoción en el día de hoy a su línea por un plan en el 6400 con 8 gigas.",
+      "confianza": 0.068,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.89,
+      "fin": 24.76,
+      "duracion": 5.87,
+      "texto": "Me figura el sistema que usted tiene dos líneas, es su nombre, ¿claro? ¿Eso es correcto?",
+      "confianza": 0.646,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.6,
+      "fin": 46.04,
+      "duracion": 20.44,
+      "texto": "Sí, exactamente. Bien, perfecto. En ese caso, le comento que va a tener 4GB extra para cada una de las líneas. Sí, ¿de qué compañía me están bancando? Moviesar. Mira, yo no estuve en Moviesar, así que la saqué de Moviesar. Yo, por ahora, no me cambio.",
+      "confianza": 0.765,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 47.56,
+      "fin": 55.01,
+      "duracion": 7.45,
+      "texto": "Cualquier cosita, si quieren, me vuelven a llamar. ¿Cómo se llama? ¿Dico lo mismo?",
+      "confianza": 0.611,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.94,
+      "fin": 58.99,
+      "duracion": 3.05,
+      "texto": "¿Lomito, que viene con Lomo?",
+      "confianza": 0.486,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.01,
+      "fin": 61.91,
+      "duracion": 2.9,
+      "texto": "No. Exacto.",
+      "confianza": 0.436,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 61.93,
+      "fin": 62.69,
+      "duracion": 0.76,
+      "texto": "Sí, exacto.",
+      "confianza": 0.244,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buenas tardes? Sí, ¿qué tal? Sí, ¿cómo va? ¿Buenas tardes? Sí, sí. Hola, Gabriela Macarena, en mi nombre nos estamos contactando para brindarle una muy buena promoción en el día de hoy a su línea por un plan en el 6400 con 8 gigas. Me figura el sistema que usted tiene dos líneas, es su nombre, ¿claro? ¿Eso es correcto? Sí, exactamente. Bien, perfecto. En ese caso, le comento que va a tener 4GB extra para cada una de las líneas. Sí, ¿de qué compañía me están bancando? Moviesar. Mira, yo no estuve en Moviesar, así que la saqué de Moviesar. Yo, por ahora, no me cambio. Cualquier cosita, si quieren, me vuelven a llamar. ¿Cómo se llama? ¿Dico lo mismo? ¿Lomito, que viene con Lomo? No. Exacto. Sí, exacto.",
+  "calidad": {
+    "confianza_promedio": 0.397,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:22:22.182533",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:14.936572",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112145803864_ACD_41665",
+    "fecha_inicio": "12/1/2026 14:58:03",
+    "agente_nombre": "MZA 15",
+    "agente_login": "mza15",
+    "duracion_total": 90,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 12,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

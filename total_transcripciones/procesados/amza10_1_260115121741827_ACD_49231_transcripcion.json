@@ -1,0 +1,121 @@
+{
+  "archivo": "amza10_1_260115121741827_ACD_49231.wav",
+  "duracion_segundos": 67.79,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 37.9,
+    "Cliente": 23.32
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.7,
+      "fin": 10.39,
+      "duracion": 8.69,
+      "texto": "Hola, buenas tardes con la línea de Martín. Sí. Martín, un gusto. ¿Cómo estás? Me estoy poniendo en contacto para brindarte una bonificación.",
+      "confianza": 0.496,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.83,
+      "fin": 18.84,
+      "duracion": 7.01,
+      "texto": "La foto es para los clientes y claro, vos actualmente estás en claro por lo que veo, ¿no? Ajá. Bien, perfecto.",
+      "confianza": 0.568,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.86,
+      "fin": 20.56,
+      "duracion": 1.7,
+      "texto": "Mirá, te comento que tenemos un plan.",
+      "confianza": 0.748,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.58,
+      "fin": 28.2,
+      "duracion": 7.62,
+      "texto": "Si en oferta son 16 gigas y te queda el valor de 10,400 pesos. No sé si es la cantidad más o menos que vos estás usando actualmente.",
+      "confianza": 0.689,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.43,
+      "fin": 39.65,
+      "duracion": 9.22,
+      "texto": "Sí, más o menos. Bueno, en este caso, como te lo vas a contar con 16 días en total mensual, te quedan 10.400 finales.",
+      "confianza": 0.05,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.19,
+      "fin": 59.65,
+      "duracion": 19.46,
+      "texto": "Y te queda, el plan te incluye lo que es WhatsApp, Gratis, Togo y Grimitado, y te incluye Rumin en América. Bien, y bueno, podés llamar en la tarde porque ahora yo justo estoy en el trabajo, en todo caso. Mirá, vale, Martín, yo estoy acá hasta las 3 en la oficina y vos tenés 5 minutos, genial. Después de las 14.",
+      "confianza": 0.651,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 60.27,
+      "fin": 67.79,
+      "duracion": 7.52,
+      "texto": "A las 14, ¿sabéis? Sí, perfecto. Perfecto, bueno. Muchas gracias, Martín. Gracias. Adiós.",
+      "confianza": 0.552,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes con la línea de Martín. Sí. Martín, un gusto. ¿Cómo estás? Me estoy poniendo en contacto para brindarte una bonificación. La foto es para los clientes y claro, vos actualmente estás en claro por lo que veo, ¿no? Ajá. Bien, perfecto. Mirá, te comento que tenemos un plan. Si en oferta son 16 gigas y te queda el valor de 10,400 pesos. No sé si es la cantidad más o menos que vos estás usando actualmente. Sí, más o menos. Bueno, en este caso, como te lo vas a contar con 16 días en total mensual, te quedan 10.400 finales. Y te queda, el plan te incluye lo que es WhatsApp, Gratis, Togo y Grimitado, y te incluye Rumin en América. Bien, y bueno, podés llamar en la tarde porque ahora yo justo estoy en el trabajo, en todo caso. Mirá, vale, Martín, yo estoy acá hasta las 3 en la oficina y vos tenés 5 minutos, genial. Después de las 14. A las 14, ¿sabéis? Sí, perfecto. Perfecto, bueno. Muchas gracias, Martín. Gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.409,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:03:25.950589",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:13.714832",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115121741827_ACD_49231",
+    "fecha_inicio": "15/1/2026 12:17:41",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 92,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

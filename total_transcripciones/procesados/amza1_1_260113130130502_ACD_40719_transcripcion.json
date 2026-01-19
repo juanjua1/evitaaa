@@ -1,0 +1,110 @@
+{
+  "archivo": "amza1_1_260113130130502_ACD_40719.wav",
+  "duracion_segundos": 69.54,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.15,
+    "Cliente": 40.98
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.77,
+      "fin": 9.88,
+      "duracion": 9.11,
+      "texto": "Hola, ¿qué tal? Muy buenas tardes. Hablo con Anibal. ¿Quién habla? Anibal, te hablaba Angelina de Estelador desde la área de recupero clientes movilizar. ¿Cómo te va?",
+      "confianza": 0.295,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 12.35,
+      "fin": 20.82,
+      "duracion": 8.47,
+      "texto": "Y ahora, en este momento, ¿cómo crees que me voy? No, no, no, mal no. Si no, no estaría trabajando. Bueno, me alegro, entonces.",
+      "confianza": 0.539,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.98,
+      "fin": 29.87,
+      "duracion": 7.89,
+      "texto": "A mí siempre me va bien, pero estoy muy ocupado. Bien, Anibal, no hay problema. Te podré contactar en otro momento, pasarte las promociones por WhatsApp.",
+      "confianza": 0.54,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.98,
+      "fin": 34.77,
+      "duracion": 3.79,
+      "texto": "Pásame las producciones por WhatsApp, a ver, porque estoy analizando eso.",
+      "confianza": 0.684,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.01,
+      "fin": 52.83,
+      "duracion": 15.82,
+      "texto": "Pásamela por WhatsApp porque... Sí, me interesa, porque tengo que ajustar el supuesto. Como no te puedo atender, no me gusta ser maleducado, pero bueno, estoy manejando.",
+      "confianza": 0.458,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.49,
+      "fin": 69.54,
+      "duracion": 16.05,
+      "texto": "Bien, ahí te mando un mensajito por WhatsApp, cuando puedas respondérmelo y te adjunto a las promos. Dale, chau chau. Que estés muy bien, chau chau. La gente está como muy al palo.",
+      "confianza": 0.48,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Muy buenas tardes. Hablo con Anibal. ¿Quién habla? Anibal, te hablaba Angelina de Estelador desde la área de recupero clientes movilizar. ¿Cómo te va? Y ahora, en este momento, ¿cómo crees que me voy? No, no, no, mal no. Si no, no estaría trabajando. Bueno, me alegro, entonces. A mí siempre me va bien, pero estoy muy ocupado. Bien, Anibal, no hay problema. Te podré contactar en otro momento, pasarte las promociones por WhatsApp. Pásame las producciones por WhatsApp, a ver, porque estoy analizando eso. Pásamela por WhatsApp porque... Sí, me interesa, porque tengo que ajustar el supuesto. Como no te puedo atender, no me gusta ser maleducado, pero bueno, estoy manejando. Bien, ahí te mando un mensajito por WhatsApp, cuando puedas respondérmelo y te adjunto a las promos. Dale, chau chau. Que estés muy bien, chau chau. La gente está como muy al palo.",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:39:32.860465",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 20,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:15.930799",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113130130502_ACD_40719",
+    "fecha_inicio": "13/1/2026 13:01:30",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 104,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 10,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

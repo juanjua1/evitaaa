@@ -1,0 +1,121 @@
+{
+  "archivo": "amza5_1_260115115234685_ACD_76861.wav",
+  "duracion_segundos": 70.5,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 39.5,
+    "Cliente": 17.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.57,
+      "fin": 1.09,
+      "duracion": 0.52,
+      "texto": "Hola. ¿Hable?",
+      "confianza": 0.347,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.08,
+      "fin": 18.29,
+      "duracion": 7.21,
+      "texto": "Hola. Hola. Hola, Carlos. Sí, él habla.",
+      "confianza": 0.387,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.31,
+      "fin": 21.97,
+      "duracion": 3.66,
+      "texto": "Te comento, Carlos, estoy tomando por ordenarte lo que es una bonificación para tu línea.",
+      "confianza": 0.487,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.99,
+      "fin": 29.72,
+      "duracion": 7.73,
+      "texto": "¿Cómo te va? Me va como lo jete, porque llaman cada rato para darme una bonificación sobre la línea.",
+      "confianza": 0.658,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.11,
+      "fin": 59.89,
+      "duracion": 27.78,
+      "texto": "Bien, Carlos, de cualquier forma te estoy hablando bien. Yo también te estoy hablando bien, pero cuando te llaman 10 veces por día vas a ver que no hablas tan bien. Es la primera vez que me comunicó a conocer. Yo soy parte del REC, pero... Por eso te digo, debe haber 100.800 personas que se dedican a lo tuyo porque a mí me llaman 10 veces por día.",
+      "confianza": 0.031,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.49,
+      "fin": 62.94,
+      "duracion": 2.45,
+      "texto": "Claro Carlos, imagínate que nos encontramos en todo el país.",
+      "confianza": 0.752,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.96,
+      "fin": 70.5,
+      "duracion": 7.54,
+      "texto": "Sí, somos distintas compañías las que te llamamos. Bueno, saludos. Que tengas buen día Carlos, hasta luego.",
+      "confianza": 0.536,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. ¿Hable? Hola. Hola. Hola, Carlos. Sí, él habla. Te comento, Carlos, estoy tomando por ordenarte lo que es una bonificación para tu línea. ¿Cómo te va? Me va como lo jete, porque llaman cada rato para darme una bonificación sobre la línea. Bien, Carlos, de cualquier forma te estoy hablando bien. Yo también te estoy hablando bien, pero cuando te llaman 10 veces por día vas a ver que no hablas tan bien. Es la primera vez que me comunicó a conocer. Yo soy parte del REC, pero... Por eso te digo, debe haber 100.800 personas que se dedican a lo tuyo porque a mí me llaman 10 veces por día. Claro Carlos, imagínate que nos encontramos en todo el país. Sí, somos distintas compañías las que te llamamos. Bueno, saludos. Que tengas buen día Carlos, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.446,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:36:32.209638",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:30.426623",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115115234685_ACD_76861",
+    "fecha_inicio": "15/1/2026 11:52:34",
+    "agente_nombre": "MZA 5",
+    "agente_login": "mza5",
+    "duracion_total": 91,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 10,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "archivo": "amza35_1_260115110836744_ACD_23713.wav",
+  "duracion_segundos": 66.1,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 15.13,
+    "Cliente": 46.88
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 13.8,
+      "duracion": 13.77,
+      "texto": "¿Sí, hola? Hola, ¿qué tal? Mónica, ¿cómo estás? Un gusto. Te habla Marcos. Mónica, te llamaba el día de hoy porque estamos activando beneficios para toda la familia. Verifico que la semana pasada te habían llamado para informarte de los beneficios, ¿sí?",
+      "confianza": 0.276,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.91,
+      "fin": 43.69,
+      "duracion": 28.78,
+      "texto": "Sí. Bien, buenísimo. Mónica, te llamo porque estamos trabajando en tu zona, activando beneficios para todo lo que es el grupo familiar desde el área de fibra óptica movistar y también para lo que es la línea móvil, ¿sí? Vos, Mónica, actualmente estás en claro, ¿estás con abono o haces recargas? No, no, no. Yo estoy en claro en un grupo familiar de mis hijos. Perfecto. Ah, perfecto. O sea, sería en ese caso usted la titular y además tiene las líneas de sus hijos. ¿Cuántas líneas tienen en claro?",
+      "confianza": 0.319,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 44.72,
+      "fin": 48.68,
+      "duracion": 3.97,
+      "texto": "No, no sé, porque todos lo hicieron mis hijos, no tengo ni idea.",
+      "confianza": 0.715,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.27,
+      "fin": 52.21,
+      "duracion": 1.94,
+      "texto": "Es más, me los pagan ellos.",
+      "confianza": 0.488,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.23,
+      "fin": 52.59,
+      "duracion": 0.36,
+      "texto": "Perfecto.",
+      "confianza": 0.54,
+      "_corregido": "respuesta_corta_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 52.91,
+      "fin": 66.1,
+      "duracion": 13.19,
+      "texto": "Bueno, dale, mira, yo te voy a dejar información por WhatsApp, así después lo ves con tus hijos y te damos y te comento bien todos los descuentos, ¿sí? Bueno. Dale, Mónica, que tengas lindo día. Hasta luego. Hasta luego, chau. Adiós.",
+      "confianza": 0.685,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Sí, hola? Hola, ¿qué tal? Mónica, ¿cómo estás? Un gusto. Te habla Marcos. Mónica, te llamaba el día de hoy porque estamos activando beneficios para toda la familia. Verifico que la semana pasada te habían llamado para informarte de los beneficios, ¿sí? Sí. Bien, buenísimo. Mónica, te llamo porque estamos trabajando en tu zona, activando beneficios para todo lo que es el grupo familiar desde el área de fibra óptica movistar y también para lo que es la línea móvil, ¿sí? Vos, Mónica, actualmente estás en claro, ¿estás con abono o haces recargas? No, no, no. Yo estoy en claro en un grupo familiar de mis hijos. Perfecto. Ah, perfecto. O sea, sería en ese caso usted la titular y además tiene las líneas de sus hijos. ¿Cuántas líneas tienen en claro? No, no sé, porque todos lo hicieron mis hijos, no tengo ni idea. Es más, me los pagan ellos. Perfecto. Bueno, dale, mira, yo te voy a dejar información por WhatsApp, así después lo ves con tus hijos y te damos y te comento bien todos los descuentos, ¿sí? Bueno. Dale, Mónica, que tengas lindo día. Hasta luego. Hasta luego, chau. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.516,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:59:55.887138",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:24.732969",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115110836744_ACD_23713",
+    "fecha_inicio": "15/1/2026 11:08:36",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 95,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

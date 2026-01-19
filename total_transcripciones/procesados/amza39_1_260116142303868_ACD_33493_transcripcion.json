@@ -1,0 +1,110 @@
+{
+  "archivo": "amza39_1_260116142303868_ACD_33493.wav",
+  "duracion_segundos": 105.0,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 57.86,
+    "Cliente": 27.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.42,
+      "fin": 11.47,
+      "duracion": 10.06,
+      "texto": "Hola, buenos días, había conectado Rubén Ávila.",
+      "confianza": 0.653,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.41,
+      "fin": 41.15,
+      "duracion": 22.74,
+      "texto": "Sí, 20 y me regalan dos 30 si ya tengo. 20 y me regalan 10.",
+      "confianza": 0.664,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.69,
+      "fin": 45.72,
+      "duracion": 2.02,
+      "texto": "Perfecto, comprendo.",
+      "confianza": 0.424,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.39,
+      "fin": 69.09,
+      "duracion": 18.7,
+      "texto": "No hay intención por todo lo que sea que tenga.",
+      "confianza": 0.48,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 69.59,
+      "fin": 86.01,
+      "duracion": 16.42,
+      "texto": "Bien, en ese caso lo que te puedo brindar Axel es que vos sos responsable en Cripto Monotributista para ofrecerte lo que es el Plan Empresa.",
+      "confianza": 0.567,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 89.7,
+      "fin": 105.0,
+      "duracion": 15.29,
+      "texto": "¡Muchas gracias!",
+      "confianza": 0.294,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días, había conectado Rubén Ávila. Sí, 20 y me regalan dos 30 si ya tengo. 20 y me regalan 10. Perfecto, comprendo. No hay intención por todo lo que sea que tenga. Bien, en ese caso lo que te puedo brindar Axel es que vos sos responsable en Cripto Monotributista para ofrecerte lo que es el Plan Empresa. ¡Muchas gracias!",
+  "calidad": {
+    "confianza_promedio": 0.525,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:20:47.809649",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 7,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:25.988761",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116142303868_ACD_33493",
+    "fecha_inicio": "16/1/2026 14:23:03",
+    "agente_nombre": "MZA 39",
+    "agente_login": "mza39",
+    "duracion_total": 124,
+    "tiempo_conversacion": 101,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "nan",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

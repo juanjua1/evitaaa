@@ -1,0 +1,104 @@
+{
+  "archivo": "amza33_1_260113141440148_ACD_91121.wav",
+  "duracion_segundos": 90.21,
+  "num_segmentos": 38,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 2.42,
+    "Cliente": 84.35
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 23.5,
+      "duracion": 23.47,
+      "texto": "Hola, cómo estás, buenos días. ¿Maria? Hola. Hola, ¿Maria? No. Ah, me fuera a quedar la titular de la línea. Te voy a consultar. ¿Vos sos quien utilizás en la línea? Sí. Bien, perfecto. Pero está el nombre de María, ¿correcto? Claro. Sí, sí, sí.",
+      "confianza": 0.274,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 23.52,
+      "fin": 25.95,
+      "duracion": 2.42,
+      "texto": "Te comento cómo es tu nombre, pero no se recortes.",
+      "confianza": 0.645,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.41,
+      "fin": 75.12,
+      "duracion": 47.71,
+      "texto": "Iván. Iván, perfecto. Yo me estoy contactando con vos justamente, Iván, porque quiero activarte yo lo que es un descuento exclusivo en tu línea móvil si pagas menos en tu boleta mensual, ¿sí? Tengo una consulta, Iván. En el tema de los gigas, ¿vos estás cómodo o te sabes quedar sin gigas a veces? A mesotas, mesotas. Bien, perfecto. ¿Y cuánto estás abonando actualmente? No, ni idea, porque me la pagan. Ah, ¿tu línea está en cuenta corporativa? No, no. Bien. Pero vos no sos el que tomas decisiones entonces. Claro. Igual ahora tienes trabajo, no puedo hablar. Perfecto. Entonces, ¿yo me puedo contactar con vos? ¿Entro un rato cuando te desocupes?",
+      "confianza": 0.198,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 76.46,
+      "fin": 86.15,
+      "duracion": 9.69,
+      "texto": "Igual no creo que cambie nada. Por ahora, por ahí... ¿Tenéis algún servicio de fibra óptica en tu domicilio? Sí, tiene. No sé de qué.",
+      "confianza": 0.609,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 86.73,
+      "fin": 90.21,
+      "duracion": 3.48,
+      "texto": "No, no manejo nada. Ah, bien, perfecto.",
+      "confianza": 0.407,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, cómo estás, buenos días. ¿Maria? Hola. Hola, ¿Maria? No. Ah, me fuera a quedar la titular de la línea. Te voy a consultar. ¿Vos sos quien utilizás en la línea? Sí. Bien, perfecto. Pero está el nombre de María, ¿correcto? Claro. Sí, sí, sí. Te comento cómo es tu nombre, pero no se recortes. Iván. Iván, perfecto. Yo me estoy contactando con vos justamente, Iván, porque quiero activarte yo lo que es un descuento exclusivo en tu línea móvil si pagas menos en tu boleta mensual, ¿sí? Tengo una consulta, Iván. En el tema de los gigas, ¿vos estás cómodo o te sabes quedar sin gigas a veces? A mesotas, mesotas. Bien, perfecto. ¿Y cuánto estás abonando actualmente? No, ni idea, porque me la pagan. Ah, ¿tu línea está en cuenta corporativa? No, no. Bien. Pero vos no sos el que tomas decisiones entonces. Claro. Igual ahora tienes trabajo, no puedo hablar. Perfecto. Entonces, ¿yo me puedo contactar con vos? ¿Entro un rato cuando te desocupes? Igual no creo que cambie nada. Por ahora, por ahí... ¿Tenéis algún servicio de fibra óptica en tu domicilio? Sí, tiene. No sé de qué. No, no manejo nada. Ah, bien, perfecto.",
+  "calidad": {
+    "confianza_promedio": 0.428,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:45:59.020292",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 38,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:23.926743",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113141440148_ACD_91121",
+    "fecha_inicio": "13/1/2026 14:14:40",
+    "agente_nombre": "MZA 33",
+    "agente_login": "mza33",
+    "duracion_total": 111,
+    "tiempo_conversacion": 87,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Corporativo",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

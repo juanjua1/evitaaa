@@ -1,0 +1,111 @@
+{
+  "archivo": "amza31_1_260116120657852_ACD_37311.wav",
+  "duracion_segundos": 71.14,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 41.38,
+    "Cliente": 24.07
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.12,
+      "fin": 25.95,
+      "duracion": 23.83,
+      "texto": "Hola, buen día. Hablo con Matías. No, hablo con Nicolás. ¿Cómo se te va? Nicolás, con gusto. Jessica te habla. Te llamamos para el día de hoy para brindarte una promoción exclusiva para tu línea. Profesora, profesora, Matías Nahuel Lombardi-Burgo será tu hermano o tu papá. No, es mi hermano. Ah, bien, perfecto. Y te hago una consulta. ¿Vos tomás decisiones sobre la línea?",
+      "confianza": 0.273,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.0,
+      "fin": 30.14,
+      "duracion": 2.14,
+      "texto": "Sí, soy yo el dueño, el titular. Ah, soy el dueño.",
+      "confianza": 0.151,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.64,
+      "fin": 33.81,
+      "duracion": 3.16,
+      "texto": "Hay que la apuntar, digamos, pero él es el titular.",
+      "confianza": 0.629,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 33.83,
+      "fin": 34.07,
+      "duracion": 0.24,
+      "texto": "Claro.",
+      "confianza": 0.494,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 34.51,
+      "fin": 60.16,
+      "duracion": 25.65,
+      "texto": "Ah, bien, perfecto. Bueno, mira, te comento, tenemos una promoción muy buena para tu línea del día de hoy, que te daríamos 16 gigabytes, ¿bien? En lo que es 10.400 pesos al día de hoy, ¿bien? Te quedarían 8 gigabites más 8 de regalo y te daríamos un descuento fijo por 6 meses, ¿bien? Y dentro del mismo plan, vos ya tenés incluido lo que es el WhatsApp, gratis, las semanas libres a cualquier compañía, 1 gigabyte para Free Fire, no sé si a vos te gusta jugar al Free Fire,",
+      "confianza": 0.776,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 60.71,
+      "fin": 71.14,
+      "duracion": 10.43,
+      "texto": "pero te damos lo que es un gigabyte para Free Fire exclusivamente y también contas con lo que es Roaming en América, porque vas a salir del país y demás.",
+      "confianza": 0.672,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hablo con Matías. No, hablo con Nicolás. ¿Cómo se te va? Nicolás, con gusto. Jessica te habla. Te llamamos para el día de hoy para brindarte una promoción exclusiva para tu línea. Profesora, profesora, Matías Nahuel Lombardi-Burgo será tu hermano o tu papá. No, es mi hermano. Ah, bien, perfecto. Y te hago una consulta. ¿Vos tomás decisiones sobre la línea? Sí, soy yo el dueño, el titular. Ah, soy el dueño. Hay que la apuntar, digamos, pero él es el titular. Claro. Ah, bien, perfecto. Bueno, mira, te comento, tenemos una promoción muy buena para tu línea del día de hoy, que te daríamos 16 gigabytes, ¿bien? En lo que es 10.400 pesos al día de hoy, ¿bien? Te quedarían 8 gigabites más 8 de regalo y te daríamos un descuento fijo por 6 meses, ¿bien? Y dentro del mismo plan, vos ya tenés incluido lo que es el WhatsApp, gratis, las semanas libres a cualquier compañía, 1 gigabyte para Free Fire, no sé si a vos te gusta jugar al Free Fire, pero te damos lo que es un gigabyte para Free Fire exclusivamente y también contas con lo que es Roaming en América, porque vas a salir del país y demás.",
+  "calidad": {
+    "confianza_promedio": 0.454,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:32:57.309580",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:23.178780",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116120657852_ACD_37311",
+    "fecha_inicio": "16/1/2026 12:06:57",
+    "agente_nombre": "MZA 31",
+    "agente_login": "mza31",
+    "duracion_total": 96,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

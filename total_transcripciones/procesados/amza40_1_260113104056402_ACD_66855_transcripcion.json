@@ -1,0 +1,123 @@
+{
+  "archivo": "amza40_1_260113104056402_ACD_66855.wav",
+  "duracion_segundos": 70.2,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 37.36,
+    "Cliente": 28.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.84,
+      "fin": 12.31,
+      "duracion": 10.47,
+      "texto": "Hola, buenos días. Hablo con Gisela. Hola. Hola, ¿cómo le va? Mucho gusto. Me estaba comunicando hoy para hacerle llegar un beneficio cursivo para su identidad de hoy.",
+      "confianza": 0.062,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 13.71,
+      "fin": 22.64,
+      "duracion": 8.93,
+      "texto": "De parte de Movinar, tenemos una promoción para usted porque fue un antiguo cliente y queremos que regrese. Tenemos claro nosotros, Gisela. Sí,",
+      "confianza": 0.668,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.64,
+      "fin": 24.33,
+      "duracion": 1.69,
+      "texto": "justamente por esa razón me comunicaba.",
+      "confianza": 0.662,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.41,
+      "fin": 32.37,
+      "duracion": 7.96,
+      "texto": "Como le comentaban, el pasado fue un cliente de la compañía y queremos que regrese con nosotros. No, no, no. Sí,",
+      "confianza": 0.729,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.37,
+      "fin": 40.04,
+      "duracion": 7.67,
+      "texto": "bueno, el drama es para... ¿Cómo, disculpe?",
+      "confianza": 0.273,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.06,
+      "fin": 40.7,
+      "duracion": 0.64,
+      "texto": "Eh, ¿pasarme?",
+      "confianza": 0.366,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 42.2,
+      "fin": 70.2,
+      "duracion": 28.0,
+      "texto": "Eh, no sé, ¿que vos me querés pasar un mail o algo? Eh... Las promociones, ¿te las puedo pasar por WhatsApp? Ah, pasármelo ahí, después veo lo que han dicho. Bueno, perfecto. Mi nombre es Juliana Vallejos, estamos en contacto. Vale, genial. Perfecto, que tengas un lindo día, hasta luego. Mátale noches.",
+      "confianza": 0.301,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Gisela. Hola. Hola, ¿cómo le va? Mucho gusto. Me estaba comunicando hoy para hacerle llegar un beneficio cursivo para su identidad de hoy. De parte de Movinar, tenemos una promoción para usted porque fue un antiguo cliente y queremos que regrese. Tenemos claro nosotros, Gisela. Sí, justamente por esa razón me comunicaba. Como le comentaban, el pasado fue un cliente de la compañía y queremos que regrese con nosotros. No, no, no. Sí, bueno, el drama es para... ¿Cómo, disculpe? Eh, ¿pasarme? Eh, no sé, ¿que vos me querés pasar un mail o algo? Eh... Las promociones, ¿te las puedo pasar por WhatsApp? Ah, pasármelo ahí, después veo lo que han dicho. Bueno, perfecto. Mi nombre es Juliana Vallejos, estamos en contacto. Vale, genial. Perfecto, que tengas un lindo día, hasta luego. Mátale noches.",
+  "calidad": {
+    "confianza_promedio": 0.398,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:31:41.683295",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:26.605657",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113104056402_ACD_66855",
+    "fecha_inicio": "13/1/2026 10:40:56",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 104,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

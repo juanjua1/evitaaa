@@ -1,0 +1,102 @@
+{
+  "archivo": "amza39_1_260116130343752_ACD_58519.wav",
+  "duracion_segundos": 73.86,
+  "num_segmentos": 22,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 71.43,
+    "Cliente": 0.38
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 12.11,
+      "duracion": 12.08,
+      "texto": "Hola, buenos días. Me comunicó por la línea a nombre de la señorita, déjeme dos segundos que no me carga la página, a nombre de Mónica Graciela Merín.",
+      "confianza": 0.408,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.03,
+      "fin": 25.5,
+      "duracion": 12.47,
+      "texto": "¿Cómo le va Mónica? Un gustón. Mi nombre es Catalina. La contacto desde el área de beneficios movistar para hacerle llegar lo que es una promoción para su línea.",
+      "confianza": 0.528,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.52,
+      "fin": 25.9,
+      "duracion": 0.38,
+      "texto": "No, no me interesa.",
+      "confianza": 0.042,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.44,
+      "fin": 37.14,
+      "duracion": 10.7,
+      "texto": "¿Por qué? ¿Cómo sabe si no le interesa? Ayer me llamaron 10 veces y las 10 veces les dije que dejen asentado.",
+      "confianza": 0.689,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 37.68,
+      "fin": 73.86,
+      "duracion": 36.18,
+      "texto": "Estoy pagando un aparato y no me puedo trasladar de compañía. No me voy a trasladar. Comprendo. En este caso, para que deje de recibir llamadas, lo que le recomiendo es colocar la línea en lo que es el registro nacional. Lo llame, Mónica. Esto bloquea todo este tipo de llamadas para que usted se quede tranquila directamente. No sé cómo se hace. Lo busca en Google, va a poner registro nacional no llames y ahí le van a salir los pasos para poder anotar su línea. Bueno, perfecto. Gracias. Gracias a usted. Que tengamos un buen día.",
+      "confianza": 0.79,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Me comunicó por la línea a nombre de la señorita, déjeme dos segundos que no me carga la página, a nombre de Mónica Graciela Merín. ¿Cómo le va Mónica? Un gustón. Mi nombre es Catalina. La contacto desde el área de beneficios movistar para hacerle llegar lo que es una promoción para su línea. No, no me interesa. ¿Por qué? ¿Cómo sabe si no le interesa? Ayer me llamaron 10 veces y las 10 veces les dije que dejen asentado. Estoy pagando un aparato y no me puedo trasladar de compañía. No me voy a trasladar. Comprendo. En este caso, para que deje de recibir llamadas, lo que le recomiendo es colocar la línea en lo que es el registro nacional. Lo llame, Mónica. Esto bloquea todo este tipo de llamadas para que usted se quede tranquila directamente. No sé cómo se hace. Lo busca en Google, va a poner registro nacional no llames y ahí le van a salir los pasos para poder anotar su línea. Bueno, perfecto. Gracias. Gracias a usted. Que tengamos un buen día.",
+  "calidad": {
+    "confianza_promedio": 0.498,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:20:27.274771",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:25.974186",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116130343752_ACD_58519",
+    "fecha_inicio": "16/1/2026 13:03:43",
+    "agente_nombre": "MZA 39",
+    "agente_login": "mza39",
+    "duracion_total": 92,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

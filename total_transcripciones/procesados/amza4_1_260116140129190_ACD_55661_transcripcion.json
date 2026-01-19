@@ -1,0 +1,111 @@
+{
+  "archivo": "amza4_1_260116140129190_ACD_55661.wav",
+  "duracion_segundos": 68.02,
+  "num_segmentos": 36,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 50.99,
+    "Cliente": 11.51
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.09,
+      "fin": 20.07,
+      "duracion": 17.98,
+      "texto": "¿Hola? Dígame usted. Hola, ¿qué tal? Buenas tardes. ¿Un gusto con Richard? Sí, él hablaba. Richard, un gusto. Mi nombre es Gabriela. Me estoy comunicando de la línea de recupero de Cliente de la compañía Movistar. ¿Cómo estará? Dígame usted.",
+      "confianza": 0.595,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.09,
+      "fin": 20.2,
+      "duracion": 0.12,
+      "texto": "Bien.",
+      "confianza": 0.264,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.23,
+      "fin": 53.24,
+      "duracion": 33.01,
+      "texto": "Sí, de Movistar lo llamo porque me figura que esta línea de teléfono usted la lleva con claro. ¿Recuerda más o menos cuánto está pagando, Richard? No, pero estoy bien con claro. Estoy bien. Claro, pero puede estar mejor... ¡Sábalo! ¡Bárbaro! Que esté bien, pero puede estar mejor con nosotros y pagar mucho menos. No, no, está bien todo. No, no, está bien. Por eso me cambié. Me cambié por el tema de... ¿Por qué ese cambio? ¿Qué le pasó? También hay lugares, como se llama, que no tienen señal también. Por esa razón también. Estaba en la cocina y... ¿Y usted lo acercó recientemente al tema de la señal?",
+      "confianza": 0.635,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.77,
+      "fin": 61.49,
+      "duracion": 6.72,
+      "texto": "Sí, hace tiempo ya. En trabajar en la cocina hay lugares que no... ¿Cómo se llama? Que no aclaran. Por eso lo cambié.",
+      "confianza": 0.525,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.0,
+      "fin": 65.85,
+      "duracion": 3.85,
+      "texto": "Bien, comprendo, comprendo. Bueno, yo lo dejo sentado en sistema. Gracias.",
+      "confianza": 0.639,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.2,
+      "fin": 68.02,
+      "duracion": 0.82,
+      "texto": "Sí, todo y nada. Hasta luego.",
+      "confianza": 0.06,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? Dígame usted. Hola, ¿qué tal? Buenas tardes. ¿Un gusto con Richard? Sí, él hablaba. Richard, un gusto. Mi nombre es Gabriela. Me estoy comunicando de la línea de recupero de Cliente de la compañía Movistar. ¿Cómo estará? Dígame usted. Bien. Sí, de Movistar lo llamo porque me figura que esta línea de teléfono usted la lleva con claro. ¿Recuerda más o menos cuánto está pagando, Richard? No, pero estoy bien con claro. Estoy bien. Claro, pero puede estar mejor... ¡Sábalo! ¡Bárbaro! Que esté bien, pero puede estar mejor con nosotros y pagar mucho menos. No, no, está bien todo. No, no, está bien. Por eso me cambié. Me cambié por el tema de... ¿Por qué ese cambio? ¿Qué le pasó? También hay lugares, como se llama, que no tienen señal también. Por esa razón también. Estaba en la cocina y... ¿Y usted lo acercó recientemente al tema de la señal? Sí, hace tiempo ya. En trabajar en la cocina hay lugares que no... ¿Cómo se llama? Que no aclaran. Por eso lo cambié. Bien, comprendo, comprendo. Bueno, yo lo dejo sentado en sistema. Gracias. Sí, todo y nada. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.465,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:31:37.228481",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 36,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:30.081641",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116140129190_ACD_55661",
+    "fecha_inicio": "16/1/2026 14:01:29",
+    "agente_nombre": "MZA 4",
+    "agente_login": "mza4",
+    "duracion_total": 85,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Problemas de señal MVS en su zona",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

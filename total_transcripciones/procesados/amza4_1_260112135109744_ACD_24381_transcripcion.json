@@ -1,0 +1,123 @@
+{
+  "archivo": "amza4_1_260112135109744_ACD_24381.wav",
+  "duracion_segundos": 83.19,
+  "num_segmentos": 23,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 78.34,
+    "Cliente": 0.95
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.39,
+      "fin": 19.87,
+      "duracion": 19.48,
+      "texto": "¿Hola? ¿Sí? Hola, ¿qué tal? Buenos días, me comunicó con la línea de la señora Susana. ¿Sí? Susana, un gusto, mi nombre es Gabriela, me estoy comunicando, la día recuperada, el cliente la acompañamos esta tarde, ¿cómo estás, Susana?",
+      "confianza": 0.253,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.89,
+      "fin": 20.84,
+      "duracion": 0.95,
+      "texto": "Bien, bien, pero te agradezco, no voy a volver.",
+      "confianza": 0.011,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.86,
+      "fin": 29.87,
+      "duracion": 9.01,
+      "texto": "No, está bien, es para comentarle un poquito los beneficios, las promociones, preguntarle por qué ese cambio de compañía, qué le había pasado. No, no.",
+      "confianza": 0.573,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.73,
+      "fin": 56.36,
+      "duracion": 25.63,
+      "texto": "En su momento, planteé que no podía pagar ese importe y me dijeron que bueno. Y bueno, me fui. Entendible, entendible. Es la fuerte la demanda, es entendible. Bueno, Susana, justamente por ese tema de facturación que usted tuvo, yo me estoy comunicando la idea de beneficios también para poder brindarle un descuento para que pueda aprobar nuevamente nuestro servicio, obviamente para... No, no, no, mía, te agradezco. Me costó un perú darme bajas.",
+      "confianza": 0.423,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 56.93,
+      "fin": 69.79,
+      "duracion": 12.86,
+      "texto": "Ayer casi me estajan, no era Movistar, pero yo era con una página trucha de Facebook, por querer devolver los equipos. Todavía no me llamaron para devolver los equipos.",
+      "confianza": 0.695,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 70.75,
+      "fin": 80.23,
+      "duracion": 9.48,
+      "texto": "Así que no, no voy a volver a Movistar. Claro, la comprendo. Bueno, Susana, no te hagas problemas, de lejos asentador en sistema. Muchas gracias igualmente por su movilidad.",
+      "confianza": 0.503,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 81.31,
+      "fin": 83.19,
+      "duracion": 1.88,
+      "texto": "Gracias, hasta luego. De nada, hasta luego.",
+      "confianza": 0.31,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Sí? Hola, ¿qué tal? Buenos días, me comunicó con la línea de la señora Susana. ¿Sí? Susana, un gusto, mi nombre es Gabriela, me estoy comunicando, la día recuperada, el cliente la acompañamos esta tarde, ¿cómo estás, Susana? Bien, bien, pero te agradezco, no voy a volver. No, está bien, es para comentarle un poquito los beneficios, las promociones, preguntarle por qué ese cambio de compañía, qué le había pasado. No, no. En su momento, planteé que no podía pagar ese importe y me dijeron que bueno. Y bueno, me fui. Entendible, entendible. Es la fuerte la demanda, es entendible. Bueno, Susana, justamente por ese tema de facturación que usted tuvo, yo me estoy comunicando la idea de beneficios también para poder brindarle un descuento para que pueda aprobar nuevamente nuestro servicio, obviamente para... No, no, no, mía, te agradezco. Me costó un perú darme bajas. Ayer casi me estajan, no era Movistar, pero yo era con una página trucha de Facebook, por querer devolver los equipos. Todavía no me llamaron para devolver los equipos. Así que no, no voy a volver a Movistar. Claro, la comprendo. Bueno, Susana, no te hagas problemas, de lejos asentador en sistema. Muchas gracias igualmente por su movilidad. Gracias, hasta luego. De nada, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.397,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:19:20.972047",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:29.472991",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112135109744_ACD_24381",
+    "fecha_inicio": "12/1/2026 13:51:09",
+    "agente_nombre": "MZA 4",
+    "agente_login": "mza4",
+    "duracion_total": 101,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Mala experiencia anterior con MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

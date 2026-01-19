@@ -1,0 +1,121 @@
+{
+  "archivo": "amza40_1_260114104122242_ACD_55635.wav",
+  "duracion_segundos": 73.0,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 30.8,
+    "Cliente": 27.41
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.52,
+      "fin": 10.75,
+      "duracion": 9.23,
+      "texto": "Hola, buenos días. Hablo con Marta. Sí. ¿Cómo le va, Marta? Mucho gusto. Me estaba comunicando hoy para hacerle llegar un beneficio exclusivo para su línea.",
+      "confianza": 0.084,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.57,
+      "fin": 18.82,
+      "duracion": 4.25,
+      "texto": "¿De dónde me llamas? De Movistar. Tenemos un plan en promoción porque queremos que regrese a la compañía.",
+      "confianza": 0.009,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.57,
+      "fin": 30.39,
+      "duracion": 5.82,
+      "texto": "Sí, pero no, por el momento no te agradezco. Bien, para algún motivo en especial, disculpe. Tenemos planes de $10,400 pesos por 16 gigas.",
+      "confianza": 0.013,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 33.75,
+      "fin": 44.51,
+      "duracion": 10.76,
+      "texto": "Sí, pero lo que pasa es que ustedes no tienen roaming en otros países. Sí, sí, tenemos.",
+      "confianza": 0.688,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 44.77,
+      "fin": 46.47,
+      "duracion": 1.7,
+      "texto": "Justamente ese plan. Sí, hay que pagarlo aparte.",
+      "confianza": 0.397,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.53,
+      "fin": 48.13,
+      "duracion": 1.6,
+      "texto": "Sí, sí, sí, pero hay que pagarlo aparte.",
+      "confianza": 0.323,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 48.15,
+      "fin": 73.0,
+      "duracion": 24.85,
+      "texto": "No, no, no. Este plan, no sé cuelos, el plan habrá tenido usted. Este que le comento, 16 gigas, le incluye whatsapp gratis, armadas libres, roaming en América con 3 gigas para roaming. es junto con el plan, no es aparte, me tiene que pagar más extra, es junto con el plan.",
+      "confianza": 0.112,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Marta. Sí. ¿Cómo le va, Marta? Mucho gusto. Me estaba comunicando hoy para hacerle llegar un beneficio exclusivo para su línea. ¿De dónde me llamas? De Movistar. Tenemos un plan en promoción porque queremos que regrese a la compañía. Sí, pero no, por el momento no te agradezco. Bien, para algún motivo en especial, disculpe. Tenemos planes de $10,400 pesos por 16 gigas. Sí, pero lo que pasa es que ustedes no tienen roaming en otros países. Sí, sí, tenemos. Justamente ese plan. Sí, hay que pagarlo aparte. Sí, sí, sí, pero hay que pagarlo aparte. No, no, no. Este plan, no sé cuelos, el plan habrá tenido usted. Este que le comento, 16 gigas, le incluye whatsapp gratis, armadas libres, roaming en América con 3 gigas para roaming. es junto con el plan, no es aparte, me tiene que pagar más extra, es junto con el plan.",
+  "calidad": {
+    "confianza_promedio": 0.477,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:32:41.652354",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:26.663294",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114104122242_ACD_55635",
+    "fecha_inicio": "14/1/2026 10:41:22",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 96,
+    "tiempo_conversacion": 70,
+    "tiempo_hold": 0,
+    "tiempo_acw": 12,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

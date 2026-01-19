@@ -1,0 +1,112 @@
+{
+  "archivo": "amza40_1_260115142950176_ACD_17331.wav",
+  "duracion_segundos": 63.3,
+  "num_segmentos": 22,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 5.84,
+    "Cliente": 52.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.79,
+      "fin": 21.52,
+      "duracion": 19.73,
+      "texto": "Hola, buenos días. Hablo con Lourdes. ¿Y esa habla? ¿Quién habla? Como le va, mucho gusto. Me estaba comunicando para hacerles llegar un beneficio exclusivo para su línea el día de hoy. Disculpa, ¿no te entendí de qué? Sí, de parte del Modristar tenemos un plan en promoción porque queremos que regresa a la compañía nuevamente con nosotros.",
+      "confianza": 0.604,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.17,
+      "fin": 25.86,
+      "duracion": 3.69,
+      "texto": "Ah, sí, ahí no he dicho que fuiste. Sí,",
+      "confianza": 0.062,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.86,
+      "fin": 31.7,
+      "duracion": 5.84,
+      "texto": "mira, pero no, no, no, porque es que estoy allí con la promoción con el otro, con la otra línea, con la otra empresa.",
+      "confianza": 0.517,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.36,
+      "fin": 39.75,
+      "duracion": 7.39,
+      "texto": "Sí. Y yo normalmente hago eso, cuando se me termina la promoción, me paso a otra empresa. A la otra empresa, claro. Sí. Y todavía tiene la promoción.",
+      "confianza": 0.451,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.05,
+      "fin": 58.35,
+      "duracion": 17.3,
+      "texto": "Sí, sí, sí, se me termina en, no sé, tratando de recorrer cuándo, si no sé, en febrero o en marzo. Ah, bien. Bueno, entonces en ese momento me contacto. Dale, buenísimo. Muchas gracias. A ver que tengo un lindo día.",
+      "confianza": 0.554,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.35,
+      "fin": 63.3,
+      "duracion": 3.95,
+      "texto": "Gracias.",
+      "confianza": 0.613,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Lourdes. ¿Y esa habla? ¿Quién habla? Como le va, mucho gusto. Me estaba comunicando para hacerles llegar un beneficio exclusivo para su línea el día de hoy. Disculpa, ¿no te entendí de qué? Sí, de parte del Modristar tenemos un plan en promoción porque queremos que regresa a la compañía nuevamente con nosotros. Ah, sí, ahí no he dicho que fuiste. Sí, mira, pero no, no, no, porque es que estoy allí con la promoción con el otro, con la otra línea, con la otra empresa. Sí. Y yo normalmente hago eso, cuando se me termina la promoción, me paso a otra empresa. A la otra empresa, claro. Sí. Y todavía tiene la promoción. Sí, sí, sí, se me termina en, no sé, tratando de recorrer cuándo, si no sé, en febrero o en marzo. Ah, bien. Bueno, entonces en ese momento me contacto. Dale, buenísimo. Muchas gracias. A ver que tengo un lindo día. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.43,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:34:57.246806",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:26.814203",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115142950176_ACD_17331",
+    "fecha_inicio": "15/1/2026 14:29:50",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 79,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

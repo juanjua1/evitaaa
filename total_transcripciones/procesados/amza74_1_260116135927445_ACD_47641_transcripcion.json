@@ -1,0 +1,119 @@
+{
+  "archivo": "amza74_1_260116135927445_ACD_47641.wav",
+  "duracion_segundos": 66.49,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 19.32,
+    "Cliente": 41.34
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 8.76,
+      "duracion": 8.73,
+      "texto": "Hola, ¿qué tal? ¿Sí? Hola, ¿hablas con la línea de Franco? Ah, ¿me está llamando el Movistar?",
+      "confianza": 0.456,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.44,
+      "fin": 12.55,
+      "duracion": 3.1,
+      "texto": "Sí, lo hace exactamente el Movistar, ¿estás esperando nuestra llamada?",
+      "confianza": 0.311,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.19,
+      "fin": 16.73,
+      "duracion": 3.54,
+      "texto": "No, no, justamente está esperando que no me llamen más, no el llamado.",
+      "confianza": 0.647,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.27,
+      "fin": 29.99,
+      "duracion": 11.72,
+      "texto": "Bueno, entiendo. Porque no tiene un servicio que yo utilizo, que es el tip en el reloj. Sí, entiendo.",
+      "confianza": 0.103,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.69,
+      "fin": 55.4,
+      "duracion": 24.71,
+      "texto": "¿Cuál es? No, sinceramente no estoy actualmente informada que nos tengamos contemos con ese chip, ¿sí? No, no lo tienen, no, seguro que no lo tienen. Así que hasta hace tres meses atrás todavía no lo teníamos, ¿bien? Y ahora me llamaron, de tres meses para acá me han llamado varias veces. Y porque tenemos unos precios bastante buenos, ¿sí?",
+      "confianza": 0.485,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 56.06,
+      "fin": 60.97,
+      "duracion": 4.91,
+      "texto": "pero el precio no me sirve si no tienes servicio. Exactamente lo entiendo, no hay problema.",
+      "confianza": 0.621,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.54,
+      "fin": 66.49,
+      "duracion": 3.95,
+      "texto": "Gracias, adiós.",
+      "confianza": 0.6,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Sí? Hola, ¿hablas con la línea de Franco? Ah, ¿me está llamando el Movistar? Sí, lo hace exactamente el Movistar, ¿estás esperando nuestra llamada? No, no, justamente está esperando que no me llamen más, no el llamado. Bueno, entiendo. Porque no tiene un servicio que yo utilizo, que es el tip en el reloj. Sí, entiendo. ¿Cuál es? No, sinceramente no estoy actualmente informada que nos tengamos contemos con ese chip, ¿sí? No, no lo tienen, no, seguro que no lo tienen. Así que hasta hace tres meses atrás todavía no lo teníamos, ¿bien? Y ahora me llamaron, de tres meses para acá me han llamado varias veces. Y porque tenemos unos precios bastante buenos, ¿sí? pero el precio no me sirve si no tienes servicio. Exactamente lo entiendo, no hay problema. Gracias, adiós.",
+  "calidad": {
+    "confianza_promedio": 0.464,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:05:56.086463",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 18,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:32.266734",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116135927445_ACD_47641",
+    "fecha_inicio": "16/1/2026 13:59:27",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 79,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

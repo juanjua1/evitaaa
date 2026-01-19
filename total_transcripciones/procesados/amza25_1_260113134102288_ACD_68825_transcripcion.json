@@ -1,0 +1,137 @@
+{
+  "archivo": "amza25_1_260113134102288_ACD_68825.wav",
+  "duracion_segundos": 68.31,
+  "num_segmentos": 30,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 6.67,
+    "Cliente": 33.62
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 6.54,
+      "fin": 8.13,
+      "duracion": 1.59,
+      "texto": "Buen día. ¿Algo en la ciudad urbana?",
+      "confianza": 0.538,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 11.21,
+      "fin": 14.28,
+      "duracion": 3.07,
+      "texto": "Hola. ¿Qué tal? Un gusto. Mi nombre es Rodrigo. ¿Cómo le van el día de hoy? ¿Todo bien?",
+      "confianza": 0.022,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.38,
+      "fin": 19.91,
+      "duracion": 0.53,
+      "texto": "Hola. Hola.",
+      "confianza": 0.298,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.63,
+      "fin": 26.23,
+      "duracion": 3.6,
+      "texto": "¿Qué tal? Un gusto. Mi nombre es Rodrigo. Nos estamos comunicando del área Beneficio de Movistar.",
+      "confianza": 0.703,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.44,
+      "fin": 35.81,
+      "duracion": 3.37,
+      "texto": "Sí, es un repito donde me llamaron también. Ah, perfecto. ¿Le interesó el plan?",
+      "confianza": 0.012,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.04,
+      "fin": 44.05,
+      "duracion": 7.01,
+      "texto": "No, es que ya le expliqué lo mismo. O sea, el trabajo que tengo en internet, tengo mi casa y tengo paciencia de telecentro.",
+      "confianza": 0.383,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 44.7,
+      "fin": 49.03,
+      "duracion": 4.32,
+      "texto": "No uso el celular igual.",
+      "confianza": 0.542,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.49,
+      "fin": 66.61,
+      "duracion": 16.12,
+      "texto": "Pero ahora no se me hace nada. Claro, entiendo. Bueno, si quieres le podemos... Tengo el abono, tengo el abono, de claro, pero pierdo el abono ahí. Eso no uso, en realidad. Claro, entiendo. Bueno, si quieres le podemos dar las promos via WhatsApp, ¿sí? También, gracias. Bueno, cien gustos. Adiós.",
+      "confianza": 0.009,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.63,
+      "fin": 68.31,
+      "duracion": 0.68,
+      "texto": "Hasta luego.",
+      "confianza": 0.164,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Buen día. ¿Algo en la ciudad urbana? Hola. ¿Qué tal? Un gusto. Mi nombre es Rodrigo. ¿Cómo le van el día de hoy? ¿Todo bien? Hola. Hola. ¿Qué tal? Un gusto. Mi nombre es Rodrigo. Nos estamos comunicando del área Beneficio de Movistar. Sí, es un repito donde me llamaron también. Ah, perfecto. ¿Le interesó el plan? No, es que ya le expliqué lo mismo. O sea, el trabajo que tengo en internet, tengo mi casa y tengo paciencia de telecentro. No uso el celular igual. Pero ahora no se me hace nada. Claro, entiendo. Bueno, si quieres le podemos... Tengo el abono, tengo el abono, de claro, pero pierdo el abono ahí. Eso no uso, en realidad. Claro, entiendo. Bueno, si quieres le podemos dar las promos via WhatsApp, ¿sí? También, gracias. Bueno, cien gustos. Adiós. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.487,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:36:09.270044",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 30,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:19.504960",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113134102288_ACD_68825",
+    "fecha_inicio": "13/1/2026 13:41:02",
+    "agente_nombre": "MZA 25",
+    "agente_login": "mza25",
+    "duracion_total": 144,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 47,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

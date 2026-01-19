@@ -1,0 +1,143 @@
+{
+  "archivo": "amza2_1_260115141816000_ACD_79449.wav",
+  "duracion_segundos": 79.19,
+  "num_segmentos": 33,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.86,
+    "Cliente": 71.33
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.47,
+      "fin": 1.97,
+      "duracion": 0.5,
+      "texto": "Hola.",
+      "confianza": 0.307,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 2.99,
+      "fin": 7.19,
+      "duracion": 4.2,
+      "texto": "Hola, ¿qué tal? Hablo con Fabriér. No, él es mi marido. ¿Quién habla?",
+      "confianza": 0.409,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.95,
+      "fin": 9.7,
+      "duracion": 1.75,
+      "texto": "Ana, mil disculpas. No he escuchado la voz.",
+      "confianza": 0.599,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.08,
+      "fin": 10.94,
+      "duracion": 0.86,
+      "texto": "Mi nombre es Luciana.",
+      "confianza": 0.412,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.96,
+      "fin": 12.72,
+      "duracion": 1.76,
+      "texto": "Me estoy contactando desde Movistar.",
+      "confianza": 0.557,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 13.48,
+      "fin": 40.72,
+      "duracion": 27.24,
+      "texto": "Actualmente esta es la usuaria de esta línea, ¿verdad? De este número, sí. Exactamente. Bien, perfecto. En el día de hoy tengo que ofrecerte lo que es un descuento, ¿sí? Porque a mí me figura una fatura en esta línea emitida de $35,392. ¿Vos me hablas de claro? Debo de estar. ¿Y esas son por la línea?",
+      "confianza": 0.651,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.3,
+      "fin": 49.02,
+      "duracion": 7.72,
+      "texto": "Bien, perfecto. Estás pagando bastante. ¿Tenés idea de la cantidad de gigas que te están ofreciendo? No, la verdad que no, pero no me quiero cambiar, perdón.",
+      "confianza": 0.549,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 49.69,
+      "fin": 51.65,
+      "duracion": 1.96,
+      "texto": "Además, no te perdas tiempo, sé que es tu laburo.",
+      "confianza": 0.504,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.99,
+      "fin": 79.19,
+      "duracion": 26.2,
+      "texto": "Pero la verdad es que no me quiero cambiar a mí mismo, me cambié en movistar a Claro, pero por un tema también de señales y porque toda mi familia tenemos Claro y compartimos. Entonces, más allá de eso, prefiero quedarme con Claro por el momento. Bien, perfecto. ¿Aún sabiendo que estás hablando mucho más? Sí. Bien, perfecto. No hay ningún problema. Yo ahora lo dejo asentado entonces. Dale, muchas gracias. Por favor, despedido.",
+      "confianza": 0.527,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Hablo con Fabriér. No, él es mi marido. ¿Quién habla? Ana, mil disculpas. No he escuchado la voz. Mi nombre es Luciana. Me estoy contactando desde Movistar. Actualmente esta es la usuaria de esta línea, ¿verdad? De este número, sí. Exactamente. Bien, perfecto. En el día de hoy tengo que ofrecerte lo que es un descuento, ¿sí? Porque a mí me figura una fatura en esta línea emitida de $35,392. ¿Vos me hablas de claro? Debo de estar. ¿Y esas son por la línea? Bien, perfecto. Estás pagando bastante. ¿Tenés idea de la cantidad de gigas que te están ofreciendo? No, la verdad que no, pero no me quiero cambiar, perdón. Además, no te perdas tiempo, sé que es tu laburo. Pero la verdad es que no me quiero cambiar a mí mismo, me cambié en movistar a Claro, pero por un tema también de señales y porque toda mi familia tenemos Claro y compartimos. Entonces, más allá de eso, prefiero quedarme con Claro por el momento. Bien, perfecto. ¿Aún sabiendo que estás hablando mucho más? Sí. Bien, perfecto. No hay ningún problema. Yo ahora lo dejo asentado entonces. Dale, muchas gracias. Por favor, despedido.",
+  "calidad": {
+    "confianza_promedio": 0.484,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:02:25.652758",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 4,
+    "total_segmentos_original": 33,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:21.197029",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115141816000_ACD_79449",
+    "fecha_inicio": "15/1/2026 14:18:16",
+    "agente_nombre": "MZA 2",
+    "agente_login": "mza2",
+    "duracion_total": 100,
+    "tiempo_conversacion": 76,
+    "tiempo_hold": 0,
+    "tiempo_acw": 15,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

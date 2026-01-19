@@ -1,0 +1,101 @@
+{
+  "archivo": "amza73_1_260112142546730_ACD_45817.wav",
+  "duracion_segundos": 79.94,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 22.82,
+    "Cliente": 51.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 3.9,
+      "duracion": 3.87,
+      "texto": "Hola, ¿sí qué tal? Muy buenas tardes.",
+      "confianza": 0.559,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.6,
+      "fin": 7.9,
+      "duracion": 3.3,
+      "texto": "Hola. ¿Qué tal? ¿Hablo con Luis Alberto?",
+      "confianza": 0.3,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.53,
+      "fin": 41.86,
+      "duracion": 32.33,
+      "texto": "Sí, sí, depende. Luis, no pasa nada. ¿Cómo le va? Un gusto. Le habla Marcos. Luis, si yo le llamo por una buena noticia, estamos haciendo nuevamente activaciones para la línea móvil, brindando beneficios para todo el grupo familiar, ¿sí? ¿Cómo se encuentra el día de hoy? ¿Usted qué ve? ¿Ya me declaro o de otra compañía? Desde el área técnica Movistar estamos haciendo los llamaditos para comenzar el año. ¿Quieres comentar que es la oferta al día de hoy? Mire, a mí en realidad no me interesa Movistar.",
+      "confianza": 0.32,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.02,
+      "fin": 62.08,
+      "duracion": 19.06,
+      "texto": "Ya le dije el otro día que me llamaron, vos sabés que me llamaron cuatro veces en el día y justo yo me dedico a la construcción estábamos sobre 6 metros de altura en un cuerpo de andame con una tabla de 30 de ancho nada más. Y me llamaron cuatro días en el día y le dije a un muchacho que me saque del sistema.",
+      "confianza": 0.589,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 64.29,
+      "fin": 79.94,
+      "duracion": 15.65,
+      "texto": "Porque a veces estamos mal y no podemos contestar y ya vamos a ir pensando que hay un cliente que no puede estar llamando. Lo entiendo, lo entiendo. Lo puedo hacer por favor que me saque del sistema y que no me llame más. Bueno, dale, perfecto, dale, lo hacemos así. Muchas gracias, adiós.",
+      "confianza": 0.548,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿sí qué tal? Muy buenas tardes. Hola. ¿Qué tal? ¿Hablo con Luis Alberto? Sí, sí, depende. Luis, no pasa nada. ¿Cómo le va? Un gusto. Le habla Marcos. Luis, si yo le llamo por una buena noticia, estamos haciendo nuevamente activaciones para la línea móvil, brindando beneficios para todo el grupo familiar, ¿sí? ¿Cómo se encuentra el día de hoy? ¿Usted qué ve? ¿Ya me declaro o de otra compañía? Desde el área técnica Movistar estamos haciendo los llamaditos para comenzar el año. ¿Quieres comentar que es la oferta al día de hoy? Mire, a mí en realidad no me interesa Movistar. Ya le dije el otro día que me llamaron, vos sabés que me llamaron cuatro veces en el día y justo yo me dedico a la construcción estábamos sobre 6 metros de altura en un cuerpo de andame con una tabla de 30 de ancho nada más. Y me llamaron cuatro días en el día y le dije a un muchacho que me saque del sistema. Porque a veces estamos mal y no podemos contestar y ya vamos a ir pensando que hay un cliente que no puede estar llamando. Lo entiendo, lo entiendo. Lo puedo hacer por favor que me saque del sistema y que no me llame más. Bueno, dale, perfecto, dale, lo hacemos así. Muchas gracias, adiós.",
+  "calidad": {
+    "confianza_promedio": 0.489,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:51:30.868000",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:31.373029",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112142546730_ACD_45817",
+    "fecha_inicio": "12/1/2026 14:25:46",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 101,
+    "tiempo_conversacion": 77,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

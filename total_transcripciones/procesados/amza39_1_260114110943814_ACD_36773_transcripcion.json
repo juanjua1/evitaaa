@@ -1,0 +1,101 @@
+{
+  "archivo": "amza39_1_260114110943814_ACD_36773.wav",
+  "duracion_segundos": 84.26,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 54.3,
+    "Cliente": 25.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 0.63,
+      "duracion": 0.6,
+      "texto": "la verdad.",
+      "confianza": 0.504,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 1.53,
+      "fin": 13.19,
+      "duracion": 11.66,
+      "texto": "Hola, buen día. Me comunico con alguna línea en nombre de Gladys Elizabeth. Pues es que no se encuentra ella. ¿Sabe cuándo la puedo llamar? ¿Para qué?",
+      "confianza": 0.758,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.17,
+      "fin": 27.3,
+      "duracion": 13.13,
+      "texto": "Es para hacerle un descuento en el abono del celular a la señorita Gladys, no sé si se encarga usted o ella directamente. Yo, yo, yo, yo. Comentaré. Bien, yo lo llamo entonces en su nombre antes de comentarle.",
+      "confianza": 0.711,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.92,
+      "fin": 53.55,
+      "duracion": 24.63,
+      "texto": "Yo me llamo Ramón. Un gusto, Ramón. Yo soy Catalina, de Comento. Le llamaba desde Ilaria, recuperó el Movistar. Me figuré que Gladys fue clienta y tenía que ofrecerle una promo en 10.400 pesos. ¿Qué le parece? No, por el momento no, ¿viste? Pues después veo que es como... ¿Qué es lo que no lo convence, Ramón? Dígame.",
+      "confianza": 0.153,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.59,
+      "fin": 84.26,
+      "duracion": 29.67,
+      "texto": "una bolsa muy cara, yo voy pagando claro, voy pagando más barato y que no ofrecen unos más caros, no me sirven, es que me hacen bien. Claro, ¿cuánto bonos? Yo pago 100 mil pesos y voy a pagar 10 mil y algo, no, el servicio este me sirve, por eso mismo se me cambió, por eso me cambió. Bueno, bueno, en ese caso gracias por comentarme, sí, que tengas buen día. Dale, dale, dale, chau chau.",
+      "confianza": 0.479,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "la verdad. Hola, buen día. Me comunico con alguna línea en nombre de Gladys Elizabeth. Pues es que no se encuentra ella. ¿Sabe cuándo la puedo llamar? ¿Para qué? Es para hacerle un descuento en el abono del celular a la señorita Gladys, no sé si se encarga usted o ella directamente. Yo, yo, yo, yo. Comentaré. Bien, yo lo llamo entonces en su nombre antes de comentarle. Yo me llamo Ramón. Un gusto, Ramón. Yo soy Catalina, de Comento. Le llamaba desde Ilaria, recuperó el Movistar. Me figuré que Gladys fue clienta y tenía que ofrecerle una promo en 10.400 pesos. ¿Qué le parece? No, por el momento no, ¿viste? Pues después veo que es como... ¿Qué es lo que no lo convence, Ramón? Dígame. una bolsa muy cara, yo voy pagando claro, voy pagando más barato y que no ofrecen unos más caros, no me sirven, es que me hacen bien. Claro, ¿cuánto bonos? Yo pago 100 mil pesos y voy a pagar 10 mil y algo, no, el servicio este me sirve, por eso mismo se me cambió, por eso me cambió. Bueno, bueno, en ese caso gracias por comentarme, sí, que tengas buen día. Dale, dale, dale, chau chau.",
+  "calidad": {
+    "confianza_promedio": 0.505,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:16:05.495798",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:25.741581",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114110943814_ACD_36773",
+    "fecha_inicio": "14/1/2026 11:09:43",
+    "agente_nombre": "MZA 39",
+    "agente_login": "mza39",
+    "duracion_total": 114,
+    "tiempo_conversacion": 81,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

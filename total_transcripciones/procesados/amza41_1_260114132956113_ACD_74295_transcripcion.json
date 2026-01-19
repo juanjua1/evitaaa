@@ -1,0 +1,150 @@
+{
+  "archivo": "amza41_1_260114132956113_ACD_74295.wav",
+  "duracion_segundos": 77.49,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 22.71,
+    "Cliente": 44.15
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.58,
+      "fin": 4.5,
+      "duracion": 1.92,
+      "texto": "Hola, buen día. ¿Habló con Silvia?",
+      "confianza": 0.073,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.12,
+      "fin": 12.72,
+      "duracion": 6.6,
+      "texto": "Sí. ¿Qué tal, Silvia? Un gusto. Te hablo de Marina. Me comunico a las del área de electricidad de Movistar para hacer una promoción en la línea.",
+      "confianza": 0.004,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 13.7,
+      "fin": 25.5,
+      "duracion": 11.8,
+      "texto": "Se figura que está ahora en la compañía de Claro. Sí. Bien. Mira, nosotros hoy tenemos una promoción exclusiva donde vas a tener 16 gigas por 10.400 pesos, ¿sí?",
+      "confianza": 0.675,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.9,
+      "fin": 32.65,
+      "duracion": 6.75,
+      "texto": "Este plan va a incluir WhatsApp gratis, llamar a las iglesias a todas las compañías, al Métrica, al Precio Local y Romín en América, ¿sí?",
+      "confianza": 0.566,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 36.11,
+      "fin": 50.16,
+      "duracion": 14.05,
+      "texto": "Al que te paso a contar, yo tengo tres niñas en nombre mío y el problema mío es que en la zona donde vivo no tengo señal con movistar.",
+      "confianza": 0.46,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.76,
+      "fin": 53.75,
+      "duracion": 2.98,
+      "texto": "Por eso fue el tema de que nosotros nos cambiamos.",
+      "confianza": 0.865,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.67,
+      "fin": 66.07,
+      "duracion": 11.4,
+      "texto": "Ya, bueno, yo tuve mucho tiempo a movistar, pero bueno, no sé qué había pasado con las antenas, todavía no teníamos señal.",
+      "confianza": 0.49,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 66.09,
+      "fin": 66.41,
+      "duracion": 0.32,
+      "texto": "Así que... Bien.",
+      "confianza": 0.056,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 66.43,
+      "fin": 66.73,
+      "duracion": 0.3,
+      "texto": "Bien.",
+      "confianza": 0.472,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 66.75,
+      "fin": 77.49,
+      "duracion": 10.74,
+      "texto": "¿Veniría a la localidad para dejarnos registrado? ¿Santa Fe? Santa Fe. Sí, Moniz, si tu entraste, yo lo dejo registrado acá. Sí, muchas gracias. Vale, ya se luego.",
+      "confianza": 0.635,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. ¿Habló con Silvia? Sí. ¿Qué tal, Silvia? Un gusto. Te hablo de Marina. Me comunico a las del área de electricidad de Movistar para hacer una promoción en la línea. Se figura que está ahora en la compañía de Claro. Sí. Bien. Mira, nosotros hoy tenemos una promoción exclusiva donde vas a tener 16 gigas por 10.400 pesos, ¿sí? Este plan va a incluir WhatsApp gratis, llamar a las iglesias a todas las compañías, al Métrica, al Precio Local y Romín en América, ¿sí? Al que te paso a contar, yo tengo tres niñas en nombre mío y el problema mío es que en la zona donde vivo no tengo señal con movistar. Por eso fue el tema de que nosotros nos cambiamos. Ya, bueno, yo tuve mucho tiempo a movistar, pero bueno, no sé qué había pasado con las antenas, todavía no teníamos señal. Así que... Bien. Bien. ¿Veniría a la localidad para dejarnos registrado? ¿Santa Fe? Santa Fe. Sí, Moniz, si tu entraste, yo lo dejo registrado acá. Sí, muchas gracias. Vale, ya se luego.",
+  "calidad": {
+    "confianza_promedio": 0.307,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:39:17.375918",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:27.085542",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114132956113_ACD_74295",
+    "fecha_inicio": "14/1/2026 13:29:56",
+    "agente_nombre": "MZA 41",
+    "agente_login": "mza41",
+    "duracion_total": 158,
+    "tiempo_conversacion": 76,
+    "tiempo_hold": 0,
+    "tiempo_acw": 58,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

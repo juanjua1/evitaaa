@@ -1,0 +1,138 @@
+{
+  "archivo": "amza40_1_260114115800228_ACD_77251.wav",
+  "duracion_segundos": 63.67,
+  "num_segmentos": 27,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 45.02,
+    "Cliente": 9.24
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 4.28,
+      "duracion": 4.25,
+      "texto": "Hola. Hola, buenos días. Hablo con Erika.",
+      "confianza": 0.33,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.48,
+      "fin": 5.54,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.417,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.84,
+      "fin": 11.17,
+      "duracion": 4.33,
+      "texto": "¿Cómo le va el micrófono? ¿Está lo comunicando para hacerle llegar un beneficio exclusivo para su línea el día de hoy?",
+      "confianza": 0.054,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.04,
+      "fin": 14.82,
+      "duracion": 0.78,
+      "texto": "¿Y de qué empresa?",
+      "confianza": 0.198,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 15.5,
+      "fin": 18.33,
+      "duracion": 2.83,
+      "texto": "De Movistar. Tenemos una promoción para antiguos clientes.",
+      "confianza": 0.732,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 19.79,
+      "fin": 31.15,
+      "duracion": 11.36,
+      "texto": "No, yo soy, o sea, yo me cambié a modificar la semana pasada. Estoy esperando a que me cancelen la línea para cambiar. Bien, ya he hecho el trámite entonces, ya lo inició.",
+      "confianza": 0.4,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.09,
+      "fin": 32.69,
+      "duracion": 0.6,
+      "texto": "Sí, sí.",
+      "confianza": 0.506,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.99,
+      "fin": 49.17,
+      "duracion": 16.18,
+      "texto": "Ah, perfecto. Bueno, entonces ahora le dejo sentado. Disculpe, que tengo un lindo día. ¿Puedo consultar cuánto tardaría en cancelarme la línea? Porque estoy esperando desde la semana pasada. ¿Se lo enviará a su domicilio o lo va a retirar a la sucursal?",
+      "confianza": 0.616,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.8,
+      "fin": 63.67,
+      "duracion": 13.87,
+      "texto": "No, yo ya tengo el chip. Estoy esperando nada más. Ah, cuando su línea de clave lo deje de tener señal, ahí lo puede colocar. De todas maneras, le voy a dar un mensaje cuando lo pueda aportar. Ah, bueno. Bueno. Muchas gracias. A usted que tenga un lindo día.",
+      "confianza": 0.065,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. Hablo con Erika. Sí. ¿Cómo le va el micrófono? ¿Está lo comunicando para hacerle llegar un beneficio exclusivo para su línea el día de hoy? ¿Y de qué empresa? De Movistar. Tenemos una promoción para antiguos clientes. No, yo soy, o sea, yo me cambié a modificar la semana pasada. Estoy esperando a que me cancelen la línea para cambiar. Bien, ya he hecho el trámite entonces, ya lo inició. Sí, sí. Ah, perfecto. Bueno, entonces ahora le dejo sentado. Disculpe, que tengo un lindo día. ¿Puedo consultar cuánto tardaría en cancelarme la línea? Porque estoy esperando desde la semana pasada. ¿Se lo enviará a su domicilio o lo va a retirar a la sucursal? No, yo ya tengo el chip. Estoy esperando nada más. Ah, cuando su línea de clave lo deje de tener señal, ahí lo puede colocar. De todas maneras, le voy a dar un mensaje cuando lo pueda aportar. Ah, bueno. Bueno. Muchas gracias. A usted que tenga un lindo día.",
+  "calidad": {
+    "confianza_promedio": 0.463,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:33:02.690008",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 27,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:26.688026",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114115800228_ACD_77251",
+    "fecha_inicio": "14/1/2026 11:58:00",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 92,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Ya tiene MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

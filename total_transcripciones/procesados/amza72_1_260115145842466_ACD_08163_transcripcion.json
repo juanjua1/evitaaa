@@ -1,0 +1,92 @@
+{
+  "archivo": "amza72_1_260115145842466_ACD_08163.wav",
+  "duracion_segundos": 67.5,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 10.49,
+    "Cliente": 39.65
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.2,
+      "fin": 6.87,
+      "duracion": 6.67,
+      "texto": "Hola, pues del tono, deja tu mensaje.",
+      "confianza": 0.724,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.45,
+      "fin": 27.39,
+      "duracion": 18.94,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.824,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.01,
+      "fin": 34.83,
+      "duracion": 3.82,
+      "texto": "Aún no.",
+      "confianza": 0.317,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.79,
+      "fin": 67.5,
+      "duracion": 20.71,
+      "texto": "¿Qué pasa? ¿Qué pasa?",
+      "confianza": 0.324,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, pues del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. Aún no. ¿Qué pasa? ¿Qué pasa?",
+  "calidad": {
+    "confianza_promedio": 0.526,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:48:36.819583",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 5,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:31.205213",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115145842466_ACD_08163",
+    "fecha_inicio": "15/1/2026 14:58:42",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 78,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Ocupado",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "archivo": "amza24_1_260116105858384_ACD_09043.wav",
+  "duracion_segundos": 63.79,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 33.53,
+    "Cliente": 27.15
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.15,
+      "fin": 4.19,
+      "duracion": 3.04,
+      "texto": "Hola. Hola, ¿cómo estás, Lucas? Hablo con Lucas.",
+      "confianza": 0.43,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.97,
+      "fin": 7.03,
+      "duracion": 1.06,
+      "texto": "Sí, de parte... ¿Cómo estás, Lucas?",
+      "confianza": 0.205,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.05,
+      "fin": 10.99,
+      "duracion": 3.94,
+      "texto": "Agustín es mi nombre, me estoy comunicando de la Día de Recupero, requiriendo antes movistar.",
+      "confianza": 0.708,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.13,
+      "fin": 26.99,
+      "duracion": 15.86,
+      "texto": "Me asegura que vos actualmente estás en claro, ¿verdad? Así es. Bien, te consulto. ¿El motivo por el cual te fuiste, Lucas, de movistar? ¿Cuál fue? Que estaba pagando... Estaba... Estaba encorazando mi cara. No entiendo. Bien,",
+      "confianza": 0.662,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.99,
+      "fin": 53.54,
+      "duracion": 26.55,
+      "texto": "bueno, te cuento si en este caso nos paramos comunicando, como te dije, el área de recupero porque tenemos promociones exclusivas para que... Dale, si te puedo pedir tu llamada después de hacer, que estoy trabajando y capaz que acceda a una promoción, pero he dicho que es que también ya está andando para mí, pero... Dale, dale, se habría mandado una inscripción de WhatsApp ahora para que tengas mi número, te habría enviado las promociones y cualquier duda o consulta que tengas, bueno, te vuelvo a llamar a las seis.",
+      "confianza": 0.477,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.56,
+      "fin": 63.79,
+      "duracion": 10.23,
+      "texto": "Listo, dale, dé una. Dale, gracias, que estés muy bien. Muchas gracias por tu tiempo, que estén muy bien.",
+      "confianza": 0.35,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿cómo estás, Lucas? Hablo con Lucas. Sí, de parte... ¿Cómo estás, Lucas? Agustín es mi nombre, me estoy comunicando de la Día de Recupero, requiriendo antes movistar. Me asegura que vos actualmente estás en claro, ¿verdad? Así es. Bien, te consulto. ¿El motivo por el cual te fuiste, Lucas, de movistar? ¿Cuál fue? Que estaba pagando... Estaba... Estaba encorazando mi cara. No entiendo. Bien, bueno, te cuento si en este caso nos paramos comunicando, como te dije, el área de recupero porque tenemos promociones exclusivas para que... Dale, si te puedo pedir tu llamada después de hacer, que estoy trabajando y capaz que acceda a una promoción, pero he dicho que es que también ya está andando para mí, pero... Dale, dale, se habría mandado una inscripción de WhatsApp ahora para que tengas mi número, te habría enviado las promociones y cualquier duda o consulta que tengas, bueno, te vuelvo a llamar a las seis. Listo, dale, dé una. Dale, gracias, que estés muy bien. Muchas gracias por tu tiempo, que estén muy bien.",
+  "calidad": {
+    "confianza_promedio": 0.419,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:33:36.537340",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 16,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:19.341013",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116105858384_ACD_09043",
+    "fecha_inicio": "16/1/2026 10:58:58",
+    "agente_nombre": "MZA 24",
+    "agente_login": "mza24",
+    "duracion_total": 82,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

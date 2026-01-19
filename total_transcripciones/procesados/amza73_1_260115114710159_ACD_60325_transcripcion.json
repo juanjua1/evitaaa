@@ -1,0 +1,83 @@
+{
+  "archivo": "amza73_1_260115114710159_ACD_60325.wav",
+  "duracion_segundos": 91.46,
+  "num_segmentos": 33,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 39.98,
+    "Cliente": 44.27
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.43,
+      "fin": 41.41,
+      "duracion": 39.98,
+      "texto": "Hola, buen día. Buen día. Un gusto. Tengo el placer de comunicarme con Elisa. Nélida. Nélida. Bueno, Nélida, Elisa, me figura acá, disculpa. Mi nombre es Malena, yo te estoy llamando de lo que es el Heredia de Calidad de Movistar, que es para ofrecerte un beneficio el día de hoy en tu línea. No, gracias. Yo tengo... Sí, me figura que actualmente estás con lo que es la compañía Claro, ¿bien? Pasa que estamos haciéndolo que es una campaña de recuperación de clientes. Y bueno, justamente me figura que vos estuviste con nosotros hasta más o menos principios de 2024. No sé si esta información es correcta.",
+      "confianza": 0.412,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.29,
+      "fin": 60.19,
+      "duracion": 13.9,
+      "texto": "Sí. Bien, entiendo. ¿Y por qué fue que hiciste el cambio en su momento? ¿Tuviste algún inconveniente? ¿Te dieron una mejor oferta? Sí, sí. No, no, no. Más que que me cobraban demasiado. No, no, no.",
+      "confianza": 0.074,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.09,
+      "fin": 91.46,
+      "duracion": 30.37,
+      "texto": "Y también no lo tengo claro por línea, por comés, pero vos no. Ah, lo tenés por prepago. Claro, por prepago nomás. Bien, entiendo. Y eso, ¿te alcanzan los lluvias que vos has comprado o tenés que hacer varias recargas? Además, no tengo internet en mi casa y en mi trabajo. Ah, bien, entiendo. Bueno, la ley de perfección no hay problema. Solo voy a estar legendada si no te llaman. Muchas gracias. ¡Gracias!",
+      "confianza": 0.134,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Buen día. Un gusto. Tengo el placer de comunicarme con Elisa. Nélida. Nélida. Bueno, Nélida, Elisa, me figura acá, disculpa. Mi nombre es Malena, yo te estoy llamando de lo que es el Heredia de Calidad de Movistar, que es para ofrecerte un beneficio el día de hoy en tu línea. No, gracias. Yo tengo... Sí, me figura que actualmente estás con lo que es la compañía Claro, ¿bien? Pasa que estamos haciéndolo que es una campaña de recuperación de clientes. Y bueno, justamente me figura que vos estuviste con nosotros hasta más o menos principios de 2024. No sé si esta información es correcta. Sí. Bien, entiendo. ¿Y por qué fue que hiciste el cambio en su momento? ¿Tuviste algún inconveniente? ¿Te dieron una mejor oferta? Sí, sí. No, no, no. Más que que me cobraban demasiado. No, no, no. Y también no lo tengo claro por línea, por comés, pero vos no. Ah, lo tenés por prepago. Claro, por prepago nomás. Bien, entiendo. Y eso, ¿te alcanzan los lluvias que vos has comprado o tenés que hacer varias recargas? Además, no tengo internet en mi casa y en mi trabajo. Ah, bien, entiendo. Bueno, la ley de perfección no hay problema. Solo voy a estar legendada si no te llaman. Muchas gracias. ¡Gracias!",
+  "calidad": {
+    "confianza_promedio": 0.398,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:57:13.763669",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 33,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:31.710134",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115114710159_ACD_60325",
+    "fecha_inicio": "15/1/2026 11:47:10",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 111,
+    "tiempo_conversacion": 89,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

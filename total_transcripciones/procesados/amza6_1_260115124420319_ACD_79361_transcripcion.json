@@ -1,0 +1,162 @@
+{
+  "archivo": "amza6_1_260115124420319_ACD_79361.wav",
+  "duracion_segundos": 77.58,
+  "num_segmentos": 32,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 36.26,
+    "Cliente": 33.11
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.93,
+      "fin": 6.35,
+      "duracion": 5.42,
+      "texto": "Hola, ¿qué tal? ¿Buen día? Sí, buen día. ¿Hablo con la línea de Walter Jesús?",
+      "confianza": 0.191,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.19,
+      "fin": 8.25,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.259,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.27,
+      "fin": 20.67,
+      "duracion": 12.4,
+      "texto": "Walter, ¿cómo estás? Un gusto. Mi nombre es Micaela. Me estoy comunicando desde el área de recupero de clientes de Movistar porque tenemos una promoción para tu línea.",
+      "confianza": 0.53,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.69,
+      "fin": 20.75,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.085,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.77,
+      "fin": 28.21,
+      "duracion": 7.44,
+      "texto": "Tenemos. Actualmente lo que es un plan de 16 días son 8 horas de más, 8 de regalo y te quedan 10.400.",
+      "confianza": 0.892,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.75,
+      "fin": 56.5,
+      "duracion": 26.75,
+      "texto": "Sí, yo pago 14 por 5.000. ¿Cómo? Yo pago 14 gigas por 5.000 pesos. Ah, 14 gigas. Bien, perfecto. ¿Y tenés una sola línea bajo tu nombre? Tres. Tres, bien. En este caso te puedo brindar sino el plan de cuatro gigas de base más cuatro de regalo y además por pasar más de una línea se te suman cuatro gigas más y te quedan 7.460.",
+      "confianza": 0.205,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.82,
+      "fin": 61.79,
+      "duracion": 2.97,
+      "texto": "Sí, sigue siendo más caro.",
+      "confianza": 0.157,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.81,
+      "fin": 62.63,
+      "duracion": 0.82,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.682,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.67,
+      "fin": 65.96,
+      "duracion": 3.29,
+      "texto": "Guardo tu número por cualquier promo más económico que tengamos. ¿Te lo pareces?",
+      "confianza": 0.799,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 66.89,
+      "fin": 70.13,
+      "duracion": 3.24,
+      "texto": "Bueno. Genial. Muchísimas gracias. Que tengas un buen día. Igual.",
+      "confianza": 0.697,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 70.66,
+      "fin": 77.58,
+      "duracion": 6.92,
+      "texto": "Gracias. Hasta luego.",
+      "confianza": 0.586,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buen día? Sí, buen día. ¿Hablo con la línea de Walter Jesús? Sí. Walter, ¿cómo estás? Un gusto. Mi nombre es Micaela. Me estoy comunicando desde el área de recupero de clientes de Movistar porque tenemos una promoción para tu línea. Sí. Tenemos. Actualmente lo que es un plan de 16 días son 8 horas de más, 8 de regalo y te quedan 10.400. Sí, yo pago 14 por 5.000. ¿Cómo? Yo pago 14 gigas por 5.000 pesos. Ah, 14 gigas. Bien, perfecto. ¿Y tenés una sola línea bajo tu nombre? Tres. Tres, bien. En este caso te puedo brindar sino el plan de cuatro gigas de base más cuatro de regalo y además por pasar más de una línea se te suman cuatro gigas más y te quedan 7.460. Sí, sigue siendo más caro. Bien, perfecto. Guardo tu número por cualquier promo más económico que tengamos. ¿Te lo pareces? Bueno. Genial. Muchísimas gracias. Que tengas un buen día. Igual. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:40:22.099197",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 11,
+    "fecha_correccion": "2026-01-18T23:05:30.694965",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115124420319_ACD_79361",
+    "fecha_inicio": "15/1/2026 12:44:20",
+    "agente_nombre": "MZA 6",
+    "agente_login": "mza6",
+    "duracion_total": 111,
+    "tiempo_conversacion": 75,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

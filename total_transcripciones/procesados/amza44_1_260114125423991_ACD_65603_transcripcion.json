@@ -1,0 +1,129 @@
+{
+  "archivo": "amza44_1_260114125423991_ACD_65603.wav",
+  "duracion_segundos": 63.3,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 41.82,
+    "Cliente": 5.89
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.51,
+      "fin": 6.86,
+      "duracion": 4.35,
+      "texto": "Hola, ¿qué tal? Hola. Hola, ¿sí qué tal? ¿Cómo le da buen día? Hablo con Rubén Eduardo.",
+      "confianza": 0.352,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.12,
+      "fin": 19.32,
+      "duracion": 11.2,
+      "texto": "Sí, con él habla. ¿Qué tal Rubén? ¿Cómo le va? Un gusto. Mi nombre es Rodrigo, ¿sí? Yo me estoy comunicando con usted para brindarle lo que es un beneficio en la línea. Me figura que usted está actualmente en la compañía de K-Lars, ¿correcto?",
+      "confianza": 0.497,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.62,
+      "fin": 21.28,
+      "duracion": 0.66,
+      "texto": "Sí, sí.",
+      "confianza": 0.491,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.56,
+      "fin": 27.89,
+      "duracion": 6.33,
+      "texto": "Ok, excelente. Yo me estoy comunicando con usted de lo que es la compañía Movistar. Yo soy asesor comercial de Movistar.",
+      "confianza": 0.209,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.39,
+      "fin": 34.68,
+      "duracion": 6.29,
+      "texto": "Me comunico actualmente unas promociones vigentes de la compañía que actualmente están en claro.",
+      "confianza": 0.746,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 35.94,
+      "fin": 48.72,
+      "duracion": 12.78,
+      "texto": "Le consulto. ¿Usted para qué suele utilizar más lo que es su línea? ¿Lo suele utilizar para trabajar? ¿Lo suele utilizar más para estudiar, para estar comunicado? ¿Para qué la suele utilizar más?",
+      "confianza": 0.796,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.02,
+      "fin": 57.25,
+      "duracion": 5.23,
+      "texto": "Hola, ¿me escuchas? Hola, mirá, me vino un cliente, tengo que atenderlo.",
+      "confianza": 0.562,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.43,
+      "fin": 63.3,
+      "duracion": 0.87,
+      "texto": "Gracias. Dale, muchas gracias, hasta luego.",
+      "confianza": 0.004,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Hola. Hola, ¿sí qué tal? ¿Cómo le da buen día? Hablo con Rubén Eduardo. Sí, con él habla. ¿Qué tal Rubén? ¿Cómo le va? Un gusto. Mi nombre es Rodrigo, ¿sí? Yo me estoy comunicando con usted para brindarle lo que es un beneficio en la línea. Me figura que usted está actualmente en la compañía de K-Lars, ¿correcto? Sí, sí. Ok, excelente. Yo me estoy comunicando con usted de lo que es la compañía Movistar. Yo soy asesor comercial de Movistar. Me comunico actualmente unas promociones vigentes de la compañía que actualmente están en claro. Le consulto. ¿Usted para qué suele utilizar más lo que es su línea? ¿Lo suele utilizar para trabajar? ¿Lo suele utilizar más para estudiar, para estar comunicado? ¿Para qué la suele utilizar más? Hola, ¿me escuchas? Hola, mirá, me vino un cliente, tengo que atenderlo. Gracias. Dale, muchas gracias, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.548,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:06:23.374447",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:28.709708",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114125423991_ACD_65603",
+    "fecha_inicio": "14/1/2026 12:54:23",
+    "agente_nombre": "MZA 44",
+    "agente_login": "mza44",
+    "duracion_total": 87,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Ocupado",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

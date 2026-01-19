@@ -1,0 +1,101 @@
+{
+  "archivo": "amza1_1_260114125332851_ACD_63763.wav",
+  "duracion_segundos": 63.92,
+  "num_segmentos": 32,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 23.04,
+    "Cliente": 37.16
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.23,
+      "fin": 10.44,
+      "duracion": 10.21,
+      "texto": "Hola, hola, hola. Hola, ¿qué tal? Hablo con un usuario de línea de Melina. ¿Quién habla? ¿Qué tal, señor? ¿Cómo le va a un placer? Le habla Angelina Estelado.",
+      "confianza": 0.17,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.04,
+      "fin": 37.99,
+      "duracion": 26.95,
+      "texto": "Le consulto a usted a un usuario de línea. ¿Puede tomar decisiones sobre la misma o no? No, es ella, mi esposa, Melina. Ah, bien. Yo le comento que usamos, justamente, desde Movistar. Queríamos ofrecerle a Melina un descuento por sus líneas móviles. Por eso, no sé si la puedo comentar a usted y si usted se lo cuenta a ella, en todo caso. No, en tal caso no es Amala esa. Ella termina con 45. Sí, me figura acá el número de ella, 44. 22. Ah, claro. El mío es 45.",
+      "confianza": 0.529,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 39.69,
+      "fin": 58.54,
+      "duracion": 18.85,
+      "texto": "Claro, bien. ¿Cómo es su nombre, señor? Para que yo la... David. David. Bueno, David. Yo ahora voy a llamarla a ella. ¿La podré llamar ahora o no? Sí, Amala. Bueno, perfecto. No sé en el mismo lugar, pero... Ok. Ahora le damos a Melina entonces y le contacto con ella, que es la titular, ¿bien?",
+      "confianza": 0.694,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.14,
+      "fin": 61.58,
+      "duracion": 2.44,
+      "texto": "Gracias David, que estés muy bien.",
+      "confianza": 0.497,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.17,
+      "fin": 63.92,
+      "duracion": 1.75,
+      "texto": "Hasta luego.",
+      "confianza": 0.458,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, hola, hola. Hola, ¿qué tal? Hablo con un usuario de línea de Melina. ¿Quién habla? ¿Qué tal, señor? ¿Cómo le va a un placer? Le habla Angelina Estelado. Le consulto a usted a un usuario de línea. ¿Puede tomar decisiones sobre la misma o no? No, es ella, mi esposa, Melina. Ah, bien. Yo le comento que usamos, justamente, desde Movistar. Queríamos ofrecerle a Melina un descuento por sus líneas móviles. Por eso, no sé si la puedo comentar a usted y si usted se lo cuenta a ella, en todo caso. No, en tal caso no es Amala esa. Ella termina con 45. Sí, me figura acá el número de ella, 44. 22. Ah, claro. El mío es 45. Claro, bien. ¿Cómo es su nombre, señor? Para que yo la... David. David. Bueno, David. Yo ahora voy a llamarla a ella. ¿La podré llamar ahora o no? Sí, Amala. Bueno, perfecto. No sé en el mismo lugar, pero... Ok. Ahora le damos a Melina entonces y le contacto con ella, que es la titular, ¿bien? Gracias David, que estés muy bien. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.441,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:43:08.215416",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:16.150004",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114125332851_ACD_63763",
+    "fecha_inicio": "14/1/2026 12:53:32",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 79,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

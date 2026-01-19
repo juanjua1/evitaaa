@@ -1,0 +1,111 @@
+{
+  "archivo": "amza314_1_260112110256202_ACD_30015.wav",
+  "duracion_segundos": 88.07,
+  "num_segmentos": 19,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 13.14,
+    "Cliente": 72.5
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 26.95,
+      "duracion": 26.92,
+      "texto": "¿Qué tal, buen día? ¿Cómo te vas, mi Rocío? Tengo el gusto de hablar con la titular de la línea, María Cristina. ¿De dónde movistar? De contacto del área de recupero de clientes. ¿Cómo te va? Ya le dije que ya no quiero. Ya me llamaron 500 veces y le dije que ya hasta perdí un trabajo porque me llaman todas las veces.",
+      "confianza": 0.16,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.84,
+      "fin": 42.0,
+      "duracion": 14.16,
+      "texto": "Lamento mucho escuchar eso, la verdad que no quiero molestarte, pero bueno, obviamente, si la promoción no estaría buena, no me estaría contactando con vos. Te puedo consultar vos por qué realizaste el cambio en un principio de movilizar a Claro, por qué te cambiaste.",
+      "confianza": 0.691,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.74,
+      "fin": 56.63,
+      "duracion": 13.9,
+      "texto": "Yo también le contesté, le dije que, una, no tengo trabajo para estar pagando una línea, otra, que esto, al de vivo no tenía buena cobertura y",
+      "confianza": 0.76,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.37,
+      "fin": 70.33,
+      "duracion": 12.96,
+      "texto": "Ahora estoy haciendo un tratamiento y así que no me puedo dar mucho problema. Bueno, perfecto. Yo lo dejo asentado, ¿sí?",
+      "confianza": 0.126,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 70.35,
+      "fin": 83.49,
+      "duracion": 13.14,
+      "texto": "Obviamente también te voy a dejar mi número de asesor en el caso de que en algún momento puedas volver a la compañía y quieras tener alguna promoción, te puedas contactar directamente conmigo.",
+      "confianza": 0.626,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 83.51,
+      "fin": 88.07,
+      "duracion": 4.56,
+      "texto": "¿Sí, Mari? Gracias. que tengas muy linda tarde. Hasta luego.",
+      "confianza": 0.002,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Qué tal, buen día? ¿Cómo te vas, mi Rocío? Tengo el gusto de hablar con la titular de la línea, María Cristina. ¿De dónde movistar? De contacto del área de recupero de clientes. ¿Cómo te va? Ya le dije que ya no quiero. Ya me llamaron 500 veces y le dije que ya hasta perdí un trabajo porque me llaman todas las veces. Lamento mucho escuchar eso, la verdad que no quiero molestarte, pero bueno, obviamente, si la promoción no estaría buena, no me estaría contactando con vos. Te puedo consultar vos por qué realizaste el cambio en un principio de movilizar a Claro, por qué te cambiaste. Yo también le contesté, le dije que, una, no tengo trabajo para estar pagando una línea, otra, que esto, al de vivo no tenía buena cobertura y Ahora estoy haciendo un tratamiento y así que no me puedo dar mucho problema. Bueno, perfecto. Yo lo dejo asentado, ¿sí? Obviamente también te voy a dejar mi número de asesor en el caso de que en algún momento puedas volver a la compañía y quieras tener alguna promoción, te puedas contactar directamente conmigo. ¿Sí, Mari? Gracias. que tengas muy linda tarde. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.488,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:21:26.879171",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 19,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:22.445870",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112110256202_ACD_30015",
+    "fecha_inicio": "12/1/2026 11:02:56",
+    "agente_nombre": "MZA 314",
+    "agente_login": "mza314",
+    "duracion_total": 150,
+    "tiempo_conversacion": 85,
+    "tiempo_hold": 0,
+    "tiempo_acw": 45,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

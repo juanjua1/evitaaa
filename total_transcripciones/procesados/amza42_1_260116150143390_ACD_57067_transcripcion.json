@@ -1,0 +1,140 @@
+{
+  "archivo": "amza42_1_260116150143390_ACD_57067.wav",
+  "duracion_segundos": 74.91,
+  "num_segmentos": 17,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 10.54,
+    "Cliente": 57.98
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.3,
+      "fin": 4.78,
+      "duracion": 3.48,
+      "texto": "Hola, ¿de parte?",
+      "confianza": 0.77,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.52,
+      "fin": 26.31,
+      "duracion": 20.79,
+      "texto": "¿de claro? No, te agradezco. No, te agradezco.",
+      "confianza": 0.569,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.08,
+      "fin": 29.2,
+      "duracion": 2.12,
+      "texto": "Bien, entiendo. ¿Me diría el por qué?",
+      "confianza": 0.692,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.82,
+      "fin": 31.39,
+      "duracion": 1.56,
+      "texto": "¿No quiero aprovechar esta promoción?",
+      "confianza": 0.747,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.03,
+      "fin": 32.24,
+      "duracion": 0.21,
+      "texto": "No,",
+      "confianza": 0.67,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.24,
+      "fin": 42.78,
+      "duracion": 10.54,
+      "texto": "porque tardan un montón en traer el chip y después se bloquea y tengo que andar comprando el trámite, multitrámite, algo así, así que no, te agradezco.",
+      "confianza": 0.67,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.8,
+      "fin": 53.07,
+      "duracion": 10.27,
+      "texto": "Bien, no sé cuándo ha sido que usted lo ha intentado hacer, lo que es la portabilidad. Nosotros lo que brindamos actualmente es que usted pueda acercarse a una tienda a la multa, retirarlo justamente para que sea más rápido, ¿sí?",
+      "confianza": 0.562,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.05,
+      "fin": 65.13,
+      "duracion": 11.08,
+      "texto": "Ustedes retiran el chip. Y nosotros lo habilitamos 48 horas después. Justamente para que, como le digo, usted pueda mantener su mismo número y disfrutar de lo que es el servicio.",
+      "confianza": 0.16,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 66.44,
+      "fin": 74.91,
+      "duracion": 8.47,
+      "texto": "Dale, te agradezco. Más adelante, capaz que sí. Bien. ¿Y por qué no ahora?",
+      "confianza": 0.494,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿de parte? ¿de claro? No, te agradezco. No, te agradezco. Bien, entiendo. ¿Me diría el por qué? ¿No quiero aprovechar esta promoción? No, porque tardan un montón en traer el chip y después se bloquea y tengo que andar comprando el trámite, multitrámite, algo así, así que no, te agradezco. Bien, no sé cuándo ha sido que usted lo ha intentado hacer, lo que es la portabilidad. Nosotros lo que brindamos actualmente es que usted pueda acercarse a una tienda a la multa, retirarlo justamente para que sea más rápido, ¿sí? Ustedes retiran el chip. Y nosotros lo habilitamos 48 horas después. Justamente para que, como le digo, usted pueda mantener su mismo número y disfrutar de lo que es el servicio. Dale, te agradezco. Más adelante, capaz que sí. Bien. ¿Y por qué no ahora?",
+  "calidad": {
+    "confianza_promedio": 0.627,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:52:26.711235",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:27.865574",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116150143390_ACD_57067",
+    "fecha_inicio": "16/1/2026 15:01:43",
+    "agente_nombre": "MZA 42",
+    "agente_login": "mza42",
+    "duracion_total": 94,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_Respaldo",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

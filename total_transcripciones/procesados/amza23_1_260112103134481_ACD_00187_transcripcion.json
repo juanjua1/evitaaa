@@ -1,0 +1,128 @@
+{
+  "archivo": "amza23_1_260112103134481_ACD_00187.wav",
+  "duracion_segundos": 82.13,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 16.03,
+    "Cliente": 51.27
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 24.54,
+      "duracion": 24.51,
+      "texto": "Hola. Hola, buenos días. ¿Me comunico con la línea de Clarita? Sí. Perfecto. Llamaba para brindarles un nuevo beneficio para sus líneas. Sí, me sale que actualmente están en claro. ¿Eso es correcto? Sí. Perfecto. Yo lo estoy llamando de la área de recuperación del pidente Movistar. Sí. Hoy tenemos lo que es un plan para sus líneas.",
+      "confianza": 0.498,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.25,
+      "fin": 39.11,
+      "duracion": 13.86,
+      "texto": "Este plan tiene lo que son 16 y llega así y pasando más de una línea bajo la misma titularía, se les regalan cuatro gigas, entonces serían 20 gigas al precio final de 13.250.",
+      "confianza": 0.743,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 41.53,
+      "fin": 54.09,
+      "duracion": 12.56,
+      "texto": "Este plan tiene WhatsApp gratis, romen en América, hablen libre a cualquier compañía y tienen descuentos fijos por seis meses. Conservarían lo que es el mismo número y no se quedarían incomunicados en ningún momento.",
+      "confianza": 0.697,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.98,
+      "fin": 59.64,
+      "duracion": 0.66,
+      "texto": "¿Lo escuchan? Sí, sí.",
+      "confianza": 0.187,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.26,
+      "fin": 68.89,
+      "duracion": 8.63,
+      "texto": "No, hasta ahora no. Estoy bien. ¿Y le han ofrecido también lo que es la fibra óptica a ustedes?",
+      "confianza": 0.643,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 70.67,
+      "fin": 73.46,
+      "duracion": 2.79,
+      "texto": "Sí, nos ofrecieron, pero ya lo tenemos.",
+      "confianza": 0.595,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 74.95,
+      "fin": 75.63,
+      "duracion": 0.68,
+      "texto": "¿De Movistar?",
+      "confianza": 0.678,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 78.52,
+      "fin": 82.13,
+      "duracion": 3.61,
+      "texto": "Claro. Lo tienen mi hermana.",
+      "confianza": 0.415,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. ¿Me comunico con la línea de Clarita? Sí. Perfecto. Llamaba para brindarles un nuevo beneficio para sus líneas. Sí, me sale que actualmente están en claro. ¿Eso es correcto? Sí. Perfecto. Yo lo estoy llamando de la área de recuperación del pidente Movistar. Sí. Hoy tenemos lo que es un plan para sus líneas. Este plan tiene lo que son 16 y llega así y pasando más de una línea bajo la misma titularía, se les regalan cuatro gigas, entonces serían 20 gigas al precio final de 13.250. Este plan tiene WhatsApp gratis, romen en América, hablen libre a cualquier compañía y tienen descuentos fijos por seis meses. Conservarían lo que es el mismo número y no se quedarían incomunicados en ningún momento. ¿Lo escuchan? Sí, sí. No, hasta ahora no. Estoy bien. ¿Y le han ofrecido también lo que es la fibra óptica a ustedes? Sí, nos ofrecieron, pero ya lo tenemos. ¿De Movistar? Claro. Lo tienen mi hermana.",
+  "calidad": {
+    "confianza_promedio": 0.51,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:17:30.563697",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:18.244560",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112103134481_ACD_00187",
+    "fecha_inicio": "12/1/2026 10:31:34",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 134,
+    "tiempo_conversacion": 79,
+    "tiempo_hold": 0,
+    "tiempo_acw": 42,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "archivo": "amza74_1_260113141830360_ACD_03465.wav",
+  "duracion_segundos": 67.99,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 19.75,
+    "Cliente": 19.48
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 2.66,
+      "duracion": 2.62,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.646,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.32,
+      "fin": 23.79,
+      "duracion": 19.48,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.706,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.86,
+      "fin": 67.99,
+      "duracion": 17.13,
+      "texto": "esa cargada es de vidrio y se le se le cayó del bolsillo",
+      "confianza": 0.597,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje. Para finalizar, cortá o marca la tecla numeral para más opciones. esa cargada es de vidrio y se le se le cayó del bolsillo",
+  "calidad": {
+    "confianza_promedio": 0.65,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:03:51.542180",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 3,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:32.136232",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113141830360_ACD_03465",
+    "fecha_inicio": "13/1/2026 14:18:30",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 93,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

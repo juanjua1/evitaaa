@@ -1,0 +1,83 @@
+{
+  "archivo": "amza20_1_260113104111430_ACD_67763.wav",
+  "duracion_segundos": 69.61,
+  "num_segmentos": 11,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 40.96,
+    "Cliente": 25.96
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 12.95,
+      "duracion": 12.92,
+      "texto": "Hola, buen día, Carlos. Hola, buen día, Carlos. Hola, ¿a quién habla? Tomás es mi nombre, me comunico de la área de recuperación de clientes Movistar.",
+      "confianza": 0.636,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 13.71,
+      "fin": 26.75,
+      "duracion": 13.04,
+      "texto": "Exactamente con tan claro, ¿verdad? Sí. Bien, el motivo de mi llamado era para preguntarle por qué se había ido de la compañía, ¿sí? ¿Qué inconvenientes había tenido con la línea y demás?",
+      "confianza": 0.578,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.65,
+      "fin": 69.61,
+      "duracion": 40.96,
+      "texto": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, Eh bueno, por ahora, por ahora, ¿qué hay? Cualquier cosito, bueno, me comunicaré con alguno de ustedes.",
+      "confianza": 0.412,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, Carlos. Hola, buen día, Carlos. Hola, ¿a quién habla? Tomás es mi nombre, me comunico de la área de recuperación de clientes Movistar. Exactamente con tan claro, ¿verdad? Sí. Bien, el motivo de mi llamado era para preguntarle por qué se había ido de la compañía, ¿sí? ¿Qué inconvenientes había tenido con la línea y demás? No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, Eh bueno, por ahora, por ahora, ¿qué hay? Cualquier cosito, bueno, me comunicaré con alguno de ustedes.",
+  "calidad": {
+    "confianza_promedio": 0.524,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:52:28.405009",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 11,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:16.736311",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113104111430_ACD_67763",
+    "fecha_inicio": "13/1/2026 10:41:11",
+    "agente_nombre": "MZA 20",
+    "agente_login": "mza20",
+    "duracion_total": 93,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

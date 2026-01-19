@@ -1,0 +1,150 @@
+{
+  "archivo": "amza24_1_260112130148174_ACD_67191.wav",
+  "duracion_segundos": 96.0,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 59.86,
+    "Cliente": 30.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.45,
+      "fin": 15.63,
+      "duracion": 14.18,
+      "texto": "Hola. Hola. Hola. ¿Cómo estás, buenos días? Háblalo con Juan Antonio. Sí. ¿Cómo estás, Juan Antonio? ¿Quién es mi nombre?",
+      "confianza": 0.494,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 15.77,
+      "fin": 24.32,
+      "duracion": 8.55,
+      "texto": "Me estoy comunicando del área de recupero de clientes Movistar. Me figura que actualmente están en claro, ¿verdad?",
+      "confianza": 0.692,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.34,
+      "fin": 28.45,
+      "duracion": 4.11,
+      "texto": "Sí. Bien. Juan, te consulto. ¿El motivo por el que te fuiste de Movistar cuál fue?",
+      "confianza": 0.467,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.81,
+      "fin": 46.12,
+      "duracion": 15.31,
+      "texto": "porque es donde paso días de descanso.",
+      "confianza": 0.039,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.14,
+      "fin": 46.5,
+      "duracion": 0.36,
+      "texto": "Bien.",
+      "confianza": 0.907,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 46.52,
+      "fin": 53.57,
+      "duracion": 7.05,
+      "texto": "Bueno, Juan, te cuento, en ese caso nos estábamos comunicando porque tenemos promociones exclusivas para aquellos clientes que han sido parte de la compañía.",
+      "confianza": 0.687,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.97,
+      "fin": 54.47,
+      "duracion": 0.5,
+      "texto": "Bien.",
+      "confianza": 0.647,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.04,
+      "fin": 67.28,
+      "duracion": 12.24,
+      "texto": "En este caso tengo para brindarte lo que es un plan de ocho siglas de base más ocho del regalo, van a ser 16 siglas en total, bolsas prácticas y llamadas libres a todas las compañías por un precio final de $13,250. ¿Bien?",
+      "confianza": 0.737,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.3,
+      "fin": 78.4,
+      "duracion": 11.1,
+      "texto": "Sí, pero si no tengo señal, ¿para qué quiero?",
+      "confianza": 0.365,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 79.29,
+      "fin": 96.0,
+      "duracion": 16.71,
+      "texto": "¿Hace cuánto que te pasó esto de que no tenías buena cobertura? Podemos verificar si en este momento hemos mejorado con respecto a eso.",
+      "confianza": 0.582,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola. ¿Cómo estás, buenos días? Háblalo con Juan Antonio. Sí. ¿Cómo estás, Juan Antonio? ¿Quién es mi nombre? Me estoy comunicando del área de recupero de clientes Movistar. Me figura que actualmente están en claro, ¿verdad? Sí. Bien. Juan, te consulto. ¿El motivo por el que te fuiste de Movistar cuál fue? porque es donde paso días de descanso. Bien. Bueno, Juan, te cuento, en ese caso nos estábamos comunicando porque tenemos promociones exclusivas para aquellos clientes que han sido parte de la compañía. Bien. En este caso tengo para brindarte lo que es un plan de ocho siglas de base más ocho del regalo, van a ser 16 siglas en total, bolsas prácticas y llamadas libres a todas las compañías por un precio final de $13,250. ¿Bien? Sí, pero si no tengo señal, ¿para qué quiero? ¿Hace cuánto que te pasó esto de que no tenías buena cobertura? Podemos verificar si en este momento hemos mejorado con respecto a eso.",
+  "calidad": {
+    "confianza_promedio": 0.487,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:26:05.969470",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:18.796214",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112130148174_ACD_67191",
+    "fecha_inicio": "12/1/2026 13:01:48",
+    "agente_nombre": "MZA 24",
+    "agente_login": "mza24",
+    "duracion_total": 126,
+    "tiempo_conversacion": 93,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

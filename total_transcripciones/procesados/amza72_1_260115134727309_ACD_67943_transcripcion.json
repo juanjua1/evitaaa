@@ -1,0 +1,148 @@
+{
+  "archivo": "amza72_1_260115134727309_ACD_67943.wav",
+  "duracion_segundos": 68.26,
+  "num_segmentos": 37,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 37.0,
+    "Cliente": 22.07
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 6.12,
+      "duracion": 6.09,
+      "texto": "Hola. Hola. Sí. Hola, ¿qué tal? Mucho gusto. Liliana Lourdes.",
+      "confianza": 0.427,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.92,
+      "fin": 15.73,
+      "duracion": 8.81,
+      "texto": "Sí. ¿Cómo estás, Lily? Mucho gusto. Yo soy Maxi. Quería justamente hablar con vos ya que estoy brindando lo que son descuentos en la línea. De claro. ¿Vos sos de claro? ¿Puede ser?",
+      "confianza": 0.848,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.53,
+      "fin": 22.14,
+      "duracion": 5.61,
+      "texto": "Sí. Perfecto. Y más o menos vos, ¿sabes cuánto estás pagando? ¿Cuánto sigas te andando para brindarte algo mejor?",
+      "confianza": 0.846,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.72,
+      "fin": 25.9,
+      "duracion": 0.18,
+      "texto": "Ay, mira.",
+      "confianza": 0.105,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.73,
+      "fin": 43.76,
+      "duracion": 17.03,
+      "texto": "No me puedo acordar. Sé que estoy pagando 11.000 pesos, pero no sé. OK, 11.000 pesos, listo. Con eso está bien. Con eso me puedo manejar bastante bien. Yo lo que te puedo ofrecer ahora... Pero mira, es que ahora en este momento no te puedo atender. Ah, no puedes?",
+      "confianza": 0.417,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 44.56,
+      "fin": 45.78,
+      "duracion": 1.22,
+      "texto": "No.",
+      "confianza": 0.95,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 45.8,
+      "fin": 55.55,
+      "duracion": 9.75,
+      "texto": "Oh, es que justo tenías una propuesta de 10.400 y otra de 7.460. ¿En qué otro momento te puedo llamar? Y hasta el lunes. Imposible.",
+      "confianza": 0.582,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 57.03,
+      "fin": 65.27,
+      "duracion": 8.24,
+      "texto": "Bueno, no, para el lunes la hora va a aumentar los precios, pero bueno, si tengo la propuesta, ojalá que la tengas. Llámame.",
+      "confianza": 0.692,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 65.29,
+      "fin": 65.63,
+      "duracion": 0.34,
+      "texto": "Dale.",
+      "confianza": 0.867,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 66.46,
+      "fin": 68.26,
+      "duracion": 1.8,
+      "texto": "No es problema. Hasta luego. Hasta luego.",
+      "confianza": 0.557,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Sí. Hola, ¿qué tal? Mucho gusto. Liliana Lourdes. Sí. ¿Cómo estás, Lily? Mucho gusto. Yo soy Maxi. Quería justamente hablar con vos ya que estoy brindando lo que son descuentos en la línea. De claro. ¿Vos sos de claro? ¿Puede ser? Sí. Perfecto. Y más o menos vos, ¿sabes cuánto estás pagando? ¿Cuánto sigas te andando para brindarte algo mejor? Ay, mira. No me puedo acordar. Sé que estoy pagando 11.000 pesos, pero no sé. OK, 11.000 pesos, listo. Con eso está bien. Con eso me puedo manejar bastante bien. Yo lo que te puedo ofrecer ahora... Pero mira, es que ahora en este momento no te puedo atender. Ah, no puedes? No. Oh, es que justo tenías una propuesta de 10.400 y otra de 7.460. ¿En qué otro momento te puedo llamar? Y hasta el lunes. Imposible. Bueno, no, para el lunes la hora va a aumentar los precios, pero bueno, si tengo la propuesta, ojalá que la tengas. Llámame. Dale. No es problema. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.609,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:48:32.932346",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 37,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:31.203214",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115134727309_ACD_67943",
+    "fecha_inicio": "15/1/2026 13:47:27",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 106,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

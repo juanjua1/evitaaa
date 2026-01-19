@@ -1,0 +1,121 @@
+{
+  "archivo": "amza10_1_260116110411925_ACD_26687.wav",
+  "duracion_segundos": 76.83,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.9,
+    "Cliente": 47.4
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.41,
+      "fin": 6.01,
+      "duracion": 3.6,
+      "texto": "Hola, buenos días. ¿Hablo con Jorge?",
+      "confianza": 0.175,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.42,
+      "fin": 26.8,
+      "duracion": 19.38,
+      "texto": "¿No? No, no me he equivocado. Ah, disculpa. Mirá, me subió acá el titular Jorge Mauricio Daruban. ¿Lo conoces o no lo conoces? No. No, no. Bien. Bueno, mirá, básicamente, capaz amamos lo que es la titulería anterior, de esos del 20-23, pero nos poníamos en contacto para brindarte una bonificación. ¿Vos sos actualmente del titular?",
+      "confianza": 0.541,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.91,
+      "fin": 36.02,
+      "duracion": 8.11,
+      "texto": "No, en realidad sí, pero es prepado este número, igual. Bien. ¿Y cuánto te gastas recargando por mes?",
+      "confianza": 0.733,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 36.94,
+      "fin": 45.85,
+      "duracion": 8.91,
+      "texto": "No, no le cargo nunca, realmente porque tengo internet. Así que no le cargo seguido. ¿Pero cuánto le cargas más o menos?",
+      "confianza": 0.666,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.9,
+      "fin": 54.3,
+      "duracion": 7.4,
+      "texto": "No, le cargaré 2,000, 3,000 pesos cada dos, tres meses, más o menos. Ah, ok, ok. Bueno, sí. Sí,",
+      "confianza": 0.636,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.3,
+      "fin": 59.08,
+      "duracion": 4.78,
+      "texto": "nosotros vamos a dar otro plan si obviamente con una bonanza de 1460, pero bueno.",
+      "confianza": 0.686,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 60.71,
+      "fin": 76.83,
+      "duracion": 16.12,
+      "texto": "No, te agradezco. Ahora me dijiste que también tienes lo que hay en tu casa, Fibraldi, que es servicio Contas. Sí, no, pero por el momento te agradezco, bueno, estoy trabajando. Bueno, dale, muchísimas gracias.",
+      "confianza": 0.662,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Hablo con Jorge? ¿No? No, no me he equivocado. Ah, disculpa. Mirá, me subió acá el titular Jorge Mauricio Daruban. ¿Lo conoces o no lo conoces? No. No, no. Bien. Bueno, mirá, básicamente, capaz amamos lo que es la titulería anterior, de esos del 20-23, pero nos poníamos en contacto para brindarte una bonificación. ¿Vos sos actualmente del titular? No, en realidad sí, pero es prepado este número, igual. Bien. ¿Y cuánto te gastas recargando por mes? No, no le cargo nunca, realmente porque tengo internet. Así que no le cargo seguido. ¿Pero cuánto le cargas más o menos? No, le cargaré 2,000, 3,000 pesos cada dos, tres meses, más o menos. Ah, ok, ok. Bueno, sí. Sí, nosotros vamos a dar otro plan si obviamente con una bonanza de 1460, pero bueno. No, te agradezco. Ahora me dijiste que también tienes lo que hay en tu casa, Fibraldi, que es servicio Contas. Sí, no, pero por el momento te agradezco, bueno, estoy trabajando. Bueno, dale, muchísimas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.493,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:05:14.313980",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:13.839934",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116110411925_ACD_26687",
+    "fecha_inicio": "16/1/2026 11:04:11",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 97,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

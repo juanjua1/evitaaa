@@ -1,0 +1,111 @@
+{
+  "archivo": "amza73_1_260114133316521_ACD_84393.wav",
+  "duracion_segundos": 118.55,
+  "num_segmentos": 34,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 114.96,
+    "Cliente": 0.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.43,
+      "fin": 25.31,
+      "duracion": 23.88,
+      "texto": "Hola, buenas tardes. Hola, buenas tardes. Un gusto. Tengo el placer de comunicarme con Héctor Manuel. Sí, con él hablo. ¿Cómo le va, Héctor? Mi nombre es Marlene. Yo le estoy llamando de la que es el área de calidad Movistar, sí. Veo que usted actualmente está en claro, ¿correcto? Sí, no me pienso cambiar de claro. Bien, entiendo. ¿Ha tenido algún inconveniente con nosotros? Un montón.",
+      "confianza": 0.245,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.29,
+      "fin": 53.8,
+      "duracion": 27.51,
+      "texto": "Bien, entiendo. Bueno, quiero que desde ya sepa que le pido dos mil disculpas por el inconveniente que ha tenido. No sé si fue por un tema de precios, de señal. Coménteme. No, de precios. Porque me ofrecieron una cosa y le dijeron que iban a estar seis meses más o menos por el mismo precio y a los dos meses, tres meses, ya me gustaron aumentar las facturas. Y después,",
+      "confianza": 0.092,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.3,
+      "fin": 66.94,
+      "duracion": 12.64,
+      "texto": "Los megas que te dan, sí, te regalan mucho megas, pero resulta que te los comen, así como te los regalas, te los comen. Bien, no le duraban lo que son los gigas, se entiendo.",
+      "confianza": 0.57,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 66.96,
+      "fin": 67.02,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.054,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 67.04,
+      "fin": 100.46,
+      "duracion": 33.42,
+      "texto": "Bien, ¿y usted utiliza mucho el teléfono con el tema de los gigas o es más generado? No, no más cuando salgo a la provincia, pero ¿qué es lo que pasa? Yo salgo una vez a la provincia. Tengo una cierta cantidad de media y gasto más comprando media que lo que tengo, o sea que no me sirve. Entiendo, entiendo. Bueno, no hay problema así, como les decía a mí, disculpas si el servicio que usted va a meter requerir no se le cumplió.",
+      "confianza": 0.411,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 101.04,
+      "fin": 118.55,
+      "duracion": 17.51,
+      "texto": "Yo lo voy a estar agendado, pero bueno, Cualquier consulta que tenga, cualquier duda, estoy a su disposición. Bueno, entiendo. No hay problema. Muchísimas gracias, que tengan lindo día.",
+      "confianza": 0.364,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Hola, buenas tardes. Un gusto. Tengo el placer de comunicarme con Héctor Manuel. Sí, con él hablo. ¿Cómo le va, Héctor? Mi nombre es Marlene. Yo le estoy llamando de la que es el área de calidad Movistar, sí. Veo que usted actualmente está en claro, ¿correcto? Sí, no me pienso cambiar de claro. Bien, entiendo. ¿Ha tenido algún inconveniente con nosotros? Un montón. Bien, entiendo. Bueno, quiero que desde ya sepa que le pido dos mil disculpas por el inconveniente que ha tenido. No sé si fue por un tema de precios, de señal. Coménteme. No, de precios. Porque me ofrecieron una cosa y le dijeron que iban a estar seis meses más o menos por el mismo precio y a los dos meses, tres meses, ya me gustaron aumentar las facturas. Y después, Los megas que te dan, sí, te regalan mucho megas, pero resulta que te los comen, así como te los regalas, te los comen. Bien, no le duraban lo que son los gigas, se entiendo. Sí. Bien, ¿y usted utiliza mucho el teléfono con el tema de los gigas o es más generado? No, no más cuando salgo a la provincia, pero ¿qué es lo que pasa? Yo salgo una vez a la provincia. Tengo una cierta cantidad de media y gasto más comprando media que lo que tengo, o sea que no me sirve. Entiendo, entiendo. Bueno, no hay problema así, como les decía a mí, disculpas si el servicio que usted va a meter requerir no se le cumplió. Yo lo voy a estar agendado, pero bueno, Cualquier consulta que tenga, cualquier duda, estoy a su disposición. Bueno, entiendo. No hay problema. Muchísimas gracias, que tengan lindo día.",
+  "calidad": {
+    "confianza_promedio": 0.469,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:55:17.770095",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 34,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:31.598756",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114133316521_ACD_84393",
+    "fecha_inicio": "14/1/2026 13:33:16",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 138,
+    "tiempo_conversacion": 114,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Mala experiencia anterior con MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

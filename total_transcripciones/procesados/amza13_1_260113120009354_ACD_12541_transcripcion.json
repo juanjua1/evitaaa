@@ -1,0 +1,156 @@
+{
+  "archivo": "amza13_1_260113120009354_ACD_12541.wav",
+  "duracion_segundos": 90.45,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 15.63,
+    "Cliente": 60.34
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.11,
+      "fin": 4.33,
+      "duracion": 2.22,
+      "texto": "Hola, buenos días. Hablo con María Amelia.",
+      "confianza": 0.299,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.57,
+      "fin": 5.63,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.392,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.19,
+      "fin": 10.28,
+      "duracion": 4.09,
+      "texto": "Qué tal, mucho gusto, María. Habla Gerardo. Me comunico de la línea Beneficios de Movistar.",
+      "confianza": 0.523,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.16,
+      "fin": 38.33,
+      "duracion": 27.17,
+      "texto": "Mira, y te damos porque veo que tenés dos líneas en claro. Tenemos una promo para que vuelvas a la compañía con descuento. Bueno, ¿qué descuenta, María? Mira, te podemos llevar. ¿12 llegas a cada una de las líneas? por un plan familiar en 11.400 pesos. Contarían con un descuento fijo por seis meses. ¿Qué te parece, María?",
+      "confianza": 0.68,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 39.23,
+      "fin": 45.66,
+      "duracion": 6.43,
+      "texto": "Lo voy a consultar con mi... Porque la otra línea de mi marido. Tienen que tomar la decisión juntos.",
+      "confianza": 0.743,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 48.22,
+      "fin": 55.01,
+      "duracion": 6.79,
+      "texto": "Bueno, me llamas en otro... Mira, justo yo tengo un negocio, estoy en el negocio.",
+      "confianza": 0.658,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.38,
+      "fin": 60.65,
+      "duracion": 5.27,
+      "texto": "Decime que sería el precio final que sería por las dos líneas.",
+      "confianza": 0.852,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 61.29,
+      "fin": 69.56,
+      "duracion": 8.27,
+      "texto": "Cada línea la pagaría 11.400 pesos. Sería el total, digamos.",
+      "confianza": 0.596,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 71.2,
+      "fin": 75.35,
+      "duracion": 4.14,
+      "texto": "Lo voy a consultar y de cualquier cosa vuelves a llamar.",
+      "confianza": 0.743,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 76.15,
+      "fin": 85.6,
+      "duracion": 9.44,
+      "texto": "Le acabo de mandar un whatsapp de Mariana para que cuando lo consulten con su esposo usted ya tenga mi contacto y si tienen alguna duda pueden preguntar por ahí.",
+      "confianza": 0.633,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 88.36,
+      "fin": 90.45,
+      "duracion": 2.09,
+      "texto": "Perfecto, hasta luego.",
+      "confianza": 0.823,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con María Amelia. Sí. Qué tal, mucho gusto, María. Habla Gerardo. Me comunico de la línea Beneficios de Movistar. Mira, y te damos porque veo que tenés dos líneas en claro. Tenemos una promo para que vuelvas a la compañía con descuento. Bueno, ¿qué descuenta, María? Mira, te podemos llevar. ¿12 llegas a cada una de las líneas? por un plan familiar en 11.400 pesos. Contarían con un descuento fijo por seis meses. ¿Qué te parece, María? Lo voy a consultar con mi... Porque la otra línea de mi marido. Tienen que tomar la decisión juntos. Bueno, me llamas en otro... Mira, justo yo tengo un negocio, estoy en el negocio. Decime que sería el precio final que sería por las dos líneas. Cada línea la pagaría 11.400 pesos. Sería el total, digamos. Lo voy a consultar y de cualquier cosa vuelves a llamar. Le acabo de mandar un whatsapp de Mariana para que cuando lo consulten con su esposo usted ya tenga mi contacto y si tienen alguna duda pueden preguntar por ahí. Perfecto, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.628,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:08:21.850568",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 11,
+    "fecha_correccion": "2026-01-18T23:05:14.042939",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113120009354_ACD_12541",
+    "fecha_inicio": "13/1/2026 12:00:09",
+    "agente_nombre": "MZA 13",
+    "agente_login": "mza13",
+    "duracion_total": 119,
+    "tiempo_conversacion": 89,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

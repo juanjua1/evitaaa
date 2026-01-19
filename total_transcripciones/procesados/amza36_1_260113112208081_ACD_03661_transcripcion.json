@@ -1,0 +1,121 @@
+{
+  "archivo": "amza36_1_260113112208081_ACD_03661.wav",
+  "duracion_segundos": 73.96,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 36.86,
+    "Cliente": 30.88
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.11,
+      "fin": 13.38,
+      "duracion": 11.27,
+      "texto": "Hola, buenos días. ¿Habló con la señora Ruth? Sí, con ella habla. Un gusto. Mi nombre es Micaela. Le quería hacer ya una promoción para su línea. Me figura que usted es clienta de Claro, ¿es correcto?",
+      "confianza": 0.076,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.58,
+      "fin": 15.6,
+      "duracion": 1.02,
+      "texto": "Sí.",
+      "confianza": 0.478,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 15.7,
+      "fin": 30.16,
+      "duracion": 14.46,
+      "texto": "Perfecto, le comento. ¿Modizar? Le quería hacer ya un muy buen plan en el cual usted va a contar con cuatro chicas de barce más cuatro horas de regalo por seis meses, Guasar Villamada Libre por un valor de 11.400 pesos. ¿Qué le parece para su línea, Ruth, de ese plan?",
+      "confianza": 0.704,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.18,
+      "fin": 30.36,
+      "duracion": 0.18,
+      "texto": "No.",
+      "confianza": 0.879,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.71,
+      "fin": 41.84,
+      "duracion": 11.13,
+      "texto": "Le agradezco, pero no, porque yo ya tuve movistar y movistar no cumple con lo pactado. Entonces, no. Yo me cambié porque me cansé.",
+      "confianza": 0.858,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.59,
+      "fin": 55.52,
+      "duracion": 11.93,
+      "texto": "Hacía planes, me duraban por un año, tres meses me los respectaban, después me cobraban más y así. Entonces yo dije, no. Yo parto, escúcheme, si yo parto algo,",
+      "confianza": 0.849,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 56.21,
+      "fin": 73.96,
+      "duracion": 17.75,
+      "texto": "con usted y usted me da el ok, usted me tiene que cumplir así como yo le cumplo. Y como ustedes no cumplen, entonces yo me canse de eso. Así que yo le encargo, por favor, no me llamen más, porque conmigo pierden el tiempo.",
+      "confianza": 0.789,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Habló con la señora Ruth? Sí, con ella habla. Un gusto. Mi nombre es Micaela. Le quería hacer ya una promoción para su línea. Me figura que usted es clienta de Claro, ¿es correcto? Sí. Perfecto, le comento. ¿Modizar? Le quería hacer ya un muy buen plan en el cual usted va a contar con cuatro chicas de barce más cuatro horas de regalo por seis meses, Guasar Villamada Libre por un valor de 11.400 pesos. ¿Qué le parece para su línea, Ruth, de ese plan? No. Le agradezco, pero no, porque yo ya tuve movistar y movistar no cumple con lo pactado. Entonces, no. Yo me cambié porque me cansé. Hacía planes, me duraban por un año, tres meses me los respectaban, después me cobraban más y así. Entonces yo dije, no. Yo parto, escúcheme, si yo parto algo, con usted y usted me da el ok, usted me tiene que cumplir así como yo le cumplo. Y como ustedes no cumplen, entonces yo me canse de eso. Así que yo le encargo, por favor, no me llamen más, porque conmigo pierden el tiempo.",
+  "calidad": {
+    "confianza_promedio": 0.641,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:07:09.769161",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:25.232172",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113112208081_ACD_03661",
+    "fecha_inicio": "13/1/2026 11:22:08",
+    "agente_nombre": "MZA 36",
+    "agente_login": "mza36",
+    "duracion_total": 107,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cliente Ocupado",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}
