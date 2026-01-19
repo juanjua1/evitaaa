@@ -553,13 +553,16 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
             st.dataframe(df_otros, use_container_width=True, hide_index=True)
 
 
-@st.cache_data
+# Directorio base del script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+@st.cache_data(ttl=300)  # Cache por 5 minutos
 def cargar_datos():
     """Carga todos los datos necesarios para el dashboard"""
     datos = {}
     
     # Cargar transcripciones procesadas
-    carpeta = "total_transcripciones/procesados"
+    carpeta = os.path.join(BASE_DIR, "total_transcripciones/procesados")
     if os.path.exists(carpeta):
         transcripciones = []
         for archivo in os.listdir(carpeta):
@@ -569,61 +572,75 @@ def cargar_datos():
         datos['transcripciones'] = transcripciones
     
     # Cargar resumen de cierres
-    if os.path.exists('reportes/cierres_comerciales/resumen_cierres.json'):
-        with open('reportes/cierres_comerciales/resumen_cierres.json', 'r', encoding='utf-8') as f:
+    ruta_cierres = os.path.join(BASE_DIR, 'reportes/cierres_comerciales/resumen_cierres.json')
+    if os.path.exists(ruta_cierres):
+        with open(ruta_cierres, 'r', encoding='utf-8') as f:
             datos['cierres'] = json.load(f)
     
     # Cargar CSV de cierres
-    if os.path.exists('reportes/cierres_comerciales/cierres_comerciales.csv'):
-        datos['cierres_df'] = pd.read_csv('reportes/cierres_comerciales/cierres_comerciales.csv', sep=';')
+    ruta = os.path.join(BASE_DIR, 'reportes/cierres_comerciales/cierres_comerciales.csv')
+    if os.path.exists(ruta):
+        datos['cierres_df'] = pd.read_csv(ruta, sep=';')
     
     # Cargar resumen de planes
-    if os.path.exists('reportes/planes/resumen_planes.json'):
-        with open('reportes/planes/resumen_planes.json', 'r', encoding='utf-8') as f:
+    ruta = os.path.join(BASE_DIR, 'reportes/planes/resumen_planes.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
             datos['planes'] = json.load(f)
     
     # Cargar resumen de quejas
-    if os.path.exists('reportes/quejas/resumen_quejas.json'):
-        with open('reportes/quejas/resumen_quejas.json', 'r', encoding='utf-8') as f:
+    ruta = os.path.join(BASE_DIR, 'reportes/quejas/resumen_quejas.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
             datos['quejas'] = json.load(f)
     
     # Cargar CSV de quejas
-    if os.path.exists('reportes/quejas/quejas_no_resueltas.csv'):
-        datos['quejas_df'] = pd.read_csv('reportes/quejas/quejas_no_resueltas.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/quejas/quejas_no_resueltas.csv')
+    if os.path.exists(ruta):
+        datos['quejas_df'] = pd.read_csv(ruta)
     
     # Cargar análisis integral
-    if os.path.exists('reportes/analisis_integral/resumen_integral.json'):
-        with open('reportes/analisis_integral/resumen_integral.json', 'r', encoding='utf-8') as f:
+    ruta = os.path.join(BASE_DIR, 'reportes/analisis_integral/resumen_integral.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
             datos['integral'] = json.load(f)
     
     # Cargar CSV integral
-    if os.path.exists('reportes/analisis_integral/analisis_integral.csv'):
-        datos['integral_df'] = pd.read_csv('reportes/analisis_integral/analisis_integral.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/analisis_integral/analisis_integral.csv')
+    if os.path.exists(ruta):
+        datos['integral_df'] = pd.read_csv(ruta)
     
     # Cargar métricas por agente integral
-    if os.path.exists('reportes/analisis_integral/metricas_por_agente.csv'):
-        datos['metricas_agentes_df'] = pd.read_csv('reportes/analisis_integral/metricas_por_agente.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/analisis_integral/metricas_por_agente.csv')
+    if os.path.exists(ruta):
+        datos['metricas_agentes_df'] = pd.read_csv(ruta)
     
     # Cargar clasificación completa
-    if os.path.exists('reportes/clasificacion_completa/resumen_clasificacion.json'):
-        with open('reportes/clasificacion_completa/resumen_clasificacion.json', 'r', encoding='utf-8') as f:
+    ruta = os.path.join(BASE_DIR, 'reportes/clasificacion_completa/resumen_clasificacion.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
             datos['clasificacion'] = json.load(f)
     
     # Cargar CSV clasificación completa
-    if os.path.exists('reportes/clasificacion_completa/clasificacion_completa.csv'):
-        datos['clasificacion_df'] = pd.read_csv('reportes/clasificacion_completa/clasificacion_completa.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/clasificacion_completa/clasificacion_completa.csv')
+    if os.path.exists(ruta):
+        datos['clasificacion_df'] = pd.read_csv(ruta)
     
     # Cargar clasificación por agente
-    if os.path.exists('reportes/clasificacion_completa/clasificacion_por_agente.csv'):
-        datos['clasificacion_agentes_df'] = pd.read_csv('reportes/clasificacion_completa/clasificacion_por_agente.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/clasificacion_completa/clasificacion_por_agente.csv')
+    if os.path.exists(ruta):
+        datos['clasificacion_agentes_df'] = pd.read_csv(ruta)
     
     # Cargar evaluaciones Gemini
-    if os.path.exists('reportes/evaluaciones_gemini.csv'):
-        datos['evaluaciones_gemini_df'] = pd.read_csv('reportes/evaluaciones_gemini.csv')
+    ruta = os.path.join(BASE_DIR, 'reportes/evaluaciones_gemini.csv')
+    if os.path.exists(ruta):
+        datos['evaluaciones_gemini_df'] = pd.read_csv(ruta)
     
     # Cargar coaching de vendedores
-    if os.path.exists('reportes/coaching_vendedores/coaching_completo.json'):
-        with open('reportes/coaching_vendedores/coaching_completo.json', 'r', encoding='utf-8') as f:
+    # Cargar coaching de vendedores
+    ruta = os.path.join(BASE_DIR, 'reportes/coaching_vendedores/coaching_completo.json')
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
             coaching_list = json.load(f)
             # Convertir lista a diccionario por agente
             datos['coaching'] = {item['agente']: item for item in coaching_list}
