@@ -2177,13 +2177,27 @@ def pagina_detalle_llamadas(df, datos):
 
 def pagina_quejas_no_resueltas(datos):
     """Página de análisis de quejas no resueltas"""
-    mostrar_proximamente("😤 Quejas No Resueltas")
-    return
+    st.markdown('<div class="main-header">😤 Quejas No Resueltas</div>', unsafe_allow_html=True)
     
-    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'quejas' not in datos:
-        st.warning("No hay datos de quejas disponibles.")
+        st.warning("⚠️ No hay datos de quejas disponibles.")
         return
+    
+    # Cargar nombres de vendedores
+    listado_vendedores = {}
+    try:
+        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
+        for _, row in df_listado.iterrows():
+            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
+            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
+            if usuario and nombre and usuario != 'usuario':
+                listado_vendedores[usuario] = nombre.title()
+    except:
+        pass
+    
+    def obtener_nombre_agente(agente_id):
+        agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '')
+        return listado_vendedores.get(agente_normalizado, agente_id)
     
     quejas = datos['quejas']
     stats = quejas.get('estadisticas', {})
@@ -2323,8 +2337,9 @@ def pagina_quejas_no_resueltas(datos):
             no_res = data.get('no_resueltas', 0)
             if total >= 3:  # Solo agentes con al menos 3 quejas
                 pct = no_res / total * 100 if total > 0 else 0
+                nombre_real = obtener_nombre_agente(agente)
                 agentes_data.append({
-                    'Agente': agente,
+                    'Agente': nombre_real,
                     'Total Quejas': total,
                     'Resueltas': data.get('resueltas', 0),
                     'No Resueltas': no_res,
@@ -3094,7 +3109,15 @@ def pagina_evaluaciones_gemini(datos):
             )
             fig.add_vline(x=puntaje_promedio, line_dash="dash", line_color="#EF4444", 
                           annotation_text=f"Promedio: {puntaje_promedio:.1f}")
-            fig.update_layout(height=400, paper_bgcolor='#FFFFFF')
+            fig.update_layout(
+                height=400, 
+                paper_bgcolor='#FFFFFF',
+                plot_bgcolor='#FAFBFC',
+                font=dict(color='#1E293B', size=12),
+                title_font=dict(color='#1E3A5F', size=14, family='Arial Black')
+            )
+            fig.update_xaxes(tickfont=dict(color='#1E293B', size=11), title_font=dict(color='#1E3A5F'))
+            fig.update_yaxes(tickfont=dict(color='#1E293B', size=11), title_font=dict(color='#1E3A5F'))
             st.plotly_chart(fig, use_container_width=True)
         
         with col2:
@@ -3105,7 +3128,13 @@ def pagina_evaluaciones_gemini(datos):
                 title="Distribución por Rango",
                 color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
             )
-            fig.update_layout(height=400, paper_bgcolor='#FFFFFF')
+            fig.update_layout(
+                height=400, 
+                paper_bgcolor='#FFFFFF',
+                font=dict(color='#1E293B', size=12),
+                title_font=dict(color='#1E3A5F', size=14, family='Arial Black')
+            )
+            fig.update_traces(textfont=dict(color='#1E293B', size=11))
             st.plotly_chart(fig, use_container_width=True)
         
         # Ranking de agentes resumen
@@ -3134,9 +3163,17 @@ def pagina_evaluaciones_gemini(datos):
                     color_continuous_scale='Greens',
                     text='Puntaje_Prom'
                 )
-                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
-                fig.update_layout(height=350, paper_bgcolor='#FFFFFF', showlegend=False,
-                                  yaxis={'categoryorder': 'total ascending'})
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_layout(
+                    height=350, 
+                    paper_bgcolor='#FFFFFF', 
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False,
+                    yaxis={'categoryorder': 'total ascending'},
+                    font=dict(color='#1E293B', size=11)
+                )
+                fig.update_xaxes(tickfont=dict(color='#1E293B', size=10))
+                fig.update_yaxes(tickfont=dict(color='#1E293B', size=10))
                 st.plotly_chart(fig, use_container_width=True)
             
             with col2:
@@ -3151,9 +3188,17 @@ def pagina_evaluaciones_gemini(datos):
                     color_continuous_scale='Reds_r',
                     text='Puntaje_Prom'
                 )
-                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
-                fig.update_layout(height=350, paper_bgcolor='#FFFFFF', showlegend=False,
-                                  yaxis={'categoryorder': 'total descending'})
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_layout(
+                    height=350, 
+                    paper_bgcolor='#FFFFFF', 
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False,
+                    yaxis={'categoryorder': 'total descending'},
+                    font=dict(color='#1E293B', size=11)
+                )
+                fig.update_xaxes(tickfont=dict(color='#1E293B', size=10))
+                fig.update_yaxes(tickfont=dict(color='#1E293B', size=10))
                 st.plotly_chart(fig, use_container_width=True)
     
     with tab2:
