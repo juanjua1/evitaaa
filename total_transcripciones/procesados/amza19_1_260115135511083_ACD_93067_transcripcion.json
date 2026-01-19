@@ -1,0 +1,157 @@
+{
+  "archivo": "amza19_1_260115135511083_ACD_93067.wav",
+  "duracion_segundos": 63.22,
+  "num_segmentos": 28,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 47.86,
+    "Cliente": 4.55
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.78,
+      "fin": 7.63,
+      "duracion": 4.85,
+      "texto": "Hola, ¿buen día? Sí, ¿qué tal? ¿Cómo estás? Mi nombre es Brisa.",
+      "confianza": 0.241,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.25,
+      "fin": 10.93,
+      "duracion": 2.68,
+      "texto": "Te he llamado del área de recupero clientes de Movistar.",
+      "confianza": 0.613,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 11.59,
+      "fin": 13.78,
+      "duracion": 2.18,
+      "texto": "Quería poder brindarte un descuento con tu línea.",
+      "confianza": 0.705,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.42,
+      "fin": 17.86,
+      "duracion": 3.44,
+      "texto": "¿Vos estás en claro?",
+      "confianza": 0.377,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.88,
+      "fin": 22.43,
+      "duracion": 4.55,
+      "texto": "Sí. Bien, nosotros de Movistar teníamos para brindarte el día de hoy dos promociones.",
+      "confianza": 0.072,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 23.15,
+      "fin": 26.33,
+      "duracion": 3.18,
+      "texto": "Una de dos siglas de base, más dos siglas de regalo por seis meses.",
+      "confianza": 0.69,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 27.03,
+      "fin": 31.24,
+      "duracion": 4.21,
+      "texto": "Viene con WhatsApp gratis, se llama a cualquier compañía y romina en América.",
+      "confianza": 0.689,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.65,
+      "fin": 41.9,
+      "duracion": 9.25,
+      "texto": "Esa promo así de 16 gigas mensuales tiene un valor de 10.400 pesos. ¿Sí? ¿A vos qué te parece ese plan antes? ¿Cube la cantidad de gigas? ¿Cuánto se puede usar?",
+      "confianza": 0.66,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 43.3,
+      "fin": 53.39,
+      "duracion": 10.09,
+      "texto": "Ya se cerré con claro. Disculpame, ¿no? Pero no voy a estar cambiando. Bien, entiendo. ¿Y qué arreglas con claro? ¿Qué te están ofreciendo hoy en día?",
+      "confianza": 0.454,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.45,
+      "fin": 61.88,
+      "duracion": 7.43,
+      "texto": "No, no. No, no te quiero. Porque si no, no vamos a terminar más. Disculpame, ¿no? Hasta luego.",
+      "confianza": 0.282,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.67,
+      "fin": 63.22,
+      "duracion": 0.55,
+      "texto": "Bueno.",
+      "confianza": 0.249,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿buen día? Sí, ¿qué tal? ¿Cómo estás? Mi nombre es Brisa. Te he llamado del área de recupero clientes de Movistar. Quería poder brindarte un descuento con tu línea. ¿Vos estás en claro? Sí. Bien, nosotros de Movistar teníamos para brindarte el día de hoy dos promociones. Una de dos siglas de base, más dos siglas de regalo por seis meses. Viene con WhatsApp gratis, se llama a cualquier compañía y romina en América. Esa promo así de 16 gigas mensuales tiene un valor de 10.400 pesos. ¿Sí? ¿A vos qué te parece ese plan antes? ¿Cube la cantidad de gigas? ¿Cuánto se puede usar? Ya se cerré con claro. Disculpame, ¿no? Pero no voy a estar cambiando. Bien, entiendo. ¿Y qué arreglas con claro? ¿Qué te están ofreciendo hoy en día? No, no. No, no te quiero. Porque si no, no vamos a terminar más. Disculpame, ¿no? Hasta luego. Bueno.",
+  "calidad": {
+    "confianza_promedio": 0.476,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:36:04.802462",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 11,
+    "fecha_correccion": "2026-01-18T23:05:15.728713",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115135511083_ACD_93067",
+    "fecha_inicio": "15/1/2026 13:55:11",
+    "agente_nombre": "MZA 19",
+    "agente_login": "mza19",
+    "duracion_total": 190,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 110,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

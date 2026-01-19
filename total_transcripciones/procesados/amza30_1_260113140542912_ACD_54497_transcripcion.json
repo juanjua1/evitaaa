@@ -1,0 +1,111 @@
+{
+  "archivo": "amza30_1_260113140542912_ACD_54497.wav",
+  "duracion_segundos": 71.55,
+  "num_segmentos": 34,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 5.21,
+    "Cliente": 62.92
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 3.94,
+      "duracion": 3.91,
+      "texto": "Hola, ¿qué tal? Buen día. Mi nombre es Eugenia. ¿Hablo con Aníbal?",
+      "confianza": 0.607,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.16,
+      "fin": 21.78,
+      "duracion": 15.62,
+      "texto": "No. ¿No? Bien. ¿El usuario de esta línea? O sea, es Fernando Aníbal. Sí. Pero yo no soy. Yo estoy con, no sé, en un plan, no sé, con él. Ah, bien, sí. Perfecto. Él es el titular y vos sos el que usa este teléfono. Vos sos el que usa la línea.",
+      "confianza": 0.029,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.8,
+      "fin": 23.11,
+      "duracion": 1.3,
+      "texto": "Bien, te comento.",
+      "confianza": 0.303,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 23.15,
+      "fin": 48.77,
+      "duracion": 25.62,
+      "texto": "Nosotros al día de hoy teníamos una promo por Fernando Aníbal, que está muy buena para todas las líneas. por lo que sería 13.250 pesos finales por 16 días de internet. 8 de laces y 8 de regalo por los próximos 6 meses. Si no sé si vos tenés contacto con él como para poder comentarle la promo. No estoy con él. Si no, llámelo a él, no sé. Bien. ¿Vos tomás decisiones sobre la línea o las toma Anibal?",
+      "confianza": 0.678,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 49.29,
+      "fin": 58.99,
+      "duracion": 9.7,
+      "texto": "No. Las toma él. Perfecto. Bien, yo tengo otras 3 líneas a nombre de él, una que termina en 28, Otra en 47 y otra en 34.",
+      "confianza": 0.438,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.57,
+      "fin": 71.55,
+      "duracion": 11.98,
+      "texto": "Pero llamarlo él, el que termina en 6034 o así, o 1934. Sí, 1934, perfecto. Yo le damos a él entonces. Muy amable, muchas gracias.",
+      "confianza": 0.663,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. Mi nombre es Eugenia. ¿Hablo con Aníbal? No. ¿No? Bien. ¿El usuario de esta línea? O sea, es Fernando Aníbal. Sí. Pero yo no soy. Yo estoy con, no sé, en un plan, no sé, con él. Ah, bien, sí. Perfecto. Él es el titular y vos sos el que usa este teléfono. Vos sos el que usa la línea. Bien, te comento. Nosotros al día de hoy teníamos una promo por Fernando Aníbal, que está muy buena para todas las líneas. por lo que sería 13.250 pesos finales por 16 días de internet. 8 de laces y 8 de regalo por los próximos 6 meses. Si no sé si vos tenés contacto con él como para poder comentarle la promo. No estoy con él. Si no, llámelo a él, no sé. Bien. ¿Vos tomás decisiones sobre la línea o las toma Anibal? No. Las toma él. Perfecto. Bien, yo tengo otras 3 líneas a nombre de él, una que termina en 28, Otra en 47 y otra en 34. Pero llamarlo él, el que termina en 6034 o así, o 1934. Sí, 1934, perfecto. Yo le damos a él entonces. Muy amable, muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.481,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:08:12.346523",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 34,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:21.546139",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113140542912_ACD_54497",
+    "fecha_inicio": "13/1/2026 14:05:42",
+    "agente_nombre": "MZA 30",
+    "agente_login": "mza30",
+    "duracion_total": 97,
+    "tiempo_conversacion": 70,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

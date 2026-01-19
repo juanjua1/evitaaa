@@ -1,0 +1,138 @@
+{
+  "archivo": "amza1_1_260114130746816_MIT_01975.wav",
+  "duracion_segundos": 72.5,
+  "num_segmentos": 23,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 57.09,
+    "Cliente": 0.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 10.87,
+      "fin": 17.31,
+      "duracion": 6.44,
+      "texto": "Hola. Hola, ¿qué tal? Buenos días. Hablo con Ángelo.",
+      "confianza": 0.461,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.33,
+      "fin": 17.39,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.001,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 17.41,
+      "fin": 23.88,
+      "duracion": 6.47,
+      "texto": "¿Qué tal, Juan? ¿Qué tal? Un placer. ¿Cómo le va? Mi nombre es Evangelina. Le comento, señor, que estamos en el área de beneficios para las unidades móviles.",
+      "confianza": 0.005,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 24.42,
+      "fin": 30.46,
+      "duracion": 6.05,
+      "texto": "Lo contacté ya hace más de un mes, aproximadamente, y le brindé lo que era una promoción que no le había interesado en su momento.",
+      "confianza": 0.708,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.0,
+      "fin": 37.91,
+      "duracion": 6.91,
+      "texto": "Pero comentarle, el día de hoy tenemos lo que es un superdefinido y tal vez me interesa. Entonces, quería llamarlo y comentarle.",
+      "confianza": 0.554,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 38.85,
+      "fin": 39.25,
+      "duracion": 0.4,
+      "texto": "¿Bien?",
+      "confianza": 0.826,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.04,
+      "fin": 62.25,
+      "duracion": 22.21,
+      "texto": "Soy la compañera que voy a visitar. Por ahora no te agradezco. Estoy trabajando, pero en este momento no. Bien, lo puedo llamar también en otro momento porque usted, al día me dijo que lo llame luego, acordamos un área de todo y digo, bueno, pero ahí estuvo el interés, pero bueno, uno se olvida. A mí no se olvida con el tema del pasar de los días y demás.",
+      "confianza": 0.277,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 63.26,
+      "fin": 67.28,
+      "duracion": 4.03,
+      "texto": "Por eso mismo lo contacté ahora después de un mes y me dijo casi.",
+      "confianza": 0.503,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 67.92,
+      "fin": 72.5,
+      "duracion": 4.58,
+      "texto": "Bueno, no hay ningún problema. Hasta luego.",
+      "confianza": 0.358,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buenos días. Hablo con Ángelo. Sí. ¿Qué tal, Juan? ¿Qué tal? Un placer. ¿Cómo le va? Mi nombre es Evangelina. Le comento, señor, que estamos en el área de beneficios para las unidades móviles. Lo contacté ya hace más de un mes, aproximadamente, y le brindé lo que era una promoción que no le había interesado en su momento. Pero comentarle, el día de hoy tenemos lo que es un superdefinido y tal vez me interesa. Entonces, quería llamarlo y comentarle. ¿Bien? Soy la compañera que voy a visitar. Por ahora no te agradezco. Estoy trabajando, pero en este momento no. Bien, lo puedo llamar también en otro momento porque usted, al día me dijo que lo llame luego, acordamos un área de todo y digo, bueno, pero ahí estuvo el interés, pero bueno, uno se olvida. A mí no se olvida con el tema del pasar de los días y demás. Por eso mismo lo contacté ahora después de un mes y me dijo casi. Bueno, no hay ningún problema. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.433,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:43:13.116211",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:16.153004",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114130746816_MIT_01975",
+    "fecha_inicio": "14/1/2026 13:07:47",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 73,
+    "tiempo_conversacion": 70,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

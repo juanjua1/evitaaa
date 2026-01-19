@@ -1,0 +1,101 @@
+{
+  "archivo": "amza73_1_260112135736977_MIT_01977.wav",
+  "duracion_segundos": 88.19,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 46.74,
+    "Cliente": 20.62
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 14.17,
+      "fin": 14.37,
+      "duracion": 0.2,
+      "texto": "Hola.",
+      "confianza": 0.416,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 16.85,
+      "fin": 63.59,
+      "duracion": 46.74,
+      "texto": "Hola. Hola, Susana. Mi nombre es Malena. Estábamos hablando recién por lo que quería de la fibra óptica de parte Movistar, ¿bien? Así. ¿Cómo le va? Mire, le comento. El trámite es súper sencillo. Yo ahora le vuelvo a comentar nuevamente los planes para que usted se quede tranquila de que lo que está contratando es lo que habíamos hablado anteriormente, ¿bien? El único requisito que me pide de parte de Movistar, claramente, es que usted nos brinde 16 números de alguna tarjeta, ¿sí? No le voy a pedir ni fecha de vencimiento ni ningún código de seguridad, ¿sí? Únicamente los números para que lo podamos adherir el primer mes a lo que es el débito automático, ¿sí? Es la única condición que piden movilizar para que puedan ustedes tener lo que es fibra óptica, ¿sí?",
+      "confianza": 0.028,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 65.91,
+      "fin": 68.34,
+      "duracion": 2.43,
+      "texto": "Yo, para que usted se quede tranquila. Bien, entiendo.",
+      "confianza": 0.62,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 68.84,
+      "fin": 70.0,
+      "duracion": 1.16,
+      "texto": "Le da desconfianza.",
+      "confianza": 0.759,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 71.36,
+      "fin": 88.19,
+      "duracion": 16.83,
+      "texto": "Sí, no, yo no paso número de nada. Más que puede ser mi dirección y bueno, después se arreglará el tema municipal. Bien, denme un segundo que lo voy a comunicar con mi supervisor para que le pueda explicar mejor bien por qué se le pide esto, ¿sí? Denme un segundo, por favor, no me corte.",
+      "confianza": 0.044,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, Susana. Mi nombre es Malena. Estábamos hablando recién por lo que quería de la fibra óptica de parte Movistar, ¿bien? Así. ¿Cómo le va? Mire, le comento. El trámite es súper sencillo. Yo ahora le vuelvo a comentar nuevamente los planes para que usted se quede tranquila de que lo que está contratando es lo que habíamos hablado anteriormente, ¿bien? El único requisito que me pide de parte de Movistar, claramente, es que usted nos brinde 16 números de alguna tarjeta, ¿sí? No le voy a pedir ni fecha de vencimiento ni ningún código de seguridad, ¿sí? Únicamente los números para que lo podamos adherir el primer mes a lo que es el débito automático, ¿sí? Es la única condición que piden movilizar para que puedan ustedes tener lo que es fibra óptica, ¿sí? Yo, para que usted se quede tranquila. Bien, entiendo. Le da desconfianza. Sí, no, yo no paso número de nada. Más que puede ser mi dirección y bueno, después se arreglará el tema municipal. Bien, denme un segundo que lo voy a comunicar con mi supervisor para que le pueda explicar mejor bien por qué se le pide esto, ¿sí? Denme un segundo, por favor, no me corte.",
+  "calidad": {
+    "confianza_promedio": 0.558,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:51:07.653102",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:31.350246",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112135736977_MIT_01977",
+    "fecha_inicio": "12/1/2026 13:57:37",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 163,
+    "tiempo_conversacion": 110,
+    "tiempo_hold": 0,
+    "tiempo_acw": 52,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

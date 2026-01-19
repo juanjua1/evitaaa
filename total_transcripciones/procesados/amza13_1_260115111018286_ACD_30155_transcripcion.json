@@ -1,0 +1,129 @@
+{
+  "archivo": "amza13_1_260115111018286_ACD_30155.wav",
+  "duracion_segundos": 71.04,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 18.43,
+    "Cliente": 44.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.31,
+      "fin": 3.58,
+      "duracion": 2.27,
+      "texto": "Hola, buenos días. Hablo con Karina.",
+      "confianza": 0.395,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.4,
+      "fin": 5.46,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.017,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.48,
+      "fin": 23.91,
+      "duracion": 18.43,
+      "texto": "¿Qué tal, Karina? ¿Cómo le van a hablar a Gerardo de la línea de beneficios de la compañía Movistar? ¿Nos amamos el día de hoy porque tenemos un plan en promoción para su línea, la línea que tengo en claro? Ya me llamaron ayer, ya me llamaron ayer. Por ahora sí bien, con claro. ¿No le comentaron el plan de 7.000 pesos o el de 10.000 que tenemos en promo?",
+      "confianza": 0.556,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.43,
+      "fin": 28.43,
+      "duracion": 3.0,
+      "texto": "Pero es lo que estoy pagando ahora yo. ¿Por qué cantidad de Ligas?",
+      "confianza": 0.064,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.41,
+      "fin": 34.96,
+      "duracion": 5.55,
+      "texto": "La verdad es que ahora si me pongo a asistir, no sé, pero nunca me faltan gigas. Nunca me quedo sin gigas.",
+      "confianza": 0.623,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.66,
+      "fin": 49.85,
+      "duracion": 14.19,
+      "texto": "Ah, genial. Karina, otra pregunta. ¿Wi-Fi en casa tenés? Sí, sí, sí. Wi-Fi tengo para hacer esto todo. Sí, sí. Porque te pagamos por 24 mil pesos, te llevamos 300 megas de Wi-Fi y la línea móvil.",
+      "confianza": 0.768,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.59,
+      "fin": 68.04,
+      "duracion": 17.45,
+      "texto": "Mira, no llega la fibra óptica hasta mi casa, ya, así que ni te gastes porque ya no llega. Es una zona que me dijeron hace mil que todavía no llega, así que tengo telecentro. Ah, claro, claro. Bueno, Carina, lo voy a dejar asentado. Gracias por el tiempo.",
+      "confianza": 0.621,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 68.78,
+      "fin": 71.04,
+      "duracion": 2.26,
+      "texto": "Igualmente te he hecho un saludo.",
+      "confianza": 0.434,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Karina. Sí. ¿Qué tal, Karina? ¿Cómo le van a hablar a Gerardo de la línea de beneficios de la compañía Movistar? ¿Nos amamos el día de hoy porque tenemos un plan en promoción para su línea, la línea que tengo en claro? Ya me llamaron ayer, ya me llamaron ayer. Por ahora sí bien, con claro. ¿No le comentaron el plan de 7.000 pesos o el de 10.000 que tenemos en promo? Pero es lo que estoy pagando ahora yo. ¿Por qué cantidad de Ligas? La verdad es que ahora si me pongo a asistir, no sé, pero nunca me faltan gigas. Nunca me quedo sin gigas. Ah, genial. Karina, otra pregunta. ¿Wi-Fi en casa tenés? Sí, sí, sí. Wi-Fi tengo para hacer esto todo. Sí, sí. Porque te pagamos por 24 mil pesos, te llevamos 300 megas de Wi-Fi y la línea móvil. Mira, no llega la fibra óptica hasta mi casa, ya, así que ni te gastes porque ya no llega. Es una zona que me dijeron hace mil que todavía no llega, así que tengo telecentro. Ah, claro, claro. Bueno, Carina, lo voy a dejar asentado. Gracias por el tiempo. Igualmente te he hecho un saludo.",
+  "calidad": {
+    "confianza_promedio": 0.458,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:12:08.052102",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:14.320021",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115111018286_ACD_30155",
+    "fecha_inicio": "15/1/2026 11:10:18",
+    "agente_nombre": "MZA 13",
+    "agente_login": "mza13",
+    "duracion_total": 94,
+    "tiempo_conversacion": 69,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Edificio sin Disp de Caja",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

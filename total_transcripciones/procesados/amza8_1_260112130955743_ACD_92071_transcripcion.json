@@ -1,0 +1,111 @@
+{
+  "archivo": "amza8_1_260112130955743_ACD_92071.wav",
+  "duracion_segundos": 72.26,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 21.02,
+    "Cliente": 43.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.5,
+      "fin": 6.58,
+      "duracion": 4.08,
+      "texto": "¿Habla que tal, buen día? ¿Habla con Dayana? Sí, ¿quién habla?",
+      "confianza": 0.32,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.54,
+      "fin": 8.88,
+      "duracion": 1.34,
+      "texto": "Dayana, te comento que no me he estiado.",
+      "confianza": 0.38,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.22,
+      "fin": 42.8,
+      "duracion": 33.58,
+      "texto": "Yo me estoy contactando del área de recuperación del cliente de Movistar, Dayana. Para saber que te pasa en la compañía, cuál fue tu inconveniente. El inconveniente, ¿sabes cuál es? Que me han llamado casi 20 veces por día. Trabajando, estando durmiendo, comiendo, bañándome. O sea, me parece que se equivocaron de estrategia con el tema de recuperar los clientes de esa manera. Así que dije mil veces, es más, he ido hasta la UMIC, por favor, para que no me llamen más. Y le siguen llamando. Sí, sí, te entiendo.",
+      "confianza": 0.608,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.98,
+      "fin": 50.11,
+      "duracion": 6.13,
+      "texto": "Gracias, Adriana. De mi parte te pido mil disculpas por ese inconveniente. Si me dejás comentarte una solución para que no te vuelvan a comunicar.",
+      "confianza": 0.442,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 51.61,
+      "fin": 55.44,
+      "duracion": 3.82,
+      "texto": "Sí, la solución que me dieron es ir a un abogado y mandarme una carta de documento.",
+      "confianza": 0.759,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 56.4,
+      "fin": 72.26,
+      "duracion": 15.86,
+      "texto": "También esas otras. O puedes ingresar a lo que es el registro, no llames a través de Google, registrar tus números y no te van a volver a contactar. Bueno, listo. Genial. Hasta luego, que tengas lindo día. Hasta luego, gracias igualmente.",
+      "confianza": 0.645,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Habla que tal, buen día? ¿Habla con Dayana? Sí, ¿quién habla? Dayana, te comento que no me he estiado. Yo me estoy contactando del área de recuperación del cliente de Movistar, Dayana. Para saber que te pasa en la compañía, cuál fue tu inconveniente. El inconveniente, ¿sabes cuál es? Que me han llamado casi 20 veces por día. Trabajando, estando durmiendo, comiendo, bañándome. O sea, me parece que se equivocaron de estrategia con el tema de recuperar los clientes de esa manera. Así que dije mil veces, es más, he ido hasta la UMIC, por favor, para que no me llamen más. Y le siguen llamando. Sí, sí, te entiendo. Gracias, Adriana. De mi parte te pido mil disculpas por ese inconveniente. Si me dejás comentarte una solución para que no te vuelvan a comunicar. Sí, la solución que me dieron es ir a un abogado y mandarme una carta de documento. También esas otras. O puedes ingresar a lo que es el registro, no llames a través de Google, registrar tus números y no te van a volver a contactar. Bueno, listo. Genial. Hasta luego, que tengas lindo día. Hasta luego, gracias igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.548,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:07:05.151798",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:32.347115",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112130955743_ACD_92071",
+    "fecha_inicio": "12/1/2026 13:09:55",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 110,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 18,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

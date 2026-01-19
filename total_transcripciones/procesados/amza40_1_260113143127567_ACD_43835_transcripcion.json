@@ -1,0 +1,132 @@
+{
+  "archivo": "amza40_1_260113143127567_ACD_43835.wav",
+  "duracion_segundos": 65.75,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 30.02,
+    "Cliente": 20.18
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.23,
+      "fin": 11.3,
+      "duracion": 9.07,
+      "texto": "Hola, buenas tardes. ¿Hablo con Marcos? Sí, ¿quién habla? Como le va Marcos, me estaba comunicando para hacerles dar un beneficio exclusivo para su línea al día de hoy.",
+      "confianza": 0.275,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.52,
+      "fin": 21.87,
+      "duracion": 7.35,
+      "texto": "Y, ¿qué escuchó? Tenemos 16 ligas donde tiene WhatsApp gratis, llamadas libres, romina de América, por 13.250 pesos.",
+      "confianza": 0.02,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.34,
+      "fin": 29.28,
+      "duracion": 1.94,
+      "texto": "Por 13 mil... 13.250 pesos.",
+      "confianza": 0.646,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.49,
+      "fin": 42.3,
+      "duracion": 10.81,
+      "texto": "Igual yo, actualmente... ¿Ustedes son de Claro? De Movistar. Ah, no, yo ya cuento que son Claro.",
+      "confianza": 0.726,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.32,
+      "fin": 44.04,
+      "duracion": 1.72,
+      "texto": "Sí, justamente por esa razón me comunicaba.",
+      "confianza": 0.456,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 44.1,
+      "fin": 55.96,
+      "duracion": 11.86,
+      "texto": "Como usted en el pasado fue un cliente de la compañía, hoy queremos que arregle eso con nosotros. No, está bien, se lo agradezco. Bien, a usted. ¿Pero hay un motivo en especial? Disculpe.",
+      "confianza": 0.618,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.66,
+      "fin": 62.69,
+      "duracion": 5.03,
+      "texto": "No, no, está bien. con claro. De hecho, muchas gracias. Bien.",
+      "confianza": 0.439,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 63.33,
+      "fin": 65.75,
+      "duracion": 2.42,
+      "texto": "Un lindo día. Hasta luego.",
+      "confianza": 0.439,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. ¿Hablo con Marcos? Sí, ¿quién habla? Como le va Marcos, me estaba comunicando para hacerles dar un beneficio exclusivo para su línea al día de hoy. Y, ¿qué escuchó? Tenemos 16 ligas donde tiene WhatsApp gratis, llamadas libres, romina de América, por 13.250 pesos. Por 13 mil... 13.250 pesos. Igual yo, actualmente... ¿Ustedes son de Claro? De Movistar. Ah, no, yo ya cuento que son Claro. Sí, justamente por esa razón me comunicaba. Como usted en el pasado fue un cliente de la compañía, hoy queremos que arregle eso con nosotros. No, está bien, se lo agradezco. Bien, a usted. ¿Pero hay un motivo en especial? Disculpe. No, no, está bien. con claro. De hecho, muchas gracias. Bien. Un lindo día. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.54,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:32:36.787563",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:26.659285",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113143127567_ACD_43835",
+    "fecha_inicio": "13/1/2026 14:31:27",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 83,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

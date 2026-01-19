@@ -1,0 +1,110 @@
+{
+  "archivo": "amza10_1_260114134139941_ACD_07759.wav",
+  "duracion_segundos": 78.59,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 32.19,
+    "Cliente": 39.64
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.39,
+      "fin": 27.3,
+      "duracion": 26.91,
+      "texto": "Hola, buenos días. Hola, buen día. Hablo con Marta. Hola. ¿Me escuchas? Sí. Marta, ¿cómo estás? Me estoy contactando en la línea de recupero clientes de Movistar. Me insura el sistema que está en clara actualmente. ¿Es correcto? Sí, y voy a seguir en claro.",
+      "confianza": 0.213,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.16,
+      "fin": 31.23,
+      "duracion": 3.06,
+      "texto": "Bien, ¿más o menos recordarás qué plan estás usando actualmente?",
+      "confianza": 0.496,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 32.41,
+      "fin": 37.17,
+      "duracion": 4.76,
+      "texto": "No, la verdad es que no, porque no ando bien, dice. Así que te voy a cortar.",
+      "confianza": 0.77,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 37.75,
+      "fin": 42.66,
+      "duracion": 4.91,
+      "texto": "Para Marta, que quería brindarte un plan, en realidad capaz de una vez ya se le conviene. No sé cuánto estás abonando.",
+      "confianza": 0.629,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 45.64,
+      "fin": 55.65,
+      "duracion": 10.01,
+      "texto": "Ay no, no me encargo yo de abonarlo, lo pagan mis hijos. No, no, no.",
+      "confianza": 0.291,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 56.41,
+      "fin": 78.59,
+      "duracion": 22.18,
+      "texto": "Bueno, nosotros tenemos 6 gigas en un valor de 10.400 petros. Bueno, listo, le voy a decir... Bueno, dale, mira, te pongo a contestar en otro momento. Listo, chau. Dale, adiós, tengas un buen día.",
+      "confianza": 0.752,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hola, buen día. Hablo con Marta. Hola. ¿Me escuchas? Sí. Marta, ¿cómo estás? Me estoy contactando en la línea de recupero clientes de Movistar. Me insura el sistema que está en clara actualmente. ¿Es correcto? Sí, y voy a seguir en claro. Bien, ¿más o menos recordarás qué plan estás usando actualmente? No, la verdad es que no, porque no ando bien, dice. Así que te voy a cortar. Para Marta, que quería brindarte un plan, en realidad capaz de una vez ya se le conviene. No sé cuánto estás abonando. Ay no, no me encargo yo de abonarlo, lo pagan mis hijos. No, no, no. Bueno, nosotros tenemos 6 gigas en un valor de 10.400 petros. Bueno, listo, le voy a decir... Bueno, dale, mira, te pongo a contestar en otro momento. Listo, chau. Dale, adiós, tengas un buen día.",
+  "calidad": {
+    "confianza_promedio": 0.415,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:01:14.284214",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:13.566882",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114134139941_ACD_07759",
+    "fecha_inicio": "14/1/2026 13:41:39",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 103,
+    "tiempo_conversacion": 75,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

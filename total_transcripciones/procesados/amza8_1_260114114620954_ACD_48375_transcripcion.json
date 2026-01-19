@@ -1,0 +1,102 @@
+{
+  "archivo": "amza8_1_260114114620954_ACD_48375.wav",
+  "duracion_segundos": 62.64,
+  "num_segmentos": 30,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 60.77,
+    "Cliente": 0.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.15,
+      "fin": 5.82,
+      "duracion": 5.67,
+      "texto": "Hola. Hola, ¿qué tal? Buen día. Hablo con María.",
+      "confianza": 0.415,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 5.84,
+      "fin": 5.9,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.002,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.92,
+      "fin": 52.87,
+      "duracion": 46.95,
+      "texto": "Vale, María. Te comento, María. Mi nombre es Thiago. Yo me estoy contactando en la área de recuperación de clientes, en Movistar, María. Mira, disculpame, pero ya avisé a la chica anterior. Me están llamando cada 15 minutos. Estoy en el auto, estoy trabajando. Me están llamando cada 15 minutos. Le pedí por favor que dejara sentado, que no me estén llamando todo el tiempo. Te muestro las llamadas y cada 15 minutos me están llamando. Por favor, me vuelven loca. Te entiendo, María. ¿No podés asentarlo? ¿No tenés forma? Eso te quiero comentar para que no te vuelvan a llamar si me dejas hablar. María, lo que podés realizar es ingresar lo que es el registro no llames a través de Google, registrar lo que es un número y ahí no te van a volver a llamar. Yo lo que puedo hacer es dejarla sentada acá, pero será que... ¿Cómo tengo que hacer?",
+      "confianza": 0.074,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 53.79,
+      "fin": 56.33,
+      "duracion": 2.54,
+      "texto": "Ingresar el registro no llames a través de Google.",
+      "confianza": 0.758,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 57.03,
+      "fin": 62.64,
+      "duracion": 5.61,
+      "texto": "Ah, mira. Listo. Entonces voy a hacerlo. De verdad es un montón. Exacto, María. Hasta luego. Hasta luego.",
+      "confianza": 0.768,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buen día. Hablo con María. Sí. Vale, María. Te comento, María. Mi nombre es Thiago. Yo me estoy contactando en la área de recuperación de clientes, en Movistar, María. Mira, disculpame, pero ya avisé a la chica anterior. Me están llamando cada 15 minutos. Estoy en el auto, estoy trabajando. Me están llamando cada 15 minutos. Le pedí por favor que dejara sentado, que no me estén llamando todo el tiempo. Te muestro las llamadas y cada 15 minutos me están llamando. Por favor, me vuelven loca. Te entiendo, María. ¿No podés asentarlo? ¿No tenés forma? Eso te quiero comentar para que no te vuelvan a llamar si me dejas hablar. María, lo que podés realizar es ingresar lo que es el registro no llames a través de Google, registrar lo que es un número y ahí no te van a volver a llamar. Yo lo que puedo hacer es dejarla sentada acá, pero será que... ¿Cómo tengo que hacer? Ingresar el registro no llames a través de Google. Ah, mira. Listo. Entonces voy a hacerlo. De verdad es un montón. Exacto, María. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.489,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:08:41.303498",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 30,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.446899",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114114620954_ACD_48375",
+    "fecha_inicio": "14/1/2026 11:46:20",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 82,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

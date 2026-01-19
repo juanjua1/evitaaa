@@ -1,0 +1,101 @@
+{
+  "archivo": "amza30_1_260114143811103_ACD_72743.wav",
+  "duracion_segundos": 81.2,
+  "num_segmentos": 29,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 75.86,
+    "Cliente": 0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.47,
+      "fin": 5.43,
+      "duracion": 3.96,
+      "texto": "Hola, ¿qué tal? Buen día, mi nombre es Eugenia. ¿Hablo con Laura?",
+      "confianza": 0.479,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.5,
+      "fin": 32.34,
+      "duracion": 25.84,
+      "texto": "No, señorita, no le pertenece más el teléfono, ¿eh? Ah, bien, bien. Entonces, Solmensky y Laura, ya no es más la titular de la línea. ¿Ahora es usted? No, no, no. No le corresponde más. Ah, ok, ok. Perfecto. No hay ningún problema. El servicio de figura, perdón, al nombre de Laura con la compañía de Claro. ¿Usted actualmente tiene un servicio de Claro o de Movistar? Sí, no, no, de Claro, de Claro.",
+      "confianza": 0.469,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 33.5,
+      "fin": 43.11,
+      "duracion": 9.61,
+      "texto": "Es mi tía, pero es mi sobrina, entonces me pasó a Claro. Estamos todos en Claro.",
+      "confianza": 0.676,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 43.99,
+      "fin": 51.52,
+      "duracion": 7.53,
+      "texto": "Ah, bien, toda la familia en Claro. Bueno, nosotros teníamos una prórroga para hacerle parte de lo que... No, no, no, por ahora no.",
+      "confianza": 0.52,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 52.28,
+      "fin": 81.2,
+      "duracion": 28.92,
+      "texto": "Bien, bien. El día de hoy está muy buena. Para que la pueda aprovechar están 10.200 pesos. No, no, por ahora no. Ella me maneja ella, el teléfono, todo. Así que no sé nada, yo. Bueno, yo le envío entonces para que usted tenga la información y se la pueda comentar a Laura. Yo se lo comento, yo se lo comento. Muchas gracias, señorita. No, por favor, hasta luego. Hasta luego.",
+      "confianza": 0.516,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, mi nombre es Eugenia. ¿Hablo con Laura? No, señorita, no le pertenece más el teléfono, ¿eh? Ah, bien, bien. Entonces, Solmensky y Laura, ya no es más la titular de la línea. ¿Ahora es usted? No, no, no. No le corresponde más. Ah, ok, ok. Perfecto. No hay ningún problema. El servicio de figura, perdón, al nombre de Laura con la compañía de Claro. ¿Usted actualmente tiene un servicio de Claro o de Movistar? Sí, no, no, de Claro, de Claro. Es mi tía, pero es mi sobrina, entonces me pasó a Claro. Estamos todos en Claro. Ah, bien, toda la familia en Claro. Bueno, nosotros teníamos una prórroga para hacerle parte de lo que... No, no, no, por ahora no. Bien, bien. El día de hoy está muy buena. Para que la pueda aprovechar están 10.200 pesos. No, no, por ahora no. Ella me maneja ella, el teléfono, todo. Así que no sé nada, yo. Bueno, yo le envío entonces para que usted tenga la información y se la pueda comentar a Laura. Yo se lo comento, yo se lo comento. Muchas gracias, señorita. No, por favor, hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.574,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:08:45.474398",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 29,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:21.574807",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114143811103_ACD_72743",
+    "fecha_inicio": "14/1/2026 14:38:11",
+    "agente_nombre": "MZA 30",
+    "agente_login": "mza30",
+    "duracion_total": 124,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 21,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

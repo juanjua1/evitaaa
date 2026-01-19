@@ -1,0 +1,129 @@
+{
+  "archivo": "amza42_1_260112112549622_ACD_17035.wav",
+  "duracion_segundos": 74.4,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 4.27,
+    "Cliente": 59.94
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.32,
+      "fin": 2.1,
+      "duracion": 1.78,
+      "texto": "Hola, buen día.",
+      "confianza": 0.319,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 3.96,
+      "fin": 8.23,
+      "duracion": 4.27,
+      "texto": "Buen día, ¿sí? Buen día, ¿cómo le va un gusto? Mi nombre es Cynthia, me estoy comunicando con una de las líneas de Vanesa.",
+      "confianza": 0.034,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.74,
+      "fin": 16.34,
+      "duracion": 4.6,
+      "texto": "Sí, habla el Papa de Vanesa. ¿Cómo le va un gusto? Me estaba comunicando para brindarle un beneficio a esa línea.",
+      "confianza": 0.036,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.43,
+      "fin": 20.49,
+      "duracion": 3.06,
+      "texto": "Realmente, ¿séis quién toma las decisiones sobre la línea o es Vanesa?",
+      "confianza": 0.682,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.85,
+      "fin": 63.31,
+      "duracion": 41.46,
+      "texto": "Vanesa. Yo soy un hombre grande y mañana sabréis a las cosas. Bien, perfecto. No hay ningún problema. ¿Sabrá si el número de Vanessa es el que termina en 004 para comunicarle los beneficios que tenemos para ella? 004... Me agarraste en un momento que no recuerdo, pero las tres líneas son manegadas por ella. Claro. Bueno, bueno, entonces estaré intentando con algunos de los números que me aparecen a nombre de ella. Sí, estaba comunicando en Movistar para brindar los beneficios. Disculpame, yo ya soy grande y no manejo esas cosas, ¿sabes? Sí, no hay ningún problema, sí.",
+      "confianza": 0.011,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 63.89,
+      "fin": 64.89,
+      "duracion": 1.0,
+      "texto": "Que tenga buen día.",
+      "confianza": 0.671,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 65.81,
+      "fin": 66.68,
+      "duracion": 0.86,
+      "texto": "Igualmente para ti.",
+      "confianza": 0.475,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.22,
+      "fin": 74.4,
+      "duracion": 7.18,
+      "texto": "Gracias, hasta luego. Adiós.",
+      "confianza": 0.272,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Buen día, ¿sí? Buen día, ¿cómo le va un gusto? Mi nombre es Cynthia, me estoy comunicando con una de las líneas de Vanesa. Sí, habla el Papa de Vanesa. ¿Cómo le va un gusto? Me estaba comunicando para brindarle un beneficio a esa línea. Realmente, ¿séis quién toma las decisiones sobre la línea o es Vanesa? Vanesa. Yo soy un hombre grande y mañana sabréis a las cosas. Bien, perfecto. No hay ningún problema. ¿Sabrá si el número de Vanessa es el que termina en 004 para comunicarle los beneficios que tenemos para ella? 004... Me agarraste en un momento que no recuerdo, pero las tres líneas son manegadas por ella. Claro. Bueno, bueno, entonces estaré intentando con algunos de los números que me aparecen a nombre de ella. Sí, estaba comunicando en Movistar para brindar los beneficios. Disculpame, yo ya soy grande y no manejo esas cosas, ¿sabes? Sí, no hay ningún problema, sí. Que tenga buen día. Igualmente para ti. Gracias, hasta luego. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.398,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:41:44.442047",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:27.240848",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112112549622_ACD_17035",
+    "fecha_inicio": "12/1/2026 11:25:49",
+    "agente_nombre": "MZA 42",
+    "agente_login": "mza42",
+    "duracion_total": 99,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Número equivocado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

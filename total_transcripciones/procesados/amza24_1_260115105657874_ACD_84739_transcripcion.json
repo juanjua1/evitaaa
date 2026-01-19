@@ -1,0 +1,129 @@
+{
+  "archivo": "amza24_1_260115105657874_ACD_84739.wav",
+  "duracion_segundos": 83.68,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 9.21,
+    "Cliente": 66.72
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.74,
+      "fin": 6.17,
+      "duracion": 5.43,
+      "texto": "Sí, dígame. ¿Hola? Sí. Hola, ¿cómo estás? Buenos días. Hablo con César.",
+      "confianza": 0.162,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.41,
+      "fin": 10.45,
+      "duracion": 3.04,
+      "texto": "¿Sí? ¿Usted es de Movistar? ¿Cómo estás? César Agustín.",
+      "confianza": 0.238,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.47,
+      "fin": 14.21,
+      "duracion": 3.74,
+      "texto": "¿En mi nombre me estoy comunicando del área de recupero de clientes Movistar?",
+      "confianza": 0.58,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.6,
+      "fin": 17.72,
+      "duracion": 2.12,
+      "texto": "Sí, señorita, le agradezco mucho.",
+      "confianza": 0.464,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.28,
+      "fin": 22.06,
+      "duracion": 3.78,
+      "texto": "Pero Movistar no vuelvo más. Disculpenme.",
+      "confianza": 0.657,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.91,
+      "fin": 28.77,
+      "duracion": 5.87,
+      "texto": "Y cuando después viene la empresa, todo fenómeno, llamaba 20 millones de veces.",
+      "confianza": 0.614,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.65,
+      "fin": 76.13,
+      "duracion": 46.48,
+      "texto": "y me atendía la maquinita, entonces me cruzaba de vereda para tener que hablar con cualquier persona, y así no me daban bolilla ni... O sea, la tengo en la antena acá, cinco cuadras, yo le decía que era la antena, no, que es un celular, que... Y no, ya me cansé, señorita, ¿sabes? Yo pagaba muy bien, me cobraba muy bien, ¿eh? O sea que... y estoy diciendo que hubiera sido hace como, no sé, estaba hace como 5 o 6 meses y eran 30.000 pesos antes. Entonces yo no vuelvo más, ahora estoy con claro y estoy espectacular, no tengo ningún problema.",
+      "confianza": 0.574,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 78.21,
+      "fin": 83.68,
+      "duracion": 5.47,
+      "texto": "Muchas gracias por su tiempo, que tengamos un buen día.",
+      "confianza": 0.35,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Sí, dígame. ¿Hola? Sí. Hola, ¿cómo estás? Buenos días. Hablo con César. ¿Sí? ¿Usted es de Movistar? ¿Cómo estás? César Agustín. ¿En mi nombre me estoy comunicando del área de recupero de clientes Movistar? Sí, señorita, le agradezco mucho. Pero Movistar no vuelvo más. Disculpenme. Y cuando después viene la empresa, todo fenómeno, llamaba 20 millones de veces. y me atendía la maquinita, entonces me cruzaba de vereda para tener que hablar con cualquier persona, y así no me daban bolilla ni... O sea, la tengo en la antena acá, cinco cuadras, yo le decía que era la antena, no, que es un celular, que... Y no, ya me cansé, señorita, ¿sabes? Yo pagaba muy bien, me cobraba muy bien, ¿eh? O sea que... y estoy diciendo que hubiera sido hace como, no sé, estaba hace como 5 o 6 meses y eran 30.000 pesos antes. Entonces yo no vuelvo más, ahora estoy con claro y estoy espectacular, no tengo ningún problema. Muchas gracias por su tiempo, que tengamos un buen día.",
+  "calidad": {
+    "confianza_promedio": 0.424,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:31:27.562091",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:19.193397",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115105657874_ACD_84739",
+    "fecha_inicio": "15/1/2026 10:56:57",
+    "agente_nombre": "MZA 24",
+    "agente_login": "mza24",
+    "duracion_total": 109,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

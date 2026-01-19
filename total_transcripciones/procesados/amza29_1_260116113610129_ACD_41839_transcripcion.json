@@ -1,0 +1,122 @@
+{
+  "archivo": "amza29_1_260116113610129_ACD_41839.wav",
+  "duracion_segundos": 72.73,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 18.38,
+    "Cliente": 50.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 3.96,
+      "duracion": 3.93,
+      "texto": "Hola, ¿qué tal? Buen día, Miguel Ángel.",
+      "confianza": 0.42,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.6,
+      "fin": 17.83,
+      "duracion": 12.23,
+      "texto": "Sí, con él, ¿verdad? Hola, Miguel Ángel, un gusto saludarte. Miguel, te llama Marcos, te llamaba al día de hoy porque estamos cargando beneficios para toda la familia, ¿sí? Pues, actualmente, Miguel, ¿estás en la compañía de Claro o ya estás en Movistar?",
+      "confianza": 0.006,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.23,
+      "fin": 45.09,
+      "duracion": 24.86,
+      "texto": "Ah, sí, con Claro. Ah, perfecto, buenísimo. Al día de hoy te llamaba porque estábamos vendiendo descuentos exclusivos. aquellos antiguos sabonados que pertenecieron a la compañía, ¿sí? Vos, en tu caso, estuviste el año, entre el año pasado en Movistar, luego te cambiaste a Claro. Contame, ¿vos estás teniendo lo que es abono o haces recargas? Eh... Yo no pedí ningún cambio, así que... Ah, bien, bien. Bien,",
+      "confianza": 0.223,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 45.09,
+      "fin": 46.74,
+      "duracion": 1.65,
+      "texto": "bien, te entiendo, te entiendo totalmente.",
+      "confianza": 0.46,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.84,
+      "fin": 48.12,
+      "duracion": 1.28,
+      "texto": "La idea es informarte.",
+      "confianza": 0.814,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 48.18,
+      "fin": 52.68,
+      "duracion": 4.5,
+      "texto": "Nosotros hoy en día estamos con esta campaña de recuperación de antiguos sabonados,",
+      "confianza": 0.712,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.8,
+      "fin": 72.73,
+      "duracion": 19.93,
+      "texto": "para que puedan saber de los beneficios que tienen formando nuevamente parte de la compañía, ¿sí? ¿Vos Miguel, por ejemplo? Igualmente yo no necesito cambiar de línea porque no me sirve movistar ella. Todas las veces que me ha mandido lo mismo y no. Bueno, bueno, perfecto. Yo lo dejo asentado, ¿sí? Hasta luego. Por favor, gracias. Adiós.",
+      "confianza": 0.794,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, Miguel Ángel. Sí, con él, ¿verdad? Hola, Miguel Ángel, un gusto saludarte. Miguel, te llama Marcos, te llamaba al día de hoy porque estamos cargando beneficios para toda la familia, ¿sí? Pues, actualmente, Miguel, ¿estás en la compañía de Claro o ya estás en Movistar? Ah, sí, con Claro. Ah, perfecto, buenísimo. Al día de hoy te llamaba porque estábamos vendiendo descuentos exclusivos. aquellos antiguos sabonados que pertenecieron a la compañía, ¿sí? Vos, en tu caso, estuviste el año, entre el año pasado en Movistar, luego te cambiaste a Claro. Contame, ¿vos estás teniendo lo que es abono o haces recargas? Eh... Yo no pedí ningún cambio, así que... Ah, bien, bien. Bien, bien, te entiendo, te entiendo totalmente. La idea es informarte. Nosotros hoy en día estamos con esta campaña de recuperación de antiguos sabonados, para que puedan saber de los beneficios que tienen formando nuevamente parte de la compañía, ¿sí? ¿Vos Miguel, por ejemplo? Igualmente yo no necesito cambiar de línea porque no me sirve movistar ella. Todas las veces que me ha mandido lo mismo y no. Bueno, bueno, perfecto. Yo lo dejo asentado, ¿sí? Hasta luego. Por favor, gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.5,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:56:55.999291",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:20.852214",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116113610129_ACD_41839",
+    "fecha_inicio": "16/1/2026 11:36:10",
+    "agente_nombre": "MZA 29",
+    "agente_login": "mza29",
+    "duracion_total": 91,
+    "tiempo_conversacion": 70,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

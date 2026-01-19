@@ -1,0 +1,92 @@
+{
+  "archivo": "amza1_1_260116140436429_MIT_01961.wav",
+  "duracion_segundos": 63.35,
+  "num_segmentos": 17,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 60.56
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.76,
+      "fin": 40.3,
+      "duracion": 39.54,
+      "texto": "Hola. Hola, buenos días. Hablo con Guillermo. ¿Quién habla? Guillermo, trae a la Angelina de Movistar, te llamé hace unos días y te brindé lo que son las promociones. ¿Te acordás? Sí, sí, pero no vi nada. Ah, bien.",
+      "confianza": 0.625,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.14,
+      "fin": 46.79,
+      "duracion": 5.65,
+      "texto": "Bueno, te quería... Oh, ok, ok. Yo te quería comentar que la promo solamente saldría de Dolly por si la querías aprovechar.",
+      "confianza": 0.532,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.31,
+      "fin": 50.62,
+      "duracion": 3.3,
+      "texto": "Si querés, te mando un puntito por WhatsApp, en todo caso, leelas y avísame.",
+      "confianza": 0.543,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.28,
+      "fin": 63.35,
+      "duracion": 12.07,
+      "texto": "Ah, bueno, dale, mándame. Ahí te mandé un puntito para que se te arrepente. Si tenés que lo que es el mensaje, leelas, decime qué te parece y si quisieras hacerlo, te lo damos en un ratito, ¿bien? Dale, dale, dale. Dale, Guille. Que tengas una buena tarde. Hasta luego.",
+      "confianza": 0.49,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. Hablo con Guillermo. ¿Quién habla? Guillermo, trae a la Angelina de Movistar, te llamé hace unos días y te brindé lo que son las promociones. ¿Te acordás? Sí, sí, pero no vi nada. Ah, bien. Bueno, te quería... Oh, ok, ok. Yo te quería comentar que la promo solamente saldría de Dolly por si la querías aprovechar. Si querés, te mando un puntito por WhatsApp, en todo caso, leelas y avísame. Ah, bueno, dale, mándame. Ahí te mandé un puntito para que se te arrepente. Si tenés que lo que es el mensaje, leelas, decime qué te parece y si quisieras hacerlo, te lo damos en un ratito, ¿bien? Dale, dale, dale. Dale, Guille. Que tengas una buena tarde. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.498,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:49:22.569078",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:16.532810",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116140436429_MIT_01961",
+    "fecha_inicio": "16/1/2026 14:04:37",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 66,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "No Disp.",
+    "tipo_tipificacion": "nan"
+  }
+}

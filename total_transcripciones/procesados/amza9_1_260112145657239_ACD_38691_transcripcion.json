@@ -1,0 +1,102 @@
+{
+  "archivo": "amza9_1_260112145657239_ACD_38691.wav",
+  "duracion_segundos": 97.66,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 59.92,
+    "Cliente": 30.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.14,
+      "fin": 31.62,
+      "duracion": 29.48,
+      "texto": "Hola, buen día. Hablo con Hugo. ¿Qué tal, Hugo? ¿Cómo estás el día de hoy? ¿Todo bien? Mi nombre es Tomás, un placer. Me estoy comunicando con vos, Hugo, del área de beneficios móviles porque tenemos un beneficio para tus líneas el día de hoy. Veo, Hugo, que por dos líneas estás abonando algo de 26.000 pesos. ¿Puede ser? ¿Cómo? Que veo, Hugo, que por dos líneas estás abonando algo de 26.000 pesos puesto por tu sola línea.",
+      "confianza": 0.063,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 32.73,
+      "fin": 51.54,
+      "duracion": 18.81,
+      "texto": "¿Cómo, cómo? Yo no pago las líneas. No tengo idea de lo que paga. Ah, bien. Porque nosotros hubo justamente, no estábamos comunicando de lo que es el área de ejercicios movistar. Porque teníamos un descuento para las líneas y pasan a ganar muchísimo menos.",
+      "confianza": 0.199,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.74,
+      "fin": 82.06,
+      "duracion": 28.32,
+      "texto": "Sí, escúchame. ¿El movistar qué tiene? ¿Tiene cable de visión esa cosa movistar? Si tenemos, tendríamos que probarlo, si tenemos cobertura con ustedes en su zona, pero si tenemos al día de hoy lo que es cable televisión y lo que es la fibra óptica. Pues gracias, Juangotti, de llamarla, llama a mi señor porque yo no estoy en laburo. Bien, si yo la llamo ahora, ¿me irá a responder?",
+      "confianza": 0.22,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 83.64,
+      "fin": 85.99,
+      "duracion": 2.34,
+      "texto": "Sí, sí, sí, porque está en mi casa.",
+      "confianza": 0.342,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 86.03,
+      "fin": 97.66,
+      "duracion": 11.63,
+      "texto": "Perfecto, ¿cómo es el nombre de ella, señor? Marta, Marta. Perfecto, dale. Bueno, muchísimas gracias.",
+      "confianza": 0.768,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hablo con Hugo. ¿Qué tal, Hugo? ¿Cómo estás el día de hoy? ¿Todo bien? Mi nombre es Tomás, un placer. Me estoy comunicando con vos, Hugo, del área de beneficios móviles porque tenemos un beneficio para tus líneas el día de hoy. Veo, Hugo, que por dos líneas estás abonando algo de 26.000 pesos. ¿Puede ser? ¿Cómo? Que veo, Hugo, que por dos líneas estás abonando algo de 26.000 pesos puesto por tu sola línea. ¿Cómo, cómo? Yo no pago las líneas. No tengo idea de lo que paga. Ah, bien. Porque nosotros hubo justamente, no estábamos comunicando de lo que es el área de ejercicios movistar. Porque teníamos un descuento para las líneas y pasan a ganar muchísimo menos. Sí, escúchame. ¿El movistar qué tiene? ¿Tiene cable de visión esa cosa movistar? Si tenemos, tendríamos que probarlo, si tenemos cobertura con ustedes en su zona, pero si tenemos al día de hoy lo que es cable televisión y lo que es la fibra óptica. Pues gracias, Juangotti, de llamarla, llama a mi señor porque yo no estoy en laburo. Bien, si yo la llamo ahora, ¿me irá a responder? Sí, sí, sí, porque está en mi casa. Perfecto, ¿cómo es el nombre de ella, señor? Marta, Marta. Perfecto, dale. Bueno, muchísimas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.442,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:15:40.399278",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.868988",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112145657239_ACD_38691",
+    "fecha_inicio": "12/1/2026 14:56:57",
+    "agente_nombre": "MZA 9",
+    "agente_login": "mza9",
+    "duracion_total": 135,
+    "tiempo_conversacion": 95,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

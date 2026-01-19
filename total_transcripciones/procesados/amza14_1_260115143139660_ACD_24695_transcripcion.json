@@ -1,0 +1,147 @@
+{
+  "archivo": "amza14_1_260115143139660_ACD_24695.wav",
+  "duracion_segundos": 62.07,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.84,
+    "Cliente": 47.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 7.57,
+      "fin": 13.8,
+      "duracion": 6.23,
+      "texto": "Hola. Hola, buenas tardes. Hablo con Lorenzo. Sí, ¿quién habla? ¿Cómo le va? Un gusto.",
+      "confianza": 0.427,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.84,
+      "fin": 14.68,
+      "duracion": 0.84,
+      "texto": "Mi nombre es Bruno.",
+      "confianza": 0.65,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.82,
+      "fin": 17.85,
+      "duracion": 3.03,
+      "texto": "Me estaba comunicando desde el área de recuperación de clientes movistaros.",
+      "confianza": 0.681,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.77,
+      "fin": 23.6,
+      "duracion": 4.83,
+      "texto": "Tenemos una promoción disponible para su línea al día de hoy. Actualmente tiene claro, ¿verdad?",
+      "confianza": 0.705,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.04,
+      "fin": 36.31,
+      "duracion": 11.27,
+      "texto": "Sí, tengo claro, pero uso Telecentro. ¿En el celu? Sí, sí, tengo Wi-Fi. Bien. ¿Y en el celu con qué compañía lo tiene actualmente?",
+      "confianza": 0.238,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 36.95,
+      "fin": 40.44,
+      "duracion": 3.49,
+      "texto": "Sí, claro. Bien, ¿y por eso cuánto abonás en tu línea?",
+      "confianza": 0.698,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.32,
+      "fin": 43.14,
+      "duracion": 1.82,
+      "texto": "No, no abono porque uso Hotel Centro.",
+      "confianza": 0.694,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.7,
+      "fin": 50.07,
+      "duracion": 6.37,
+      "texto": "Ah, y el Wi-Fi tenés en la casa. Sí. Bien, ¿y cuánto estás abonando por este servicio, Lorenzo?",
+      "confianza": 0.571,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.85,
+      "fin": 60.95,
+      "duracion": 10.1,
+      "texto": "Es re barato, así que conforme. Bien, no hay problema, Lorenzo, lo dejo asentado en el sistema, que tengas buen día.",
+      "confianza": 0.226,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.55,
+      "fin": 62.07,
+      "duracion": 0.52,
+      "texto": "Dale, dale, dale.",
+      "confianza": 0.342,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas tardes. Hablo con Lorenzo. Sí, ¿quién habla? ¿Cómo le va? Un gusto. Mi nombre es Bruno. Me estaba comunicando desde el área de recuperación de clientes movistaros. Tenemos una promoción disponible para su línea al día de hoy. Actualmente tiene claro, ¿verdad? Sí, tengo claro, pero uso Telecentro. ¿En el celu? Sí, sí, tengo Wi-Fi. Bien. ¿Y en el celu con qué compañía lo tiene actualmente? Sí, claro. Bien, ¿y por eso cuánto abonás en tu línea? No, no abono porque uso Hotel Centro. Ah, y el Wi-Fi tenés en la casa. Sí. Bien, ¿y cuánto estás abonando por este servicio, Lorenzo? Es re barato, así que conforme. Bien, no hay problema, Lorenzo, lo dejo asentado en el sistema, que tengas buen día. Dale, dale, dale.",
+  "calidad": {
+    "confianza_promedio": 0.513,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:19:14.041383",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:14.723064",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115143139660_ACD_24695",
+    "fecha_inicio": "15/1/2026 14:31:39",
+    "agente_nombre": "MZA 14",
+    "agente_login": "mza14",
+    "duracion_total": 79,
+    "tiempo_conversacion": 60,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

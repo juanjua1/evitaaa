@@ -1,0 +1,129 @@
+{
+  "archivo": "amza28_1_260113145149804_ACD_16947.wav",
+  "duracion_segundos": 81.74,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 30.45,
+    "Cliente": 34.93
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.6,
+      "fin": 12.19,
+      "duracion": 10.59,
+      "texto": "Hablo con Raúl. Hola. Hola Raúl, ¿cómo te va? ¿Todo bien? Sí, sí. Me comunico con vos Raúl del área de recupero de clientes Movistar.",
+      "confianza": 0.071,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.31,
+      "fin": 19.2,
+      "duracion": 4.88,
+      "texto": "Me figura que usted está actualmente en lo que es la compañía de Claro.",
+      "confianza": 0.624,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 23.46,
+      "fin": 27.91,
+      "duracion": 4.45,
+      "texto": "Sí. Le hago una consulta, Raúl. ¿Usted es la única línea que tiene bajo su nombre actualmente?",
+      "confianza": 0.007,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.47,
+      "fin": 30.53,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.321,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.84,
+      "fin": 33.19,
+      "duracion": 2.35,
+      "texto": "es la única línea. ¿Y cuánto está bonando por tu línea?",
+      "confianza": 0.403,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 36.01,
+      "fin": 55.84,
+      "duracion": 19.83,
+      "texto": "No tengo ni vida, porque lo paga mi señora toda la bolita. Alesuazo, señor. Yo actualmente le pertenía a brindar lo que era un plan con un beneficio exclusivo para lo que es su línea, en donde desde ya le digo que va a pagar mucho menos y va a tener muchos más beneficios. ¿Sí? No sé si en ese sentido yo puedo charlar con usted.",
+      "confianza": 0.174,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 57.35,
+      "fin": 73.85,
+      "duracion": 16.5,
+      "texto": "y tendré que decir más tarde cuando esté en mi casa. Yo se cargo mi teñida ahí. Mira Raúl, te parece si te mando las promociones por mensaje, cosa de que vos la charles con tu mujer y en caso de que te interese alguna o veas que alguna te sea conveniente, me escribís y te pego el llamadito, ¿te parece?",
+      "confianza": 0.085,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 75.02,
+      "fin": 81.74,
+      "duracion": 6.72,
+      "texto": "Bueno, dale. Ahí yo te las dejé escritas, cualquier cosa, háblame. Dale, listo. Hasta luego, gracias.",
+      "confianza": 0.247,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hablo con Raúl. Hola. Hola Raúl, ¿cómo te va? ¿Todo bien? Sí, sí. Me comunico con vos Raúl del área de recupero de clientes Movistar. Me figura que usted está actualmente en lo que es la compañía de Claro. Sí. Le hago una consulta, Raúl. ¿Usted es la única línea que tiene bajo su nombre actualmente? Sí. es la única línea. ¿Y cuánto está bonando por tu línea? No tengo ni vida, porque lo paga mi señora toda la bolita. Alesuazo, señor. Yo actualmente le pertenía a brindar lo que era un plan con un beneficio exclusivo para lo que es su línea, en donde desde ya le digo que va a pagar mucho menos y va a tener muchos más beneficios. ¿Sí? No sé si en ese sentido yo puedo charlar con usted. y tendré que decir más tarde cuando esté en mi casa. Yo se cargo mi teñida ahí. Mira Raúl, te parece si te mando las promociones por mensaje, cosa de que vos la charles con tu mujer y en caso de que te interese alguna o veas que alguna te sea conveniente, me escribís y te pego el llamadito, ¿te parece? Bueno, dale. Ahí yo te las dejé escritas, cualquier cosa, háblame. Dale, listo. Hasta luego, gracias.",
+  "calidad": {
+    "confianza_promedio": 0.426,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:48:28.736736",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:20.268675",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113145149804_ACD_16947",
+    "fecha_inicio": "13/1/2026 14:51:49",
+    "agente_nombre": "MZA 28",
+    "agente_login": "mza28",
+    "duracion_total": 101,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

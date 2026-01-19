@@ -1,0 +1,74 @@
+{
+  "archivo": "amza35_1_260113124616113_ACD_99161.wav",
+  "duracion_segundos": 63.57,
+  "num_segmentos": 32,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 60.26
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.77,
+      "fin": 20.25,
+      "duracion": 17.48,
+      "texto": "Hola. Hola, hablo con Gustavo, Fabián. Sí, le hablo. ¿Qué tal? Un gusto, Gustavo. Te hablo, guarda mi contacto porque creo que tenés que salir bien, ¿claro? ¿Puede ser? Sí, así es. Bueno, buenísimo. Entonces, tengo para brindarte un beneficio si ya que contás con lo que es muy táctivo.",
+      "confianza": 0.244,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.79,
+      "fin": 63.57,
+      "duracion": 42.78,
+      "texto": "Tenemos 14 rigas en total para advertenciarte a tan solo 7,210 más impuestos y un descuento por seis meses. ¿De dónde... de dónde nos estás hablando? Yo te hablo de Movistar, ¿sí? Ya tengo hecha la portabilidad. Ah, bien. ¿Hace poco que hiciste la gestión? Sí. ¿Ya te llegó lo que es el chip? Estoy esperándolo. Ah, perfecto. Bien, ¿hace cuánto más o menos fue la gestión? A mí no me aseguraron el sistema. Esto fue el viernes, sábado. Ah, por eso. Bien, bien. No hay problema. Bueno, entonces espero que aguardes lo que es el chip. Y bueno, bienvenido entonces a Movistar. Háblalo del concentrado. Muy bien. Gracias. Hasta luego.",
+      "confianza": 0.791,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, hablo con Gustavo, Fabián. Sí, le hablo. ¿Qué tal? Un gusto, Gustavo. Te hablo, guarda mi contacto porque creo que tenés que salir bien, ¿claro? ¿Puede ser? Sí, así es. Bueno, buenísimo. Entonces, tengo para brindarte un beneficio si ya que contás con lo que es muy táctivo. Tenemos 14 rigas en total para advertenciarte a tan solo 7,210 más impuestos y un descuento por seis meses. ¿De dónde... de dónde nos estás hablando? Yo te hablo de Movistar, ¿sí? Ya tengo hecha la portabilidad. Ah, bien. ¿Hace poco que hiciste la gestión? Sí. ¿Ya te llegó lo que es el chip? Estoy esperándolo. Ah, perfecto. Bien, ¿hace cuánto más o menos fue la gestión? A mí no me aseguraron el sistema. Esto fue el viernes, sábado. Ah, por eso. Bien, bien. No hay problema. Bueno, entonces espero que aguardes lo que es el chip. Y bueno, bienvenido entonces a Movistar. Háblalo del concentrado. Muy bien. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.433,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:54:10.679678",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 2,
+    "fecha_correccion": "2026-01-18T23:05:24.369102",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113124616113_ACD_99161",
+    "fecha_inicio": "13/1/2026 12:46:16",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 82,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Ya tiene MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

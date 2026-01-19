@@ -1,0 +1,110 @@
+{
+  "archivo": "amza40_1_260116142933475_ACD_52971.wav",
+  "duracion_segundos": 68.09,
+  "num_segmentos": 34,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 27.74,
+    "Cliente": 32.05
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 11.6,
+      "duracion": 11.57,
+      "texto": "Hola, ¿sí? ¿Qué tal? Hablo con Nahuel. ¿Y de parte de quién? ¿Qué tal? ¿Cómo te va Nahuel? Te habla Marcos. Te he llamado el día 2 porque estamos activando beneficios en tu línea.",
+      "confianza": 0.32,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.1,
+      "fin": 22.25,
+      "duracion": 10.15,
+      "texto": "Nahuel, verifico que la semana pasada te habían llamado indicando lo que son beneficios, ¿sí? ¿Vos actualmente estás en claro cuánto hoy en día te están cargando de lo que son los gigas de navegación?",
+      "confianza": 0.709,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.62,
+      "fin": 27.22,
+      "duracion": 1.6,
+      "texto": "Hola. Hola, ¿sí? ¿Me escucha bien?",
+      "confianza": 0.349,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 28.52,
+      "fin": 50.48,
+      "duracion": 21.96,
+      "texto": "Escuché Marco, no más. Sí, ¿qué tal? Se escucha entrecortado. Ah, se escucha entrecortado. Debe ser su señal de claro. ¿Usted actualmente está en la compañía de Claro? Sí, ¿qué me llama? Disculpe. ¿Qué tal, Tommy? Se llamaba por un descuento especial en la línea, ¿sí? ¿Usted actualmente está en la compañía de Claro?",
+      "confianza": 0.037,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 51.91,
+      "fin": 56.09,
+      "duracion": 4.18,
+      "texto": "Actualmente con Claro. ¿Cómo te está yendo? ¿Cuánto estás saboreando al día de hoy?",
+      "confianza": 0.695,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.76,
+      "fin": 68.09,
+      "duracion": 10.33,
+      "texto": "¿Qué me llaman, de Movistar? De Movistar, exactamente. Estamos con una promo exclusiva del día, terminando la jornada laboral. No, gracias. Adelante. Bueno, perfecto. Hasta luego.",
+      "confianza": 0.463,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿sí? ¿Qué tal? Hablo con Nahuel. ¿Y de parte de quién? ¿Qué tal? ¿Cómo te va Nahuel? Te habla Marcos. Te he llamado el día 2 porque estamos activando beneficios en tu línea. Nahuel, verifico que la semana pasada te habían llamado indicando lo que son beneficios, ¿sí? ¿Vos actualmente estás en claro cuánto hoy en día te están cargando de lo que son los gigas de navegación? Hola. Hola, ¿sí? ¿Me escucha bien? Escuché Marco, no más. Sí, ¿qué tal? Se escucha entrecortado. Ah, se escucha entrecortado. Debe ser su señal de claro. ¿Usted actualmente está en la compañía de Claro? Sí, ¿qué me llama? Disculpe. ¿Qué tal, Tommy? Se llamaba por un descuento especial en la línea, ¿sí? ¿Usted actualmente está en la compañía de Claro? Actualmente con Claro. ¿Cómo te está yendo? ¿Cuánto estás saboreando al día de hoy? ¿Qué me llaman, de Movistar? De Movistar, exactamente. Estamos con una promo exclusiva del día, terminando la jornada laboral. No, gracias. Adelante. Bueno, perfecto. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.439,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:36:45.700439",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 34,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:26.926066",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116142933475_ACD_52971",
+    "fecha_inicio": "16/1/2026 14:29:33",
+    "agente_nombre": "MZA 40",
+    "agente_login": "mza40",
+    "duracion_total": 91,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

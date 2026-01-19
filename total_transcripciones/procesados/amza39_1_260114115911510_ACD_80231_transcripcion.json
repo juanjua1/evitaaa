@@ -1,0 +1,148 @@
+{
+  "archivo": "amza39_1_260114115911510_ACD_80231.wav",
+  "duracion_segundos": 67.94,
+  "num_segmentos": 20,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 61.97,
+    "Cliente": 0.4
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 13.49,
+      "duracion": 13.46,
+      "texto": "Hola, buenos días. Hablo con Gustavo. Sí, buen día. ¿Cómo estás? Como el de Gustavo Gustó. Mi nombre es Catalina. Lo he contractado para hacerle llegar una promoción para su línea móvil, Gustavo.",
+      "confianza": 0.262,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.23,
+      "fin": 19.48,
+      "duracion": 5.25,
+      "texto": "Coménteme, ¿usted está actualmente en claro?",
+      "confianza": 0.357,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.5,
+      "fin": 19.56,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.327,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.01,
+      "fin": 46.96,
+      "duracion": 26.95,
+      "texto": "Yo te llamo desde el área de movistar, me figura que fuiste cliente y bueno, queríamos ofrecerte una promo por todo el tiempo que estuviste con nosotros y los pagos a tiempo, Gustavo. Hace como una hora o 30 minutos me escribió, también me llamó una compañera tuya y nada, te tengo que dar la misma respuesta, después voy a ver eso. Bien, ¿te comentó el tema de la promo?",
+      "confianza": 0.677,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.08,
+      "fin": 47.42,
+      "duracion": 0.34,
+      "texto": "Sí, sí.",
+      "confianza": 0.476,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 47.44,
+      "fin": 48.82,
+      "duracion": 1.38,
+      "texto": "¿En 10.400 pesos?",
+      "confianza": 0.563,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.93,
+      "fin": 54.22,
+      "duracion": 4.29,
+      "texto": "¿Estabas interesado en ese momento o no?",
+      "confianza": 0.489,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.16,
+      "fin": 56.28,
+      "duracion": 1.12,
+      "texto": "Por el momento no puedo.",
+      "confianza": 0.775,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 57.28,
+      "fin": 61.81,
+      "duracion": 4.53,
+      "texto": "No puedo hacer ningún cambio de compañía. Más adelante quizás.",
+      "confianza": 0.683,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.95,
+      "fin": 67.94,
+      "duracion": 4.99,
+      "texto": "Muchas gracias por la llamada. Gracias por tu tiempo.",
+      "confianza": 0.192,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Gustavo. Sí, buen día. ¿Cómo estás? Como el de Gustavo Gustó. Mi nombre es Catalina. Lo he contractado para hacerle llegar una promoción para su línea móvil, Gustavo. Coménteme, ¿usted está actualmente en claro? Sí. Yo te llamo desde el área de movistar, me figura que fuiste cliente y bueno, queríamos ofrecerte una promo por todo el tiempo que estuviste con nosotros y los pagos a tiempo, Gustavo. Hace como una hora o 30 minutos me escribió, también me llamó una compañera tuya y nada, te tengo que dar la misma respuesta, después voy a ver eso. Bien, ¿te comentó el tema de la promo? Sí, sí. ¿En 10.400 pesos? ¿Estabas interesado en ese momento o no? Por el momento no puedo. No puedo hacer ningún cambio de compañía. Más adelante quizás. Muchas gracias por la llamada. Gracias por tu tiempo.",
+  "calidad": {
+    "confianza_promedio": 0.458,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:16:20.250345",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 20,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:25.754129",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114115911510_ACD_80231",
+    "fecha_inicio": "14/1/2026 11:59:11",
+    "agente_nombre": "MZA 39",
+    "agente_login": "mza39",
+    "duracion_total": 88,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "archivo": "amza10_1_260114113207406_ACD_04095.wav",
+  "duracion_segundos": 65.07,
+  "num_segmentos": 27,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 7.79,
+    "Cliente": 49.47
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 2.9,
+      "duracion": 2.87,
+      "texto": "Hola, buenos días. Buenos días.",
+      "confianza": 0.252,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.44,
+      "fin": 9.16,
+      "duracion": 2.72,
+      "texto": "Buen día. ¿Cómo estás, Lourdes? ¿Se lo habló con Mirta?",
+      "confianza": 0.13,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.97,
+      "fin": 40.48,
+      "duracion": 29.51,
+      "texto": "Sí. Mirta, un gusto. Mirá, me estoy contactando en la área de beneficios. Queremos darte una oferta que tenemos allí hoy para tus líneas. Veo que contás con dos líneas. ¿Puede ser? Una es mía y una es de mi hijo. Bien, también ya tenemos un plan. Obviamente, recordar que esto depende en realidad de una cantidad de gigas que hago usted, pero te lo comento para que lo tengas en cuenta de que está muy bueno. Son 16 gigas que vas a tener en total, son 8 de vacío, 8 regalos por semestre, así que son 16 gigas en 10.400 pesos.",
+      "confianza": 0.016,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.55,
+      "fin": 50.56,
+      "duracion": 9.01,
+      "texto": "Mira, te voy a decir una cosa. Yo solo tengo que hablar con él porque es él el que paga el teléfono. Por ahora no.",
+      "confianza": 0.311,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.06,
+      "fin": 51.34,
+      "duracion": 0.28,
+      "texto": "Ok,",
+      "confianza": 0.663,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 51.34,
+      "fin": 53.05,
+      "duracion": 1.71,
+      "texto": "bien, bien, bien.",
+      "confianza": 0.663,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.09,
+      "fin": 58.86,
+      "duracion": 5.77,
+      "texto": "Usted no toma ninguna decisión. No, no, no tomo ninguna decisión. Pero sos la titular. Sí, sí. Ok.",
+      "confianza": 0.717,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.86,
+      "fin": 62.22,
+      "duracion": 3.36,
+      "texto": "Bueno, dale, si no, denle contacto con tu hijo y vemos qué dice.",
+      "confianza": 0.486,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.42,
+      "fin": 64.13,
+      "duracion": 1.71,
+      "texto": "Dale, muchas gracias. Bueno, bueno, hasta luego.",
+      "confianza": 0.286,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 64.75,
+      "fin": 65.07,
+      "duracion": 0.32,
+      "texto": "Adiós.",
+      "confianza": 0.401,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Buenos días. Buen día. ¿Cómo estás, Lourdes? ¿Se lo habló con Mirta? Sí. Mirta, un gusto. Mirá, me estoy contactando en la área de beneficios. Queremos darte una oferta que tenemos allí hoy para tus líneas. Veo que contás con dos líneas. ¿Puede ser? Una es mía y una es de mi hijo. Bien, también ya tenemos un plan. Obviamente, recordar que esto depende en realidad de una cantidad de gigas que hago usted, pero te lo comento para que lo tengas en cuenta de que está muy bueno. Son 16 gigas que vas a tener en total, son 8 de vacío, 8 regalos por semestre, así que son 16 gigas en 10.400 pesos. Mira, te voy a decir una cosa. Yo solo tengo que hablar con él porque es él el que paga el teléfono. Por ahora no. Ok, bien, bien, bien. Usted no toma ninguna decisión. No, no, no tomo ninguna decisión. Pero sos la titular. Sí, sí. Ok. Bueno, dale, si no, denle contacto con tu hijo y vemos qué dice. Dale, muchas gracias. Bueno, bueno, hasta luego. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.457,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:00:17.989211",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 27,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:13.499874",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114113207406_ACD_04095",
+    "fecha_inicio": "14/1/2026 11:32:07",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 107,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 19,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

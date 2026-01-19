@@ -1,0 +1,101 @@
+{
+  "archivo": "amza23_1_260115140755753_ACD_40427.wav",
+  "duracion_segundos": 69.0,
+  "num_segmentos": 21,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 65.45
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 7.45,
+      "duracion": 7.42,
+      "texto": "Hola, ¿qué tal? ¿Buenas tardes con Memy? ¿Qué tal? ¿Piso de movistar?",
+      "confianza": 0.35,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.23,
+      "fin": 14.94,
+      "duracion": 6.71,
+      "texto": "Así es, nos estamos contando. Es la quinta vez que me llaman. ¿Qué promoción le brindaron?",
+      "confianza": 0.749,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.79,
+      "fin": 52.62,
+      "duracion": 36.83,
+      "texto": "Me brindaron todas y la verdad que no me interesa. Soy muy conforme con mi compañía. Lo único que sí que me interesaba, que ya les dije ayer, les dije hoy y les contesto amablemente, es que quería yo tener la banda ANSA de movizar, pero me dijeron que en mi zona aún no está. Así que nada. Eso, solamente. Bien. ¿Y cuándo fue la última vez que se lo corroboraron? Ayer. a las ocho y media o siete y media. Bueno, si usted quiere me dejar la dirección y lo volvemos a corroborar.",
+      "confianza": 0.814,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.24,
+      "fin": 56.15,
+      "duracion": 2.9,
+      "texto": "No, no, muchas gracias.",
+      "confianza": 0.586,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.41,
+      "fin": 69.0,
+      "duracion": 11.59,
+      "texto": "Sí, sí, sí, pero por mi zona aún no hay medicina. Bueno, no hay problema. Dale, gracias, hasta luego.",
+      "confianza": 0.498,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buenas tardes con Memy? ¿Qué tal? ¿Piso de movistar? Así es, nos estamos contando. Es la quinta vez que me llaman. ¿Qué promoción le brindaron? Me brindaron todas y la verdad que no me interesa. Soy muy conforme con mi compañía. Lo único que sí que me interesaba, que ya les dije ayer, les dije hoy y les contesto amablemente, es que quería yo tener la banda ANSA de movizar, pero me dijeron que en mi zona aún no está. Así que nada. Eso, solamente. Bien. ¿Y cuándo fue la última vez que se lo corroboraron? Ayer. a las ocho y media o siete y media. Bueno, si usted quiere me dejar la dirección y lo volvemos a corroborar. No, no, muchas gracias. Sí, sí, sí, pero por mi zona aún no hay medicina. Bueno, no hay problema. Dale, gracias, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.48,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:21:42.262337",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:18.511499",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115140755753_ACD_40427",
+    "fecha_inicio": "15/1/2026 14:07:55",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 109,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 16,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

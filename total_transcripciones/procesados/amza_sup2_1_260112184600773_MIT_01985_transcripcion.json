@@ -1,0 +1,78 @@
+{
+  "archivo": "amza_sup2_1_260112184600773_MIT_01985.wav",
+  "duracion_segundos": 65.36,
+  "num_segmentos": 10,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 4.82,
+    "Cliente": 54.17
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 30.04,
+      "duracion": 30.01,
+      "texto": "Ningún beneficio. Mi idea, porque tengo Movistar Hogar también, pero bueno.",
+      "confianza": 0.878,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.61,
+      "fin": 54.77,
+      "duracion": 24.16,
+      "texto": "En ese momento no me interesa porque no quiero hacer nada en ese momento. Igual recordar que vos no vas a perder tu número, si no vas a perder tu contacto, no vas a perder nada. Lo único que cambiarías es la línea, la compañía, nuestra compañía. El número tampoco lo perdés, por lo cual eso es importante. Y aparte se te va a hacer un descuento en tu fira óptica para que vos faes menos.",
+      "confianza": 0.141,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.09,
+      "fin": 59.76,
+      "duracion": 0.67,
+      "texto": "Ok, igual te agradezco. Disculpa.",
+      "confianza": 0.001,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 61.2,
+      "fin": 65.36,
+      "duracion": 4.15,
+      "texto": "Hasta luego.",
+      "confianza": 0.475,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Ningún beneficio. Mi idea, porque tengo Movistar Hogar también, pero bueno. En ese momento no me interesa porque no quiero hacer nada en ese momento. Igual recordar que vos no vas a perder tu número, si no vas a perder tu contacto, no vas a perder nada. Lo único que cambiarías es la línea, la compañía, nuestra compañía. El número tampoco lo perdés, por lo cual eso es importante. Y aparte se te va a hacer un descuento en tu fira óptica para que vos faes menos. Ok, igual te agradezco. Disculpa. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.516,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:29:19.980433",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 10,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:33.847642",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112184600773_MIT_01985",
+    "sin_datos_basurita": true
+  }
+}

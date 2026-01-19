@@ -1,0 +1,131 @@
+{
+  "archivo": "amza44_1_260114104609415_ACD_69927.wav",
+  "duracion_segundos": 64.8,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 53.28,
+    "Cliente": 7.49
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 4.28,
+      "duracion": 4.25,
+      "texto": "Hola, ¿qué tal, buen día? ¿Hablo con Julieta?",
+      "confianza": 0.639,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.32,
+      "fin": 17.61,
+      "duracion": 12.29,
+      "texto": "No, ¿qué tal? Ah, ¿qué tal? Como le va a un gusto. Mi nombre es Rodrigo, ¿sí? Yo me estoy comunicando para brindarle lo que es un beneficio, señor, la línea. Me figura que esta misma está en nombre de Julieta Eguden, ¿es correcto?",
+      "confianza": 0.322,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.59,
+      "fin": 19.37,
+      "duracion": 0.78,
+      "texto": "Sí.",
+      "confianza": 0.489,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 19.39,
+      "fin": 30.53,
+      "duracion": 11.14,
+      "texto": "¿De qué parte me hablas? Yo soy asesor comercial de Movistar. Sí, me figura que esta línea está en claro. Yo me estoy comunicando más que nada porque tenemos unas promociones vigentes al día de hoy, sí.",
+      "confianza": 0.493,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.57,
+      "fin": 36.54,
+      "duracion": 4.97,
+      "texto": "Mira, si me cambié hace unos meses y no tengo intenciones de volver.",
+      "confianza": 0.698,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 37.14,
+      "fin": 40.84,
+      "duracion": 3.7,
+      "texto": "Claro, me figura que el paso usted lo hizo en marzo, ¿es correcto? Del año pasado.",
+      "confianza": 0.771,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.86,
+      "fin": 47.57,
+      "duracion": 6.71,
+      "texto": "Sí, sí. Ok, ok. Así que no estoy con intenciones de cambiar por el momento.",
+      "confianza": 0.534,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 47.87,
+      "fin": 64.8,
+      "duracion": 16.93,
+      "texto": "¿Por algún motivo en particular? ¿Tuvo algún inconveniente con la compañía anteriormente o por una mejor oferta? No, por una mejor oferta. Y, aparte, nunca tenías señas de ningún lado, así que te agradezco. Claro, entiendo. Bueno, le comento así que nosotros en estos meses hemos mejorado mucho lo que",
+      "confianza": 0.632,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal, buen día? ¿Hablo con Julieta? No, ¿qué tal? Ah, ¿qué tal? Como le va a un gusto. Mi nombre es Rodrigo, ¿sí? Yo me estoy comunicando para brindarle lo que es un beneficio, señor, la línea. Me figura que esta misma está en nombre de Julieta Eguden, ¿es correcto? Sí. ¿De qué parte me hablas? Yo soy asesor comercial de Movistar. Sí, me figura que esta línea está en claro. Yo me estoy comunicando más que nada porque tenemos unas promociones vigentes al día de hoy, sí. Mira, si me cambié hace unos meses y no tengo intenciones de volver. Claro, me figura que el paso usted lo hizo en marzo, ¿es correcto? Del año pasado. Sí, sí. Ok, ok. Así que no estoy con intenciones de cambiar por el momento. ¿Por algún motivo en particular? ¿Tuvo algún inconveniente con la compañía anteriormente o por una mejor oferta? No, por una mejor oferta. Y, aparte, nunca tenías señas de ningún lado, así que te agradezco. Claro, entiendo. Bueno, le comento así que nosotros en estos meses hemos mejorado mucho lo que",
+  "calidad": {
+    "confianza_promedio": 0.597,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:05:39.582836",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:28.670982",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114104609415_ACD_69927",
+    "fecha_inicio": "14/1/2026 10:46:09",
+    "agente_nombre": "MZA 44",
+    "agente_login": "mza44",
+    "duracion_total": 79,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 8,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

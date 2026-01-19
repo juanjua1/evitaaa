@@ -1,0 +1,147 @@
+{
+  "archivo": "amza1_1_260114114218698_ACD_35743.wav",
+  "duracion_segundos": 74.45,
+  "num_segmentos": 32,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 21.17,
+    "Cliente": 32.87
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 5.17,
+      "duracion": 5.14,
+      "texto": "Hola, buenos días, hola con Catalina.",
+      "confianza": 0.24,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 5.92,
+      "fin": 14.44,
+      "duracion": 8.52,
+      "texto": "¿Qué tal, Cata? ¿Cómo estás? Es un placer hablar con usted. Mi nombre es Evangelina. Yo, justamente, la trama de día de hoy porque me figura que actualmente está en la compañía de Claro, ¿es correcto?",
+      "confianza": 0.575,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.57,
+      "fin": 27.52,
+      "duracion": 10.95,
+      "texto": "Sí. Bien, Cata, le comento. Nosotros desde la compañía le vamos a avisar, le queremos dinar justamente un descuento para su línea, ¿sí? Le comento brevemente qué se trata. Tenemos lo que son planes bastante concretos en 10.400 pesos, ¿bien?",
+      "confianza": 0.024,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.16,
+      "fin": 29.94,
+      "duracion": 1.78,
+      "texto": "No sé cuánto estará ganando usted actualmente.",
+      "confianza": 0.631,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.0,
+      "fin": 31.56,
+      "duracion": 0.56,
+      "texto": "¿Tiene idea?",
+      "confianza": 0.276,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 35.7,
+      "fin": 36.52,
+      "duracion": 0.82,
+      "texto": "Hola, Catalina.",
+      "confianza": 0.853,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 37.51,
+      "fin": 44.2,
+      "duracion": 6.69,
+      "texto": "Sí, te sigue escuchando. Perdona. Le digo, ¿usted sabe cuánto estamos dando actualmente por su plan actual en claro? ¿Tiene idea?",
+      "confianza": 0.344,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.25,
+      "fin": 58.29,
+      "duracion": 5.04,
+      "texto": "Sí. Sí, dígame. No llega a 10.000. Bien. ¿Y ese plan cuántos días tienes? ¿El plan básico, supongo? ¿El plan de cuatro días?",
+      "confianza": 0.001,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.12,
+      "fin": 69.68,
+      "duracion": 10.56,
+      "texto": "Ocho. Ocho días. Bien, perfecto. Le comento que está aquí por el mismo precio, sí, por $10,400 pesos. Pero no tengo señal con cómo visitar acá.",
+      "confianza": 0.3,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 70.47,
+      "fin": 74.45,
+      "duracion": 3.98,
+      "texto": "Perdón, por eso no lo saqué. Eso lo ha corroborado hace poco.",
+      "confianza": 0.566,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días, hola con Catalina. ¿Qué tal, Cata? ¿Cómo estás? Es un placer hablar con usted. Mi nombre es Evangelina. Yo, justamente, la trama de día de hoy porque me figura que actualmente está en la compañía de Claro, ¿es correcto? Sí. Bien, Cata, le comento. Nosotros desde la compañía le vamos a avisar, le queremos dinar justamente un descuento para su línea, ¿sí? Le comento brevemente qué se trata. Tenemos lo que son planes bastante concretos en 10.400 pesos, ¿bien? No sé cuánto estará ganando usted actualmente. ¿Tiene idea? Hola, Catalina. Sí, te sigue escuchando. Perdona. Le digo, ¿usted sabe cuánto estamos dando actualmente por su plan actual en claro? ¿Tiene idea? Sí. Sí, dígame. No llega a 10.000. Bien. ¿Y ese plan cuántos días tienes? ¿El plan básico, supongo? ¿El plan de cuatro días? Ocho. Ocho días. Bien, perfecto. Le comento que está aquí por el mismo precio, sí, por $10,400 pesos. Pero no tengo señal con cómo visitar acá. Perdón, por eso no lo saqué. Eso lo ha corroborado hace poco.",
+  "calidad": {
+    "confianza_promedio": 0.536,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:42:23.411407",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:16.099117",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114114218698_ACD_35743",
+    "fecha_inicio": "14/1/2026 11:42:18",
+    "agente_nombre": "MZA 1",
+    "agente_login": "mza1",
+    "duracion_total": 93,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

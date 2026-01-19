@@ -1,0 +1,83 @@
+{
+  "archivo": "amza35_1_260113130125481_ACD_40317.wav",
+  "duracion_segundos": 98.42,
+  "num_segmentos": 42,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 8.71,
+    "Cliente": 82.9
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.57,
+      "fin": 10.28,
+      "duracion": 8.71,
+      "texto": "Hola, ¿qué tal? ¿Cómo estás? ¿Hablo con Carlos? ¿Qué te pasó? Bueno, gracias.",
+      "confianza": 0.723,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.98,
+      "fin": 61.07,
+      "duracion": 46.09,
+      "texto": "¿Qué pasa? Gracias. Hola. Hola, ¿qué tal, Carlos? ¿Quién habló? ¿Cómo te va? Un gusto. Te habla Marcos. Te hablo del área técnica movistar, Carlos, ya que estamos acercándote a lo que es una promoción exclusiva como antiguo abonado, ¿sí? ¿Vos, Carlos, estás actualmente en claro? Sí. Perfecto. ¿Actualmente estás con abono o haces recargas? No, no. ¿Con abono mensual? Perfecto. Al día de hoy verifico una promoción vigente en tu línea. Estamos trabajando en tu zona activando lo que son beneficios con 4G+, con el chip que se adapta a tu teléfono para darte más beneficios, ¿sí? ¿Vos actualmente, en tu plan actual, con claro cuántos días ocupas, Carlos? No, ni me acuerdo. Ah, utilizás, digamos, vos consumís todo el mes y lo único que haces es pagar la línea.",
+      "confianza": 0.001,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.61,
+      "fin": 98.42,
+      "duracion": 36.81,
+      "texto": "Sí. Perfecto. Te quería comentar que estamos justamente con una bonificación especial. Esta bonificación especial te incluye lo que es un plan familia para que puedas justamente aprovechar y digas de regalo para que nunca te quedes incomunicado, ¿sí? Yo verifico que sos de Buenos Aires. ¿De qué parte de Buenos Aires sos, Carlos? Sí, yo después, es que... Esa acción está ahí en claro, así que no hay problema, después lo veo yo. Ah, perfecto. Está trabajando. ¿Qué puedo atender ahora? Está trabajando. Dale, te dejo información por WhatsApp. Dale, muchas gracias. Ah, ahí está, buenísimo. Dale, buenísimo. Hasta luego.",
+      "confianza": 0.415,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Cómo estás? ¿Hablo con Carlos? ¿Qué te pasó? Bueno, gracias. ¿Qué pasa? Gracias. Hola. Hola, ¿qué tal, Carlos? ¿Quién habló? ¿Cómo te va? Un gusto. Te habla Marcos. Te hablo del área técnica movistar, Carlos, ya que estamos acercándote a lo que es una promoción exclusiva como antiguo abonado, ¿sí? ¿Vos, Carlos, estás actualmente en claro? Sí. Perfecto. ¿Actualmente estás con abono o haces recargas? No, no. ¿Con abono mensual? Perfecto. Al día de hoy verifico una promoción vigente en tu línea. Estamos trabajando en tu zona activando lo que son beneficios con 4G+, con el chip que se adapta a tu teléfono para darte más beneficios, ¿sí? ¿Vos actualmente, en tu plan actual, con claro cuántos días ocupas, Carlos? No, ni me acuerdo. Ah, utilizás, digamos, vos consumís todo el mes y lo único que haces es pagar la línea. Sí. Perfecto. Te quería comentar que estamos justamente con una bonificación especial. Esta bonificación especial te incluye lo que es un plan familia para que puedas justamente aprovechar y digas de regalo para que nunca te quedes incomunicado, ¿sí? Yo verifico que sos de Buenos Aires. ¿De qué parte de Buenos Aires sos, Carlos? Sí, yo después, es que... Esa acción está ahí en claro, así que no hay problema, después lo veo yo. Ah, perfecto. Está trabajando. ¿Qué puedo atender ahora? Está trabajando. Dale, te dejo información por WhatsApp. Dale, muchas gracias. Ah, ahí está, buenísimo. Dale, buenísimo. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.491,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:54:33.324279",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 42,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:24.392193",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113130125481_ACD_40317",
+    "fecha_inicio": "13/1/2026 13:01:25",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 118,
+    "tiempo_conversacion": 96,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "archivo": "amza42_1_260115121048454_ACD_28699.wav",
+  "duracion_segundos": 68.82,
+  "num_segmentos": 26,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 16.22,
+    "Cliente": 44.97
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.31,
+      "fin": 10.1,
+      "duracion": 7.79,
+      "texto": "Hola, buen día. ¿Va a estar comunicando con Claudio? ¿Quién habla?",
+      "confianza": 0.085,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.12,
+      "fin": 17.43,
+      "duracion": 7.31,
+      "texto": "Como le va a un gusto, mi nombre es Cynthia. Me estoy comunicando con usted porque el día de hoy tengo para brindarle un descuento exclusivo para la operación de su línea.",
+      "confianza": 0.546,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.45,
+      "fin": 20.59,
+      "duracion": 3.14,
+      "texto": "¿Alguna vez te decís que este pertenece a Pilaro?",
+      "confianza": 0.41,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.66,
+      "fin": 30.41,
+      "duracion": 8.75,
+      "texto": "¿Eso es correcto? Sí. Bien, perfecto. ¿Tú realmente cuentas con lo que es abono o tienes prepago? ¿Para qué quieres hablar?",
+      "confianza": 0.244,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.95,
+      "fin": 33.15,
+      "duracion": 2.2,
+      "texto": "para brindarle lo que es los descuentos, ¿sí?",
+      "confianza": 0.654,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 33.97,
+      "fin": 37.63,
+      "duracion": 3.66,
+      "texto": "Le consulto para saber. ¿De qué línea me está hablando?",
+      "confianza": 0.26,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 37.65,
+      "fin": 46.56,
+      "duracion": 8.91,
+      "texto": "De Movistar, me estoy comunicando. Actualmente tenemos para brindarle lo que es una promoción del plan de 16 gigas en 10.400 pesos.",
+      "confianza": 0.668,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.96,
+      "fin": 59.45,
+      "duracion": 11.49,
+      "texto": "Sí, le consulto. ¿Y cuánto me dijo? Los 16 gigas en 10.400 pesos. Bueno, por ahora le agradezco. Muchas gracias.",
+      "confianza": 0.374,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.88,
+      "fin": 68.82,
+      "duracion": 7.94,
+      "texto": "Bien. ¿Hay algo que no le interese en la oferta? Tenemos más promociones para usted. Te agradezco. Muchas gracias.",
+      "confianza": 0.773,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. ¿Va a estar comunicando con Claudio? ¿Quién habla? Como le va a un gusto, mi nombre es Cynthia. Me estoy comunicando con usted porque el día de hoy tengo para brindarle un descuento exclusivo para la operación de su línea. ¿Alguna vez te decís que este pertenece a Pilaro? ¿Eso es correcto? Sí. Bien, perfecto. ¿Tú realmente cuentas con lo que es abono o tienes prepago? ¿Para qué quieres hablar? para brindarle lo que es los descuentos, ¿sí? Le consulto para saber. ¿De qué línea me está hablando? De Movistar, me estoy comunicando. Actualmente tenemos para brindarle lo que es una promoción del plan de 16 gigas en 10.400 pesos. Sí, le consulto. ¿Y cuánto me dijo? Los 16 gigas en 10.400 pesos. Bueno, por ahora le agradezco. Muchas gracias. Bien. ¿Hay algo que no le interese en la oferta? Tenemos más promociones para usted. Te agradezco. Muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.376,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:48:00.059924",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:27.612486",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115121048454_ACD_28699",
+    "fecha_inicio": "15/1/2026 12:10:48",
+    "agente_nombre": "MZA 42",
+    "agente_login": "mza42",
+    "duracion_total": 89,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

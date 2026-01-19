@@ -1,0 +1,129 @@
+{
+  "archivo": "amza27_1_260112104216791_ACD_45787.wav",
+  "duracion_segundos": 132.6,
+  "num_segmentos": 12,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 22.74,
+    "Cliente": 83.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.72,
+      "fin": 7.03,
+      "duracion": 5.31,
+      "texto": "Hola, María. Después del tono, deja tu mensaje.",
+      "confianza": 0.103,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.57,
+      "fin": 13.16,
+      "duracion": 4.59,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.798,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 21.63,
+      "fin": 50.52,
+      "duracion": 28.89,
+      "texto": "Bajo menos. Sí.",
+      "confianza": 0.405,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.04,
+      "fin": 76.17,
+      "duracion": 25.13,
+      "texto": "Hola. Frank.",
+      "confianza": 0.548,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 78.8,
+      "fin": 96.95,
+      "duracion": 18.15,
+      "texto": "Después de las dos.",
+      "confianza": 0.659,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 96.97,
+      "fin": 97.03,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.327,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 107.61,
+      "fin": 112.36,
+      "duracion": 4.75,
+      "texto": "El signo. ¿Cómo se escribe signo?",
+      "confianza": 0.256,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 112.96,
+      "fin": 132.6,
+      "duracion": 19.65,
+      "texto": "¿No se escribe signo, boluda?",
+      "confianza": 0.578,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, María. Después del tono, deja tu mensaje. Para finalizar, cortá o marca la tecla numeral para más opciones. Bajo menos. Sí. Hola. Frank. Después de las dos. Sí. El signo. ¿Cómo se escribe signo? ¿No se escribe signo, boluda?",
+  "calidad": {
+    "confianza_promedio": 0.472,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:41:14.569449",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 12,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:19.811215",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112104216791_ACD_45787",
+    "fecha_inicio": "12/1/2026 10:42:16",
+    "agente_nombre": "MZA 27",
+    "agente_login": "mza27",
+    "duracion_total": 151,
+    "tiempo_conversacion": 130,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Contestador",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

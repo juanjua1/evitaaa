@@ -1,0 +1,101 @@
+{
+  "archivo": "amza45_1_260114141853925_ACD_18647.wav",
+  "duracion_segundos": 64.5,
+  "num_segmentos": 24,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 61.31,
+    "Cliente": 0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 13.57,
+      "duracion": 13.54,
+      "texto": "Hola, buenas tarde. ¿Quién hablá? Bien, déjame entre, mi nombre es Yaira, ¿sí? Me comunicaba porque teníamos una promoción para brindarte, ¿sí? Para tu línea.",
+      "confianza": 0.357,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.39,
+      "fin": 24.99,
+      "duracion": 10.6,
+      "texto": "¿Bien? No, no me iba a querer movistar. Exactamente, sí. ¿Y qué hago con ustedes? Me llaman 10 veces por día. ¿Qué hago con ustedes? Ah, bien, yo soy bien comunicado.",
+      "confianza": 0.149,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.88,
+      "fin": 34.15,
+      "duracion": 8.27,
+      "texto": "10 veces por día llaman y los bloqueo y siguen llamando a otros teléfonos. Increíble. Es muy molesto. No quiero ser maleducado, nada, pero es molesto.",
+      "confianza": 0.577,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 34.79,
+      "fin": 37.46,
+      "duracion": 2.66,
+      "texto": "Yo antes tenía movistar, pero ya cambié de compañía.",
+      "confianza": 0.531,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 38.26,
+      "fin": 64.5,
+      "duracion": 26.24,
+      "texto": "Pero nada, me llaman todos los días y 10 veces por día, es increíble. No sé cómo sacen tantos teléfonos. Cada cual lleva su teléfono, me imagino, ¿no? No, pasa que son llamadores automáticos a veces y, bueno, por ahí te lo mandan de distintos lugares. Yo, por ejemplo, me... Yo, por lo menos, fui la primera de este pedazo. Bueno, te agradezco.",
+      "confianza": 0.66,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tarde. ¿Quién hablá? Bien, déjame entre, mi nombre es Yaira, ¿sí? Me comunicaba porque teníamos una promoción para brindarte, ¿sí? Para tu línea. ¿Bien? No, no me iba a querer movistar. Exactamente, sí. ¿Y qué hago con ustedes? Me llaman 10 veces por día. ¿Qué hago con ustedes? Ah, bien, yo soy bien comunicado. 10 veces por día llaman y los bloqueo y siguen llamando a otros teléfonos. Increíble. Es muy molesto. No quiero ser maleducado, nada, pero es molesto. Yo antes tenía movistar, pero ya cambié de compañía. Pero nada, me llaman todos los días y 10 veces por día, es increíble. No sé cómo sacen tantos teléfonos. Cada cual lleva su teléfono, me imagino, ¿no? No, pasa que son llamadores automáticos a veces y, bueno, por ahí te lo mandan de distintos lugares. Yo, por ejemplo, me... Yo, por lo menos, fui la primera de este pedazo. Bueno, te agradezco.",
+  "calidad": {
+    "confianza_promedio": 0.444,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:14:12.544483",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:29.124771",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114141853925_ACD_18647",
+    "fecha_inicio": "14/1/2026 14:18:53",
+    "agente_nombre": "MZA 45",
+    "agente_login": "mza45",
+    "duracion_total": 86,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

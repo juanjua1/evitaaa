@@ -1,0 +1,147 @@
+{
+  "archivo": "amza72_1_260112142747974_ACD_52899.wav",
+  "duracion_segundos": 69.14,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 15.32,
+    "Cliente": 46.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 0.23,
+      "duracion": 0.2,
+      "texto": "Hola.",
+      "confianza": 0.487,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 1.41,
+      "fin": 2.21,
+      "duracion": 0.8,
+      "texto": "Hola.",
+      "confianza": 0.556,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 2.73,
+      "fin": 3.98,
+      "duracion": 1.24,
+      "texto": "Mi nombre es Max, mucho gusto.",
+      "confianza": 0.497,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.48,
+      "fin": 8.4,
+      "duracion": 3.92,
+      "texto": "Quería hablar con Alberto Daniel. ¿De qué tema?",
+      "confianza": 0.786,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.47,
+      "fin": 16.82,
+      "duracion": 7.35,
+      "texto": "Justamente era para brindar una promoción en las líneas que ustedes tienen. No, no, no, no. En este momento no.",
+      "confianza": 0.792,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.84,
+      "fin": 24.99,
+      "duracion": 8.15,
+      "texto": "¿No te gustaría escuchar la propuesta que yo tengo, que está bastante buena?",
+      "confianza": 0.627,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.01,
+      "fin": 26.82,
+      "duracion": 1.81,
+      "texto": "No, no importa. Ya averiguamos varias veces, ya me llamaron varias veces, pero no, no, no.",
+      "confianza": 0.005,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.7,
+      "fin": 52.85,
+      "duracion": 24.15,
+      "texto": "Nunca supera lo que tiene. ¿Nunca supera lo que usted tiene? Ah, usted tiene en este caso dos líneas. Internet, claro. Sí, dos líneas, internet, la tele, todo. ¿Y cuánto es para por todo, señorita? ¿Cómo?",
+      "confianza": 0.535,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.25,
+      "fin": 61.54,
+      "duracion": 7.29,
+      "texto": "Bueno, yo le propongo por todos juntos teléfonos alrededor de 40.000 pesos más o menos.",
+      "confianza": 0.768,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.73,
+      "fin": 69.14,
+      "duracion": 6.41,
+      "texto": "Sí, nos pagamos menos porque estamos con una promoción y pagamos menos. Yo le agradezco. Bueno, no hay problema.",
+      "confianza": 0.63,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Mi nombre es Max, mucho gusto. Quería hablar con Alberto Daniel. ¿De qué tema? Justamente era para brindar una promoción en las líneas que ustedes tienen. No, no, no, no. En este momento no. ¿No te gustaría escuchar la propuesta que yo tengo, que está bastante buena? No, no importa. Ya averiguamos varias veces, ya me llamaron varias veces, pero no, no, no. Nunca supera lo que tiene. ¿Nunca supera lo que usted tiene? Ah, usted tiene en este caso dos líneas. Internet, claro. Sí, dos líneas, internet, la tele, todo. ¿Y cuánto es para por todo, señorita? ¿Cómo? Bueno, yo le propongo por todos juntos teléfonos alrededor de 40.000 pesos más o menos. Sí, nos pagamos menos porque estamos con una promoción y pagamos menos. Yo le agradezco. Bueno, no hay problema.",
+  "calidad": {
+    "confianza_promedio": 0.454,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:44:55.147367",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:30.949562",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112142747974_ACD_52899",
+    "fecha_inicio": "12/1/2026 14:27:47",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 92,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "archivo": "amza8_1_260115144102769_MIT_01978.wav",
+  "duracion_segundos": 100.1,
+  "num_segmentos": 21,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 11.16,
+    "Cliente": 85.23
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.74,
+      "fin": 42.12,
+      "duracion": 41.38,
+      "texto": "Hola. Ahora sí, perfecto, íbamos a hacer el cambio de una de las líneas que era el número, era 11-31-28-39-28, esa línea, íbamos a cambiar lo que era la... Sí, sí, la cantidad de chivas.",
+      "confianza": 0.763,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 42.14,
+      "fin": 52.53,
+      "duracion": 10.39,
+      "texto": "Exacto, que era con la de 4G de base, con WhatsApp Brat y 10.000 minutos para hablar con otra compañía, llamadas libres a Frijol y Movistar, con 6.000 de mensaje de texto,",
+      "confianza": 0.693,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.7,
+      "fin": 69.33,
+      "duracion": 16.63,
+      "texto": "El precio de 7.810 más impuestos. Este era el único cambio que íbamos a hacer con los 10 y a ver que habrá en todos los seis meses para todos los planes. Bueno, y eso era lo único que tenía que aumentar. Sí, bien. Dale,",
+      "confianza": 0.702,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 69.33,
+      "fin": 70.1,
+      "duracion": 0.77,
+      "texto": "perfecto, Margo.",
+      "confianza": 0.642,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 70.12,
+      "fin": 70.92,
+      "duracion": 0.8,
+      "texto": "Muchísimas gracias.",
+      "confianza": 0.822,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 71.76,
+      "fin": 92.35,
+      "duracion": 20.59,
+      "texto": "No, el contrario, gracias a ti. Bueno, como te había comentado, era. Sí. Sí, hola. Claro, te comenté el plan, te comenté que eran los 7.810 millones de impuestos y tenías el descuento que tuve por fin de mes de 16.345. Y ya con esto ya finalizaríamos.",
+      "confianza": 0.116,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 93.75,
+      "fin": 97.98,
+      "duracion": 4.23,
+      "texto": "Bien. Vale, genial. Perfecto, Margo. Estamos.",
+      "confianza": 0.65,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 98.5,
+      "fin": 100.1,
+      "duracion": 1.6,
+      "texto": "Perfecto. Listo.",
+      "confianza": 0.611,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Ahora sí, perfecto, íbamos a hacer el cambio de una de las líneas que era el número, era 11-31-28-39-28, esa línea, íbamos a cambiar lo que era la... Sí, sí, la cantidad de chivas. Exacto, que era con la de 4G de base, con WhatsApp Brat y 10.000 minutos para hablar con otra compañía, llamadas libres a Frijol y Movistar, con 6.000 de mensaje de texto, El precio de 7.810 más impuestos. Este era el único cambio que íbamos a hacer con los 10 y a ver que habrá en todos los seis meses para todos los planes. Bueno, y eso era lo único que tenía que aumentar. Sí, bien. Dale, perfecto, Margo. Muchísimas gracias. No, el contrario, gracias a ti. Bueno, como te había comentado, era. Sí. Sí, hola. Claro, te comenté el plan, te comenté que eran los 7.810 millones de impuestos y tenías el descuento que tuve por fin de mes de 16.345. Y ya con esto ya finalizaríamos. Bien. Vale, genial. Perfecto, Margo. Estamos. Perfecto. Listo.",
+  "calidad": {
+    "confianza_promedio": 0.524,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:12:10.066432",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:32.662270",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115144102769_MIT_01978",
+    "fecha_inicio": "15/1/2026 14:41:04",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 101,
+    "tiempo_conversacion": 98,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Venta",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

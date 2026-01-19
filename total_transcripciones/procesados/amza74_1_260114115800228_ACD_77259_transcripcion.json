@@ -1,0 +1,92 @@
+{
+  "archivo": "amza74_1_260114115800228_ACD_77259.wav",
+  "duracion_segundos": 68.28,
+  "num_segmentos": 26,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.9,
+    "Cliente": 61.44
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 47.26,
+      "duracion": 47.23,
+      "texto": "Hola. Hola. Hola, venía con Alberto. Sí. ¿Cómo estás? La compañía Movistar. Sí, con un buen ejercicio. No, te agradezco, te agradezco, te agradezco, me acabo de ir de Movistar por el pésimo servicio que tienen. Así que te agradezco mucho. ¿Por qué? Cuéntame, por favor, cuál fue el motivo principal. Más o menos este mes lo habré contado 45 veces, porque ustedes ni eso tienen, ni una base de datos como la gente, porque llaman tres, cuatro veces por día la gente. Obviamente. Ni siquiera tiene una base. ¿Sabes por qué me fui? Porque estuve cinco días sin Internet y no me daban bolilla nadie me venía a solucionar el problema. Tuve que apelar a un gerente de Movistar, amigo mío, hasta que me vengan a arreglar el cable.",
+      "confianza": 0.431,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.84,
+      "fin": 58.62,
+      "duracion": 10.78,
+      "texto": "Un desastre son. Y tengo una institución, un colegio, que saqué dos líneas y un internet porque nunca pude hacer funcionar el modem. Así que di de baja la línea del colegio también.",
+      "confianza": 0.917,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.18,
+      "fin": 62.61,
+      "duracion": 3.43,
+      "texto": "Miren qué desastre que son. Así que decíselo a tus superiores.",
+      "confianza": 0.808,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 67.38,
+      "fin": 68.28,
+      "duracion": 0.9,
+      "texto": "Así que tenga buen día. Gracias. Hasta luego.",
+      "confianza": 0.029,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, venía con Alberto. Sí. ¿Cómo estás? La compañía Movistar. Sí, con un buen ejercicio. No, te agradezco, te agradezco, te agradezco, me acabo de ir de Movistar por el pésimo servicio que tienen. Así que te agradezco mucho. ¿Por qué? Cuéntame, por favor, cuál fue el motivo principal. Más o menos este mes lo habré contado 45 veces, porque ustedes ni eso tienen, ni una base de datos como la gente, porque llaman tres, cuatro veces por día la gente. Obviamente. Ni siquiera tiene una base. ¿Sabes por qué me fui? Porque estuve cinco días sin Internet y no me daban bolilla nadie me venía a solucionar el problema. Tuve que apelar a un gerente de Movistar, amigo mío, hasta que me vengan a arreglar el cable. Un desastre son. Y tengo una institución, un colegio, que saqué dos líneas y un internet porque nunca pude hacer funcionar el modem. Así que di de baja la línea del colegio también. Miren qué desastre que son. Así que decíselo a tus superiores. Así que tenga buen día. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.497,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:04:26.624352",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 26,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:32.172838",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114115800228_ACD_77259",
+    "fecha_inicio": "14/1/2026 11:58:00",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 113,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 28,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "archivo": "amza41_1_260113142205413_ACD_14503.wav",
+  "duracion_segundos": 77.17,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.6,
+    "Cliente": 46.53
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.04,
+      "fin": 4.32,
+      "duracion": 2.28,
+      "texto": "Hola, Buendira. ¿Habla con Ricardo?",
+      "confianza": 0.304,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.02,
+      "fin": 8.97,
+      "duracion": 2.95,
+      "texto": "No, no se encuentra en estos momentos. ¿Para quién?",
+      "confianza": 0.661,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 10.23,
+      "fin": 13.93,
+      "duracion": 3.7,
+      "texto": "Es para reanudar la promoción de la línea. ¿En qué momento lo podemos encontrar?",
+      "confianza": 0.684,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.4,
+      "fin": 23.41,
+      "duracion": 7.01,
+      "texto": "El espacio y el trabajo alrededor de las cinco. ¿Qué beneficio de qué compañía más o menos?",
+      "confianza": 0.509,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.18,
+      "fin": 24.51,
+      "duracion": 0.33,
+      "texto": "Bien,",
+      "confianza": 0.642,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 24.51,
+      "fin": 38.46,
+      "duracion": 13.95,
+      "texto": "mira, nosotros somos de Movistar y estamos brindando 16 gigas en 13.950. El plan va a contar con WhatsApp gratis, almohadas libres, América Precias local, roaming en América.",
+      "confianza": 0.642,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 38.5,
+      "fin": 50.02,
+      "duracion": 11.52,
+      "texto": "¿En ese es el más económico que tienes? Tenemos otro más económico que es de 8 gigas y tiene 11.400, va a tener WhatsApp, va a poder hablar de todas las compañías. Y el descuento es por timers, ¿sí?",
+      "confianza": 0.549,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.03,
+      "fin": 54.69,
+      "duracion": 3.67,
+      "texto": "Dale, a ver, ahí le comento cualquier cosa entonces, le digo.",
+      "confianza": 0.438,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 55.45,
+      "fin": 77.17,
+      "duracion": 21.72,
+      "texto": "Bueno, le puedo dejar un mensajito por WhatsApp para que ustedes tengan mi numerito, si les doy la entrevista por ahí. Ah, bueno. Listo, entonces, ahora este número le voy a dejar en las promociones, ¿sí? Gracias. Bueno, muchas gracias. Dale, igualmente, que tengan un buen día. Muchas gracias. Acelero.",
+      "confianza": 0.617,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, Buendira. ¿Habla con Ricardo? No, no se encuentra en estos momentos. ¿Para quién? Es para reanudar la promoción de la línea. ¿En qué momento lo podemos encontrar? El espacio y el trabajo alrededor de las cinco. ¿Qué beneficio de qué compañía más o menos? Bien, mira, nosotros somos de Movistar y estamos brindando 16 gigas en 13.950. El plan va a contar con WhatsApp gratis, almohadas libres, América Precias local, roaming en América. ¿En ese es el más económico que tienes? Tenemos otro más económico que es de 8 gigas y tiene 11.400, va a tener WhatsApp, va a poder hablar de todas las compañías. Y el descuento es por timers, ¿sí? Dale, a ver, ahí le comento cualquier cosa entonces, le digo. Bueno, le puedo dejar un mensajito por WhatsApp para que ustedes tengan mi numerito, si les doy la entrevista por ahí. Ah, bueno. Listo, entonces, ahora este número le voy a dejar en las promociones, ¿sí? Gracias. Bueno, muchas gracias. Dale, igualmente, que tengan un buen día. Muchas gracias. Acelero.",
+  "calidad": {
+    "confianza_promedio": 0.487,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:38:57.262855",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:27.069019",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113142205413_ACD_14503",
+    "fecha_inicio": "13/1/2026 14:22:05",
+    "agente_nombre": "MZA 41",
+    "agente_login": "mza41",
+    "duracion_total": 112,
+    "tiempo_conversacion": 75,
+    "tiempo_hold": 0,
+    "tiempo_acw": 12,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

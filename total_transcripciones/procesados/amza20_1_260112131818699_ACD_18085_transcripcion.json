@@ -1,0 +1,119 @@
+{
+  "archivo": "amza20_1_260112131818699_ACD_18085.wav",
+  "duracion_segundos": 68.77,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 8.56,
+    "Cliente": 52.99
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 8.59,
+      "duracion": 8.56,
+      "texto": "Hola, buenas tardes. Buenas tardes, mi nombre es Tomás, me comunico de la área de recupero de clientes movizados, ¿loco o nada?",
+      "confianza": 0.639,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.27,
+      "fin": 27.68,
+      "duracion": 17.41,
+      "texto": "Sí. ¿Cómo le va Ana? Mira, el motivo de mi llamado... Me alegro, me alegro, me alegro. Mira, el motivo de mi llamado si era para preguntarle por qué se había ido de la compañía. Nunca he estado en la compañía, nunca. Nunca he estado en la compañía movilizar. Bien, ¿puede ser que estuvo en 20? ¿Puede ser?",
+      "confianza": 0.579,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.04,
+      "fin": 40.4,
+      "duracion": 11.36,
+      "texto": "No puede ser, sí. Ah, bien claro, como son las mismas compañías, por ahí se... Ah, no lo sabía. Claro, sí, sí, por ahí no figura. Les consulto, ¿qué inconveniente estuvo con lo que es la línea 20 y que se tuvo que ir?",
+      "confianza": 0.357,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.38,
+      "fin": 42.4,
+      "duracion": 1.02,
+      "texto": "Mala peñal.",
+      "confianza": 0.697,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 43.28,
+      "fin": 46.88,
+      "duracion": 3.6,
+      "texto": "Había muchos tiros, defendía la peñal, los costos.",
+      "confianza": 0.614,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 48.35,
+      "fin": 60.58,
+      "duracion": 12.23,
+      "texto": "Nos ofrecieron mejor terricos, en cual hasta ahora se están cumpliendo porque he visto sus promociones que me han llegado por WhatsApp y todavía no... No tengo el querer de cambiarlas.",
+      "confianza": 0.538,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.4,
+      "fin": 68.77,
+      "duracion": 7.37,
+      "texto": "Por los momentos, claro, está cumpliendo mi expectativa. No hay problema.",
+      "confianza": 0.636,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Buenas tardes, mi nombre es Tomás, me comunico de la área de recupero de clientes movizados, ¿loco o nada? Sí. ¿Cómo le va Ana? Mira, el motivo de mi llamado... Me alegro, me alegro, me alegro. Mira, el motivo de mi llamado si era para preguntarle por qué se había ido de la compañía. Nunca he estado en la compañía, nunca. Nunca he estado en la compañía movilizar. Bien, ¿puede ser que estuvo en 20? ¿Puede ser? No puede ser, sí. Ah, bien claro, como son las mismas compañías, por ahí se... Ah, no lo sabía. Claro, sí, sí, por ahí no figura. Les consulto, ¿qué inconveniente estuvo con lo que es la línea 20 y que se tuvo que ir? Mala peñal. Había muchos tiros, defendía la peñal, los costos. Nos ofrecieron mejor terricos, en cual hasta ahora se están cumpliendo porque he visto sus promociones que me han llegado por WhatsApp y todavía no... No tengo el querer de cambiarlas. Por los momentos, claro, está cumpliendo mi expectativa. No hay problema.",
+  "calidad": {
+    "confianza_promedio": 0.527,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:51:49.501463",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 20,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:16.688016",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112131818699_ACD_18085",
+    "fecha_inicio": "12/1/2026 13:18:18",
+    "agente_nombre": "MZA 20",
+    "agente_login": "mza20",
+    "duracion_total": 89,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "archivo": "amza8_1_260116125938565_ACD_43589.wav",
+  "duracion_segundos": 100.8,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 41.27,
+    "Cliente": 53.52
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.15,
+      "fin": 27.17,
+      "duracion": 26.02,
+      "texto": "Hola, ¿qué tal? Buen día. Hablo con Juan. Me alegro, Juan. Te he comentado mi nombre en Seattle. Yo me estoy contactando a ver la recuperación de clientes de Movistar. ¿Para saber por qué te habías ido a la compañía? No, yo nunca estuve en Movistar. Siempre estuve en Claro y en 20. Claro, 20 es parte de Movistar.",
+      "confianza": 0.347,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.88,
+      "fin": 53.51,
+      "duracion": 25.63,
+      "texto": "Por eso entras en lo que es la base de datos. Genial. Ahora actualmente es la compañía, claro. ¿Cuánto estás abonando por tu ingeniería? ¿Cuánto estoy abonando? Sí. Primero estaba abonando 7 mil pesos. Ahora, bueno, por ahí si me atrasco, bueno, me cobro un poquito más. Claro, pero más o menos. Y serían 8, 9.",
+      "confianza": 0.476,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.85,
+      "fin": 56.72,
+      "duracion": 1.87,
+      "texto": "Genial, perfecto. ¿Cuántos gigas esperabas?",
+      "confianza": 0.288,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 58.3,
+      "fin": 82.89,
+      "duracion": 24.59,
+      "texto": "y deben ser como 5 o 6 y que no eso no lo entiendo voy a usar whatsapp y nada más llaman genial mira porque nosotros realmente tenemos un plan de 7.400 pesos con ocho gigas o hasta gratis a la idea para la compañía también aprecio 7.460 pesos nada más mucho más económico de lo que estás abonando y bueno tenemos cosas más gratis y hasta gratis",
+      "confianza": 0.53,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 84.12,
+      "fin": 100.8,
+      "duracion": 16.68,
+      "texto": "y por ahora por ahora no porque bueno está a cargo mi hija del teléfono todo así que no por ahora no lo mismo le agradezco",
+      "confianza": 0.694,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. Hablo con Juan. Me alegro, Juan. Te he comentado mi nombre en Seattle. Yo me estoy contactando a ver la recuperación de clientes de Movistar. ¿Para saber por qué te habías ido a la compañía? No, yo nunca estuve en Movistar. Siempre estuve en Claro y en 20. Claro, 20 es parte de Movistar. Por eso entras en lo que es la base de datos. Genial. Ahora actualmente es la compañía, claro. ¿Cuánto estás abonando por tu ingeniería? ¿Cuánto estoy abonando? Sí. Primero estaba abonando 7 mil pesos. Ahora, bueno, por ahí si me atrasco, bueno, me cobro un poquito más. Claro, pero más o menos. Y serían 8, 9. Genial, perfecto. ¿Cuántos gigas esperabas? y deben ser como 5 o 6 y que no eso no lo entiendo voy a usar whatsapp y nada más llaman genial mira porque nosotros realmente tenemos un plan de 7.400 pesos con ocho gigas o hasta gratis a la idea para la compañía también aprecio 7.460 pesos nada más mucho más económico de lo que estás abonando y bueno tenemos cosas más gratis y hasta gratis y por ahora por ahora no porque bueno está a cargo mi hija del teléfono todo así que no por ahora no lo mismo le agradezco",
+  "calidad": {
+    "confianza_promedio": 0.429,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:13:21.320376",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.744742",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116125938565_ACD_43589",
+    "fecha_inicio": "16/1/2026 12:59:38",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 121,
+    "tiempo_conversacion": 97,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "archivo": "amza3_1_260114140406914_ACD_73429.wav",
+  "duracion_segundos": 103.6,
+  "num_segmentos": 31,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 39.8,
+    "Cliente": 56.3
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.65,
+      "fin": 19.77,
+      "duracion": 17.12,
+      "texto": "Hola. Hola, buenas tardes. Hablo con José Colman. ¿Quién habla?",
+      "confianza": 0.43,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 19.79,
+      "fin": 20.78,
+      "duracion": 0.98,
+      "texto": "Mi nombre es Macarena.",
+      "confianza": 0.26,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.8,
+      "fin": 40.18,
+      "duracion": 19.38,
+      "texto": "Estamos en demovistar para poder darles una nueva promoción por su línea. Macarena, ¿podés informar con un cartel gigante que José Colman hace dos meses le dije a cada uno que llama en mis cuatro líneas por labor que tengo, que José Colman falleció. Ya no existe más José Colman.",
+      "confianza": 0.162,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.7,
+      "fin": 53.55,
+      "duracion": 12.85,
+      "texto": "Que no llames más, por favor. ¿Han hecho el cambio de titularidad? ¿Qué? Si José falleció, tienen que hacerlo, que es un cambio de titularidad por las líneas, para que no lo vuelvan a llamar.",
+      "confianza": 0.543,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.22,
+      "fin": 61.17,
+      "duracion": 6.95,
+      "texto": "Yo no pertenezco a su empresa. ¿Qué cambio de titularidad me decís? Claro, pero igualmente el Claro lo debe realizar.",
+      "confianza": 0.146,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 64.01,
+      "fin": 78.59,
+      "duracion": 14.58,
+      "texto": "¿Por qué? Porque, imagínense ustedes, está utilizándose en el de alguien que falleció. ¿Y por qué sabe que es el Claro? A ver. Y porque es obvio que no es que hace movistar. Tenemos una base de datos para llamar exclusivamente a clientes de Claro que estuvieron anteriormente en movistar.",
+      "confianza": 0.013,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 79.36,
+      "fin": 103.6,
+      "duracion": 24.24,
+      "texto": "Ah, mira vos, si vos me exigís, yo te voy a hacer el cambio. ¿Quién soy vos para exigirme? Bueno, se lo va a exigir claro igual en algún momento, ¿bien? Pues, pase mis problemas con claro. Pase mis problemas con claro, de movilidad no me llames más, ¿ok? Bueno, voy a introducir a Lendre. A Lendre. A Lendre. ¿Cómo te llamas?",
+      "confianza": 0.429,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas tardes. Hablo con José Colman. ¿Quién habla? Mi nombre es Macarena. Estamos en demovistar para poder darles una nueva promoción por su línea. Macarena, ¿podés informar con un cartel gigante que José Colman hace dos meses le dije a cada uno que llama en mis cuatro líneas por labor que tengo, que José Colman falleció. Ya no existe más José Colman. Que no llames más, por favor. ¿Han hecho el cambio de titularidad? ¿Qué? Si José falleció, tienen que hacerlo, que es un cambio de titularidad por las líneas, para que no lo vuelvan a llamar. Yo no pertenezco a su empresa. ¿Qué cambio de titularidad me decís? Claro, pero igualmente el Claro lo debe realizar. ¿Por qué? Porque, imagínense ustedes, está utilizándose en el de alguien que falleció. ¿Y por qué sabe que es el Claro? A ver. Y porque es obvio que no es que hace movistar. Tenemos una base de datos para llamar exclusivamente a clientes de Claro que estuvieron anteriormente en movistar. Ah, mira vos, si vos me exigís, yo te voy a hacer el cambio. ¿Quién soy vos para exigirme? Bueno, se lo va a exigir claro igual en algún momento, ¿bien? Pues, pase mis problemas con claro. Pase mis problemas con claro, de movilidad no me llames más, ¿ok? Bueno, voy a introducir a Lendre. A Lendre. A Lendre. ¿Cómo te llamas?",
+  "calidad": {
+    "confianza_promedio": 0.426,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:24:30.271907",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 31,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:26.186831",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114140406914_ACD_73429",
+    "fecha_inicio": "14/1/2026 14:04:06",
+    "agente_nombre": "MZA 3",
+    "agente_login": "mza3",
+    "duracion_total": 122,
+    "tiempo_conversacion": 98,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

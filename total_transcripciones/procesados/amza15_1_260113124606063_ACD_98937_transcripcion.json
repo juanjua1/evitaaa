@@ -1,0 +1,119 @@
+{
+  "archivo": "amza15_1_260113124606063_ACD_98937.wav",
+  "duracion_segundos": 63.42,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.86,
+    "Cliente": 53.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.96,
+      "fin": 14.8,
+      "duracion": 13.84,
+      "texto": "Hola. Sí, ¿quién habla? Carina, a mi nombre me gustó lo que estabas contactando para brindarte una promoción exclusiva en el día de hoy a tu línea del área de beneficios de movistar.",
+      "confianza": 0.199,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.8,
+      "fin": 27.25,
+      "duracion": 11.45,
+      "texto": "Actualmente te encontrás con claro, ¿verdad? Sí, pero mira, justo ahora estoy viajando. Bien, decime en qué hora el día me pueda volver a contactar.",
+      "confianza": 0.659,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.46,
+      "fin": 38.94,
+      "duracion": 10.48,
+      "texto": "Si querés, lo que te puedo ofrecer es que me pases la propuesta por WhatsApp. Porque hoy trabajo hasta las 20 horas. No es el mismo número, pero si querés te lo paso. ¿Tenés para anotar?",
+      "confianza": 0.688,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 39.62,
+      "fin": 47.09,
+      "duracion": 7.47,
+      "texto": "Sí, recibe. Dale.",
+      "confianza": 0.607,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.18,
+      "fin": 50.04,
+      "duracion": 0.86,
+      "texto": "11-56-00-4728.",
+      "confianza": 0.914,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.58,
+      "fin": 56.77,
+      "duracion": 4.19,
+      "texto": "Perfecto. Bueno, y ahora nos mantenemos en contacto, ¿sí?",
+      "confianza": 0.693,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.46,
+      "fin": 63.42,
+      "duracion": 5.96,
+      "texto": "Ahora te invito a la promoción por WhatsApp. Hices muy bien, hasta luego.",
+      "confianza": 0.331,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Sí, ¿quién habla? Carina, a mi nombre me gustó lo que estabas contactando para brindarte una promoción exclusiva en el día de hoy a tu línea del área de beneficios de movistar. Actualmente te encontrás con claro, ¿verdad? Sí, pero mira, justo ahora estoy viajando. Bien, decime en qué hora el día me pueda volver a contactar. Si querés, lo que te puedo ofrecer es que me pases la propuesta por WhatsApp. Porque hoy trabajo hasta las 20 horas. No es el mismo número, pero si querés te lo paso. ¿Tenés para anotar? Sí, recibe. Dale. 11-56-00-4728. Perfecto. Bueno, y ahora nos mantenemos en contacto, ¿sí? Ahora te invito a la promoción por WhatsApp. Hices muy bien, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.55,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:23:20.167005",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:14.995408",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113124606063_ACD_98937",
+    "fecha_inicio": "13/1/2026 12:46:06",
+    "agente_nombre": "MZA 15",
+    "agente_login": "mza15",
+    "duracion_total": 134,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 51,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_Mza_ALT",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "archivo": "amza32_1_260116110929586_ACD_46759.wav",
+  "duracion_segundos": 97.84,
+  "num_segmentos": 21,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 87.36,
+    "Cliente": 8.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.64,
+      "fin": 19.46,
+      "duracion": 18.82,
+      "texto": "Hola. Hola, buenas, buenos días. Mi nombre es Marina, hablo con Gazón. Sí, ¿y dónde me llamáis? Gazón, me gusta cómo estás el día de hoy, ¿todo bien? Todo bien. Me alegro. Gazón, yo estoy comunicando el día de hoy porque me afirmó que estás en la compañía de Claro, ¿es correcto?",
+      "confianza": 0.757,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.48,
+      "fin": 20.18,
+      "duracion": 0.7,
+      "texto": "Sí. Perfecto.",
+      "confianza": 0.026,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.2,
+      "fin": 35.56,
+      "duracion": 15.36,
+      "texto": "Yo me he comunicado la verdadera de beneficios del Movistar, más que nada porque queríamos conocer cuál fue el motivo por el cual te fuiste en la compañía. que tuviera que transmitir en 2024 estamos llamando justamente a los clientes para poder recuperarlos y que se saque de esa experiencia que tuvieron con la compañía.",
+      "confianza": 0.536,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 36.3,
+      "fin": 80.44,
+      "duracion": 44.14,
+      "texto": "Comentame cuál fue el motivo. La verdad fue que empecé a pagar de más cuando pedí que me hagan un descuento por ser cliente de muchísimos años, me dijeron que no. Entonces me fui y al otro día que me fui empezaron a llamar ofreciéndome descuentos. Me parece que no... No me voy a acudir a un cliente muchos años porque si me voy y al otro día me están llamando para ofrecerme es algo que es innecesario, también si me ofrecí el descuento y no me iba. En este caso te pido una disculpa Gastón, a ese tiempo no teníamos asesores como tenemos ahora, ahora tenemos una persona de asesores personalizados, en este caso tu asesora voy a ser yo,",
+      "confianza": 0.315,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 81.22,
+      "fin": 88.85,
+      "duracion": 7.63,
+      "texto": "Vos cualquier duda consulta que tengas, ya sea respecto a facturación, que no puedes activar algún beneficio.",
+      "confianza": 0.639,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 88.87,
+      "fin": 96.42,
+      "duracion": 7.55,
+      "texto": "Sí, pero yo por el momento no me quiero volver a pasar, porque me llaman todos los días y no me ofrecen algo mejor que lo que tengo, así que te agradezco.",
+      "confianza": 0.551,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 96.44,
+      "fin": 97.84,
+      "duracion": 1.41,
+      "texto": "Vos actualmente cuántos giras tienes?",
+      "confianza": 0.384,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas, buenos días. Mi nombre es Marina, hablo con Gazón. Sí, ¿y dónde me llamáis? Gazón, me gusta cómo estás el día de hoy, ¿todo bien? Todo bien. Me alegro. Gazón, yo estoy comunicando el día de hoy porque me afirmó que estás en la compañía de Claro, ¿es correcto? Sí. Perfecto. Yo me he comunicado la verdadera de beneficios del Movistar, más que nada porque queríamos conocer cuál fue el motivo por el cual te fuiste en la compañía. que tuviera que transmitir en 2024 estamos llamando justamente a los clientes para poder recuperarlos y que se saque de esa experiencia que tuvieron con la compañía. Comentame cuál fue el motivo. La verdad fue que empecé a pagar de más cuando pedí que me hagan un descuento por ser cliente de muchísimos años, me dijeron que no. Entonces me fui y al otro día que me fui empezaron a llamar ofreciéndome descuentos. Me parece que no... No me voy a acudir a un cliente muchos años porque si me voy y al otro día me están llamando para ofrecerme es algo que es innecesario, también si me ofrecí el descuento y no me iba. En este caso te pido una disculpa Gastón, a ese tiempo no teníamos asesores como tenemos ahora, ahora tenemos una persona de asesores personalizados, en este caso tu asesora voy a ser yo, Vos cualquier duda consulta que tengas, ya sea respecto a facturación, que no puedes activar algún beneficio. Sí, pero yo por el momento no me quiero volver a pasar, porque me llaman todos los días y no me ofrecen algo mejor que lo que tengo, así que te agradezco. Vos actualmente cuántos giras tienes?",
+  "calidad": {
+    "confianza_promedio": 0.447,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:41:10.813181",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:23.681039",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116110929586_ACD_46759",
+    "fecha_inicio": "16/1/2026 11:09:29",
+    "agente_nombre": "MZA 32",
+    "agente_login": "mza32",
+    "duracion_total": 118,
+    "tiempo_conversacion": 94,
+    "tiempo_hold": 0,
+    "tiempo_acw": 11,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "archivo": "amza45_1_260115142853882_ACD_13659.wav",
+  "duracion_segundos": 70.08,
+  "num_segmentos": 22,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 66.83,
+    "Cliente": 0.6
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 7.5,
+      "duracion": 7.47,
+      "texto": "Hola, ¿qué tal? ¿Me comunico con Oscar?",
+      "confianza": 0.089,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 7.52,
+      "fin": 8.12,
+      "duracion": 0.6,
+      "texto": "Sí.",
+      "confianza": 0.476,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.14,
+      "fin": 23.66,
+      "duracion": 15.52,
+      "texto": "Bien, te comento Oscar, mi nombre es Jaira, me comunicabas con vos porque teníamos una promoción para tu línea, ¿bien? Veo que bueno, ahora estamos con... ¿Ves? ¿Deseas mostrarme el comunicón? ¿Es verdad que vos ahora estás con claro? No, no me jodas más, no. Ya le dije que pago barato, de claro.",
+      "confianza": 0.428,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 24.65,
+      "fin": 40.84,
+      "duracion": 16.19,
+      "texto": "Ah, bien, claro, pues es que aseguraba como que estaba pagando un poquito de más así, entonces por eso por ahí no fue gastado. No, estoy pagando menos de cuatro mil pesos. Doce gigas. No tienen un plan. Menos de cuatro mil. Sí, tres mil novecientos.",
+      "confianza": 0.216,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 41.92,
+      "fin": 54.35,
+      "duracion": 12.43,
+      "texto": "Y monedita. ¿Está como pre-pago o bueno? No, una bueno. Pero entré en una promoción el año pasado porque estaba por viajar y movistar no tenía roaming.",
+      "confianza": 0.081,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.86,
+      "fin": 70.08,
+      "duracion": 15.22,
+      "texto": "y por eso me pasé a claro. ¿Tienes algo mejor para ofrecerme o no? No, no, por el momento no.",
+      "confianza": 0.727,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Me comunico con Oscar? Sí. Bien, te comento Oscar, mi nombre es Jaira, me comunicabas con vos porque teníamos una promoción para tu línea, ¿bien? Veo que bueno, ahora estamos con... ¿Ves? ¿Deseas mostrarme el comunicón? ¿Es verdad que vos ahora estás con claro? No, no me jodas más, no. Ya le dije que pago barato, de claro. Ah, bien, claro, pues es que aseguraba como que estaba pagando un poquito de más así, entonces por eso por ahí no fue gastado. No, estoy pagando menos de cuatro mil pesos. Doce gigas. No tienen un plan. Menos de cuatro mil. Sí, tres mil novecientos. Y monedita. ¿Está como pre-pago o bueno? No, una bueno. Pero entré en una promoción el año pasado porque estaba por viajar y movistar no tenía roaming. y por eso me pasé a claro. ¿Tienes algo mejor para ofrecerme o no? No, no, por el momento no.",
+  "calidad": {
+    "confianza_promedio": 0.392,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:15:45.683434",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:29.269349",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115142853882_ACD_13659",
+    "fecha_inicio": "15/1/2026 14:28:53",
+    "agente_nombre": "MZA 45",
+    "agente_login": "mza45",
+    "duracion_total": 89,
+    "tiempo_conversacion": 67,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

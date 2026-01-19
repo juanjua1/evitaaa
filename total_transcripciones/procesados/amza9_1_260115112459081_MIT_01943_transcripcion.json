@@ -1,0 +1,138 @@
+{
+  "archivo": "amza9_1_260115112459081_MIT_01943.wav",
+  "duracion_segundos": 72.12,
+  "num_segmentos": 29,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.88,
+    "Cliente": 43.85
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 21.43,
+      "duracion": 21.4,
+      "texto": "Hola.",
+      "confianza": 0.327,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.1,
+      "fin": 37.6,
+      "duracion": 15.5,
+      "texto": "¿Ale? ¿Me escuchas? ¿Estás por la casa? ¿Estás conduciendo? ¿Quién habla? Estoy tomando un poco de movistar. Ah, ¿cómo estás? ¿Cómo estás Tomás? Estoy conduciendo. Hablamos en otro momento. ¿Quién? ¿En cuánto llegas a la oficina y te llamo?",
+      "confianza": 0.479,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 38.84,
+      "fin": 43.81,
+      "duracion": 4.97,
+      "texto": "Eh, no, no. Es lo que hacemos. ¿Dónde te amigas? Yo me toca el día de... De también, por favor.",
+      "confianza": 0.719,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 44.49,
+      "fin": 45.23,
+      "duracion": 0.74,
+      "texto": "Por la calle.",
+      "confianza": 0.558,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 45.87,
+      "fin": 46.81,
+      "duracion": 0.94,
+      "texto": "Bueno, ¿y mañana podrías?",
+      "confianza": 0.5,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 48.98,
+      "fin": 49.27,
+      "duracion": 0.3,
+      "texto": "Sí, sí, sí, sí.",
+      "confianza": 0.094,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.58,
+      "fin": 58.25,
+      "duracion": 8.67,
+      "texto": "En qué horario, Ale? En qué horario, Ale? Perdón, mañana?",
+      "confianza": 0.216,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.15,
+      "fin": 65.22,
+      "duracion": 6.07,
+      "texto": "No, no, que a mí todavía no se arruinó nada. ¿Qué se puede hacer cuando cierre el medeclar?",
+      "confianza": 0.408,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 65.98,
+      "fin": 72.12,
+      "duracion": 6.14,
+      "texto": "Ah, todavía no ha apagado nada. No, no. Listo, gracias. Gracias a vos.",
+      "confianza": 0.212,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. ¿Ale? ¿Me escuchas? ¿Estás por la casa? ¿Estás conduciendo? ¿Quién habla? Estoy tomando un poco de movistar. Ah, ¿cómo estás? ¿Cómo estás Tomás? Estoy conduciendo. Hablamos en otro momento. ¿Quién? ¿En cuánto llegas a la oficina y te llamo? Eh, no, no. Es lo que hacemos. ¿Dónde te amigas? Yo me toca el día de... De también, por favor. Por la calle. Bueno, ¿y mañana podrías? Sí, sí, sí, sí. En qué horario, Ale? En qué horario, Ale? Perdón, mañana? No, no, que a mí todavía no se arruinó nada. ¿Qué se puede hacer cuando cierre el medeclar? Ah, todavía no ha apagado nada. No, no. Listo, gracias. Gracias a vos.",
+  "calidad": {
+    "confianza_promedio": 0.392,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:21:29.263965",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 29,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:33.282075",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115112459081_MIT_01943",
+    "fecha_inicio": "15/1/2026 11:25:00",
+    "agente_nombre": "MZA 9",
+    "agente_login": "mza9",
+    "duracion_total": 75,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

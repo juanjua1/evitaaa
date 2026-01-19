@@ -1,0 +1,138 @@
+{
+  "archivo": "amza23_1_260115141911327_ACD_82897.wav",
+  "duracion_segundos": 74.74,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 6.75,
+    "Cliente": 59.7
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 0.51,
+      "duracion": 0.48,
+      "texto": "Hola.",
+      "confianza": 0.477,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 1.99,
+      "fin": 6.82,
+      "duracion": 4.83,
+      "texto": "Hola, ¿qué tal? Buenas tardes. Macarena es mi nombre. ¿Nos estamos contactando con Gabriel?",
+      "confianza": 0.477,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.2,
+      "fin": 9.91,
+      "duracion": 1.7,
+      "texto": "Sí, ¿me habla de Movistar, Macarena?",
+      "confianza": 0.753,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.41,
+      "fin": 19.74,
+      "duracion": 9.33,
+      "texto": "Así es. Sí, no puedo tener Movistar porque no tengo señal donde vivo en la zona. 6 putas, 6 cardales.",
+      "confianza": 0.552,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.7,
+      "fin": 22.77,
+      "duracion": 2.06,
+      "texto": "No le quiero perder.",
+      "confianza": 0.539,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.79,
+      "fin": 26.13,
+      "duracion": 3.34,
+      "texto": "De todos modos, me figura que usted se juace bastante de la compañía.",
+      "confianza": 0.563,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 26.19,
+      "fin": 55.42,
+      "duracion": 29.23,
+      "texto": "No sé si lograr informarle que... Mi pareja... No, no. Mi pareja tiene un movistar que no se la cambia y no podemos hablar directamente cuando está acá. Bien, pero porque ella no debe tener el chip 5G. Seguramente. Sí, como no va a tener, se compró. Sí, sí, sí, tiene chip. Pertenece a Claro y tiene chip 5G. Pertenece a movistar, claro. Claro me pareció que tenía joyo.",
+      "confianza": 0.505,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 57.15,
+      "fin": 60.56,
+      "duracion": 3.41,
+      "texto": "Bueno, y respecto al servicio de Internet, ¿le pudieron comentar?",
+      "confianza": 0.739,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.67,
+      "fin": 74.74,
+      "duracion": 12.07,
+      "texto": "No, pero yo vivo en un condomínio que ya tengo Internet, no podría poner otro Internet que no sea el de ellos, que es Fisnet. Bueno, no hay problema, que esté muy bien.",
+      "confianza": 0.574,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buenas tardes. Macarena es mi nombre. ¿Nos estamos contactando con Gabriel? Sí, ¿me habla de Movistar, Macarena? Así es. Sí, no puedo tener Movistar porque no tengo señal donde vivo en la zona. 6 putas, 6 cardales. No le quiero perder. De todos modos, me figura que usted se juace bastante de la compañía. No sé si lograr informarle que... Mi pareja... No, no. Mi pareja tiene un movistar que no se la cambia y no podemos hablar directamente cuando está acá. Bien, pero porque ella no debe tener el chip 5G. Seguramente. Sí, como no va a tener, se compró. Sí, sí, sí, tiene chip. Pertenece a Claro y tiene chip 5G. Pertenece a movistar, claro. Claro me pareció que tenía joyo. Bueno, y respecto al servicio de Internet, ¿le pudieron comentar? No, pero yo vivo en un condomínio que ya tengo Internet, no podría poner otro Internet que no sea el de ellos, que es Fisnet. Bueno, no hay problema, que esté muy bien.",
+  "calidad": {
+    "confianza_promedio": 0.555,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:21:47.344936",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:18.515497",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115141911327_ACD_82897",
+    "fecha_inicio": "15/1/2026 14:19:11",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 107,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 20,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Problemas de señal MVS en su zona",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "archivo": "amza43_1_260114115636963_ACD_73557.wav",
+  "duracion_segundos": 75.18,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 32.98,
+    "Cliente": 35.3
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.38,
+      "fin": 3.64,
+      "duracion": 2.26,
+      "texto": "Hola, buen día, ¿me comunico con Tatiana?",
+      "confianza": 0.737,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.93,
+      "fin": 15.94,
+      "duracion": 11.01,
+      "texto": "Sí. ¿Cómo te va? Franco es mi nombre, ¿me comunicaba al día de hoy para hacerte llegar una promoción para tus líneas móviles que verifico acá que hay cuatro más estas por lo que veo?",
+      "confianza": 0.56,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 18.05,
+      "fin": 42.8,
+      "duracion": 24.75,
+      "texto": "Sí, son cinco líneas y también tengo internet. En realidad hace poco renové con la empresa Alfonso Nuclaro y bueno, es porque me hicieron una promo, así que por ahora estoy bien asistida. Y esa promo, ¿cuánto más o menos te están brindando? Ay, no te sabía decir. Porque lo hizo mi marido, aunque la cuenta era mi nombre. Así que no me acuerdo ahora cuánto estamos facturando, de cuánto es la factura.",
+      "confianza": 0.174,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 43.34,
+      "fin": 51.57,
+      "duracion": 8.23,
+      "texto": "Pero están las cinco líneas en mi internet. Vería el sistema que son algo de 70, más o menos. Pero bueno, sí, acaban de renovar por ahí.",
+      "confianza": 0.48,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 53.15,
+      "fin": 75.18,
+      "duracion": 22.03,
+      "texto": "Sí, la verdad, mira, no te sabría decir exactamente. Si querés mandame un whatsapp, entonces yo más tarde, porque yo ahora estoy todo trabajando, me fijo en la factura, que si yo, si me interesa lo último a la promo, te contesto, ¿ah? Bueno, dale, porque tengo una oferta un poco mejor, digamos, de la que tenés, claro. Pero bueno, ahí te escribo. Dale, dale, dale. Gracias, Franco.",
+      "confianza": 0.712,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, ¿me comunico con Tatiana? Sí. ¿Cómo te va? Franco es mi nombre, ¿me comunicaba al día de hoy para hacerte llegar una promoción para tus líneas móviles que verifico acá que hay cuatro más estas por lo que veo? Sí, son cinco líneas y también tengo internet. En realidad hace poco renové con la empresa Alfonso Nuclaro y bueno, es porque me hicieron una promo, así que por ahora estoy bien asistida. Y esa promo, ¿cuánto más o menos te están brindando? Ay, no te sabía decir. Porque lo hizo mi marido, aunque la cuenta era mi nombre. Así que no me acuerdo ahora cuánto estamos facturando, de cuánto es la factura. Pero están las cinco líneas en mi internet. Vería el sistema que son algo de 70, más o menos. Pero bueno, sí, acaban de renovar por ahí. Sí, la verdad, mira, no te sabría decir exactamente. Si querés mandame un whatsapp, entonces yo más tarde, porque yo ahora estoy todo trabajando, me fijo en la factura, que si yo, si me interesa lo último a la promo, te contesto, ¿ah? Bueno, dale, porque tengo una oferta un poco mejor, digamos, de la que tenés, claro. Pero bueno, ahí te escribo. Dale, dale, dale. Gracias, Franco.",
+  "calidad": {
+    "confianza_promedio": 0.585,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:57:03.214097",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 19,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:28.120203",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114115636963_ACD_73557",
+    "fecha_inicio": "14/1/2026 11:56:36",
+    "agente_nombre": "MZA 43",
+    "agente_login": "mza43",
+    "duracion_total": 206,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 121,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No Disp.",
+    "tipo_tipificacion": "nan"
+  }
+}

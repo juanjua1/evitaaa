@@ -1,0 +1,92 @@
+{
+  "archivo": "amza3_1_260114120037920_ACD_83931.wav",
+  "duracion_segundos": 83.63,
+  "num_segmentos": 30,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 13.5,
+    "Cliente": 54.92
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 5.52,
+      "duracion": 5.49,
+      "texto": "Hola, buenos días. Hablo con Héctor Coría, con una de las líneas de Héctor.",
+      "confianza": 0.608,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 10.09,
+      "fin": 45.38,
+      "duracion": 35.29,
+      "texto": "Eh, no. Yo tengo el gusto de mezclar como titular de la línea. No sé si tenías conocimiento de esto. ¿Quién habla? Estamos hablando desde Movistar para poder darles una nueva promoción por las líneas. No sé si te puedo comentar a vos. Bueno, sí, yo hablo de la línea. Bueno, ya que me hablo sin movistar, necesito saber algo. Dime, dime. Tengo otro número con movistar. Intento llamar para que me cambien a tarjeta. ¿Cómo? ¿En qué número tengo que llamar? Porque no tengo ni una opción. ¿Tienes que tener un 0800 directo?",
+      "confianza": 0.084,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.74,
+      "fin": 66.37,
+      "duracion": 19.63,
+      "texto": "Dale. ¿Un 0800 tenés para notar? Espérame, un segundo. Sí, decime. 0800-321. 321. 76782, opción 4. 76782. Sí. Opción 4.",
+      "confianza": 0.895,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 75.62,
+      "fin": 83.63,
+      "duracion": 8.01,
+      "texto": "Dale, gracias. Bueno, que tengas buen día. Buen día.",
+      "confianza": 0.79,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Héctor Coría, con una de las líneas de Héctor. Eh, no. Yo tengo el gusto de mezclar como titular de la línea. No sé si tenías conocimiento de esto. ¿Quién habla? Estamos hablando desde Movistar para poder darles una nueva promoción por las líneas. No sé si te puedo comentar a vos. Bueno, sí, yo hablo de la línea. Bueno, ya que me hablo sin movistar, necesito saber algo. Dime, dime. Tengo otro número con movistar. Intento llamar para que me cambien a tarjeta. ¿Cómo? ¿En qué número tengo que llamar? Porque no tengo ni una opción. ¿Tienes que tener un 0800 directo? Dale. ¿Un 0800 tenés para notar? Espérame, un segundo. Sí, decime. 0800-321. 321. 76782, opción 4. 76782. Sí. Opción 4. Dale, gracias. Bueno, que tengas buen día. Buen día.",
+  "calidad": {
+    "confianza_promedio": 0.54,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:23:54.848032",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 30,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:26.156090",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114120037920_ACD_83931",
+    "fecha_inicio": "14/1/2026 12:00:37",
+    "agente_nombre": "MZA 3",
+    "agente_login": "mza3",
+    "duracion_total": 179,
+    "tiempo_conversacion": 80,
+    "tiempo_hold": 0,
+    "tiempo_acw": 69,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

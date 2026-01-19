@@ -1,0 +1,111 @@
+{
+  "archivo": "amza72_1_260116131747079_ACD_04071.wav",
+  "duracion_segundos": 88.07,
+  "num_segmentos": 27,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 20.46,
+    "Cliente": 56.67
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.69,
+      "fin": 12.1,
+      "duracion": 10.41,
+      "texto": "Hola, así que tal? Hablo con Luz. Sí, aparte de quién? Luz, cómo te va? Te habla Marcos. Te he llamado al día de hoy, Luz, porque estamos cargando beneficios para toda la familia.",
+      "confianza": 0.281,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 12.66,
+      "fin": 16.1,
+      "duracion": 3.44,
+      "texto": "Vetificamos que el bonde está actualmente en lo que es la compañía de Claro.",
+      "confianza": 0.654,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.35,
+      "fin": 44.72,
+      "duracion": 25.37,
+      "texto": "Sí. Bien, buenísimo. Al día de hoy queríamos recibirte lo que es con una prótomo en el área Movistar, porque Movistar está haciendo lo que es un recambio de personal para que todos tengan nuevos beneficios, ¿sí? Vos actualmente, Luz, con tu línea actual de Claro. ¿Cuántos días estás ocupando al mes? No tengo idea. La verdad que no sé. Ah, lo que pasa es que ocupás nomás el paquete, básicamente.",
+      "confianza": 0.048,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 47.87,
+      "fin": 49.55,
+      "duracion": 1.68,
+      "texto": "Sí, sí, hace poco.",
+      "confianza": 0.13,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.57,
+      "fin": 56.18,
+      "duracion": 6.61,
+      "texto": "Igual lo empecé de nuevo. Así que no estoy interesada todavía en cambiarme. Ah, perfecto, perfecto. ¿Hace cuánto que te cambiaste de compañía?",
+      "confianza": 0.042,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 58.45,
+      "fin": 88.07,
+      "duracion": 29.62,
+      "texto": "Hace unos meses, recién. Bueno, mira, la promoción que hoy tenemos para vos es una promoción económica que justamente es para que tengas más beneficios y que tengas también lo que es un precio accesible al día de hoy, ¿sí? ¿Vos hoy en día en claro cuánto estás arbonando? Ay, no tengo idea, amigo. Todavía no estoy interesada en cambiarme. Bueno, dale. Gracias, hasta luego.",
+      "confianza": 0.065,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, así que tal? Hablo con Luz. Sí, aparte de quién? Luz, cómo te va? Te habla Marcos. Te he llamado al día de hoy, Luz, porque estamos cargando beneficios para toda la familia. Vetificamos que el bonde está actualmente en lo que es la compañía de Claro. Sí. Bien, buenísimo. Al día de hoy queríamos recibirte lo que es con una prótomo en el área Movistar, porque Movistar está haciendo lo que es un recambio de personal para que todos tengan nuevos beneficios, ¿sí? Vos actualmente, Luz, con tu línea actual de Claro. ¿Cuántos días estás ocupando al mes? No tengo idea. La verdad que no sé. Ah, lo que pasa es que ocupás nomás el paquete, básicamente. Sí, sí, hace poco. Igual lo empecé de nuevo. Así que no estoy interesada todavía en cambiarme. Ah, perfecto, perfecto. ¿Hace cuánto que te cambiaste de compañía? Hace unos meses, recién. Bueno, mira, la promoción que hoy tenemos para vos es una promoción económica que justamente es para que tengas más beneficios y que tengas también lo que es un precio accesible al día de hoy, ¿sí? ¿Vos hoy en día en claro cuánto estás arbonando? Ay, no tengo idea, amigo. Todavía no estoy interesada en cambiarme. Bueno, dale. Gracias, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.384,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:48:59.469395",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 27,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:31.226917",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116131747079_ACD_04071",
+    "fecha_inicio": "16/1/2026 13:17:47",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 106,
+    "tiempo_conversacion": 84,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

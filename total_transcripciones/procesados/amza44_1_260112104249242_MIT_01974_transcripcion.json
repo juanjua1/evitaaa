@@ -1,0 +1,113 @@
+{
+  "archivo": "amza44_1_260112104249242_MIT_01974.wav",
+  "duracion_segundos": 62.25,
+  "num_segmentos": 23,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 9.29,
+    "Cliente": 37.67
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 14.21,
+      "fin": 33.47,
+      "duracion": 19.26,
+      "texto": "Hola. Hola, ¿qué tal? Buen día. ¿Nicole? Sí, ¿quién habla? Hola, ¿qué tal? Soy Rodrigo, el Movistar. No sé si recuerdas que estuvimos hablando este... Ah, sí.",
+      "confianza": 0.212,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 34.49,
+      "fin": 49.22,
+      "duracion": 14.73,
+      "texto": "Justo estoy acá yendo que me estoy haciendo unos trámites y ahora estoy quedando. Ah, ok, entiendo. Que me estoy haciendo el registro. Si me llamas en un rato estoy... Sí, sí, excelente. ¿En qué hora lío, más o menos? ¿Le parece bien? Ahora, en dos horitas. A dos horitas, hoy. OK.",
+      "confianza": 0.257,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.22,
+      "fin": 54.5,
+      "duracion": 5.28,
+      "texto": "Bueno, a las doce... Estoy haciendo un camino a domicilio, así que tengo que hacer el tranferío, nada más.",
+      "confianza": 0.561,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.52,
+      "fin": 55.82,
+      "duracion": 1.3,
+      "texto": "Ah, OK. Excelente, excelente.",
+      "confianza": 0.564,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.84,
+      "fin": 59.85,
+      "duracion": 4.01,
+      "texto": "Bueno, una menos cuarto, me estoy comunicando con usted, ¿sí?",
+      "confianza": 0.547,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.87,
+      "fin": 62.25,
+      "duracion": 2.38,
+      "texto": "Dale, gracias. Dale, excelente. Hasta luego.",
+      "confianza": 0.59,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buen día. ¿Nicole? Sí, ¿quién habla? Hola, ¿qué tal? Soy Rodrigo, el Movistar. No sé si recuerdas que estuvimos hablando este... Ah, sí. Justo estoy acá yendo que me estoy haciendo unos trámites y ahora estoy quedando. Ah, ok, entiendo. Que me estoy haciendo el registro. Si me llamas en un rato estoy... Sí, sí, excelente. ¿En qué hora lío, más o menos? ¿Le parece bien? Ahora, en dos horitas. A dos horitas, hoy. OK. Bueno, a las doce... Estoy haciendo un camino a domicilio, así que tengo que hacer el tranferío, nada más. Ah, OK. Excelente, excelente. Bueno, una menos cuarto, me estoy comunicando con usted, ¿sí? Dale, gracias. Dale, excelente. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:01:25.341447",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:28.436286",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112104249242_MIT_01974",
+    "fecha_inicio": "12/1/2026 10:42:49",
+    "agente_nombre": "MZA 44",
+    "agente_login": "mza44",
+    "duracion_total": 65,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "No Disp.",
+    "tipo_tipificacion": "nan"
+  }
+}

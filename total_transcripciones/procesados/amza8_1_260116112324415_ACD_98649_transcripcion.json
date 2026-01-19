@@ -1,0 +1,148 @@
+{
+  "archivo": "amza8_1_260116112324415_ACD_98649.wav",
+  "duracion_segundos": 70.93,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 35.17,
+    "Cliente": 20.94
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.0,
+      "fin": 6.35,
+      "duracion": 4.35,
+      "texto": "Hola, ¿qué tal? Buen día, hablo con un telar. No, ¿quién habla?",
+      "confianza": 0.462,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.31,
+      "fin": 11.46,
+      "duracion": 4.14,
+      "texto": "Mi nombre es Tiago, yo me estuve con una candelería de recuperación de clientes de Movistar.",
+      "confianza": 0.634,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.14,
+      "fin": 15.18,
+      "duracion": 3.04,
+      "texto": "¿Ahora sabés por qué se ha ido a la compañía? ¿Cuál fue ese inconveniente?",
+      "confianza": 0.5,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.73,
+      "fin": 28.64,
+      "duracion": 7.91,
+      "texto": "Este, no, no, el teléfono es mío. Yo soy la titular del teléfono. Ah, usted es la titular, genial, perfecto. ¿Y por qué se fue a la compañía de Movistar?",
+      "confianza": 0.012,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 29.98,
+      "fin": 39.17,
+      "duracion": 9.19,
+      "texto": "de movistar porque no me pertenecía, le puse otra chica a mi teléfono que es claro ahora. Claro, exacto.",
+      "confianza": 0.601,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 39.19,
+      "fin": 40.79,
+      "duracion": 1.6,
+      "texto": "Sí, sí, sí, me figura.",
+      "confianza": 0.101,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.81,
+      "fin": 44.04,
+      "duracion": 3.22,
+      "texto": "Y usted actualmente cuándo está pagando por ser en el celular, es claro.",
+      "confianza": 0.55,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 44.7,
+      "fin": 55.41,
+      "duracion": 10.71,
+      "texto": "No, no, no, yo lo pago así, cómo se dice, en Facebook. Es prepada. O sea, con la... Es prepada. Claro, es prepada.",
+      "confianza": 0.355,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.85,
+      "fin": 59.99,
+      "duracion": 2.14,
+      "texto": "Perfecto, bueno.",
+      "confianza": 0.387,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 61.12,
+      "fin": 70.93,
+      "duracion": 9.81,
+      "texto": "Perfecto. Hasta luego. Hasta luego.",
+      "confianza": 0.368,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, hablo con un telar. No, ¿quién habla? Mi nombre es Tiago, yo me estuve con una candelería de recuperación de clientes de Movistar. ¿Ahora sabés por qué se ha ido a la compañía? ¿Cuál fue ese inconveniente? Este, no, no, el teléfono es mío. Yo soy la titular del teléfono. Ah, usted es la titular, genial, perfecto. ¿Y por qué se fue a la compañía de Movistar? de movistar porque no me pertenecía, le puse otra chica a mi teléfono que es claro ahora. Claro, exacto. Sí, sí, sí, me figura. Y usted actualmente cuándo está pagando por ser en el celular, es claro. No, no, no, yo lo pago así, cómo se dice, en Facebook. Es prepada. O sea, con la... Es prepada. Claro, es prepada. Perfecto, bueno. Perfecto. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.438,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:12:59.031612",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:32.726708",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116112324415_ACD_98649",
+    "fecha_inicio": "16/1/2026 11:23:24",
+    "agente_nombre": "MZA 8",
+    "agente_login": "mza8",
+    "duracion_total": 95,
+    "tiempo_conversacion": 69,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

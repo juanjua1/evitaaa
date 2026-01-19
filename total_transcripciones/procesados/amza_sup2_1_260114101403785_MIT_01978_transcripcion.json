@@ -1,0 +1,51 @@
+{
+  "archivo": "amza_sup2_1_260114101403785_MIT_01978.wav",
+  "duracion_segundos": 15.49,
+  "num_segmentos": 1,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 14.8,
+    "Cliente": 0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.69,
+      "fin": 15.49,
+      "duracion": 14.8,
+      "texto": "¿Te molestará igualmente si te envío la propuesta por whatsapp?",
+      "confianza": 0.603,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Te molestará igualmente si te envío la propuesta por whatsapp?",
+  "calidad": {
+    "confianza_promedio": 0.603,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:33:11.940243",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 1,
+    "total_segmentos_corregido": 1,
+    "fecha_correccion": "2026-01-18T23:05:34.078940",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114101403785_MIT_01978",
+    "sin_datos_basurita": true
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "archivo": "amza41_1_260114142128339_ACD_25689.wav",
+  "duracion_segundos": 63.16,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 10.53,
+    "Cliente": 43.65
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.17,
+      "fin": 8.51,
+      "duracion": 6.34,
+      "texto": "Hola, buen día, ¿no? ¿Con Daniel? No, el hermano. Qué tal, tengo gusto.",
+      "confianza": 0.157,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.13,
+      "fin": 13.31,
+      "duracion": 4.19,
+      "texto": "Pero habla Marina, ¿me comunicabas de Movistar para brindarme una promoción en la línea?",
+      "confianza": 0.612,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.16,
+      "fin": 16.66,
+      "duracion": 1.5,
+      "texto": "Sí, pues ya te comunicaron conmigo.",
+      "confianza": 0.485,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 17.52,
+      "fin": 27.02,
+      "duracion": 9.5,
+      "texto": "Bien. Había quedado que me pasen un teléfono porque tenía que cambiar la titularidad y no me lo pasaron, así que si me...",
+      "confianza": 0.745,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.96,
+      "fin": 43.08,
+      "duracion": 15.12,
+      "texto": "Así que si tenéis en contacto un WhatsApp para mandarme con el número para cambiar la singularidad, mandamelo por favor. No lo puede realizar primero al trámite y después hasta el cambio, así sería mucho más fácil.",
+      "confianza": 0.699,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 44.31,
+      "fin": 58.84,
+      "duracion": 14.53,
+      "texto": "Y lo que pasa es que ahora yo estoy trabajando, se me complica un poco. Si después de las cuatro de la tarde podés llamarme, sí. Pero ahora en ese momento estoy complicado. Bueno, mira, yo te dejo un mensaje por WhatsApp, te dejo las promociones también para que lo puedas ver y ahí seguimos charlando, ¿sí?",
+      "confianza": 0.437,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 59.48,
+      "fin": 60.28,
+      "duracion": 0.8,
+      "texto": "Ok, perfecto.",
+      "confianza": 0.615,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.96,
+      "fin": 63.16,
+      "duracion": 2.2,
+      "texto": "Vale, gracias. Hasta luego, chau.",
+      "confianza": 0.481,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, ¿no? ¿Con Daniel? No, el hermano. Qué tal, tengo gusto. Pero habla Marina, ¿me comunicabas de Movistar para brindarme una promoción en la línea? Sí, pues ya te comunicaron conmigo. Bien. Había quedado que me pasen un teléfono porque tenía que cambiar la titularidad y no me lo pasaron, así que si me... Así que si tenéis en contacto un WhatsApp para mandarme con el número para cambiar la singularidad, mandamelo por favor. No lo puede realizar primero al trámite y después hasta el cambio, así sería mucho más fácil. Y lo que pasa es que ahora yo estoy trabajando, se me complica un poco. Si después de las cuatro de la tarde podés llamarme, sí. Pero ahora en ese momento estoy complicado. Bueno, mira, yo te dejo un mensaje por WhatsApp, te dejo las promociones también para que lo puedas ver y ahí seguimos charlando, ¿sí? Ok, perfecto. Vale, gracias. Hasta luego, chau.",
+  "calidad": {
+    "confianza_promedio": 0.52,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T20:39:22.068966",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:27.089047",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114142128339_ACD_25689",
+    "fecha_inicio": "14/1/2026 14:21:28",
+    "agente_nombre": "MZA 41",
+    "agente_login": "mza41",
+    "duracion_total": 105,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 25,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

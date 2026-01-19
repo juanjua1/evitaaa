@@ -1,0 +1,119 @@
+{
+  "archivo": "amza31_1_260112121216644_ACD_68813.wav",
+  "duracion_segundos": 73.63,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 1.1,
+    "Cliente": 64.71
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 27.56,
+      "duracion": 27.53,
+      "texto": "Hola, buen día. Hola, buen día. Háblalo con Claudia. Como te va Claudia un gusto, Jessica te ha hablado desde lo que es el área de beneficios de Movistar. Queríamos brindarte una promoción exclusiva para tu línea. Escúchame una cosita, escúchame. Me llaman tres, cuatro veces todos los santos días. No me interesa porque ya conocí Movistar.",
+      "confianza": 0.076,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.38,
+      "fin": 39.18,
+      "duracion": 10.8,
+      "texto": "cuando te quieren enganchar te hacen todo, pero cuando vos te querés ir o querés bajar un poco no te dan ni pelota. Así que ya los conozco y te pido por favor.",
+      "confianza": 0.709,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.44,
+      "fin": 45.58,
+      "duracion": 5.15,
+      "texto": "Muchas veces me han dicho voy a dejar ahí que no molesten más pero lo siguen haciendo.",
+      "confianza": 0.715,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.42,
+      "fin": 51.73,
+      "duracion": 5.31,
+      "texto": "Aún con número privado llaman, quedan ahí mudos y luego cortan.",
+      "confianza": 0.684,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 54.0,
+      "fin": 55.1,
+      "duracion": 1.1,
+      "texto": "Así que por favor",
+      "confianza": 0.794,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 56.66,
+      "fin": 70.8,
+      "duracion": 14.14,
+      "texto": "No quiero opusiarse en mala educada, pero te canso. Sí, entiendo totalmente, Claudia. Bien, yo solamente estoy haciendo mi trabajo. Le quería comentar que nosotros al día de hoy estamos... Sí, tal vez, pero ya lo he dicho mil veces que no me interesa.",
+      "confianza": 0.166,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 71.84,
+      "fin": 73.63,
+      "duracion": 1.78,
+      "texto": "Bueno, lo voy a dejar registrado entonces.",
+      "confianza": 0.285,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hola, buen día. Háblalo con Claudia. Como te va Claudia un gusto, Jessica te ha hablado desde lo que es el área de beneficios de Movistar. Queríamos brindarte una promoción exclusiva para tu línea. Escúchame una cosita, escúchame. Me llaman tres, cuatro veces todos los santos días. No me interesa porque ya conocí Movistar. cuando te quieren enganchar te hacen todo, pero cuando vos te querés ir o querés bajar un poco no te dan ni pelota. Así que ya los conozco y te pido por favor. Muchas veces me han dicho voy a dejar ahí que no molesten más pero lo siguen haciendo. Aún con número privado llaman, quedan ahí mudos y luego cortan. Así que por favor No quiero opusiarse en mala educada, pero te canso. Sí, entiendo totalmente, Claudia. Bien, yo solamente estoy haciendo mi trabajo. Le quería comentar que nosotros al día de hoy estamos... Sí, tal vez, pero ya lo he dicho mil veces que no me interesa. Bueno, lo voy a dejar registrado entonces.",
+  "calidad": {
+    "confianza_promedio": 0.476,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:29:35.588360",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 18,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:22.936004",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112121216644_ACD_68813",
+    "fecha_inicio": "12/1/2026 12:12:16",
+    "agente_nombre": "MZA 31",
+    "agente_login": "mza31",
+    "duracion_total": 102,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

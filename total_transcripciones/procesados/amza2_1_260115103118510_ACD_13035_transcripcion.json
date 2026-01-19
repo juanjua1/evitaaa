@@ -1,0 +1,142 @@
+{
+  "archivo": "amza2_1_260115103118510_ACD_13035.wav",
+  "duracion_segundos": 70.4,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 54.2,
+    "Cliente": 9.93
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 6.52,
+      "duracion": 6.49,
+      "texto": "Hola. Hola, ¿qué tal? Buen día. Hablo con María Teresa.",
+      "confianza": 0.471,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.54,
+      "fin": 6.6,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.076,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.62,
+      "fin": 22.41,
+      "duracion": 15.79,
+      "texto": "Un gusto. María, ¿cómo estás? Mi nombre es Lucia. Me estoy contactando desde el área de recupero clientes de Movistar para poder ofrecerte lo que es un número de descuento en tu línea. Actualmente te consultas con un claro, ¿verdad? Sí, me pasé a claro. Dejé a Movistar.",
+      "confianza": 0.748,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 22.43,
+      "fin": 23.49,
+      "duracion": 1.06,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.839,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 23.53,
+      "fin": 30.13,
+      "duracion": 6.6,
+      "texto": "Sí, me figura que el año pasado te pasaste a claro. ¿Y por algún motivo en especial fue usted de nuestra compañía?",
+      "confianza": 0.872,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 31.3,
+      "fin": 39.31,
+      "duracion": 8.01,
+      "texto": "Porque no lo soportaba más por lo caleros que eran. ¿Cómo, perdón? No lo soportaba más por lo caleros que eran.",
+      "confianza": 0.492,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.23,
+      "fin": 57.54,
+      "duracion": 17.31,
+      "texto": "Ah, por el precio, usted dice. Claro, ahora me lo vas a ofrecer más barato y después me lo subiste igual, esa historia ya me la hace hace diez años que estuve en Mauritán. Así que ya me lo sé de memoria toda la historia. En ese caso es lo que no está sucediendo actualmente.",
+      "confianza": 0.653,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.83,
+      "fin": 66.37,
+      "duracion": 5.54,
+      "texto": "Ustedes siempre dicen que haces rebajas porque no son iguales, así que ya no confío más en ustedes.",
+      "confianza": 0.44,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 67.13,
+      "fin": 70.4,
+      "duracion": 3.27,
+      "texto": "Así que fuera, no me hablen más.",
+      "confianza": 0.145,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buen día. Hablo con María Teresa. Sí. Un gusto. María, ¿cómo estás? Mi nombre es Lucia. Me estoy contactando desde el área de recupero clientes de Movistar para poder ofrecerte lo que es un número de descuento en tu línea. Actualmente te consultas con un claro, ¿verdad? Sí, me pasé a claro. Dejé a Movistar. Bien, perfecto. Sí, me figura que el año pasado te pasaste a claro. ¿Y por algún motivo en especial fue usted de nuestra compañía? Porque no lo soportaba más por lo caleros que eran. ¿Cómo, perdón? No lo soportaba más por lo caleros que eran. Ah, por el precio, usted dice. Claro, ahora me lo vas a ofrecer más barato y después me lo subiste igual, esa historia ya me la hace hace diez años que estuve en Mauritán. Así que ya me lo sé de memoria toda la historia. En ese caso es lo que no está sucediendo actualmente. Ustedes siempre dicen que haces rebajas porque no son iguales, así que ya no confío más en ustedes. Así que fuera, no me hablen más.",
+  "calidad": {
+    "confianza_promedio": 0.512,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:01:02.236637",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 24,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:21.115945",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115103118510_ACD_13035",
+    "fecha_inicio": "15/1/2026 10:31:18",
+    "agente_nombre": "MZA 2",
+    "agente_login": "mza2",
+    "duracion_total": 93,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

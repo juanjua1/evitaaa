@@ -1,0 +1,65 @@
+{
+  "archivo": "amza23_1_260116114608620_MIT_01982.wav",
+  "duracion_segundos": 64.36,
+  "num_segmentos": 20,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 43.42
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 20.94,
+      "fin": 64.36,
+      "duracion": 43.42,
+      "texto": "Hola. Hola. Hola. ¿Qué tal? Buen día, Anabelle. ¿Cómo están? ¿Qué tal? Le mataré en ademovistrar. Habíamos estado en contacto el otro día. Ya se había brindado una promoción. Pero en el día de hoy me estoy contactando porque está más económica la promoción. Eso se puede llegar a interesar. ¿Me puedes esperar un poquito? Porque estoy trabajando ahora. ¿Puede ser? Bien. Te envío un WhatsApp. Tienes tu número. Y en el caso de que te interese la promoción, ¿sí? Bien, te pido que me contestes cuanto antes porque la promoción es solo por hoy, ¿sí?",
+      "confianza": 0.203,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola. ¿Qué tal? Buen día, Anabelle. ¿Cómo están? ¿Qué tal? Le mataré en ademovistrar. Habíamos estado en contacto el otro día. Ya se había brindado una promoción. Pero en el día de hoy me estoy contactando porque está más económica la promoción. Eso se puede llegar a interesar. ¿Me puedes esperar un poquito? Porque estoy trabajando ahora. ¿Puede ser? Bien. Te envío un WhatsApp. Tienes tu número. Y en el caso de que te interese la promoción, ¿sí? Bien, te pido que me contestes cuanto antes porque la promoción es solo por hoy, ¿sí?",
+  "calidad": {
+    "confianza_promedio": 0.389,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:22:46.936255",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 20,
+    "total_segmentos_corregido": 1,
+    "fecha_correccion": "2026-01-18T23:05:18.577406",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116114608620_MIT_01982",
+    "fecha_inicio": "16/1/2026 11:46:09",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 113,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 48,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

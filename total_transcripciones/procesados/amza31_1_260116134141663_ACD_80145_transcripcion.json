@@ -1,0 +1,130 @@
+{
+  "archivo": "amza31_1_260116134141663_ACD_80145.wav",
+  "duracion_segundos": 64.09,
+  "num_segmentos": 25,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.74,
+    "Cliente": 59.01
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 12.79,
+      "duracion": 12.76,
+      "texto": "Hola, buen día, Fabrián. Hola, Fabrián, ¿cómo estás? Jessica te habla desde lo que es la tienda de beneficios de Movistar. Fabrián, ¿cómo estás el día de hoy? Como el horto.",
+      "confianza": 0.388,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 13.35,
+      "fin": 19.73,
+      "duracion": 6.38,
+      "texto": "¿Por qué esto es como el horto? Porque no quiero que me llame Movistar. Me llaman todos los días. Ya tuve la discusión con todo.",
+      "confianza": 0.527,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 20.47,
+      "fin": 22.22,
+      "duracion": 1.74,
+      "texto": "No quiero más Movistar.",
+      "confianza": 0.648,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 23.16,
+      "fin": 23.46,
+      "duracion": 0.3,
+      "texto": "No me interesa.",
+      "confianza": 0.052,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.26,
+      "fin": 33.12,
+      "duracion": 8.86,
+      "texto": "porque ya me vienen llamando hace un año. Hace un año le vengo diciendo lo mismo y no me dejan de llamar. ¿Qué tengo que hacer? Bien,",
+      "confianza": 0.023,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 33.12,
+      "fin": 33.86,
+      "duracion": 0.74,
+      "texto": "mirá, yo te comento.",
+      "confianza": 0.476,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 34.58,
+      "fin": 52.26,
+      "duracion": 17.68,
+      "texto": "Existen muchísimos call centers de Movistar, ¿bien? Es la primera que me comunico con vos, pero que voy a dejar registrado desde este call que no querés volver a ser contestado, ¿bien? De igual manera, yo te llamaba más que nada porque me asegura que estás pagando mucho en tu facturación de cláreo y la verdad es que me gustaría que no caigas tanto, si no, Blinder, tú te estás haciendo peor.",
+      "confianza": 0.602,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.8,
+      "fin": 64.09,
+      "duracion": 11.29,
+      "texto": "prefiero seguir pagando un montón antes que pasar más movilidad. Ah, bien, perfecto. Bueno, dale, seguir pagando un montón entonces. Que tengas un bonito día. Sí, igualmente. Hasta luego. Hasta luego.",
+      "confianza": 0.728,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, Fabrián. Hola, Fabrián, ¿cómo estás? Jessica te habla desde lo que es la tienda de beneficios de Movistar. Fabrián, ¿cómo estás el día de hoy? Como el horto. ¿Por qué esto es como el horto? Porque no quiero que me llame Movistar. Me llaman todos los días. Ya tuve la discusión con todo. No quiero más Movistar. No me interesa. porque ya me vienen llamando hace un año. Hace un año le vengo diciendo lo mismo y no me dejan de llamar. ¿Qué tengo que hacer? Bien, mirá, yo te comento. Existen muchísimos call centers de Movistar, ¿bien? Es la primera que me comunico con vos, pero que voy a dejar registrado desde este call que no querés volver a ser contestado, ¿bien? De igual manera, yo te llamaba más que nada porque me asegura que estás pagando mucho en tu facturación de cláreo y la verdad es que me gustaría que no caigas tanto, si no, Blinder, tú te estás haciendo peor. prefiero seguir pagando un montón antes que pasar más movilidad. Ah, bien, perfecto. Bueno, dale, seguir pagando un montón entonces. Que tengas un bonito día. Sí, igualmente. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.471,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:33:07.845712",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:23.187888",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116134141663_ACD_80145",
+    "fecha_inicio": "16/1/2026 13:41:41",
+    "agente_nombre": "MZA 31",
+    "agente_login": "mza31",
+    "duracion_total": 90,
+    "tiempo_conversacion": 63,
+    "tiempo_hold": 0,
+    "tiempo_acw": 13,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

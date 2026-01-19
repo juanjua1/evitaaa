@@ -1,0 +1,120 @@
+{
+  "archivo": "amza9_1_260116103752238_ACD_29725.wav",
+  "duracion_segundos": 82.1,
+  "num_segmentos": 25,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 26.86,
+    "Cliente": 48.09
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 13.47,
+      "duracion": 13.44,
+      "texto": "¿Qué tal, Analía? ¿Cómo te encontraste el día de hoy? ¿Todo bien? Mi nombre es Tomás, un gusto.",
+      "confianza": 0.382,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 14.47,
+      "fin": 20.86,
+      "duracion": 6.39,
+      "texto": "Hola, Tomás. ¿Todo bien? Me alegra mucho que estés bien, Ana. Me estoy comunicando el día con vos y, desde lo que es el área de beneficios móviles, trágate en un descuento para tu línea.",
+      "confianza": 0.09,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 21.62,
+      "fin": 28.65,
+      "duracion": 7.03,
+      "texto": "Mi idea, justamente, es a vos brindarte un plan mucho más económico. ¿Vos, Ana, recordás cuánto estás abonando con Claro al día de hoy, mensualmente?",
+      "confianza": 0.69,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 30.71,
+      "fin": 48.41,
+      "duracion": 17.7,
+      "texto": "Sí, sí, sí. Como 400 pesos más o menos. ¿Cómo que 400 pesos, Ana? Trabajo para claro, así que tengo el plan empleado de claro.",
+      "confianza": 0.434,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 49.53,
+      "fin": 56.38,
+      "duracion": 6.85,
+      "texto": "Tengo llegas ilimitadas y como 400 pesos. Llega a 500 ponerle, como mucho, porque tengo dos líneas en claro.",
+      "confianza": 0.776,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.37,
+      "fin": 79.81,
+      "duracion": 22.44,
+      "texto": "Ah, bien, perfecto. 2x8000, algo así, las dos líneas que estoy abonando. ¿2x? A ver, para. ¿Cuánto me descuentan? No, sí, 800, perdón. Bien, perfecto. Bueno, lo he presentado, hasta luego.",
+      "confianza": 0.453,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 81.0,
+      "fin": 82.1,
+      "duracion": 1.1,
+      "texto": "Hasta luego.",
+      "confianza": 0.498,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Qué tal, Analía? ¿Cómo te encontraste el día de hoy? ¿Todo bien? Mi nombre es Tomás, un gusto. Hola, Tomás. ¿Todo bien? Me alegra mucho que estés bien, Ana. Me estoy comunicando el día con vos y, desde lo que es el área de beneficios móviles, trágate en un descuento para tu línea. Mi idea, justamente, es a vos brindarte un plan mucho más económico. ¿Vos, Ana, recordás cuánto estás abonando con Claro al día de hoy, mensualmente? Sí, sí, sí. Como 400 pesos más o menos. ¿Cómo que 400 pesos, Ana? Trabajo para claro, así que tengo el plan empleado de claro. Tengo llegas ilimitadas y como 400 pesos. Llega a 500 ponerle, como mucho, porque tengo dos líneas en claro. Ah, bien, perfecto. 2x8000, algo así, las dos líneas que estoy abonando. ¿2x? A ver, para. ¿Cuánto me descuentan? No, sí, 800, perdón. Bien, perfecto. Bueno, lo he presentado, hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.467,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:23:06.418665",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:33.374697",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116103752238_ACD_29725",
+    "fecha_inicio": "16/1/2026 10:37:52",
+    "agente_nombre": "MZA 9",
+    "agente_login": "mza9",
+    "duracion_total": 105,
+    "tiempo_conversacion": 79,
+    "tiempo_hold": 0,
+    "tiempo_acw": 7,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

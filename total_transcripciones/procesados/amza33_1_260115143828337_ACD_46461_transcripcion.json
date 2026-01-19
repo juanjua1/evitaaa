@@ -1,0 +1,93 @@
+{
+  "archivo": "amza33_1_260115143828337_ACD_46461.wav",
+  "duracion_segundos": 70.99,
+  "num_segmentos": 25,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 68.01,
+    "Cliente": 0.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.23,
+      "fin": 6.35,
+      "duracion": 4.13,
+      "texto": "Hola, ¿cómo estás Mauricio?",
+      "confianza": 0.114,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.37,
+      "fin": 6.43,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.143,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.45,
+      "fin": 40.37,
+      "duracion": 33.92,
+      "texto": "Mauricio, un placer. Mi nombre es Carti, ¿cómo estás? Bien, bien. Me alegro. Te comento, aunque yo no me esté contactando con vos, porque quiero brindarte un descuento en tu línea móvil, así para menos en tu boleta mensual, ¿sí? Si es de claro, sí. Otra compañía, no. No, no soy de claro. ¿Hace cuánto no te comunicó? Te agradezco, te agradezco. ¿Hace cuánto que no se comunicó con vos? Te agradezco. No, era tres días. Te agradezco. Y qué raro, porque no me asegura que vos tenés activo o no con un descuento en tu línea.",
+      "confianza": 0.741,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 41.03,
+      "fin": 70.99,
+      "duracion": 29.96,
+      "texto": "¿Sí? Yo no dije que tenía un descuento, eso lo decís vos. Yo te pregunté si era de claro para brindarme un descuento. Sí, otra compañía no. No, no, porque no se va a comunicar claro con vos para darte algo mejor. Hace tres días. No hace falta que te comente si vos sos de compañía, yo soy de claro. Amigo me interesa contestarte nada, querida, yo soy de claro.",
+      "confianza": 0.394,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿cómo estás Mauricio? Sí. Mauricio, un placer. Mi nombre es Carti, ¿cómo estás? Bien, bien. Me alegro. Te comento, aunque yo no me esté contactando con vos, porque quiero brindarte un descuento en tu línea móvil, así para menos en tu boleta mensual, ¿sí? Si es de claro, sí. Otra compañía, no. No, no soy de claro. ¿Hace cuánto no te comunicó? Te agradezco, te agradezco. ¿Hace cuánto que no se comunicó con vos? Te agradezco. No, era tres días. Te agradezco. Y qué raro, porque no me asegura que vos tenés activo o no con un descuento en tu línea. ¿Sí? Yo no dije que tenía un descuento, eso lo decís vos. Yo te pregunté si era de claro para brindarme un descuento. Sí, otra compañía no. No, no, porque no se va a comunicar claro con vos para darte algo mejor. Hace tres días. No hace falta que te comente si vos sos de compañía, yo soy de claro. Amigo me interesa contestarte nada, querida, yo soy de claro.",
+  "calidad": {
+    "confianza_promedio": 0.479,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:49:22.631690",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 25,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:24.095458",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115143828337_ACD_46461",
+    "fecha_inicio": "15/1/2026 14:38:28",
+    "agente_nombre": "MZA 33",
+    "agente_login": "mza33",
+    "duracion_total": 104,
+    "tiempo_conversacion": 68,
+    "tiempo_hold": 0,
+    "tiempo_acw": 12,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Cae Muda o Cortada",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

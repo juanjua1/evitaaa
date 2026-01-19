@@ -1,0 +1,101 @@
+{
+  "archivo": "amza74_1_260115112057724_MIT_01984.wav",
+  "duracion_segundos": 78.87,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 13.8,
+    "Cliente": 58.29
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.5,
+      "fin": 14.92,
+      "duracion": 13.42,
+      "texto": "Hola. Hola, Mari. Sí, ¿cómo andas? Muy bien. Usted, perdón que la molesta. Son dos minutitos, ¿sí?",
+      "confianza": 0.234,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.52,
+      "fin": 33.79,
+      "duracion": 18.27,
+      "texto": "Sí, está bien. Bien, Mari. Más que todo, la llamo primero para dejar sentado lo de las líneas sumales de la línea que terminamos ahí 90, ¿sí? Recuerde que usted está de acuerdo en seguir con el procedimiento de portabilidad de esa línea a partir de esta tarde. Si puede, se me va a estar confirmando por WhatsApp para ayudarme a juntar evidencias, ¿sí?",
+      "confianza": 0.371,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 34.77,
+      "fin": 54.24,
+      "duracion": 19.47,
+      "texto": "Sí. Perfecto. Ahora le comento el plan, le paso para que sepa. Tendría la misma cantidad de yeses pero en 7,460, ¿bien? Si usted está de acuerdo en seguir, vamos a aplicarle este plan, ¿sí? Sí, dale. Y por otro lado, usted recuerda que los cuatro yeses que le mencioné son de regalo durante seis meses, que es lo que dura la promoción, ¿verdad?",
+      "confianza": 0.531,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 54.86,
+      "fin": 61.99,
+      "duracion": 7.13,
+      "texto": "Sí, está bien. Y los de 20 chicas, le regalo extra, ¿le quedó claro? Recuerden que solamente se puede arruinar un mes por 30 días.",
+      "confianza": 0.424,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 65.07,
+      "fin": 78.87,
+      "duracion": 13.8,
+      "texto": "Sí, está bien. Perfecto, genial. Bueno, Mari, le doy las bienvenidas, me comunico, por favor, en el transcurso con la tarde o cero, usted me manda un mensajito para no ser tan molesta, ¿sí? Vale, dale. Perfecto, Mari, bienvenida a Movistar, que tenga linda tarde. Adiós, chau chau. Vale, chau chau.",
+      "confianza": 0.02,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, Mari. Sí, ¿cómo andas? Muy bien. Usted, perdón que la molesta. Son dos minutitos, ¿sí? Sí, está bien. Bien, Mari. Más que todo, la llamo primero para dejar sentado lo de las líneas sumales de la línea que terminamos ahí 90, ¿sí? Recuerde que usted está de acuerdo en seguir con el procedimiento de portabilidad de esa línea a partir de esta tarde. Si puede, se me va a estar confirmando por WhatsApp para ayudarme a juntar evidencias, ¿sí? Sí. Perfecto. Ahora le comento el plan, le paso para que sepa. Tendría la misma cantidad de yeses pero en 7,460, ¿bien? Si usted está de acuerdo en seguir, vamos a aplicarle este plan, ¿sí? Sí, dale. Y por otro lado, usted recuerda que los cuatro yeses que le mencioné son de regalo durante seis meses, que es lo que dura la promoción, ¿verdad? Sí, está bien. Y los de 20 chicas, le regalo extra, ¿le quedó claro? Recuerden que solamente se puede arruinar un mes por 30 días. Sí, está bien. Perfecto, genial. Bueno, Mari, le doy las bienvenidas, me comunico, por favor, en el transcurso con la tarde o cero, usted me manda un mensajito para no ser tan molesta, ¿sí? Vale, dale. Perfecto, Mari, bienvenida a Movistar, que tenga linda tarde. Adiós, chau chau. Vale, chau chau.",
+  "calidad": {
+    "confianza_promedio": 0.427,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:05:02.254727",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.207034",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115112057724_MIT_01984",
+    "fecha_inicio": "15/1/2026 11:20:59",
+    "agente_nombre": "MZA 74",
+    "agente_login": "mza74",
+    "duracion_total": 80,
+    "tiempo_conversacion": 77,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Venta",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "archivo": "amza18_1_260113125740552_ACD_28847.wav",
+  "duracion_segundos": 67.8,
+  "num_segmentos": 35,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 13.09,
+    "Cliente": 46.18
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.48,
+      "fin": 9.39,
+      "duracion": 7.91,
+      "texto": "Hola. Hola, buen día. ¿Habló con la línea de Analía?",
+      "confianza": 0.217,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.41,
+      "fin": 9.59,
+      "duracion": 0.18,
+      "texto": "Sí. Bien.",
+      "confianza": 0.08,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.61,
+      "fin": 14.79,
+      "duracion": 5.18,
+      "texto": "Mi nombre es Yasmine. Me comunico del área de recupero de clientes de Movistar. Quería saber por qué motivó ese video de la compañía.",
+      "confianza": 0.616,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.72,
+      "fin": 30.41,
+      "duracion": 13.69,
+      "texto": "Porque en realidad me mudé de casa y ya contraté igualmente internet en otra casa. Así que me lo vienen a conectar el viernes. Eso fue el problema. Ah, bien. Perfecto. Y en cuanto al celular, ¿qué servicio está utilizando?",
+      "confianza": 0.79,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.13,
+      "fin": 32.73,
+      "duracion": 1.6,
+      "texto": "En este momento estoy usando Claro.",
+      "confianza": 0.567,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 33.62,
+      "fin": 35.3,
+      "duracion": 1.68,
+      "texto": "Bien. ¿Y cuánto abona por Mejana Liga?",
+      "confianza": 0.811,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 36.68,
+      "fin": 49.9,
+      "duracion": 13.22,
+      "texto": "Diez mil pesos. Bien, perfecto. Y eso es con un plan de dos gigas, ¿es correcto? Sí, pasa que no uso mucho los gigas porque estoy con Wi-Fi todo el tiempo. Aparte, tengo Fenial en todos lados y es lo que me ayuda en ese momento.",
+      "confianza": 0.688,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 50.46,
+      "fin": 59.77,
+      "duracion": 9.31,
+      "texto": "Bien, perfecto. Y luego una consulta. ¿Qué servicio de internet ya contrató? Uf, me mataste, no me acuerdo. Creo que el de seis gigas. Sí, el de seis gigas.",
+      "confianza": 0.782,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.41,
+      "fin": 61.37,
+      "duracion": 0.96,
+      "texto": "de movistar también.",
+      "confianza": 0.652,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.26,
+      "fin": 67.8,
+      "duracion": 5.54,
+      "texto": "Sí, sí. Listo, perfecto. Entonces, ahora lo viajo sentado. Hasta luego. Gracias. Nos vemos.",
+      "confianza": 0.441,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día. ¿Habló con la línea de Analía? Sí. Bien. Mi nombre es Yasmine. Me comunico del área de recupero de clientes de Movistar. Quería saber por qué motivó ese video de la compañía. Porque en realidad me mudé de casa y ya contraté igualmente internet en otra casa. Así que me lo vienen a conectar el viernes. Eso fue el problema. Ah, bien. Perfecto. Y en cuanto al celular, ¿qué servicio está utilizando? En este momento estoy usando Claro. Bien. ¿Y cuánto abona por Mejana Liga? Diez mil pesos. Bien, perfecto. Y eso es con un plan de dos gigas, ¿es correcto? Sí, pasa que no uso mucho los gigas porque estoy con Wi-Fi todo el tiempo. Aparte, tengo Fenial en todos lados y es lo que me ayuda en ese momento. Bien, perfecto. Y luego una consulta. ¿Qué servicio de internet ya contrató? Uf, me mataste, no me acuerdo. Creo que el de seis gigas. Sí, el de seis gigas. de movistar también. Sí, sí. Listo, perfecto. Entonces, ahora lo viajo sentado. Hasta luego. Gracias. Nos vemos.",
+  "calidad": {
+    "confianza_promedio": 0.558,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:29:41.347759",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 2,
+    "total_segmentos_original": 35,
+    "total_segmentos_corregido": 10,
+    "fecha_correccion": "2026-01-18T23:05:15.362555",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113125740552_ACD_28847",
+    "fecha_inicio": "13/1/2026 12:57:40",
+    "agente_nombre": "MZA 18",
+    "agente_login": "mza18",
+    "duracion_total": 95,
+    "tiempo_conversacion": 66,
+    "tiempo_hold": 0,
+    "tiempo_acw": 10,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

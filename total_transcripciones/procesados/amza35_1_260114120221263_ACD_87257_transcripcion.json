@@ -1,0 +1,141 @@
+{
+  "archivo": "amza35_1_260114120221263_ACD_87257.wav",
+  "duracion_segundos": 65.1,
+  "num_segmentos": 32,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 6.98,
+    "Cliente": 51.83
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 2.23,
+      "fin": 7.81,
+      "duracion": 5.58,
+      "texto": "Hola, ¿qué tal? Hablo con Olga. Sí, ¿quién habla? Olga, ¿cómo le va a un gusto saludarle?",
+      "confianza": 0.265,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 7.87,
+      "fin": 9.21,
+      "duracion": 1.34,
+      "texto": "Mi nombre es Marco Zamperi.",
+      "confianza": 0.779,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 9.23,
+      "fin": 13.02,
+      "duracion": 3.79,
+      "texto": "Le llamaba al día de hoy porque estamos actituando beneficios en la línea, ¿sí?",
+      "confianza": 0.603,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.04,
+      "fin": 15.02,
+      "duracion": 1.98,
+      "texto": "Olga, actualmente me figura que usted está en claro.",
+      "confianza": 0.731,
+      "_corregido": "era_cliente_ahora_agente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 15.04,
+      "fin": 23.71,
+      "duracion": 8.67,
+      "texto": "¿Está haciendo recargas o tiene abono? No, estoy en el Movistar. O sea, la línea en que estoy actualmente es FI.",
+      "confianza": 0.752,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 25.2,
+      "fin": 29.19,
+      "duracion": 3.99,
+      "texto": "¿Esta línea está en claro? Sí. No,",
+      "confianza": 0.37,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 29.19,
+      "fin": 30.66,
+      "duracion": 1.47,
+      "texto": "porque yo me pasé en Movistar",
+      "confianza": 0.304,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.32,
+      "fin": 61.12,
+      "duracion": 29.8,
+      "texto": "Excelente. El número. Es el número. Perfecto. Acá verifico. Sí, ya está en Movistar. Justamente le estábamos llamando la línea de Movistar para brindarle beneficio a las familias que faltaban. Bien. ¿Esta línea la activó hace cuánto en Movistar? ¿Hace poquito? Sí, hace una semana. Buenísimo, entonces. Recuerde que con la aplicación de Movistar puede activar 20 gigas de regalo para poder utilizar y probar a full lo que es el servicio de internet. ¿Sí? Así que cualquier duda o consulta estamos a su disposición a través del 0800, ¿bien?",
+      "confianza": 0.091,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.91,
+      "fin": 65.1,
+      "duracion": 2.19,
+      "texto": "Dale, gracias. Dale, muchas gracias. Hasta luego. Chao.",
+      "confianza": 0.029,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Hablo con Olga. Sí, ¿quién habla? Olga, ¿cómo le va a un gusto saludarle? Mi nombre es Marco Zamperi. Le llamaba al día de hoy porque estamos actituando beneficios en la línea, ¿sí? Olga, actualmente me figura que usted está en claro. ¿Está haciendo recargas o tiene abono? No, estoy en el Movistar. O sea, la línea en que estoy actualmente es FI. ¿Esta línea está en claro? Sí. No, porque yo me pasé en Movistar Excelente. El número. Es el número. Perfecto. Acá verifico. Sí, ya está en Movistar. Justamente le estábamos llamando la línea de Movistar para brindarle beneficio a las familias que faltaban. Bien. ¿Esta línea la activó hace cuánto en Movistar? ¿Hace poquito? Sí, hace una semana. Buenísimo, entonces. Recuerde que con la aplicación de Movistar puede activar 20 gigas de regalo para poder utilizar y probar a full lo que es el servicio de internet. ¿Sí? Así que cualquier duda o consulta estamos a su disposición a través del 0800, ¿bien? Dale, gracias. Dale, muchas gracias. Hasta luego. Chao.",
+  "calidad": {
+    "confianza_promedio": 0.456,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:57:47.904037",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:24.607638",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114120221263_ACD_87257",
+    "fecha_inicio": "14/1/2026 12:02:21",
+    "agente_nombre": "MZA 35",
+    "agente_login": "mza35",
+    "duracion_total": 102,
+    "tiempo_conversacion": 65,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Ya tiene MVS",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

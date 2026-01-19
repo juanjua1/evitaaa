@@ -1,0 +1,103 @@
+{
+  "archivo": "amza9_1_260112143844575_ACD_86479.wav",
+  "duracion_segundos": 73.19,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 27.05,
+    "Cliente": 39.71
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.84,
+      "fin": 9.59,
+      "duracion": 8.75,
+      "texto": "Hola, buen día. Hablo con Leslie. Sí, ¿y quién habla? ¿Qué tal? Leslie, ¿cómo estás? El día de hoy todo bien? Mi nombre es Tomás, un placer hablar con vos.",
+      "confianza": 0.067,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 11.7,
+      "fin": 20.33,
+      "duracion": 8.63,
+      "texto": "De parte de que Movistar, Claro, Profesional… Leslie, me estoy explicando porque teníamos un beneficio para tus líneas de lo que es Movistar. ¿Te han llamado?",
+      "confianza": 0.636,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.25,
+      "fin": 39.93,
+      "duracion": 17.68,
+      "texto": "Ya. Yo me he comunicado y eso, la semana pasada hablé con una chica que decidí yo comunicarme, pero la verdad que las ofertas que tienen no me sirven, entonces estoy esperando a que se renueven y me van a llamar. Así que nada, ya estoy en contacto con una persona.",
+      "confianza": 0.721,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.49,
+      "fin": 72.57,
+      "duracion": 31.08,
+      "texto": "Sí, pero a lo mejor te estás abonando que no te sirven las facturas del diario. No, la verdad que ni idea porque eso lo maneja mi mamá, Yo en ese momento no estoy con ella, soy la dueña de la línea, pero no lo abono yo, y de que yo se había comunicado y no le servía, entonces nada, voy a mantener eso hasta que vuelva a parte a mi ciudad, que es donde me podría llegar el chip y todo el quilombo. Bien,",
+      "confianza": 0.074,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 72.57,
+      "fin": 73.19,
+      "duracion": 0.62,
+      "texto": "perfecto, te lo he presentado.",
+      "confianza": 0.017,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hablo con Leslie. Sí, ¿y quién habla? ¿Qué tal? Leslie, ¿cómo estás? El día de hoy todo bien? Mi nombre es Tomás, un placer hablar con vos. De parte de que Movistar, Claro, Profesional… Leslie, me estoy explicando porque teníamos un beneficio para tus líneas de lo que es Movistar. ¿Te han llamado? Ya. Yo me he comunicado y eso, la semana pasada hablé con una chica que decidí yo comunicarme, pero la verdad que las ofertas que tienen no me sirven, entonces estoy esperando a que se renueven y me van a llamar. Así que nada, ya estoy en contacto con una persona. Sí, pero a lo mejor te estás abonando que no te sirven las facturas del diario. No, la verdad que ni idea porque eso lo maneja mi mamá, Yo en ese momento no estoy con ella, soy la dueña de la línea, pero no lo abono yo, y de que yo se había comunicado y no le servía, entonces nada, voy a mantener eso hasta que vuelva a parte a mi ciudad, que es donde me podría llegar el chip y todo el quilombo. Bien, perfecto, te lo he presentado.",
+  "calidad": {
+    "confianza_promedio": 0.453,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T22:15:28.023472",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 16,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:32.858952",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112143844575_ACD_86479",
+    "fecha_inicio": "12/1/2026 14:38:44",
+    "agente_nombre": "MZA 9",
+    "agente_login": "mza9",
+    "duracion_total": 92,
+    "tiempo_conversacion": 73,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

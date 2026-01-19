@@ -1,0 +1,101 @@
+{
+  "archivo": "amza21_1_260112131100998_ACD_95057.wav",
+  "duracion_segundos": 72.77,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 17.77,
+    "Cliente": 19.71
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 0.03,
+      "fin": 2.56,
+      "duracion": 2.53,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.677,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.08,
+      "fin": 20.11,
+      "duracion": 16.03,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.772,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 24.13,
+      "fin": 27.5,
+      "duracion": 3.37,
+      "texto": "Gracias. Gracias.",
+      "confianza": 0.534,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.68,
+      "fin": 42.49,
+      "duracion": 13.81,
+      "texto": "Gracias.",
+      "confianza": 0.479,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 71.02,
+      "fin": 72.77,
+      "duracion": 1.74,
+      "texto": "Eso es.",
+      "confianza": 0.527,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. Gracias. Gracias. Gracias. Eso es.",
+  "calidad": {
+    "confianza_promedio": 0.596,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:59:45.733333",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 6,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:17.193521",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112131100998_ACD_95057",
+    "fecha_inicio": "12/1/2026 13:11:00",
+    "agente_nombre": "MZA 21",
+    "agente_login": "mza21",
+    "duracion_total": 84,
+    "tiempo_conversacion": 70,
+    "tiempo_hold": 0,
+    "tiempo_acw": 2,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Contestador",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

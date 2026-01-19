@@ -1,0 +1,121 @@
+{
+  "archivo": "amza72_1_260116143303765_ACD_64999.wav",
+  "duracion_segundos": 66.52,
+  "num_segmentos": 31,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.52,
+    "Cliente": 59.52
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 3.27,
+      "fin": 11.38,
+      "duracion": 8.11,
+      "texto": "Hola. ¿Quién habla? ¿Qué tal? Yo soy Maxi. Quería hablar con Gómez Celeste. ¿Y de parte de quién?",
+      "confianza": 0.405,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.28,
+      "fin": 45.67,
+      "duracion": 33.39,
+      "texto": "Justamente de lo que es. El área de promoción es a tu línea. Por favor, presenta la promoción a vos. Más que nada. ¿Sos de la empresa de Molstar? Soy de la empresa de Molstar. Dale. Mira, justo me está hablando otro compañero tuyo por WhatsApp. Sí. Así que estoy en contacto con él. ¿Podría estar registrado que este número lo tiene una menor? para que no lo vuelvan a llamar. Ah, este número es tuyo y sos menor? No, no, yo no soy menor, pero este número es de una menor. Ok,",
+      "confianza": 0.775,
+      "_hablante_original": "Hablante B",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 45.67,
+      "fin": 46.19,
+      "duracion": 0.52,
+      "texto": "ok, ok, bien, ya entendí.",
+      "confianza": 0.013,
+      "_dividido": true,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 46.21,
+      "fin": 48.81,
+      "duracion": 2.6,
+      "texto": "Vale, el número termina 2075. Ya lo encontré, ahí está.",
+      "confianza": 0.192,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 49.38,
+      "fin": 55.66,
+      "duracion": 6.28,
+      "texto": "Pero la promoción que vos estabas hablando con otro pibe, ¿puede ser que sea buena? Porque yo tengo una bastante buena también.",
+      "confianza": 0.676,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 56.3,
+      "fin": 61.47,
+      "duracion": 5.17,
+      "texto": "¿Querés que te la diga? Mira, ahora yo estoy trabajando. ¿Te puedes escribir o me llamar más tarde?",
+      "confianza": 0.543,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 62.55,
+      "fin": 66.52,
+      "duracion": 3.97,
+      "texto": "Dale, no tengo problema. Dale, gracias. Adiós.",
+      "confianza": 0.638,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola. ¿Quién habla? ¿Qué tal? Yo soy Maxi. Quería hablar con Gómez Celeste. ¿Y de parte de quién? Justamente de lo que es. El área de promoción es a tu línea. Por favor, presenta la promoción a vos. Más que nada. ¿Sos de la empresa de Molstar? Soy de la empresa de Molstar. Dale. Mira, justo me está hablando otro compañero tuyo por WhatsApp. Sí. Así que estoy en contacto con él. ¿Podría estar registrado que este número lo tiene una menor? para que no lo vuelvan a llamar. Ah, este número es tuyo y sos menor? No, no, yo no soy menor, pero este número es de una menor. Ok, ok, ok, bien, ya entendí. Vale, el número termina 2075. Ya lo encontré, ahí está. Pero la promoción que vos estabas hablando con otro pibe, ¿puede ser que sea buena? Porque yo tengo una bastante buena también. ¿Querés que te la diga? Mira, ahora yo estoy trabajando. ¿Te puedes escribir o me llamar más tarde? Dale, no tengo problema. Dale, gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.487,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:49:32.482932",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 31,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:31.257951",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116143303765_ACD_64999",
+    "fecha_inicio": "16/1/2026 14:33:03",
+    "agente_nombre": "MZA 72",
+    "agente_login": "mza72",
+    "duracion_total": 93,
+    "tiempo_conversacion": 64,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

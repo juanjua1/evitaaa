@@ -1,0 +1,83 @@
+{
+  "archivo": "amza4_1_260112111037617_MIT_01981.wav",
+  "duracion_segundos": 61.14,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 7.37,
+    "Cliente": 43.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 7.07,
+      "fin": 34.36,
+      "duracion": 27.29,
+      "texto": "Hola. Hola, sí, buenos días, Tomás. Sí. Hola, Tomás, cómo estás? Le está hablando nuevamente Gabriela de la compañía Movistar. ¿Cómo se encuentra, Tomás? Todo bien, bien. Bien, alero. Tomás, ¿puedo ver las promociones que le envié por WhatsApp? Sí, lo vi, pero no, no. No pude hacer los cálculos que estoy elaborando.",
+      "confianza": 0.184,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.35,
+      "fin": 51.85,
+      "duracion": 16.5,
+      "texto": "Bueno, ¿tiene alguna duda o algo que me quiera preguntar, Tomás? No, no, no. Tengo que sacarle unos cálculos, nada más. Bueno, hagamos una cosa, Tomás. ¿Lo damos más tardecito, le parece, antes de marcarme en la compañía?",
+      "confianza": 0.701,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 53.77,
+      "fin": 61.14,
+      "duracion": 7.37,
+      "texto": "Buenísimo, dale. Bueno, tipo 2 de la tarde lo vuelvo a contactar. Muchas gracias, Tomás. No, por favor. Hasta luego. Hasta luego.",
+      "confianza": 0.033,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, sí, buenos días, Tomás. Sí. Hola, Tomás, cómo estás? Le está hablando nuevamente Gabriela de la compañía Movistar. ¿Cómo se encuentra, Tomás? Todo bien, bien. Bien, alero. Tomás, ¿puedo ver las promociones que le envié por WhatsApp? Sí, lo vi, pero no, no. No pude hacer los cálculos que estoy elaborando. Bueno, ¿tiene alguna duda o algo que me quiera preguntar, Tomás? No, no, no. Tengo que sacarle unos cálculos, nada más. Bueno, hagamos una cosa, Tomás. ¿Lo damos más tardecito, le parece, antes de marcarme en la compañía? Buenísimo, dale. Bueno, tipo 2 de la tarde lo vuelvo a contactar. Muchas gracias, Tomás. No, por favor. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.344,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:17:29.600798",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 3,
+    "fecha_correccion": "2026-01-18T23:05:29.376076",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112111037617_MIT_01981",
+    "fecha_inicio": "12/1/2026 11:10:38",
+    "agente_nombre": "MZA 4",
+    "agente_login": "mza4",
+    "duracion_total": 65,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 4,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Agendado por el Vdor",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

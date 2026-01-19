@@ -1,0 +1,121 @@
+{
+  "archivo": "amza22_1_260115113505534_ACD_14479.wav",
+  "duracion_segundos": 75.73,
+  "num_segmentos": 17,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 53.19,
+    "Cliente": 18.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.31,
+      "fin": 13.09,
+      "duracion": 10.78,
+      "texto": "Hola, buen día, ¿hablo con Pablo? ¿Quién es? Pablo, ¿cómo está? Mi nombre es Belén, me presento. Mire, yo le estoy llamando desde el área de recupero de clientes de Movistar.",
+      "confianza": 0.673,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 13.67,
+      "fin": 29.85,
+      "duracion": 16.18,
+      "texto": "Queríamos saber por qué se ha habido de la compañía en su momento. Coménteme, ¿qué le sucedió a usted? No, es por la señal, por el precio, por todo, pero... No, no, gracias a vosotros.",
+      "confianza": 0.581,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.87,
+      "fin": 30.01,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.024,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.03,
+      "fin": 31.15,
+      "duracion": 1.12,
+      "texto": "Nosotros no... Sí, no, yo te agradezco.",
+      "confianza": 0.118,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 31.35,
+      "fin": 49.46,
+      "duracion": 18.11,
+      "texto": "Vos sabés que en otro momento, quizás, sí, es más, yo deseo pasar ya mi teléfono de factura, lo voy a pasar a la tarjeta, no quiero pagar más factura, no quiero pagar más nada de ninguna empresa.",
+      "confianza": 0.593,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 49.8,
+      "fin": 52.95,
+      "duracion": 3.15,
+      "texto": "Si es posible quiero vivir sin seguridad.",
+      "confianza": 0.713,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 53.77,
+      "fin": 75.73,
+      "duracion": 21.96,
+      "texto": "Así que se lo agradezco. Llega un momento que uno tiene que tomar estas decisiones, no puede estar uno pendiente con el celular pagando todo esto, un desastre. Yo soy docente, estoy un poco quemado, viste, pero que ya fue. Gracias, te agradezco mucho. No, no hay problema.",
+      "confianza": 0.542,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, ¿hablo con Pablo? ¿Quién es? Pablo, ¿cómo está? Mi nombre es Belén, me presento. Mire, yo le estoy llamando desde el área de recupero de clientes de Movistar. Queríamos saber por qué se ha habido de la compañía en su momento. Coménteme, ¿qué le sucedió a usted? No, es por la señal, por el precio, por todo, pero... No, no, gracias a vosotros. Sí, sí. Nosotros no... Sí, no, yo te agradezco. Vos sabés que en otro momento, quizás, sí, es más, yo deseo pasar ya mi teléfono de factura, lo voy a pasar a la tarjeta, no quiero pagar más factura, no quiero pagar más nada de ninguna empresa. Si es posible quiero vivir sin seguridad. Así que se lo agradezco. Llega un momento que uno tiene que tomar estas decisiones, no puede estar uno pendiente con el celular pagando todo esto, un desastre. Yo soy docente, estoy un poco quemado, viste, pero que ya fue. Gracias, te agradezco mucho. No, no hay problema.",
+  "calidad": {
+    "confianza_promedio": 0.505,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:11:47.316326",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:17.951294",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115113505534_ACD_14479",
+    "fecha_inicio": "15/1/2026 11:35:05",
+    "agente_nombre": "MZA 22",
+    "agente_login": "mza22",
+    "duracion_total": 104,
+    "tiempo_conversacion": 72,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

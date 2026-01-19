@@ -1,0 +1,130 @@
+{
+  "archivo": "amza15_1_260113121109698_ACD_42453.wav",
+  "duracion_segundos": 74.3,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 11.48,
+    "Cliente": 52.33
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 4.44,
+      "duracion": 4.41,
+      "texto": "Hola, ¿qué tal? Buen día, ¿con José María?",
+      "confianza": 0.33,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.66,
+      "fin": 16.03,
+      "duracion": 9.37,
+      "texto": "¿Cómo le va a un gusto? Macarena es mi nombre, nos estamos contratando para brindarle un beneficio de descuento en su línea. ¿Ustedes también se encuentran en claro, verdad?",
+      "confianza": 0.611,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 18.52,
+      "fin": 19.7,
+      "duracion": 1.18,
+      "texto": "Sí, sí, sí. Bien, perfecto.",
+      "confianza": 0.262,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.32,
+      "fin": 27.39,
+      "duracion": 7.07,
+      "texto": "Le comento que en el día de hoy tenemos un muevo en plan para ofrecerle, pero antes de consulta, ¿qué cantidad de sigas tienen en claro?",
+      "confianza": 0.634,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 29.09,
+      "fin": 41.26,
+      "duracion": 12.17,
+      "texto": "Ah, no me acuerdo exactamente ahora, pero... Igual estoy bien con eso. No es más tener muy bien con lo que tengo. Le agradezco.",
+      "confianza": 0.114,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.66,
+      "fin": 51.29,
+      "duracion": 8.63,
+      "texto": "Por ahora le agradezco. Pero en realidad no le he comentado la promoción. Tenemos un plan bastante económico de ocho gigas en once mil cuatrocientos con todo bonificado.",
+      "confianza": 0.11,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 52.11,
+      "fin": 58.98,
+      "duracion": 6.87,
+      "texto": "Lo que me llamaras de SMS y WhatsApp totalmente libres. Sí, sí, entiendo, entiendo. Pero te agradezco. Gracias.",
+      "confianza": 0.377,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 60.19,
+      "fin": 74.3,
+      "duracion": 14.11,
+      "texto": "Bien, respecto al servicio de Internet, ¿le han podido comentar también? ¿Usted cuenta con el servicio de domicilio? Por ahora, gracias. Le agradezco. Gracias.",
+      "confianza": 0.736,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, ¿con José María? ¿Cómo le va a un gusto? Macarena es mi nombre, nos estamos contratando para brindarle un beneficio de descuento en su línea. ¿Ustedes también se encuentran en claro, verdad? Sí, sí, sí. Bien, perfecto. Le comento que en el día de hoy tenemos un muevo en plan para ofrecerle, pero antes de consulta, ¿qué cantidad de sigas tienen en claro? Ah, no me acuerdo exactamente ahora, pero... Igual estoy bien con eso. No es más tener muy bien con lo que tengo. Le agradezco. Por ahora le agradezco. Pero en realidad no le he comentado la promoción. Tenemos un plan bastante económico de ocho gigas en once mil cuatrocientos con todo bonificado. Lo que me llamaras de SMS y WhatsApp totalmente libres. Sí, sí, entiendo, entiendo. Pero te agradezco. Gracias. Bien, respecto al servicio de Internet, ¿le han podido comentar también? ¿Usted cuenta con el servicio de domicilio? Por ahora, gracias. Le agradezco. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.443,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:23:08.476059",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 8,
+    "fecha_correccion": "2026-01-18T23:05:14.985888",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113121109698_ACD_42453",
+    "fecha_inicio": "13/1/2026 12:11:09",
+    "agente_nombre": "MZA 15",
+    "agente_login": "mza15",
+    "duracion_total": 106,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 7,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

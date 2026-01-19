@@ -1,0 +1,139 @@
+{
+  "archivo": "amza16_1_260115125458780_ACD_04625.wav",
+  "duracion_segundos": 78.49,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 42.51,
+    "Cliente": 27.51
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 2.7,
+      "fin": 6.34,
+      "duracion": 3.64,
+      "texto": "Hola, buenas tardes, Rosario.",
+      "confianza": 0.047,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.36,
+      "fin": 6.42,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.04,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 6.44,
+      "fin": 15.45,
+      "duracion": 9.01,
+      "texto": "¿Cómo te va? Mi nombre es Maciel, nos comunicamos de Herario Beneficio de Movistar. Queríamos, Rosario, mejorarte el plan de tus líneas. Vemos que se encuentran en clara actualmente.",
+      "confianza": 0.156,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.73,
+      "fin": 20.22,
+      "duracion": 3.48,
+      "texto": "Sí, pero yo ahora en clara estoy abonando a cuatro mil doscientos.",
+      "confianza": 0.452,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.24,
+      "fin": 50.1,
+      "duracion": 29.86,
+      "texto": "Más de eso por ahora no, porque tengo unas tiras muy bajas. Y como yo paro más en casa que en el trabajo. Y te digo, perdón, paro más en el trabajo que en mi casa y te digo que el wifi viene de mi casa del trabajo. Porque el trabajo puede ser una buena. En parte, por ahora eso me viene bien más. Por ahora tampoco me puedo abonar, así que... Claro, obviamente, entiendo. Y lo que es el servicio de internet en el bar, ¿lo tiene contactado con España de claro, también? Sí, todo Wi-Fi, todo lo que dice Wi-Fi, sí. Ah, bien. ¿Recuerda cuánto estamos en un de un por ese servicio?",
+      "confianza": 0.557,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.95,
+      "fin": 56.73,
+      "duracion": 4.79,
+      "texto": "No, no, de claro, yo no tengo Wi-Fi en otro lugar, así que en mi clase es otra empresa.",
+      "confianza": 0.44,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.52,
+      "fin": 66.07,
+      "duracion": 8.55,
+      "texto": "No, por ahora no, de mi casa no quiero cambiar nada, porque mis ojos me matan.",
+      "confianza": 0.658,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 66.69,
+      "fin": 73.49,
+      "duracion": 6.8,
+      "texto": "Yo utilizo para mi celular, por ahora no, porque yo utilizo Wifi de mi casa.",
+      "confianza": 0.628,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 74.66,
+      "fin": 78.49,
+      "duracion": 3.83,
+      "texto": "Por ahora no, que agradezco muchísimo. Muchas gracias, hasta luego.",
+      "confianza": 0.474,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes, Rosario. Sí. ¿Cómo te va? Mi nombre es Maciel, nos comunicamos de Herario Beneficio de Movistar. Queríamos, Rosario, mejorarte el plan de tus líneas. Vemos que se encuentran en clara actualmente. Sí, pero yo ahora en clara estoy abonando a cuatro mil doscientos. Más de eso por ahora no, porque tengo unas tiras muy bajas. Y como yo paro más en casa que en el trabajo. Y te digo, perdón, paro más en el trabajo que en mi casa y te digo que el wifi viene de mi casa del trabajo. Porque el trabajo puede ser una buena. En parte, por ahora eso me viene bien más. Por ahora tampoco me puedo abonar, así que... Claro, obviamente, entiendo. Y lo que es el servicio de internet en el bar, ¿lo tiene contactado con España de claro, también? Sí, todo Wi-Fi, todo lo que dice Wi-Fi, sí. Ah, bien. ¿Recuerda cuánto estamos en un de un por ese servicio? No, no, de claro, yo no tengo Wi-Fi en otro lugar, así que en mi clase es otra empresa. No, por ahora no, de mi casa no quiero cambiar nada, porque mis ojos me matan. Yo utilizo para mi celular, por ahora no, porque yo utilizo Wifi de mi casa. Por ahora no, que agradezco muchísimo. Muchas gracias, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.508,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:24:50.397839",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 9,
+    "fecha_correccion": "2026-01-18T23:05:15.085018",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115125458780_ACD_04625",
+    "fecha_inicio": "15/1/2026 12:54:58",
+    "agente_nombre": "MZA 16",
+    "agente_login": "mza16",
+    "duracion_total": 97,
+    "tiempo_conversacion": 75,
+    "tiempo_hold": 0,
+    "tiempo_acw": 6,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

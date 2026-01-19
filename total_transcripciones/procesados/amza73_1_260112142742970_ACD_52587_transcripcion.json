@@ -1,0 +1,101 @@
+{
+  "archivo": "amza73_1_260112142742970_ACD_52587.wav",
+  "duracion_segundos": 63.92,
+  "num_segmentos": 32,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0,
+    "Cliente": 59.04
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.3,
+      "fin": 3.16,
+      "duracion": 1.86,
+      "texto": "Hola, ¿qué tal? Hola, hola.",
+      "confianza": 0.627,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 4.5,
+      "fin": 13.43,
+      "duracion": 8.93,
+      "texto": "Hola, hola. Hola, ¿qué tal? ¿Cómo estás? Se habla Martos. Al día de hoy estamos llamándole a la área técnica Movistar. ¿Qué tal? Tengo el gusto de hablar con la línea de Marisa.",
+      "confianza": 0.028,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 14.31,
+      "fin": 26.27,
+      "duracion": 11.96,
+      "texto": "Sí. Marisa, cómo te va, gusto saludarte. Te habla Martos. Sí, un gusto. ¿Qué tal? Un gusto. Te he llamado brevemente porque estamos con las bonificaciones para comenzar el año. Verificamos que vos estás sin claro. ¿Estás con abondo mensual?",
+      "confianza": 0.516,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 27.11,
+      "fin": 45.14,
+      "duracion": 18.03,
+      "texto": "Sí. Perfecto. Al día de hoy estamos otorgando una promoción exclusiva para tu línea. La promoción incluye lo que son, en este caso, 8 gigas, 4 de base, 4 de regalo. Tenemos una promoción que va a tener lo que son también la aplicación de Movistar, donde va a activar 20 gigas de regalo, ¿sí?",
+      "confianza": 0.547,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 45.66,
+      "fin": 63.92,
+      "duracion": 18.26,
+      "texto": "La buena consulta que usted tiene. Sí, dígame. Sí, pero por ahora no. No estoy interesada por ahora. Estoy agonando una cuota de teléfono ahí, así que todavía me quieren con un par de meses más. Perfecto. Gracias a usted. Adiós.",
+      "confianza": 0.347,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Hola, hola. Hola, hola. Hola, ¿qué tal? ¿Cómo estás? Se habla Martos. Al día de hoy estamos llamándole a la área técnica Movistar. ¿Qué tal? Tengo el gusto de hablar con la línea de Marisa. Sí. Marisa, cómo te va, gusto saludarte. Te habla Martos. Sí, un gusto. ¿Qué tal? Un gusto. Te he llamado brevemente porque estamos con las bonificaciones para comenzar el año. Verificamos que vos estás sin claro. ¿Estás con abondo mensual? Sí. Perfecto. Al día de hoy estamos otorgando una promoción exclusiva para tu línea. La promoción incluye lo que son, en este caso, 8 gigas, 4 de base, 4 de regalo. Tenemos una promoción que va a tener lo que son también la aplicación de Movistar, donde va a activar 20 gigas de regalo, ¿sí? La buena consulta que usted tiene. Sí, dígame. Sí, pero por ahora no. No estoy interesada por ahora. Estoy agonando una cuota de teléfono ahí, así que todavía me quieren con un par de meses más. Perfecto. Gracias a usted. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.536,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:51:35.948923",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 32,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:31.378025",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112142742970_ACD_52587",
+    "fecha_inicio": "12/1/2026 14:27:42",
+    "agente_nombre": "MZA 73",
+    "agente_login": "mza73",
+    "duracion_total": 95,
+    "tiempo_conversacion": 61,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

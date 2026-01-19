@@ -1,0 +1,101 @@
+{
+  "archivo": "amza10_1_260116141415955_ACD_04401.wav",
+  "duracion_segundos": 73.86,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 1.79,
+    "Cliente": 65.26
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.85,
+      "fin": 39.43,
+      "duracion": 37.58,
+      "texto": "Hola, buenos días. Buenas tardes con Juan Carlos. Sí, ¿quién habla? ¿Cómo estás? No, no, no, no, no, no sigas, porque vos estás trabajando y yo no te quiero hacer perder tiempo. Muy simplemente, porque hace exactamente 14 veces con esto que doy la misma respuesta. Yo no puedo cambiar la línea porque a mí me pagan afuera el valor de lo que yo gasto que es de claro.",
+      "confianza": 0.189,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.11,
+      "fin": 41.51,
+      "duracion": 1.4,
+      "texto": "Y si no, pierdo el privilegio.",
+      "confianza": 0.748,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 42.99,
+      "fin": 69.27,
+      "duracion": 26.28,
+      "texto": "¿Está bien? No, yo te digo porque vos estás trabajando, ¿viste? Y para hacerte que me digas todo el verso y... No, no, no, no. No sos merecedora. Yo creo que vos tenés que entender lo que te digo. No puedo cambiar de línea. Nada más. Simplemente eso. De compañía. Nada más.",
+      "confianza": 0.514,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 71.45,
+      "fin": 72.53,
+      "duracion": 1.08,
+      "texto": "¿Está bien? Qué fero, loco. Bueno, que tenga buen día.",
+      "confianza": 0.0,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 73.15,
+      "fin": 73.86,
+      "duracion": 0.71,
+      "texto": "Muchas gracias.",
+      "confianza": 0.287,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Buenas tardes con Juan Carlos. Sí, ¿quién habla? ¿Cómo estás? No, no, no, no, no, no sigas, porque vos estás trabajando y yo no te quiero hacer perder tiempo. Muy simplemente, porque hace exactamente 14 veces con esto que doy la misma respuesta. Yo no puedo cambiar la línea porque a mí me pagan afuera el valor de lo que yo gasto que es de claro. Y si no, pierdo el privilegio. ¿Está bien? No, yo te digo porque vos estás trabajando, ¿viste? Y para hacerte que me digas todo el verso y... No, no, no, no. No sos merecedora. Yo creo que vos tenés que entender lo que te digo. No puedo cambiar de línea. Nada más. Simplemente eso. De compañía. Nada más. ¿Está bien? Qué fero, loco. Bueno, que tenga buen día. Muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.551,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:07:10.074378",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:13.967828",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116141415955_ACD_04401",
+    "fecha_inicio": "16/1/2026 14:14:15",
+    "agente_nombre": "MZA 10",
+    "agente_login": "mza10",
+    "duracion_total": 103,
+    "tiempo_conversacion": 71,
+    "tiempo_hold": 0,
+    "tiempo_acw": 5,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260116_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

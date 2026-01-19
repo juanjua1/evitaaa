@@ -1,0 +1,103 @@
+{
+  "archivo": "amza5_1_260115114236062_ACD_42925.wav",
+  "duracion_segundos": 72.22,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.79,
+    "Cliente": 60.24
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 1.15,
+      "fin": 27.54,
+      "duracion": 26.39,
+      "texto": "Hola, ¿qué tal? Buen día. ¿Hablé con la línea de Alberto? Sí, buen día. ¿Cómo le va? Alberto, en el comentario estamos llamando la parte de negocios del Movistar. Queríamos darles lo que son modificaciones para su línea. ¿Cómo está? Ah, sí. Me llaman todos los días. Ah, ok. Perfecto. ¿Puedo aprovechar las ofertas con nosotros o no? No, no me interesa. ¿No le interesa? No, ya hablamos muchas veces.",
+      "confianza": 0.314,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 28.7,
+      "fin": 40.28,
+      "duracion": 11.58,
+      "texto": "Mientras más me llaman, menos me voy a interesar porque son muy caros. Ok,",
+      "confianza": 0.187,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 40.28,
+      "fin": 40.91,
+      "duracion": 0.63,
+      "texto": "ok, ok, perfecto.",
+      "confianza": 0.425,
+      "_dividido": true,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 41.34,
+      "fin": 63.61,
+      "duracion": 22.27,
+      "texto": "Alberto, ¿me quieres comentar por qué se había ido la compañía que le había sucedido en el año 2020-23? No, no, ya hablé, ya usé muchas veces. Yo lo trato con cordialidad, trato y no trato de ese efecto porque Bueno, entonces lo dejamos asentado, ¿sí? Que tenga un buen día.",
+      "confianza": 0.552,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 72.06,
+      "fin": 72.22,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.134,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. ¿Hablé con la línea de Alberto? Sí, buen día. ¿Cómo le va? Alberto, en el comentario estamos llamando la parte de negocios del Movistar. Queríamos darles lo que son modificaciones para su línea. ¿Cómo está? Ah, sí. Me llaman todos los días. Ah, ok. Perfecto. ¿Puedo aprovechar las ofertas con nosotros o no? No, no me interesa. ¿No le interesa? No, ya hablamos muchas veces. Mientras más me llaman, menos me voy a interesar porque son muy caros. Ok, ok, ok, perfecto. Alberto, ¿me quieres comentar por qué se había ido la compañía que le había sucedido en el año 2020-23? No, no, ya hablé, ya usé muchas veces. Yo lo trato con cordialidad, trato y no trato de ese efecto porque Bueno, entonces lo dejamos asentado, ¿sí? Que tenga un buen día. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.352,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T21:36:27.667883",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 23,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:30.415109",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115114236062_ACD_42925",
+    "fecha_inicio": "15/1/2026 11:42:36",
+    "agente_nombre": "MZA 5",
+    "agente_login": "mza5",
+    "duracion_total": 115,
+    "tiempo_conversacion": 74,
+    "tiempo_hold": 0,
+    "tiempo_acw": 21,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No quiere volver a ser contactado",
+    "tipo_tipificacion": "Exitoso"
+  }
+}

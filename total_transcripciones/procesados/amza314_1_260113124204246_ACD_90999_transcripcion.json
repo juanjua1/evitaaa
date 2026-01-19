@@ -1,0 +1,92 @@
+{
+  "archivo": "amza314_1_260113124204246_ACD_90999.wav",
+  "duracion_segundos": 63.99,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 31.86,
+    "Cliente": 21.68
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Cliente",
+      "inicio": 3.59,
+      "fin": 19.04,
+      "duracion": 15.45,
+      "texto": "Hola, ¿qué tal? ¿Buenas noches? Hola, ¿sí? ¿Cómo te va a hacer, Rocío? ¿Tengo el gusto de hablar con alguna de las niñas de Elisabeth? Eh, no. ¿Tienes algún contacto con Sudita Naranjo Elisabeth Alexandra?",
+      "confianza": 0.169,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 22.92,
+      "fin": 43.16,
+      "duracion": 20.24,
+      "texto": "Eh, no, no, no. No hay quien me conteste nada. Bien, entiendo. Bueno, justamente llamaba para brindarse un beneficio en la línea. ¿Me escribirá la línea nombre de esta persona? Pero de todas maneras, si vos por ejemplo has comprado hace poquito el chip o algo así, es porque no se me ha actualizado ni en el sistema, ¿sí? Coméntame, ¿cómo te llamas? Quisiera saber alguna promoción para tu línea, ¿recordás cuánto te está llegando en claro la factura?",
+      "confianza": 0.001,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 44.5,
+      "fin": 56.12,
+      "duracion": 11.62,
+      "texto": "No, como te digo recién compré, entonces requiero llamar los paquetes y eso. Te agradezco, pero después puede ser. Bueno, te dejo un mensajito de WhatsApp, ¿sí? Con la promoción y cualquier cosa hablamos por este medio.",
+      "confianza": 0.386,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 57.76,
+      "fin": 63.99,
+      "duracion": 6.23,
+      "texto": "Eso es. que tengas muy linda tarde. Hasta luego.",
+      "confianza": 0.608,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buenas noches? Hola, ¿sí? ¿Cómo te va a hacer, Rocío? ¿Tengo el gusto de hablar con alguna de las niñas de Elisabeth? Eh, no. ¿Tienes algún contacto con Sudita Naranjo Elisabeth Alexandra? Eh, no, no, no. No hay quien me conteste nada. Bien, entiendo. Bueno, justamente llamaba para brindarse un beneficio en la línea. ¿Me escribirá la línea nombre de esta persona? Pero de todas maneras, si vos por ejemplo has comprado hace poquito el chip o algo así, es porque no se me ha actualizado ni en el sistema, ¿sí? Coméntame, ¿cómo te llamas? Quisiera saber alguna promoción para tu línea, ¿recordás cuánto te está llegando en claro la factura? No, como te digo recién compré, entonces requiero llamar los paquetes y eso. Te agradezco, pero después puede ser. Bueno, te dejo un mensajito de WhatsApp, ¿sí? Con la promoción y cualquier cosa hablamos por este medio. Eso es. que tengas muy linda tarde. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.451,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T19:22:52.303151",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 22,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:22.544200",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113124204246_ACD_90999",
+    "fecha_inicio": "13/1/2026 12:42:04",
+    "agente_nombre": "MZA 314",
+    "agente_login": "mza314",
+    "duracion_total": 180,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 104,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_Mza_ALT",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

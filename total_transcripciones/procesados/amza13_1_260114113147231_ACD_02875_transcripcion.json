@@ -1,0 +1,112 @@
+{
+  "archivo": "amza13_1_260114113147231_ACD_02875.wav",
+  "duracion_segundos": 62.37,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 31.74,
+    "Cliente": 26.96
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.3,
+      "fin": 8.3,
+      "duracion": 7.0,
+      "texto": "¿Oh, con la buen día? ¿Hablo con María Inés?",
+      "confianza": 0.073,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 8.32,
+      "fin": 8.38,
+      "duracion": 0.06,
+      "texto": "No.",
+      "confianza": 0.061,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 8.4,
+      "fin": 12.81,
+      "duracion": 4.4,
+      "texto": "¿Eso está en la usuaria de esta línea móvil?",
+      "confianza": 0.617,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 12.83,
+      "fin": 12.89,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.136,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 12.91,
+      "fin": 33.25,
+      "duracion": 20.34,
+      "texto": "Mi nombre es Gerardo, me estoy comunicando de la compañía Movistar porque tenemos un plan en promoción por sólo 10 mil 400 pesos por 16 gigas para esta línea móvil. No, no es mucho para mí, no es mucho por ahora, no. ¿Puede ser que esté pagando más de 12 mil con claro usted actualmente?",
+      "confianza": 0.711,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 35.53,
+      "fin": 62.37,
+      "duracion": 26.84,
+      "texto": "Sí, recién este mes, pero justo estoy comprando en el mercado. Porque si María, mire, nosotros le podemos ofrecer este plan con un descuento fijo por seis meses, al sexto mes se puede cambiar de plan, va a aprovechar otra promoción y siempre que esté en la compañía va a estar incluida en alguna promoción. Bueno, mira, disculpame, pero ahora en este momento no puedo, estoy pagando. Nos vemos más tarde, ¿sí? Bueno, bueno. Hasta luego. Hasta luego.",
+      "confianza": 0.592,
+      "_hablante_original": "Hablante B"
+    }
+  ],
+  "transcripcion_completa": "¿Oh, con la buen día? ¿Hablo con María Inés? No. ¿Eso está en la usuaria de esta línea móvil? Sí. Mi nombre es Gerardo, me estoy comunicando de la compañía Movistar porque tenemos un plan en promoción por sólo 10 mil 400 pesos por 16 gigas para esta línea móvil. No, no es mucho para mí, no es mucho por ahora, no. ¿Puede ser que esté pagando más de 12 mil con claro usted actualmente? Sí, recién este mes, pero justo estoy comprando en el mercado. Porque si María, mire, nosotros le podemos ofrecer este plan con un descuento fijo por seis meses, al sexto mes se puede cambiar de plan, va a aprovechar otra promoción y siempre que esté en la compañía va a estar incluida en alguna promoción. Bueno, mira, disculpame, pero ahora en este momento no puedo, estoy pagando. Nos vemos más tarde, ¿sí? Bueno, bueno. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.357,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:10:39.269539",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 16,
+    "total_segmentos_corregido": 6,
+    "fecha_correccion": "2026-01-18T23:05:14.243146",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260114113147231_ACD_02875",
+    "fecha_inicio": "14/1/2026 11:31:47",
+    "agente_nombre": "MZA 13",
+    "agente_login": "mza13",
+    "duracion_total": 103,
+    "tiempo_conversacion": 60,
+    "tiempo_hold": 0,
+    "tiempo_acw": 22,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260114_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

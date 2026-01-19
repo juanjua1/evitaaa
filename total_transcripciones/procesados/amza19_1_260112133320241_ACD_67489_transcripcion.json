@@ -1,0 +1,168 @@
+{
+  "archivo": "amza19_1_260112133320241_ACD_67489.wav",
+  "duracion_segundos": 63.21,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 42.99,
+    "Cliente": 7.58
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 2.31,
+      "duracion": 2.28,
+      "texto": "¿Hola? ¿Hola, buen día?",
+      "confianza": 0.376,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 3.35,
+      "fin": 3.92,
+      "duracion": 0.56,
+      "texto": "Sí, buen día.",
+      "confianza": 0.534,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 4.47,
+      "fin": 9.08,
+      "duracion": 4.61,
+      "texto": "¿Cómo está? Mi nombre es Brisa. Llamaba del área de recupero clientes de Movistar.",
+      "confianza": 0.644,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 9.62,
+      "fin": 14.43,
+      "duracion": 4.81,
+      "texto": "Era para poder ventar un beneficio en su línea. ¿Usted está en claro actualmente?",
+      "confianza": 0.622,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 16.97,
+      "fin": 20.61,
+      "duracion": 3.64,
+      "texto": "Sí, pasa que es un grupo familiar que estamos.",
+      "confianza": 0.593,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 23.91,
+      "fin": 25.94,
+      "duracion": 2.02,
+      "texto": "Lo merece a mis señoras, yo no estoy en eso.",
+      "confianza": 0.483,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 26.73,
+      "fin": 40.7,
+      "duracion": 13.97,
+      "texto": "Salimos de volcar después de casi 20 años, porque no estuvo de acuerdo en algunas cosas mis señores, bueno, lamentablemente no. Pero yo no lo manejo, yo lo manejo a 26 horas.",
+      "confianza": 0.658,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 41.74,
+      "fin": 50.53,
+      "duracion": 8.79,
+      "texto": "Claro, entiendo, bien. Así que no... Y le podría dar de último un mensajito por WhatsApp, para que cuando usted llegue y la vea, lo último le pueda mostrar las promociones.",
+      "confianza": 0.313,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 51.7,
+      "fin": 55.64,
+      "duracion": 3.94,
+      "texto": "Sí, bueno, sí, es un gran problema. Perfecto.",
+      "confianza": 0.296,
+      "_dividido": true,
+      "_tipo_cambio": "respuesta_continuacion",
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 55.66,
+      "fin": 58.94,
+      "duracion": 3.28,
+      "texto": "Entonces, yo ahí le dejo todo por WhatsApp. Muchas gracias.",
+      "confianza": 0.587,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.62,
+      "fin": 61.99,
+      "duracion": 2.37,
+      "texto": "No, por favor. Hasta luego.",
+      "confianza": 0.569,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 62.91,
+      "fin": 63.21,
+      "duracion": 0.3,
+      "texto": "Hasta luego.",
+      "confianza": 0.174,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Hola, buen día? Sí, buen día. ¿Cómo está? Mi nombre es Brisa. Llamaba del área de recupero clientes de Movistar. Era para poder ventar un beneficio en su línea. ¿Usted está en claro actualmente? Sí, pasa que es un grupo familiar que estamos. Lo merece a mis señoras, yo no estoy en eso. Salimos de volcar después de casi 20 años, porque no estuvo de acuerdo en algunas cosas mis señores, bueno, lamentablemente no. Pero yo no lo manejo, yo lo manejo a 26 horas. Claro, entiendo, bien. Así que no... Y le podría dar de último un mensajito por WhatsApp, para que cuando usted llegue y la vea, lo último le pueda mostrar las promociones. Sí, bueno, sí, es un gran problema. Perfecto. Entonces, yo ahí le dejo todo por WhatsApp. Muchas gracias. No, por favor. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.494,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:31:40.366521",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 21,
+    "total_segmentos_corregido": 12,
+    "fecha_correccion": "2026-01-18T23:05:15.472962",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260112133320241_ACD_67489",
+    "fecha_inicio": "12/1/2026 13:33:20",
+    "agente_nombre": "MZA 19",
+    "agente_login": "mza19",
+    "duracion_total": 207,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 121,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260112_MZA_TT_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "No Disp.",
+    "tipo_tipificacion": "nan"
+  }
+}

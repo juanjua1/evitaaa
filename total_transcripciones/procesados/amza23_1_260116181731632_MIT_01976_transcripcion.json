@@ -1,0 +1,92 @@
+{
+  "archivo": "amza23_1_260116181731632_MIT_01976.wav",
+  "duracion_segundos": 140.2,
+  "num_segmentos": 10,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 138.17,
+    "Cliente": 0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 0.03,
+      "fin": 24.62,
+      "duracion": 24.59,
+      "texto": "¿Se va sentiendo? ¿Se va sentiendo?",
+      "confianza": 0.676,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 25.28,
+      "fin": 53.11,
+      "duracion": 27.83,
+      "texto": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,",
+      "confianza": 0.586,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 53.95,
+      "fin": 101.81,
+      "duracion": 47.86,
+      "texto": "No, no es que así, me tocó como en la venta y me redamó el otro. Ah, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, No pueden ser porque ahora que estaba con una fuerza normal, se evaluaba también si las dos fuerzas eran normales. Las dos fuerzas eran normales. Y ahí acabamos el acto.",
+      "confianza": 0.436,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 102.31,
+      "fin": 140.2,
+      "duracion": 37.89,
+      "texto": "Me están insultando y nosotros cortamos, ahí se va a justificar. No, no, no, no, no, no.",
+      "confianza": 0.505,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "¿Se va sentiendo? ¿Se va sentiendo? No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, No, no es que así, me tocó como en la venta y me redamó el otro. Ah, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, No pueden ser porque ahora que estaba con una fuerza normal, se evaluaba también si las dos fuerzas eran normales. Las dos fuerzas eran normales. Y ahí acabamos el acto. Me están insultando y nosotros cortamos, ahí se va a justificar. No, no, no, no, no, no.",
+  "calidad": {
+    "confianza_promedio": 0.487,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T18:24:53.213403",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 10,
+    "total_segmentos_corregido": 4,
+    "fecha_correccion": "2026-01-18T23:05:18.716758",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260116181731632_MIT_01976",
+    "fecha_inicio": "16/1/2026 18:17:32",
+    "agente_nombre": "MZA 23",
+    "agente_login": "mza23",
+    "duracion_total": 141,
+    "tiempo_conversacion": 138,
+    "tiempo_hold": 0,
+    "tiempo_acw": 3,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA_OUT",
+    "lote": "nan",
+    "cliente_telefono": "nan",
+    "sentido": "Saliente",
+    "tipificacion_agente": "Contestador",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

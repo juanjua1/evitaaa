@@ -1,0 +1,120 @@
+{
+  "archivo": "amza16_1_260115112332485_ACD_76615.wav",
+  "duracion_segundos": 63.3,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 43.36,
+    "Cliente": 4.63
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.09,
+      "fin": 19.51,
+      "duracion": 18.42,
+      "texto": "Hola. Hola, buen día, Garcela. Sí, ¿cómo te va? ¿Cómo les va? Mi nombre es Maciel, nos comunicábamos del área de beneficio en Bogotá. Quería, eh, Garcela, mejorarte el plan de tu línea. Vemos que te encontrás en clara actualmente.",
+      "confianza": 0.469,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 19.53,
+      "fin": 20.75,
+      "duracion": 1.22,
+      "texto": "Sí, sí, no, no estoy en clara y no me venía tan de agradezco.",
+      "confianza": 0.003,
+      "_corregido": "era_agente_ahora_cliente",
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 20.77,
+      "fin": 29.36,
+      "duracion": 8.59,
+      "texto": "Mira, pero ¿por qué como ti no le hemos podido comentar nada de momento? Porque, eh, el precio es muy... Sí, mi ropa.",
+      "confianza": 0.493,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 30.83,
+      "fin": 34.65,
+      "duracion": 3.82,
+      "texto": "No entiendo en qué inconveniente había tenido con la compañía en su momento.",
+      "confianza": 0.525,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 40.7,
+      "fin": 44.11,
+      "duracion": 3.41,
+      "texto": "Igualmente es que tiene problemas de conexión con su compañía actual de momento.",
+      "confianza": 0.669,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 50.0,
+      "fin": 58.71,
+      "duracion": 8.71,
+      "texto": "No, no tengo ningún problema, estoy perfecta, estoy muy conforme. Entiendo, porque bueno, le escuchamos medio cortado, por eso le comentaba. Bueno, bueno, no, no, pero no tengo ningún problema.",
+      "confianza": 0.0,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Agente",
+      "inicio": 59.48,
+      "fin": 63.3,
+      "duracion": 3.82,
+      "texto": "No, no hay problema, que tenga buen día, hasta luego. Sí, igualmente.",
+      "confianza": 0.372,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día, Garcela. Sí, ¿cómo te va? ¿Cómo les va? Mi nombre es Maciel, nos comunicábamos del área de beneficio en Bogotá. Quería, eh, Garcela, mejorarte el plan de tu línea. Vemos que te encontrás en clara actualmente. Sí, sí, no, no estoy en clara y no me venía tan de agradezco. Mira, pero ¿por qué como ti no le hemos podido comentar nada de momento? Porque, eh, el precio es muy... Sí, mi ropa. No entiendo en qué inconveniente había tenido con la compañía en su momento. Igualmente es que tiene problemas de conexión con su compañía actual de momento. No, no tengo ningún problema, estoy perfecta, estoy muy conforme. Entiendo, porque bueno, le escuchamos medio cortado, por eso le comentaba. Bueno, bueno, no, no, pero no tengo ningún problema. No, no hay problema, que tenga buen día, hasta luego. Sí, igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.388,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:24:44.811775",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante A",
+    "segmentos_divididos": 0,
+    "total_segmentos_original": 17,
+    "total_segmentos_corregido": 7,
+    "fecha_correccion": "2026-01-18T23:05:15.081016",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260115112332485_ACD_76615",
+    "fecha_inicio": "15/1/2026 11:23:32",
+    "agente_nombre": "MZA 16",
+    "agente_login": "mza16",
+    "duracion_total": 89,
+    "tiempo_conversacion": 62,
+    "tiempo_hold": 0,
+    "tiempo_acw": 1,
+    "origen_corte": "Agente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260115_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Se corta durante la conversacion",
+    "tipo_tipificacion": "No Exitoso"
+  }
+}

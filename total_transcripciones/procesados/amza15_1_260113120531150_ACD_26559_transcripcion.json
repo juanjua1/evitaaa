@@ -1,0 +1,102 @@
+{
+  "archivo": "amza15_1_260113120531150_ACD_26559.wav",
+  "duracion_segundos": 89.44,
+  "num_segmentos": 28,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Agente",
+    "Cliente"
+  ],
+  "tiempo_por_hablante": {
+    "Agente": 0.5,
+    "Cliente": 80.8
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Agente",
+      "inicio": 1.62,
+      "fin": 2.12,
+      "duracion": 0.5,
+      "texto": "Hola.",
+      "confianza": 0.408,
+      "_hablante_original": "Hablante B"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 6.04,
+      "fin": 44.53,
+      "duracion": 38.49,
+      "texto": "Hola, ¿qué tal? Buen día con Lucas. ¿Quién habla? Lucas, ¿cómo te va? Macarena es mi nombre, nos estamos contactando para otorgarte una muy buena promoción en el día de hoy a tu línea. ¿Tienes dos líneas con claro, es correcto esto? Tengo la línea, el internet, tengo todo con claro. Bien, perfecto. No sé si te habrán comentado cuando se comunicaron de Movistar que accediendo con ambos servicios la línea te quedaría bonificada. en cuatro mil pesos una de las líneas con ocho gigas por acceder con ambos servicios y lo que es el servicio de internet tenemos de trescientos meas en adelante que con la línea te quedarían un valor de veinticuatro mil.",
+      "confianza": 0.008,
+      "_hablante_original": "Hablante A",
+      "_fusionado": true
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 45.77,
+      "fin": 72.13,
+      "duracion": 26.36,
+      "texto": "Y para la botella no estoy con internet, yo averigüe en su momento. Así que no puede pasar todo. ¿Hace cuánto te lo pudieron corroborar? Un mes. Bien, esto te informo que va cambiando a diario, por eso nos hablamos del trabajo de que cuando los clientes Nos comentan esto, volverlo a corroborar. Decime tu dirección. Te agradezco, pero tengo una bonificación. Pago 30 mil pesos, las tres líneas, las tres cosas.",
+      "confianza": 0.121,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 72.93,
+      "fin": 77.26,
+      "duracion": 4.33,
+      "texto": "Tengo 100 meas y tengo 12 gigas de internet. Pueden hacérmelo en el día.",
+      "confianza": 0.643,
+      "_hablante_original": "Hablante A"
+    },
+    {
+      "hablante": "Cliente",
+      "inicio": 77.82,
+      "fin": 89.44,
+      "duracion": 11.62,
+      "texto": "Te agradezco. Llámame si quieren seis meses, que se me acaba el beneficio y hablamos. Dale. Te agradezco. Un abrazo. Pero en este caso podríamos corroborar que tu línea",
+      "confianza": 0.51,
+      "_hablante_original": "Hablante A"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buen día con Lucas. ¿Quién habla? Lucas, ¿cómo te va? Macarena es mi nombre, nos estamos contactando para otorgarte una muy buena promoción en el día de hoy a tu línea. ¿Tienes dos líneas con claro, es correcto esto? Tengo la línea, el internet, tengo todo con claro. Bien, perfecto. No sé si te habrán comentado cuando se comunicaron de Movistar que accediendo con ambos servicios la línea te quedaría bonificada. en cuatro mil pesos una de las líneas con ocho gigas por acceder con ambos servicios y lo que es el servicio de internet tenemos de trescientos meas en adelante que con la línea te quedarían un valor de veinticuatro mil. Y para la botella no estoy con internet, yo averigüe en su momento. Así que no puede pasar todo. ¿Hace cuánto te lo pudieron corroborar? Un mes. Bien, esto te informo que va cambiando a diario, por eso nos hablamos del trabajo de que cuando los clientes Nos comentan esto, volverlo a corroborar. Decime tu dirección. Te agradezco, pero tengo una bonificación. Pago 30 mil pesos, las tres líneas, las tres cosas. Tengo 100 meas y tengo 12 gigas de internet. Pueden hacérmelo en el día. Te agradezco. Llámame si quieren seis meses, que se me acaba el beneficio y hablamos. Dale. Te agradezco. Un abrazo. Pero en este caso podríamos corroborar que tu línea",
+  "calidad": {
+    "confianza_promedio": 0.431,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-18T17:23:03.507690",
+    "version": "5.0_ecapa"
+  },
+  "correccion_diarizacion": {
+    "agente_detectado_original": "Hablante B",
+    "segmentos_divididos": 1,
+    "total_segmentos_original": 28,
+    "total_segmentos_corregido": 5,
+    "fecha_correccion": "2026-01-18T23:05:14.981891",
+    "version": "1.0"
+  },
+  "metadata_llamada": {
+    "id_interaccion": "260113120531150_ACD_26559",
+    "fecha_inicio": "13/1/2026 12:05:31",
+    "agente_nombre": "MZA 15",
+    "agente_login": "mza15",
+    "duracion_total": 110,
+    "tiempo_conversacion": 86,
+    "tiempo_hold": 0,
+    "tiempo_acw": 7,
+    "origen_corte": "Cliente",
+    "causa_terminacion": "Se contacta con el operador",
+    "campana": "MVS_MZA",
+    "lote": "20260113_MZA_TM_MIXTO",
+    "cliente_telefono": "nan",
+    "sentido": "Discador Predictivo",
+    "tipificacion_agente": "Conforme con plan-prestador actual",
+    "tipo_tipificacion": "Exitoso"
+  }
+}
