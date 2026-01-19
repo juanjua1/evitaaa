@@ -804,154 +804,65 @@ def pagina_resumen_ejecutivo(datos, df):
         st.plotly_chart(fig, use_container_width=True)
 
 
+def mostrar_proximamente(titulo, icono="🚧"):
+    """Muestra un cartel elegante de Próximamente"""
+    st.markdown(f'<div class="main-header">{titulo}</div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 40px;
+        margin: 40px auto;
+        max-width: 600px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    ">
+        <div style="font-size: 80px; margin-bottom: 20px;">🚀</div>
+        <h1 style="
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        ">Próximamente</h1>
+        <p style="
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0;
+            max-width: 400px;
+            line-height: 1.6;
+        ">Estamos trabajando en esta funcionalidad.<br>¡Pronto estará disponible!</p>
+        <div style="
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            color: white;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        ">⏳ En desarrollo</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
 def pagina_cierres_comerciales(datos):
     """Página de análisis de cierres comerciales"""
-    st.markdown('<div class="main-header">📋 Análisis de Cierres Comerciales</div>', unsafe_allow_html=True)
-    
-    if 'cierres' not in datos or 'cierres_df' not in datos:
-        st.warning("No hay datos de cierres comerciales disponibles. Ejecuta el script 13_analisis_cierres_comerciales.py primero.")
-        return
-    
-    cierres = datos['cierres']
-    df_cierres = datos['cierres_df']
-    
-    # Métricas principales
-    col1, col2, col3, col4 = st.columns(4)
-    
-    stats = cierres.get('estadisticas', {})
-    total_ventas = cierres.get('total_ventas', 0)
-    
-    with col1:
-        st.metric("🛒 Total Ventas Analizadas", f"{total_ventas}")
-    with col2:
-        promedio = stats.get('promedio_score', 0)
-        st.metric("📊 Score Promedio", f"{promedio:.1f}%")
-    with col3:
-        excelentes = stats.get('excelentes', 0)
-        pct_excelentes = (excelentes / total_ventas * 100) if total_ventas > 0 else 0
-        st.metric("🌟 Cierres Excelentes", f"{excelentes} ({pct_excelentes:.1f}%)")
-    with col4:
-        sin_cierre = stats.get('sin_cierre', 0)
-        st.metric("⚠️ Sin Cierre Detectado", f"{sin_cierre}")
-    
-    st.markdown("---")
-    
-    # Gráficos
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown('<p class="section-header">📊 Distribución por Calificación</p>', unsafe_allow_html=True)
-        
-        calificaciones = ['Excelente', 'Bueno', 'Regular', 'Deficiente', 'Sin cierre']
-        valores = [stats.get('excelentes', 0), stats.get('buenos', 0), 
-                   stats.get('regulares', 0), stats.get('deficientes', 0), 
-                   stats.get('sin_cierre', 0)]
-        
-        crear_pie_chart_expandible(
-            values=valores,
-            names=calificaciones,
-            titulo="Distribución por Calificación",
-            colors=[CALIFICACION_COLORS[c] for c in calificaciones],
-            key_id="calificacion"
-        )
-    
-    with col2:
-        st.markdown('<p class="section-header">📋 Cumplimiento por Elemento del Protocolo</p>', unsafe_allow_html=True)
-        
-        elementos = cierres.get('elementos_protocolo', {})
-        if elementos:
-            nombres = []
-            cumplimientos = []
-            obligatorios = []
-            
-            for elem_id, elem_data in elementos.items():
-                nombres.append(elem_data['nombre'])
-                cumplimientos.append(elem_data['cumplimiento'])
-                obligatorios.append('Obligatorio' if elem_data['obligatorio'] else 'Opcional')
-            
-            df_elem = pd.DataFrame({
-                'Elemento': nombres,
-                'Cumplimiento': cumplimientos,
-                'Tipo': obligatorios
-            })
-            df_elem = df_elem.sort_values('Cumplimiento', ascending=True)
-            
-            fig = px.bar(
-                df_elem, 
-                x='Cumplimiento', 
-                y='Elemento',
-                color='Tipo',
-                color_discrete_map={'Obligatorio': '#2980B9', 'Opcional': '#5DADE2'},
-                orientation='h',
-                text='Cumplimiento'
-            )
-            fig.update_traces(
-                texttemplate='%{text:.1f}%', 
-                textposition='outside',
-                textfont=dict(size=9, color='#2C3E50')
-            )
-            fig.update_layout(
-                height=350, 
-                xaxis_title="% Cumplimiento",
-                yaxis_title="",
-                margin=dict(t=20, b=30, l=20, r=60),
-                xaxis=dict(range=[0, 115]),
-                paper_bgcolor='#FFFFFF',
-                plot_bgcolor='#FAFBFC',
-                font=dict(color='#2C3E50', size=12)
-            )
-            fig.update_xaxes(
-                gridcolor='#E5E8E8', 
-                tickfont=dict(size=9, color='#2C3E50'),
-                title_font=dict(size=12, color='#2C3E50')
-            )
-            fig.update_yaxes(
-                gridcolor='#E5E8E8', 
-                tickfont=dict(size=8, color='#2C3E50'),
-                title_font=dict(size=12, color='#2C3E50')
-            )
-            st.plotly_chart(fig, use_container_width=True)
-    
-    # Tabla de cierres
-    st.markdown('<p class="section-header">📝 Detalle de Cierres Comerciales</p>', unsafe_allow_html=True)
-    
-    # Filtros
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        filtro_calificacion = st.multiselect(
-            "Filtrar por Calificación",
-            options=['Excelente', 'Bueno', 'Regular', 'Deficiente', 'Sin cierre'],
-            default=['Excelente', 'Bueno', 'Regular', 'Deficiente', 'Sin cierre']
-        )
-    with col2:
-        if 'agente' in df_cierres.columns:
-            agentes = ['Todos'] + sorted(df_cierres['agente'].unique().tolist())
-            filtro_agente = st.selectbox("Filtrar por Agente", agentes)
-    with col3:
-        ordenar_por = st.selectbox("Ordenar por", ['porcentaje', 'duracion', 'fecha'])
-    
-    # Aplicar filtros
-    df_filtrado = df_cierres[df_cierres['calificacion'].isin(filtro_calificacion)]
-    if 'agente' in df_cierres.columns and filtro_agente != 'Todos':
-        df_filtrado = df_filtrado[df_filtrado['agente'] == filtro_agente]
-    
-    if ordenar_por in df_filtrado.columns:
-        df_filtrado = df_filtrado.sort_values(ordenar_por, ascending=False)
-    
-    # Mostrar tabla con colores
-    st.dataframe(
-        df_filtrado[['archivo', 'agente', 'duracion', 'porcentaje', 'calificacion', 'faltantes_obligatorios']].head(50),
-        use_container_width=True,
-        height=300
-    )
+    mostrar_proximamente("📋 Análisis de Cierres Comerciales")
 
 
 def pagina_planes_ofrecidos(datos, df):
     """Página de análisis de planes ofrecidos, fibra y promociones"""
-    st.markdown('<div class="main-header">📱 Análisis de Planes, Fibra y Promociones</div>', unsafe_allow_html=True)
+    mostrar_proximamente("📱 Análisis de Planes, Fibra y Promociones")
+    return
     
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'planes' not in datos:
-        st.warning("No hay datos de planes disponibles. Ejecuta el script 11_analisis_planes_ofrecidos.py primero.")
+        st.warning("No hay datos de planes disponibles.")
         return
     
     planes = datos['planes']
@@ -1232,14 +1143,8 @@ def pagina_coaching_vendedores(datos):
     
     # Verificar si hay datos de coaching
     if 'coaching' not in datos or not datos['coaching']:
-        st.warning("⚠️ No hay datos de coaching disponibles. Ejecuta primero el script `5_coaching_vendedores.py`")
-        st.info("""
-        ### Cómo generar el coaching:
-        1. Abre una terminal
-        2. Ejecuta: `python 5_coaching_vendedores.py`
-        3. El proceso generará análisis personalizados para cada vendedor usando Gemini IA
-        4. Recarga esta página cuando termine
-        """)
+        st.warning("⚠️ No hay datos de coaching disponibles actualmente.")
+        st.info("💡 Los datos de coaching se generarán próximamente.")
         return
     
     coaching_data = datos['coaching']
@@ -1258,7 +1163,7 @@ def pagina_coaching_vendedores(datos):
                 box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
         <h3 style='margin:0; color: #FFFFFF; font-weight: 700;'>🤖 Coaching Personalizado con Inteligencia Artificial</h3>
         <p style='margin: 10px 0 0 0; color: #E0E7FF;'>
-            Análisis exhaustivo generado por Gemini actuando como <strong style='color: #FFFFFF;'>Jefe de Ventas</strong>. 
+            Análisis exhaustivo generado por IA actuando como <strong style='color: #FFFFFF;'>Jefe de Ventas</strong>. 
             Cada vendedor tiene un plan de acción personalizado diseñado para maximizar su potencial.
         </p>
     </div>
@@ -1288,9 +1193,9 @@ def pagina_coaching_vendedores(datos):
             st.metric("💰 Conversión Promedio", f"{np.mean(conversiones):.1f}%")
     
     with col4:
-        # Modelo usado
-        modelo = coaching_data[agentes_coaching[0]].get('modelo_usado', 'Gemini')
-        st.metric("🤖 Modelo IA", modelo)
+        # Total de evaluaciones
+        total_eval = sum(data.get('metricas', {}).get('evaluaciones', {}).get('total_evaluadas', 0) for data in coaching_data.values())
+        st.metric("📝 Total Evaluaciones", total_eval)
     
     st.markdown("---")
     
@@ -1769,42 +1674,7 @@ def pagina_coaching_vendedores(datos):
 
 def pagina_performance_agentes(df, datos):
     """Página de performance por agente"""
-    st.markdown('<div class="main-header">👥 Performance de Agentes</div>', unsafe_allow_html=True)
-    
-    # Calcular métricas por agente
-    agentes_stats = df.groupby('agente').agg({
-        'id': 'count',
-        'duracion': 'mean',
-        'score_calidad': 'mean',
-        'tipificacion': lambda x: (x == 'Venta').sum()
-    }).reset_index()
-    agentes_stats.columns = ['Agente', 'Total Llamadas', 'Duración Promedio', 'Score Calidad', 'Ventas']
-    agentes_stats['Tasa Conversión'] = (agentes_stats['Ventas'] / agentes_stats['Total Llamadas'] * 100).round(1)
-    agentes_stats['Duración Promedio'] = (agentes_stats['Duración Promedio'] / 60).round(1)
-    agentes_stats['Score Calidad'] = agentes_stats['Score Calidad'].round(1)
-    
-    # Filtrar agentes con suficientes llamadas
-    agentes_stats = agentes_stats[agentes_stats['Total Llamadas'] >= 5]
-    
-    # Top métricas
-    st.markdown('<p class="section-header">🏆 Rankings de Agentes</p>', unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown("**🥇 Mayor Tasa de Conversión**")
-        top_conversion = agentes_stats.nlargest(5, 'Tasa Conversión')[['Agente', 'Tasa Conversión', 'Ventas']]
-        st.dataframe(top_conversion, use_container_width=True, hide_index=True)
-    
-    with col2:
-        st.markdown("**⭐ Mayor Score de Calidad**")
-        top_calidad = agentes_stats.nlargest(5, 'Score Calidad')[['Agente', 'Score Calidad', 'Total Llamadas']]
-        st.dataframe(top_calidad, use_container_width=True, hide_index=True)
-    
-    with col3:
-        st.markdown("**📞 Mayor Volumen de Llamadas**")
-        top_volumen = agentes_stats.nlargest(5, 'Total Llamadas')[['Agente', 'Total Llamadas', 'Ventas']]
-        st.dataframe(top_volumen, use_container_width=True, hide_index=True)
+    mostrar_proximamente("👥 Performance de Agentes")
     
     st.markdown("---")
     
@@ -1981,8 +1851,10 @@ def pagina_performance_agentes(df, datos):
 
 def pagina_analisis_temporal(df):
     """Página de análisis temporal"""
-    st.markdown('<div class="main-header">📅 Análisis Temporal</div>', unsafe_allow_html=True)
+    mostrar_proximamente("📅 Análisis Temporal")
+    return
     
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'dia' not in df.columns or 'hora' not in df.columns:
         st.warning("No hay datos temporales disponibles")
         return
@@ -2126,8 +1998,10 @@ def pagina_analisis_temporal(df):
 
 def pagina_detalle_llamadas(df, datos):
     """Página de detalle de llamadas"""
-    st.markdown('<div class="main-header">🔍 Explorador de Llamadas</div>', unsafe_allow_html=True)
+    mostrar_proximamente("🔍 Explorador de Llamadas")
+    return
     
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     # Filtros en la página principal
     st.markdown('<p class="section-header">🔧 Filtros de Búsqueda</p>', unsafe_allow_html=True)
     
@@ -2288,10 +2162,12 @@ def pagina_detalle_llamadas(df, datos):
 
 def pagina_quejas_no_resueltas(datos):
     """Página de análisis de quejas no resueltas"""
-    st.markdown('<div class="main-header">😤 Quejas No Resueltas</div>', unsafe_allow_html=True)
+    mostrar_proximamente("😤 Quejas No Resueltas")
+    return
     
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'quejas' not in datos:
-        st.warning("No hay datos de quejas disponibles. Ejecuta el script 13_analisis_quejas.py primero.")
+        st.warning("No hay datos de quejas disponibles.")
         return
     
     quejas = datos['quejas']
@@ -2504,11 +2380,12 @@ def pagina_quejas_no_resueltas(datos):
 
 def pagina_analisis_duracion(datos):
     """Página de análisis integral por duración de llamadas"""
-    st.markdown('<div class="main-header">⏱️ Análisis de Duración de Llamadas</div>', unsafe_allow_html=True)
+    mostrar_proximamente("⏱️ Análisis de Duración de Llamadas")
+    return
     
-    # Verificar datos
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'integral' not in datos or 'integral_df' not in datos:
-        st.warning("⚠️ No se encontraron datos del análisis integral. Ejecuta primero el script 14_analisis_integral.py")
+        st.warning("⚠️ No se encontraron datos del análisis integral.")
         return
     
     resumen = datos['integral']
@@ -2809,11 +2686,12 @@ def pagina_analisis_duracion(datos):
 
 def pagina_clasificacion_integral(datos):
     """Página de clasificación integral de llamadas"""
-    st.markdown('<div class="main-header">📊 Clasificación Integral de Llamadas</div>', unsafe_allow_html=True)
+    mostrar_proximamente("📊 Clasificación Integral de Llamadas")
+    return
     
-    # Verificar datos
+    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'clasificacion' not in datos:
-        st.warning("⚠️ No se encontraron datos de clasificación. Ejecuta primero el script 15_clasificacion_completa.py")
+        st.warning("⚠️ No se encontraron datos de clasificación.")
         return
     
     resumen = datos['clasificacion']
@@ -3091,13 +2969,13 @@ def pagina_clasificacion_integral(datos):
 
 
 def pagina_evaluaciones_gemini(datos):
-    """Página de evaluaciones realizadas con Gemini AI"""
+    """Página de evaluaciones realizadas con Inteligencia Artificial"""
     st.markdown('<div class="main-header">🤖 Evaluaciones con Inteligencia Artificial</div>', unsafe_allow_html=True)
     
     # Verificar datos
     if 'evaluaciones_gemini_df' not in datos:
-        st.warning("⚠️ No se encontraron evaluaciones de Gemini. El proceso está en ejecución o no se ha iniciado.")
-        st.info("💡 Ejecuta: `python 4_evaluacion_gemini.py` para generar las evaluaciones.")
+        st.warning("⚠️ No se encontraron evaluaciones de IA disponibles.")
+        st.info("💡 Los datos de evaluación no están disponibles actualmente.")
         
         # Mostrar progreso si existe el archivo parcial
         import os
