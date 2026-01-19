@@ -42,8 +42,8 @@ MAX_REINTENTOS_NAVEGACION = 12
 
 # CONFIGURACIÓN AUTOMÁTICA DE HORARIOS
 HORA_INICIO_AUTO = "08"  # 8:00 AM
-HORA_FIN_AUTO = "22"     # 10:00 PM
-DURACION_MINIMA = "02"   # 2 minutos
+HORA_FIN_AUTO = "23"     # 11:00 PM
+DURACION_MINIMA = "00"   # 0 minutos (sin filtro de duración mínima, filtramos después por 20 seg)
 
 # ========== SISTEMA DE LOGGING ==========
 def log(mensaje, consola=True):
@@ -199,7 +199,9 @@ prefs = {
 }
 chrome_options.add_experimental_option("prefs", prefs)
 
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+from selenium.webdriver.chrome.service import Service
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # ========== FUNCIONES AUXILIARES ==========
 def capturar_screenshot(nombre="debug"):

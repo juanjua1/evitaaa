@@ -1,0 +1,162 @@
+{
+  "agente": "MZA 5",
+  "fecha_generacion": "2026-01-19T08:08:20.890480",
+  "metricas": {
+    "agente": "MZA 5",
+    "evaluaciones": {
+      "total_evaluadas": 35,
+      "puntaje_promedio": 111.5,
+      "puntaje_min": 0.0,
+      "puntaje_max": 800.0,
+      "desviacion_std": 214.0,
+      "llamadas_excelentes": 5,
+      "llamadas_criticas": 10,
+      "criterios": {
+        "saludo_presentacion": 44.0,
+        "identificacion_cliente": 16.3,
+        "deteccion_necesidades": 35.1,
+        "oferta_productos": 51.4,
+        "manejo_objeciones": 43.6,
+        "cierre": 41.3,
+        "despedida": 62.3,
+        "proactividad": 22.7,
+        "empatia": 45.7,
+        "resolucion_problemas": 29.0
+      },
+      "areas_mejora_frecuentes": {
+        "Identificación del cliente": 7,
+        "Detección de necesidades": 6,
+        "Cierre de ventas": 6,
+        "Manejo de objeciones": 6,
+        "Empatía": 5
+      },
+      "fortalezas_frecuentes": {
+        "Despedida": 7,
+        "Manejo de objeciones.": 4,
+        "Manejo de objeciones": 3,
+        "Buen manejo de objeciones.": 2,
+        "Detección de necesidades del cliente.": 2
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 800.0,
+          "resumen": "El agente realizó una buena gestión en general, mostrando un buen manejo de objeciones y una correcta identificación del cliente. Ofreció productos adecuados y fue proactivo en la oferta de servicios. Mostró empatía y resolvió la queja de manera efectiva."
+        },
+        {
+          "puntaje_total": 700.0,
+          "resumen": "El agente realiza una llamada de ventas con un buen manejo de objeciones y una buena explicación de los productos. Se identifica una oportunidad para mejorar la identificación del cliente y la formalidad en la presentación."
+        },
+        {
+          "puntaje_total": 700.0,
+          "resumen": "El agente se presenta y detecta las necesidades del cliente. Ofrece planes. Maneja objeciones y muestra empatía. Cierra la llamada enviando información por WhatsApp. Requiere mejorar la identificación del cliente y profundizar en la detección de necesidades."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No hay presentación, identificación del cliente, ni cierre de venta. La detección de necesidades es superficial y la empatía es nula."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta, no identifica al cliente, no detecta necesidades, la oferta es genérica, no maneja objeciones ni cierra la venta de manera efectiva. La comunicación es superficial."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada es de muy baja calidad. El agente no se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones, no intenta cerrar la venta y no se despide correctamente. El agente responde de manera inapropiada ante la queja del cliente."
+        }
+      ]
+    },
+    "clasificacion": {
+      "total_llamadas": 35,
+      "con_saludo": 8,
+      "con_cierre": 0,
+      "con_identificacion": 0,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 3,
+      "ventas": 1,
+      "score_calidad_prom": 32.9,
+      "pct_saludo": 22.9,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 8.6,
+      "tasa_conversion": 2.9
+    },
+    "integral": {
+      "duracion_promedio_seg": 254.0,
+      "duracion_promedio_min": 4.2,
+      "distribucion_duracion": {
+        "1-3 min": 22,
+        "> 8 min": 7,
+        "3-5 min": 6
+      }
+    },
+    "cierres": {}
+  },
+  "comparativa": {
+    "puntaje_ia": {
+      "agente": 111.5,
+      "general": 50.3,
+      "diferencia": 61.1,
+      "percentil": 98.2
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 44.0,
+        "general": 54.7,
+        "diferencia": -10.7
+      },
+      "identificacion_cliente": {
+        "agente": 16.3,
+        "general": 18.8,
+        "diferencia": -2.5
+      },
+      "deteccion_necesidades": {
+        "agente": 35.1,
+        "general": 36.6,
+        "diferencia": -1.5
+      },
+      "oferta_productos": {
+        "agente": 51.4,
+        "general": 47.8,
+        "diferencia": 3.6
+      },
+      "manejo_objeciones": {
+        "agente": 43.6,
+        "general": 44.1,
+        "diferencia": -0.5
+      },
+      "cierre": {
+        "agente": 41.3,
+        "general": 25.4,
+        "diferencia": 15.9
+      },
+      "despedida": {
+        "agente": 62.3,
+        "general": 55.0,
+        "diferencia": 7.3
+      },
+      "proactividad": {
+        "agente": 22.7,
+        "general": 17.5,
+        "diferencia": 5.2
+      },
+      "empatia": {
+        "agente": 45.7,
+        "general": 50.2,
+        "diferencia": -4.4
+      },
+      "resolucion_problemas": {
+        "agente": 29.0,
+        "general": 24.0,
+        "diferencia": 5.0
+      }
+    },
+    "conversion": {
+      "agente": 2.9,
+      "general": 5.1,
+      "diferencia": -2.3
+    }
+  },
+  "analisis_coaching": "¡Excelente! Aquí está mi análisis exhaustivo y plan de acción personalizado para MZA 5, basado en los datos proporcionados, con el objetivo de desbloquear su máximo potencial.\n\n## ANÁLISIS DEL VENDEDOR MZA 5\n\n### 1. DIAGNÓSTICO GENERAL\n\nMZA 5 presenta un panorama interesante. Si bien su puntaje IA promedio es significativamente más alto que el promedio del equipo, ubicándose en el percentil 98.2, hay discrepancias notables en otros indicadores cruciales. Su tasa de conversión es inferior a la del equipo, lo que sugiere que, aunque sus interacciones sean evaluadas positivamente por la IA, no se están traduciendo en ventas de manera efectiva. Esto indica que, aunque posee habilidades importantes, la ejecución final en el cierre necesita atención. Su nivel actual se sitúa en **\"Necesita Mejora con Alto Potencial\"**. Con el enfoque correcto y un plan de acción específico, MZA 5 puede convertirse en un vendedor de alto rendimiento.\n\nSu potencial de mejora es significativo. Los datos muestran fortalezas importantes en el manejo de objeciones y la despedida, pero también identifican áreas críticas como la identificación del cliente, la detección de necesidades y el cierre de ventas. Abordar estas áreas, combinadas con su alta puntuación en la evaluación de la IA, le permitirán cerrar la brecha entre la calidad de la interacción y la concreción de las ventas.\n\n### 2. FORTALEZAS IDENTIFICADAS\n\n*   **Manejo de Objeciones:** Las evaluaciones muestran consistentemente un buen manejo de objeciones. Debe continuar desarrollando esta habilidad, aprendiendo nuevas técnicas y anticipando objeciones comunes. **Ejemplo concreto:** Los resúmenes de las mejores llamadas destacan \"un buen manejo de objeciones y una buena explicación de los productos.\"\n*   **Despedida:** Tiene un desempeño sólido en la despedida, lo cual deja una impresión positiva en el cliente. Debe asegurarse de mantener este aspecto de sus interacciones y seguir transmitiendo profesionalismo hasta el final de la llamada. **Ejemplo concreto:** Su puntaje de 62.3 en \"despedida\" es superior al promedio del equipo.\n*   **Potencial general:** La IA reconoce su potencial al puntuarlo con una calificación superior al resto de sus compañeros, sin embargo, es importante llevar esas calificaciones a la conversión de venta.\n\n### 3. ÁREAS CRÍTICAS DE MEJORA\n\n*   **Identificación del Cliente:** La falta de identificación adecuada del cliente (0% según las métricas de clasificación y baja puntuación en la evaluación IA) es un problema grave. Sin conocer al cliente, es imposible personalizar la oferta o crear una conexión genuina. **Importancia:** Una correcta identificación permite adaptar la propuesta de valor y generar confianza.\n*   **Detección de Necesidades:** Aunque tiene cierta habilidad en esta área, necesita profundizar. No basta con preguntar superficialmente, sino que hay que investigar y comprender las verdaderas necesidades del cliente. **Importancia:** Una detección profunda de necesidades es clave para ofrecer la solución adecuada y aumentar las probabilidades de venta.\n*   **Cierre de Ventas:** El hecho de que no haya registrado cierres según las métricas de clasificación (0%) es alarmante. Debe aprender y aplicar técnicas de cierre efectivas para convertir las interacciones en ventas. **Importancia:** El cierre es el punto culminante del proceso de ventas. Sin él, todo el esfuerzo previo se pierde.\n\n### 4. ANÁLISIS DETALLADO POR COMPETENCIA\n\n| Criterio             | Nivel    | ¿Qué está haciendo mal/bien?                                                                                                                     | Cómo mejorar específicamente                                                                                                                                                                                                                                 |\n| -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Saludo/Presentación | Regular  | El puntaje es ligeramente inferior al promedio del equipo.                                                                                       | Practicar saludos más cálidos y personalizados. Incluir una breve mención del propósito de la llamada al principio.                                                                                                                                      |\n| Identificación Cliente | Crítico  | No identifica al cliente en ninguna llamada, según las métricas de clasificación.                                                                | Implementar un script para preguntar el nombre del interlocutor, verificar datos y confirmar si es el titular de la cuenta. Usar la información obtenida para personalizar la interacción.                                                             |\n| Detección Necesidades | Bajo     | Detecta necesidades de manera superficial.                                                                                                      | Usar preguntas abiertas (\"¿Qué es lo más importante para usted en su servicio de telecomunicaciones?\") y técnicas de escucha activa para profundizar en las necesidades del cliente. Tomar notas detalladas.                                                  |\n| Oferta Productos     | Bueno    | Ofrece productos, pero podría mejorar la personalización basada en las necesidades detectadas.                                                      | Vincular directamente cada producto/servicio ofrecido con las necesidades específicas del cliente. Explicar los beneficios en términos de cómo resuelven sus problemas o mejoran su situación.                                                              |\n| Manejo Objeciones   | Bueno    | Maneja objeciones de manera efectiva, pero podría ser más proactivo al anticipar las objeciones comunes.                                            | Crear una lista de objeciones comunes y preparar respuestas persuasivas para cada una. Practicar role-playing con un compañero para mejorar la fluidez y la confianza.                                                                                     |\n| Cierre               | Crítico  | No realiza ningún cierre de venta, según las métricas de clasificación.                                                                        | Aprender y practicar diferentes técnicas de cierre (cierre directo, cierre por alternativa, cierre por resumen, etc.). Identificar las señales de compra del cliente y utilizarlas para impulsar el cierre.                                                 |\n| Despedida            | Excelente | Se destaca por una despedida cordial y profesional.                                                                                             | Mantener este aspecto. Agregar una breve revisión de los próximos pasos (si los hay) para dejar claro el seguimiento.                                                                                                                                   |\n| Proactividad         | Bajo     | Podría ser más proactivo al ofrecer servicios adicionales o soluciones alternativas.                                                                | Identificar oportunidades para ofrecer productos/servicios complementarios que puedan beneficiar al cliente. Estar preparado para sugerir soluciones alternativas si la primera opción no es viable.                                                       |\n| Empatía              | Regular  | Podría mostrar más empatía con las preocupaciones del cliente.                                                                                    | Escuchar atentamente y validar las emociones del cliente. Usar frases como \"Entiendo su frustración\" o \"Puedo ver por qué eso sería un problema para usted.\" Mostrar disposición para ayudar a resolver sus problemas.                                     |\n| Resolución Problemas | Bajo     | Necesita mejorar sus habilidades para resolver problemas de manera eficiente.                                                                    | Capacitarse en la resolución de problemas comunes. Desarrollar un proceso sistemático para identificar el problema, evaluar las opciones y ofrecer una solución. Buscar ayuda de otros miembros del equipo si es necesario.                               |\n\n### 5. PLAN DE ACCIÓN SEMANAL\n\n*   **Semana 1: Identificación del Cliente y Saludo.**\n    *   **Foco:** Dominar el saludo y la identificación del cliente.\n    *   **Acciones:**\n        *   Revisar y memorizar el script de saludo e identificación.\n        *   Practicar el script con un compañero (role-playing).\n        *   Escuchar grabaciones de llamadas exitosas para identificar buenas prácticas.\n        *   Elaborar un resumen de lo que se espera de un saludo exitoso\n*   **Semana 2: Detección de Necesidades.**\n    *   **Foco:** Aprender a realizar preguntas efectivas para detectar necesidades profundas.\n    *   **Acciones:**\n        *   Identificar preguntas clave que revelen las necesidades del cliente.\n        *   Practicar la escucha activa y el parafraseo.\n        *   Analizar llamadas propias e identificar oportunidades para mejorar la detección de necesidades.\n*   **Semana 3: Cierre de Ventas.**\n    *   **Foco:** Dominar técnicas de cierre y superar el miedo al rechazo.\n    *   **Acciones:**\n        *   Estudiar diferentes técnicas de cierre (cierre directo, cierre por alternativa, etc.).\n        *   Practicar las técnicas con un compañero.\n        *   Establecer metas realistas de cierre para cada día/semana.\n        *   Analizar llamadas con resultados negativos para detectar errores\n*   **Semana 4: Consolidación y Optimización.**\n    *   **Foco:** Integrar todas las habilidades aprendidas y optimizar el proceso de ventas.\n    *   **Acciones:**\n        *   Realizar simulacros de llamadas completas.\n        *   Revisar las métricas de desempeño y ajustar el plan según sea necesario.\n        *   Buscar retroalimentación continua de compañeros y supervisores.\n        *   Elaborar un script de saludo estandarizado\n\n### 6. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Saludo:** \"¡Hola, [nombre del cliente]! Mi nombre es [tu nombre] y lo llamo de [Empresa] para ofrecerle una solución personalizada a sus necesidades de telecomunicaciones.\"\n*   **Detección de Necesidades:**\n    *   \"¿Qué servicios de telecomunicaciones son más importantes para usted en este momento?\"\n    *   \"¿Cuáles son sus mayores desafíos con su proveedor actual?\"\n    *   \"¿Qué le gustaría mejorar de su servicio actual?\"\n*   **Manejo de Objeciones:**\n    *   **Objeción:** \"Es muy caro.\"\n    *   **Respuesta:** \"Entiendo su preocupación. Permítame mostrarle cómo nuestros servicios ofrecen un mayor valor a largo plazo y cómo pueden ayudarle a ahorrar dinero en el futuro.\"\n    *   **Objeción:** \"No tengo tiempo.\"\n    *   **Respuesta:** \"Comprendo. Esta llamada solo tomará unos minutos y podría ahorrarle mucho tiempo y dinero a largo plazo.\"\n*   **Cierre:**\n    *   **Cierre Directo:** \"¿Le gustaría comenzar con este plan hoy mismo?\"\n    *   **Cierre por Alternativa:** \"¿Prefiere el plan A o el plan B?\"\n    *   **Cierre por Resumen:** \"Hemos hablado de [beneficios clave]. ¿Le parece que esta es la solución adecuada para usted?\"\n\n### 7. METAS CUANTIFICABLES\n\n*   **Puntaje IA:** Alcanzar un puntaje promedio de 500 en 30 días.\n*   **Tasa de Conversión:** Aumentar la tasa de conversión al 5% en 30 días.\n*   **Ofrecimiento de Productos:** Ofrecer al menos 3 productos/servicios por llamada en el 80% de las interacciones.\n*   **KPIs:**\n    *   Aumentar el porcentaje de llamadas con identificación del cliente al 90%.\n    *   Aumentar el porcentaje de llamadas con cierre de venta al 50%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\n\"MZA 5, tus evaluaciones de IA demuestran que tienes el potencial para ser uno de los mejores vendedores del equipo. Ahora, es momento de convertir ese potencial en resultados reales. Enfócate en mejorar la identificación del cliente, la detección de necesidades y, sobre todo, en cerrar las ventas. ¡Sé persistente, aprende de tus errores y celebra tus éxitos! Estoy seguro de que puedes alcanzar tus metas y convertirte en un líder en ventas.\"\n",
+  "modelo_usado": "gemini-2.0-flash"
+}

@@ -1,0 +1,130 @@
+﻿# ============================================
+# GITIGNORE PARA EVA DASHBOARD - DESPLIEGUE
+# ============================================
+
+# =============== ARCHIVOS DE AUDIO Y DATOS GRANDES ===============
+audios_descargados/
+audios_descargados.zip
+muestras_volumen/
+muestra eva/
+total_transcripciones/
+transcripts/
+analisis_tono/
+
+# =============== ARCHIVOS DE DATOS SENSIBLES ===============
+basurita.csv
+config.py
+
+# =============== REPORTES NO NECESARIOS ===============
+reportes/agentes/
+reportes/analisis_integral/
+reportes/cierres_comerciales/
+reportes/clasificacion_completa/
+reportes/correccion_planes/
+reportes/evaluaciones_detalle/
+reportes/para_gemini/
+reportes/planes/
+reportes/quejas/
+reportes/gemini_procesados.json
+
+# =============== PYTHON ===============
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+pip-log.txt
+
+# =============== JUPYTER ===============
+.ipynb_checkpoints/
+*.ipynb
+
+# =============== ARCHIVOS DE PRUEBA ===============
+test_*.py
+*_CORREGIDO.json
+
+# =============== MODELOS ===============
+pretrained_models/
+*.pth
+*.pt
+*.h5
+*.pkl
+*.model
+checkpoint.json
+
+# =============== LOGS ===============
+*.log
+logs/
+
+# =============== IDE ===============
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =============== OS ===============
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============== SCRIPTS NO NECESARIOS ===============
+1_scraper_eva.py
+2_preproc_audio.py
+3_speech_eva.py
+4_evaluacion_gemini.py
+4_lite.py
+4_test_gemini_to_csv_V2.py
+5_coaching_vendedores.py
+5_tablas_unificadas.py
+6_limpieza_csv_para_metricas.py
+7_*.py
+8_*.py
+9_*.py
+10_*.py
+11_*.py
+12_*.py
+13_*.py
+14_*.py
+15_*.py
+16_*.py
+analizar_calidad_llamadas.py
+borrar_no_atendidas*.py
+comparar_ids.py
+ejecutar_scraping_multi.py
+enriquecer_json.py
+fix_menu.py
+generar_reporte_detallado.py
+limpiar_csv_no_atendidas.py
+matchear_json_csv.py
+pipeline_completo.py
+scraping_automatico.py
+ver_ventas_sin_plan.py
+
+# Archivos Excel y Batch
+*.xlsx
+*.xls
+*.bat
+
+# Temporales
+*.tmp
+*.temp
+*.bak
+
+# =============== ARCHIVOS DE AUDIO ===============
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+*.aac
+*.wma
+*.opus
+*.webm

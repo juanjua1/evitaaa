@@ -1,0 +1,160 @@
+{
+  "agente": "desconocido",
+  "fecha_generacion": "2026-01-19T08:00:19.514074",
+  "metricas": {
+    "agente": "desconocido",
+    "evaluaciones": {
+      "total_evaluadas": 66,
+      "puntaje_promedio": 40.8,
+      "puntaje_min": 0.0,
+      "puntaje_max": 750.0,
+      "desviacion_std": 93.3,
+      "llamadas_excelentes": 6,
+      "llamadas_criticas": 32,
+      "criterios": {
+        "saludo_presentacion": 21.2,
+        "identificacion_cliente": 27.9,
+        "deteccion_necesidades": 23.5,
+        "oferta_productos": 40.2,
+        "manejo_objeciones": 32.8,
+        "cierre": 28.3,
+        "despedida": 36.7,
+        "proactividad": 21.9,
+        "empatia": 38.3,
+        "resolucion_problemas": 17.4
+      },
+      "areas_mejora_frecuentes": {
+        "Identificación del cliente": 21,
+        "Detección de necesidades": 18,
+        "Manejo de objeciones": 14,
+        "Cierre de venta": 12,
+        "Oferta de productos": 12
+      },
+      "fortalezas_frecuentes": {
+        "Buen manejo de objeciones.": 5,
+        "Empatía": 4,
+        "Manejo de objeciones.": 4,
+        "Despedida": 3,
+        "Cierre de venta efectivo.": 3
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 750.0,
+          "resumen": "El agente se desempeñó bien en general, identificando al cliente y ofreciendo productos adecuados. Se podría mejorar la proactividad en la venta cruzada y el cierre."
+        },
+        {
+          "puntaje_total": 100.0,
+          "resumen": "Excelente gestión de la llamada. El agente identifica las necesidades del cliente, ofrece el producto adecuado, maneja las objeciones y logra cerrar la venta de manera efectiva."
+        },
+        {
+          "puntaje_total": 90.0,
+          "resumen": "La llamada es deficiente en casi todos los aspectos. El agente no se presenta, no identifica al cliente, no detecta correctamente las necesidades, la oferta es confusa y no cierra la venta. La proactividad y empatía son bajas."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada carece de estructura, claridad y profesionalismo. El agente no se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos ni intenta cerrar la venta. La comunicación es incoherente y confusa."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada es deficiente en todos los aspectos. La comunicación del agente es ininteligible, no se siguen los protocolos básicos de ventas y no se logra ningún objetivo."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada es muy breve y no cumple con ningún protocolo básico de atención."
+        }
+      ]
+    },
+    "clasificacion": {
+      "total_llamadas": 67,
+      "con_saludo": 37,
+      "con_cierre": 0,
+      "con_identificacion": 2,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 10,
+      "ventas": 11,
+      "score_calidad_prom": 37.7,
+      "pct_saludo": 55.2,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 14.9,
+      "tasa_conversion": 16.4
+    },
+    "integral": {
+      "duracion_promedio_seg": 0.0,
+      "duracion_promedio_min": 0.0,
+      "distribucion_duracion": {
+        "< 1 min": 67
+      }
+    },
+    "cierres": {}
+  },
+  "comparativa": {
+    "puntaje_ia": {
+      "agente": 40.8,
+      "general": 50.3,
+      "diferencia": -9.6,
+      "percentil": 50.9
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 21.2,
+        "general": 54.7,
+        "diferencia": -33.5
+      },
+      "identificacion_cliente": {
+        "agente": 27.9,
+        "general": 18.8,
+        "diferencia": 9.1
+      },
+      "deteccion_necesidades": {
+        "agente": 23.5,
+        "general": 36.6,
+        "diferencia": -13.1
+      },
+      "oferta_productos": {
+        "agente": 40.2,
+        "general": 47.8,
+        "diferencia": -7.6
+      },
+      "manejo_objeciones": {
+        "agente": 32.8,
+        "general": 44.1,
+        "diferencia": -11.3
+      },
+      "cierre": {
+        "agente": 28.3,
+        "general": 25.4,
+        "diferencia": 2.9
+      },
+      "despedida": {
+        "agente": 36.7,
+        "general": 55.0,
+        "diferencia": -18.3
+      },
+      "proactividad": {
+        "agente": 21.9,
+        "general": 17.5,
+        "diferencia": 4.4
+      },
+      "empatia": {
+        "agente": 38.3,
+        "general": 50.2,
+        "diferencia": -11.8
+      },
+      "resolucion_problemas": {
+        "agente": 17.4,
+        "general": 24.0,
+        "diferencia": -6.6
+      }
+    },
+    "conversion": {
+      "agente": 16.4,
+      "general": 5.1,
+      "diferencia": 11.3
+    }
+  },
+  "analisis_coaching": "¡Excelente! Aquí está el análisis del vendedor desconocido, diseñado para ayudarlo a alcanzar su máximo potencial en telecomunicaciones.\n\n## ANÁLISIS DEL VENDEDOR\n\n### 1. DIAGNÓSTICO GENERAL\n\nEste vendedor presenta un desempeño mixto en comparación con el equipo. Su puntaje promedio de IA (40.8) está significativamente por debajo del promedio general del equipo (50.3), ubicándolo en un percentil de 50.9. Esto indica que, si bien no es el peor desempeño, hay un espacio considerable para mejorar. Sin embargo, su tasa de conversión (16.4%) es notablemente superior al promedio del equipo (5.1%), lo que sugiere un potencial oculto.  El volumen de llamadas es alto (67) pero las duraciones son extremadamente cortas (menos de 1 minuto), lo que implica que la mayoría de las interacciones son breves y posiblemente no aprovechan todo el potencial de venta.\n\nConsiderando sus fortalezas en manejo de objeciones y su alta tasa de conversión, pero sus marcadas debilidades en saludo, detección de necesidades y cierre, calificaría su nivel actual como **\"Necesita Mejora\"**.  Su potencial de mejora es **alto**, especialmente si logramos optimizar sus interacciones iniciales y finales, y profundizar en la comprensión de las necesidades del cliente. Con la capacitación adecuada y un enfoque estructurado, puede convertirse en un vendedor de alto rendimiento.\n\n### 2. FORTALEZAS IDENTIFICADAS\n\n*   **Alta Tasa de Conversión:** A pesar de las áreas de mejora, logra cerrar un porcentaje significativo de las interacciones en ventas (16.4% vs el 5.1% del equipo). Esto sugiere que tiene una habilidad innata para persuadir y cerrar cuando se presenta la oportunidad. Debe analizarse qué está haciendo bien en esas ventas concretas para replicarlo.\n*   **Manejo de Objeciones:** Recibe comentarios positivos recurrentes sobre su habilidad para manejar objeciones. Esto indica que tiene conocimiento de los productos y la capacidad de abordar las preocupaciones de los clientes.\n*   **Proactividad (Relativa):** Si bien su puntuación en proactividad es baja (21.9), es ligeramente superior al promedio del equipo (17.5). Esto sugiere que tiene un mínimo de iniciativa, aunque puede ser ampliada significativamente.\n\n### 3. ÁREAS CRÍTICAS DE MEJORA\n\n*   **Saludo y Presentación:** Su puntuación en saludo y presentación (21.2) es significativamente inferior al promedio del equipo (54.7). Un saludo deficiente crea una mala primera impresión y puede hacer que el cliente se cierre a la venta. Una presentación clara y profesional establece la credibilidad del vendedor y genera confianza.\n*   **Detección de Necesidades:** Su capacidad para identificar las necesidades del cliente es baja (23.5 vs 36.6 del equipo).  Si no comprende las necesidades del cliente, no puede ofrecer soluciones personalizadas, lo que reduce significativamente las posibilidades de venta. La detección de necesidades es fundamental para una venta consultiva.\n*   **Cierre:** Obtiene una calificación baja en cierre (28.3) y un porcentaje de llamadas con cierre del 0%. Aunque tiene una buena tasa de conversión, esto sugiere que las ventas que logra son más por suerte que por estrategia. Aprender técnicas de cierre efectivas y aplicarlas consistentemente aumentaría drásticamente sus ventas.\n*   **Duración de las Llamadas:** El hecho de que todas las llamadas registradas duren menos de 1 minuto indica una falta de profundización en las interacciones con los clientes. Esto limita la oportunidad de detectar necesidades, presentar ofertas relevantes y cerrar ventas.\n\n### 4. ANÁLISIS DETALLADO POR COMPETENCIA\n\n| Criterio             | Nivel    | Qué está haciendo mal/bien                                                                                                                                                                                                                                                                              | Cómo mejorar específicamente                                                                                                                                                                                                                                                                                                                                |\n| --------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Saludo y Presentación | Crítico  | No se presenta o lo hace de manera poco profesional, impactando negativamente la primera impresión.                                                                                                                                                                                                | Preparar un script de saludo profesional y practicarlo hasta que suene natural. Incluir el nombre del agente, la empresa, y el propósito de la llamada. Usar un tono amable y confiado.                                                                                                                                                    |\n| Identificación Cliente | Bajo     | Raramente identifica al cliente.                                                                                                                                                                                                                                                                      | Implementar preguntas simples para confirmar la identidad del cliente al inicio de la llamada. Ejemplo: \"¿Podría confirmarme su nombre completo, por favor?\".                                                                                                                                                                                                 |\n| Detección Necesidades | Bajo     | No realiza preguntas para comprender las necesidades del cliente, limitando la capacidad de ofrecer soluciones personalizadas.                                                                                                                                                                             | Preparar una lista de preguntas abiertas para indagar sobre las necesidades del cliente. Ejemplo: \"¿Qué tipo de servicios de telecomunicaciones utiliza actualmente?\", \"¿Qué busca mejorar en su servicio actual?\". Escuchar activamente las respuestas y tomar notas.                                                                           |\n| Oferta de Productos   | Regular  | Ofrece productos, pero sin conectar con las necesidades del cliente, lo que disminuye la relevancia de la oferta.                                                                                                                                                                                        | Adaptar la oferta de productos a las necesidades específicas del cliente identificadas en la fase de detección de necesidades. Destacar los beneficios clave del producto o servicio que resuelven los problemas del cliente.                                                                                                                   |\n| Manejo de Objeciones  | Regular  | Aunque muestra cierta habilidad, puede mejorar en la anticipación y manejo proactivo de las objeciones más comunes.                                                                                                                                                                                     | Preparar un listado de las objeciones más frecuentes y desarrollar respuestas persuasivas y basadas en datos. Practicar la anticipación de objeciones y ofrecer soluciones antes de que el cliente las plantee.                                                                                                                             |\n| Cierre                | Crítico  | Prácticamente no realiza intentos de cierre, perdiendo oportunidades de venta.                                                                                                                                                                                                                          | Aprender y practicar diferentes técnicas de cierre, como el cierre por conclusión, el cierre directo, y el cierre por alternativas. Identificar las señales de compra del cliente y utilizarlas para realizar un cierre efectivo.                                                                                                               |\n| Despedida             | Regular  | La despedida es poco profesional, dejando una impresión final negativa.                                                                                                                                                                                                                                   | Preparar un script de despedida cortés y profesional que incluya un agradecimiento al cliente por su tiempo y una invitación a contactar en el futuro. Utilizar un tono amable y positivo al finalizar la llamada.                                                                                                                          |\n| Proactividad          | Bajo     | Poca iniciativa para ofrecer productos adicionales o soluciones alternativas.                                                                                                                                                                                                                             | Identificar oportunidades para ofrecer productos complementarios o servicios adicionales que mejoren la experiencia del cliente. Presentar estas ofertas de manera natural y enfocada en los beneficios para el cliente.                                                                                                                        |\n| Empatía               | Regular  | Muestra cierta empatía, pero puede mejorar en la conexión emocional con el cliente.                                                                                                                                                                                                                          | Practicar la escucha activa y la validación de las emociones del cliente. Utilizar frases que demuestren comprensión y apoyo. Ejemplo: \"Entiendo su frustración...\", \"Agradezco su paciencia...\".                                                                                                                                               |\n| Resolución Problemas   | Bajo     | Dificultad para resolver problemas, lo que genera insatisfacción en el cliente.                                                                                                                                                                                                                           | Capacitarse en la resolución de problemas comunes y en la gestión de quejas. Desarrollar habilidades para investigar y encontrar soluciones rápidas y efectivas. Ofrecer disculpas sinceras y mostrar un compromiso real con la satisfacción del cliente.                                                                                         |\n\n### 5. PLAN DE ACCIÓN SEMANAL\n\n**Semana 1: Fundamentos del Saludo y la Detección de Necesidades**\n\n*   **Foco:** Mejorar la primera impresión y comprender las necesidades del cliente.\n*   **Acciones:**\n    *   Crear un script de saludo profesional y practicarlo frente al espejo (5 veces al día).\n    *   Identificar 5 preguntas clave para la detección de necesidades y practicar su formulación.\n    *   Escuchar grabaciones de llamadas ejemplares enfocándose en el saludo y la detección de necesidades.\n    *   Revisar el protocolo de identificación de cliente de la empresa y memorizarlo.\n\n**Semana 2: Técnicas de Cierre y Manejo de Objeciones Avanzado**\n\n*   **Foco:** Aprender técnicas de cierre efectivas y profundizar en el manejo de objeciones.\n*   **Acciones:**\n    *   Estudiar 3 técnicas de cierre diferentes y practicar su aplicación en diferentes escenarios.\n    *   Identificar las 3 objeciones más comunes y preparar respuestas persuasivas y basadas en datos.\n    *   Grabar simulaciones de llamadas con un compañero, enfocándose en el cierre y el manejo de objeciones.\n    *   Analizar las grabaciones y buscar retroalimentación.\n\n**Semana 3: Integración y Personalización**\n\n*   **Foco:** Integrar todas las habilidades aprendidas y personalizar el enfoque según el cliente.\n*   **Acciones:**\n    *   Revisar y adaptar los scripts de saludo, detección de necesidades y cierre según los diferentes perfiles de clientes.\n    *   Analizar grabaciones de llamadas reales e identificar oportunidades para mejorar la personalización.\n    *   Practicar la escucha activa y la empatía durante las interacciones con los clientes.\n    *   Solicitar retroalimentación de los clientes (cuando sea posible) para identificar áreas de mejora.\n\n**Semana 4: Optimización y Seguimiento**\n\n*   **Foco:** Optimizar el proceso de ventas y realizar un seguimiento del progreso.\n*   **Acciones:**\n    *   Analizar las métricas de desempeño (puntaje IA, tasa de conversión, etc.) y identificar áreas de mejora continua.\n    *   Realizar ajustes en los scripts y técnicas de venta según los resultados obtenidos.\n    *   Participar en sesiones de coaching individual para abordar desafíos específicos.\n    *   Celebrar los éxitos y mantener una actitud positiva y proactiva.\n\n### 6. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Saludo:** \"¡Hola! Soy [Tu Nombre] de [Empresa]. Le llamo para ofrecerle soluciones personalizadas en [Área de interés]. ¿Le parece bien si hablamos un par de minutos?\"\n*   **Detección de Necesidades:**\n    *   \"¿Qué tipo de servicio de telecomunicaciones tiene actualmente?\"\n    *   \"¿Está satisfecho con su servicio actual? ¿Qué le gustaría mejorar?\"\n    *   \"¿Cuáles son sus principales prioridades en cuanto a servicios de telecomunicaciones?\"\n*   **Manejo de Objeciones:**\n    *   **\"Es muy caro\":** \"Entiendo su preocupación por el precio. Sin embargo, permítame mostrarle cómo nuestros servicios le ofrecen un valor superior a largo plazo en términos de [beneficios específicos].\"\n    *   **\"No tengo tiempo\":** \"Entiendo que está ocupado. ¿Le parece bien si le llamo en otro momento que le convenga mejor?\"\n    *   **\"No estoy interesado\":** \"Respeto su decisión. Sin embargo, permítame explicarle brevemente cómo nuestros servicios podrían ayudarle a [resolver un problema específico].\"\n*   **Cierre:**\n    *   **Cierre por Conclusión:** \"Según lo que hemos conversado, nuestro plan [Nombre del plan] parece ser la mejor opción para usted. ¿Le gustaría que lo activemos ahora?\"\n    *   **Cierre Directo:** \"¿Está listo para empezar a disfrutar de los beneficios de nuestros servicios?\"\n    *   **Cierre por Alternativas:** \"¿Prefiere el plan [Nombre del plan] con [Características] o el plan [Nombre del plan] con [Características]?\"\n\n### 7. METAS CUANTIFICABLES\n\n*   **Meta de puntaje IA:** Alcanzar un puntaje IA de **65** en 30 días.\n*   **Meta de tasa de conversión:** Aumentar la tasa de conversión a **20%**.\n*   **Meta de ofrecimiento de productos:** Ofrecer al menos **3** productos o servicios adicionales por llamada.\n*   **KPIs específicos:**\n    *   Aumentar el porcentaje de llamadas con saludo a **90%**.\n    *   Aumentar el porcentaje de llamadas con cierre a **50%**.\n    *   Aumentar la duración promedio de las llamadas a **3 minutos**.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\n\"[Vendedor], veo tu potencial. Tu alta tasa de conversión demuestra que tienes la capacidad de cerrar ventas. Ahora, trabajemos juntos para fortalecer tus habilidades en el saludo, la detección de necesidades y el cierre. Con un enfoque estructurado y un poco de práctica, estoy seguro de que puedes convertirte en uno de los mejores vendedores del equipo. ¡Confío en ti y sé que lo lograrás!\"\n",
+  "modelo_usado": "gemini-2.0-flash"
+}
