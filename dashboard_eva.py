@@ -857,13 +857,27 @@ def pagina_cierres_comerciales(datos):
 
 def pagina_planes_ofrecidos(datos, df):
     """Página de análisis de planes ofrecidos, fibra y promociones"""
-    mostrar_proximamente("📱 Análisis de Planes, Fibra y Promociones")
-    return
+    st.markdown('<div class="main-header">📱 Análisis de Planes, Fibra y Promociones</div>', unsafe_allow_html=True)
     
-    # === CÓDIGO COMENTADO PARA FUTURO ===
     if 'planes' not in datos:
-        st.warning("No hay datos de planes disponibles.")
+        st.warning("⚠️ No hay datos de planes disponibles.")
         return
+    
+    # Cargar nombres de vendedores
+    listado_vendedores = {}
+    try:
+        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
+        for _, row in df_listado.iterrows():
+            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
+            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
+            if usuario and nombre and usuario != 'usuario':
+                listado_vendedores[usuario] = nombre.title()
+    except:
+        pass
+    
+    def obtener_nombre_agente(agente_id):
+        agente_normalizado = agente_id.lower().replace(' ', '').replace('_', '')
+        return listado_vendedores.get(agente_normalizado, agente_id)
     
     planes = datos['planes']
     stats = planes.get('estadisticas', {})
@@ -1025,7 +1039,8 @@ def pagina_planes_ofrecidos(datos, df):
                 total = data.get('ofrece', 0) + data.get('no_ofrece', 0)
                 if total >= 5:  # Solo agentes con al menos 5 llamadas
                     pct = data.get('no_ofrece', 0) / total * 100 if total > 0 else 0
-                    agentes_sin_fibra.append({'Agente': agente, 'Sin Fibra %': round(pct, 1), 'Total': total})
+                    nombre_real = obtener_nombre_agente(agente)
+                    agentes_sin_fibra.append({'Agente': nombre_real, 'Sin Fibra %': round(pct, 1), 'Total': total})
             
             if agentes_sin_fibra:
                 df_sin_fibra = pd.DataFrame(agentes_sin_fibra)
@@ -2989,6 +3004,27 @@ def pagina_evaluaciones_gemini(datos):
     
     df = datos['evaluaciones_gemini_df'].copy()
     
+    # Cargar nombres de vendedores
+    listado_vendedores = {}
+    try:
+        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
+        for _, row in df_listado.iterrows():
+            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
+            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
+            if usuario and nombre and usuario != 'usuario':
+                listado_vendedores[usuario] = nombre.title()
+    except:
+        pass
+    
+    def obtener_nombre_agente(agente_id):
+        """Convierte ID de agente a nombre real"""
+        agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '')
+        return listado_vendedores.get(agente_normalizado, agente_id)
+    
+    # Aplicar mapeo de nombres a todo el dataframe
+    if 'agente' in df.columns:
+        df['agente'] = df['agente'].apply(obtener_nombre_agente)
+    
     # Definir criterios y nombres
     criterios = ['saludo_presentacion', 'identificacion_cliente', 'deteccion_necesidades',
                  'oferta_productos', 'manejo_objeciones', 'cierre', 'despedida',
@@ -3183,7 +3219,8 @@ def pagina_evaluaciones_gemini(datos):
                             fill='toself',
                             name=agente_seleccionado,
                             line_color='#3B82F6',
-                            fillcolor='rgba(59, 130, 246, 0.3)'
+                            line_width=3,
+                            fillcolor='rgba(59, 130, 246, 0.5)'
                         ))
                         
                         # Promedio general
@@ -3193,7 +3230,8 @@ def pagina_evaluaciones_gemini(datos):
                             fill='toself',
                             name='Promedio General',
                             line_color='#EF4444',
-                            fillcolor='rgba(239, 68, 68, 0.1)'
+                            line_width=2,
+                            fillcolor='rgba(239, 68, 68, 0.25)'
                         ))
                         
                         fig.update_layout(
