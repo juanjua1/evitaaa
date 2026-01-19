@@ -1237,7 +1237,7 @@ def pagina_coaching_vendedores(datos):
         ### Cómo generar el coaching:
         1. Abre una terminal
         2. Ejecuta: `python 5_coaching_vendedores.py`
-        3. El proceso generará análisis personalizados para cada vendedor usando Gemini IA
+        3. El proceso generará análisis personalizados para cada vendedor usando IA
         4. Recarga esta página cuando termine
         """)
         return
@@ -1258,7 +1258,7 @@ def pagina_coaching_vendedores(datos):
                 box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
         <h3 style='margin:0; color: #FFFFFF; font-weight: 700;'>🤖 Coaching Personalizado con Inteligencia Artificial</h3>
         <p style='margin: 10px 0 0 0; color: #E0E7FF;'>
-            Análisis exhaustivo generado por Gemini actuando como <strong style='color: #FFFFFF;'>Jefe de Ventas</strong>. 
+            Análisis exhaustivo generado por IA actuando como <strong style='color: #FFFFFF;'>Jefe de Ventas</strong>. 
             Cada vendedor tiene un plan de acción personalizado diseñado para maximizar su potencial.
         </p>
     </div>
@@ -1288,9 +1288,9 @@ def pagina_coaching_vendedores(datos):
             st.metric("💰 Conversión Promedio", f"{np.mean(conversiones):.1f}%")
     
     with col4:
-        # Modelo usado
-        modelo = coaching_data[agentes_coaching[0]].get('modelo_usado', 'Gemini')
-        st.metric("🤖 Modelo IA", modelo)
+        # Total de evaluaciones
+        total_eval = sum(data.get('metricas', {}).get('evaluaciones', {}).get('total_evaluadas', 0) for data in coaching_data.values())
+        st.metric("📝 Total Evaluaciones", total_eval)
     
     st.markdown("---")
     
@@ -3096,8 +3096,8 @@ def pagina_evaluaciones_gemini(datos):
     
     # Verificar datos
     if 'evaluaciones_gemini_df' not in datos:
-        st.warning("⚠️ No se encontraron evaluaciones de Gemini. El proceso está en ejecución o no se ha iniciado.")
-        st.info("💡 Ejecuta: `python 4_evaluacion_gemini.py` para generar las evaluaciones.")
+        st.warning("⚠️ No se encontraron evaluaciones de IA. El proceso está en ejecución o no se ha iniciado.")
+        st.info("💡 Ejecuta el script de evaluación para generar las evaluaciones.")
         
         # Mostrar progreso si existe el archivo parcial
         import os
