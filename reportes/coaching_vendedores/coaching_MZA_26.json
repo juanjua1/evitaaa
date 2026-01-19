@@ -1,0 +1,162 @@
+{
+  "agente": "MZA 26",
+  "fecha_generacion": "2026-01-19T08:09:45.285262",
+  "metricas": {
+    "agente": "MZA 26",
+    "evaluaciones": {
+      "total_evaluadas": 29,
+      "puntaje_promedio": 38.6,
+      "puntaje_min": 0.0,
+      "puntaje_max": 82.0,
+      "desviacion_std": 23.5,
+      "llamadas_excelentes": 2,
+      "llamadas_criticas": 5,
+      "criterios": {
+        "saludo_presentacion": 61.4,
+        "identificacion_cliente": 12.8,
+        "deteccion_necesidades": 44.5,
+        "oferta_productos": 41.4,
+        "manejo_objeciones": 40.3,
+        "cierre": 23.8,
+        "despedida": 49.7,
+        "proactividad": 13.8,
+        "empatia": 54.5,
+        "resolucion_problemas": 32.1
+      },
+      "areas_mejora_frecuentes": {
+        "Identificación del cliente": 15,
+        "Oferta de productos": 8,
+        "Detección de necesidades": 7,
+        "Cierre de la venta": 7,
+        "Proactividad": 6
+      },
+      "fortalezas_frecuentes": {
+        "Empatía": 7,
+        "Saludo y presentación": 3,
+        "Detección de necesidades": 3,
+        "Cierre de venta efectivo": 2,
+        "Despedida": 2
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 82.0,
+          "resumen": "El agente realiza una buena venta, detectando las necesidades del cliente y ofreciendo un plan adecuado. Se identifica al cliente y cierra la venta correctamente. Se sugiere mejorar la proactividad en la venta cruzada y ser más explícito con el ofrecimiento de ayuda adicional."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente realiza una buena gestión, identificando las necesidades del cliente, manejando objeciones, y resolviendo problemas de manera efectiva.  Muestra empatía y realiza un cierre correcto.  Puede mejorar la proactividad en la oferta de productos adicionales y la presentación inicial."
+        },
+        {
+          "puntaje_total": 79.0,
+          "resumen": "El agente realizó una buena gestión, presentando los productos, verificando datos del cliente y cerrando la venta de manera efectiva. Se observa proactividad y empatía. La presentación inicial podría ser mejor."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "Llamada muy deficiente. El agente no cumple con los protocolos básicos de presentación, identificación, detección de necesidades ni cierre de venta. No hay proactividad ni empatía."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada carece de los elementos básicos de una llamada de ventas efectiva. No hay presentación, identificación del cliente, detección de necesidades, oferta de productos, manejo de objeciones ni cierre. La conversación se centra en la posibilidad de cambio de titularidad."
+        },
+        {
+          "puntaje_total": 2.0,
+          "resumen": "Llamada muy deficiente. El agente no cumple con los criterios mínimos de una llamada de ventas. No se identificó al cliente, no se detectaron necesidades ni se ofreció ningún producto. La llamada finaliza abruptamente."
+        }
+      ]
+    },
+    "clasificacion": {
+      "total_llamadas": 29,
+      "con_saludo": 26,
+      "con_cierre": 0,
+      "con_identificacion": 0,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 3,
+      "ventas": 2,
+      "score_calidad_prom": 48.3,
+      "pct_saludo": 89.7,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 10.3,
+      "tasa_conversion": 6.9
+    },
+    "integral": {
+      "duracion_promedio_seg": 266.0,
+      "duracion_promedio_min": 4.4,
+      "distribucion_duracion": {
+        "1-3 min": 21,
+        "3-5 min": 4,
+        "> 8 min": 4
+      }
+    },
+    "cierres": {}
+  },
+  "comparativa": {
+    "puntaje_ia": {
+      "agente": 38.6,
+      "general": 50.3,
+      "diferencia": -11.7,
+      "percentil": 46.8
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 61.4,
+        "general": 54.7,
+        "diferencia": 6.7
+      },
+      "identificacion_cliente": {
+        "agente": 12.8,
+        "general": 18.8,
+        "diferencia": -6.0
+      },
+      "deteccion_necesidades": {
+        "agente": 44.5,
+        "general": 36.6,
+        "diferencia": 7.9
+      },
+      "oferta_productos": {
+        "agente": 41.4,
+        "general": 47.8,
+        "diferencia": -6.5
+      },
+      "manejo_objeciones": {
+        "agente": 40.3,
+        "general": 44.1,
+        "diferencia": -3.8
+      },
+      "cierre": {
+        "agente": 23.8,
+        "general": 25.4,
+        "diferencia": -1.6
+      },
+      "despedida": {
+        "agente": 49.7,
+        "general": 55.0,
+        "diferencia": -5.4
+      },
+      "proactividad": {
+        "agente": 13.8,
+        "general": 17.5,
+        "diferencia": -3.7
+      },
+      "empatia": {
+        "agente": 54.5,
+        "general": 50.2,
+        "diferencia": 4.3
+      },
+      "resolucion_problemas": {
+        "agente": 32.1,
+        "general": 24.0,
+        "diferencia": 8.0
+      }
+    },
+    "conversion": {
+      "agente": 6.9,
+      "general": 5.1,
+      "diferencia": 1.8
+    }
+  },
+  "analisis_coaching": "¡Excelente! Aquí tienes el análisis exhaustivo y el plan de acción personalizado para MZA 26, diseñado para llevar su desempeño al máximo potencial.\n\n## ANÁLISIS DEL DESEMPEÑO DE MZA 26\n\n### 1. DIAGNÓSTICO GENERAL\n\nMZA 26 se encuentra actualmente por debajo del promedio del equipo en términos de puntaje IA, ubicándose en el percentil 46.8. Si bien su tasa de conversión es ligeramente superior al promedio del equipo, sus áreas de oportunidad en la identificación del cliente, oferta de productos, cierre y proactividad impactan significativamente su desempeño general. Su nivel actual se considera **\"Necesita Mejora\"**.\n\nSin embargo, observamos fortalezas importantes como la empatía, la detección de necesidades y una tasa de conversión superior al promedio. Esto sugiere un **potencial considerable de mejora** si se enfoca en corregir las áreas críticas y aprovechar al máximo sus cualidades. Con el enfoque y las herramientas adecuadas, MZA 26 puede convertirse en un vendedor de alto rendimiento.\n\n### 2. FORTALEZAS IDENTIFICADAS\n\n*   **Empatía:** MZA 26 demuestra una buena capacidad para conectar con los clientes y comprender sus emociones. Esto es fundamental para construir relaciones de confianza y aumentar la probabilidad de cierre.\n    *   **Ejemplo:** En varias llamadas, se observa que MZA 26 utiliza frases como \"Entiendo su frustración\" o \"Comprendo su situación\" para mostrar empatía y generar un ambiente de colaboración.\n*   **Detección de Necesidades:** Aunque el puntaje general en esta área es promedio, los datos muestran que es una de las fortalezas frecuentes identificadas. MZA 26 tiene la capacidad de hacer preguntas relevantes para identificar las necesidades de los clientes.\n    *   **Ejemplo:** En la llamada con puntaje de 82, se destaca la buena detección de necesidades como un factor clave del éxito.\n*   **Tasa de Conversión Superior al Promedio:** A pesar de las áreas de mejora, la tasa de conversión de MZA 26 (6.9%) es superior al promedio del equipo (5.1%). Esto indica que tiene la capacidad de cerrar ventas cuando se dan las condiciones adecuadas.\n\n### 3. ÁREAS CRÍTICAS DE MEJORA\n\n*   **Identificación del Cliente:** Esta es la mayor debilidad de MZA 26. No identificar correctamente al cliente al inicio de la llamada genera desconfianza, dificulta la personalización de la oferta y puede resultar en incumplimientos legales.\n    *   **Importancia:** Un cliente que no se siente identificado y seguro, es un cliente que dificilmente va a escuchar una oferta y mucho menos comprar un producto.\n*   **Oferta de Productos:** La incapacidad de ofrecer productos de manera proactiva y atractiva limita el potencial de venta cruzada y la maximización de ingresos.\n    *   **Importancia:** Ofrecer el producto adecuado en el momento oportuno aumenta el valor percibido por el cliente y mejora la rentabilidad de la venta.\n*   **Cierre:** La falta de cierres efectivos impide convertir oportunidades en ventas concretas. Un cierre débil puede echar a perder una buena presentación y dejar al cliente indeciso.\n    *   **Importancia:** El cierre es el momento decisivo de la venta. Un cierre bien ejecutado asegura el compromiso del cliente y garantiza la consecución del objetivo comercial.\n\n### 4. ANÁLISIS DETALLADO POR COMPETENCIA\n\n| Criterio               | Nivel Actual | ¿Qué está haciendo mal/bien?                                                                                                                                                                                                                                | Cómo Mejorar Específicamente                                                                                                                                                                                                                                                                                                                                                                            |\n| ---------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Saludo y Presentación  | Bueno        | MZA 26 suele saludar y presentarse de forma adecuada.                                                                                                                                                                                                    | Continuar con el buen trabajo. Se puede personalizar el saludo con el nombre del cliente si es posible.                                                                                                                                                                                                                                                                                                    |\n| Identificación Cliente | Crítico      | No se identifica al cliente en ninguna de las llamadas.                                                                                                                                                                                                   | Implementar un protocolo estricto de verificación de identidad al inicio de cada llamada. Usar preguntas de seguridad para confirmar la identidad del cliente.                                                                                                                                                                                                                                              |\n| Detección Necesidades | Regular      | MZA 26 realiza preguntas para identificar las necesidades del cliente, pero puede profundizar más y hacer preguntas más específicas.                                                                                                                           | Utilizar técnicas de escucha activa para comprender las necesidades implícitas del cliente. Hacer preguntas abiertas para obtener información detallada. Utilizar la técnica de las 5W (Qué, Quién, Cuándo, Dónde, Por qué) para investigar a fondo.                                                                                                                                                                        |\n| Oferta Productos       | Bajo         | La oferta de productos no es proactiva y puede no estar alineada con las necesidades del cliente.                                                                                                                                                           | Antes de ofrecer un producto, resumir las necesidades del cliente para asegurar que se está ofreciendo la solución correcta. Destacar los beneficios del producto en lugar de solo las características. Practicar la presentación de los productos con énfasis en los beneficios clave.                                                                                                                   |\n| Manejo Objeciones      | Regular      | MZA 26 intenta manejar las objeciones, pero puede mejorar la forma en que responde a las preocupaciones del cliente.                                                                                                                                         | Preparar respuestas anticipadas para las objeciones más comunes. Utilizar la técnica \"Sentir, Sentía, Encontré\" (Entiendo cómo se siente, otros clientes se sentían así, pero encontraron que...). Validar la objeción del cliente antes de responder.                                                                                                                                                                       |\n| Cierre                 | Crítico      | No realiza cierres en las llamadas.                                                                                                                                                                                                                         | Aprender y practicar diferentes técnicas de cierre. Utilizar cierres suaves como \"Si le parece bien, podemos proceder con la activación\" o \"Entonces, ¿le gustaría que activemos el servicio?\". Pedir el cierre directamente al final de la conversación.                                                                                                                                                            |\n| Despedida              | Regular      | MZA 26 se despide, pero puede ser más cordial y ofrecer ayuda adicional.                                                                                                                                                                                   | Agradecer al cliente por su tiempo y confirmar que se ha resuelto su problema. Ofrecer ayuda adicional y proporcionar información de contacto. Terminar la llamada con una nota positiva.                                                                                                                                                                                                       |\n| Proactividad           | Crítico      | No se observa proactividad en la venta cruzada u oferta de productos adicionales.                                                                                                                                                                             | Identificar oportunidades de venta cruzada durante la conversación. Ofrecer productos complementarios que puedan ser de interés para el cliente. Presentar los beneficios de los productos adicionales de forma clara y concisa.                                                                                                                                                                                 |\n| Empatía                | Bueno        | MZA 26 muestra empatía hacia los clientes.                                                                                                                                                                                                                 | Continuar con el buen trabajo. Utilizar frases que demuestren comprensión y apoyo. Escuchar activamente al cliente y responder a sus emociones.                                                                                                                                                                                                                                                                      |\n| Resolución Problemas   | Regular      | MZA 26 intenta resolver los problemas del cliente, pero puede mejorar su eficiencia y capacidad para encontrar soluciones.                                                                                                                                | Hacer preguntas adicionales para comprender la raíz del problema. Investigar las posibles soluciones antes de ofrecer una respuesta. Mantener la calma y la paciencia durante la resolución del problema. Confirmar con el cliente que se ha resuelto su problema antes de finalizar la llamada.                                                                                                         |\n\n### 5. PLAN DE ACCIÓN SEMANAL\n\n**Semana 1: IDENTIFICACIÓN DEL CLIENTE - EL PILAR DE LA CONFIANZA**\n\n*   **Foco Principal:** Implementar un protocolo de identificación del cliente en cada llamada.\n*   **Acciones Específicas:**\n    *   **Día 1-2:** Capacitación intensiva sobre la importancia de la identificación del cliente y las regulaciones de privacidad.\n    *   **Día 3-5:** Practicar el protocolo de identificación en simulaciones de llamadas.\n    *   **Monitoreo:** Revisar las primeras 5 llamadas de la semana y proporcionar retroalimentación inmediata.\n\n**Semana 2: OFERTA DE PRODUCTOS - DESATANDO EL POTENCIAL DE VENTA**\n\n*   **Foco Principal:** Mejorar la presentación de los productos y la identificación de oportunidades de venta cruzada.\n*   **Acciones Específicas:**\n    *   **Día 1-2:** Revisar el catálogo de productos y los beneficios clave de cada uno.\n    *   **Día 3-5:** Practicar la presentación de los productos utilizando scripts personalizados.\n    *   **Monitoreo:** Enfocarse en la oferta de productos durante el monitoreo de llamadas y proporcionar retroalimentación específica.\n\n**Semana 3: CIERRE - CONVIRTIENDO OPORTUNIDADES EN VENTAS**\n\n*   **Foco Principal:** Dominar técnicas de cierre efectivas y superar el miedo al rechazo.\n*   **Acciones Específicas:**\n    *   **Día 1-2:** Aprender y practicar diferentes técnicas de cierre (cierre directo, cierre por concesión, cierre por escasez, etc.).\n    *   **Día 3-5:** Utilizar las técnicas de cierre en simulaciones de llamadas y escenarios de venta reales.\n    *   **Monitoreo:** Evaluar la capacidad de MZA 26 para cerrar ventas y proporcionar retroalimentación constructiva.\n\n**Semana 4: OPTIMIZACIÓN - CONSOLIDANDO EL ÉXITO**\n\n*   **Foco Principal:** Refinar las habilidades de MZA 26 y consolidar las mejoras realizadas.\n*   **Acciones Específicas:**\n    *   **Día 1-2:** Revisar las grabaciones de las mejores y peores llamadas de MZA 26 para identificar patrones y áreas de mejora continua.\n    *   **Día 3-5:** Practicar escenarios de venta complejos y simulaciones de llamadas con objeciones difíciles.\n    *   **Monitoreo:** Realizar un seguimiento continuo del desempeño de MZA 26 y proporcionar retroalimentación personalizada.\n\n### 6. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Saludo:** \"Buenos días/tardes, [Nombre del cliente], mi nombre es [Tu nombre] y le llamo de [Empresa]. ¿Es usted [Nombre del cliente]?\"\n*   **Detección de Necesidades:**\n    *   \"¿Qué tipo de servicio está buscando?\"\n    *   \"¿Cuáles son sus principales prioridades?\"\n    *   \"¿Qué aspectos son más importantes para usted?\"\n*   **Manejo de Objeciones:**\n    *   \"Entiendo su preocupación por el precio. Sin embargo, permítame mostrarle cómo nuestros servicios le brindarán un valor superior a largo plazo.\"\n    *   \"Comprendo que no está seguro. ¿Qué información adicional necesitaría para tomar una decisión?\"\n*   **Cierre:**\n    *   \"Si le parece bien, podemos proceder con la activación del servicio.\"\n    *   \"¿Le gustaría que le envíe la información detallada por correo electrónico?\"\n    *   \"Entonces, ¿estamos listos para comenzar?\"\n\n### 7. METAS CUANTIFICABLES\n\n*   **Puntaje IA:** Alcanzar un puntaje promedio de 65 en 30 días.\n*   **Tasa de Conversión:** Aumentar la tasa de conversión al 8%.\n*   **Ofrecimiento de Productos:** Ofrecer al menos un producto adicional en el 50% de las llamadas.\n*   **KPIs Específicos:**\n    *   Aumentar el puntaje en \"Identificación del Cliente\" a 80.\n    *   Aumentar el puntaje en \"Cierre\" a 60.\n    *   Aumentar el puntaje en \"Proactividad\" a 40.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\nMZA 26, ¡tengo plena confianza en tu potencial! He visto tu capacidad de conectar con los clientes y tu tasa de conversión es prueba de que tienes lo necesario para triunfar. Este plan de acción está diseñado para desbloquear tu máximo potencial. No te desanimes por los desafíos, cada obstáculo superado te hará más fuerte y te acercará a tus metas. ¡Vamos a trabajar juntos para convertirte en un vendedor estrella! ¡Yo sé que puedes!\n",
+  "modelo_usado": "gemini-2.0-flash"
+}

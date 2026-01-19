@@ -608,8 +608,8 @@ def procesar_paralelo(carpeta_entrada, carpeta_salida, num_workers, usar_ecapa):
 
 if __name__ == "__main__":
     
-    CARPETA_ENTRADA = r"J:\EVA\data\prosesado"
-    CARPETA_SALIDA = r"J:\EVA\data\trancripts"
+    CARPETA_ENTRADA = r"C:\Users\rodri\Documents\codigo-WC\eva\audios_descargados"
+    CARPETA_SALIDA = r"C:\Users\rodri\Documents\codigo-WC\eva\transcripciones"
     
     # ========== CONFIGURACIÓN ==========
     
