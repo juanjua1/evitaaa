@@ -1,6 +1,8 @@
 ﻿"""
-Dashboard EVA - Análisis de Calidad de Llamadas
-Interfaz gráfica para presentaciones corporativas
+COMMAND - Sistema de Rendimiento Comercial
+
+Dashboard ejecutivo para auditoría de equipos de venta.
+Interfaz profesional para presentaciones corporativas.
 """
 
 import streamlit as st
@@ -16,8 +18,8 @@ from collections import defaultdict
 
 # Configuración de la página
 st.set_page_config(
-    page_title="EVA - Dashboard de Calidad",
-    page_icon="📊",
+    page_title="COMMAND - Sistema de Rendimiento Comercial",
+    page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -236,30 +238,36 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
-    /* Logo EVA en sidebar */
-    .eva-logo-container {
+    /* Logo COMMAND en sidebar */
+    .command-logo-container {
         text-align: center;
         padding: 1rem;
         margin-bottom: 0.5rem;
+        background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);
+        border-radius: 12px;
+        margin: 0.5rem;
     }
-    
-    .eva-logo-container img {
+
+    .command-logo-container img {
         max-width: 80px;
     }
     
-    .eva-title {
-        font-size: 1.8rem;
-        font-weight: 700;
+    .command-title {
+        font-size: 1.5rem;
+        font-weight: 800;
         color: #60A5FA !important;
         text-align: center;
         margin-top: 0.5rem;
+        letter-spacing: 3px;
     }
     
-    .eva-subtitle {
-        font-size: 0.85rem;
+    .command-subtitle {
+        font-size: 0.75rem;
         color: #94A3B8 !important;
         text-align: center;
-        margin-top: -0.3rem;
+        margin-top: -0.1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
     
     /* Plotly charts container */
@@ -750,9 +758,9 @@ def mostrar_login():
         # Logo y marca
         st.markdown("""
         <div class="login-logo-box">
-            <span class="login-logo-icon">🦉</span>
-            <h1 class="login-brand">EVA</h1>
-            <p class="login-tagline">Evaluador Virtual de Auditoría</p>
+            <span class="login-logo-icon">📈</span>
+            <h1 class="login-brand">COMMAND</h1>
+            <p class="login-tagline">Sistema de Rendimiento Comercial</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -795,16 +803,16 @@ def mostrar_login():
         st.markdown("""
         <div class="login-features-row">
             <div class="login-feature-item">
-                <span>🤖</span>
-                <p>Análisis con IA</p>
+                <span>📊</span>
+                <p>Reportes Ejecutivos</p>
             </div>
             <div class="login-feature-item">
-                <span>📊</span>
-                <p>Reportes</p>
+                <span>👥</span>
+                <p>Auditoría de Equipos</p>
             </div>
             <div class="login-feature-item">
                 <span>🎯</span>
-                <p>Coaching</p>
+                <p>Métricas de Rendimiento</p>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -812,7 +820,7 @@ def mostrar_login():
         # Footer
         st.markdown("""
         <p class="login-footer-text">
-            © 2026 EVA Dashboard · Sistema de Evaluación de Vendedores
+            © 2026 COMMAND · Sistema de Rendimiento Comercial
         </p>
         """, unsafe_allow_html=True)
 
@@ -1043,10 +1051,20 @@ def crear_df_llamadas(transcripciones):
 
 def pagina_resumen_ejecutivo(datos, df):
     """Página de resumen ejecutivo"""
-    st.markdown('<div class="main-header">📊 Dashboard EVA - Resumen Ejecutivo</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">📈 COMMAND · Panel Ejecutivo de Rendimiento Comercial</div>', unsafe_allow_html=True)
     
-    # Fecha del análisis
-    st.markdown(f"**Última actualización:** {datetime.now().strftime('%d/%m/%Y %H:%M')}")
+    # Subtítulo con contexto corporativo
+    fecha_reporte = datetime.now().strftime('%d/%m/%Y %H:%M')
+    st.markdown(f"""
+    <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #3B82F6;'>
+        <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
+            <strong>Informe de Gestión Comercial</strong> · Consolidado de métricas de rendimiento del equipo de ventas
+        </p>
+        <p style='margin: 5px 0 0 0; color: #64748B; font-size: 0.85rem;'>
+            Fecha del reporte: <strong>{fecha_reporte}</strong>
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Métricas principales
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -1058,15 +1076,15 @@ def pagina_resumen_ejecutivo(datos, df):
     promedio_duracion = df['duracion'].mean() / 60 if len(df) > 0 else 0
     
     with col1:
-        st.metric("📞 Total Llamadas", f"{total_llamadas:,}")
+        st.metric("📞 Total Operaciones", f"{total_llamadas:,}")
     with col2:
-        st.metric("✅ Ventas", f"{ventas:,}")
+        st.metric("✅ Ventas Cerradas", f"{ventas:,}")
     with col3:
-        st.metric("📈 Tasa Conversión", f"{tasa_conversion:.1f}%")
+        st.metric("📈 Tasa de Conversión", f"{tasa_conversion:.1f}%")
     with col4:
-        st.metric("⭐ Calidad Promedio", f"{promedio_calidad:.1f}/100")
+        st.metric("⭐ Índice de Calidad", f"{promedio_calidad:.1f}/100")
     with col5:
-        st.metric("⏱️ Duración Promedio", f"{promedio_duracion:.1f} min")
+        st.metric("⏱️ Tiempo Promedio", f"{promedio_duracion:.1f} min")
     
     st.markdown("---")
     
@@ -1074,7 +1092,7 @@ def pagina_resumen_ejecutivo(datos, df):
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown('<p class="section-header">📊 Distribución por Tipificación</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">📊 Distribución por Resultado de Gestión</p>', unsafe_allow_html=True)
         tipificacion_counts = df['tipificacion'].value_counts()
         crear_pie_chart_expandible(
             values=list(tipificacion_counts.values),
@@ -1085,7 +1103,7 @@ def pagina_resumen_ejecutivo(datos, df):
         )
     
     with col2:
-        st.markdown('<p class="section-header">📈 Llamadas por Día</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">📈 Volumen de Operaciones Diarias</p>', unsafe_allow_html=True)
         if 'dia' in df.columns:
             llamadas_dia = df.groupby('dia').size().reset_index(name='llamadas')
             fig = px.bar(
@@ -1095,7 +1113,7 @@ def pagina_resumen_ejecutivo(datos, df):
             fig.update_layout(
                 height=300, 
                 xaxis_title="Fecha",
-                yaxis_title="Llamadas",
+                yaxis_title="Operaciones",
                 margin=dict(t=20, b=40, l=50, r=20),
                 paper_bgcolor='#FFFFFF',
                 plot_bgcolor='#FAFBFC',
@@ -1114,7 +1132,7 @@ def pagina_resumen_ejecutivo(datos, df):
             st.plotly_chart(fig, use_container_width=True)
     
     # Resultados de las llamadas
-    st.markdown('<p class="section-header">🎯 Resultados de las Llamadas</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-header">🎯 Indicadores de Efectividad Comercial</p>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns(3)
     
@@ -1231,12 +1249,12 @@ def mostrar_proximamente(titulo, icono="🚧"):
 
 def pagina_cierres_comerciales(datos):
     """Página de análisis de cierres comerciales"""
-    mostrar_proximamente("📋 Análisis de Cierres Comerciales")
+    mostrar_proximamente("📋 COMMAND · Gestión de Cierres Comerciales")
 
 
 def pagina_planes_ofrecidos(datos, df):
     """Página de análisis de planes ofrecidos, fibra y promociones"""
-    st.markdown('<div class="main-header">📱 Análisis de Planes, Fibra y Promociones</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">📱 COMMAND · Análisis de Portafolio de Productos</div>', unsafe_allow_html=True)
     
     if 'planes' not in datos:
         st.warning("⚠️ No hay datos de planes disponibles.")
@@ -1249,27 +1267,27 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     # SECCIÓN 1: PLANES DE PORTA
     # =========================================================================
-    st.markdown('<p class="section-header">📱 Planes de Porta (4GB, 8GB, 15GB, 30GB)</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-header">📱 Análisis de Ofertas de Planes Móviles</p>', unsafe_allow_html=True)
     
     planes_stats = stats.get('planes', {})
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric("📞 Total Llamadas", f"{total_llamadas:,}")
+        st.metric("📞 Total Operaciones", f"{total_llamadas:,}")
     with col2:
         con_plan = planes_stats.get('con_plan', 0)
         pct = planes_stats.get('porcentaje_con_plan', 0)
-        st.metric("✅ Con Plan Ofrecido", f"{con_plan:,}", f"{pct:.1f}%")
+        st.metric("✅ Oferta Realizada", f"{con_plan:,}", f"{pct:.1f}%")
     with col3:
         sin_plan = planes_stats.get('sin_plan', 0)
         pct_sin = 100 - pct if pct else 0
-        st.metric("❌ Sin Plan Ofrecido", f"{sin_plan:,}", f"{pct_sin:.1f}%", delta_color="inverse")
+        st.metric("❌ Sin Oferta", f"{sin_plan:,}", f"{pct_sin:.1f}%", delta_color="inverse")
     with col4:
         # Plan más usado como primer ofrecimiento
         primer_plan_conteo = stats.get('primer_plan_conteo', {})
         if primer_plan_conteo:
             top_plan = max(primer_plan_conteo, key=primer_plan_conteo.get)
-            st.metric("🥇 Primer Plan Más Usado", top_plan.upper(), f"{primer_plan_conteo[top_plan]} veces")
+            st.metric("🥇 Plan Principal", top_plan.upper(), f"{primer_plan_conteo[top_plan]} veces")
     
     # Gráficos de planes
     col1, col2 = st.columns(2)
@@ -1336,7 +1354,7 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     # SECCIÓN 2: FIBRA (INTERNET HOGAR)
     # =========================================================================
-    st.markdown('<p class="section-header">🏠 Fibra (Internet Hogar)</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-header">🏠 Análisis de Ofertas de Fibra Óptica</p>', unsafe_allow_html=True)
     
     fibra_stats = stats.get('fibra', {})
     col1, col2, col3 = st.columns(3)
@@ -1344,19 +1362,19 @@ def pagina_planes_ofrecidos(datos, df):
     with col1:
         ofrece = fibra_stats.get('ofrece', 0)
         pct_ofrece = fibra_stats.get('porcentaje_ofrece', 0)
-        st.metric("✅ Ofrece Fibra", f"{ofrece:,}", f"{pct_ofrece:.1f}%")
+        st.metric("✅ Oferta Realizada", f"{ofrece:,}", f"{pct_ofrece:.1f}%")
     with col2:
         no_ofrece = fibra_stats.get('no_ofrece', 0)
         pct_no = 100 - pct_ofrece if pct_ofrece else 0
-        st.metric("❌ NO Ofrece Fibra", f"{no_ofrece:,}", f"-{pct_no:.1f}%", delta_color="inverse")
+        st.metric("❌ Sin Oferta de Fibra", f"{no_ofrece:,}", f"-{pct_no:.1f}%", delta_color="inverse")
     with col3:
         # Indicador visual
         if pct_ofrece < 30:
-            st.error(f"⚠️ Solo {pct_ofrece:.1f}% ofrece Fibra - Área de mejora crítica")
+            st.error(f"⚠️ Solo {pct_ofrece:.1f}% ofrece Fibra - Requiere acción inmediata")
         elif pct_ofrece < 50:
-            st.warning(f"⚠️ {pct_ofrece:.1f}% ofrece Fibra - Necesita mejorar")
+            st.warning(f"⚠️ {pct_ofrece:.1f}% ofrece Fibra - Área de mejora")
         else:
-            st.success(f"✅ {pct_ofrece:.1f}% ofrece Fibra - Buen desempeño")
+            st.success(f"✅ {pct_ofrece:.1f}% ofrece Fibra - Cumplimiento adecuado")
     
     # Gráfico de Fibra
     col1, col2 = st.columns(2)
@@ -1408,7 +1426,7 @@ def pagina_planes_ofrecidos(datos, df):
             if agentes_sin_fibra:
                 df_sin_fibra = pd.DataFrame(agentes_sin_fibra)
                 df_sin_fibra = df_sin_fibra.sort_values('Sin Fibra %', ascending=False).head(10)
-                st.markdown("**🚨 Agentes que menos ofrecen Fibra:**")
+                st.markdown("**🚨 Vendedores con Menor Oferta de Fibra:**")
                 st.dataframe(df_sin_fibra, use_container_width=True, hide_index=True, height=180)
     
     st.markdown("---")
@@ -1416,7 +1434,7 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     # SECCIÓN 3: PROMOCIONES
     # =========================================================================
-    st.markdown('<p class="section-header">🎁 Promociones (80% días 13-16/01)</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-header">🎁 Análisis de Cumplimiento de Promociones</p>', unsafe_allow_html=True)
     
     promo_stats = stats.get('promociones', {})
     col1, col2, col3, col4 = st.columns(4)
@@ -1505,7 +1523,16 @@ def pagina_planes_ofrecidos(datos, df):
 
 def pagina_coaching_vendedores(datos):
     """Página de Coaching IA personalizado para cada vendedor"""
-    st.markdown('<div class="main-header">🎯 Coaching IA para Vendedores</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">🎯 COMMAND · Planes de Mejora y Desarrollo de Vendedores</div>', unsafe_allow_html=True)
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #10B981;'>
+        <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
+            <strong>Planes de Acción Individualizados</strong> · Recomendaciones basadas en análisis de rendimiento para cada vendedor
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Usar funciones globales de mapeo
     listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
@@ -1540,10 +1567,10 @@ def pagina_coaching_vendedores(datos):
     <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
                 padding: 20px; border-radius: 15px; margin-bottom: 25px; color: white;
                 box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
-        <h3 style='margin:0; color: #FFFFFF; font-weight: 700;'>🤖 Coaching Personalizado con Inteligencia Artificial</h3>
+        <h3 style='margin:0; color: #FFFFFF; font-weight: 700;'>📋 Sistema de Desarrollo Profesional</h3>
         <p style='margin: 10px 0 0 0; color: #E0E7FF;'>
-            Análisis exhaustivo generado por IA actuando como <strong style='color: #FFFFFF;'>Jefe de Ventas</strong>. 
-            Cada vendedor tiene un plan de acción personalizado diseñado para maximizar su potencial.
+            Análisis exhaustivo del rendimiento individual de cada vendedor. 
+            Cada colaborador cuenta con un <strong style='color: #FFFFFF;'>plan de acción personalizado</strong> diseñado para maximizar su potencial comercial.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -1552,7 +1579,7 @@ def pagina_coaching_vendedores(datos):
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric("👥 Agentes con Coaching", len(agentes_coaching))
+        st.metric("👥 Vendedores Evaluados", len(agentes_coaching))
     
     # Calcular estadísticas generales
     puntajes = []
@@ -2195,12 +2222,12 @@ def pagina_coaching_vendedores(datos):
 
 def pagina_performance_agentes(df, datos):
     """Página de performance por agente - Funcionalidad pendiente"""
-    mostrar_proximamente("👥 Performance de Agentes")
+    mostrar_proximamente("👥 COMMAND · Rendimiento Individual de Vendedores")
 
 
 def pagina_analisis_temporal(df):
     """Página de análisis temporal"""
-    mostrar_proximamente("📅 Análisis Temporal")
+    mostrar_proximamente("📅 COMMAND · Análisis por Período de Tiempo")
     return
     
     # === CÓDIGO COMENTADO PARA FUTURO ===
@@ -2347,7 +2374,7 @@ def pagina_analisis_temporal(df):
 
 def pagina_detalle_llamadas(df, datos):
     """Página de detalle de llamadas"""
-    mostrar_proximamente("🔍 Explorador de Llamadas")
+    mostrar_proximamente("🔍 COMMAND · Detalle de Operaciones")
     return
     
     # === CÓDIGO COMENTADO PARA FUTURO ===
@@ -2511,7 +2538,16 @@ def pagina_detalle_llamadas(df, datos):
 
 def pagina_quejas_no_resueltas(datos):
     """Página de análisis de quejas no resueltas"""
-    st.markdown('<div class="main-header">😤 Quejas No Resueltas</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">⚠️ COMMAND · Gestión de Reclamos y Quejas Pendientes</div>', unsafe_allow_html=True)
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #FEF2F2; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #EF4444;'>
+        <p style='margin: 0; color: #7F1D1D; font-size: 0.95rem;'>
+            <strong>Panel de Seguimiento de Reclamos</strong> · Casos que requieren atención y resolución
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     if 'quejas' not in datos:
         st.warning("⚠️ No hay datos de quejas disponibles.")
@@ -2728,7 +2764,7 @@ def pagina_quejas_no_resueltas(datos):
 
 def pagina_analisis_duracion(datos):
     """Página de análisis integral por duración de llamadas"""
-    mostrar_proximamente("⏱️ Análisis de Duración de Llamadas")
+    mostrar_proximamente("⏱️ COMMAND · Control de Tiempos de Atención")
     return
     
     # === CÓDIGO COMENTADO PARA FUTURO ===
@@ -3034,7 +3070,7 @@ def pagina_analisis_duracion(datos):
 
 def pagina_clasificacion_integral(datos):
     """Página de clasificación integral de llamadas"""
-    mostrar_proximamente("📊 Clasificación Integral de Llamadas")
+    mostrar_proximamente("🔮 COMMAND · Clasificación de Interacciones")
     return
     
     # === CÓDIGO COMENTADO PARA FUTURO ===
@@ -3318,7 +3354,16 @@ def pagina_clasificacion_integral(datos):
 
 def pagina_evaluaciones_gemini(datos):
     """Página de evaluaciones realizadas con Inteligencia Artificial"""
-    st.markdown('<div class="main-header">🤖 Evaluaciones con Inteligencia Artificial</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">🤖 COMMAND · Evaluación Automatizada de Calidad</div>', unsafe_allow_html=True)
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #8B5CF6;'>
+        <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
+            <strong>Sistema de Evaluación con Inteligencia Artificial</strong> · Análisis automático de calidad de cada interacción
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Verificar datos
     if 'evaluaciones_gemini_df' not in datos:
@@ -3365,13 +3410,13 @@ def pagina_evaluaciones_gemini(datos):
     # =============================================================================
     # TABS PRINCIPALES
     # =============================================================================
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Vista General", "👤 Análisis por Agente", "🎯 Criterios Detallados", "🔍 Explorador"])
+    tab1, tab2, tab3, tab4 = st.tabs(["📊 Resumen Ejecutivo", "👤 Análisis por Vendedor", "🎯 Indicadores de Calidad", "🔍 Detalle de Evaluaciones"])
     
     with tab1:
         # =============================================================================
         # MÉTRICAS PRINCIPALES
         # =============================================================================
-        st.markdown('<p class="section-header">📈 Métricas Generales de Evaluación IA</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">📈 Indicadores Generales de Evaluación</p>', unsafe_allow_html=True)
         
         total = len(df)
         puntaje_promedio = df['puntaje_total'].mean()
@@ -3384,19 +3429,19 @@ def pagina_evaluaciones_gemini(datos):
         col1, col2, col3, col4, col5 = st.columns(5)
         
         with col1:
-            st.metric("📊 Total Evaluadas", f"{total:,}")
+            st.metric("📊 Total Evaluaciones", f"{total:,}")
         with col2:
             color = "🔴" if puntaje_promedio < 40 else "🟡" if puntaje_promedio < 60 else "🟢"
-            st.metric(f"{color} Puntaje Promedio", f"{puntaje_promedio:.1f}/100")
+            st.metric(f"{color} Índice de Calidad", f"{puntaje_promedio:.1f}/100")
         with col3:
             excelentes = len(df[df['puntaje_total'] >= 80])
-            st.metric("🌟 Excelentes (80+)", f"{excelentes:,} ({excelentes/total*100:.1f}%)")
+            st.metric("🌟 Rendimiento Excelente", f"{excelentes:,} ({excelentes/total*100:.1f}%)")
         with col4:
             criticos = len(df[df['puntaje_total'] <= 20])
-            st.metric("🔴 Críticos (≤20)", f"{criticos:,} ({criticos/total*100:.1f}%)")
+            st.metric("🔴 Requieren Atención", f"{criticos:,} ({criticos/total*100:.1f}%)")
         with col5:
             cero = len(df[df['puntaje_total'] == 0])
-            st.metric("⚠️ Puntaje 0", f"{cero:,} ({cero/total*100:.1f}%)")
+            st.metric("⚠️ Sin Evaluación", f"{cero:,} ({cero/total*100:.1f}%)")
         
         # Distribución de puntajes
         st.markdown("---")
@@ -3443,7 +3488,7 @@ def pagina_evaluaciones_gemini(datos):
         
         # Ranking de agentes resumen
         st.markdown("---")
-        st.markdown('<p class="section-header">👥 Ranking Rápido de Agentes</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">👥 Ranking de Rendimiento por Vendedor</p>', unsafe_allow_html=True)
         
         if 'agente' in df.columns:
             df_agentes_resumen = df.groupby('agente').agg({
@@ -3456,7 +3501,7 @@ def pagina_evaluaciones_gemini(datos):
             col1, col2 = st.columns(2)
             
             with col1:
-                st.markdown("**🏆 Top 10 Mejores:**")
+                st.markdown("**🏆 Top 10 - Mejor Rendimiento:**")
                 top_10 = df_agentes_resumen.nlargest(10, 'Puntaje_Prom')
                 fig = px.bar(
                     top_10,
@@ -3481,7 +3526,7 @@ def pagina_evaluaciones_gemini(datos):
                 st.plotly_chart(fig, use_container_width=True)
             
             with col2:
-                st.markdown("**⚠️ 10 Necesitan Mejora:**")
+                st.markdown("**⚠️ Requieren Plan de Mejora:**")
                 bottom_10 = df_agentes_resumen.nsmallest(10, 'Puntaje_Prom')
                 fig = px.bar(
                     bottom_10,
@@ -3509,11 +3554,11 @@ def pagina_evaluaciones_gemini(datos):
         # =============================================================================
         # ANÁLISIS DETALLADO POR AGENTE
         # =============================================================================
-        st.markdown('<p class="section-header">👤 Selecciona un Agente para Ver su Análisis Detallado</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">👤 Análisis Individual de Rendimiento</p>', unsafe_allow_html=True)
         
         if 'agente' in df.columns:
             agentes_list = sorted(df['agente'].dropna().unique().tolist())
-            agente_seleccionado = st.selectbox("Selecciona un agente:", agentes_list, key='agente_gemini')
+            agente_seleccionado = st.selectbox("Seleccionar vendedor:", agentes_list, key='agente_gemini')
             
             # Filtrar datos del agente
             df_agente = df[df['agente'] == agente_seleccionado].copy()
@@ -3527,17 +3572,17 @@ def pagina_evaluaciones_gemini(datos):
                 col1, col2, col3, col4 = st.columns(4)
                 
                 with col1:
-                    st.metric("📊 Llamadas Evaluadas", f"{total_agente:,}")
+                    st.metric("📊 Operaciones Evaluadas", f"{total_agente:,}")
                 with col2:
                     diff_vs_prom = puntaje_agente - puntaje_promedio
-                    st.metric("🎯 Puntaje Promedio", f"{puntaje_agente:.1f}/100", 
+                    st.metric("🎯 Índice de Rendimiento", f"{puntaje_agente:.1f}/100", 
                               delta=f"{diff_vs_prom:+.1f} vs general")
                 with col3:
                     excelentes_ag = len(df_agente[df_agente['puntaje_total'] >= 80])
-                    st.metric("🌟 Llamadas Excelentes", f"{excelentes_ag} ({excelentes_ag/total_agente*100:.1f}%)")
+                    st.metric("🌟 Gestiones Destacadas", f"{excelentes_ag} ({excelentes_ag/total_agente*100:.1f}%)")
                 with col4:
                     criticos_ag = len(df_agente[df_agente['puntaje_total'] <= 20])
-                    st.metric("🔴 Llamadas Críticas", f"{criticos_ag} ({criticos_ag/total_agente*100:.1f}%)")
+                    st.metric("🔴 Gestiones Críticas", f"{criticos_ag} ({criticos_ag/total_agente*100:.1f}%)")
                 
                 # Gráfico de Perfil de Competencias - Barras comparativas profesional
                 st.markdown("---")
@@ -4076,14 +4121,23 @@ def aplicar_semaforo_cumplimiento(porcentaje):
 def pagina_calidad():
     """Página de Calidad - Análisis de Llamadas Call Center"""
     
-    st.markdown('<p class="main-header">📞 Calidad - Análisis de Llamadas</p>', unsafe_allow_html=True)
+    st.markdown('<p class="main-header">📞 COMMAND · Indicadores de Calidad y Cumplimiento</p>', unsafe_allow_html=True)
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #06B6D4;'>
+        <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
+            <strong>Control de Calidad Operativa</strong> · Métricas de tiempo, cumplimiento y KPIs de ventas
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Tabs principales
     tab1, tab2, tab3, tab4 = st.tabs([
         "📤 Carga de Datos", 
-        "📊 Métricas por Agente", 
+        "📊 Métricas por Vendedor", 
         "🚦 Semáforos de Tiempo",
-        "💰 KPIs de Ventas"
+        "💰 KPIs de Cumplimiento"
     ])
     
     # =========================================================================
@@ -4848,11 +4902,11 @@ def main():
     # Crear DataFrame de llamadas
     df = crear_df_llamadas(datos['transcripciones'])
     
-    # Sidebar - Logo EVA y Usuario
+    # Sidebar - Logo COMMAND y Usuario
     st.sidebar.markdown("""
-    <div class="eva-logo-container">
-        <div class="eva-title">🦉 EVA</div>
-        <div class="eva-subtitle">Evaluador Virtual de Auditoría</div>
+    <div class="command-logo-container">
+        <div class="command-title">📈 COMMAND</div>
+        <div class="command-subtitle">Sistema de Rendimiento Comercial</div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -4872,34 +4926,34 @@ def main():
         cerrar_sesion()
     
     st.sidebar.markdown("---")
-    st.sidebar.markdown("## 📊 Navegación")
+    st.sidebar.markdown("## 📊 Panel de Control")
     
     paginas = {
-        "🏠 Resumen Ejecutivo": "resumen",
-        "📋 Cierres Comerciales": "cierres",
-        "📱 Planes y Fibra": "planes",
-        "😤 Quejas No Resueltas": "quejas",
-        "⏱️ Análisis Duración": "duracion",
-        "🔮 Clasificación Integral": "clasificacion",
-        "🤖 Evaluaciones IA": "gemini",
-        "🎯 Coaching IA": "coaching",
-        "👥 Performance Agentes": "agentes",
-        "📅 Análisis Temporal": "temporal",
-        "🔍 Explorador de Llamadas": "detalle",
-        "📞 Calidad": "calidad"
+        "🏠 Panel Ejecutivo": "resumen",
+        "📋 Gestión de Cierres": "cierres",
+        "📱 Análisis de Productos": "planes",
+        "⚠️ Gestión de Reclamos": "quejas",
+        "⏱️ Control de Tiempos": "duracion",
+        "🔮 Clasificación de Llamadas": "clasificacion",
+        "🤖 Evaluación Automatizada": "gemini",
+        "🎯 Planes de Mejora": "coaching",
+        "👥 Rendimiento de Vendedores": "agentes",
+        "📅 Análisis por Período": "temporal",
+        "🔍 Detalle de Operaciones": "detalle",
+        "📞 Indicadores de Calidad": "calidad"
     }
     
-    seleccion = st.sidebar.radio("Selecciona una sección:", list(paginas.keys()))
+    seleccion = st.sidebar.radio("Módulos disponibles:", list(paginas.keys()))
     
     # Info adicional en sidebar
     st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📊 Resumen Rápido")
-    st.sidebar.markdown(f"**Total llamadas:** {len(df):,}")
+    st.sidebar.markdown("### 📈 Indicadores Clave")
+    st.sidebar.markdown(f"**Total Operaciones:** {len(df):,}")
     if 'dia' in df.columns and df['dia'].notna().any():
         fecha_min = df['dia'].dropna().min()
         fecha_max = df['dia'].dropna().max()
         st.sidebar.markdown(f"**Período:** {fecha_min} a {fecha_max}")
-    st.sidebar.markdown(f"**Agentes:** {df['agente'].nunique()}")
+    st.sidebar.markdown(f"**Vendedores Activos:** {df['agente'].nunique()}")
     
     # Renderizar página seleccionada
     if paginas[seleccion] == "resumen":
@@ -4930,7 +4984,7 @@ def main():
     # Footer
     st.sidebar.markdown("---")
     st.sidebar.markdown(
-        f"<small>EVA Dashboard v1.0<br>Última actualización: {datetime.now().strftime('%d/%m/%Y %H:%M')}</small>",
+        f"<small>COMMAND v2.0 · Sistema de Rendimiento Comercial<br>Actualizado: {datetime.now().strftime('%d/%m/%Y %H:%M')}</small>",
         unsafe_allow_html=True
     )
 
