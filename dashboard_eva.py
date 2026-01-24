@@ -556,6 +556,347 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
 # Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# =============================================================================
+# SISTEMA DE AUTENTICACIÓN Y ROLES
+# =============================================================================
+import hashlib
+
+def hash_password(password):
+    """Genera hash SHA-256 de la contraseña"""
+    return hashlib.sha256(password.encode()).hexdigest()
+
+# Definición de usuarios y roles
+# Roles: admin (acceso total), supervisor (acceso equipo), vendedor (solo sus datos)
+USUARIOS = {
+    'matias': {
+        'password_hash': hash_password('mercurio'),
+        'nombre': 'Matias',
+        'rol': 'admin',
+        'equipo': None,  # Admin tiene acceso a todo
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes', 'config', 'todos_agentes']
+    },
+    # Aquí se agregarán los otros 5 usuarios
+}
+
+def verificar_credenciales(usuario, password):
+    """Verifica las credenciales del usuario"""
+    usuario = usuario.lower().strip()
+    if usuario in USUARIOS:
+        if USUARIOS[usuario]['password_hash'] == hash_password(password):
+            return True, USUARIOS[usuario]
+    return False, None
+
+def mostrar_login():
+    """Muestra la pantalla de login profesional - Formato corporativo"""
+    
+    # CSS personalizado para el login - FONDO CLARO, TEXTO OSCURO
+    st.markdown("""
+    <style>
+        /* Fondo claro corporativo */
+        .stApp {
+            background: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%) !important;
+        }
+        
+        /* Ocultar elementos de Streamlit */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        
+        /* Contenedor del logo */
+        .login-logo-box {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .login-logo-icon {
+            font-size: 4.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .login-brand {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1E3A5F;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+        
+        .login-tagline {
+            font-size: 1rem;
+            color: #64748B;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+        
+        /* Card del formulario - BLANCO con sombra suave */
+        .login-form-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 35px 40px;
+            box-shadow: 0 10px 40px rgba(30, 58, 95, 0.12);
+            border: 1px solid #E2E8F0;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .login-form-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1E293B;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #E2E8F0;
+        }
+        
+        /* Labels de inputs */
+        .stTextInput > label {
+            font-weight: 600 !important;
+            color: #334155 !important;
+            font-size: 0.95rem !important;
+            margin-bottom: 6px !important;
+        }
+        
+        /* Inputs - fondo gris muy claro */
+        .stTextInput > div > div > input {
+            border-radius: 10px !important;
+            border: 2px solid #CBD5E1 !important;
+            padding: 12px 16px !important;
+            font-size: 1rem !important;
+            background: #F8FAFC !important;
+            color: #1E293B !important;
+            transition: all 0.2s ease !important;
+        }
+        
+        .stTextInput > div > div > input:focus {
+            border-color: #3B82F6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+            background: #FFFFFF !important;
+        }
+        
+        .stTextInput > div > div > input::placeholder {
+            color: #94A3B8 !important;
+        }
+        
+        /* Botón de login - Azul corporativo */
+        .stFormSubmitButton > button {
+            width: 100%;
+            border-radius: 10px !important;
+            padding: 12px 24px !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            background: #1E3A5F !important;
+            border: none !important;
+            color: #FFFFFF !important;
+            transition: all 0.2s ease !important;
+            margin-top: 15px !important;
+        }
+        
+        .stFormSubmitButton > button:hover {
+            background: #2563EB !important;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+        }
+        
+        /* Alertas con mejor visibilidad */
+        .stAlert {
+            border-radius: 10px !important;
+            margin-top: 15px !important;
+        }
+        
+        /* Footer */
+        .login-footer-text {
+            text-align: center;
+            margin-top: 30px;
+            color: #64748B;
+            font-size: 0.85rem;
+        }
+        
+        /* Características/Features */
+        .login-features-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 35px;
+            padding-top: 20px;
+        }
+        
+        .login-feature-item {
+            text-align: center;
+        }
+        
+        .login-feature-item span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .login-feature-item p {
+            color: #475569;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 0;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Espaciado superior
+    st.markdown("<div style='height: 40px;'></div>", unsafe_allow_html=True)
+    
+    # Estructura centrada
+    col1, col2, col3 = st.columns([1, 1.8, 1])
+    
+    with col2:
+        # Logo y marca
+        st.markdown("""
+        <div class="login-logo-box">
+            <span class="login-logo-icon">🦉</span>
+            <h1 class="login-brand">EVA</h1>
+            <p class="login-tagline">Evaluador Virtual de Auditoría</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Card del formulario
+        st.markdown('<div class="login-form-card">', unsafe_allow_html=True)
+        st.markdown('<p class="login-form-title">Iniciar Sesión</p>', unsafe_allow_html=True)
+        
+        with st.form("login_form", clear_on_submit=False):
+            usuario = st.text_input(
+                "Usuario",
+                placeholder="Ingrese su usuario",
+                key="login_usuario"
+            )
+            
+            password = st.text_input(
+                "Contraseña",
+                type="password",
+                placeholder="Ingrese su contraseña",
+                key="login_password"
+            )
+            
+            submitted = st.form_submit_button("Ingresar", use_container_width=True)
+            
+            if submitted:
+                if usuario and password:
+                    valido, datos_usuario = verificar_credenciales(usuario, password)
+                    if valido:
+                        st.session_state['autenticado'] = True
+                        st.session_state['usuario'] = usuario.lower()
+                        st.session_state['datos_usuario'] = datos_usuario
+                        st.rerun()
+                    else:
+                        st.error("Usuario o contraseña incorrectos")
+                else:
+                    st.warning("Por favor complete todos los campos")
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Features
+        st.markdown("""
+        <div class="login-features-row">
+            <div class="login-feature-item">
+                <span>🤖</span>
+                <p>Análisis con IA</p>
+            </div>
+            <div class="login-feature-item">
+                <span>📊</span>
+                <p>Reportes</p>
+            </div>
+            <div class="login-feature-item">
+                <span>🎯</span>
+                <p>Coaching</p>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Footer
+        st.markdown("""
+        <p class="login-footer-text">
+            © 2026 EVA Dashboard · Sistema de Evaluación de Vendedores
+        </p>
+        """, unsafe_allow_html=True)
+
+def cerrar_sesion():
+    """Cierra la sesión del usuario"""
+    for key in ['autenticado', 'usuario', 'datos_usuario']:
+        if key in st.session_state:
+            del st.session_state[key]
+    st.rerun()
+
+def verificar_permiso(permiso):
+    """Verifica si el usuario actual tiene un permiso específico"""
+    if 'datos_usuario' not in st.session_state:
+        return False
+    permisos_usuario = st.session_state['datos_usuario'].get('permisos', [])
+    return permiso in permisos_usuario or 'admin' == st.session_state['datos_usuario'].get('rol')
+
+def obtener_agentes_permitidos(df):
+    """Filtra los agentes según el rol del usuario"""
+    if 'datos_usuario' not in st.session_state:
+        return df
+    
+    datos = st.session_state['datos_usuario']
+    rol = datos.get('rol', 'vendedor')
+    
+    if rol == 'admin':
+        # Admin ve todo
+        return df
+    elif rol == 'supervisor':
+        # Supervisor ve solo su equipo
+        equipo = datos.get('equipo')
+        if equipo and 'agente' in df.columns:
+            _, equipos_vendedores = cargar_listado_vendedores()
+            agentes_equipo = equipos_vendedores.get(equipo, [])
+            return df[df['agente'].isin(agentes_equipo)]
+        return df
+    else:
+        # Vendedor solo ve sus propios datos
+        nombre_usuario = datos.get('nombre', '')
+        if 'agente' in df.columns and nombre_usuario:
+            return df[df['agente'] == nombre_usuario]
+        return df
+
+# =============================================================================
+# MAPEO GLOBAL DE NOMBRES DE VENDEDORES
+# =============================================================================
+@st.cache_data(ttl=3600)  # Cache por 1 hora
+def cargar_listado_vendedores():
+    """Carga el listado de vendedores y retorna un diccionario de mapeo usuario -> nombre"""
+    listado_vendedores = {}
+    equipos_vendedores = {}
+    try:
+        ruta_listado = os.path.join(BASE_DIR, 'LISTADO-DE-VENDEDORES.csv')
+        df_listado = pd.read_csv(ruta_listado, header=0)
+        for _, row in df_listado.iterrows():
+            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
+            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
+            equipo = str(row.iloc[2]).strip() if len(row) > 2 and pd.notna(row.iloc[2]) else "Sin Equipo"
+            if usuario and nombre and usuario != 'usuario':
+                listado_vendedores[usuario] = nombre.title()
+                if equipo not in equipos_vendedores:
+                    equipos_vendedores[equipo] = []
+                equipos_vendedores[equipo].append(nombre.title())
+    except:
+        pass
+    return listado_vendedores, equipos_vendedores
+
+def obtener_nombre_vendedor_global(agente_id):
+    """Convierte ID de agente a nombre real usando el listado global"""
+    listado, _ = cargar_listado_vendedores()
+    if pd.isna(agente_id) or agente_id is None:
+        return "Desconocido"
+    agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '').replace('\t', '')
+    return listado.get(agente_normalizado, str(agente_id))
+
+def aplicar_mapeo_nombres_df(df, columna='agente'):
+    """Aplica el mapeo de nombres a una columna de un DataFrame"""
+    if columna in df.columns:
+        df[columna] = df[columna].apply(obtener_nombre_vendedor_global)
+    return df
+
+# Alias para compatibilidad con código existente
+obtener_nombre_agente = obtener_nombre_vendedor_global
+
 @st.cache_data(ttl=300)  # Cache por 5 minutos
 def cargar_datos():
     """Carga todos los datos necesarios para el dashboard"""
@@ -642,8 +983,25 @@ def cargar_datos():
     if os.path.exists(ruta):
         with open(ruta, 'r', encoding='utf-8') as f:
             coaching_list = json.load(f)
-            # Convertir lista a diccionario por agente
-            datos['coaching'] = {item['agente']: item for item in coaching_list}
+            # Convertir lista a diccionario por agente (aplicando mapeo de nombres)
+            datos['coaching'] = {}
+            for item in coaching_list:
+                nombre_real = obtener_nombre_vendedor_global(item['agente'])
+                item['agente'] = nombre_real
+                datos['coaching'][nombre_real] = item
+    
+    # Cargar listado de vendedores y equipos
+    listado, equipos = cargar_listado_vendedores()
+    datos['listado_vendedores'] = listado
+    datos['equipos_vendedores'] = equipos
+    
+    # Aplicar mapeo de nombres a todos los DataFrames con columna 'agente'
+    dataframes_con_agente = ['integral_df', 'metricas_agentes_df', 'clasificacion_df', 
+                             'clasificacion_agentes_df', 'evaluaciones_gemini_df', 
+                             'cierres_df', 'quejas_df']
+    for df_name in dataframes_con_agente:
+        if df_name in datos and datos[df_name] is not None:
+            datos[df_name] = aplicar_mapeo_nombres_df(datos[df_name], 'agente')
     
     return datos
 
@@ -656,10 +1014,14 @@ def crear_df_llamadas(transcripciones):
         calidad = t.get('analisis_calidad', {})
         productos = t.get('productos_ofrecidos', {})
         
+        # Obtener nombre del agente y aplicar mapeo
+        agente_raw = info.get('agente', {}).get('nombre', 'desconocido')
+        agente_nombre = obtener_nombre_vendedor_global(agente_raw)
+        
         fila = {
             'id': info.get('id_interaccion', ''),
             'fecha': info.get('fecha_llamada', ''),
-            'agente': info.get('agente', {}).get('nombre', 'desconocido'),
+            'agente': agente_nombre,
             'duracion': info.get('tiempos', {}).get('talking_time', 0),
             'tipificacion': info.get('resultado', {}).get('tipificacion', ''),
             'tipo': info.get('resultado', {}).get('tipos_tipificacion', ''),
@@ -879,22 +1241,6 @@ def pagina_planes_ofrecidos(datos, df):
     if 'planes' not in datos:
         st.warning("⚠️ No hay datos de planes disponibles.")
         return
-    
-    # Cargar nombres de vendedores
-    listado_vendedores = {}
-    try:
-        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
-        for _, row in df_listado.iterrows():
-            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
-            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
-            if usuario and nombre and usuario != 'usuario':
-                listado_vendedores[usuario] = nombre.title()
-    except:
-        pass
-    
-    def obtener_nombre_agente(agente_id):
-        agente_normalizado = agente_id.lower().replace(' ', '').replace('_', '')
-        return listado_vendedores.get(agente_normalizado, agente_id)
     
     planes = datos['planes']
     stats = planes.get('estadisticas', {})
@@ -1161,36 +1507,17 @@ def pagina_coaching_vendedores(datos):
     """Página de Coaching IA personalizado para cada vendedor"""
     st.markdown('<div class="main-header">🎯 Coaching IA para Vendedores</div>', unsafe_allow_html=True)
     
-    # Cargar listado de vendedores desde CSV
-    listado_vendedores = {}
-    equipos_vendedores = {}
-    try:
-        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
-        # La estructura es: Usuario, Nombre, Equipo
-        for _, row in df_listado.iterrows():
-            usuario = str(row.iloc[0]).strip().lower().replace('\t', '')  # Normalizar ID
-            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
-            equipo = str(row.iloc[2]).strip() if pd.notna(row.iloc[2]) else "Sin Equipo"
-            
-            if usuario and nombre and usuario != 'usuario':
-                listado_vendedores[usuario] = nombre.title()  # Capitalizar nombre
-                if equipo not in equipos_vendedores:
-                    equipos_vendedores[equipo] = []
-                equipos_vendedores[equipo].append(usuario)
-    except Exception as e:
-        st.warning(f"No se pudo cargar el listado de vendedores: {e}")
-    
-    def obtener_nombre_vendedor(agente_id):
-        """Convierte ID de agente a nombre real"""
-        agente_normalizado = agente_id.lower().replace(' ', '').replace('_', '')
-        return listado_vendedores.get(agente_normalizado, agente_id)
+    # Usar funciones globales de mapeo
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
     
     def obtener_equipo_vendedor(agente_id):
         """Obtiene el equipo del vendedor"""
-        agente_normalizado = agente_id.lower().replace(' ', '').replace('_', '')
+        agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '')
         for equipo, vendedores in equipos_vendedores.items():
-            if agente_normalizado in vendedores:
-                return equipo
+            # Normalizar nombres de vendedores para comparación
+            for vendedor in vendedores:
+                if agente_normalizado in vendedor.lower().replace(' ', ''):
+                    return equipo
         return "Sin Equipo"
     
     # Verificar si hay datos de coaching
@@ -1286,11 +1613,11 @@ def pagina_coaching_vendedores(datos):
         # Crear opciones con nombre real y puntaje
         opciones_agentes = []
         mapeo_display_id = {}  # Para mapear la opción mostrada al ID real
-        for agente in sorted(agentes_filtrados, key=lambda x: obtener_nombre_vendedor(x)):
+        for agente in sorted(agentes_filtrados, key=lambda x: x):
             data = coaching_data[agente]
             puntaje = data.get('comparativa', {}).get('puntaje_ia', {}).get('agente', 0)
-            nombre_real = obtener_nombre_vendedor(agente)
-            display = f"{nombre_real} (Puntaje: {puntaje:.1f})"
+            # El agente ya tiene el nombre real aplicado desde cargar_datos()
+            display = f"{agente} (Puntaje: {puntaje:.1f})"
             opciones_agentes.append(display)
             mapeo_display_id[display] = agente
         
@@ -1301,18 +1628,17 @@ def pagina_coaching_vendedores(datos):
                     opciones_agentes,
                     help="Selecciona un vendedor para ver su coaching personalizado"
                 )
-                # Obtener ID real del agente
-                agente_id = mapeo_display_id.get(agente_seleccionado_display, "")
-                agente_seleccionado = obtener_nombre_vendedor(agente_id)
+                # Obtener nombre real del agente
+                agente_seleccionado = mapeo_display_id.get(agente_seleccionado_display, "")
             else:
                 st.warning("No hay vendedores en este equipo")
                 return
         
-        if agente_id in coaching_data:
-            data = coaching_data[agente_id]
+        if agente_seleccionado in coaching_data:
+            data = coaching_data[agente_seleccionado]
             
             # Métricas del agente
-            equipo_actual = obtener_equipo_vendedor(agente_id)
+            equipo_actual = obtener_equipo_vendedor(agente_seleccionado)
             st.markdown(f"### 📊 Métricas de {agente_seleccionado}")
             st.caption(f"📍 Equipo: **{equipo_actual}**")
             
@@ -1557,7 +1883,7 @@ def pagina_coaching_vendedores(datos):
             met = data.get('metricas', {})
             
             row = {
-                'Agente': obtener_nombre_vendedor(agente),
+                'Agente': agente,  # Ya tiene nombre real aplicado
                 'Equipo': equipo_agente,
                 'Puntaje IA': comp.get('puntaje_ia', {}).get('agente', 0),
                 'vs Equipo': comp.get('puntaje_ia', {}).get('diferencia', 0),
@@ -1623,91 +1949,234 @@ def pagina_coaching_vendedores(datos):
         })
         
         st.dataframe(styled_df, use_container_width=True, hide_index=True)
-        
-        # Scatter plot: Puntaje vs Conversión
-        st.markdown("#### Relación Puntaje IA vs Conversión")
-        fig2 = px.scatter(
-            df_equipo,
-            x='Puntaje IA',
-            y='Conversión',
-            text='Agente',
-            size='Evaluaciones',
-            color='vs Equipo',
-            color_continuous_scale=['#EF4444', '#F59E0B', '#10B981'],
-            title='Puntaje IA vs Tasa de Conversión'
-        )
-        fig2.update_traces(textposition='top center')
-        fig2.update_layout(height=500)
-        st.plotly_chart(fig2, use_container_width=True)
     
     with tab3:
         st.markdown("### 📈 Ranking y Prioridades de Mejora")
         
-        # Calcular potencial de mejora
-        df_mejora = df_equipo.copy()
+        # Filtro por equipo para el ranking
+        _, equipos_vendedores_ranking = cargar_listado_vendedores()
+        equipos_ranking = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores_ranking.keys() if e and e != "Sin Equipo"])
+        if "Sin Equipo" in equipos_vendedores_ranking:
+            equipos_ranking.append("Sin Equipo")
         
-        # Calcular índice de potencial de mejora
-        # Mayor puntaje para quienes tienen más margen de mejora pero buena base
-        df_mejora['Potencial'] = (100 - df_mejora['Puntaje IA']) * (df_mejora['Evaluaciones'] / df_mejora['Evaluaciones'].max())
-        df_mejora['Tasa_Criticas'] = df_mejora['Críticas'] / df_mejora['Evaluaciones'] * 100
+        equipo_filtro_ranking = st.selectbox(
+            "🏢 Filtrar por Equipo",
+            equipos_ranking,
+            key="equipo_filtro_ranking",
+            help="Selecciona un equipo para ver su ranking específico"
+        )
         
-        df_mejora = df_mejora.sort_values('Potencial', ascending=False)
+        st.markdown("---")
         
-        col1, col2 = st.columns(2)
+        # Filtrar df_equipo según el equipo seleccionado
+        if equipo_filtro_ranking == "Todos los Equipos":
+            df_ranking = df_equipo.copy()
+        else:
+            # Obtener agentes del equipo seleccionado
+            agentes_del_equipo = equipos_vendedores_ranking.get(equipo_filtro_ranking, [])
+            df_ranking = df_equipo[df_equipo['Agente'].isin(agentes_del_equipo)].copy()
         
-        with col1:
-            st.markdown("#### 🔴 Prioridad Alta (Mayor potencial de mejora)")
+        if len(df_ranking) == 0:
+            st.warning("⚠️ No hay agentes en el equipo seleccionado con datos de coaching.")
+        else:
+            # Calcular potencial de mejora
+            df_mejora = df_ranking.copy()
             
-            top_mejora = df_mejora.head(10)
+            # Calcular índice de potencial de mejora
+            # Mayor puntaje para quienes tienen más margen de mejora pero buena base
+            df_mejora['Potencial'] = (100 - df_mejora['Puntaje IA']) * (df_mejora['Evaluaciones'] / df_mejora['Evaluaciones'].max())
+            df_mejora['Tasa_Criticas'] = df_mejora['Críticas'] / df_mejora['Evaluaciones'] * 100
             
-            for i, (_, row) in enumerate(top_mejora.iterrows(), 1):
-                color = "#EF4444" if row['vs Equipo'] < -10 else "#F59E0B" if row['vs Equipo'] < 0 else "#10B981"
-                st.markdown(f"""
-                <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
-                            border-left: 4px solid {color}; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
-                    <strong style='color: #1E293B;'>{i}. {row['Agente']}</strong><br>
-                    <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Críticas: {row['Tasa_Criticas']:.1f}% | Eval: {row['Evaluaciones']}</small>
-                </div>
-                """, unsafe_allow_html=True)
+            df_mejora = df_mejora.sort_values('Potencial', ascending=False)
+            
+            # Mostrar info del equipo seleccionado
+            if equipo_filtro_ranking != "Todos los Equipos":
+                st.markdown(f"**Equipo:** {equipo_filtro_ranking} · **Agentes:** {len(df_ranking)}")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("#### 🔴 Prioridad Alta (Mayor potencial de mejora)")
+                
+                top_mejora = df_mejora.head(10)
+                
+                for i, (_, row) in enumerate(top_mejora.iterrows(), 1):
+                    color = "#EF4444" if row['vs Equipo'] < -10 else "#F59E0B" if row['vs Equipo'] < 0 else "#10B981"
+                    st.markdown(f"""
+                    <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
+                                border-left: 4px solid {color}; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
+                        <strong style='color: #1E293B;'>{i}. {row['Agente']}</strong><br>
+                        <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Críticas: {row['Tasa_Criticas']:.1f}% | Eval: {row['Evaluaciones']}</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+            
+            with col2:
+                st.markdown("#### 🟢 Top Performers")
+                
+                top_performers = df_ranking.sort_values('Puntaje IA', ascending=False).head(10)
+                
+                for i, (_, row) in enumerate(top_performers.iterrows(), 1):
+                    medal = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i}."
+                    st.markdown(f"""
+                    <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
+                                border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
+                        <strong style='color: #1E293B;'>{medal} {row['Agente']}</strong><br>
+                        <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Conv: {row['Conversión']:.1f}% | Excelentes: {row['Excelentes']}</small>
+                    </div>
+                    """, unsafe_allow_html=True)
         
-        with col2:
-            st.markdown("#### 🟢 Top Performers")
-            
-            top_performers = df_equipo.head(10)
-            
-            for i, (_, row) in enumerate(top_performers.iterrows(), 1):
-                medal = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i}."
-                st.markdown(f"""
-                <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
-                            border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
-                    <strong style='color: #1E293B;'>{medal} {row['Agente']}</strong><br>
-                    <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Conv: {row['Conversión']:.1f}% | Excelentes: {row['Excelentes']}</small>
-                </div>
-                """, unsafe_allow_html=True)
-        
-        # Distribución de puntajes
+        # Distribución de puntajes - Gráfico profesional para juntas corporativas
         st.markdown("---")
         st.markdown("#### 📊 Distribución de Puntajes del Equipo")
         
-        fig3 = px.histogram(
-            df_equipo,
-            x='Puntaje IA',
-            nbins=15,
-            title='Distribución de Puntajes IA del Equipo',
-            color_discrete_sequence=['#3B82F6']
+        # Usar df_ranking filtrado para el gráfico
+        df_grafico = df_ranking if 'df_ranking' in dir() and len(df_ranking) > 0 else df_equipo
+        
+        # Calcular estadísticas
+        promedio = df_grafico['Puntaje IA'].mean()
+        mediana = df_grafico['Puntaje IA'].median()
+        
+        # Definir colores por zona para las barras del histograma
+        colores_zona = {
+            'Crítico': '#DC2626',      # Rojo
+            'En Desarrollo': '#F59E0B', # Amarillo/Naranja
+            'Bueno': '#3B82F6',         # Azul
+            'Excelente': '#10B981'      # Verde
+        }
+        
+        # Crear datos para histograma coloreado por zona
+        puntajes = df_grafico['Puntaje IA'].values
+        
+        # Separar datos por zona
+        criticos_data = [p for p in puntajes if p < 30]
+        desarrollo_data = [p for p in puntajes if 30 <= p < 60]
+        buenos_data = [p for p in puntajes if 60 <= p < 80]
+        excelentes_data = [p for p in puntajes if p >= 80]
+        
+        fig3 = go.Figure()
+        
+        # Agregar histograma por cada zona con su color correspondiente
+        if criticos_data:
+            fig3.add_trace(go.Histogram(
+                x=criticos_data,
+                name='Crítico (<30)',
+                marker=dict(color=colores_zona['Crítico'], line=dict(color='#991B1B', width=1)),
+                xbins=dict(start=0, end=30, size=10),
+                hovertemplate='<b>Zona Crítica</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+            ))
+        
+        if desarrollo_data:
+            fig3.add_trace(go.Histogram(
+                x=desarrollo_data,
+                name='En Desarrollo (30-60)',
+                marker=dict(color=colores_zona['En Desarrollo'], line=dict(color='#B45309', width=1)),
+                xbins=dict(start=30, end=60, size=10),
+                hovertemplate='<b>En Desarrollo</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+            ))
+        
+        if buenos_data:
+            fig3.add_trace(go.Histogram(
+                x=buenos_data,
+                name='Bueno (60-80)',
+                marker=dict(color=colores_zona['Bueno'], line=dict(color='#1D4ED8', width=1)),
+                xbins=dict(start=60, end=80, size=10),
+                hovertemplate='<b>Bueno</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+            ))
+        
+        if excelentes_data:
+            fig3.add_trace(go.Histogram(
+                x=excelentes_data,
+                name='Excelente (≥80)',
+                marker=dict(color=colores_zona['Excelente'], line=dict(color='#047857', width=1)),
+                xbins=dict(start=80, end=100, size=10),
+                hovertemplate='<b>Excelente</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+            ))
+        
+        # Línea de promedio del equipo
+        fig3.add_vline(
+            x=promedio, 
+            line_dash="dash", 
+            line_color="#1E293B",
+            line_width=3,
+            annotation_text=f"Promedio: {promedio:.1f}",
+            annotation_position="top",
+            annotation_font=dict(size=14, color="#1E293B", family="Arial Black")
         )
-        fig3.add_vline(x=df_equipo['Puntaje IA'].mean(), line_dash="dash", line_color="#EF4444", annotation_text="Promedio")
-        fig3.update_layout(height=350)
+        
+        # Línea de meta (80 puntos = excelente)
+        fig3.add_vline(
+            x=80, 
+            line_dash="dot", 
+            line_color="#059669",
+            line_width=2.5,
+            annotation_text="Meta: 80",
+            annotation_position="top right",
+            annotation_font=dict(size=13, color="#059669", family="Arial Black")
+        )
+        
+        fig3.update_layout(
+            height=420,
+            paper_bgcolor='#FFFFFF',
+            plot_bgcolor='#FAFBFC',
+            font=dict(family="Arial, sans-serif", size=12, color='#1E293B'),
+            xaxis_title=dict(text="Puntaje IA", font=dict(size=14, color='#1E293B', family="Arial Black")),
+            yaxis_title=dict(text="Cantidad de Agentes", font=dict(size=14, color='#1E293B', family="Arial Black")),
+            xaxis=dict(
+                gridcolor='#E2E8F0', 
+                tickfont=dict(size=12, color='#1E293B'),
+                range=[0, 100],
+                dtick=10,
+                showgrid=True,
+                gridwidth=1
+            ),
+            yaxis=dict(
+                gridcolor='#E2E8F0', 
+                tickfont=dict(size=12, color='#1E293B'),
+                showgrid=True,
+                gridwidth=1
+            ),
+            margin=dict(t=50, b=60, l=60, r=40),
+            barmode='stack',
+            bargap=0.05,
+            showlegend=True,
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="center",
+                x=0.5,
+                font=dict(size=12, color='#1E293B'),
+                bgcolor='rgba(255,255,255,0.9)',
+                bordercolor='#E2E8F0',
+                borderwidth=1
+            )
+        )
+        
         st.plotly_chart(fig3, use_container_width=True)
+        
+        # Resumen estadístico compacto debajo del gráfico (con colores que coinciden)
+        col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
+        with col_stat1:
+            criticos = len(df_ranking[df_ranking['Puntaje IA'] < 30])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEE2E2; border-radius:8px; border-left: 4px solid #DC2626;'><span style='font-size:24px; font-weight:bold; color:#DC2626;'>{criticos}</span><br><small style='color:#991B1B; font-weight:600;'>Críticos (&lt;30)</small></div>", unsafe_allow_html=True)
+        with col_stat2:
+            bajos = len(df_ranking[(df_ranking['Puntaje IA'] >= 30) & (df_ranking['Puntaje IA'] < 60)])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEF3C7; border-radius:8px; border-left: 4px solid #F59E0B;'><span style='font-size:24px; font-weight:bold; color:#B45309;'>{bajos}</span><br><small style='color:#78350F; font-weight:600;'>En Desarrollo (30-60)</small></div>", unsafe_allow_html=True)
+        with col_stat3:
+            buenos = len(df_ranking[(df_ranking['Puntaje IA'] >= 60) & (df_ranking['Puntaje IA'] < 80)])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#DBEAFE; border-radius:8px; border-left: 4px solid #3B82F6;'><span style='font-size:24px; font-weight:bold; color:#1D4ED8;'>{buenos}</span><br><small style='color:#1E3A8A; font-weight:600;'>Buenos (60-80)</small></div>", unsafe_allow_html=True)
+        with col_stat4:
+            excelentes = len(df_ranking[df_ranking['Puntaje IA'] >= 80])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#D1FAE5; border-radius:8px; border-left: 4px solid #10B981;'><span style='font-size:24px; font-weight:bold; color:#059669;'>{excelentes}</span><br><small style='color:#065F46; font-weight:600;'>Excelentes (≥80)</small></div>", unsafe_allow_html=True)
         
         # Recomendaciones generales
         st.markdown("---")
         st.markdown("### 💡 Recomendaciones para el Equipo")
         
-        prom_puntaje = df_equipo['Puntaje IA'].mean()
-        prom_conv = df_equipo['Conversión'].mean()
-        agentes_bajo_prom = len(df_equipo[df_equipo['Puntaje IA'] < prom_puntaje])
-        agentes_criticos = len(df_equipo[df_equipo['vs Equipo'] < -15])
+        prom_puntaje = df_ranking['Puntaje IA'].mean()
+        prom_conv = df_ranking['Conversión'].mean()
+        agentes_bajo_prom = len(df_ranking[df_ranking['Puntaje IA'] < prom_puntaje])
+        agentes_criticos = len(df_ranking[df_ranking['vs Equipo'] < -15])
         
         st.markdown(f"""
         📌 **Situación actual del equipo:**
@@ -1725,180 +2194,8 @@ def pagina_coaching_vendedores(datos):
 
 
 def pagina_performance_agentes(df, datos):
-    """Página de performance por agente"""
+    """Página de performance por agente - Funcionalidad pendiente"""
     mostrar_proximamente("👥 Performance de Agentes")
-    
-    st.markdown("---")
-    
-    # Gráfico de dispersión: Calidad vs Conversión
-    st.markdown('<p class="section-header">📊 Análisis de Performance</p>', unsafe_allow_html=True)
-    
-    fig = px.scatter(
-        agentes_stats,
-        x='Score Calidad',
-        y='Tasa Conversión',
-        size='Total Llamadas',
-        hover_name='Agente',
-        color='Ventas',
-        color_continuous_scale='Blues',
-        labels={
-            'Score Calidad': 'Score de Calidad',
-            'Tasa Conversión': 'Tasa de Conversión (%)',
-            'Ventas': 'Ventas Totales'
-        }
-    )
-    fig.update_layout(
-        height=350,
-        paper_bgcolor='#FFFFFF',
-        plot_bgcolor='#FAFBFC',
-        font=dict(color='#2C3E50', size=12),
-        margin=dict(t=20, b=40, l=50, r=20)
-    )
-    fig.update_xaxes(
-        gridcolor='#E5E8E8', 
-        tickfont=dict(size=9, color='#2C3E50'),
-        title_font=dict(size=12, color='#2C3E50')
-    )
-    fig.update_yaxes(
-        gridcolor='#E5E8E8', 
-        tickfont=dict(size=9, color='#2C3E50'),
-        title_font=dict(size=12, color='#2C3E50')
-    )
-    st.plotly_chart(fig, use_container_width=True)
-    
-    # Tabla completa
-    st.markdown('<p class="section-header">📋 Tabla Completa de Agentes</p>', unsafe_allow_html=True)
-    
-    ordenar = st.selectbox(
-        "Ordenar por:",
-        ['Tasa Conversión', 'Score Calidad', 'Total Llamadas', 'Ventas'],
-        key='orden_agentes'
-    )
-    
-    agentes_ordenados = agentes_stats.sort_values(ordenar, ascending=False)
-    st.dataframe(agentes_ordenados, use_container_width=True, hide_index=True)
-    
-    # Si hay datos de cierres, agregar info
-    if 'cierres_df' in datos:
-        st.markdown('<p class="section-header">📋 Cierres Comerciales por Agente</p>', unsafe_allow_html=True)
-        
-        df_cierres = datos['cierres_df']
-        if 'agente' in df_cierres.columns and 'porcentaje' in df_cierres.columns:
-            cierres_agente = df_cierres.groupby('agente').agg({
-                'porcentaje': ['mean', 'count'],
-            }).reset_index()
-            cierres_agente.columns = ['Agente', 'Promedio Cierre', 'Total Ventas']
-            cierres_agente['Promedio Cierre'] = cierres_agente['Promedio Cierre'].round(1)
-            cierres_agente = cierres_agente.sort_values('Promedio Cierre', ascending=False)
-            
-            fig = px.bar(
-                cierres_agente.head(15),
-                x='Agente',
-                y='Promedio Cierre',
-                color='Promedio Cierre',
-                color_continuous_scale='Greens',
-                text='Promedio Cierre'
-            )
-            fig.update_traces(
-                texttemplate='%{text:.1f}%', 
-                textposition='outside',
-                textfont=dict(size=9, color='#2C3E50')
-            )
-            fig.update_layout(
-                height=320, 
-                xaxis_tickangle=-45,
-                paper_bgcolor='#FFFFFF',
-                plot_bgcolor='#FAFBFC',
-                font=dict(color='#2C3E50', size=12),
-                margin=dict(t=30, b=70, l=50, r=20)
-            )
-            fig.update_xaxes(
-                gridcolor='#E5E8E8', 
-                tickfont=dict(size=8, color='#2C3E50'),
-                title_font=dict(size=12, color='#2C3E50')
-            )
-            fig.update_yaxes(
-                gridcolor='#E5E8E8', 
-                tickfont=dict(size=9, color='#2C3E50'),
-                title_font=dict(size=12, color='#2C3E50')
-            )
-            st.plotly_chart(fig, use_container_width=True)
-    
-    # =============================================================================
-    # ANÁLISIS DETALLADO DE UN AGENTE ESPECÍFICO
-    # =============================================================================
-    st.markdown("---")
-    st.markdown('<p class="section-header">🔍 Análisis Detallado por Agente</p>', unsafe_allow_html=True)
-    
-    agentes_lista = sorted(df['agente'].dropna().unique().tolist())
-    agente_sel = st.selectbox("Selecciona un agente para ver su análisis detallado:", agentes_lista, key='agente_perf_detail')
-    
-    df_agente = df[df['agente'] == agente_sel].copy()
-    
-    if len(df_agente) > 0:
-        # Métricas del agente
-        col1, col2, col3, col4 = st.columns(4)
-        
-        with col1:
-            total_ag = len(df_agente)
-            st.metric("📞 Total Llamadas", f"{total_ag:,}")
-        with col2:
-            ventas_ag = len(df_agente[df_agente['tipificacion'] == 'Venta'])
-            tasa_ag = ventas_ag / total_ag * 100 if total_ag > 0 else 0
-            st.metric("💰 Tasa Conversión", f"{tasa_ag:.1f}%")
-        with col3:
-            score_ag = df_agente['score_calidad'].mean()
-            st.metric("⭐ Score Calidad", f"{score_ag:.1f}")
-        with col4:
-            dur_ag = df_agente['duracion'].mean() / 60
-            st.metric("⏱️ Duración Prom", f"{dur_ag:.1f} min")
-        
-        # Gráficos del agente
-        st.markdown("---")
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            # Distribución de tipificaciones
-            st.markdown("**📊 Distribución de Resultados:**")
-            if 'tipificacion' in df_agente.columns:
-                tip_counts = df_agente['tipificacion'].value_counts()
-                fig = px.pie(
-                    values=tip_counts.values,
-                    names=tip_counts.index,
-                    color_discrete_sequence=px.colors.qualitative.Set2
-                )
-                fig.update_layout(height=300, paper_bgcolor='#FFFFFF')
-                st.plotly_chart(fig, use_container_width=True)
-        
-        with col2:
-            # Evolución temporal si hay fechas
-            st.markdown("**📈 Llamadas por Día:**")
-            if 'dia' in df_agente.columns and df_agente['dia'].notna().any():
-                llamadas_dia = df_agente.groupby('dia').size().reset_index(name='Llamadas')
-                fig = px.line(
-                    llamadas_dia,
-                    x='dia',
-                    y='Llamadas',
-                    markers=True,
-                    color_discrete_sequence=['#3B82F6']
-                )
-                fig.update_layout(height=300, paper_bgcolor='#FFFFFF')
-                st.plotly_chart(fig, use_container_width=True)
-            else:
-                st.info("Sin datos temporales disponibles")
-        
-        # Tabla de llamadas del agente
-        st.markdown("---")
-        st.markdown("**📋 Últimas Llamadas del Agente:**")
-        
-        columnas_tabla = ['id', 'fecha', 'tipificacion', 'duracion', 'score_calidad', 'planes']
-        cols_disponibles = [c for c in columnas_tabla if c in df_agente.columns]
-        
-        df_mostrar = df_agente[cols_disponibles].copy()
-        if 'duracion' in df_mostrar.columns:
-            df_mostrar['duracion'] = (df_mostrar['duracion'] / 60).round(1).astype(str) + ' min'
-        
-        st.dataframe(df_mostrar.head(30), use_container_width=True, hide_index=True, height=300)
 
 
 def pagina_analisis_temporal(df):
@@ -2219,22 +2516,6 @@ def pagina_quejas_no_resueltas(datos):
     if 'quejas' not in datos:
         st.warning("⚠️ No hay datos de quejas disponibles.")
         return
-    
-    # Cargar nombres de vendedores
-    listado_vendedores = {}
-    try:
-        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
-        for _, row in df_listado.iterrows():
-            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
-            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
-            if usuario and nombre and usuario != 'usuario':
-                listado_vendedores[usuario] = nombre.title()
-    except:
-        pass
-    
-    def obtener_nombre_agente(agente_id):
-        agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '')
-        return listado_vendedores.get(agente_normalizado, agente_id)
     
     quejas = datos['quejas']
     stats = quejas.get('estadisticas', {})
@@ -3056,24 +3337,10 @@ def pagina_evaluaciones_gemini(datos):
     
     df = datos['evaluaciones_gemini_df'].copy()
     
-    # Cargar nombres de vendedores
-    listado_vendedores = {}
-    try:
-        df_listado = pd.read_csv('LISTADO-DE-VENDEDORES.csv', header=0)
-        for _, row in df_listado.iterrows():
-            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '')
-            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
-            if usuario and nombre and usuario != 'usuario':
-                listado_vendedores[usuario] = nombre.title()
-    except:
-        pass
+    # Obtener mapeo de equipos para los filtros
+    _, equipos_vendedores = cargar_listado_vendedores()
     
-    def obtener_nombre_agente(agente_id):
-        """Convierte ID de agente a nombre real"""
-        agente_normalizado = str(agente_id).lower().replace(' ', '').replace('_', '')
-        return listado_vendedores.get(agente_normalizado, agente_id)
-    
-    # Aplicar mapeo de nombres a todo el dataframe
+    # Aplicar mapeo de nombres a todo el dataframe (usando función global)
     if 'agente' in df.columns:
         df['agente'] = df['agente'].apply(obtener_nombre_agente)
     
@@ -3272,103 +3539,234 @@ def pagina_evaluaciones_gemini(datos):
                     criticos_ag = len(df_agente[df_agente['puntaje_total'] <= 20])
                     st.metric("🔴 Llamadas Críticas", f"{criticos_ag} ({criticos_ag/total_agente*100:.1f}%)")
                 
-                # Gráficos del agente
+                # Gráfico de Perfil de Competencias - Barras comparativas profesional
                 st.markdown("---")
-                col1, col2 = st.columns(2)
+                st.markdown("### 📊 Perfil de Competencias por Criterio")
                 
-                with col1:
-                    # Radar de criterios del agente
-                    st.markdown("**📊 Perfil de Competencias:**")
-                    
-                    criterios_agente = {}
-                    for c in criterios:
-                        if c in df_agente.columns:
-                            criterios_agente[criterios_nombres.get(c, c)] = df_agente[c].mean()
-                    
-                    if criterios_agente:
-                        categories = list(criterios_agente.keys())
-                        values_agente = list(criterios_agente.values())
-                        
-                        # Calcular valores generales para comparación
-                        values_general = [df[c].mean() if c in df.columns else 0 for c in criterios]
-                        
-                        fig = go.Figure()
-                        
-                        # Agente seleccionado
-                        fig.add_trace(go.Scatterpolar(
-                            r=values_agente + [values_agente[0]],
-                            theta=categories + [categories[0]],
-                            fill='toself',
-                            name=agente_seleccionado,
-                            line_color='#3B82F6',
-                            line_width=3,
-                            fillcolor='rgba(59, 130, 246, 0.5)'
-                        ))
-                        
-                        # Promedio general
-                        fig.add_trace(go.Scatterpolar(
-                            r=values_general + [values_general[0]],
-                            theta=categories + [categories[0]],
-                            fill='toself',
-                            name='Promedio General',
-                            line_color='#EF4444',
-                            line_width=2,
-                            fillcolor='rgba(239, 68, 68, 0.25)'
-                        ))
-                        
-                        fig.update_layout(
-                            polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
-                            showlegend=True,
-                            height=400,
-                            paper_bgcolor='#FFFFFF'
-                        )
-                        st.plotly_chart(fig, use_container_width=True)
+                # ========== SELECTORES DE COMPARACIÓN ==========
+                st.markdown("""
+                <div style='background: linear-gradient(90deg, #EFF6FF 0%, #DBEAFE 100%); 
+                            padding: 15px 20px; border-radius: 10px; margin-bottom: 20px;
+                            border: 1px solid #BFDBFE;'>
+                    <span style='color:#1E40AF; font-weight:600; font-size:15px;'>⚙️ Configurar Comparativa</span>
+                </div>
+                """, unsafe_allow_html=True)
                 
-                with col2:
-                    # Distribución de puntajes del agente
-                    st.markdown("**📈 Distribución de Puntajes:**")
-                    
-                    fig = px.histogram(
-                        df_agente,
-                        x='puntaje_total',
-                        nbins=10,
-                        color_discrete_sequence=['#27AE60']
+                col_config1, col_config2 = st.columns(2)
+                
+                with col_config1:
+                    tipo_comparacion = st.selectbox(
+                        "🔄 Comparar contra:",
+                        ["Promedio General (Todos)", "Un Equipo Específico", "Otro Vendedor"],
+                        key="tipo_comp_gemini"
                     )
-                    fig.add_vline(x=puntaje_agente, line_dash="dash", line_color="blue",
-                                  annotation_text=f"Promedio: {puntaje_agente:.1f}")
-                    fig.add_vline(x=puntaje_promedio, line_dash="dot", line_color="red",
-                                  annotation_text=f"General: {puntaje_promedio:.1f}")
-                    fig.update_layout(height=400, paper_bgcolor='#FFFFFF',
-                                      xaxis_title="Puntaje", yaxis_title="Cantidad")
-                    st.plotly_chart(fig, use_container_width=True)
                 
-                # Barras comparativas por criterio
-                st.markdown("---")
-                st.markdown("**📊 Comparación por Criterio vs Promedio General:**")
+                # Variables para la comparación
+                nombre_comparacion = "Promedio General"
+                valores_comparacion = []
+                # Siempre rojo para la comparación
+                color_comparacion = "#DC2626"
                 
-                comparacion_data = []
+                with col_config2:
+                    if tipo_comparacion == "Un Equipo Específico":
+                        # Obtener lista de equipos únicos
+                        equipos_disponibles = [eq for eq in equipos_vendedores.keys() if eq and eq != "Sin Equipo"]
+                        
+                        if equipos_disponibles:
+                            equipo_seleccionado = st.selectbox(
+                                "📋 Seleccionar equipo:",
+                                sorted(equipos_disponibles),
+                                key="equipo_comp_gemini"
+                            )
+                            nombre_comparacion = equipo_seleccionado
+                        else:
+                            st.info("No hay equipos disponibles en el archivo LISTADO-DE-VENDEDORES.csv")
+                            equipo_seleccionado = None
+                    
+                    elif tipo_comparacion == "Otro Vendedor":
+                        otros_agentes = [a for a in sorted(df['agente'].dropna().unique().tolist()) if a != agente_seleccionado]
+                        if otros_agentes:
+                            agente_comparar = st.selectbox(
+                                "👤 Seleccionar vendedor:",
+                                otros_agentes,
+                                key="agente_comp_gemini"
+                            )
+                            nombre_comparacion = agente_comparar
+                        else:
+                            st.info("No hay otros vendedores disponibles")
+                            agente_comparar = None
+                
+                # Calcular valores del agente seleccionado
+                criterios_agente = {}
                 for c in criterios:
-                    if c in df_agente.columns and c in df.columns:
-                        comparacion_data.append({
-                            'Criterio': criterios_nombres.get(c, c),
-                            'Agente': df_agente[c].mean(),
-                            'General': df[c].mean()
-                        })
+                    if c in df_agente.columns:
+                        criterios_agente[criterios_nombres.get(c, c)] = df_agente[c].mean()
                 
-                if comparacion_data:
-                    df_comp = pd.DataFrame(comparacion_data)
-                    df_comp_melted = df_comp.melt(id_vars=['Criterio'], var_name='Tipo', value_name='Puntaje')
+                if criterios_agente:
+                    categories = list(criterios_agente.keys())
+                    values_agente = list(criterios_agente.values())
                     
-                    fig = px.bar(
-                        df_comp_melted,
-                        x='Criterio',
-                        y='Puntaje',
-                        color='Tipo',
-                        barmode='group',
-                        color_discrete_map={'Agente': '#3B82F6', 'General': '#EF4444'}
+                    # Calcular valores de comparación según la selección
+                    if tipo_comparacion == "Promedio General (Todos)":
+                        valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
+                    elif tipo_comparacion == "Un Equipo Específico" and 'equipo_seleccionado' in dir() and equipo_seleccionado:
+                        # Filtrar por equipo
+                        agentes_equipo = equipos_vendedores.get(equipo_seleccionado, [])
+                        if agentes_equipo:
+                            df_equipo = df[df['agente'].isin(agentes_equipo)]
+                            valores_comparacion = [df_equipo[c].mean() if c in df_equipo.columns and len(df_equipo) > 0 else 0 for c in criterios]
+                        else:
+                            valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
+                    elif tipo_comparacion == "Otro Vendedor" and 'agente_comparar' in dir() and agente_comparar:
+                        df_otro = df[df['agente'] == agente_comparar]
+                        valores_comparacion = [df_otro[c].mean() if c in df_otro.columns and len(df_otro) > 0 else 0 for c in criterios]
+                    else:
+                        valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
+                    
+                    # Crear DataFrame para el gráfico
+                    df_comparativo = pd.DataFrame({
+                        'Criterio': categories,
+                        'Vendedor': values_agente,
+                        'Comparacion': valores_comparacion
+                    })
+                    
+                    # Ordenar por diferencia para destacar fortalezas/debilidades
+                    df_comparativo['Diferencia'] = df_comparativo['Vendedor'] - df_comparativo['Comparacion']
+                    df_comparativo = df_comparativo.sort_values('Vendedor', ascending=True)
+                    
+                    # Subtítulo dinámico - Siempre azul para seleccionado, rojo para comparación
+                    st.markdown(f"""
+                    <p style='color:#475569; font-size:16px; margin-bottom:10px;'>
+                        <strong style='color:#3B82F6; font-size:18px;'>🔵 {agente_seleccionado}</strong> 
+                        &nbsp;&nbsp;vs&nbsp;&nbsp;
+                        <strong style='color:#DC2626; font-size:18px;'>🔴 {nombre_comparacion}</strong>
+                    </p>
+                    """, unsafe_allow_html=True)
+                    
+                    fig = go.Figure()
+                    
+                    # Barras de Comparación (siempre ROJAS)
+                    fig.add_trace(go.Bar(
+                        y=df_comparativo['Criterio'],
+                        x=df_comparativo['Comparacion'],
+                        name=nombre_comparacion,
+                        orientation='h',
+                        marker=dict(
+                            color='#DC2626',
+                            line=dict(color='#991B1B', width=1.5)
+                        ),
+                        text=[f"{v:.1f}" for v in df_comparativo['Comparacion']],
+                        textposition='inside',
+                        textfont=dict(color='white', size=14, family='Arial Black'),
+                        hovertemplate='<b>%{y}</b><br>' + nombre_comparacion + ': %{x:.1f}<extra></extra>'
+                    ))
+                    
+                    # Barras del Vendedor (azules, adelante)
+                    fig.add_trace(go.Bar(
+                        y=df_comparativo['Criterio'],
+                        x=df_comparativo['Vendedor'],
+                        name=agente_seleccionado,
+                        orientation='h',
+                        marker=dict(
+                            color='#3B82F6',
+                            line=dict(color='#1E40AF', width=1.5)
+                        ),
+                        text=[f"{v:.1f}" for v in df_comparativo['Vendedor']],
+                        textposition='inside',
+                        textfont=dict(color='white', size=14, family='Arial Black'),
+                        hovertemplate='<b>%{y}</b><br>' + agente_seleccionado + ': %{x:.1f}<extra></extra>'
+                    ))
+                    
+                    # Línea de meta (80 = excelente)
+                    fig.add_vline(
+                        x=80, 
+                        line_dash="dot", 
+                        line_color="#10B981",
+                        line_width=3,
+                        annotation_text="Meta: 80",
+                        annotation_position="top",
+                        annotation_font=dict(size=14, color="#10B981", family="Arial Black")
                     )
-                    fig.update_layout(height=400, paper_bgcolor='#FFFFFF', xaxis_tickangle=-45)
+                    
+                    # Línea de promedio
+                    fig.add_vline(
+                        x=50, 
+                        line_dash="dash", 
+                        line_color="#94A3B8",
+                        line_width=1,
+                        annotation_text="50",
+                        annotation_position="bottom",
+                        annotation_font=dict(size=10, color="#94A3B8")
+                    )
+                    
+                    fig.update_layout(
+                        barmode='group',
+                        height=700,  # Mucho más grande
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        font=dict(family="Arial, sans-serif", size=14, color='#1E293B'),
+                        xaxis=dict(
+                            title=dict(text="Puntaje (0-100)", font=dict(size=16, color='#1E293B', family='Arial Black')),
+                            gridcolor='#E2E8F0',
+                            tickfont=dict(size=14, color='#475569'),
+                            range=[0, 105],
+                            dtick=10,
+                            showgrid=True,
+                            gridwidth=1
+                        ),
+                        yaxis=dict(
+                            title=dict(text="", font=dict(size=14)),
+                            tickfont=dict(size=15, color='#1E293B', family='Arial'),
+                            showgrid=False
+                        ),
+                        legend=dict(
+                            orientation="h",
+                            yanchor="bottom",
+                            y=1.02,
+                            xanchor="center",
+                            x=0.5,
+                            font=dict(size=15),
+                            bgcolor='rgba(255,255,255,0.9)',
+                            bordercolor='#E2E8F0',
+                            borderwidth=1
+                        ),
+                        margin=dict(t=80, b=60, l=150, r=50),
+                        bargap=0.3,
+                        bargroupgap=0.15
+                    )
+                    
                     st.plotly_chart(fig, use_container_width=True)
+                    
+                    # Resumen de fortalezas y áreas de mejora
+                    col_f, col_m = st.columns(2)
+                    
+                    with col_f:
+                        fortalezas = df_comparativo[df_comparativo['Diferencia'] > 5].sort_values('Diferencia', ascending=False)
+                        if len(fortalezas) > 0:
+                            st.markdown(f"#### 💪 Fortalezas vs {nombre_comparacion}")
+                            for _, row in fortalezas.iterrows():
+                                st.markdown(f"""
+                                <div style='background:#D1FAE5; padding:10px 15px; border-radius:8px; margin:6px 0; border-left:5px solid #10B981;'>
+                                    <strong style='color:#065F46; font-size:15px;'>{row['Criterio']}</strong>
+                                    <span style='float:right; color:#059669; font-size:16px; font-weight:bold;'>+{row['Diferencia']:.1f} pts</span>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        else:
+                            st.info(f"Sin fortalezas destacadas vs {nombre_comparacion}")
+                    
+                    with col_m:
+                        mejoras = df_comparativo[df_comparativo['Diferencia'] < -5].sort_values('Diferencia', ascending=True)
+                        if len(mejoras) > 0:
+                            st.markdown(f"#### 🎯 Áreas de Mejora vs {nombre_comparacion}")
+                            for _, row in mejoras.iterrows():
+                                st.markdown(f"""
+                                <div style='background:#FEE2E2; padding:10px 15px; border-radius:8px; margin:6px 0; border-left:5px solid #DC2626;'>
+                                    <strong style='color:#7F1D1D; font-size:15px;'>{row['Criterio']}</strong>
+                                    <span style='float:right; color:#DC2626; font-size:16px; font-weight:bold;'>{row['Diferencia']:.1f} pts</span>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        else:
+                            st.success(f"¡Sin áreas críticas vs {nombre_comparacion}!")
                 
                 # Tabla de evaluaciones del agente
                 st.markdown("---")
@@ -3458,25 +3856,6 @@ def pagina_evaluaciones_gemini(datos):
                 for criterio, puntaje in sorted(promedios.items(), key=lambda x: -x[1]):
                     emoji = "🟢" if puntaje >= 50 else "🟡" if puntaje >= 30 else "🔴"
                     st.markdown(f"{emoji} **{criterio}**: {puntaje:.1f}/100")
-        
-        # Box plot por criterio
-        st.markdown("---")
-        st.markdown("**📊 Distribución de Puntajes por Criterio:**")
-        
-        criterios_disponibles = [c for c in criterios if c in df.columns]
-        if criterios_disponibles:
-            df_box = df[criterios_disponibles].melt(var_name='Criterio', value_name='Puntaje')
-            df_box['Criterio'] = df_box['Criterio'].map(criterios_nombres)
-            
-            fig = px.box(
-                df_box,
-                x='Criterio',
-                y='Puntaje',
-                color='Criterio',
-                color_discrete_sequence=px.colors.qualitative.Set3
-            )
-            fig.update_layout(height=450, paper_bgcolor='#FFFFFF', showlegend=False, xaxis_tickangle=-45)
-            st.plotly_chart(fig, use_container_width=True)
         
         # Áreas de mejora más frecuentes
         st.markdown("---")
@@ -3591,11 +3970,872 @@ def pagina_evaluaciones_gemini(datos):
                     if c in eval_sel.index:
                         valor = eval_sel[c]
                         emoji = "🟢" if valor >= 50 else "🟡" if valor >= 30 else "🔴"
-                        st.markdown(f"{emoji} {criterios_nombres.get(c, c)}: **{valor}**")
+                        st.markdown(f"{criterios_nombres.get(c, c)}: **{valor}**")
+
+
+# =============================================================================
+# SECCIÓN DE CALIDAD - ANÁLISIS DE LLAMADAS CALL CENTER
+# =============================================================================
+
+def to_seconds_calidad(dur_str):
+    """Convierte hh:mm:ss a segundos para módulo de calidad"""
+    try:
+        if pd.isna(dur_str) or dur_str == '':
+            return 0
+        parts = str(dur_str).split(':')
+        if len(parts) == 3:
+            h, m, s = map(int, parts)
+            return h * 3600 + m * 60 + s
+        elif len(parts) == 2:
+            m, s = map(int, parts)
+            return m * 60 + s
+        else:
+            return int(float(dur_str))
+    except:
+        return 0
+
+def sec_to_mmss(s):
+    """Convierte segundos a mm:ss"""
+    if pd.isna(s) or s == 0:
+        return "00:00"
+    m = int(s // 60)
+    s = int(s % 60)
+    return f"{m:02d}:{s:02d}"
+
+def sec_to_hhmmss(s):
+    """Convierte segundos a hh:mm:ss"""
+    if pd.isna(s) or s == 0:
+        return "00:00:00"
+    h = int(s // 3600)
+    m = int((s % 3600) // 60)
+    sec = int(s % 60)
+    return f"{h:02d}:{m:02d}:{sec:02d}"
+
+def determinar_turno(hora_inicio):
+    """Determina el turno basado en la hora de inicio"""
+    try:
+        if pd.isna(hora_inicio):
+            return "Sin Turno"
+        if isinstance(hora_inicio, str):
+            hora = int(hora_inicio.split(':')[0])
+        else:
+            hora = hora_inicio.hour
+        
+        if 6 <= hora < 14:
+            return "TM"  # Turno Mañana
+        elif 14 <= hora < 22:
+            return "TT"  # Turno Tarde
+        else:
+            return "TN"  # Turno Noche
+    except:
+        return "Sin Turno"
+
+def aplicar_semaforo_tiempo(valor_segundos, tipo_estado):
+    """Aplica semáforo según tipo de estado y valor"""
+    if tipo_estado == "NO DISPONIBLE":
+        if valor_segundos >= 300:  # >= 5 min
+            return "🔴", "#DC2626", "Crítico"
+        elif valor_segundos >= 180:  # 3-5 min
+            return "🟡", "#F59E0B", "Alerta"
+        else:
+            return "🟢", "#10B981", "OK"
+    
+    elif tipo_estado == "BREAK":
+        if valor_segundos >= 1500:  # >= 25 min
+            return "🔴", "#DC2626", "Excedido"
+        elif valor_segundos >= 1380:  # 23-25 min
+            return "🟡", "#F59E0B", "Límite"
+        else:
+            return "🟢", "#10B981", "OK"
+    
+    elif tipo_estado == "BAÑO":
+        if valor_segundos > 600:  # > 10 min
+            return "🔴", "#DC2626", "Excedido"
+        else:
+            return "🟢", "#10B981", "OK"
+    
+    elif tipo_estado == "TIEMPO_LOGUEO":
+        if valor_segundos < 16800:  # < 4:40:00
+            return "🔴", "#DC2626", "Bajo"
+        elif valor_segundos < 17100:  # 4:40:00 - 4:45:00
+            return "🟡", "#F59E0B", "Límite"
+        else:
+            return "🟢", "#10B981", "OK"
+    
+    return "⚪", "#6B7280", "N/A"
+
+def aplicar_semaforo_cumplimiento(porcentaje):
+    """Aplica semáforo de cumplimiento de ventas"""
+    if porcentaje >= 90:
+        return "🟢", "#10B981", "Cumplido"
+    elif porcentaje >= 60:
+        return "🟡", "#F59E0B", "En Proceso"
+    else:
+        return "🔴", "#DC2626", "Bajo"
+
+def pagina_calidad():
+    """Página de Calidad - Análisis de Llamadas Call Center"""
+    
+    st.markdown('<p class="main-header">📞 Calidad - Análisis de Llamadas</p>', unsafe_allow_html=True)
+    
+    # Tabs principales
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📤 Carga de Datos", 
+        "📊 Métricas por Agente", 
+        "🚦 Semáforos de Tiempo",
+        "💰 KPIs de Ventas"
+    ])
+    
+    # =========================================================================
+    # TAB 1: CARGA DE DATOS
+    # =========================================================================
+    with tab1:
+        st.markdown("### 📤 Carga de Archivos")
+        st.markdown("""
+        <div style='background: #EFF6FF; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6; margin-bottom: 20px;'>
+            <strong>📋 Archivos necesarios:</strong><br>
+            <ul style='margin: 10px 0;'>
+                <li><strong>Detalle Interacciones (Campaña - Lote).csv</strong> - Datos de llamadas</li>
+                <li><strong>CargaAgentes.xlsx</strong> - Mapeo de agentes a vendedores (opcional)</li>
+                <li><strong>Customer.csv/xlsx</strong> - Datos de ventas para KPIs (opcional)</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("#### 📁 Archivo de Interacciones")
+            archivo_interacciones = st.file_uploader(
+                "Subir Detalle Interacciones (CSV)", 
+                type=['csv'], 
+                key='calidad_interacciones'
+            )
+            
+            st.markdown("#### 👥 Archivo de Agentes")
+            archivo_agentes = st.file_uploader(
+                "Subir CargaAgentes (Excel)", 
+                type=['xlsx', 'xls'], 
+                key='calidad_agentes'
+            )
+        
+        with col2:
+            st.markdown("#### 💼 Archivo de Ventas (Customer)")
+            archivo_ventas = st.file_uploader(
+                "Subir Customer (CSV/Excel)", 
+                type=['csv', 'xlsx', 'xls'], 
+                key='calidad_ventas'
+            )
+            
+            st.markdown("#### ⚙️ Configuración")
+            
+            # Filtro de agentes válidos
+            agentes_validos_default = "MZA 1, MZA 2, MZA 3, MZA 4, MZA 5, MZA 6, MZA 7, MZA 8, MZA 9, MZA 10, MZA 11, MZA 12, MZA 13, MZA 14, MZA 15, 304, 305, 306"
+            agentes_validos_input = st.text_area(
+                "Agentes válidos (separados por coma):",
+                value=agentes_validos_default,
+                height=80,
+                key='agentes_validos'
+            )
+        
+        # Procesar archivos si se cargan
+        if archivo_interacciones is not None:
+            try:
+                # Cargar CSV de interacciones
+                df_inter = pd.read_csv(archivo_interacciones, encoding='latin-1')
+                st.session_state['df_calidad_interacciones'] = df_inter
+                
+                st.success(f"✅ Archivo de interacciones cargado: {len(df_inter):,} registros")
+                
+                # Mostrar preview
+                with st.expander("👁️ Vista previa de datos", expanded=False):
+                    st.dataframe(df_inter.head(10), use_container_width=True)
+                    st.markdown(f"**Columnas detectadas:** {', '.join(df_inter.columns.tolist())}")
+                
+            except Exception as e:
+                st.error(f"❌ Error al cargar archivo: {str(e)}")
+        
+        if archivo_agentes is not None:
+            try:
+                df_agentes = pd.read_excel(archivo_agentes)
+                st.session_state['df_calidad_agentes'] = df_agentes
+                st.success(f"✅ Archivo de agentes cargado: {len(df_agentes):,} registros")
+            except Exception as e:
+                st.error(f"❌ Error al cargar agentes: {str(e)}")
+        
+        if archivo_ventas is not None:
+            try:
+                if archivo_ventas.name.endswith('.csv'):
+                    df_ventas = pd.read_csv(archivo_ventas, encoding='latin-1')
+                else:
+                    df_ventas = pd.read_excel(archivo_ventas)
+                st.session_state['df_calidad_ventas'] = df_ventas
+                st.success(f"✅ Archivo de ventas cargado: {len(df_ventas):,} registros")
+            except Exception as e:
+                st.error(f"❌ Error al cargar ventas: {str(e)}")
+        
+        # Botón para procesar datos
+        st.markdown("---")
+        if st.button("🚀 Procesar Datos", type="primary", use_container_width=True):
+            if 'df_calidad_interacciones' not in st.session_state:
+                st.warning("⚠️ Primero debes cargar el archivo de interacciones")
+            else:
+                with st.spinner("Procesando datos..."):
+                    df_inter = st.session_state['df_calidad_interacciones'].copy()
+                    
+                    # Normalizar nombres de columnas
+                    df_inter.columns = df_inter.columns.str.strip()
+                    
+                    # Detectar columnas relevantes
+                    col_agente = next((c for c in df_inter.columns if 'agente' in c.lower()), None)
+                    col_tipificacion = next((c for c in df_inter.columns if 'tipificaci' in c.lower()), None)
+                    col_origen_corte = next((c for c in df_inter.columns if 'origen' in c.lower() and 'corte' in c.lower()), None)
+                    col_talking = next((c for c in df_inter.columns if 'talking' in c.lower()), None)
+                    col_inicio = next((c for c in df_inter.columns if 'inicio' in c.lower()), None)
+                    col_campana = next((c for c in df_inter.columns if 'campa' in c.lower()), None)
+                    
+                    # Renombrar columnas
+                    rename_map = {}
+                    if col_agente: rename_map[col_agente] = 'Nombre Agente'
+                    if col_tipificacion: rename_map[col_tipificacion] = 'Tipificación'
+                    if col_origen_corte: rename_map[col_origen_corte] = 'Origen Corte'
+                    if col_talking: rename_map[col_talking] = 'TalkingTime'
+                    if col_inicio: rename_map[col_inicio] = 'Inicio'
+                    if col_campana: rename_map[col_campana] = 'Campaña'
+                    
+                    df_inter = df_inter.rename(columns=rename_map)
+                    
+                    # Normalizar a minúsculas para comparaciones
+                    if 'Tipificación' in df_inter.columns:
+                        df_inter['Tipificación_lower'] = df_inter['Tipificación'].astype(str).str.lower().str.strip()
+                    if 'Origen Corte' in df_inter.columns:
+                        df_inter['Origen Corte_lower'] = df_inter['Origen Corte'].astype(str).str.lower().str.strip()
+                    
+                    # Convertir TalkingTime a segundos
+                    if 'TalkingTime' in df_inter.columns:
+                        df_inter['TalkingTime_seg'] = df_inter['TalkingTime'].apply(to_seconds_calidad)
+                    
+                    # Determinar turno
+                    if 'Inicio' in df_inter.columns:
+                        df_inter['Turno'] = df_inter['Inicio'].apply(determinar_turno)
+                    
+                    # Filtrar agentes válidos si se especifican
+                    agentes_lista = [a.strip() for a in agentes_validos_input.split(',')]
+                    if 'Nombre Agente' in df_inter.columns and agentes_lista:
+                        # Filtro flexible - solo si coincide parcialmente
+                        df_inter['agente_valido'] = df_inter['Nombre Agente'].astype(str).apply(
+                            lambda x: any(av.lower() in x.lower() for av in agentes_lista if av)
+                        )
+                    
+                    # Guardar datos procesados
+                    st.session_state['df_calidad_procesado'] = df_inter
+                    st.success("✅ Datos procesados correctamente")
+                    
+                    # Mostrar resumen
+                    st.markdown("### 📊 Resumen de Datos Procesados")
+                    col1, col2, col3, col4 = st.columns(4)
+                    with col1:
+                        st.metric("📞 Total Llamadas", f"{len(df_inter):,}")
+                    with col2:
+                        agentes_unicos = df_inter['Nombre Agente'].nunique() if 'Nombre Agente' in df_inter.columns else 0
+                        st.metric("👥 Agentes", f"{agentes_unicos}")
+                    with col3:
+                        if 'TalkingTime_seg' in df_inter.columns:
+                            tiempo_total = df_inter['TalkingTime_seg'].sum()
+                            st.metric("⏱️ Tiempo Total", sec_to_hhmmss(tiempo_total))
+                    with col4:
+                        if 'Turno' in df_inter.columns:
+                            turnos = df_inter['Turno'].value_counts().to_dict()
+                            turno_principal = max(turnos, key=turnos.get) if turnos else "N/A"
+                            st.metric("🌅 Turno Principal", turno_principal)
+    
+    # =========================================================================
+    # TAB 2: MÉTRICAS POR AGENTE
+    # =========================================================================
+    with tab2:
+        st.markdown("### 📊 Métricas por Agente")
+        
+        if 'df_calidad_procesado' not in st.session_state:
+            st.info("ℹ️ Primero carga y procesa los datos en la pestaña 'Carga de Datos'")
+        else:
+            df = st.session_state['df_calidad_procesado']
+            
+            # Filtros
+            col_f1, col_f2, col_f3 = st.columns(3)
+            with col_f1:
+                if 'Turno' in df.columns:
+                    turnos_disponibles = ['Todos'] + df['Turno'].dropna().unique().tolist()
+                    turno_filtro = st.selectbox("🌅 Filtrar por Turno", turnos_disponibles)
+                else:
+                    turno_filtro = 'Todos'
+            
+            with col_f2:
+                if 'Campaña' in df.columns:
+                    campanas_disponibles = ['Todas'] + df['Campaña'].dropna().unique().tolist()
+                    campana_filtro = st.selectbox("📢 Filtrar por Campaña", campanas_disponibles)
+                else:
+                    campana_filtro = 'Todas'
+            
+            with col_f3:
+                mostrar_solo_validos = st.checkbox("✅ Solo agentes válidos", value=False)
+            
+            # Aplicar filtros
+            df_filtrado = df.copy()
+            if turno_filtro != 'Todos' and 'Turno' in df_filtrado.columns:
+                df_filtrado = df_filtrado[df_filtrado['Turno'] == turno_filtro]
+            if campana_filtro != 'Todas' and 'Campaña' in df_filtrado.columns:
+                df_filtrado = df_filtrado[df_filtrado['Campaña'] == campana_filtro]
+            if mostrar_solo_validos and 'agente_valido' in df_filtrado.columns:
+                df_filtrado = df_filtrado[df_filtrado['agente_valido'] == True]
+            
+            if len(df_filtrado) == 0:
+                st.warning("⚠️ No hay datos con los filtros seleccionados")
+            else:
+                # Calcular métricas por agente
+                if 'Nombre Agente' in df_filtrado.columns and 'TalkingTime_seg' in df_filtrado.columns:
+                    
+                    # Tipificaciones especiales a excluir
+                    tipif_excluir = ['contestador', 'ya tiene mvs']
+                    
+                    metricas_agente = []
+                    
+                    for agente in df_filtrado['Nombre Agente'].unique():
+                        df_agente = df_filtrado[df_filtrado['Nombre Agente'] == agente]
+                        
+                        # Métricas básicas
+                        cantidad_llamadas = len(df_agente)
+                        
+                        # Llamada más larga
+                        llamada_mas_larga = df_agente['TalkingTime_seg'].max()
+                        
+                        # Tiempo promedio hablado
+                        tiempo_promedio = df_agente['TalkingTime_seg'].mean()
+                        
+                        # Llamadas cortadas (por agente, excluyendo tipificaciones especiales)
+                        if 'Origen Corte_lower' in df_agente.columns and 'Tipificación_lower' in df_agente.columns:
+                            llamadas_cortadas = len(df_agente[
+                                (df_agente['Origen Corte_lower'] == 'agente') & 
+                                (~df_agente['Tipificación_lower'].isin(tipif_excluir))
+                            ])
+                        else:
+                            llamadas_cortadas = 0
+                        
+                        # Superan el minuto (> 60 seg)
+                        superan_minuto = len(df_agente[df_agente['TalkingTime_seg'] > 60])
+                        
+                        # Superan 5 minutos (> 300 seg)
+                        superan_5min = len(df_agente[df_agente['TalkingTime_seg'] > 300])
+                        
+                        # Capta la atención
+                        capta_atencion = "SI" if tiempo_promedio >= 60 else "NO"
+                        
+                        # Porcentaje de llamadas cortadas
+                        pct_cortadas = (llamadas_cortadas / cantidad_llamadas * 100) if cantidad_llamadas > 0 else 0
+                        
+                        metricas_agente.append({
+                            'Agente': agente,
+                            'Cantidad Llamadas': cantidad_llamadas,
+                            'Llamada Más Larga': sec_to_mmss(llamada_mas_larga),
+                            'Tiempo Prom. Hablado': sec_to_mmss(tiempo_promedio),
+                            'Tiempo Prom. (seg)': round(tiempo_promedio, 1),
+                            'Llamadas Cortadas': llamadas_cortadas,
+                            '% Cortadas': round(pct_cortadas, 1),
+                            'Superan 1 Min': superan_minuto,
+                            'Superan 5 Min': superan_5min,
+                            'Capta Atención': capta_atencion
+                        })
+                    
+                    df_metricas = pd.DataFrame(metricas_agente)
+                    df_metricas = df_metricas.sort_values('Cantidad Llamadas', ascending=False)
+                    
+                    # Métricas globales
+                    st.markdown("---")
+                    col1, col2, col3, col4, col5 = st.columns(5)
+                    
+                    with col1:
+                        total_llamadas = df_metricas['Cantidad Llamadas'].sum()
+                        st.metric("📞 Total Llamadas", f"{total_llamadas:,}")
+                    
+                    with col2:
+                        total_cortadas = df_metricas['Llamadas Cortadas'].sum()
+                        pct_cortadas_global = (total_cortadas / total_llamadas * 100) if total_llamadas > 0 else 0
+                        st.metric("✂️ Llamadas Cortadas", f"{total_cortadas:,}", f"{pct_cortadas_global:.1f}%")
+                    
+                    with col3:
+                        agentes_captan = len(df_metricas[df_metricas['Capta Atención'] == 'SI'])
+                        st.metric("🎯 Captan Atención", f"{agentes_captan}/{len(df_metricas)}")
+                    
+                    with col4:
+                        # Contar tipificaciones especiales
+                        if 'Tipificación_lower' in df_filtrado.columns:
+                            ya_tiene_mvs = len(df_filtrado[df_filtrado['Tipificación_lower'] == 'ya tiene mvs'])
+                            st.metric("📱 Ya Tiene MVS", f"{ya_tiene_mvs:,}")
+                    
+                    with col5:
+                        if 'Tipificación_lower' in df_filtrado.columns:
+                            contestador = len(df_filtrado[df_filtrado['Tipificación_lower'] == 'contestador'])
+                            st.metric("📞 Contestador", f"{contestador:,}")
+                    
+                    # Tabla de métricas
+                    st.markdown("---")
+                    st.markdown("#### 📋 Detalle por Agente")
+                    
+                    # Estilizar tabla
+                    def color_capta_atencion(val):
+                        if val == 'SI':
+                            return 'background-color: #D1FAE5; color: #065F46; font-weight: bold;'
+                        else:
+                            return 'background-color: #FEE2E2; color: #991B1B; font-weight: bold;'
+                    
+                    def color_cortadas(val):
+                        if val > 20:
+                            return 'background-color: #FEE2E2; color: #991B1B;'
+                        elif val > 10:
+                            return 'background-color: #FEF3C7; color: #92400E;'
+                        else:
+                            return 'background-color: #D1FAE5; color: #065F46;'
+                    
+                    styled_df = df_metricas.style.applymap(
+                        color_capta_atencion, subset=['Capta Atención']
+                    ).applymap(
+                        color_cortadas, subset=['% Cortadas']
+                    )
+                    
+                    st.dataframe(styled_df, use_container_width=True, height=400)
+                    
+                    # Gráficos
+                    st.markdown("---")
+                    col_g1, col_g2 = st.columns(2)
+                    
+                    with col_g1:
+                        st.markdown("#### 📊 Top 10 Agentes por Cantidad de Llamadas")
+                        top_10 = df_metricas.head(10)
+                        fig_bar = go.Figure(data=[
+                            go.Bar(
+                                x=top_10['Agente'],
+                                y=top_10['Cantidad Llamadas'],
+                                marker_color='#3B82F6',
+                                text=top_10['Cantidad Llamadas'],
+                                textposition='outside'
+                            )
+                        ])
+                        fig_bar.update_layout(
+                            height=350,
+                            paper_bgcolor='#FFFFFF',
+                            plot_bgcolor='#FAFBFC',
+                            xaxis_tickangle=-45,
+                            margin=dict(t=30, b=100)
+                        )
+                        st.plotly_chart(fig_bar, use_container_width=True)
+                    
+                    with col_g2:
+                        st.markdown("#### ✂️ Agentes con Mayor % de Llamadas Cortadas")
+                        top_cortadas = df_metricas.nlargest(10, '% Cortadas')
+                        fig_cortadas = go.Figure(data=[
+                            go.Bar(
+                                x=top_cortadas['Agente'],
+                                y=top_cortadas['% Cortadas'],
+                                marker_color=['#DC2626' if v > 20 else '#F59E0B' if v > 10 else '#10B981' 
+                                             for v in top_cortadas['% Cortadas']],
+                                text=[f"{v:.1f}%" for v in top_cortadas['% Cortadas']],
+                                textposition='outside'
+                            )
+                        ])
+                        fig_cortadas.update_layout(
+                            height=350,
+                            paper_bgcolor='#FFFFFF',
+                            plot_bgcolor='#FAFBFC',
+                            xaxis_tickangle=-45,
+                            margin=dict(t=30, b=100),
+                            yaxis_title="% Cortadas"
+                        )
+                        st.plotly_chart(fig_cortadas, use_container_width=True)
+                    
+                    # Histograma de tiempo promedio
+                    st.markdown("#### ⏱️ Distribución de Tiempo Promedio por Agente")
+                    fig_hist = go.Figure()
+                    fig_hist.add_trace(go.Histogram(
+                        x=df_metricas['Tiempo Prom. (seg)'],
+                        nbinsx=20,
+                        marker_color='#3B82F6',
+                        name='Agentes'
+                    ))
+                    fig_hist.add_vline(x=60, line_dash="dash", line_color="#10B981", 
+                                       annotation_text="Meta: 60 seg", annotation_position="top")
+                    fig_hist.update_layout(
+                        height=300,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        xaxis_title="Tiempo Promedio (segundos)",
+                        yaxis_title="Cantidad de Agentes"
+                    )
+                    st.plotly_chart(fig_hist, use_container_width=True)
+                    
+                    # Botón para descargar
+                    st.markdown("---")
+                    csv = df_metricas.to_csv(index=False).encode('utf-8')
+                    st.download_button(
+                        label="📥 Descargar Métricas (CSV)",
+                        data=csv,
+                        file_name=f"metricas_agentes_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+                        mime="text/csv"
+                    )
+                else:
+                    st.warning("⚠️ No se encontraron las columnas necesarias (Nombre Agente, TalkingTime)")
+    
+    # =========================================================================
+    # TAB 3: SEMÁFOROS DE TIEMPO
+    # =========================================================================
+    with tab3:
+        st.markdown("### 🚦 Semáforos de Tiempo de Logueo")
+        
+        st.markdown("""
+        <div style='background: #FEF3C7; padding: 15px; border-radius: 10px; border-left: 4px solid #F59E0B; margin-bottom: 20px;'>
+            <strong>⚠️ Configuración de Umbrales:</strong><br>
+            Esta sección permite configurar y visualizar los semáforos de tiempo según las reglas de negocio.
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Tabla de referencia de umbrales
+        st.markdown("#### 📋 Tabla de Umbrales")
+        
+        umbrales_data = {
+            'Estado': ['NO DISPONIBLE', 'BREAK', 'BAÑO', 'TIEMPO DE LOGUEO', 'ADMINISTRATIVO'],
+            '🔴 Rojo (Crítico)': ['≥ 05:00 min', '≥ 25:00 min', '> 10:00 min', '< 04:40:00 hrs', '≥ (cant×10)+6 min'],
+            '🟡 Amarillo (Alerta)': ['03:00 a 05:00 min', '23:00 a 24:59 min', '-', '04:40:00 a 04:45:00 hrs', '(cant×10) a (cant×10)+5 min'],
+            '🟢 Verde (OK)': ['< 03:00 min', '< 23:00 min', '≤ 10:00 min', '≥ 04:45:00 hrs', '< (cant×10) min']
+        }
+        
+        df_umbrales = pd.DataFrame(umbrales_data)
+        st.table(df_umbrales)
+        
+        # Simulador de semáforo
+        st.markdown("---")
+        st.markdown("#### 🧪 Simulador de Semáforo")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            tipo_estado = st.selectbox(
+                "Tipo de Estado:",
+                ['NO DISPONIBLE', 'BREAK', 'BAÑO', 'TIEMPO_LOGUEO']
+            )
+        
+        with col2:
+            if tipo_estado == 'TIEMPO_LOGUEO':
+                tiempo_input = st.text_input("Tiempo (hh:mm:ss):", value="04:45:00")
+                tiempo_seg = to_seconds_calidad(tiempo_input)
+            else:
+                tiempo_input = st.text_input("Tiempo (mm:ss):", value="03:00")
+                # Convertir mm:ss a segundos
+                try:
+                    parts = tiempo_input.split(':')
+                    if len(parts) == 2:
+                        tiempo_seg = int(parts[0]) * 60 + int(parts[1])
+                    else:
+                        tiempo_seg = 0
+                except:
+                    tiempo_seg = 0
+        
+        emoji, color, estado = aplicar_semaforo_tiempo(tiempo_seg, tipo_estado)
+        
+        st.markdown(f"""
+        <div style='text-align: center; padding: 30px; background: {color}20; border-radius: 15px; border: 3px solid {color}; margin-top: 20px;'>
+            <span style='font-size: 60px;'>{emoji}</span><br>
+            <span style='font-size: 24px; font-weight: bold; color: {color};'>{estado}</span><br>
+            <small style='color: #475569;'>Tiempo ingresado: {tiempo_input}</small>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Si hay datos cargados, mostrar análisis
+        if 'df_calidad_procesado' in st.session_state:
+            st.markdown("---")
+            st.markdown("#### 📊 Análisis de Tiempos del Dataset")
+            
+            df = st.session_state['df_calidad_procesado']
+            
+            if 'TalkingTime_seg' in df.columns and 'Nombre Agente' in df.columns:
+                # Calcular tiempo total por agente
+                tiempo_por_agente = df.groupby('Nombre Agente')['TalkingTime_seg'].sum().reset_index()
+                tiempo_por_agente.columns = ['Agente', 'Tiempo Total (seg)']
+                tiempo_por_agente['Tiempo Total'] = tiempo_por_agente['Tiempo Total (seg)'].apply(sec_to_hhmmss)
+                
+                # Aplicar semáforo de logueo
+                tiempo_por_agente['Semáforo'] = tiempo_por_agente['Tiempo Total (seg)'].apply(
+                    lambda x: aplicar_semaforo_tiempo(x, 'TIEMPO_LOGUEO')
+                )
+                tiempo_por_agente['Estado'] = tiempo_por_agente['Semáforo'].apply(lambda x: x[0] + ' ' + x[2])
+                
+                # Contar por semáforo
+                col1, col2, col3 = st.columns(3)
+                
+                verdes = len([x for x in tiempo_por_agente['Semáforo'] if x[0] == '🟢'])
+                amarillos = len([x for x in tiempo_por_agente['Semáforo'] if x[0] == '🟡'])
+                rojos = len([x for x in tiempo_por_agente['Semáforo'] if x[0] == '🔴'])
+                
+                with col1:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#D1FAE5; border-radius:10px;'>
+                        <span style='font-size:40px;'>🟢</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#065F46;'>{verdes}</span><br>
+                        <small style='color:#065F46;'>Tiempo OK</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col2:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#FEF3C7; border-radius:10px;'>
+                        <span style='font-size:40px;'>🟡</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#92400E;'>{amarillos}</span><br>
+                        <small style='color:#92400E;'>En Límite</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col3:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#FEE2E2; border-radius:10px;'>
+                        <span style='font-size:40px;'>🔴</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#991B1B;'>{rojos}</span><br>
+                        <small style='color:#991B1B;'>Bajo Tiempo</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+    
+    # =========================================================================
+    # TAB 4: KPIs DE VENTAS
+    # =========================================================================
+    with tab4:
+        st.markdown("### 💰 KPIs de Ventas (Customer)")
+        
+        if 'df_calidad_ventas' not in st.session_state:
+            st.info("ℹ️ Carga el archivo de ventas (Customer) en la pestaña 'Carga de Datos' para ver los KPIs")
+            
+            # Mostrar estructura esperada
+            st.markdown("""
+            <div style='background: #EFF6FF; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6; margin-top: 20px;'>
+                <strong>📋 Estructura esperada del archivo Customer:</strong><br>
+                <ul style='margin: 10px 0;'>
+                    <li><strong>Vendedor</strong> - Nombre del vendedor</li>
+                    <li><strong>Estado</strong> - Estado de la venta (PORTA APROBADA, FIBRA APROBADA, etc.)</li>
+                    <li><strong>Producto</strong> - Tipo de producto vendido</li>
+                    <li><strong>Producto Anterior</strong> - PREPAGO, POSPAGO o vacío</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Estados de venta aprobada
+            st.markdown("---")
+            st.markdown("#### ✅ Estados de Venta Aprobada")
+            estados_aprobados = ['PORTA APROBADA', 'FIBRA APROBADA', 'CORPO APROBADO', 'FIBRA CUIT APROBADA']
+            for estado in estados_aprobados:
+                st.markdown(f"- {estado}")
+            
+            # Objetivos
+            st.markdown("---")
+            st.markdown("#### 🎯 Objetivos Mensuales")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown("""
+                **Vendedor Estándar:**
+                - 60 ventas cargadas
+                - 50 ventas aprobadas
+                """)
+            with col2:
+                st.markdown("""
+                **Nuevo Ingreso:**
+                - 1er mes: 10 ventas/semana (2/día)
+                - 2do mes: 15 ventas/semana (3/día)
+                - Objetivo mes: 45 ventas
+                """)
+        else:
+            df_ventas = st.session_state['df_calidad_ventas'].copy()
+            
+            # Detectar columnas
+            col_vendedor = next((c for c in df_ventas.columns if 'vendedor' in c.lower()), None)
+            col_estado = next((c for c in df_ventas.columns if 'estado' in c.lower()), None)
+            col_producto = next((c for c in df_ventas.columns if 'producto' in c.lower() and 'anterior' not in c.lower()), None)
+            col_prod_anterior = next((c for c in df_ventas.columns if 'producto' in c.lower() and 'anterior' in c.lower()), None)
+            
+            if col_vendedor and col_estado:
+                # Renombrar columnas
+                df_ventas = df_ventas.rename(columns={
+                    col_vendedor: 'Vendedor',
+                    col_estado: 'Estado'
+                })
+                if col_producto:
+                    df_ventas = df_ventas.rename(columns={col_producto: 'Producto'})
+                if col_prod_anterior:
+                    df_ventas = df_ventas.rename(columns={col_prod_anterior: 'Producto Anterior'})
+                
+                # Estados aprobados
+                estados_aprobados = ['PORTA APROBADA', 'FIBRA APROBADA', 'CORPO APROBADO', 'FIBRA CUIT APROBADA']
+                df_ventas['Estado_upper'] = df_ventas['Estado'].astype(str).str.upper().str.strip()
+                df_ventas['Aprobada'] = df_ventas['Estado_upper'].isin(estados_aprobados)
+                
+                # Configuración de objetivos
+                st.markdown("#### ⚙️ Configuración de Objetivos")
+                col1, col2 = st.columns(2)
+                with col1:
+                    objetivo_cargadas = st.number_input("Objetivo Ventas Cargadas", value=60, min_value=1)
+                with col2:
+                    objetivo_aprobadas = st.number_input("Objetivo Ventas Aprobadas", value=50, min_value=1)
+                
+                # Calcular KPIs por vendedor
+                kpis_vendedor = []
+                
+                for vendedor in df_ventas['Vendedor'].dropna().unique():
+                    df_vend = df_ventas[df_ventas['Vendedor'] == vendedor]
+                    
+                    cargadas = len(df_vend)
+                    aprobadas = len(df_vend[df_vend['Aprobada'] == True])
+                    efectividad = (aprobadas / cargadas * 100) if cargadas > 0 else 0
+                    cumplimiento = (aprobadas / objetivo_aprobadas * 100) if objetivo_aprobadas > 0 else 0
+                    
+                    emoji, color, estado = aplicar_semaforo_cumplimiento(cumplimiento)
+                    
+                    kpis_vendedor.append({
+                        'Vendedor': vendedor,
+                        'Ventas Cargadas': cargadas,
+                        'Ventas Aprobadas': aprobadas,
+                        'Efectividad (%)': round(efectividad, 1),
+                        'Cumplimiento (%)': round(cumplimiento, 1),
+                        'Semáforo': emoji,
+                        'Estado': estado
+                    })
+                
+                df_kpis = pd.DataFrame(kpis_vendedor)
+                df_kpis = df_kpis.sort_values('Ventas Aprobadas', ascending=False)
+                
+                # Métricas globales
+                st.markdown("---")
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    total_cargadas = df_kpis['Ventas Cargadas'].sum()
+                    st.metric("📦 Total Cargadas", f"{total_cargadas:,}")
+                
+                with col2:
+                    total_aprobadas = df_kpis['Ventas Aprobadas'].sum()
+                    st.metric("✅ Total Aprobadas", f"{total_aprobadas:,}")
+                
+                with col3:
+                    efectividad_global = (total_aprobadas / total_cargadas * 100) if total_cargadas > 0 else 0
+                    st.metric("📈 Efectividad Global", f"{efectividad_global:.1f}%")
+                
+                with col4:
+                    vendedores_cumpliendo = len(df_kpis[df_kpis['Cumplimiento (%)'] >= 90])
+                    st.metric("🎯 Cumpliendo Objetivo", f"{vendedores_cumpliendo}/{len(df_kpis)}")
+                
+                # Resumen por semáforo
+                st.markdown("---")
+                col1, col2, col3 = st.columns(3)
+                
+                verdes = len(df_kpis[df_kpis['Semáforo'] == '🟢'])
+                amarillos = len(df_kpis[df_kpis['Semáforo'] == '🟡'])
+                rojos = len(df_kpis[df_kpis['Semáforo'] == '🔴'])
+                
+                with col1:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#D1FAE5; border-radius:10px;'>
+                        <span style='font-size:40px;'>🟢</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#065F46;'>{verdes}</span><br>
+                        <small style='color:#065F46;'>Cumplido (≥90%)</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col2:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#FEF3C7; border-radius:10px;'>
+                        <span style='font-size:40px;'>🟡</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#92400E;'>{amarillos}</span><br>
+                        <small style='color:#92400E;'>En Proceso (60-89%)</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                with col3:
+                    st.markdown(f"""
+                    <div style='text-align:center; padding:20px; background:#FEE2E2; border-radius:10px;'>
+                        <span style='font-size:40px;'>🔴</span><br>
+                        <span style='font-size:28px; font-weight:bold; color:#991B1B;'>{rojos}</span><br>
+                        <small style='color:#991B1B;'>Bajo (&lt;60%)</small>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                # Tabla de KPIs
+                st.markdown("---")
+                st.markdown("#### 📋 Detalle por Vendedor")
+                
+                def color_cumplimiento(val):
+                    if val >= 90:
+                        return 'background-color: #D1FAE5; color: #065F46; font-weight: bold;'
+                    elif val >= 60:
+                        return 'background-color: #FEF3C7; color: #92400E; font-weight: bold;'
+                    else:
+                        return 'background-color: #FEE2E2; color: #991B1B; font-weight: bold;'
+                
+                styled_kpis = df_kpis.style.applymap(color_cumplimiento, subset=['Cumplimiento (%)'])
+                st.dataframe(styled_kpis, use_container_width=True, height=400)
+                
+                # Gráfico de barras
+                st.markdown("---")
+                st.markdown("#### 📊 Comparativa de Ventas por Vendedor")
+                
+                top_vendedores = df_kpis.head(15)
+                
+                fig = go.Figure()
+                fig.add_trace(go.Bar(
+                    name='Cargadas',
+                    x=top_vendedores['Vendedor'],
+                    y=top_vendedores['Ventas Cargadas'],
+                    marker_color='#93C5FD'
+                ))
+                fig.add_trace(go.Bar(
+                    name='Aprobadas',
+                    x=top_vendedores['Vendedor'],
+                    y=top_vendedores['Ventas Aprobadas'],
+                    marker_color='#3B82F6'
+                ))
+                
+                fig.add_hline(y=objetivo_aprobadas, line_dash="dash", line_color="#10B981",
+                             annotation_text=f"Objetivo: {objetivo_aprobadas}")
+                
+                fig.update_layout(
+                    barmode='group',
+                    height=400,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    xaxis_tickangle=-45,
+                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+                )
+                st.plotly_chart(fig, use_container_width=True)
+                
+                # Descargar
+                st.markdown("---")
+                csv_kpis = df_kpis.to_csv(index=False).encode('utf-8')
+                st.download_button(
+                    label="📥 Descargar KPIs (CSV)",
+                    data=csv_kpis,
+                    file_name=f"kpis_ventas_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+                    mime="text/csv"
+                )
+            else:
+                st.warning("⚠️ No se encontraron las columnas necesarias (Vendedor, Estado)")
 
 
 def main():
     """Función principal del dashboard"""
+    
+    # ==========================================================================
+    # VERIFICACIÓN DE AUTENTICACIÓN
+    # ==========================================================================
+    if 'autenticado' not in st.session_state or not st.session_state['autenticado']:
+        mostrar_login()
+        return
+    
+    # Obtener datos del usuario autenticado
+    datos_usuario = st.session_state.get('datos_usuario', {})
+    nombre_usuario = datos_usuario.get('nombre', 'Usuario')
+    rol_usuario = datos_usuario.get('rol', 'vendedor')
     
     # Cargar datos
     with st.spinner('Cargando datos...'):
@@ -3608,13 +4848,29 @@ def main():
     # Crear DataFrame de llamadas
     df = crear_df_llamadas(datos['transcripciones'])
     
-    # Sidebar - Logo EVA
+    # Sidebar - Logo EVA y Usuario
     st.sidebar.markdown("""
     <div class="eva-logo-container">
         <div class="eva-title">🦉 EVA</div>
         <div class="eva-subtitle">Evaluador Virtual de Auditoría</div>
     </div>
     """, unsafe_allow_html=True)
+    
+    # Info del usuario logueado
+    st.sidebar.markdown(f"""
+    <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                padding: 12px; border-radius: 8px; margin: 10px 0;'>
+        <p style='color: white; margin: 0; font-size: 0.9rem;'>
+            👤 <strong>{nombre_usuario}</strong><br>
+            <small style='opacity: 0.8;'>Rol: {rol_usuario.title()}</small>
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Botón cerrar sesión
+    if st.sidebar.button("🚪 Cerrar Sesión", use_container_width=True):
+        cerrar_sesion()
+    
     st.sidebar.markdown("---")
     st.sidebar.markdown("## 📊 Navegación")
     
@@ -3629,7 +4885,8 @@ def main():
         "🎯 Coaching IA": "coaching",
         "👥 Performance Agentes": "agentes",
         "📅 Análisis Temporal": "temporal",
-        "🔍 Explorador de Llamadas": "detalle"
+        "🔍 Explorador de Llamadas": "detalle",
+        "📞 Calidad": "calidad"
     }
     
     seleccion = st.sidebar.radio("Selecciona una sección:", list(paginas.keys()))
@@ -3667,6 +4924,8 @@ def main():
         pagina_analisis_temporal(df)
     elif paginas[seleccion] == "detalle":
         pagina_detalle_llamadas(df, datos)
+    elif paginas[seleccion] == "calidad":
+        pagina_calidad()
     
     # Footer
     st.sidebar.markdown("---")
