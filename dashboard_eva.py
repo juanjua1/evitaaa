@@ -1,7 +1,8 @@
 ﻿"""
 COMMAND - Sistema de Rendimiento Comercial
-Dashboard ejecutivo para auditoría de equipos de venta
-Interfaz profesional para presentaciones corporativas
+
+Dashboard ejecutivo para auditoría de equipos de venta.
+Interfaz profesional para presentaciones corporativas.
 """
 
 import streamlit as st
@@ -1053,16 +1054,17 @@ def pagina_resumen_ejecutivo(datos, df):
     st.markdown('<div class="main-header">📈 COMMAND · Panel Ejecutivo de Rendimiento Comercial</div>', unsafe_allow_html=True)
     
     # Subtítulo con contexto corporativo
-    st.markdown("""
+    fecha_reporte = datetime.now().strftime('%d/%m/%Y %H:%M')
+    st.markdown(f"""
     <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #3B82F6;'>
         <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
             <strong>Informe de Gestión Comercial</strong> · Consolidado de métricas de rendimiento del equipo de ventas
         </p>
         <p style='margin: 5px 0 0 0; color: #64748B; font-size: 0.85rem;'>
-            Fecha del reporte: <strong>{}</strong>
+            Fecha del reporte: <strong>{fecha_reporte}</strong>
         </p>
     </div>
-    """.format(datetime.now().strftime('%d/%m/%Y %H:%M')), unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     
     # Métricas principales
     col1, col2, col3, col4, col5 = st.columns(5)
