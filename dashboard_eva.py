@@ -583,7 +583,69 @@ USUARIOS = {
         'equipo': None,  # Admin tiene acceso a todo
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes', 'config', 'todos_agentes']
     },
-    # Aquí se agregarán los otros 5 usuarios
+    'byl': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Byl',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'diana': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Diana',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'marina': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Marina',
+        'rol': 'supervisor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'calidad': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Calidad',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes', 'calidad']
+    },
+    'melani': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Melani',
+        'rol': 'supervisor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'josefina': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Josefina',
+        'rol': 'supervisor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'yasmin': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Yasmin',
+        'rol': 'supervisor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'nati': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Nati',
+        'rol': 'supervisor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'capacitacion': {
+        'password_hash': hash_password('123'),
+        'nombre': 'Capacitación',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
 }
 
 def verificar_credenciales(usuario, password):
@@ -3817,11 +3879,68 @@ def pagina_evaluaciones_gemini(datos):
                 st.markdown("---")
                 st.markdown("**📋 Últimas Evaluaciones del Agente:**")
                 
-                columnas_tabla = ['archivo', 'puntaje_total', 'resumen', 'areas_mejora', 'fortalezas']
-                columnas_disponibles = [c for c in columnas_tabla if c in df_agente.columns]
+                # Preparar datos para la tabla mejorada
+                df_mostrar = df_agente.copy()
                 
-                df_mostrar = df_agente[columnas_disponibles].sort_values('puntaje_total', ascending=False)
-                st.dataframe(df_mostrar.head(20), use_container_width=True, hide_index=True, height=400)
+                # Extraer ID de referencia del archivo (sin transcripcion.json)
+                if 'archivo' in df_mostrar.columns:
+                    df_mostrar['Referencia'] = df_mostrar['archivo'].apply(
+                        lambda x: x.replace('transcripcion.json', '').replace('_transcripcion.json', '').rstrip('_').rstrip('/').split('/')[-1] if isinstance(x, str) else x
+                    )
+                
+                # Crear columna de zona según puntaje
+                if 'puntaje_total' in df_mostrar.columns:
+                    def clasificar_zona(p):
+                        if p >= 80:
+                            return "🟢 Excelente"
+                        elif p >= 60:
+                            return "🔵 Bueno"
+                        elif p >= 30:
+                            return "🟡 En Desarrollo"
+                        else:
+                            return "🔴 Crítico"
+                    df_mostrar['Zona'] = df_mostrar['puntaje_total'].apply(clasificar_zona)
+                
+                # Seleccionar y renombrar columnas para mostrar
+                columnas_mostrar = []
+                renombres = {}
+                
+                if 'Referencia' in df_mostrar.columns:
+                    columnas_mostrar.append('Referencia')
+                    renombres['Referencia'] = '📁 ID Llamada'
+                
+                if 'puntaje_total' in df_mostrar.columns:
+                    columnas_mostrar.append('puntaje_total')
+                    renombres['puntaje_total'] = '⭐ Puntaje'
+                
+                if 'Zona' in df_mostrar.columns:
+                    columnas_mostrar.append('Zona')
+                    renombres['Zona'] = '📊 Zona'
+                
+                if 'resumen' in df_mostrar.columns:
+                    # Mantener resumen completo - Streamlit permite expandir al hacer doble click
+                    columnas_mostrar.append('resumen')
+                    renombres['resumen'] = '📝 Resumen (doble click para expandir)'
+                
+                if columnas_mostrar:
+                    df_tabla = df_mostrar[columnas_mostrar].rename(columns=renombres)
+                    df_tabla = df_tabla.sort_values('⭐ Puntaje', ascending=False) if '⭐ Puntaje' in df_tabla.columns else df_tabla
+                    
+                    # Mostrar tabla con estilo
+                    st.dataframe(
+                        df_tabla.head(20), 
+                        use_container_width=True, 
+                        hide_index=True, 
+                        height=400,
+                        column_config={
+                            '📁 ID Llamada': st.column_config.TextColumn(width='medium'),
+                            '⭐ Puntaje': st.column_config.NumberColumn(format="%.0f /100", width='small'),
+                            '📊 Zona': st.column_config.TextColumn(width='small'),
+                            '📝 Resumen (doble click para expandir)': st.column_config.TextColumn(width='large'),
+                        }
+                    )
+                    
+                    st.caption("💡 **Tip:** Hacé doble click en cualquier celda de resumen para ver el texto completo")
                 
                 # Áreas de mejora específicas del agente
                 if 'areas_mejora' in df_agente.columns:
