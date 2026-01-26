@@ -21,19 +21,50 @@ from config import api_key
 # Configurar API
 genai.configure(api_key=api_key)
 
-# Usar modelo más potente para análisis exhaustivo
-MODEL_NAME = "gemini-2.0-flash"  # Más capaz que lite, bueno para análisis complejos
+# Usar modelo efectivo para análisis
+MODEL_NAME = "gemini-2.0-flash"  # Modelo efectivo y económico para coaching
 
 # Directorios
 DIR_REPORTES = "reportes"
 DIR_COACHING = os.path.join(DIR_REPORTES, "coaching_vendedores")
 os.makedirs(DIR_COACHING, exist_ok=True)
 
+# Fechas para separar períodos
+FECHA_CORTE = "2026-01-19"  # Fecha que separa período anterior del nuevo
+
 def log(mensaje, tipo="info"):
     """Logger con timestamp"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     emoji = {"info": "ℹ️", "success": "✅", "warning": "⚠️", "error": "❌"}.get(tipo, "")
     print(f"[{timestamp}] {emoji} {mensaje}")
+
+
+def extraer_fecha_de_archivo(nombre_archivo):
+    """Extrae la fecha del nombre del archivo (formato 260105XXXXXX -> fecha)"""
+    import re
+    # El nombre tiene formato como 260105102252090_ACD_69849 donde 2601 = 26 enero, 05 = 2025/2026
+    match = re.search(r'(\d{2})(\d{2})(\d{2})', nombre_archivo)
+    if match:
+        dia = int(match.group(1))
+        mes = int(match.group(2))
+        # Año 05 = 2025, 06 = 2026
+        anio_corto = int(match.group(3))
+        anio = 2020 + anio_corto
+        try:
+            from datetime import date
+            return date(anio, mes, dia)
+        except:
+            return None
+    return None
+
+
+def cargar_coaching_previo(agente):
+    """Carga el coaching anterior de un agente si existe"""
+    archivo_individual = os.path.join(DIR_COACHING, f"coaching_{agente.replace(' ', '_')}.json")
+    if os.path.exists(archivo_individual):
+        with open(archivo_individual, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return None
 
 
 def cargar_datos_completos():
@@ -64,23 +95,45 @@ def cargar_datos_completos():
         datos['cierres'] = pd.read_csv(ruta_cierres, sep=';')
         log(f"Cargados {len(datos['cierres'])} cierres comerciales")
     
+    # Cargar datos de calidad
+    ruta_calidad = os.path.join("datos_calidad", "datos_calidad_procesados.json")
+    if os.path.exists(ruta_calidad):
+        with open(ruta_calidad, 'r', encoding='utf-8') as f:
+            datos['calidad'] = json.load(f)
+        log(f"Cargados datos de calidad (llamadas, tiempos, ventas)")
+    
     return datos
 
 
 def obtener_metricas_agente(agente, datos):
-    """Recopila todas las métricas disponibles de un agente"""
+    """Recopila todas las métricas disponibles de un agente, separando por período"""
+    from datetime import date
+    fecha_corte = date(2026, 1, 19)
+    
     metricas = {
         'agente': agente,
         'evaluaciones': {},
+        'evaluaciones_semana_anterior': {},  # 12-16 enero
+        'evaluaciones_semana_actual': {},     # 19-24 enero
         'clasificacion': {},
         'integral': {},
-        'cierres': {}
+        'cierres': {},
+        'calidad_llamadas': {},
+        'calidad_ventas': {}
     }
     
     # Métricas de evaluaciones IA
     if 'evaluaciones' in datos:
-        df_ag = datos['evaluaciones'][datos['evaluaciones']['agente'] == agente]
+        df_ag = datos['evaluaciones'][datos['evaluaciones']['agente'] == agente].copy()
         if len(df_ag) > 0:
+            # Extraer fecha de cada archivo
+            df_ag['fecha'] = df_ag['archivo'].apply(extraer_fecha_de_archivo)
+            
+            # Separar por período
+            df_anterior = df_ag[df_ag['fecha'] < fecha_corte] if 'fecha' in df_ag.columns else pd.DataFrame()
+            df_actual = df_ag[df_ag['fecha'] >= fecha_corte] if 'fecha' in df_ag.columns else pd.DataFrame()
+            
+            # Métricas generales (todo el historial)
             metricas['evaluaciones'] = {
                 'total_evaluadas': len(df_ag),
                 'puntaje_promedio': round(df_ag['puntaje_total'].mean(), 1),
@@ -132,6 +185,48 @@ def obtener_metricas_agente(agente, datos):
             peores = df_ag.nsmallest(3, 'puntaje_total')[['puntaje_total', 'resumen']].to_dict('records')
             metricas['evaluaciones']['ejemplos_mejores'] = mejores
             metricas['evaluaciones']['ejemplos_peores'] = peores
+            
+            # === MÉTRICAS POR PERÍODO ===
+            # Semana anterior (12-16 enero)
+            if len(df_anterior) > 0:
+                metricas['evaluaciones_semana_anterior'] = {
+                    'periodo': '12-16 Enero 2026',
+                    'total_evaluadas': len(df_anterior),
+                    'puntaje_promedio': round(df_anterior['puntaje_total'].mean(), 1),
+                    'llamadas_excelentes': len(df_anterior[df_anterior['puntaje_total'] >= 80]),
+                    'llamadas_criticas': len(df_anterior[df_anterior['puntaje_total'] <= 20]),
+                    'criterios': {c: round(df_anterior[c].mean(), 1) for c in criterios if c in df_anterior.columns}
+                }
+            
+            # Semana actual (19-24 enero)
+            if len(df_actual) > 0:
+                metricas['evaluaciones_semana_actual'] = {
+                    'periodo': '19-24 Enero 2026',
+                    'total_evaluadas': len(df_actual),
+                    'puntaje_promedio': round(df_actual['puntaje_total'].mean(), 1),
+                    'llamadas_excelentes': len(df_actual[df_actual['puntaje_total'] >= 80]),
+                    'llamadas_criticas': len(df_actual[df_actual['puntaje_total'] <= 20]),
+                    'criterios': {c: round(df_actual[c].mean(), 1) for c in criterios if c in df_actual.columns}
+                }
+                
+                # Calcular evolución si hay datos de ambos períodos
+                if len(df_anterior) > 0:
+                    metricas['evolucion'] = {
+                        'cambio_puntaje': round(df_actual['puntaje_total'].mean() - df_anterior['puntaje_total'].mean(), 1),
+                        'mejoro': df_actual['puntaje_total'].mean() > df_anterior['puntaje_total'].mean(),
+                        'criterios_mejoraron': [],
+                        'criterios_empeoraron': [],
+                        'criterios_igual': []
+                    }
+                    for c in criterios:
+                        if c in df_anterior.columns and c in df_actual.columns:
+                            diff = df_actual[c].mean() - df_anterior[c].mean()
+                            if diff > 0.5:
+                                metricas['evolucion']['criterios_mejoraron'].append(f"{c} (+{round(diff, 1)})")
+                            elif diff < -0.5:
+                                metricas['evolucion']['criterios_empeoraron'].append(f"{c} ({round(diff, 1)})")
+                            else:
+                                metricas['evolucion']['criterios_igual'].append(c)
     
     # Métricas de clasificación
     if 'clasificacion' in datos:
@@ -179,6 +274,54 @@ def obtener_metricas_agente(agente, datos):
                 'total_ventas': len(df_ag),
                 'porcentaje_cierre_prom': round(df_ag['porcentaje'].mean(), 1) if 'porcentaje' in df_ag.columns else 0,
             }
+    
+    # Métricas de calidad - Llamadas
+    if 'calidad' in datos and 'llamadas' in datos['calidad']:
+        llamadas_calidad = datos['calidad']['llamadas']
+        # Buscar el agente en la lista de llamadas (buscar por código de agente)
+        agente_lower = agente.lower()
+        for item in llamadas_calidad:
+            if isinstance(item, dict):
+                agente_calidad = item.get('agente', '').lower()
+                vendedor_calidad = item.get('vendedor', '').lower()
+                if agente_lower in agente_calidad or agente_lower in vendedor_calidad or agente_calidad in agente_lower:
+                    metricas['calidad_llamadas'] = {
+                        'total_llamadas': item.get('total_llamadas', 0),
+                        'tmo_seg': item.get('tmo_seg', 0),
+                        'tmo_formato': item.get('tmo_fmt', ''),
+                        'supera_1min': item.get('supera_1min', 0),
+                        'pct_supera_1min': item.get('pct_supera_1min', 0),
+                        'supera_5min': item.get('supera_5min', 0),
+                        'pct_supera_5min': item.get('pct_supera_5min', 0),
+                        'menos_30seg': item.get('menos_30seg', 0),
+                        'capta_atencion': item.get('capta_atencion', 0),
+                        'pct_capta_atencion': item.get('pct_capta_atencion', 0),
+                        'corte_cliente': item.get('corte_cliente', 0),
+                        'corte_agente': item.get('corte_agente', 0),
+                        'estado_calidad': item.get('estado', ''),
+                        'equipo': item.get('equipo', '')
+                    }
+                    break
+    
+    # Métricas de calidad - Ventas
+    if 'calidad' in datos and 'ventas' in datos['calidad']:
+        ventas_calidad = datos['calidad']['ventas']
+        if 'por_vendedor' in ventas_calidad:
+            agente_lower = agente.lower()
+            for item in ventas_calidad['por_vendedor']:
+                if isinstance(item, dict):
+                    vendedor_calidad = item.get('vendedor', '').lower()
+                    if agente_lower in vendedor_calidad or vendedor_calidad in agente_lower:
+                        metricas['calidad_ventas'] = {
+                            'total_ventas': item.get('total_ventas', 0),
+                            'aprobadas': item.get('aprobadas', 0),
+                            'canceladas': item.get('canceladas', 0),
+                            'preventa': item.get('preventa', 0),
+                            'tasa_aprobacion': item.get('tasa_aprobacion', 0),
+                            'dif_vs_promedio': item.get('dif_vs_promedio', 0),
+                            'estado_ventas': item.get('estado', '')
+                        }
+                        break
     
     return metricas
 
@@ -235,13 +378,70 @@ def calcular_comparativa_general(agente, datos):
     return comparativa
 
 
-def generar_prompt_coaching(agente, metricas, comparativa, metricas_generales):
-    """Genera el prompt para el análisis de coaching"""
+def generar_prompt_coaching(agente, metricas, comparativa, metricas_generales, coaching_previo=None):
+    """Genera el prompt para el análisis de coaching con historial"""
+    
+    # Sección de historial si existe coaching previo
+    seccion_historial = ""
+    if coaching_previo:
+        metricas_prev = coaching_previo.get('metricas', {}).get('evaluaciones', {})
+        fecha_prev = coaching_previo.get('fecha_generacion', 'Fecha desconocida')[:10]
+        seccion_historial = f"""
+## 📜 HISTORIAL DEL VENDEDOR (Coaching anterior del {fecha_prev}):
+
+### Métricas del período anterior:
+- Puntaje IA promedio: {metricas_prev.get('puntaje_promedio', 'N/A')}
+- Llamadas evaluadas: {metricas_prev.get('total_evaluadas', 'N/A')}
+- Llamadas excelentes (≥80): {metricas_prev.get('llamadas_excelentes', 'N/A')}
+- Llamadas críticas (≤20): {metricas_prev.get('llamadas_criticas', 'N/A')}
+
+### Áreas de mejora identificadas anteriormente:
+{json.dumps(metricas_prev.get('areas_mejora_frecuentes', {}), indent=2, ensure_ascii=False)}
+
+### Fortalezas identificadas anteriormente:
+{json.dumps(metricas_prev.get('fortalezas_frecuentes', {}), indent=2, ensure_ascii=False)}
+
+⚠️ IMPORTANTE: Compara el desempeño actual con este historial para identificar EVOLUCIÓN.
+"""
+    
+    # Sección de evolución si hay datos comparativos
+    seccion_evolucion = ""
+    if 'evolucion' in metricas:
+        evol = metricas['evolucion']
+        tendencia = "📈 MEJORÓ" if evol.get('mejoro') else "📉 EMPEORÓ"
+        seccion_evolucion = f"""
+## 🔄 EVOLUCIÓN ENTRE PERÍODOS:
+
+### Tendencia General: {tendencia} ({evol.get('cambio_puntaje', 0):+.1f} puntos)
+
+### Semana Anterior (12-16 Enero):
+{json.dumps(metricas.get('evaluaciones_semana_anterior', {}), indent=2, ensure_ascii=False)}
+
+### Semana Actual (19-24 Enero):
+{json.dumps(metricas.get('evaluaciones_semana_actual', {}), indent=2, ensure_ascii=False)}
+
+### Criterios que MEJORARON:
+{', '.join(evol.get('criterios_mejoraron', ['Ninguno'])) or 'Ninguno'}
+
+### Criterios que EMPEORARON:
+{', '.join(evol.get('criterios_empeoraron', ['Ninguno'])) or 'Ninguno'}
+
+### Criterios ESTABLES:
+{', '.join(evol.get('criterios_igual', ['Ninguno'])) or 'Ninguno'}
+"""
     
     prompt = f"""
 Eres un JEFE DE VENTAS experimentado y mentor de alto rendimiento en telecomunicaciones (Movistar Argentina). 
 Tu misión es analizar exhaustivamente el desempeño del vendedor y crear un plan de acción 
 personalizado para ayudarlo a alcanzar su MÁXIMO POTENCIAL.
+
+⚠️ ESTE ANÁLISIS CONSIDERA EL HISTORIAL DEL VENDEDOR Y SU EVOLUCIÓN RECIENTE.
+El plan de acción debe enfocarse en la ÚLTIMA SEMANA (19-24 Enero), destacando:
+- Qué MEJORÓ respecto al período anterior
+- Qué EMPEORÓ y necesita atención urgente
+- Qué SIGUE PENDIENTE de trabajar
+{seccion_historial}
+{seccion_evolucion}
 
 ## ⚠️ REGLAS CRÍTICAS DEL NEGOCIO (OBLIGATORIAS):
 
@@ -309,6 +509,23 @@ personalizado para ayudarlo a alcanzar su MÁXIMO POTENCIAL.
 ### 💰 MÉTRICAS DE CIERRES:
 {json.dumps(metricas.get('cierres', {}), indent=2, ensure_ascii=False)}
 
+### 📞 MÉTRICAS DE CALIDAD - LLAMADAS:
+{json.dumps(metricas.get('calidad_llamadas', {}), indent=2, ensure_ascii=False)}
+⚠️ INTERPRETACIÓN MÉTRICAS DE LLAMADAS:
+- TMO (Tiempo Medio Operativo): Duración promedio de llamadas. Óptimo entre 2-4 minutos.
+- Capta Atención (%): Llamadas >1 minuto. MAYOR % es MEJOR (indica engagement del cliente).
+- Supera 5 min (%): Llamadas muy largas. Puede indicar dificultad para cerrar o conversaciones productivas.
+- Menos 30 seg: Llamadas muy cortas. MENOR cantidad es MEJOR (indica que no cuelgan rápido).
+- Corte Cliente vs Corte Agente: Quién finaliza la llamada. Alto corte cliente puede indicar falta de enganche.
+- Estados: 🟢 Excelente (>50% capta atención), 🟡 Bueno (40-50%), 🟠 Regular (30-40%), 🔴 Bajo (<30%).
+
+### 💵 MÉTRICAS DE CALIDAD - VENTAS:
+{json.dumps(metricas.get('calidad_ventas', {}), indent=2, ensure_ascii=False)}
+⚠️ INTERPRETACIÓN MÉTRICAS DE VENTAS:
+- Tasa Aprobación: % de ventas que fueron aprobadas vs total. MAYOR es MEJOR.
+- Dif vs Promedio: Diferencia con el promedio del equipo. Positivo = mejor que promedio.
+- Canceladas: Ventas rechazadas o canceladas. MENOR es MEJOR.
+
 ## COMPARATIVA CON EL EQUIPO:
 {json.dumps(comparativa, indent=2, ensure_ascii=False)}
 
@@ -316,37 +533,57 @@ personalizado para ayudarlo a alcanzar su MÁXIMO POTENCIAL.
 - Puntaje IA promedio del equipo: {metricas_generales.get('puntaje_prom_equipo', 'N/A')}
 - Tasa de conversión del equipo: {metricas_generales.get('tasa_conversion_equipo', 'N/A')}%
 - Total de agentes: {metricas_generales.get('total_agentes', 'N/A')}
+- TMO promedio del equipo: {metricas_generales.get('tmo_promedio_equipo', 'N/A')} seg
+- % Capta Atención promedio: {metricas_generales.get('capta_atencion_promedio', 'N/A')}%
 
 ---
 
 ## TU ANÁLISIS DEBE INCLUIR:
 
-### 1. DIAGNÓSTICO GENERAL (2-3 párrafos)
+### 1. DIAGNÓSTICO GENERAL Y EVOLUCIÓN (2-3 párrafos)
 - ¿Cómo está este vendedor comparado con el equipo?
 - ¿Cuál es su nivel actual? (Crítico / Necesita Mejora / Promedio / Bueno / Excelente)
+- **EVOLUCIÓN**: Si hay historial, ¿mejoró o empeoró respecto al período anterior?
 - ¿Cuál es su potencial de mejora?
 
-### 2. FORTALEZAS IDENTIFICADAS (mínimo 3)
+### 2. ANÁLISIS DE EVOLUCIÓN SEMANAL (FUNDAMENTAL)
+⚠️ ESTA SECCIÓN ES OBLIGATORIA SI HAY DATOS DE AMBOS PERÍODOS:
+- **QUÉ MEJORÓ**: Criterios donde el vendedor subió su puntaje. Felicitar y reforzar.
+- **QUÉ EMPEORÓ**: Criterios donde bajó el puntaje. Analizar causas y dar prioridad.
+- **QUÉ SIGUE PENDIENTE**: Áreas que ya se identificaron antes y no han mejorado.
+- **TENDENCIA GENERAL**: ¿Va por buen camino o necesita intervención urgente?
+
+### 3. FORTALEZAS IDENTIFICADAS (mínimo 3)
 - Aspectos positivos que debe mantener y potenciar
 - Ejemplos concretos de lo que hace bien
+- Destacar si alguna fortaleza es NUEVA (mejoró esta semana)
 
-### 3. ÁREAS CRÍTICAS DE MEJORA (mínimo 3)
+### 4. ÁREAS CRÍTICAS DE MEJORA (mínimo 3)
 - Debilidades que impactan directamente en sus resultados
+- Indicar si son NUEVAS o PERSISTENTES (ya estaban en el período anterior)
 - Por qué cada área es importante mejorar
 
-### 4. ANÁLISIS DETALLADO POR COMPETENCIA
+### 5. ANÁLISIS DE MÉTRICAS DE CALIDAD (FUNDAMENTAL)
+Analiza las métricas de llamadas y ventas del agente:
+- **TMO (Tiempo Medio)**: ¿Está en el rango óptimo (2-4 min)? Si es muy bajo, no está generando engagement. Si es muy alto, puede tener dificultades para cerrar.
+- **% Capta Atención**: Este KPI es CRÍTICO. Mide llamadas >1 min. Si es bajo (<30%), el agente no logra enganchar al cliente.
+- **Cortes de llamada**: Si hay más cortes del cliente que del agente, puede indicar problemas en el pitch inicial.
+- **Llamadas <30 seg**: Demasiadas llamadas cortas indican problemas en el saludo/enganche inicial.
+- **Tasa de aprobación de ventas**: Si es baja, puede haber problemas de calidad en las ventas (datos incorrectos, mal procesamiento).
+
+### 6. ANÁLISIS DETALLADO POR COMPETENCIA
 Para cada criterio evaluado, indica:
 - Nivel actual (Crítico/Bajo/Regular/Bueno/Excelente)
 - Qué está haciendo mal o bien
 - Cómo mejorar específicamente (RESPETANDO LAS REGLAS DEL NEGOCIO)
 
-### 5. PLAN DE ACCIÓN SEMANAL (4 semanas)
+### 7. PLAN DE ACCIÓN SEMANAL (4 semanas)
 **Semana 1:** [Foco principal y acciones específicas]
 **Semana 2:** [Siguiente prioridad]
 **Semana 3:** [Consolidación]
 **Semana 4:** [Optimización]
 
-### 6. TÉCNICAS Y SCRIPTS RECOMENDADOS
+### 7. TÉCNICAS Y SCRIPTS RECOMENDADOS
 ⚠️ IMPORTANTE: Todas las frases y scripts deben respetar las REGLAS DEL NEGOCIO listadas arriba.
 - Frases específicas para verificar identidad del cliente
 - Preguntas correctas para detectar necesidades ("¿Qué es lo que más usás del celular?")
@@ -354,15 +591,19 @@ Para cada criterio evaluado, indica:
 - Técnicas de cierre DIRECTO (asignar sucursal, buscar domicilio)
 - Manejo de objeciones personalizado según tipo de cliente
 
-### 7. METAS CUANTIFICABLES
+### 9. METAS CUANTIFICABLES
 - Meta de puntaje IA a alcanzar en 30 días
 - Meta de tasa de conversión
 - Meta de ofrecimiento de productos
+- Meta de % Capta Atención (llamadas >1 min)
+- Meta de TMO a alcanzar
 - KPIs específicos a mejorar
 
-### 8. MENSAJE MOTIVACIONAL PERSONALIZADO
+### 10. MENSAJE MOTIVACIONAL PERSONALIZADO
 Un mensaje directo y motivador para este vendedor, reconociendo su esfuerzo
 y visualizando su potencial de crecimiento.
+Si MEJORÓ respecto al período anterior, felicitarlo específicamente.
+Si EMPEORÓ, motivarlo a retomar el buen camino.
 
 ---
 
@@ -371,6 +612,9 @@ IMPORTANTE:
 - Usa los datos proporcionados para personalizar cada recomendación
 - El tono debe ser de mentor que cree en el potencial del vendedor
 - Las acciones deben ser ejecutables y medibles
+- INCLUYE SIEMPRE el análisis de métricas de calidad (llamadas y ventas) si están disponibles
+- ⚠️ SI HAY HISTORIAL: El análisis DEBE mencionar la evolución del vendedor
+- ⚠️ ENFOCATE EN LA ÚLTIMA SEMANA (19-24 Enero) pero considerando el historial
 - NO incluyas frases introductorias como "¡Aquí tienes!", "¡Absolutamente!", "¡Claro!" o similares
 - Empieza DIRECTAMENTE con el título "## ANÁLISIS DEL VENDEDOR: {agente}"
 - NO repitas el nombre del vendedor en frases introductorias innecesarias
@@ -380,18 +624,23 @@ IMPORTANTE:
 
 
 def generar_coaching_agente(agente, datos, model, metricas_generales):
-    """Genera el análisis de coaching para un agente"""
+    """Genera el análisis de coaching para un agente, incluyendo historial"""
+    
+    # Cargar coaching previo si existe
+    coaching_previo = cargar_coaching_previo(agente)
+    if coaching_previo:
+        log(f"Encontrado coaching previo del {coaching_previo.get('fecha_generacion', 'fecha desconocida')[:10]}")
     
     # Obtener métricas del agente
     metricas = obtener_metricas_agente(agente, datos)
     comparativa = calcular_comparativa_general(agente, datos)
     
-    # Verificar que hay suficientes datos
-    if metricas['evaluaciones'].get('total_evaluadas', 0) < 3:
-        return None, "Insuficientes evaluaciones (mínimo 3)"
+    # Verificar que hay suficientes datos (mínimo 10 evaluaciones)
+    if metricas['evaluaciones'].get('total_evaluadas', 0) < 10:
+        return None, "Insuficientes evaluaciones (mínimo 10)"
     
-    # Generar prompt
-    prompt = generar_prompt_coaching(agente, metricas, comparativa, metricas_generales)
+    # Generar prompt con historial
+    prompt = generar_prompt_coaching(agente, metricas, comparativa, metricas_generales, coaching_previo)
     
     try:
         response = model.generate_content(prompt)
@@ -404,7 +653,10 @@ def generar_coaching_agente(agente, datos, model, metricas_generales):
             'metricas': metricas,
             'comparativa': comparativa,
             'analisis_coaching': analisis,
-            'modelo_usado': MODEL_NAME
+            'modelo_usado': MODEL_NAME,
+            'tiene_historial': coaching_previo is not None,
+            'fecha_coaching_anterior': coaching_previo.get('fecha_generacion', None) if coaching_previo else None,
+            'evolucion': metricas.get('evolucion', None)
         }
         
         return resultado, None
@@ -416,7 +668,7 @@ def generar_coaching_agente(agente, datos, model, metricas_generales):
 def main():
     print("\n" + "="*70)
     print("  🎯 GENERADOR DE COACHING PERSONALIZADO CON IA")
-    print("  📊 Análisis exhaustivo para cada vendedor")
+    print("  📊 Análisis con historial y evolución semanal")
     print("="*70 + "\n")
     
     # Cargar datos
@@ -431,12 +683,12 @@ def main():
     log(f"Inicializando modelo {MODEL_NAME}...")
     model = genai.GenerativeModel(MODEL_NAME)
     
-    # Obtener lista de agentes con suficientes datos
+    # Obtener lista de agentes con suficientes datos (mínimo 10 evaluaciones)
     df_eval = datos['evaluaciones']
     agentes_counts = df_eval['agente'].value_counts()
-    agentes_validos = agentes_counts[agentes_counts >= 3].index.tolist()
+    agentes_validos = agentes_counts[agentes_counts >= 10].index.tolist()
     
-    log(f"Agentes con suficientes datos: {len(agentes_validos)}")
+    log(f"Agentes con suficientes datos (>=10 evaluaciones): {len(agentes_validos)}")
     
     # Calcular métricas generales
     metricas_generales = {
@@ -444,6 +696,20 @@ def main():
         'tasa_conversion_equipo': round(datos['clasificacion']['es_venta'].mean() * 100, 1) if 'clasificacion' in datos and 'es_venta' in datos['clasificacion'].columns else 'N/A',
         'total_agentes': len(agentes_validos)
     }
+    
+    # Agregar métricas de calidad generales
+    if 'calidad' in datos and 'llamadas' in datos['calidad']:
+        totales = datos['calidad']['llamadas'].get('totales', {})
+        if isinstance(totales, dict):
+            metricas_generales['tmo_promedio_equipo'] = totales.get('tmo_global_seg', 'N/A')
+            metricas_generales['capta_atencion_promedio'] = totales.get('pct_capta_atencion', 'N/A')
+        else:
+            # Buscar totales en la lista
+            for item in datos['calidad']['llamadas']:
+                if isinstance(item, dict) and item.get('agente') == 'totales':
+                    metricas_generales['tmo_promedio_equipo'] = item.get('tmo_global_seg', 'N/A')
+                    metricas_generales['capta_atencion_promedio'] = item.get('pct_capta_atencion', 'N/A')
+                    break
     
     # Cargar coaching existente
     archivo_coaching = os.path.join(DIR_COACHING, "coaching_completo.json")
@@ -456,24 +722,38 @@ def main():
         coaching_existente = []
         agentes_procesados = []
     
+    # Parsear argumentos
+    forzar_actualizar = '--actualizar' in sys.argv or '-u' in sys.argv
+    
     # Filtrar agentes pendientes
-    if len(sys.argv) > 1:
-        max_agentes = int(sys.argv[1])
+    args_numericos = [arg for arg in sys.argv[1:] if arg.isdigit()]
+    if args_numericos:
+        max_agentes = int(args_numericos[0])
         log(f"Procesando máximo {max_agentes} agentes")
     else:
         max_agentes = len(agentes_validos)
     
-    agentes_pendientes = [a for a in agentes_validos if a not in agentes_procesados][:max_agentes]
+    if forzar_actualizar:
+        log("⚠️ MODO ACTUALIZACIÓN: Reprocesando agentes con historial")
+        # En modo actualizar, procesar todos pero guardando el historial
+        agentes_pendientes = agentes_validos[:max_agentes]
+    else:
+        agentes_pendientes = [a for a in agentes_validos if a not in agentes_procesados][:max_agentes]
     
     if not agentes_pendientes:
         log("Todos los agentes ya tienen coaching generado", "success")
+        log("Usa --actualizar o -u para reprocesar con el historial")
         return
     
     log(f"Pendientes a procesar: {len(agentes_pendientes)}")
     print("-" * 70)
     
     # Procesar cada agente
-    resultados = coaching_existente.copy()
+    if forzar_actualizar:
+        # En modo actualizar, empezar con lista vacía para regenerar todo
+        resultados = []
+    else:
+        resultados = coaching_existente.copy()
     errores = 0
     
     for i, agente in enumerate(agentes_pendientes, 1):
