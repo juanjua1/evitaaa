@@ -238,6 +238,42 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
+    /* Radio buttons en contenido principal - ALTO CONTRASTE */
+    [data-testid="stHorizontalBlock"] .stRadio > label {
+        color: #1E293B !important;
+        font-weight: 700 !important;
+        font-size: 1rem !important;
+    }
+    
+    [data-testid="stHorizontalBlock"] .stRadio [role="radiogroup"] label {
+        background-color: #FFFFFF !important;
+        border: 2px solid #CBD5E1 !important;
+        border-radius: 8px !important;
+        padding: 10px 16px !important;
+        margin: 4px 8px 4px 0 !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    [data-testid="stHorizontalBlock"] .stRadio [role="radiogroup"] label:hover {
+        background-color: #EFF6FF !important;
+        border-color: #3B82F6 !important;
+    }
+    
+    [data-testid="stHorizontalBlock"] .stRadio [role="radiogroup"] label div p {
+        color: #1E293B !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+    }
+    
+    [data-testid="stHorizontalBlock"] .stRadio [role="radiogroup"] label[data-baseweb="radio"]:has(input:checked) {
+        background-color: #3B82F6 !important;
+        border-color: #3B82F6 !important;
+    }
+    
+    [data-testid="stHorizontalBlock"] .stRadio [role="radiogroup"] label[data-baseweb="radio"]:has(input:checked) div p {
+        color: #FFFFFF !important;
+    }
+    
     /* Logo COMMAND en sidebar */
     .command-logo-container {
         text-align: center;
@@ -583,7 +619,821 @@ USUARIOS = {
         'equipo': None,  # Admin tiene acceso a todo
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes', 'config', 'todos_agentes']
     },
-    # Aquí se agregarán los otros 5 usuarios
+    # ========================================
+    # SUPERVISORES
+    # ========================================
+    'byl': {
+        'password_hash': hash_password('Kp7mNx2w'),
+        'nombre': 'Byl',
+        'rol': 'supervisor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'diana': {
+        'password_hash': hash_password('Qr9sVt4y'),
+        'nombre': 'Diana',
+        'rol': 'supervisor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'marina': {
+        'password_hash': hash_password('Hj6bLm3c'),
+        'nombre': 'Marina',
+        'rol': 'supervisor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'calidad': {
+        'password_hash': hash_password('Wd8fPn5z'),
+        'nombre': 'Calidad',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes', 'calidad']
+    },
+    'melani': {
+        'password_hash': hash_password('Yx3gRk7v'),
+        'nombre': 'Melani',
+        'rol': 'supervisor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'josefina': {
+        'password_hash': hash_password('Nt5cWq8m'),
+        'nombre': 'Josefina',
+        'rol': 'supervisor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'yasmin': {
+        'password_hash': hash_password('Bv2jHs6p'),
+        'nombre': 'Yasmin',
+        'rol': 'supervisor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'nati': {
+        'password_hash': hash_password('Zf4dKt9r'),
+        'nombre': 'Nati',
+        'rol': 'supervisor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    'capacitacion': {
+        'password_hash': hash_password('Mc7xJn2b'),
+        'nombre': 'Capacitación',
+        'rol': 'supervisor',
+        'equipo': None,
+        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO DIANA
+    # ========================================
+    'mza46': {
+        'password_hash': hash_password('Vk3pRw7n'),
+        'nombre': 'MZA 46',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza47': {
+        'password_hash': hash_password('Ht9cBm2x'),
+        'nombre': 'MZA 47',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza48': {
+        'password_hash': hash_password('Qf5jNs8d'),
+        'nombre': 'MZA 48',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza49': {
+        'password_hash': hash_password('Lw6gKp4v'),
+        'nombre': 'MZA 49',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza50': {
+        'password_hash': hash_password('Zy2mXt9c'),
+        'nombre': 'MZA 50',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza51': {
+        'password_hash': hash_password('Rn8bPq3f'),
+        'nombre': 'MZA 51',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mzasup5': {
+        'password_hash': hash_password('Ds4hWk7j'),
+        'nombre': 'MZA Sup5',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza52': {
+        'password_hash': hash_password('Gx7rLn2s'),
+        'nombre': 'MZA 52',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza53': {
+        'password_hash': hash_password('Jm3vCt8p'),
+        'nombre': 'MZA 53',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza54': {
+        'password_hash': hash_password('Pw9dFk4y'),
+        'nombre': 'MZA 54',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza55': {
+        'password_hash': hash_password('Tb6nHq2w'),
+        'nombre': 'MZA 55',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza56': {
+        'password_hash': hash_password('Xc2sJm7r'),
+        'nombre': 'MZA 56',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza57': {
+        'password_hash': hash_password('Kf8pBx3g'),
+        'nombre': 'MZA 57',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza58': {
+        'password_hash': hash_password('Nq4wRt9h'),
+        'nombre': 'MZA 58',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza59': {
+        'password_hash': hash_password('Ys7kMn2c'),
+        'nombre': 'MZA 59',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza60': {
+        'password_hash': hash_password('Bd3fVp8x'),
+        'nombre': 'MZA 60',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza61': {
+        'password_hash': hash_password('Wt9jLs4n'),
+        'nombre': 'MZA 61',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza62': {
+        'password_hash': hash_password('Hk6cQw2v'),
+        'nombre': 'MZA 62',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza63': {
+        'password_hash': hash_password('Rm2xGt7b'),
+        'nombre': 'MZA 63',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza64': {
+        'password_hash': hash_password('Fp8nYk3d'),
+        'nombre': 'MZA 64',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza65': {
+        'password_hash': hash_password('Cs4rDm9j'),
+        'nombre': 'MZA 65',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza66': {
+        'password_hash': hash_password('Vn7hPw2f'),
+        'nombre': 'MZA 66',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza67': {
+        'password_hash': hash_password('Zq3kXt8s'),
+        'nombre': 'MZA 67',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza68': {
+        'password_hash': hash_password('Jw9bNc4p'),
+        'nombre': 'MZA 68',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza69': {
+        'password_hash': hash_password('Mx6gRs2y'),
+        'nombre': 'MZA 69',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza70': {
+        'password_hash': hash_password('Lf2vKq7w'),
+        'nombre': 'MZA 70',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza71': {
+        'password_hash': hash_password('Tp8cHm3x'),
+        'nombre': 'MZA 71',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza84': {
+        'password_hash': hash_password('Qk4jBn9d'),
+        'nombre': 'MZA 84',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza85': {
+        'password_hash': hash_password('Wr7pFs2g'),
+        'nombre': 'MZA 85',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza86': {
+        'password_hash': hash_password('Yn3sDt8h'),
+        'nombre': 'MZA 86',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza87': {
+        'password_hash': hash_password('Gc9wLk4r'),
+        'nombre': 'MZA 87',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza88': {
+        'password_hash': hash_password('Bx5nPv7m'),
+        'nombre': 'MZA 88',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza89': {
+        'password_hash': hash_password('Df2cQw9j'),
+        'nombre': 'MZA 89',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza90': {
+        'password_hash': hash_password('Kh8rXm3s'),
+        'nombre': 'MZA 90',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza91': {
+        'password_hash': hash_password('Nt4bYp7f'),
+        'nombre': 'MZA 91',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza92': {
+        'password_hash': hash_password('Sq9kJc2n'),
+        'nombre': 'MZA 92',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza93': {
+        'password_hash': hash_password('Vw6hGt8d'),
+        'nombre': 'MZA 93',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza323': {
+        'password_hash': hash_password('Xp3mRs4y'),
+        'nombre': 'MZA 323',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza324': {
+        'password_hash': hash_password('Zr7nKw9b'),
+        'nombre': 'MZA 324',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza325': {
+        'password_hash': hash_password('Ct2vLq5x'),
+        'nombre': 'MZA 325',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza326': {
+        'password_hash': hash_password('Hf8jPm3c'),
+        'nombre': 'MZA 326',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza327': {
+        'password_hash': hash_password('Mk4dBn7g'),
+        'nombre': 'MZA 327',
+        'rol': 'vendedor',
+        'equipo': 'DIANA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO BYL
+    # ========================================
+    'mza307': {
+        'password_hash': hash_password('Rw9sFt2p'),
+        'nombre': 'MZA 307',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza308': {
+        'password_hash': hash_password('Yn5cXk8j'),
+        'nombre': 'MZA 308',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza309': {
+        'password_hash': hash_password('Gq3hNm7r'),
+        'nombre': 'MZA 309',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza310': {
+        'password_hash': hash_password('Bv8pRt4w'),
+        'nombre': 'MZA 310',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza311': {
+        'password_hash': hash_password('Df6kLs9n'),
+        'nombre': 'MZA 311',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza312': {
+        'password_hash': hash_password('Jx2wQc5m'),
+        'nombre': 'MZA 312',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza315': {
+        'password_hash': hash_password('Ks7bYp3f'),
+        'nombre': 'MZA 315',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza99': {
+        'password_hash': hash_password('Pw4nHt8d'),
+        'nombre': 'MZA 99',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza100': {
+        'password_hash': hash_password('Tc9rMk2v'),
+        'nombre': 'MZA 100',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza301': {
+        'password_hash': hash_password('Xh5jGw7s'),
+        'nombre': 'MZA 301',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza302': {
+        'password_hash': hash_password('Zn3cFq9x'),
+        'nombre': 'MZA 302',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza303': {
+        'password_hash': hash_password('Lm8vDt4p'),
+        'nombre': 'MZA 303',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza304': {
+        'password_hash': hash_password('Qr6kBn2y'),
+        'nombre': 'MZA 304',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza305': {
+        'password_hash': hash_password('Ws4pJm7c'),
+        'nombre': 'MZA 305',
+        'rol': 'vendedor',
+        'equipo': 'BYL',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO MELANIE CARMONA
+    # ========================================
+    'mza1': {
+        'password_hash': hash_password('Rf4nBk9t'),
+        'nombre': 'MZA 1',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza2': {
+        'password_hash': hash_password('Yc7mHw3p'),
+        'nombre': 'MZA 2',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza3': {
+        'password_hash': hash_password('Ks2vPq8j'),
+        'nombre': 'MZA 3',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza4': {
+        'password_hash': hash_password('Bn6xRt4f'),
+        'nombre': 'MZA 4',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza5': {
+        'password_hash': hash_password('Dw9cLm2s'),
+        'nombre': 'MZA 5',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza6': {
+        'password_hash': hash_password('Hj3kNp7v'),
+        'nombre': 'MZA 6',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza7': {
+        'password_hash': hash_password('Tq8bGs4y'),
+        'nombre': 'MZA 7',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza8': {
+        'password_hash': hash_password('Xn5rWk9c'),
+        'nombre': 'MZA 8',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza9': {
+        'password_hash': hash_password('Fm2jVt6h'),
+        'nombre': 'MZA 9',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza10': {
+        'password_hash': hash_password('Pc7sDq3n'),
+        'nombre': 'MZA 10',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza12': {
+        'password_hash': hash_password('Zk4wMr8b'),
+        'nombre': 'MZA 12',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE CARMONA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO ARENAS YASMIN
+    # ========================================
+    'mza13': {
+        'password_hash': hash_password('Gt9hXn2f'),
+        'nombre': 'MZA 13',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza14': {
+        'password_hash': hash_password('Lv6cBp4k'),
+        'nombre': 'MZA 14',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza15': {
+        'password_hash': hash_password('Qw3rKs7m'),
+        'nombre': 'MZA 15',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza16': {
+        'password_hash': hash_password('Jn8fTq2x'),
+        'nombre': 'MZA 16',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza18': {
+        'password_hash': hash_password('Yb5mPv9d'),
+        'nombre': 'MZA 18',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza19': {
+        'password_hash': hash_password('Ck2wRn6j'),
+        'nombre': 'MZA 19',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza20': {
+        'password_hash': hash_password('Hs7kDt3p'),
+        'nombre': 'MZA 20',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza21': {
+        'password_hash': hash_password('Nr4cGm8v'),
+        'nombre': 'MZA 21',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza22': {
+        'password_hash': hash_password('Wf9jLs5b'),
+        'nombre': 'MZA 22',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza23': {
+        'password_hash': hash_password('Xq2nYk7r'),
+        'nombre': 'MZA 23',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza24': {
+        'password_hash': hash_password('Bm6hPt3w'),
+        'nombre': 'MZA 24',
+        'rol': 'vendedor',
+        'equipo': 'ARENAS YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO JOSEFINA ZEBALLOS
+    # ========================================
+    'mza25': {
+        'password_hash': hash_password('Vk8rFn4c'),
+        'nombre': 'MZA 25',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza26': {
+        'password_hash': hash_password('Tn3wSq9j'),
+        'nombre': 'MZA 26',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza27': {
+        'password_hash': hash_password('Md7cXk2p'),
+        'nombre': 'MZA 27',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza28': {
+        'password_hash': hash_password('Rj5nBv8f'),
+        'nombre': 'MZA 28',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza29': {
+        'password_hash': hash_password('Yh2kLm6s'),
+        'nombre': 'MZA 29',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza30': {
+        'password_hash': hash_password('Gw9pRt4n'),
+        'nombre': 'MZA 30',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza31': {
+        'password_hash': hash_password('Kb4fDq7x'),
+        'nombre': 'MZA 31',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza32': {
+        'password_hash': hash_password('Zn8cHs3v'),
+        'nombre': 'MZA 32',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza33': {
+        'password_hash': hash_password('Pt6jWm9k'),
+        'nombre': 'MZA 33',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA ZEBALLOS',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO NATALI SANCHE
+    # ========================================
+    'mza34': {
+        'password_hash': hash_password('Fc2rNb7h'),
+        'nombre': 'MZA 34',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza35': {
+        'password_hash': hash_password('Xk5wPq3d'),
+        'nombre': 'MZA 35',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza36': {
+        'password_hash': hash_password('Lm9cVt4j'),
+        'nombre': 'MZA 36',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza37': {
+        'password_hash': hash_password('Qs7hKn2f'),
+        'nombre': 'MZA 37',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza38': {
+        'password_hash': hash_password('Br4jGs8p'),
+        'nombre': 'MZA 38',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza39': {
+        'password_hash': hash_password('Wn6dYm3c'),
+        'nombre': 'MZA 39',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza40': {
+        'password_hash': hash_password('Hv8kRq5x'),
+        'nombre': 'MZA 40',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza41': {
+        'password_hash': hash_password('Tc2pLs9n'),
+        'nombre': 'MZA 41',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza42': {
+        'password_hash': hash_password('Jf7bXw4k'),
+        'nombre': 'MZA 42',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza43': {
+        'password_hash': hash_password('Yk3nDt6v'),
+        'nombre': 'MZA 43',
+        'rol': 'vendedor',
+        'equipo': 'NATALI SANCHE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    # ========================================
+    # VENDEDORES EQUIPO MARINA MARTINEZ
+    # ========================================
+    'mza44': {
+        'password_hash': hash_password('Np8rFm2j'),
+        'nombre': 'MZA 44',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza45': {
+        'password_hash': hash_password('Gk5cBq7s'),
+        'nombre': 'MZA 45',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza72': {
+        'password_hash': hash_password('Rw3hPn9d'),
+        'nombre': 'MZA 72',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza73': {
+        'password_hash': hash_password('Vb6jKt4x'),
+        'nombre': 'MZA 73',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza74': {
+        'password_hash': hash_password('Sm2wYq8f'),
+        'nombre': 'MZA 74',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza313': {
+        'password_hash': hash_password('Dn7kRs3p'),
+        'nombre': 'MZA 313',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza314': {
+        'password_hash': hash_password('Xt4cLv9m'),
+        'nombre': 'MZA 314',
+        'rol': 'vendedor',
+        'equipo': 'MARINA MARTINEZ',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
 }
 
 def verificar_credenciales(usuario, password):
@@ -593,6 +1443,90 @@ def verificar_credenciales(usuario, password):
         if USUARIOS[usuario]['password_hash'] == hash_password(password):
             return True, USUARIOS[usuario]
     return False, None
+
+
+def obtener_permisos_usuario():
+    """
+    Obtiene los permisos y restricciones del usuario actual.
+    Retorna un diccionario con:
+    - rol: admin/supervisor/vendedor
+    - equipo: equipo asignado (None para admin)
+    - nombre_usuario: nombre del vendedor para filtrar
+    - puede_ver_todos: si puede ver todos los equipos/vendedores
+    - puede_comparar: si puede ver comparativas entre equipos
+    - equipos_permitidos: lista de equipos que puede ver
+    - vendedores_permitidos: lista de vendedores que puede ver (vacía si puede ver todos)
+    """
+    datos_usuario = st.session_state.get('datos_usuario', {})
+    usuario_key = st.session_state.get('usuario', '').lower()
+    
+    rol = datos_usuario.get('rol', 'vendedor')
+    equipo = datos_usuario.get('equipo', None)
+    nombre = datos_usuario.get('nombre', '')
+    
+    permisos = {
+        'rol': rol,
+        'equipo': equipo,
+        'nombre_usuario': nombre,
+        'puede_ver_todos': False,
+        'puede_comparar': False,
+        'equipos_permitidos': [],
+        'vendedores_permitidos': [],
+        'es_admin': False
+    }
+    
+    if rol == 'admin':
+        # Admin puede ver todo
+        permisos['puede_ver_todos'] = True
+        permisos['puede_comparar'] = True
+        permisos['es_admin'] = True
+    elif rol == 'supervisor':
+        # Supervisor solo puede ver su equipo
+        permisos['puede_ver_todos'] = False
+        permisos['puede_comparar'] = False
+        if equipo:
+            permisos['equipos_permitidos'] = [equipo]
+        else:
+            # Supervisor sin equipo (calidad, capacitación) - pueden ver todos
+            permisos['puede_ver_todos'] = True
+            permisos['puede_comparar'] = True
+    elif rol == 'vendedor':
+        # Vendedor solo puede ver sus propios datos
+        permisos['puede_ver_todos'] = False
+        permisos['puede_comparar'] = False
+        if equipo:
+            permisos['equipos_permitidos'] = [equipo]
+        permisos['vendedores_permitidos'] = [nombre]
+    
+    return permisos
+
+
+def filtrar_datos_por_permisos(df, permisos, columna_agente='agente', columna_equipo='equipo'):
+    """
+    Filtra un DataFrame según los permisos del usuario.
+    Si el usuario no puede ver todos, filtra por equipo y/o vendedor.
+    """
+    if permisos['puede_ver_todos']:
+        return df
+    
+    df_filtrado = df.copy()
+    
+    # Filtrar por vendedores específicos primero (para vendedores)
+    if permisos['vendedores_permitidos']:
+        nombre_usuario = permisos['vendedores_permitidos'][0].lower()
+        if columna_agente in df_filtrado.columns:
+            mask = df_filtrado[columna_agente].apply(
+                lambda x: nombre_usuario in str(x).lower() if pd.notna(x) else False
+            )
+            df_filtrado = df_filtrado[mask]
+        return df_filtrado
+    
+    # Filtrar por equipo (para supervisores)
+    if permisos['equipos_permitidos'] and columna_equipo in df_filtrado.columns:
+        df_filtrado = df_filtrado[df_filtrado[columna_equipo].isin(permisos['equipos_permitidos'])]
+    
+    return df_filtrado
+
 
 def mostrar_login():
     """Muestra la pantalla de login profesional - Formato corporativo"""
@@ -764,8 +1698,7 @@ def mostrar_login():
         </div>
         """, unsafe_allow_html=True)
         
-        # Card del formulario
-        st.markdown('<div class="login-form-card">', unsafe_allow_html=True)
+        # Título del formulario
         st.markdown('<p class="login-form-title">Iniciar Sesión</p>', unsafe_allow_html=True)
         
         with st.form("login_form", clear_on_submit=False):
@@ -796,8 +1729,6 @@ def mostrar_login():
                         st.error("Usuario o contraseña incorrectos")
                 else:
                     st.warning("Por favor complete todos los campos")
-        
-        st.markdown('</div>', unsafe_allow_html=True)
         
         # Features
         st.markdown("""
@@ -905,6 +1836,63 @@ def aplicar_mapeo_nombres_df(df, columna='agente'):
 # Alias para compatibilidad con código existente
 obtener_nombre_agente = obtener_nombre_vendedor_global
 
+
+def extraer_fecha_de_archivo(nombre_archivo):
+    """
+    Extrae la fecha de la llamada del nombre del archivo.
+    El patrón es: YYMMDD en posiciones como 260112 (2026-01-12)
+    Ejemplo: amza10_1_260112105813064_ACD_11829_transcripcion.json -> 2026-01-12
+    """
+    import re
+    if pd.isna(nombre_archivo) or not isinstance(nombre_archivo, str):
+        return None
+    
+    # Buscar patrón de 6 dígitos que comience con 26 (2026)
+    match = re.search(r'26(01\d{2})\d+', nombre_archivo)
+    if match:
+        # Extraer MMDD del match
+        fecha_str = match.group(0)[:6]  # Primeros 6 dígitos: YYMMDD
+        try:
+            year = 2000 + int(fecha_str[:2])  # 26 -> 2026
+            month = int(fecha_str[2:4])
+            day = int(fecha_str[4:6])
+            return datetime(year, month, day).date()
+        except:
+            return None
+    return None
+
+
+def obtener_rango_fechas_disponibles(df, columna_fecha='fecha_llamada'):
+    """Obtiene el rango de fechas disponibles en el DataFrame"""
+    if columna_fecha not in df.columns:
+        return None, None
+    fechas_validas = df[columna_fecha].dropna()
+    if len(fechas_validas) == 0:
+        return None, None
+    return fechas_validas.min(), fechas_validas.max()
+
+
+def obtener_semanas_disponibles(df, columna_fecha='fecha_llamada'):
+    """Agrupa las fechas disponibles en semanas para facilitar la comparación"""
+    if columna_fecha not in df.columns:
+        return {}
+    
+    fechas_validas = df[columna_fecha].dropna().unique()
+    semanas = {}
+    
+    for fecha in sorted(fechas_validas):
+        # Obtener inicio de semana (lunes)
+        if isinstance(fecha, datetime):
+            fecha = fecha.date()
+        inicio_semana = fecha - pd.Timedelta(days=fecha.weekday())
+        fin_semana = inicio_semana + pd.Timedelta(days=6)
+        clave = f"{inicio_semana.strftime('%d/%m')} - {fin_semana.strftime('%d/%m/%Y')}"
+        if clave not in semanas:
+            semanas[clave] = {'inicio': inicio_semana, 'fin': fin_semana}
+    
+    return semanas
+
+
 @st.cache_data(ttl=300)  # Cache por 5 minutos
 def cargar_datos():
     """Carga todos los datos necesarios para el dashboard"""
@@ -936,6 +1924,11 @@ def cargar_datos():
     if os.path.exists(ruta):
         with open(ruta, 'r', encoding='utf-8') as f:
             datos['planes'] = json.load(f)
+    
+    # Cargar CSV de planes detallado
+    ruta = os.path.join(BASE_DIR, 'reportes/planes/analisis_planes_detallado.csv')
+    if os.path.exists(ruta):
+        datos['planes_df'] = pd.read_csv(ruta)
     
     # Cargar resumen de quejas
     ruta = os.path.join(BASE_DIR, 'reportes/quejas/resumen_quejas.json')
@@ -1010,6 +2003,23 @@ def cargar_datos():
     for df_name in dataframes_con_agente:
         if df_name in datos and datos[df_name] is not None:
             datos[df_name] = aplicar_mapeo_nombres_df(datos[df_name], 'agente')
+    
+    # =========================================================================
+    # AGREGAR COLUMNA DE FECHA A LOS DATAFRAMES QUE TIENEN NOMBRE DE ARCHIVO
+    # =========================================================================
+    dataframes_con_archivo = ['evaluaciones_gemini_df', 'clasificacion_df', 'integral_df']
+    for df_name in dataframes_con_archivo:
+        if df_name in datos and datos[df_name] is not None:
+            df = datos[df_name]
+            if 'archivo' in df.columns:
+                # Extraer fecha del nombre del archivo
+                df['fecha_llamada'] = df['archivo'].apply(extraer_fecha_de_archivo)
+                # Convertir a datetime para facilitar filtrado
+                df['fecha_llamada'] = pd.to_datetime(df['fecha_llamada'], errors='coerce')
+                # Crear columna de semana para agrupaciones
+                df['semana'] = df['fecha_llamada'].dt.isocalendar().week
+                df['dia_semana'] = df['fecha_llamada'].dt.day_name()
+                datos[df_name] = df
     
     return datos
 
@@ -1256,38 +2266,184 @@ def pagina_planes_ofrecidos(datos, df):
     """Página de análisis de planes ofrecidos, fibra y promociones"""
     st.markdown('<div class="main-header">📱 COMMAND · Análisis de Portafolio de Productos</div>', unsafe_allow_html=True)
     
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
+    
     if 'planes' not in datos:
         st.warning("⚠️ No hay datos de planes disponibles.")
         return
     
     planes = datos['planes']
     stats = planes.get('estadisticas', {})
-    total_llamadas = planes.get('total_llamadas', 0)
+    
+    # Cargar datos de filtrado
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+    
+    # Crear mapeo inverso: nombre -> equipo
+    nombre_a_equipo = {}
+    for equipo, vendedores in equipos_vendedores.items():
+        for vendedor in vendedores:
+            nombre_a_equipo[vendedor.lower().strip()] = equipo
+    
+    def obtener_equipo_por_nombre(nombre):
+        """Obtiene el equipo del vendedor por su nombre"""
+        if pd.isna(nombre) or nombre is None:
+            return "Sin Equipo"
+        nombre_lower = str(nombre).lower().strip()
+        # Buscar coincidencia exacta primero
+        if nombre_lower in nombre_a_equipo:
+            return nombre_a_equipo[nombre_lower]
+        # Buscar coincidencia parcial
+        for nom, eq in nombre_a_equipo.items():
+            if nombre_lower in nom or nom in nombre_lower:
+                return eq
+        return "Sin Equipo"
+    
+    # Cargar CSV de planes para filtrado
+    planes_df = datos.get('planes_df', pd.DataFrame())
+    
+    if not planes_df.empty and 'agente' in planes_df.columns:
+        # Aplicar nombres reales
+        planes_df['agente_display'] = planes_df['agente'].apply(obtener_nombre_agente)
+        planes_df['equipo'] = planes_df['agente_display'].apply(obtener_equipo_por_nombre)
+        
+        # =========================================================================
+        # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
+        # =========================================================================
+        if permisos['rol'] == 'vendedor':
+            # Vendedor: Filtrar solo sus datos, sin mostrar selectores
+            nombre_vendedor = permisos['nombre_usuario'].lower()
+            planes_df = planes_df[planes_df['agente_display'].apply(
+                lambda x: nombre_vendedor in str(x).lower() if pd.notna(x) else False
+            )]
+            equipo_seleccionado = permisos['equipo'] if permisos['equipo'] else "Sin Equipo"
+            agente_seleccionado = permisos['nombre_usuario']
+            
+            st.info(f"👤 Mostrando datos de: **{permisos['nombre_usuario']}** | Equipo: **{equipo_seleccionado}**")
+            
+        elif permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+            # Supervisor con equipo: Filtrar solo su equipo
+            equipo_supervisor = permisos['equipos_permitidos'][0]
+            planes_df = planes_df[planes_df['equipo'] == equipo_supervisor]
+            equipo_seleccionado = equipo_supervisor
+            
+            st.info(f"🏢 Mostrando datos del equipo: **{equipo_supervisor}**")
+            
+            # Mostrar selector de vendedor dentro del equipo
+            st.markdown('<p class="section-header">🔍 Filtro de Vendedor</p>', unsafe_allow_html=True)
+            agentes_equipo = planes_df['agente_display'].unique().tolist()
+            agentes_opciones = ["Todos"] + sorted([a for a in agentes_equipo if a])
+            agente_seleccionado = st.selectbox(
+                "👤 Vendedor",
+                agentes_opciones,
+                key="filtro_agente_planes"
+            )
+        else:
+            # Admin o supervisor sin restricciones: Mostrar todos los filtros
+            st.markdown('<p class="section-header">🔍 Filtros</p>', unsafe_allow_html=True)
+            
+            # Obtener listas de equipos únicos
+            equipos_unicos = planes_df['equipo'].unique().tolist()
+            equipos_ordenados = sorted([e for e in equipos_unicos if e != "Sin Equipo"])
+            if "Sin Equipo" in equipos_unicos:
+                equipos_ordenados.append("Sin Equipo")
+            equipos_disponibles = ["Todos los Equipos"] + equipos_ordenados
+            
+            col_filtro1, col_filtro2 = st.columns(2)
+            
+            with col_filtro1:
+                equipo_seleccionado = st.selectbox(
+                    "🏢 Equipo",
+                    equipos_disponibles,
+                    key="filtro_equipo_planes"
+                )
+            
+            # Filtrar agentes según equipo
+            if equipo_seleccionado != "Todos los Equipos":
+                agentes_filtrados_list = planes_df[planes_df['equipo'] == equipo_seleccionado]['agente_display'].unique().tolist()
+            else:
+                agentes_filtrados_list = planes_df['agente_display'].unique().tolist()
+            
+            with col_filtro2:
+                agentes_opciones = ["Todos"] + sorted([a for a in agentes_filtrados_list if a])
+                agente_seleccionado = st.selectbox(
+                    "👤 Vendedor",
+                    agentes_opciones,
+                    key="filtro_agente_planes"
+                )
+        
+        # Aplicar filtros al DataFrame
+        df_filtrado = planes_df.copy()
+        if permisos['puede_ver_todos'] and equipo_seleccionado != "Todos los Equipos":
+            df_filtrado = df_filtrado[df_filtrado['equipo'] == equipo_seleccionado]
+        if agente_seleccionado != "Todos":
+            df_filtrado = df_filtrado[df_filtrado['agente_display'] == agente_seleccionado]
+        
+        # Recalcular estadísticas basadas en el filtro
+        total_llamadas = len(df_filtrado)
+        
+        # Estadísticas de planes filtradas
+        con_plan = len(df_filtrado[df_filtrado['cantidad_planes'] > 0])
+        sin_plan = len(df_filtrado[df_filtrado['cantidad_planes'] == 0])
+        pct_con_plan = con_plan / total_llamadas * 100 if total_llamadas > 0 else 0
+        
+        # Estadísticas de fibra filtradas
+        ofrece_fibra = len(df_filtrado[df_filtrado['ofrece_fibra'] == True])
+        no_ofrece_fibra = len(df_filtrado[df_filtrado['ofrece_fibra'] == False])
+        pct_fibra = ofrece_fibra / total_llamadas * 100 if total_llamadas > 0 else 0
+        
+        # Estadísticas de promociones filtradas
+        df_promo = df_filtrado[df_filtrado['es_dia_promo'] == True]
+        dias_promo_total = len(df_promo)
+        menciona_promo = len(df_promo[df_promo['menciona_promo'] == True])
+        no_menciona_promo = len(df_promo[df_promo['menciona_promo'] == False])
+        
+        # Mostrar indicador de filtro activo (solo para admin)
+        if permisos['puede_ver_todos'] and (equipo_seleccionado != "Todos los Equipos" or agente_seleccionado != "Todos"):
+            filtro_texto = []
+            if equipo_seleccionado != "Todos los Equipos":
+                filtro_texto.append(f"Equipo: {equipo_seleccionado}")
+            if agente_seleccionado != "Todos":
+                filtro_texto.append(f"Vendedor: {agente_seleccionado}")
+            st.info(f"🔍 Filtro activo: {' | '.join(filtro_texto)} - Mostrando {total_llamadas:,} llamadas")
+    else:
+        total_llamadas = planes.get('total_llamadas', 0)
+        con_plan = stats.get('planes', {}).get('con_plan', 0)
+        sin_plan = stats.get('planes', {}).get('sin_plan', 0)
+        pct_con_plan = stats.get('planes', {}).get('porcentaje_con_plan', 0)
+        ofrece_fibra = stats.get('fibra', {}).get('ofrece', 0)
+        no_ofrece_fibra = stats.get('fibra', {}).get('no_ofrece', 0)
+        pct_fibra = stats.get('fibra', {}).get('porcentaje_ofrece', 0)
+        dias_promo_total = stats.get('promociones', {}).get('dias_promo_total', 0)
+        menciona_promo = stats.get('promociones', {}).get('dias_promo_menciona', 0)
+        no_menciona_promo = stats.get('promociones', {}).get('dias_promo_no_menciona', 0)
+        df_filtrado = pd.DataFrame()
+    
+    st.markdown("---")
     
     # =========================================================================
     # SECCIÓN 1: PLANES DE PORTA
     # =========================================================================
     st.markdown('<p class="section-header">📱 Análisis de Ofertas de Planes Móviles</p>', unsafe_allow_html=True)
     
-    planes_stats = stats.get('planes', {})
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.metric("📞 Total Operaciones", f"{total_llamadas:,}")
     with col2:
-        con_plan = planes_stats.get('con_plan', 0)
-        pct = planes_stats.get('porcentaje_con_plan', 0)
-        st.metric("✅ Oferta Realizada", f"{con_plan:,}", f"{pct:.1f}%")
+        st.metric("✅ Oferta Realizada", f"{con_plan:,}", f"{pct_con_plan:.1f}%")
     with col3:
-        sin_plan = planes_stats.get('sin_plan', 0)
-        pct_sin = 100 - pct if pct else 0
+        pct_sin = 100 - pct_con_plan if pct_con_plan else 0
         st.metric("❌ Sin Oferta", f"{sin_plan:,}", f"{pct_sin:.1f}%", delta_color="inverse")
     with col4:
         # Plan más usado como primer ofrecimiento
-        primer_plan_conteo = stats.get('primer_plan_conteo', {})
+        if not df_filtrado.empty and 'primer_plan' in df_filtrado.columns:
+            primer_plan_conteo = df_filtrado['primer_plan'].dropna().value_counts().to_dict()
+        else:
+            primer_plan_conteo = stats.get('primer_plan_conteo', {})
         if primer_plan_conteo:
             top_plan = max(primer_plan_conteo, key=primer_plan_conteo.get)
-            st.metric("🥇 Plan Principal", top_plan.upper(), f"{primer_plan_conteo[top_plan]} veces")
+            st.metric("🥇 Plan Principal", str(top_plan).upper(), f"{primer_plan_conteo[top_plan]} veces")
     
     # Gráficos de planes
     col1, col2 = st.columns(2)
@@ -1295,7 +2451,18 @@ def pagina_planes_ofrecidos(datos, df):
     with col1:
         st.markdown("**📊 Planes Más Ofrecidos**")
         
-        planes_conteo = stats.get('planes_conteo', {})
+        # Calcular conteo de planes desde el DF filtrado si está disponible
+        if not df_filtrado.empty and 'planes_ofrecidos' in df_filtrado.columns:
+            # Contar planes desde los datos filtrados
+            all_planes = []
+            for planes_str in df_filtrado['planes_ofrecidos'].dropna():
+                if isinstance(planes_str, str) and planes_str:
+                    all_planes.extend([p.strip().lower() for p in planes_str.split(',')])
+            from collections import Counter
+            planes_conteo = dict(Counter(all_planes))
+        else:
+            planes_conteo = stats.get('planes_conteo', {})
+        
         if planes_conteo:
             orden = ['4gb', '8gb', '15gb', '30gb']
             planes_ord = {k.upper(): planes_conteo.get(k, 0) for k in orden if k in planes_conteo}
@@ -1324,30 +2491,37 @@ def pagina_planes_ofrecidos(datos, df):
     with col2:
         st.markdown("**🥇 Primer Plan Ofrecido (Estrategia Inicial)**")
         
-        primer_plan = stats.get('primer_plan_conteo', {})
+        # Usar datos filtrados si están disponibles
+        if not df_filtrado.empty and 'primer_plan' in df_filtrado.columns:
+            primer_plan_series = df_filtrado['primer_plan'].dropna().str.lower().value_counts()
+            primer_plan = primer_plan_series.to_dict()
+        else:
+            primer_plan = stats.get('primer_plan_conteo', {})
+        
         if primer_plan:
             # Ordenar
             orden = ['4gb', '8gb', '15gb', '30gb']
             primer_ord = {k.upper(): primer_plan.get(k, 0) for k in orden if k in primer_plan}
             
-            fig = px.pie(
-                values=list(primer_ord.values()),
-                names=list(primer_ord.keys()),
-                color_discrete_sequence=['#1E3A5F', '#10B981', '#F59E0B', '#EF4444']
-            )
-            fig.update_traces(
-                textposition='inside',
-                textinfo='percent+label',
-                textfont=dict(size=12, color='#FFFFFF')
-            )
-            fig.update_layout(
-                height=280,
-                showlegend=True,
-                legend=dict(font=dict(size=11, color='#2C3E50')),
-                margin=dict(t=20, b=20, l=20, r=120),
-                paper_bgcolor='#FFFFFF'
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            if sum(primer_ord.values()) > 0:
+                fig = px.pie(
+                    values=list(primer_ord.values()),
+                    names=list(primer_ord.keys()),
+                    color_discrete_sequence=['#1E3A5F', '#10B981', '#F59E0B', '#EF4444']
+                )
+                fig.update_traces(
+                    textposition='inside',
+                    textinfo='percent+label',
+                    textfont=dict(size=12, color='#FFFFFF')
+                )
+                fig.update_layout(
+                    height=280,
+                    showlegend=True,
+                    legend=dict(font=dict(size=11, color='#2C3E50')),
+                    margin=dict(t=20, b=20, l=20, r=120),
+                    paper_bgcolor='#FFFFFF'
+                )
+                st.plotly_chart(fig, use_container_width=True)
     
     st.markdown("---")
     
@@ -1356,78 +2530,77 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     st.markdown('<p class="section-header">🏠 Análisis de Ofertas de Fibra Óptica</p>', unsafe_allow_html=True)
     
-    fibra_stats = stats.get('fibra', {})
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        ofrece = fibra_stats.get('ofrece', 0)
-        pct_ofrece = fibra_stats.get('porcentaje_ofrece', 0)
-        st.metric("✅ Oferta Realizada", f"{ofrece:,}", f"{pct_ofrece:.1f}%")
+        pct_no_fibra = 100 - pct_fibra if pct_fibra else 0
+        st.metric("✅ Oferta Realizada", f"{ofrece_fibra:,}", f"{pct_fibra:.1f}%")
     with col2:
-        no_ofrece = fibra_stats.get('no_ofrece', 0)
-        pct_no = 100 - pct_ofrece if pct_ofrece else 0
-        st.metric("❌ Sin Oferta de Fibra", f"{no_ofrece:,}", f"-{pct_no:.1f}%", delta_color="inverse")
+        st.metric("❌ Sin Oferta de Fibra", f"{no_ofrece_fibra:,}", f"-{pct_no_fibra:.1f}%", delta_color="inverse")
     with col3:
         # Indicador visual
-        if pct_ofrece < 30:
-            st.error(f"⚠️ Solo {pct_ofrece:.1f}% ofrece Fibra - Requiere acción inmediata")
-        elif pct_ofrece < 50:
-            st.warning(f"⚠️ {pct_ofrece:.1f}% ofrece Fibra - Área de mejora")
+        if pct_fibra < 30:
+            st.error(f"⚠️ Solo {pct_fibra:.1f}% ofrece Fibra - Requiere acción inmediata")
+        elif pct_fibra < 50:
+            st.warning(f"⚠️ {pct_fibra:.1f}% ofrece Fibra - Área de mejora")
         else:
-            st.success(f"✅ {pct_ofrece:.1f}% ofrece Fibra - Cumplimiento adecuado")
+            st.success(f"✅ {pct_fibra:.1f}% ofrece Fibra - Cumplimiento adecuado")
     
     # Gráfico de Fibra
     col1, col2 = st.columns(2)
     
     with col1:
-        fig = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
-            value=pct_ofrece,
-            domain={'x': [0, 1], 'y': [0, 1]},
-            title={'text': "% Ofrece Fibra", 'font': {'size': 14, 'color': '#2C3E50'}},
-            delta={'reference': 50, 'increasing': {'color': "#27AE60"}, 'decreasing': {'color': "#E74C3C"}},
-            gauge={
-                'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#2C3E50"},
-                'bar': {'color': "#3B82F6"},
-                'bgcolor': "white",
-                'borderwidth': 2,
-                'bordercolor': "#E5E8E8",
-                'steps': [
-                    {'range': [0, 30], 'color': '#FADBD8'},
-                    {'range': [30, 50], 'color': '#FCF3CF'},
-                    {'range': [50, 100], 'color': '#D5F5E3'}
-                ],
-                'threshold': {
-                    'line': {'color': "#E74C3C", 'width': 4},
-                    'thickness': 0.75,
-                    'value': 50
-                }
-            }
-        ))
+        # Gráfico de torta para Fibra
+        fig = go.Figure(data=[go.Pie(
+            labels=['Ofrece Fibra', 'No Ofrece Fibra'],
+            values=[ofrece_fibra, no_ofrece_fibra],
+            hole=0.4,
+            marker_colors=['#10B981', '#EF4444'],
+            textinfo='label+percent',
+            textposition='outside',
+            textfont=dict(size=11, color='#2C3E50'),
+            pull=[0.02, 0]
+        )])
         fig.update_layout(
+            title={'text': "Distribución de Ofertas de Fibra", 'font': {'size': 14, 'color': '#2C3E50'}, 'x': 0.5},
             height=220,
-            margin=dict(t=40, b=20, l=30, r=30),
-            paper_bgcolor='#FFFFFF'
+            margin=dict(t=50, b=20, l=30, r=30),
+            paper_bgcolor='#FFFFFF',
+            showlegend=False
         )
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        # Top agentes que NO ofrecen fibra
-        fibra_por_agente = planes.get('fibra_por_agente', {})
-        if fibra_por_agente:
-            agentes_sin_fibra = []
-            for agente, data in fibra_por_agente.items():
-                total = data.get('ofrece', 0) + data.get('no_ofrece', 0)
-                if total >= 5:  # Solo agentes con al menos 5 llamadas
-                    pct = data.get('no_ofrece', 0) / total * 100 if total > 0 else 0
-                    nombre_real = obtener_nombre_agente(agente)
-                    agentes_sin_fibra.append({'Agente': nombre_real, 'Sin Fibra %': round(pct, 1), 'Total': total})
+        # Top agentes que NO ofrecen fibra - usar datos filtrados si hay
+        if not df_filtrado.empty and 'ofrece_fibra' in df_filtrado.columns:
+            fibra_agente_df = df_filtrado.groupby('agente_display').agg({
+                'ofrece_fibra': ['sum', 'count']
+            }).reset_index()
+            fibra_agente_df.columns = ['Agente', 'Ofrece', 'Total']
+            fibra_agente_df['No_Ofrece'] = fibra_agente_df['Total'] - fibra_agente_df['Ofrece']
+            fibra_agente_df = fibra_agente_df[fibra_agente_df['Total'] >= 5]
+            fibra_agente_df['Sin Fibra %'] = (fibra_agente_df['No_Ofrece'] / fibra_agente_df['Total'] * 100).round(1)
+            df_sin_fibra = fibra_agente_df[['Agente', 'Sin Fibra %', 'Total']].sort_values('Sin Fibra %', ascending=False).head(10)
             
-            if agentes_sin_fibra:
-                df_sin_fibra = pd.DataFrame(agentes_sin_fibra)
-                df_sin_fibra = df_sin_fibra.sort_values('Sin Fibra %', ascending=False).head(10)
+            if not df_sin_fibra.empty:
                 st.markdown("**🚨 Vendedores con Menor Oferta de Fibra:**")
                 st.dataframe(df_sin_fibra, use_container_width=True, hide_index=True, height=180)
+        else:
+            fibra_por_agente = planes.get('fibra_por_agente', {})
+            if fibra_por_agente:
+                agentes_sin_fibra = []
+                for agente, data in fibra_por_agente.items():
+                    total = data.get('ofrece', 0) + data.get('no_ofrece', 0)
+                    if total >= 5:  # Solo agentes con al menos 5 llamadas
+                        pct = data.get('no_ofrece', 0) / total * 100 if total > 0 else 0
+                        nombre_real = obtener_nombre_agente(agente)
+                        agentes_sin_fibra.append({'Agente': nombre_real, 'Sin Fibra %': round(pct, 1), 'Total': total})
+            
+                if agentes_sin_fibra:
+                    df_sin_fibra = pd.DataFrame(agentes_sin_fibra)
+                    df_sin_fibra = df_sin_fibra.sort_values('Sin Fibra %', ascending=False).head(10)
+                    st.markdown("**🚨 Vendedores con Menor Oferta de Fibra:**")
+                    st.dataframe(df_sin_fibra, use_container_width=True, hide_index=True, height=180)
     
     st.markdown("---")
     
@@ -1436,23 +2609,22 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     st.markdown('<p class="section-header">🎁 Análisis de Cumplimiento de Promociones</p>', unsafe_allow_html=True)
     
-    promo_stats = stats.get('promociones', {})
     col1, col2, col3, col4 = st.columns(4)
-    
-    dias_promo_total = promo_stats.get('dias_promo_total', 0)
-    menciona = promo_stats.get('dias_promo_menciona', 0)
-    no_menciona = promo_stats.get('dias_promo_no_menciona', 0)
     
     with col1:
         st.metric("📅 Llamadas en Días Promo", f"{dias_promo_total:,}")
     with col2:
-        pct_menciona = menciona / dias_promo_total * 100 if dias_promo_total > 0 else 0
-        st.metric("✅ Menciona Promo", f"{menciona:,}", f"{pct_menciona:.1f}%")
+        pct_menciona = menciona_promo / dias_promo_total * 100 if dias_promo_total > 0 else 0
+        st.metric("✅ Menciona Promo", f"{menciona_promo:,}", f"{pct_menciona:.1f}%")
     with col3:
         pct_no = 100 - pct_menciona if pct_menciona else 0
-        st.metric("❌ NO Menciona Promo", f"{no_menciona:,}", f"-{pct_no:.1f}%", delta_color="inverse")
+        st.metric("❌ NO Menciona Promo", f"{no_menciona_promo:,}", f"-{pct_no:.1f}%", delta_color="inverse")
     with col4:
-        menciona_total = promo_stats.get('menciona_promo', 0)
+        # Menciona promo en total (incluyendo días no promo)
+        if not df_filtrado.empty and 'menciona_promo' in df_filtrado.columns:
+            menciona_total = len(df_filtrado[df_filtrado['menciona_promo'] == True])
+        else:
+            menciona_total = stats.get('promociones', {}).get('menciona_promo', 0)
         pct_total = menciona_total / total_llamadas * 100 if total_llamadas > 0 else 0
         st.metric("📣 Menciona Promo (Total)", f"{menciona_total:,}", f"{pct_total:.1f}%")
     
@@ -1462,10 +2634,10 @@ def pagina_planes_ofrecidos(datos, df):
     with col1:
         if dias_promo_total > 0:
             fig = go.Figure(data=[
-                go.Bar(name='Menciona Promo', x=['Días de Promo'], y=[menciona], marker_color='#27AE60', 
-                       text=[f'{menciona} ({pct_menciona:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12)),
-                go.Bar(name='NO Menciona', x=['Días de Promo'], y=[no_menciona], marker_color='#E74C3C',
-                       text=[f'{no_menciona} ({pct_no:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12))
+                go.Bar(name='Menciona Promo', x=['Días de Promo'], y=[menciona_promo], marker_color='#27AE60', 
+                       text=[f'{menciona_promo} ({pct_menciona:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12)),
+                go.Bar(name='NO Menciona', x=['Días de Promo'], y=[no_menciona_promo], marker_color='#E74C3C',
+                       text=[f'{no_menciona_promo} ({pct_no:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12))
             ])
             fig.update_layout(
                 barmode='stack',
@@ -1477,48 +2649,6 @@ def pagina_planes_ofrecidos(datos, df):
                 legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=10))
             )
             st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        # Indicador visual con mejor legibilidad
-        if pct_menciona < 50:
-            st.markdown(f"""
-            <div style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%); 
-                        padding: 20px; border-radius: 12px; color: white; 
-                        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-                <h3 style="margin: 0 0 10px 0; color: white;">🚨 Alerta Crítica</h3>
-                <p style="margin: 0; font-size: 1.1rem; color: white;">
-                    Solo <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento del 80%.
-                </p>
-                <p style="margin: 10px 0 0 0; color: rgba(255,255,255,0.9);">
-                    <strong>{no_menciona}</strong> llamadas perdieron la oportunidad de ofrecer la promo.
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
-        elif pct_menciona < 70:
-            st.markdown(f"""
-            <div style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); 
-                        padding: 20px; border-radius: 12px; color: #1E293B; 
-                        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
-                <h3 style="margin: 0 0 10px 0; color: #1E293B;">⚠️ Área de Mejora</h3>
-                <p style="margin: 0; font-size: 1.1rem; color: #1E293B;">
-                    <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento.
-                </p>
-                <p style="margin: 10px 0 0 0; color: #374151;">
-                    Todavía hay <strong>{no_menciona}</strong> llamadas que no ofrecieron la promo.
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
-        else:
-            st.markdown(f"""
-            <div style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
-                        padding: 20px; border-radius: 12px; color: white; 
-                        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
-                <h3 style="margin: 0 0 10px 0; color: white;">✅ Buen Desempeño</h3>
-                <p style="margin: 0; font-size: 1.1rem; color: white;">
-                    <strong>{pct_menciona:.1f}%</strong> de las llamadas en días de promoción mencionan el descuento del 80%.
-                </p>
-            </div>
-            """, unsafe_allow_html=True)
 
 
 def pagina_coaching_vendedores(datos):
@@ -1533,6 +2663,9 @@ def pagina_coaching_vendedores(datos):
         </p>
     </div>
     """, unsafe_allow_html=True)
+    
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
     
     # Usar funciones globales de mapeo
     listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
@@ -1554,6 +2687,31 @@ def pagina_coaching_vendedores(datos):
         return
     
     coaching_data = datos['coaching']
+    
+    # =========================================================================
+    # APLICAR FILTRO POR PERMISOS
+    # =========================================================================
+    if permisos['rol'] == 'vendedor':
+        # Vendedor: Solo puede ver su propio coaching
+        nombre_vendedor = permisos['nombre_usuario'].lower()
+        coaching_filtrado = {}
+        for agente, data in coaching_data.items():
+            if nombre_vendedor in str(agente).lower():
+                coaching_filtrado[agente] = data
+        coaching_data = coaching_filtrado
+        equipo_usuario = permisos['equipo'] if permisos['equipo'] else "Sin Equipo"
+        st.info(f"👤 Mostrando coaching de: **{permisos['nombre_usuario']}** | Equipo: **{equipo_usuario}**")
+        
+    elif permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+        # Supervisor: Solo puede ver coaching de su equipo
+        equipo_supervisor = permisos['equipos_permitidos'][0]
+        coaching_filtrado = {}
+        for agente, data in coaching_data.items():
+            equipo_agente = obtener_equipo_vendedor(agente)
+            if equipo_agente == equipo_supervisor:
+                coaching_filtrado[agente] = data
+        coaching_data = coaching_filtrado
+        st.info(f"🏢 Mostrando coaching del equipo: **{equipo_supervisor}**")
     
     # Obtener lista de agentes con coaching
     agentes_coaching = list(coaching_data.keys())
@@ -1605,7 +2763,92 @@ def pagina_coaching_vendedores(datos):
     
     st.markdown("---")
     
-    # Tabs principales
+    # Tabs principales - Ajustados según rol
+    if permisos['rol'] == 'vendedor':
+        # Vendedor solo ve su coaching individual
+        tab1 = st.tabs(["📋 Mi Plan de Coaching"])[0]
+        with tab1:
+            # Mostrar coaching directo sin selector
+            if len(agentes_coaching) > 0:
+                agente_seleccionado = agentes_coaching[0]  # Solo hay uno para el vendedor
+                data = coaching_data[agente_seleccionado]
+                
+                # Métricas del agente
+                equipo_actual = obtener_equipo_vendedor(agente_seleccionado)
+                st.markdown(f"### 📊 Mis Métricas")
+                st.caption(f"📍 Equipo: **{equipo_actual}**")
+                
+                comparativa = data.get('comparativa', {})
+                metricas = data.get('metricas', {})
+                
+                col1, col2, col3, col4, col5 = st.columns(5)
+                
+                with col1:
+                    puntaje = comparativa.get('puntaje_ia', {}).get('agente', 0)
+                    diferencia = comparativa.get('puntaje_ia', {}).get('diferencia', 0)
+                    st.metric(
+                        "Puntaje IA",
+                        f"{puntaje:.1f}",
+                        f"{diferencia:+.1f} vs equipo",
+                        delta_color="normal"
+                    )
+                
+                with col2:
+                    conversion = comparativa.get('conversion', {}).get('agente', 0)
+                    dif_conv = comparativa.get('conversion', {}).get('diferencia', 0)
+                    st.metric(
+                        "Conversión",
+                        f"{conversion:.1f}%",
+                        f"{dif_conv:+.1f}%",
+                        delta_color="normal"
+                    )
+                
+                with col3:
+                    total_ev = metricas.get('evaluaciones', {}).get('total_evaluadas', 0)
+                    st.metric("Evaluaciones", total_ev)
+                
+                with col4:
+                    prom_ev = metricas.get('evaluaciones', {}).get('puntaje_promedio', 0)
+                    st.metric("Promedio Evaluaciones", f"{prom_ev:.1f}")
+                
+                with col5:
+                    excelentes = metricas.get('evaluaciones', {}).get('excelentes', 0)
+                    st.metric("Gestiones Excelentes", excelentes)
+                
+                # Plan de acción
+                if 'plan_accion' in data and data['plan_accion']:
+                    st.markdown("---")
+                    st.markdown("### 📋 Mi Plan de Acción")
+                    plan = data['plan_accion']
+                    
+                    for i, item in enumerate(plan[:10], 1):
+                        with st.expander(f"📌 {i}. {item.get('titulo', 'Acción')}"):
+                            st.markdown(f"**Descripción:** {item.get('descripcion', 'Sin descripción')}")
+                            st.markdown(f"**Prioridad:** {item.get('prioridad', 'Media')}")
+                            if 'recursos' in item:
+                                st.markdown(f"**Recursos sugeridos:** {item.get('recursos', '')}")
+                
+                # Fortalezas y debilidades
+                if 'fortalezas' in data or 'debilidades' in data:
+                    st.markdown("---")
+                    col_f, col_d = st.columns(2)
+                    
+                    with col_f:
+                        if 'fortalezas' in data and data['fortalezas']:
+                            st.markdown("### 💪 Mis Fortalezas")
+                            for f in data['fortalezas'][:5]:
+                                st.success(f"✅ {f}")
+                    
+                    with col_d:
+                        if 'debilidades' in data and data['debilidades']:
+                            st.markdown("### 🎯 Áreas de Mejora")
+                            for d in data['debilidades'][:5]:
+                                st.warning(f"📌 {d}")
+            else:
+                st.info("No hay coaching disponible para tu perfil.")
+        return  # Terminar aquí para vendedores
+    
+    # Para admin y supervisor, mostrar todos los tabs
     tab1, tab2, tab3 = st.tabs(["📋 Coaching Individual", "📊 Comparativa del Equipo", "📈 Ranking de Mejora"])
     
     with tab1:
@@ -1620,22 +2863,29 @@ def pagina_coaching_vendedores(datos):
                 agentes_por_equipo[equipo] = []
             agentes_por_equipo[equipo].append(agente)
         
-        # Filtro por equipo
+        # Filtro por equipo - Ajustado según permisos
         col_equipo, col_vendedor = st.columns([1, 2])
         
         with col_equipo:
-            equipos_disponibles = ["Todos los Equipos"] + sorted([e for e in agentes_por_equipo.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in agentes_por_equipo else [])
-            equipo_seleccionado = st.selectbox(
-                "🏢 Filtrar por Equipo",
-                equipos_disponibles,
-                help="Filtra los vendedores por equipo/supervisor"
-            )
+            if permisos['puede_ver_todos']:
+                # Admin: puede ver todos los equipos
+                equipos_disponibles = ["Todos los Equipos"] + sorted([e for e in agentes_por_equipo.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in agentes_por_equipo else [])
+                equipo_seleccionado = st.selectbox(
+                    "🏢 Filtrar por Equipo",
+                    equipos_disponibles,
+                    help="Filtra los vendedores por equipo/supervisor"
+                )
+            else:
+                # Supervisor: solo ve su equipo (ya filtrado arriba)
+                equipo_supervisor = permisos['equipos_permitidos'][0] if permisos['equipos_permitidos'] else "Sin Equipo"
+                st.markdown(f"**🏢 Equipo:** {equipo_supervisor}")
+                equipo_seleccionado = equipo_supervisor
         
         # Filtrar agentes según equipo seleccionado
         if equipo_seleccionado == "Todos los Equipos":
             agentes_filtrados = agentes_coaching
         else:
-            agentes_filtrados = agentes_por_equipo.get(equipo_seleccionado, [])
+            agentes_filtrados = agentes_por_equipo.get(equipo_seleccionado, agentes_coaching)
         
         # Crear opciones con nombre real y puntaje
         opciones_agentes = []
@@ -1889,13 +3139,18 @@ def pagina_coaching_vendedores(datos):
     with tab2:
         st.markdown("### 📊 Comparativa General del Equipo")
         
-        # Filtro por equipo en comparativa
-        equipos_disponibles_tab2 = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in equipos_vendedores else [])
-        equipo_filtro_tab2 = st.selectbox(
-            "🏢 Filtrar por Equipo",
-            equipos_disponibles_tab2,
-            key="equipo_tab2"
-        )
+        # Filtro por equipo en comparativa - Ajustado según permisos
+        if permisos['puede_ver_todos']:
+            equipos_disponibles_tab2 = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in equipos_vendedores else [])
+            equipo_filtro_tab2 = st.selectbox(
+                "🏢 Filtrar por Equipo",
+                equipos_disponibles_tab2,
+                key="equipo_tab2"
+            )
+        else:
+            # Supervisor: solo su equipo
+            equipo_filtro_tab2 = permisos['equipos_permitidos'][0] if permisos['equipos_permitidos'] else "Sin Equipo"
+            st.markdown(f"**🏢 Equipo:** {equipo_filtro_tab2}")
         
         # Crear DataFrame con métricas de todos los agentes
         metricas_equipo = []
@@ -1980,18 +3235,25 @@ def pagina_coaching_vendedores(datos):
     with tab3:
         st.markdown("### 📈 Ranking y Prioridades de Mejora")
         
-        # Filtro por equipo para el ranking
+        # Filtro por equipo para el ranking - Ajustado según permisos
         _, equipos_vendedores_ranking = cargar_listado_vendedores()
-        equipos_ranking = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores_ranking.keys() if e and e != "Sin Equipo"])
-        if "Sin Equipo" in equipos_vendedores_ranking:
-            equipos_ranking.append("Sin Equipo")
         
-        equipo_filtro_ranking = st.selectbox(
-            "🏢 Filtrar por Equipo",
-            equipos_ranking,
-            key="equipo_filtro_ranking",
-            help="Selecciona un equipo para ver su ranking específico"
-        )
+        if permisos['puede_ver_todos']:
+            # Admin: puede ver todos los equipos
+            equipos_ranking = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores_ranking.keys() if e and e != "Sin Equipo"])
+            if "Sin Equipo" in equipos_vendedores_ranking:
+                equipos_ranking.append("Sin Equipo")
+            
+            equipo_filtro_ranking = st.selectbox(
+                "🏢 Filtrar por Equipo",
+                equipos_ranking,
+                key="equipo_filtro_ranking",
+                help="Selecciona un equipo para ver su ranking específico"
+            )
+        else:
+            # Supervisor: solo ve su equipo
+            equipo_filtro_ranking = permisos['equipos_permitidos'][0] if permisos['equipos_permitidos'] else "Sin Equipo"
+            st.markdown(f"**🏢 Equipo:** {equipo_filtro_ranking}")
         
         st.markdown("---")
         
@@ -2549,12 +3811,157 @@ def pagina_quejas_no_resueltas(datos):
     </div>
     """, unsafe_allow_html=True)
     
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
+    
     if 'quejas' not in datos:
         st.warning("⚠️ No hay datos de quejas disponibles.")
         return
     
     quejas = datos['quejas']
-    stats = quejas.get('estadisticas', {})
+    stats_original = quejas.get('estadisticas', {})
+    
+    # Cargar datos de filtrado
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+    
+    # Crear mapeo inverso: nombre -> equipo
+    nombre_a_equipo = {}
+    for equipo, vendedores in equipos_vendedores.items():
+        for vendedor in vendedores:
+            nombre_a_equipo[vendedor.lower().strip()] = equipo
+    
+    def obtener_equipo_por_nombre(nombre):
+        """Obtiene el equipo del vendedor por su nombre"""
+        if pd.isna(nombre) or nombre is None:
+            return "Sin Equipo"
+        nombre_lower = str(nombre).lower().strip()
+        if nombre_lower in nombre_a_equipo:
+            return nombre_a_equipo[nombre_lower]
+        for nom, eq in nombre_a_equipo.items():
+            if nombre_lower in nom or nom in nombre_lower:
+                return eq
+        return "Sin Equipo"
+    
+    # Cargar CSV de quejas para filtrado
+    quejas_df = datos.get('quejas_df', pd.DataFrame())
+    
+    filtro_activo = False
+    df_filtrado = pd.DataFrame()
+    
+    if not quejas_df.empty and 'agente' in quejas_df.columns:
+        # Aplicar nombres reales
+        quejas_df['agente_display'] = quejas_df['agente'].apply(obtener_nombre_agente)
+        quejas_df['equipo'] = quejas_df['agente_display'].apply(obtener_equipo_por_nombre)
+        
+        # =========================================================================
+        # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
+        # =========================================================================
+        if permisos['rol'] == 'vendedor':
+            # Vendedor: Filtrar solo sus datos
+            nombre_vendedor = permisos['nombre_usuario'].lower()
+            quejas_df = quejas_df[quejas_df['agente_display'].apply(
+                lambda x: nombre_vendedor in str(x).lower() if pd.notna(x) else False
+            )]
+            equipo_seleccionado = permisos['equipo'] if permisos['equipo'] else "Sin Equipo"
+            agente_seleccionado = permisos['nombre_usuario']
+            filtro_activo = True
+            
+            st.info(f"👤 Mostrando datos de: **{permisos['nombre_usuario']}** | Equipo: **{equipo_seleccionado}**")
+            df_filtrado = quejas_df.copy()
+            
+        elif permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+            # Supervisor con equipo: Filtrar solo su equipo
+            equipo_supervisor = permisos['equipos_permitidos'][0]
+            quejas_df = quejas_df[quejas_df['equipo'] == equipo_supervisor]
+            equipo_seleccionado = equipo_supervisor
+            filtro_activo = True
+            
+            st.info(f"🏢 Mostrando datos del equipo: **{equipo_supervisor}**")
+            
+            # Mostrar selector de vendedor
+            st.markdown('<p class="section-header">🔍 Filtro de Vendedor</p>', unsafe_allow_html=True)
+            agentes_equipo = quejas_df['agente_display'].unique().tolist()
+            agentes_opciones = ["Todos"] + sorted([a for a in agentes_equipo if a])
+            agente_seleccionado = st.selectbox(
+                "👤 Vendedor",
+                agentes_opciones,
+                key="filtro_agente_quejas"
+            )
+            
+            df_filtrado = quejas_df.copy()
+            if agente_seleccionado != "Todos":
+                df_filtrado = df_filtrado[df_filtrado['agente_display'] == agente_seleccionado]
+        else:
+            # Admin o supervisor sin restricciones
+            st.markdown('<p class="section-header">🔍 Filtros</p>', unsafe_allow_html=True)
+            
+            equipos_unicos = quejas_df['equipo'].unique().tolist()
+            equipos_ordenados = sorted([e for e in equipos_unicos if e != "Sin Equipo"])
+            if "Sin Equipo" in equipos_unicos:
+                equipos_ordenados.append("Sin Equipo")
+            equipos_disponibles = ["Todos los Equipos"] + equipos_ordenados
+            
+            col_filtro1, col_filtro2 = st.columns(2)
+            
+            with col_filtro1:
+                equipo_seleccionado = st.selectbox(
+                    "🏢 Equipo",
+                    equipos_disponibles,
+                    key="filtro_equipo_quejas"
+                )
+            
+            if equipo_seleccionado != "Todos los Equipos":
+                agentes_filtrados_list = quejas_df[quejas_df['equipo'] == equipo_seleccionado]['agente_display'].unique().tolist()
+            else:
+                agentes_filtrados_list = quejas_df['agente_display'].unique().tolist()
+            
+            with col_filtro2:
+                agentes_opciones = ["Todos"] + sorted([a for a in agentes_filtrados_list if a])
+                agente_seleccionado = st.selectbox(
+                    "👤 Vendedor",
+                    agentes_opciones,
+                    key="filtro_agente_quejas"
+                )
+            
+            df_filtrado = quejas_df.copy()
+            if equipo_seleccionado != "Todos los Equipos":
+                df_filtrado = df_filtrado[df_filtrado['equipo'] == equipo_seleccionado]
+                filtro_activo = True
+            if agente_seleccionado != "Todos":
+                df_filtrado = df_filtrado[df_filtrado['agente_display'] == agente_seleccionado]
+                filtro_activo = True
+        
+        # Recalcular estadísticas basadas en el filtro
+        if filtro_activo or len(df_filtrado) > 0:
+            total_llamadas = len(df_filtrado)
+            con_queja = len(df_filtrado[df_filtrado['cantidad_quejas'] > 0]) if 'cantidad_quejas' in df_filtrado.columns else total_llamadas
+            no_resueltas = int(df_filtrado['quejas_no_resueltas'].sum()) if 'quejas_no_resueltas' in df_filtrado.columns else 0
+            resueltas = max(0, con_queja - no_resueltas)
+            pct_con_queja = con_queja / total_llamadas * 100 if total_llamadas > 0 else 0
+            pct_no_resuelta = no_resueltas / con_queja * 100 if con_queja > 0 else 0
+            
+            # Mostrar indicador solo para admin
+            if permisos['puede_ver_todos'] and (equipo_seleccionado != "Todos los Equipos" or agente_seleccionado != "Todos"):
+                filtro_texto = []
+                if equipo_seleccionado != "Todos los Equipos":
+                    filtro_texto.append(f"Equipo: {equipo_seleccionado}")
+                if agente_seleccionado != "Todos":
+                    filtro_texto.append(f"Vendedor: {agente_seleccionado}")
+                st.info(f"🔍 Filtro activo: {' | '.join(filtro_texto)} - Mostrando {total_llamadas:,} registros con quejas")
+        else:
+            total_llamadas = stats_original.get('total_llamadas', 0)
+            con_queja = stats_original.get('con_queja', 0)
+            resueltas = stats_original.get('queja_resuelta', 0)
+            no_resueltas = stats_original.get('queja_no_resuelta', 0)
+            pct_con_queja = stats_original.get('porcentaje_con_queja', 0)
+            pct_no_resuelta = stats_original.get('porcentaje_no_resuelta', 0)
+    else:
+        total_llamadas = stats_original.get('total_llamadas', 0)
+        con_queja = stats_original.get('con_queja', 0)
+        resueltas = stats_original.get('queja_resuelta', 0)
+        no_resueltas = stats_original.get('queja_no_resuelta', 0)
+        pct_con_queja = stats_original.get('porcentaje_con_queja', 0)
+        pct_no_resuelta = stats_original.get('porcentaje_no_resuelta', 0)
     
     # Nota explicativa
     st.info("""
@@ -2571,23 +3978,21 @@ def pagina_quejas_no_resueltas(datos):
     col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        st.metric("📞 Total Llamadas", f"{stats.get('total_llamadas', 0):,}")
+        st.metric("📞 Total Llamadas", f"{total_llamadas:,}")
     with col2:
-        analizadas = stats.get('analizadas', 0)
-        excluidas = stats.get('excluidas_venta', 0) + stats.get('excluidas_continuacion', 0)
-        st.metric("🔍 Analizadas", f"{analizadas:,}", f"-{excluidas} excluidas")
+        if not filtro_activo:
+            analizadas = stats_original.get('analizadas', 0)
+            excluidas = stats_original.get('excluidas_venta', 0) + stats_original.get('excluidas_continuacion', 0)
+            st.metric("🔍 Analizadas", f"{analizadas:,}", f"-{excluidas} excluidas")
+        else:
+            st.metric("🔍 Registros Filtrados", f"{len(df_filtrado):,}")
     with col3:
-        con_queja = stats.get('con_queja', 0)
-        pct = stats.get('porcentaje_con_queja', 0)
-        st.metric("😤 Con Queja", f"{con_queja:,}", f"{pct:.1f}%")
+        st.metric("😤 Con Queja", f"{con_queja:,}", f"{pct_con_queja:.1f}%")
     with col4:
-        resueltas = stats.get('queja_resuelta', 0)
         pct_res = resueltas / con_queja * 100 if con_queja > 0 else 0
         st.metric("✅ Resueltas", f"{resueltas:,}", f"{pct_res:.1f}%")
     with col5:
-        no_resueltas = stats.get('queja_no_resuelta', 0)
-        pct_no = stats.get('porcentaje_no_resuelta', 0)
-        st.metric("❌ NO Resueltas", f"{no_resueltas:,}", f"-{pct_no:.1f}%", delta_color="inverse")
+        st.metric("❌ NO Resueltas", f"{no_resueltas:,}", f"-{pct_no_resuelta:.1f}%", delta_color="inverse")
     
     st.markdown("---")
     
@@ -2598,9 +4003,6 @@ def pagina_quejas_no_resueltas(datos):
     
     with col1:
         st.markdown('<p class="section-header">📊 Estado de Quejas</p>', unsafe_allow_html=True)
-        
-        resueltas = stats.get('queja_resuelta', 0)
-        no_resueltas = stats.get('queja_no_resuelta', 0)
         
         if resueltas + no_resueltas > 0:
             fig = go.Figure(data=[go.Pie(
@@ -2649,101 +4051,96 @@ def pagina_quejas_no_resueltas(datos):
     st.markdown("---")
     
     # =========================================================================
-    # ALERTA DE GRAVEDAD
-    # =========================================================================
-    pct_no_resuelta = stats.get('porcentaje_no_resuelta', 0)
-    
-    if pct_no_resuelta > 80:
-        st.error(f"""
-        ### 🚨 Alerta Crítica
-        **{pct_no_resuelta:.1f}%** de las quejas NO se resuelven.
-        
-        Esto indica un problema grave en la gestión de reclamos. Los agentes no están:
-        - Ofreciendo soluciones concretas
-        - Generando tickets/reclamos
-        - Explicando los procesos de resolución
-        """)
-    elif pct_no_resuelta > 50:
-        st.warning(f"""
-        ### ⚠️ Área de Mejora
-        **{pct_no_resuelta:.1f}%** de las quejas no se resuelven.
-        
-        Capacitar a los agentes en manejo de objeciones y resolución de problemas.
-        """)
-    else:
-        st.success(f"""
-        ### ✅ Buen Desempeño
-        Solo **{pct_no_resuelta:.1f}%** de las quejas no se resuelven.
-        """)
-    
-    st.markdown("---")
-    
-    # =========================================================================
     # TOP AGENTES CON MÁS QUEJAS NO RESUELTAS
     # =========================================================================
     st.markdown('<p class="section-header">🚨 Agentes con Más Quejas No Resueltas</p>', unsafe_allow_html=True)
     
-    quejas_por_agente = quejas.get('quejas_por_agente', {})
-    if quejas_por_agente:
+    # Usar datos filtrados si hay filtro activo
+    if filtro_activo and not df_filtrado.empty:
+        # Calcular quejas por agente desde datos filtrados
         agentes_data = []
-        for agente, data in quejas_por_agente.items():
-            total = data.get('total', 0)
-            no_res = data.get('no_resueltas', 0)
-            if total >= 3:  # Solo agentes con al menos 3 quejas
+        for agente in df_filtrado['agente_display'].unique():
+            df_agente = df_filtrado[df_filtrado['agente_display'] == agente]
+            total = len(df_agente)
+            no_res = df_agente['quejas_no_resueltas'].sum() if 'quejas_no_resueltas' in df_agente.columns else 0
+            resueltas_ag = total - no_res
+            if total >= 1:  # Mostrar todos cuando hay filtro
                 pct = no_res / total * 100 if total > 0 else 0
-                nombre_real = obtener_nombre_agente(agente)
                 agentes_data.append({
-                    'Agente': nombre_real,
+                    'Agente': agente,
                     'Total Quejas': total,
-                    'Resueltas': data.get('resueltas', 0),
+                    'Resueltas': resueltas_ag,
                     'No Resueltas': no_res,
                     '% No Resueltas': round(pct, 1)
                 })
+    else:
+        quejas_por_agente = quejas.get('quejas_por_agente', {})
+        agentes_data = []
+        if quejas_por_agente:
+            for agente, data in quejas_por_agente.items():
+                total = data.get('total', 0)
+                no_res = data.get('no_resueltas', 0)
+                if total >= 3:  # Solo agentes con al menos 3 quejas
+                    pct = no_res / total * 100 if total > 0 else 0
+                    nombre_real = obtener_nombre_agente(agente)
+                    agentes_data.append({
+                        'Agente': nombre_real,
+                        'Total Quejas': total,
+                        'Resueltas': data.get('resueltas', 0),
+                        'No Resueltas': no_res,
+                        '% No Resueltas': round(pct, 1)
+                    })
+    
+    if agentes_data:
+        df_agentes = pd.DataFrame(agentes_data)
+        df_agentes = df_agentes.sort_values('No Resueltas', ascending=False).head(15)
         
-        if agentes_data:
-            df_agentes = pd.DataFrame(agentes_data)
-            df_agentes = df_agentes.sort_values('No Resueltas', ascending=False).head(15)
-            
-            # Gráfico de barras
-            fig = go.Figure()
-            fig.add_trace(go.Bar(
-                name='Resueltas',
-                x=df_agentes['Agente'],
-                y=df_agentes['Resueltas'],
-                marker_color='#27AE60',
-                text=df_agentes['Resueltas'],
-                textposition='inside'
-            ))
-            fig.add_trace(go.Bar(
-                name='No Resueltas',
-                x=df_agentes['Agente'],
-                y=df_agentes['No Resueltas'],
-                marker_color='#E74C3C',
-                text=df_agentes['No Resueltas'],
-                textposition='inside'
-            ))
-            fig.update_layout(
-                barmode='stack',
-                height=350,
-                margin=dict(t=30, b=80, l=50, r=20),
-                paper_bgcolor='#FFFFFF',
-                plot_bgcolor='#FAFBFC',
-                legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=11)),
-                xaxis_tickangle=-45
-            )
-            fig.update_xaxes(tickfont=dict(size=9, color='#2C3E50'))
-            fig.update_yaxes(gridcolor='#E5E8E8', tickfont=dict(size=10, color='#2C3E50'))
-            st.plotly_chart(fig, use_container_width=True)
-            
-            # Tabla
-            st.dataframe(df_agentes, use_container_width=True, hide_index=True, height=300)
+        # Gráfico de barras
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            name='Resueltas',
+            x=df_agentes['Agente'],
+            y=df_agentes['Resueltas'],
+            marker_color='#27AE60',
+            text=df_agentes['Resueltas'],
+            textposition='inside'
+        ))
+        fig.add_trace(go.Bar(
+            name='No Resueltas',
+            x=df_agentes['Agente'],
+            y=df_agentes['No Resueltas'],
+            marker_color='#E74C3C',
+            text=df_agentes['No Resueltas'],
+            textposition='inside'
+        ))
+        fig.update_layout(
+            barmode='stack',
+            height=350,
+            margin=dict(t=30, b=80, l=50, r=20),
+            paper_bgcolor='#FFFFFF',
+            plot_bgcolor='#FAFBFC',
+            legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=11)),
+            xaxis_tickangle=-45
+        )
+        fig.update_xaxes(tickfont=dict(size=9, color='#2C3E50'))
+        fig.update_yaxes(gridcolor='#E5E8E8', tickfont=dict(size=10, color='#2C3E50'))
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Tabla
+        st.dataframe(df_agentes, use_container_width=True, hide_index=True, height=300)
     
     # =========================================================================
     # DETALLE DE QUEJAS NO RESUELTAS
     # =========================================================================
-    if 'quejas_df' in datos:
-        st.markdown("---")
-        st.markdown('<p class="section-header">📝 Detalle de Quejas No Resueltas</p>', unsafe_allow_html=True)
+    st.markdown("---")
+    st.markdown('<p class="section-header">📝 Detalle de Quejas No Resueltas</p>', unsafe_allow_html=True)
+    
+    # Usar datos filtrados si hay filtro activo
+    if filtro_activo and not df_filtrado.empty:
+        df_detalle = df_filtrado[['agente_display', 'id_interaccion', 'duracion_seg', 'cantidad_quejas', 'quejas_no_resueltas', 'primera_queja']].copy()
+        df_detalle.columns = ['Agente', 'ID Interacción', 'Duración (seg)', 'Cant. Quejas', 'No Resueltas', 'Primera Queja']
+        st.dataframe(df_detalle, use_container_width=True, hide_index=True, height=400)
+    elif 'quejas_df' in datos:
         
         df_quejas = datos['quejas_df']
         
@@ -3352,6 +4749,744 @@ def pagina_clasificacion_integral(datos):
             st.dataframe(top_calidad, use_container_width=True, hide_index=True, height=300)
 
 
+def pagina_analisis_equipos(datos):
+    """Página de análisis y planes de mejora para equipos"""
+    st.markdown('<div class="main-header">👥 COMMAND · Análisis y Desarrollo de Equipos</div>', unsafe_allow_html=True)
+    
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
+    
+    # Vendedores no tienen acceso a esta página
+    if permisos['rol'] == 'vendedor':
+        st.warning("⚠️ Esta sección está disponible solo para supervisores de equipo.")
+        st.info("💡 Puedes ver tu información individual en la sección de Coaching de Vendedores.")
+        return
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #F0F9FF; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #0EA5E9;'>
+        <p style='margin: 0; color: #0C4A6E; font-size: 0.95rem;'>
+            <strong>Planes de Mejora por Equipo</strong> · Análisis de rendimiento grupal y estrategias de desarrollo
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Cargar datos necesarios
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+    
+    # Crear mapeo inverso: nombre -> equipo
+    nombre_a_equipo = {}
+    for equipo, vendedores in equipos_vendedores.items():
+        for vendedor in vendedores:
+            nombre_a_equipo[vendedor.lower().strip()] = equipo
+    
+    def obtener_equipo_por_nombre(nombre):
+        """Obtiene el equipo del vendedor por su nombre"""
+        if pd.isna(nombre) or nombre is None:
+            return "Sin Equipo"
+        nombre_lower = str(nombre).lower().strip()
+        if nombre_lower in nombre_a_equipo:
+            return nombre_a_equipo[nombre_lower]
+        for nom, eq in nombre_a_equipo.items():
+            if nombre_lower in nom or nom in nombre_lower:
+                return eq
+        return "Sin Equipo"
+    
+    # Verificar datos disponibles
+    coaching_data = datos.get('coaching', {})
+    planes_df = datos.get('planes_df', pd.DataFrame())
+    quejas_df = datos.get('quejas_df', pd.DataFrame())
+    
+    if not coaching_data and planes_df.empty:
+        st.warning("⚠️ No hay suficientes datos para el análisis de equipos.")
+        return
+    
+    # Obtener lista de equipos disponibles (excluyendo "Sin Equipo" y vacíos)
+    equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+    equipos_disponibles = sorted(equipos_disponibles)
+    
+    # =========================================================================
+    # RESTRICCIÓN POR ROL: Supervisores solo ven su equipo
+    # =========================================================================
+    if permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+        equipo_supervisor = permisos['equipos_permitidos'][0]
+        # Verificar que el equipo del supervisor existe
+        if equipo_supervisor in equipos_disponibles:
+            equipos_disponibles = [equipo_supervisor]
+            st.info(f"🏢 Mostrando análisis del equipo: **{equipo_supervisor}**")
+        else:
+            st.warning(f"⚠️ No se encontraron datos para el equipo: {equipo_supervisor}")
+            return
+    
+    if not equipos_disponibles:
+        st.warning("⚠️ No se encontraron equipos configurados.")
+        return
+    
+    # Tabs principales - Ajustados según permisos
+    if permisos['puede_comparar']:
+        # Admin: puede ver comparativa de equipos
+        tab1, tab2 = st.tabs(["📋 Análisis por Equipo", "📊 Comparativa de Equipos"])
+    else:
+        # Supervisor: solo análisis de su equipo, sin comparativa
+        tab1 = st.tabs(["📋 Análisis de Mi Equipo"])[0]
+        tab2 = None
+    
+    # =========================================================================
+    # TAB 1: ANÁLISIS POR EQUIPO INDIVIDUAL
+    # =========================================================================
+    with tab1:
+        if permisos['puede_ver_todos']:
+            st.markdown("### 🏢 Selecciona un Equipo para Analizar")
+            equipo_seleccionado = st.selectbox(
+                "Equipo",
+                equipos_disponibles,
+                key="equipo_individual"
+            )
+        else:
+            # Supervisor: no puede seleccionar, solo ve su equipo
+            equipo_seleccionado = equipos_disponibles[0]
+            st.markdown(f"### 🏢 Equipo: {equipo_seleccionado}")
+        
+        if equipo_seleccionado:
+            # Obtener vendedores del equipo
+            vendedores_equipo = equipos_vendedores.get(equipo_seleccionado, [])
+            
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                        padding: 20px; border-radius: 15px; margin: 20px 0; color: white;
+                        box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
+                <h3 style='margin:0; color: #FFFFFF;'>📊 Equipo: {equipo_seleccionado}</h3>
+                <p style='margin: 10px 0 0 0; color: #E0E7FF;'>
+                    <strong>{len(vendedores_equipo)}</strong> vendedores en este equipo
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Recopilar métricas del equipo desde coaching
+            metricas_equipo = {
+                'puntajes_ia': [],
+                'conversiones': [],
+                'total_evaluaciones': 0,
+                'vendedores_data': []
+            }
+            
+            for vendedor in vendedores_equipo:
+                # Buscar en coaching_data
+                for agente_key, data in coaching_data.items():
+                    if vendedor.lower() in agente_key.lower() or agente_key.lower() in vendedor.lower():
+                        comparativa = data.get('comparativa', {})
+                        puntaje = comparativa.get('puntaje_ia', {}).get('agente', 0)
+                        conversion = comparativa.get('conversion', {}).get('agente', 0)
+                        evaluaciones = data.get('metricas', {}).get('evaluaciones', {}).get('total_evaluadas', 0)
+                        
+                        metricas_equipo['puntajes_ia'].append(puntaje)
+                        metricas_equipo['conversiones'].append(conversion)
+                        metricas_equipo['total_evaluaciones'] += evaluaciones
+                        metricas_equipo['vendedores_data'].append({
+                            'Vendedor': agente_key,
+                            'Puntaje IA': puntaje,
+                            'Conversión %': conversion,
+                            'Evaluaciones': evaluaciones
+                        })
+                        break
+            
+            # Métricas agregadas del equipo
+            st.markdown("---")
+            st.markdown('<p class="section-header">📈 Métricas del Equipo</p>', unsafe_allow_html=True)
+            
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric("👥 Vendedores", len(vendedores_equipo))
+            with col2:
+                prom_puntaje = np.mean(metricas_equipo['puntajes_ia']) if metricas_equipo['puntajes_ia'] else 0
+                st.metric("📊 Puntaje IA Promedio", f"{prom_puntaje:.1f}")
+            with col3:
+                prom_conversion = np.mean(metricas_equipo['conversiones']) if metricas_equipo['conversiones'] else 0
+                st.metric("💰 Conversión Promedio", f"{prom_conversion:.1f}%")
+            with col4:
+                st.metric("📝 Total Evaluaciones", metricas_equipo['total_evaluaciones'])
+            
+            # Análisis de Fibra y Planes del equipo
+            if not planes_df.empty and 'agente' in planes_df.columns:
+                planes_df_temp = planes_df.copy()
+                planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
+                planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                
+                df_equipo_planes = planes_df_temp[planes_df_temp['equipo'] == equipo_seleccionado]
+                
+                if not df_equipo_planes.empty:
+                    st.markdown("---")
+                    st.markdown('<p class="section-header">📱 Rendimiento en Productos</p>', unsafe_allow_html=True)
+                    
+                    col1, col2, col3 = st.columns(3)
+                    
+                    total_llamadas = len(df_equipo_planes)
+                    con_plan = len(df_equipo_planes[df_equipo_planes['cantidad_planes'] > 0])
+                    pct_plan = con_plan / total_llamadas * 100 if total_llamadas > 0 else 0
+                    
+                    ofrece_fibra = len(df_equipo_planes[df_equipo_planes['ofrece_fibra'] == True])
+                    pct_fibra = ofrece_fibra / total_llamadas * 100 if total_llamadas > 0 else 0
+                    
+                    df_promo = df_equipo_planes[df_equipo_planes['es_dia_promo'] == True]
+                    menciona_promo = len(df_promo[df_promo['menciona_promo'] == True])
+                    pct_promo = menciona_promo / len(df_promo) * 100 if len(df_promo) > 0 else 0
+                    
+                    with col1:
+                        color_plan = "#27AE60" if pct_plan >= 70 else "#F39C12" if pct_plan >= 50 else "#E74C3C"
+                        st.metric("📱 Ofrece Planes", f"{pct_plan:.1f}%", f"{con_plan}/{total_llamadas}")
+                    with col2:
+                        color_fibra = "#27AE60" if pct_fibra >= 50 else "#F39C12" if pct_fibra >= 30 else "#E74C3C"
+                        st.metric("🏠 Ofrece Fibra", f"{pct_fibra:.1f}%", f"{ofrece_fibra}/{total_llamadas}")
+                    with col3:
+                        st.metric("🎁 Menciona Promo", f"{pct_promo:.1f}%", f"{menciona_promo}/{len(df_promo)} en días promo")
+            
+            # Análisis de Quejas del equipo
+            if not quejas_df.empty and 'agente' in quejas_df.columns:
+                quejas_df_temp = quejas_df.copy()
+                quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
+                quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                
+                df_equipo_quejas = quejas_df_temp[quejas_df_temp['equipo'] == equipo_seleccionado]
+                
+                if not df_equipo_quejas.empty:
+                    st.markdown("---")
+                    st.markdown('<p class="section-header">⚠️ Gestión de Quejas</p>', unsafe_allow_html=True)
+                    
+                    total_quejas = len(df_equipo_quejas)
+                    no_resueltas = int(df_equipo_quejas['quejas_no_resueltas'].sum())
+                    resueltas = total_quejas - no_resueltas
+                    pct_resolucion = resueltas / total_quejas * 100 if total_quejas > 0 else 0
+                    
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("📋 Total Quejas", total_quejas)
+                    with col2:
+                        st.metric("✅ Resueltas", resueltas, f"{pct_resolucion:.1f}%")
+                    with col3:
+                        st.metric("❌ No Resueltas", no_resueltas)
+            
+            # Tabla de vendedores del equipo
+            st.markdown("---")
+            st.markdown('<p class="section-header">👥 Detalle por Vendedor</p>', unsafe_allow_html=True)
+            
+            if metricas_equipo['vendedores_data']:
+                df_vendedores = pd.DataFrame(metricas_equipo['vendedores_data'])
+                df_vendedores = df_vendedores.sort_values('Puntaje IA', ascending=False)
+                
+                # Gráfico de barras de puntajes
+                fig = px.bar(
+                    df_vendedores,
+                    x='Vendedor',
+                    y='Puntaje IA',
+                    color='Puntaje IA',
+                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                    text='Puntaje IA'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+                fig.update_layout(
+                    height=350,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False,
+                    xaxis_tickangle=-45,
+                    margin=dict(t=30, b=80)
+                )
+                st.plotly_chart(fig, use_container_width=True)
+                
+                st.dataframe(df_vendedores, use_container_width=True, hide_index=True)
+            else:
+                st.info("No hay datos de evaluación para los vendedores de este equipo.")
+            
+            # Plan de mejora del equipo
+            st.markdown("---")
+            st.markdown('<p class="section-header">🎯 Plan de Mejora del Equipo</p>', unsafe_allow_html=True)
+            
+            # Identificar áreas de mejora
+            recomendaciones = []
+            
+            if metricas_equipo['puntajes_ia']:
+                prom_puntaje = np.mean(metricas_equipo['puntajes_ia'])
+                if prom_puntaje < 50:
+                    recomendaciones.append({
+                        'area': '📊 Puntaje IA',
+                        'estado': 'Crítico',
+                        'color': '#E74C3C',
+                        'recomendacion': 'Implementar capacitaciones intensivas de técnicas de venta y manejo de objeciones.'
+                    })
+                elif prom_puntaje < 70:
+                    recomendaciones.append({
+                        'area': '📊 Puntaje IA',
+                        'estado': 'En desarrollo',
+                        'color': '#F39C12',
+                        'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de scripts.'
+                    })
+            
+            if 'pct_fibra' in dir() and pct_fibra < 30:
+                recomendaciones.append({
+                    'area': '🏠 Oferta de Fibra',
+                    'estado': 'Crítico',
+                    'color': '#E74C3C',
+                    'recomendacion': 'Entrenar al equipo en identificación de oportunidades de venta cruzada de Fibra.'
+                })
+            elif 'pct_fibra' in dir() and pct_fibra < 50:
+                recomendaciones.append({
+                    'area': '🏠 Oferta de Fibra',
+                    'estado': 'En desarrollo',
+                    'color': '#F39C12',
+                    'recomendacion': 'Incluir recordatorios de oferta de Fibra en el speech comercial.'
+                })
+            
+            if 'pct_resolucion' in dir() and pct_resolucion < 70:
+                recomendaciones.append({
+                    'area': '⚠️ Resolución de Quejas',
+                    'estado': 'Requiere atención',
+                    'color': '#F39C12',
+                    'recomendacion': 'Capacitar en técnicas de manejo de objeciones y resolución de conflictos.'
+                })
+            
+            if recomendaciones:
+                for rec in recomendaciones:
+                    st.markdown(f"""
+                    <div style='background: #FFFFFF; padding: 15px; border-radius: 10px; margin: 10px 0; 
+                                border-left: 4px solid {rec['color']}; box-shadow: 0 2px 5px rgba(0,0,0,0.1);'>
+                        <div style='display: flex; justify-content: space-between; align-items: center;'>
+                            <strong style='color: #1E293B;'>{rec['area']}</strong>
+                            <span style='background: {rec['color']}; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8rem;'>
+                                {rec['estado']}
+                            </span>
+                        </div>
+                        <p style='margin: 10px 0 0 0; color: #475569;'>{rec['recomendacion']}</p>
+                    </div>
+                    """, unsafe_allow_html=True)
+            else:
+                st.success("✅ El equipo está cumpliendo los objetivos principales. Continuar con las buenas prácticas.")
+            
+            # =================================================================
+            # COACHING IA DEL EQUIPO - CARGAR DESDE ARCHIVO JSON
+            # =================================================================
+            st.markdown("---")
+            st.markdown('<p class="section-header">🤖 Plan de Acción IA del Equipo</p>', unsafe_allow_html=True)
+            
+            # Intentar cargar el archivo de coaching del equipo
+            import os
+            import json
+            
+            # Normalizar nombre del equipo para el archivo
+            nombre_archivo = equipo_seleccionado.replace(" ", "_").upper()
+            ruta_coaching = f"reportes/coaching_equipos/coaching_{nombre_archivo}.json"
+            
+            if os.path.exists(ruta_coaching):
+                try:
+                    with open(ruta_coaching, 'r', encoding='utf-8') as f:
+                        coaching_equipo_data = json.load(f)
+                    
+                    coaching_ia = coaching_equipo_data.get('coaching_ia', {})
+                    
+                    if coaching_ia:
+                        # Resumen Ejecutivo
+                        resumen = coaching_ia.get('resumen_ejecutivo', '')
+                        if resumen:
+                            st.markdown(f"""
+                            <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                                        padding: 20px; border-radius: 15px; margin: 15px 0; color: white;
+                                        box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
+                                <h4 style='margin:0 0 10px 0; color: #93C5FD;'>📋 Resumen Ejecutivo</h4>
+                                <p style='margin: 0; color: #E0E7FF; line-height: 1.6;'>{resumen}</p>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        
+                        # Diagnóstico
+                        diagnostico = coaching_ia.get('diagnostico', {})
+                        if diagnostico:
+                            nivel = diagnostico.get('nivel_rendimiento', 'N/A')
+                            color_nivel = '#27AE60' if nivel == 'BUENO' else '#F39C12' if nivel in ['REGULAR', 'ESTABLE'] else '#E74C3C'
+                            
+                            col_d1, col_d2, col_d3, col_d4 = st.columns(4)
+                            with col_d1:
+                                st.metric("📊 Nivel", nivel)
+                            with col_d2:
+                                st.metric("⭐ Puntaje", f"{diagnostico.get('puntaje_equipo', 0):.1f}")
+                            with col_d3:
+                                st.metric("🏆 Ranking", diagnostico.get('posicion_ranking', 'N/A'))
+                            with col_d4:
+                                st.metric("📈 Tendencia", diagnostico.get('tendencia', 'N/A'))
+                        
+                        # Fortalezas y Áreas de Mejora en columnas
+                        col_fm1, col_fm2 = st.columns(2)
+                        
+                        with col_fm1:
+                            st.markdown("#### 💪 Fortalezas del Equipo")
+                            fortalezas = coaching_ia.get('fortalezas_equipo', [])
+                            for fort in fortalezas:
+                                st.markdown(f"""
+                                <div style='background: #ECFDF5; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #10B981;'>
+                                    <strong style='color: #065F46;'>{fort.get('area', 'N/A')}</strong>
+                                    <p style='margin: 5px 0; color: #047857; font-size: 0.9rem;'>{fort.get('evidencia', '')}</p>
+                                    <p style='margin: 0; color: #064E3B; font-size: 0.85rem;'><em>Impacto: {fort.get('impacto', '')}</em></p>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        
+                        with col_fm2:
+                            st.markdown("#### 🎯 Áreas de Mejora Prioritarias")
+                            mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
+                            for mejora in mejoras:
+                                st.markdown(f"""
+                                <div style='background: #FEF3C7; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #F59E0B;'>
+                                    <strong style='color: #92400E;'>{mejora.get('area', 'N/A')}</strong>
+                                    <p style='margin: 5px 0; color: #B45309; font-size: 0.9rem;'>{mejora.get('situacion_actual', '')}</p>
+                                    <p style='margin: 0; color: #78350F; font-size: 0.85rem;'><strong>Meta:</strong> {mejora.get('meta', '')}</p>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        
+                        # Plan de Acción
+                        st.markdown("---")
+                        st.markdown("#### 📝 Plan de Acción del Equipo")
+                        plan_accion = coaching_ia.get('plan_accion_equipo', [])
+                        
+                        for accion in plan_accion:
+                            prioridad = accion.get('prioridad', 0)
+                            color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
+                            
+                            st.markdown(f"""
+                            <div style='background: #FFFFFF; padding: 15px; border-radius: 10px; margin: 10px 0; 
+                                        border-left: 5px solid {color_prioridad}; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+                                <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;'>
+                                    <span style='background: {color_prioridad}; color: white; padding: 3px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;'>
+                                        Prioridad {prioridad}
+                                    </span>
+                                    <span style='color: #64748B; font-size: 0.85rem;'>📅 {accion.get('plazo', 'N/A')}</span>
+                                </div>
+                                <p style='margin: 0 0 8px 0; color: #1E293B; font-weight: 600;'>{accion.get('accion', '')}</p>
+                                <p style='margin: 0; color: #475569; font-size: 0.9rem;'>
+                                    <strong>Responsable:</strong> {accion.get('responsable', 'N/A')} | 
+                                    <strong>Indicador:</strong> {accion.get('indicador_exito', 'N/A')}
+                                </p>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        
+                        # Capacitaciones Recomendadas
+                        capacitaciones = coaching_ia.get('capacitaciones_recomendadas', [])
+                        if capacitaciones:
+                            st.markdown("---")
+                            st.markdown("#### 📚 Capacitaciones Recomendadas")
+                            
+                            for cap in capacitaciones:
+                                st.markdown(f"""
+                                <div style='background: #EDE9FE; padding: 15px; border-radius: 10px; margin: 10px 0; border-left: 4px solid #8B5CF6;'>
+                                    <strong style='color: #5B21B6;'>📖 {cap.get('tema', 'N/A')}</strong>
+                                    <p style='margin: 8px 0; color: #6D28D9;'><em>Objetivo: {cap.get('objetivo', '')}</em></p>
+                                    <p style='margin: 0; color: #7C3AED; font-size: 0.9rem;'>
+                                        <strong>Modalidad:</strong> {cap.get('modalidad', 'N/A')} | 
+                                        <strong>Duración:</strong> {cap.get('duracion_sugerida', 'N/A')}
+                                    </p>
+                                </div>
+                                """, unsafe_allow_html=True)
+                        
+                        # Metas del Equipo
+                        metas = coaching_ia.get('metas_equipo', {})
+                        if metas:
+                            st.markdown("---")
+                            st.markdown("#### 🎯 Metas del Equipo")
+                            
+                            col_m1, col_m2 = st.columns(2)
+                            
+                            with col_m1:
+                                st.markdown("**📅 Corto Plazo (30 días)**")
+                                for meta in metas.get('corto_plazo_30_dias', []):
+                                    st.markdown(f"""
+                                    <div style='background: #DBEAFE; padding: 12px; border-radius: 8px; margin: 8px 0;'>
+                                        <strong style='color: #1E40AF;'>{meta.get('meta', '')}</strong>
+                                        <p style='margin: 5px 0 0 0; color: #1D4ED8; font-size: 0.9rem;'>
+                                            Actual: {meta.get('valor_actual', 'N/A')} → Objetivo: {meta.get('valor_objetivo', 'N/A')}
+                                        </p>
+                                    </div>
+                                    """, unsafe_allow_html=True)
+                            
+                            with col_m2:
+                                st.markdown("**📆 Mediano Plazo (90 días)**")
+                                for meta in metas.get('mediano_plazo_90_dias', []):
+                                    st.markdown(f"""
+                                    <div style='background: #FEE2E2; padding: 12px; border-radius: 8px; margin: 8px 0;'>
+                                        <strong style='color: #991B1B;'>{meta.get('meta', '')}</strong>
+                                        <p style='margin: 5px 0 0 0; color: #B91C1C; font-size: 0.9rem;'>
+                                            Actual: {meta.get('valor_actual', 'N/A')} → Objetivo: {meta.get('valor_objetivo', 'N/A')}
+                                        </p>
+                                    </div>
+                                    """, unsafe_allow_html=True)
+                        
+                        # Seguimiento
+                        seguimiento = coaching_ia.get('seguimiento', {})
+                        if seguimiento:
+                            st.markdown("---")
+                            st.markdown("#### 📊 Seguimiento")
+                            
+                            col_s1, col_s2 = st.columns(2)
+                            with col_s1:
+                                st.markdown(f"**🗓️ Reuniones:** {seguimiento.get('reuniones_sugeridas', 'N/A')}")
+                                st.markdown("**📈 Métricas a Monitorear:**")
+                                for metrica in seguimiento.get('metricas_monitorear', []):
+                                    st.markdown(f"- {metrica}")
+                            with col_s2:
+                                st.markdown("**⚠️ Alertas:**")
+                                for alerta in seguimiento.get('alertas', []):
+                                    st.warning(alerta)
+                    else:
+                        st.info("ℹ️ No hay datos de coaching IA disponibles para este equipo.")
+                        
+                except Exception as e:
+                    st.warning(f"⚠️ Error al cargar el coaching del equipo: {str(e)}")
+            else:
+                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el script de coaching de equipos primero.")
+    
+    # =========================================================================
+    # TAB 2: COMPARATIVA DE EQUIPOS (Solo para admin)
+    # =========================================================================
+    if tab2 is not None:
+        with tab2:
+            st.markdown("### 📊 Comparativa entre Equipos")
+            
+            # Selector múltiple de equipos
+            todos_equipos_comparar = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+            equipos_comparar = st.multiselect(
+                "Selecciona los equipos a comparar:",
+                sorted(todos_equipos_comparar),
+                default=sorted(todos_equipos_comparar)[:min(3, len(todos_equipos_comparar))],
+                key="equipos_comparativa"
+            )
+        
+        if len(equipos_comparar) < 2:
+            st.warning("⚠️ Selecciona al menos 2 equipos para comparar.")
+        else:
+            # Recopilar métricas de todos los equipos seleccionados
+            comparativa_data = []
+            
+            for equipo in equipos_comparar:
+                vendedores_eq = equipos_vendedores.get(equipo, [])
+                
+                metricas_eq = {
+                    'Equipo': equipo,
+                    'Vendedores': len(vendedores_eq),
+                    'Puntaje IA': 0,
+                    'Conversión %': 0,
+                    'Ofrece Fibra %': 0,
+                    'Ofrece Plan %': 0,
+                    'Quejas Resueltas %': 0
+                }
+                
+                # Métricas de coaching
+                puntajes = []
+                conversiones = []
+                for vendedor in vendedores_eq:
+                    for agente_key, data in coaching_data.items():
+                        if vendedor.lower() in agente_key.lower() or agente_key.lower() in vendedor.lower():
+                            puntajes.append(data.get('comparativa', {}).get('puntaje_ia', {}).get('agente', 0))
+                            conversiones.append(data.get('comparativa', {}).get('conversion', {}).get('agente', 0))
+                            break
+                
+                metricas_eq['Puntaje IA'] = round(np.mean(puntajes), 1) if puntajes else 0
+                metricas_eq['Conversión %'] = round(np.mean(conversiones), 1) if conversiones else 0
+                
+                # Métricas de planes
+                if not planes_df.empty and 'agente' in planes_df.columns:
+                    planes_df_temp = planes_df.copy()
+                    planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
+                    planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                    df_eq = planes_df_temp[planes_df_temp['equipo'] == equipo]
+                    
+                    if not df_eq.empty:
+                        total = len(df_eq)
+                        metricas_eq['Ofrece Fibra %'] = round(len(df_eq[df_eq['ofrece_fibra'] == True]) / total * 100, 1)
+                        metricas_eq['Ofrece Plan %'] = round(len(df_eq[df_eq['cantidad_planes'] > 0]) / total * 100, 1)
+                
+                # Métricas de quejas
+                if not quejas_df.empty and 'agente' in quejas_df.columns:
+                    quejas_df_temp = quejas_df.copy()
+                    quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
+                    quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                    df_eq_q = quejas_df_temp[quejas_df_temp['equipo'] == equipo]
+                    
+                    if not df_eq_q.empty:
+                        total_q = len(df_eq_q)
+                        no_res = int(df_eq_q['quejas_no_resueltas'].sum())
+                        metricas_eq['Quejas Resueltas %'] = round((total_q - no_res) / total_q * 100, 1) if total_q > 0 else 0
+                
+                comparativa_data.append(metricas_eq)
+            
+            df_comparativa = pd.DataFrame(comparativa_data)
+            
+            # Métricas principales
+            st.markdown("---")
+            st.markdown('<p class="section-header">📈 Resumen Comparativo</p>', unsafe_allow_html=True)
+            
+            # Mostrar tabla comparativa
+            st.dataframe(
+                df_comparativa.style.background_gradient(subset=['Puntaje IA', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %', 'Quejas Resueltas %'], cmap='RdYlGn'),
+                use_container_width=True,
+                hide_index=True
+            )
+            
+            st.markdown("---")
+            
+            # Gráficos comparativos
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("**📊 Puntaje IA por Equipo**")
+                fig = px.bar(
+                    df_comparativa,
+                    x='Equipo',
+                    y='Puntaje IA',
+                    color='Puntaje IA',
+                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                    text='Puntaje IA'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+                fig.update_layout(
+                    height=300,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            
+            with col2:
+                st.markdown("**💰 Conversión por Equipo**")
+                fig = px.bar(
+                    df_comparativa,
+                    x='Equipo',
+                    y='Conversión %',
+                    color='Conversión %',
+                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                    text='Conversión %'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                fig.update_layout(
+                    height=300,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("**🏠 Oferta de Fibra por Equipo**")
+                fig = px.bar(
+                    df_comparativa,
+                    x='Equipo',
+                    y='Ofrece Fibra %',
+                    color='Ofrece Fibra %',
+                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                    text='Ofrece Fibra %'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                fig.update_layout(
+                    height=300,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            
+            with col2:
+                st.markdown("**📱 Oferta de Planes por Equipo**")
+                fig = px.bar(
+                    df_comparativa,
+                    x='Equipo',
+                    y='Ofrece Plan %',
+                    color='Ofrece Plan %',
+                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                    text='Ofrece Plan %'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                fig.update_layout(
+                    height=300,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            
+            # Gráfico radar comparativo
+            st.markdown("---")
+            st.markdown('<p class="section-header">🎯 Radar de Rendimiento</p>', unsafe_allow_html=True)
+            
+            categorias = ['Puntaje IA', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %', 'Quejas Resueltas %']
+            
+            fig = go.Figure()
+            
+            colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
+            
+            for i, equipo in enumerate(equipos_comparar):
+                eq_data = df_comparativa[df_comparativa['Equipo'] == equipo].iloc[0]
+                valores = [eq_data[cat] for cat in categorias]
+                valores.append(valores[0])  # Cerrar el radar
+                
+                fig.add_trace(go.Scatterpolar(
+                    r=valores,
+                    theta=categorias + [categorias[0]],
+                    fill='toself',
+                    name=equipo,
+                    line_color=colors[i % len(colors)],
+                    opacity=0.7
+                ))
+            
+            fig.update_layout(
+                polar=dict(
+                    radialaxis=dict(
+                        visible=True,
+                        range=[0, 100]
+                    )
+                ),
+                showlegend=True,
+                height=450,
+                paper_bgcolor='#FFFFFF',
+                legend=dict(
+                    orientation='h',
+                    yanchor='bottom',
+                    y=-0.2,
+                    xanchor='center',
+                    x=0.5
+                )
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+            # Ranking final
+            st.markdown("---")
+            st.markdown('<p class="section-header">🏆 Ranking de Equipos</p>', unsafe_allow_html=True)
+            
+            # Calcular score general (promedio de todas las métricas)
+            df_comparativa['Score General'] = (
+                df_comparativa['Puntaje IA'] + 
+                df_comparativa['Conversión %'] + 
+                df_comparativa['Ofrece Fibra %'] + 
+                df_comparativa['Ofrece Plan %'] + 
+                df_comparativa['Quejas Resueltas %']
+            ) / 5
+            
+            df_ranking = df_comparativa[['Equipo', 'Score General']].sort_values('Score General', ascending=False)
+            
+            for idx, row in df_ranking.iterrows():
+                posicion = df_ranking.index.tolist().index(idx) + 1
+                medalla = "🥇" if posicion == 1 else "🥈" if posicion == 2 else "🥉" if posicion == 3 else f"#{posicion}"
+                color = "#FFD700" if posicion == 1 else "#C0C0C0" if posicion == 2 else "#CD7F32" if posicion == 3 else "#94A3B8"
+                
+                st.markdown(f"""
+                <div style='background: linear-gradient(90deg, {color}22, #FFFFFF); padding: 15px 20px; 
+                            border-radius: 10px; margin: 8px 0; border-left: 4px solid {color};
+                            display: flex; justify-content: space-between; align-items: center;'>
+                    <span style='font-size: 1.5rem;'>{medalla}</span>
+                    <strong style='color: #1E293B; font-size: 1.1rem;'>{row['Equipo']}</strong>
+                    <span style='background: {color}; color: {"#000" if posicion <= 2 else "#FFF"}; 
+                                 padding: 5px 15px; border-radius: 20px; font-weight: bold;'>
+                        {row['Score General']:.1f} pts
+                    </span>
+                </div>
+                """, unsafe_allow_html=True)
+
+
 def pagina_evaluaciones_gemini(datos):
     """Página de evaluaciones realizadas con Inteligencia Artificial"""
     st.markdown('<div class="main-header">🤖 COMMAND · Evaluación Automatizada de Calidad</div>', unsafe_allow_html=True)
@@ -3364,6 +5499,9 @@ def pagina_evaluaciones_gemini(datos):
         </p>
     </div>
     """, unsafe_allow_html=True)
+    
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
     
     # Verificar datos
     if 'evaluaciones_gemini_df' not in datos:
@@ -3382,12 +5520,66 @@ def pagina_evaluaciones_gemini(datos):
     
     df = datos['evaluaciones_gemini_df'].copy()
     
+    # =========================================================================
+    # APLICAR FILTRO DE FECHAS DESDE SIDEBAR
+    # =========================================================================
+    fecha_inicio_filtro = st.session_state.get('filtro_fecha_inicio')
+    fecha_fin_filtro = st.session_state.get('filtro_fecha_fin')
+    
+    if 'fecha_llamada' in df.columns and fecha_inicio_filtro and fecha_fin_filtro:
+        # Convertir fechas del filtro a datetime para comparación
+        fecha_inicio_dt = pd.to_datetime(fecha_inicio_filtro)
+        fecha_fin_dt = pd.to_datetime(fecha_fin_filtro)
+        
+        df_original_len = len(df)
+        df = df[(df['fecha_llamada'] >= fecha_inicio_dt) & (df['fecha_llamada'] <= fecha_fin_dt)]
+        
+        # Mostrar info del filtro aplicado
+        if len(df) < df_original_len:
+            st.info(f"📅 Filtro de fecha aplicado: **{fecha_inicio_filtro.strftime('%d/%m/%Y')}** - **{fecha_fin_filtro.strftime('%d/%m/%Y')}** ({len(df):,} de {df_original_len:,} evaluaciones)")
+    
     # Obtener mapeo de equipos para los filtros
     _, equipos_vendedores = cargar_listado_vendedores()
     
     # Aplicar mapeo de nombres a todo el dataframe (usando función global)
     if 'agente' in df.columns:
         df['agente'] = df['agente'].apply(obtener_nombre_agente)
+    
+    # Crear mapeo inverso: nombre -> equipo
+    nombre_a_equipo = {}
+    for equipo, vendedores in equipos_vendedores.items():
+        for vendedor in vendedores:
+            nombre_a_equipo[vendedor.lower().strip()] = equipo
+    
+    def obtener_equipo_por_nombre(nombre):
+        if pd.isna(nombre) or nombre is None:
+            return "Sin Equipo"
+        nombre_lower = str(nombre).lower().strip()
+        if nombre_lower in nombre_a_equipo:
+            return nombre_a_equipo[nombre_lower]
+        for nom, eq in nombre_a_equipo.items():
+            if nombre_lower in nom or nom in nombre_lower:
+                return eq
+        return "Sin Equipo"
+    
+    # Agregar columna de equipo
+    df['equipo'] = df['agente'].apply(obtener_equipo_por_nombre)
+    
+    # =========================================================================
+    # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
+    # =========================================================================
+    if permisos['rol'] == 'vendedor':
+        # Vendedor: Filtrar solo sus datos
+        nombre_vendedor = permisos['nombre_usuario'].lower()
+        df = df[df['agente'].apply(lambda x: nombre_vendedor in str(x).lower() if pd.notna(x) else False)]
+        equipo_usuario = permisos['equipo'] if permisos['equipo'] else "Sin Equipo"
+        st.info(f"👤 Mostrando evaluaciones de: **{permisos['nombre_usuario']}** | Equipo: **{equipo_usuario}**")
+        
+    elif permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+        # Supervisor con equipo: Filtrar solo su equipo
+        equipo_supervisor = permisos['equipos_permitidos'][0]
+        df = df[df['equipo'] == equipo_supervisor]
+        st.info(f"🏢 Mostrando evaluaciones del equipo: **{equipo_supervisor}**")
     
     # Definir criterios y nombres
     criterios = ['saludo_presentacion', 'identificacion_cliente', 'deteccion_necesidades',
@@ -3407,16 +5599,25 @@ def pagina_evaluaciones_gemini(datos):
         'resolucion_problemas': 'Resolución Problemas'
     }
     
+    # Verificar si hay datos después del filtro
+    if len(df) == 0:
+        st.warning("⚠️ No hay evaluaciones disponibles para mostrar.")
+        return
+    
     # =============================================================================
-    # TABS PRINCIPALES
+    # TABS PRINCIPALES - Ajustados según rol
     # =============================================================================
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Resumen Ejecutivo", "👤 Análisis por Vendedor", "🎯 Indicadores de Calidad", "🔍 Detalle de Evaluaciones"])
+    if permisos['rol'] == 'vendedor':
+        # Vendedores solo ven sus evaluaciones individuales
+        tab1, tab2 = st.tabs(["📊 Mi Rendimiento", "🔍 Detalle de Evaluaciones"])
+    else:
+        tab1, tab2, tab3, tab4 = st.tabs(["📊 Resumen Ejecutivo", "👤 Análisis por Vendedor", "🎯 Indicadores de Calidad", "🔍 Detalle de Evaluaciones"])
     
     with tab1:
         # =============================================================================
         # MÉTRICAS PRINCIPALES
         # =============================================================================
-        st.markdown('<p class="section-header">📈 Indicadores Generales de Evaluación</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">📈 Indicadores de Evaluación</p>', unsafe_allow_html=True)
         
         total = len(df)
         puntaje_promedio = df['puntaje_total'].mean()
@@ -3443,47 +5644,30 @@ def pagina_evaluaciones_gemini(datos):
             cero = len(df[df['puntaje_total'] == 0])
             st.metric("⚠️ Sin Evaluación", f"{cero:,} ({cero/total*100:.1f}%)")
         
-        # Distribución de puntajes
+        # Gráfico de torta - Distribución por Rango
         st.markdown("---")
-        col1, col2 = st.columns([2, 1])
-        
-        with col1:
-            fig = px.histogram(
-                df, 
-                x='puntaje_total',
-                nbins=20,
-                title="Distribución de Puntajes Totales",
-                labels={'puntaje_total': 'Puntaje', 'count': 'Cantidad'},
-                color_discrete_sequence=['#3B82F6']
-            )
-            fig.add_vline(x=puntaje_promedio, line_dash="dash", line_color="#EF4444", 
-                          annotation_text=f"Promedio: {puntaje_promedio:.1f}")
-            fig.update_layout(
-                height=400, 
-                paper_bgcolor='#FFFFFF',
-                plot_bgcolor='#FAFBFC',
-                font=dict(color='#1E293B', size=12),
-                title_font=dict(color='#1E3A5F', size=14, family='Arial Black')
-            )
-            fig.update_xaxes(tickfont=dict(color='#1E293B', size=11), title_font=dict(color='#1E3A5F'))
-            fig.update_yaxes(tickfont=dict(color='#1E293B', size=11), title_font=dict(color='#1E3A5F'))
-            st.plotly_chart(fig, use_container_width=True)
+        col1, col2, col3 = st.columns([1, 2, 1])
         
         with col2:
             rango_counts = df['rango_puntaje'].value_counts()
             fig = px.pie(
                 values=rango_counts.values,
                 names=rango_counts.index,
-                title="Distribución por Rango",
+                title="Distribución por Rango de Desempeño",
                 color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
             )
             fig.update_layout(
-                height=400, 
+                height=350, 
                 paper_bgcolor='#FFFFFF',
-                font=dict(color='#1E293B', size=12),
-                title_font=dict(color='#1E3A5F', size=14, family='Arial Black')
+                font=dict(color='#1E293B', size=13),
+                title_font=dict(color='#1E3A5F', size=16, family='Arial Black'),
+                legend=dict(font=dict(color='#1E293B', size=12))
             )
-            fig.update_traces(textfont=dict(color='#1E293B', size=11))
+            fig.update_traces(
+                textfont=dict(color='#FFFFFF', size=13),
+                textinfo='percent+label',
+                insidetextorientation='radial'
+            )
             st.plotly_chart(fig, use_container_width=True)
         
         # Ranking de agentes resumen
@@ -3550,123 +5734,142 @@ def pagina_evaluaciones_gemini(datos):
                 fig.update_yaxes(tickfont=dict(color='#1E293B', size=10))
                 st.plotly_chart(fig, use_container_width=True)
     
-    with tab2:
-        # =============================================================================
-        # ANÁLISIS DETALLADO POR AGENTE
-        # =============================================================================
-        st.markdown('<p class="section-header">👤 Análisis Individual de Rendimiento</p>', unsafe_allow_html=True)
-        
-        if 'agente' in df.columns:
-            agentes_list = sorted(df['agente'].dropna().unique().tolist())
-            agente_seleccionado = st.selectbox("Seleccionar vendedor:", agentes_list, key='agente_gemini')
+    # El tab2 solo existe para admin y supervisor (vendedores tienen tabs diferentes)
+    if permisos['rol'] != 'vendedor':
+        with tab2:
+            # =============================================================================
+            # ANÁLISIS DETALLADO POR AGENTE
+            # =============================================================================
+            st.markdown('<p class="section-header">👤 Análisis Individual de Rendimiento</p>', unsafe_allow_html=True)
             
-            # Filtrar datos del agente
-            df_agente = df[df['agente'] == agente_seleccionado].copy()
-            total_agente = len(df_agente)
-            
-            if total_agente > 0:
-                puntaje_agente = df_agente['puntaje_total'].mean()
+            if 'agente' in df.columns:
+                agentes_list = sorted(df['agente'].dropna().unique().tolist())
+                agente_seleccionado = st.selectbox("Seleccionar vendedor:", agentes_list, key='agente_gemini')
                 
-                # Métricas del agente
-                st.markdown("---")
-                col1, col2, col3, col4 = st.columns(4)
+                # Filtrar datos del agente
+                df_agente = df[df['agente'] == agente_seleccionado].copy()
+                total_agente = len(df_agente)
                 
-                with col1:
-                    st.metric("📊 Operaciones Evaluadas", f"{total_agente:,}")
-                with col2:
-                    diff_vs_prom = puntaje_agente - puntaje_promedio
-                    st.metric("🎯 Índice de Rendimiento", f"{puntaje_agente:.1f}/100", 
-                              delta=f"{diff_vs_prom:+.1f} vs general")
-                with col3:
-                    excelentes_ag = len(df_agente[df_agente['puntaje_total'] >= 80])
-                    st.metric("🌟 Gestiones Destacadas", f"{excelentes_ag} ({excelentes_ag/total_agente*100:.1f}%)")
-                with col4:
-                    criticos_ag = len(df_agente[df_agente['puntaje_total'] <= 20])
-                    st.metric("🔴 Gestiones Críticas", f"{criticos_ag} ({criticos_ag/total_agente*100:.1f}%)")
-                
-                # Gráfico de Perfil de Competencias - Barras comparativas profesional
-                st.markdown("---")
-                st.markdown("### 📊 Perfil de Competencias por Criterio")
-                
-                # ========== SELECTORES DE COMPARACIÓN ==========
-                st.markdown("""
-                <div style='background: linear-gradient(90deg, #EFF6FF 0%, #DBEAFE 100%); 
-                            padding: 15px 20px; border-radius: 10px; margin-bottom: 20px;
-                            border: 1px solid #BFDBFE;'>
-                    <span style='color:#1E40AF; font-weight:600; font-size:15px;'>⚙️ Configurar Comparativa</span>
-                </div>
-                """, unsafe_allow_html=True)
-                
-                col_config1, col_config2 = st.columns(2)
-                
-                with col_config1:
-                    tipo_comparacion = st.selectbox(
-                        "🔄 Comparar contra:",
-                        ["Promedio General (Todos)", "Un Equipo Específico", "Otro Vendedor"],
-                        key="tipo_comp_gemini"
-                    )
-                
-                # Variables para la comparación
-                nombre_comparacion = "Promedio General"
-                valores_comparacion = []
-                # Siempre rojo para la comparación
-                color_comparacion = "#DC2626"
-                
-                with col_config2:
-                    if tipo_comparacion == "Un Equipo Específico":
-                        # Obtener lista de equipos únicos
-                        equipos_disponibles = [eq for eq in equipos_vendedores.keys() if eq and eq != "Sin Equipo"]
+                if total_agente > 0:
+                    puntaje_agente = df_agente['puntaje_total'].mean()
+                    
+                    # Métricas del agente
+                    st.markdown("---")
+                    col1, col2, col3, col4 = st.columns(4)
+                    
+                    with col1:
+                        st.metric("📊 Operaciones Evaluadas", f"{total_agente:,}")
+                    with col2:
+                        diff_vs_prom = puntaje_agente - puntaje_promedio
+                        st.metric("🎯 Índice de Rendimiento", f"{puntaje_agente:.1f}/100", 
+                                  delta=f"{diff_vs_prom:+.1f} vs general")
+                    with col3:
+                        excelentes_ag = len(df_agente[df_agente['puntaje_total'] >= 80])
+                        st.metric("🌟 Gestiones Destacadas", f"{excelentes_ag} ({excelentes_ag/total_agente*100:.1f}%)")
+                    with col4:
+                        criticos_ag = len(df_agente[df_agente['puntaje_total'] <= 20])
+                        st.metric("🔴 Gestiones Críticas", f"{criticos_ag} ({criticos_ag/total_agente*100:.1f}%)")
+                    
+                    # Gráfico de Perfil de Competencias - Barras comparativas profesional
+                    st.markdown("---")
+                    st.markdown("### 📊 Perfil de Competencias por Criterio")
+                    
+                    # ========== SELECTORES DE COMPARACIÓN (SOLO ADMIN) ==========
+                    if permisos['puede_comparar']:
+                        st.markdown("""
+                        <div style='background: linear-gradient(90deg, #EFF6FF 0%, #DBEAFE 100%); 
+                                    padding: 15px 20px; border-radius: 10px; margin-bottom: 20px;
+                                    border: 1px solid #BFDBFE;'>
+                            <span style='color:#1E40AF; font-weight:600; font-size:15px;'>⚙️ Configurar Comparativa</span>
+                        </div>
+                        """, unsafe_allow_html=True)
                         
-                        if equipos_disponibles:
-                            equipo_seleccionado = st.selectbox(
-                                "📋 Seleccionar equipo:",
-                                sorted(equipos_disponibles),
-                                key="equipo_comp_gemini"
+                        col_config1, col_config2 = st.columns(2)
+                        
+                        with col_config1:
+                            tipo_comparacion = st.selectbox(
+                                "🔄 Comparar contra:",
+                                ["Promedio General (Todos)", "Un Equipo Específico", "Otro Vendedor"],
+                                key="tipo_comp_gemini"
                             )
-                            nombre_comparacion = equipo_seleccionado
-                        else:
-                            st.info("No hay equipos disponibles en el archivo LISTADO-DE-VENDEDORES.csv")
-                            equipo_seleccionado = None
-                    
-                    elif tipo_comparacion == "Otro Vendedor":
-                        otros_agentes = [a for a in sorted(df['agente'].dropna().unique().tolist()) if a != agente_seleccionado]
-                        if otros_agentes:
-                            agente_comparar = st.selectbox(
-                                "👤 Seleccionar vendedor:",
-                                otros_agentes,
-                                key="agente_comp_gemini"
-                            )
-                            nombre_comparacion = agente_comparar
-                        else:
-                            st.info("No hay otros vendedores disponibles")
-                            agente_comparar = None
+                        
+                        # Variables para la comparación
+                        nombre_comparacion = "Promedio General"
+                        valores_comparacion = []
+                        # Siempre rojo para la comparación
+                        color_comparacion = "#DC2626"
+                        
+                        with col_config2:
+                            if tipo_comparacion == "Un Equipo Específico":
+                                # Obtener lista de equipos únicos
+                                equipos_disponibles = [eq for eq in equipos_vendedores.keys() if eq and eq != "Sin Equipo"]
+                                
+                                if equipos_disponibles:
+                                    equipo_seleccionado = st.selectbox(
+                                        "📋 Seleccionar equipo:",
+                                        sorted(equipos_disponibles),
+                                        key="equipo_comp_gemini"
+                                    )
+                                    nombre_comparacion = equipo_seleccionado
+                                else:
+                                    st.info("No hay equipos disponibles en el archivo LISTADO-DE-VENDEDORES.csv")
+                                    equipo_seleccionado = None
+                            
+                            elif tipo_comparacion == "Otro Vendedor":
+                                otros_agentes = [a for a in sorted(df['agente'].dropna().unique().tolist()) if a != agente_seleccionado]
+                                if otros_agentes:
+                                    agente_comparar = st.selectbox(
+                                        "👤 Seleccionar vendedor:",
+                                        otros_agentes,
+                                        key="agente_comp_gemini"
+                                    )
+                                    nombre_comparacion = agente_comparar
+                                else:
+                                    st.info("No hay otros vendedores disponibles")
+                                    agente_comparar = None
+                    else:
+                        # Supervisor: Solo comparar dentro de su equipo
+                        st.markdown("""
+                        <div style='background: linear-gradient(90deg, #FEF3C7 0%, #FDE68A 100%); 
+                                    padding: 15px 20px; border-radius: 10px; margin-bottom: 20px;
+                                    border: 1px solid #FCD34D;'>
+                            <span style='color:#92400E; font-weight:600; font-size:15px;'>📊 Comparación con promedio del equipo</span>
+                        </div>
+                        """, unsafe_allow_html=True)
+                        tipo_comparacion = "Promedio del Equipo"
+                        nombre_comparacion = f"Promedio {permisos['equipos_permitidos'][0] if permisos['equipos_permitidos'] else 'Equipo'}"
+                        valores_comparacion = []
+                        color_comparacion = "#DC2626"
                 
-                # Calcular valores del agente seleccionado
-                criterios_agente = {}
-                for c in criterios:
-                    if c in df_agente.columns:
-                        criterios_agente[criterios_nombres.get(c, c)] = df_agente[c].mean()
-                
-                if criterios_agente:
-                    categories = list(criterios_agente.keys())
-                    values_agente = list(criterios_agente.values())
+                    # Calcular valores del agente seleccionado
+                    criterios_agente = {}
+                    for c in criterios:
+                        if c in df_agente.columns:
+                            criterios_agente[criterios_nombres.get(c, c)] = df_agente[c].mean()
                     
-                    # Calcular valores de comparación según la selección
-                    if tipo_comparacion == "Promedio General (Todos)":
-                        valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
-                    elif tipo_comparacion == "Un Equipo Específico" and 'equipo_seleccionado' in dir() and equipo_seleccionado:
-                        # Filtrar por equipo
-                        agentes_equipo = equipos_vendedores.get(equipo_seleccionado, [])
-                        if agentes_equipo:
-                            df_equipo = df[df['agente'].isin(agentes_equipo)]
-                            valores_comparacion = [df_equipo[c].mean() if c in df_equipo.columns and len(df_equipo) > 0 else 0 for c in criterios]
+                    if criterios_agente:
+                        categories = list(criterios_agente.keys())
+                        values_agente = list(criterios_agente.values())
+                        
+                        # Calcular valores de comparación según la selección
+                        if tipo_comparacion == "Promedio General (Todos)":
+                            valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
+                        elif tipo_comparacion == "Un Equipo Específico" and 'equipo_seleccionado' in dir() and equipo_seleccionado:
+                            # Filtrar por equipo
+                            agentes_equipo = equipos_vendedores.get(equipo_seleccionado, [])
+                            if agentes_equipo:
+                                df_equipo = df[df['agente'].isin(agentes_equipo)]
+                                valores_comparacion = [df_equipo[c].mean() if c in df_equipo.columns and len(df_equipo) > 0 else 0 for c in criterios]
+                            else:
+                                valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
+                        elif tipo_comparacion == "Otro Vendedor" and 'agente_comparar' in dir() and agente_comparar:
+                            df_otro = df[df['agente'] == agente_comparar]
+                            valores_comparacion = [df_otro[c].mean() if c in df_otro.columns and len(df_otro) > 0 else 0 for c in criterios]
+                        elif tipo_comparacion == "Promedio del Equipo":
+                            # Supervisor: Comparar con promedio de su propio equipo (ya filtrado en df)
+                            valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
                         else:
                             valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
-                    elif tipo_comparacion == "Otro Vendedor" and 'agente_comparar' in dir() and agente_comparar:
-                        df_otro = df[df['agente'] == agente_comparar]
-                        valores_comparacion = [df_otro[c].mean() if c in df_otro.columns and len(df_otro) > 0 else 0 for c in criterios]
-                    else:
-                        valores_comparacion = [df[c].mean() if c in df.columns else 0 for c in criterios]
                     
                     # Crear DataFrame para el gráfico
                     df_comparativo = pd.DataFrame({
@@ -3817,11 +6020,68 @@ def pagina_evaluaciones_gemini(datos):
                 st.markdown("---")
                 st.markdown("**📋 Últimas Evaluaciones del Agente:**")
                 
-                columnas_tabla = ['archivo', 'puntaje_total', 'resumen', 'areas_mejora', 'fortalezas']
-                columnas_disponibles = [c for c in columnas_tabla if c in df_agente.columns]
+                # Preparar datos para la tabla mejorada
+                df_mostrar = df_agente.copy()
                 
-                df_mostrar = df_agente[columnas_disponibles].sort_values('puntaje_total', ascending=False)
-                st.dataframe(df_mostrar.head(20), use_container_width=True, hide_index=True, height=400)
+                # Extraer ID de referencia del archivo (sin transcripcion.json)
+                if 'archivo' in df_mostrar.columns:
+                    df_mostrar['Referencia'] = df_mostrar['archivo'].apply(
+                        lambda x: x.replace('transcripcion.json', '').replace('_transcripcion.json', '').rstrip('_').rstrip('/').split('/')[-1] if isinstance(x, str) else x
+                    )
+                
+                # Crear columna de zona según puntaje
+                if 'puntaje_total' in df_mostrar.columns:
+                    def clasificar_zona(p):
+                        if p >= 80:
+                            return "🟢 Excelente"
+                        elif p >= 60:
+                            return "🔵 Bueno"
+                        elif p >= 30:
+                            return "🟡 En Desarrollo"
+                        else:
+                            return "🔴 Crítico"
+                    df_mostrar['Zona'] = df_mostrar['puntaje_total'].apply(clasificar_zona)
+                
+                # Seleccionar y renombrar columnas para mostrar
+                columnas_mostrar = []
+                renombres = {}
+                
+                if 'Referencia' in df_mostrar.columns:
+                    columnas_mostrar.append('Referencia')
+                    renombres['Referencia'] = '📁 ID Llamada'
+                
+                if 'puntaje_total' in df_mostrar.columns:
+                    columnas_mostrar.append('puntaje_total')
+                    renombres['puntaje_total'] = '⭐ Puntaje'
+                
+                if 'Zona' in df_mostrar.columns:
+                    columnas_mostrar.append('Zona')
+                    renombres['Zona'] = '📊 Zona'
+                
+                if 'resumen' in df_mostrar.columns:
+                    # Mantener resumen completo - Streamlit permite expandir al hacer doble click
+                    columnas_mostrar.append('resumen')
+                    renombres['resumen'] = '📝 Resumen (doble click para expandir)'
+                
+                if columnas_mostrar:
+                    df_tabla = df_mostrar[columnas_mostrar].rename(columns=renombres)
+                    df_tabla = df_tabla.sort_values('⭐ Puntaje', ascending=False) if '⭐ Puntaje' in df_tabla.columns else df_tabla
+                    
+                    # Mostrar tabla con estilo
+                    st.dataframe(
+                        df_tabla.head(20), 
+                        use_container_width=True, 
+                        hide_index=True, 
+                        height=400,
+                        column_config={
+                            '📁 ID Llamada': st.column_config.TextColumn(width='medium'),
+                            '⭐ Puntaje': st.column_config.NumberColumn(format="%.0f /100", width='small'),
+                            '📊 Zona': st.column_config.TextColumn(width='small'),
+                            '📝 Resumen (doble click para expandir)': st.column_config.TextColumn(width='large'),
+                        }
+                    )
+                    
+                    st.caption("💡 **Tip:** Hacé doble click en cualquier celda de resumen para ver el texto completo")
                 
                 # Áreas de mejora específicas del agente
                 if 'areas_mejora' in df_agente.columns:
@@ -3861,11 +6121,13 @@ def pagina_evaluaciones_gemini(datos):
                             for i, (area, freq) in enumerate(top_areas_agente[:5], 1):
                                 st.markdown(f"{i}. **{area}** ({freq} veces)")
     
-    with tab3:
-        # =============================================================================
-        # ANÁLISIS DETALLADO POR CRITERIO
-        # =============================================================================
-        st.markdown('<p class="section-header">🎯 Análisis Detallado por Criterio de Evaluación</p>', unsafe_allow_html=True)
+    # Tab3 y Tab4 solo existen para admin y supervisor
+    if permisos['rol'] != 'vendedor':
+        with tab3:
+            # =============================================================================
+            # ANÁLISIS DETALLADO POR CRITERIO
+            # =============================================================================
+            st.markdown('<p class="section-header">🎯 Análisis Detallado por Criterio de Evaluación</p>', unsafe_allow_html=True)
         
         # Calcular promedios por criterio
         promedios = {}
@@ -3942,80 +6204,147 @@ def pagina_evaluaciones_gemini(datos):
                         pct = freq / total * 100
                         st.markdown(f"{i}. **{area}**: {freq:,} ({pct:.1f}%)")
     
-    with tab4:
-        # =============================================================================
-        # EXPLORADOR DE EVALUACIONES
-        # =============================================================================
-        st.markdown('<p class="section-header">🔍 Explorador de Evaluaciones</p>', unsafe_allow_html=True)
-        
-        # Asegurar que rango_puntaje existe
-        if 'rango_puntaje' not in df.columns:
-            df['rango_puntaje'] = pd.cut(df['puntaje_total'], 
-                                          bins=[-1, 20, 40, 60, 80, 100],
-                                          labels=['Crítico (0-20)', 'Bajo (21-40)', 'Regular (41-60)', 'Bueno (61-80)', 'Excelente (81-100)'])
-        
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            rangos_lista = ['Todos'] + [r for r in df['rango_puntaje'].dropna().unique().tolist() if pd.notna(r)]
-            filtro_rango = st.selectbox("Filtrar por rango:", rangos_lista, key='filtro_rango_exp')
-        with col2:
-            if 'agente' in df.columns:
-                agentes_list = ['Todos'] + sorted(df['agente'].dropna().unique().tolist())
-                filtro_agente = st.selectbox("Filtrar por agente:", agentes_list, key='filtro_agente_exp')
-            else:
-                filtro_agente = 'Todos'
-        with col3:
-            orden = st.selectbox("Ordenar por:", ['Puntaje (menor a mayor)', 'Puntaje (mayor a menor)'], key='orden_exp')
-        
-        df_filtrado = df.copy()
-        if filtro_rango != 'Todos':
-            df_filtrado = df_filtrado[df_filtrado['rango_puntaje'] == filtro_rango]
-        if filtro_agente != 'Todos':
-            df_filtrado = df_filtrado[df_filtrado['agente'] == filtro_agente]
-        
-        ascending = 'menor' in orden
-        df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
-        
-        st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
-        
-        # Tabla expandida
-        columnas_mostrar = ['archivo', 'agente', 'puntaje_total', 'saludo_presentacion', 
-                           'cierre', 'oferta_productos', 'resumen']
-        columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
-        
-        st.dataframe(
-            df_filtrado[columnas_disponibles].head(100),
-            use_container_width=True,
-            hide_index=True,
-            height=500
-        )
-        
-        # Detalle de una evaluación específica
-        st.markdown("---")
-        st.markdown("**📄 Ver Detalle de Evaluación Específica:**")
-        
-        if len(df_filtrado) > 0:
-            archivos_lista = df_filtrado['archivo'].tolist()[:50]
-            archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle')
+        with tab4:
+            # =============================================================================
+            # EXPLORADOR DE EVALUACIONES (Admin/Supervisor)
+            # =============================================================================
+            st.markdown('<p class="section-header">🔍 Explorador de Evaluaciones</p>', unsafe_allow_html=True)
             
-            eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
+            # Asegurar que rango_puntaje existe
+            if 'rango_puntaje' not in df.columns:
+                df['rango_puntaje'] = pd.cut(df['puntaje_total'], 
+                                              bins=[-1, 20, 40, 60, 80, 100],
+                                              labels=['Crítico (0-20)', 'Bajo (21-40)', 'Regular (41-60)', 'Bueno (61-80)', 'Excelente (81-100)'])
+            
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                rangos_lista = ['Todos'] + [r for r in df['rango_puntaje'].dropna().unique().tolist() if pd.notna(r)]
+                filtro_rango = st.selectbox("Filtrar por rango:", rangos_lista, key='filtro_rango_exp')
+            with col2:
+                if 'agente' in df.columns:
+                    agentes_list = ['Todos'] + sorted(df['agente'].dropna().unique().tolist())
+                    filtro_agente = st.selectbox("Filtrar por agente:", agentes_list, key='filtro_agente_exp')
+                else:
+                    filtro_agente = 'Todos'
+            with col3:
+                orden = st.selectbox("Ordenar por:", ['Puntaje (menor a mayor)', 'Puntaje (mayor a menor)'], key='orden_exp')
+            
+            df_filtrado = df.copy()
+            if filtro_rango != 'Todos':
+                df_filtrado = df_filtrado[df_filtrado['rango_puntaje'] == filtro_rango]
+            if filtro_agente != 'Todos':
+                df_filtrado = df_filtrado[df_filtrado['agente'] == filtro_agente]
+            
+            ascending = 'menor' in orden
+            df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
+            
+            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
+            
+            # Tabla expandida
+            columnas_mostrar = ['archivo', 'agente', 'puntaje_total', 'saludo_presentacion', 
+                               'cierre', 'oferta_productos', 'resumen']
+            columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
+            
+            st.dataframe(
+                df_filtrado[columnas_disponibles].head(100),
+                use_container_width=True,
+                hide_index=True,
+                height=500
+            )
+            
+            # Detalle de una evaluación específica
+            st.markdown("---")
+            st.markdown("**📄 Ver Detalle de Evaluación Específica:**")
+            
+            if len(df_filtrado) > 0:
+                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle')
+                
+                eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown(f"**Archivo:** {eval_sel['archivo']}")
+                    st.markdown(f"**Agente:** {eval_sel.get('agente', 'N/A')}")
+                    st.markdown(f"**Puntaje Total:** {eval_sel['puntaje_total']}/100")
+                    st.markdown(f"**Resumen:** {eval_sel.get('resumen', 'N/A')}")
+                
+                with col2:
+                    st.markdown("**Puntajes por Criterio:**")
+                    for c in criterios:
+                        if c in eval_sel.index:
+                            valor = eval_sel[c]
+                            emoji = "🟢" if valor >= 50 else "🟡" if valor >= 30 else "🔴"
+                            st.markdown(f"{criterios_nombres.get(c, c)}: **{valor}**")
+    
+    else:
+        # ===========================================================================
+        # TABS PARA VENDEDOR - Vista simplificada
+        # ===========================================================================
+        with tab2:
+            # Explorador de evaluaciones simplificado para vendedor
+            st.markdown('<p class="section-header">🔍 Detalle de Mis Evaluaciones</p>', unsafe_allow_html=True)
+            
+            # Asegurar que rango_puntaje existe
+            if 'rango_puntaje' not in df.columns:
+                df['rango_puntaje'] = pd.cut(df['puntaje_total'], 
+                                              bins=[-1, 20, 40, 60, 80, 100],
+                                              labels=['Crítico (0-20)', 'Bajo (21-40)', 'Regular (41-60)', 'Bueno (61-80)', 'Excelente (81-100)'])
             
             col1, col2 = st.columns(2)
             
             with col1:
-                st.markdown(f"**Archivo:** {eval_sel['archivo']}")
-                st.markdown(f"**Agente:** {eval_sel.get('agente', 'N/A')}")
-                st.markdown(f"**Puntaje Total:** {eval_sel['puntaje_total']}/100")
-                st.markdown(f"**Resumen:** {eval_sel.get('resumen', 'N/A')}")
-            
+                rangos_lista = ['Todos'] + [r for r in df['rango_puntaje'].dropna().unique().tolist() if pd.notna(r)]
+                filtro_rango = st.selectbox("Filtrar por rango:", rangos_lista, key='filtro_rango_vendedor')
             with col2:
-                st.markdown("**Puntajes por Criterio:**")
-                for c in criterios:
-                    if c in eval_sel.index:
-                        valor = eval_sel[c]
-                        emoji = "🟢" if valor >= 50 else "🟡" if valor >= 30 else "🔴"
-                        st.markdown(f"{criterios_nombres.get(c, c)}: **{valor}**")
+                orden = st.selectbox("Ordenar por:", ['Puntaje (menor a mayor)', 'Puntaje (mayor a menor)'], key='orden_vendedor')
+            
+            df_filtrado = df.copy()
+            if filtro_rango != 'Todos':
+                df_filtrado = df_filtrado[df_filtrado['rango_puntaje'] == filtro_rango]
+            
+            ascending = 'menor' in orden
+            df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
+            
+            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
+            
+            # Tabla de evaluaciones del vendedor
+            columnas_mostrar = ['archivo', 'puntaje_total', 'saludo_presentacion', 
+                               'cierre', 'oferta_productos', 'resumen']
+            columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
+            
+            st.dataframe(
+                df_filtrado[columnas_disponibles].head(100),
+                use_container_width=True,
+                hide_index=True,
+                height=400
+            )
+            
+            # Detalle de una evaluación
+            if len(df_filtrado) > 0:
+                st.markdown("---")
+                st.markdown("**📄 Ver Detalle de Evaluación:**")
+                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle_vendedor')
+                
+                eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown(f"**Archivo:** {eval_sel['archivo']}")
+                    st.markdown(f"**Puntaje Total:** {eval_sel['puntaje_total']}/100")
+                    st.markdown(f"**Resumen:** {eval_sel.get('resumen', 'N/A')}")
+                
+                with col2:
+                    st.markdown("**Puntajes por Criterio:**")
+                    for c in criterios:
+                        if c in eval_sel.index:
+                            valor = eval_sel[c]
+                            emoji = "🟢" if valor >= 50 else "🟡" if valor >= 30 else "🔴"
+                            st.markdown(f"{criterios_nombres.get(c, c)}: **{valor}**")
 
 
 # =============================================================================
@@ -4118,6 +6447,466 @@ def aplicar_semaforo_cumplimiento(porcentaje):
     else:
         return "🔴", "#DC2626", "Bajo"
 
+
+# =============================================================================
+# PÁGINA DE COMPARATIVA DE PERÍODOS
+# =============================================================================
+def pagina_comparativa_periodos(datos):
+    """Página para comparar métricas entre dos períodos diferentes"""
+    st.markdown('<div class="main-header">📅 COMMAND · Comparativa de Períodos</div>', unsafe_allow_html=True)
+    
+    # Subtítulo corporativo
+    st.markdown("""
+    <div style='background: #F8FAFC; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #8B5CF6;'>
+        <p style='margin: 0; color: #334155; font-size: 0.95rem;'>
+            <strong>Análisis Comparativo de Rendimiento</strong> · Compare métricas entre diferentes semanas o períodos
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Verificar datos
+    if 'evaluaciones_gemini_df' not in datos or datos['evaluaciones_gemini_df'] is None:
+        st.warning("⚠️ No hay datos de evaluaciones disponibles para comparar.")
+        return
+    
+    df = datos['evaluaciones_gemini_df'].copy()
+    
+    # Verificar que existe la columna de fecha
+    if 'fecha_llamada' not in df.columns:
+        st.error("⚠️ No se encontró la columna de fecha en los datos.")
+        st.info("💡 Asegúrese de que los archivos tengan el patrón de fecha en el nombre (ej: 260112 = 12/01/2026)")
+        return
+    
+    # Obtener fechas únicas disponibles
+    fechas_disponibles = df['fecha_llamada'].dropna().dt.date.unique()
+    fechas_ordenadas = sorted(fechas_disponibles)
+    
+    if len(fechas_ordenadas) < 2:
+        st.warning("⚠️ Se necesitan al menos 2 fechas diferentes para hacer una comparativa.")
+        return
+    
+    # Definir períodos predefinidos
+    periodo_semana1 = [d for d in fechas_ordenadas if d >= datetime(2026, 1, 12).date() and d <= datetime(2026, 1, 16).date()]
+    periodo_semana2 = [d for d in fechas_ordenadas if d >= datetime(2026, 1, 19).date() and d <= datetime(2026, 1, 24).date()]
+    
+    st.markdown("### ⚙️ Configurar Comparativa")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); 
+                    padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 2px solid #3B82F6;'>
+            <span style='color:#1E40AF; font-weight:bold; font-size:16px;'>🔵 PERÍODO 1</span>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        periodo1_tipo = st.selectbox(
+            "Seleccionar período:",
+            ["Semana 12-16 Enero", "Semana 19-24 Enero", "Personalizado"],
+            key="periodo1_tipo"
+        )
+        
+        if periodo1_tipo == "Semana 12-16 Enero":
+            fecha_ini_1 = datetime(2026, 1, 12).date()
+            fecha_fin_1 = datetime(2026, 1, 16).date()
+        elif periodo1_tipo == "Semana 19-24 Enero":
+            fecha_ini_1 = datetime(2026, 1, 19).date()
+            fecha_fin_1 = datetime(2026, 1, 24).date()
+        else:
+            col_a, col_b = st.columns(2)
+            with col_a:
+                fecha_ini_1 = st.date_input("Desde:", value=fechas_ordenadas[0], key="p1_ini")
+            with col_b:
+                fecha_fin_1 = st.date_input("Hasta:", value=fechas_ordenadas[-1], key="p1_fin")
+        
+        st.info(f"📅 {fecha_ini_1.strftime('%d/%m/%Y')} - {fecha_fin_1.strftime('%d/%m/%Y')}")
+    
+    with col2:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%); 
+                    padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 2px solid #DC2626;'>
+            <span style='color:#991B1B; font-weight:bold; font-size:16px;'>🔴 PERÍODO 2</span>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        periodo2_tipo = st.selectbox(
+            "Seleccionar período:",
+            ["Semana 19-24 Enero", "Semana 12-16 Enero", "Personalizado"],
+            key="periodo2_tipo"
+        )
+        
+        if periodo2_tipo == "Semana 12-16 Enero":
+            fecha_ini_2 = datetime(2026, 1, 12).date()
+            fecha_fin_2 = datetime(2026, 1, 16).date()
+        elif periodo2_tipo == "Semana 19-24 Enero":
+            fecha_ini_2 = datetime(2026, 1, 19).date()
+            fecha_fin_2 = datetime(2026, 1, 24).date()
+        else:
+            col_a, col_b = st.columns(2)
+            with col_a:
+                fecha_ini_2 = st.date_input("Desde:", value=fechas_ordenadas[0], key="p2_ini")
+            with col_b:
+                fecha_fin_2 = st.date_input("Hasta:", value=fechas_ordenadas[-1], key="p2_fin")
+        
+        st.info(f"📅 {fecha_ini_2.strftime('%d/%m/%Y')} - {fecha_fin_2.strftime('%d/%m/%Y')}")
+    
+    # =============================================================================
+    # FILTRO POR EQUIPOS
+    # =============================================================================
+    st.markdown("### 🏢 Filtrar por Equipos")
+    
+    # Cargar equipos disponibles
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+    
+    # Crear mapeo nombre -> equipo
+    nombre_a_equipo_comp = {}
+    for equipo, vendedores in equipos_vendedores.items():
+        for vendedor in vendedores:
+            nombre_a_equipo_comp[vendedor.lower().strip()] = equipo
+    
+    def obtener_equipo_comp(agente):
+        """Obtiene el equipo del agente"""
+        if pd.isna(agente) or agente is None:
+            return "Sin Equipo"
+        nombre = obtener_nombre_agente(str(agente)).lower().strip()
+        if nombre in nombre_a_equipo_comp:
+            return nombre_a_equipo_comp[nombre]
+        for nom, eq in nombre_a_equipo_comp.items():
+            if nombre in nom or nom in nombre:
+                return eq
+        return "Sin Equipo"
+    
+    # Obtener equipos únicos
+    equipos_lista = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+    equipos_lista = sorted(equipos_lista)
+    
+    # Selector de equipos (multiselect)
+    equipos_seleccionados = st.multiselect(
+        "Seleccione los equipos a comparar (vacío = todos):",
+        options=equipos_lista,
+        default=[],
+        key="comparativa_equipos_filter"
+    )
+    
+    # Filtrar datos por períodos
+    df['fecha_date'] = df['fecha_llamada'].dt.date
+    df_periodo1 = df[(df['fecha_date'] >= fecha_ini_1) & (df['fecha_date'] <= fecha_fin_1)].copy()
+    df_periodo2 = df[(df['fecha_date'] >= fecha_ini_2) & (df['fecha_date'] <= fecha_fin_2)].copy()
+    
+    # Aplicar filtro de equipos si se seleccionaron
+    if equipos_seleccionados:
+        # Agregar columna de equipo a cada período
+        df_periodo1['equipo_calc'] = df_periodo1['agente'].apply(obtener_equipo_comp)
+        df_periodo2['equipo_calc'] = df_periodo2['agente'].apply(obtener_equipo_comp)
+        
+        df_periodo1 = df_periodo1[df_periodo1['equipo_calc'].isin(equipos_seleccionados)]
+        df_periodo2 = df_periodo2[df_periodo2['equipo_calc'].isin(equipos_seleccionados)]
+        
+        st.info(f"🏢 Mostrando datos de {len(equipos_seleccionados)} equipo(s): {', '.join(equipos_seleccionados)}")
+    
+    # Verificar que hay datos en ambos períodos
+    if len(df_periodo1) == 0:
+        st.warning(f"⚠️ No hay datos para el Período 1 ({fecha_ini_1} - {fecha_fin_1})")
+        return
+    if len(df_periodo2) == 0:
+        st.warning(f"⚠️ No hay datos para el Período 2 ({fecha_ini_2} - {fecha_fin_2})")
+        return
+    
+    st.markdown("---")
+    
+    # =============================================================================
+    # MÉTRICAS COMPARATIVAS PRINCIPALES
+    # =============================================================================
+    st.markdown("### 📊 Comparativa de Métricas Principales")
+    
+    # Calcular métricas para cada período
+    def calcular_metricas(df_periodo):
+        return {
+            'total': len(df_periodo),
+            'puntaje_promedio': df_periodo['puntaje_total'].mean() if 'puntaje_total' in df_periodo.columns else 0,
+            'excelentes': len(df_periodo[df_periodo['puntaje_total'] >= 80]) if 'puntaje_total' in df_periodo.columns else 0,
+            'criticos': len(df_periodo[df_periodo['puntaje_total'] <= 20]) if 'puntaje_total' in df_periodo.columns else 0,
+            'agentes_unicos': df_periodo['agente'].nunique() if 'agente' in df_periodo.columns else 0
+        }
+    
+    m1 = calcular_metricas(df_periodo1)
+    m2 = calcular_metricas(df_periodo2)
+    
+    # Mostrar métricas comparativas
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        diff_total = m2['total'] - m1['total']
+        st.metric(
+            "📊 Total Evaluaciones",
+            f"P1: {m1['total']:,} | P2: {m2['total']:,}",
+            delta=f"{diff_total:+,} diferencia"
+        )
+    
+    with col2:
+        diff_puntaje = m2['puntaje_promedio'] - m1['puntaje_promedio']
+        color = "normal" if diff_puntaje >= 0 else "inverse"
+        st.metric(
+            "⭐ Puntaje Promedio",
+            f"P1: {m1['puntaje_promedio']:.1f} | P2: {m2['puntaje_promedio']:.1f}",
+            delta=f"{diff_puntaje:+.1f} pts",
+            delta_color=color
+        )
+    
+    with col3:
+        pct_exc_1 = (m1['excelentes'] / m1['total'] * 100) if m1['total'] > 0 else 0
+        pct_exc_2 = (m2['excelentes'] / m2['total'] * 100) if m2['total'] > 0 else 0
+        diff_exc = pct_exc_2 - pct_exc_1
+        st.metric(
+            "🌟 % Excelentes (≥80)",
+            f"P1: {pct_exc_1:.1f}% | P2: {pct_exc_2:.1f}%",
+            delta=f"{diff_exc:+.1f}%"
+        )
+    
+    with col4:
+        pct_crit_1 = (m1['criticos'] / m1['total'] * 100) if m1['total'] > 0 else 0
+        pct_crit_2 = (m2['criticos'] / m2['total'] * 100) if m2['total'] > 0 else 0
+        diff_crit = pct_crit_2 - pct_crit_1
+        # Menos críticos es mejor, así que invertimos el color
+        color = "inverse" if diff_crit <= 0 else "normal"
+        st.metric(
+            "🔴 % Críticos (≤20)",
+            f"P1: {pct_crit_1:.1f}% | P2: {pct_crit_2:.1f}%",
+            delta=f"{diff_crit:+.1f}%",
+            delta_color=color
+        )
+    
+    with col5:
+        st.metric(
+            "👥 Agentes Evaluados",
+            f"P1: {m1['agentes_unicos']} | P2: {m2['agentes_unicos']}",
+            delta=f"{m2['agentes_unicos'] - m1['agentes_unicos']:+}"
+        )
+    
+    st.markdown("---")
+    
+    # =============================================================================
+    # GRÁFICOS COMPARATIVOS
+    # =============================================================================
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "📊 Distribución por Rango",
+        "📈 Comparativa por Criterio", 
+        "👥 Evolución por Agente",
+        "📋 Detalle Completo"
+    ])
+    
+    with tab1:
+        st.markdown("### 📊 Distribución por Rango de Puntaje")
+        
+        col1, col2 = st.columns(2)
+        
+        # Clasificar por rangos
+        def clasificar_rango(df_p):
+            df_p = df_p.copy()
+            df_p['rango'] = pd.cut(
+                df_p['puntaje_total'], 
+                bins=[-1, 20, 40, 60, 80, 100],
+                labels=['Crítico (0-20)', 'Bajo (21-40)', 'Regular (41-60)', 'Bueno (61-80)', 'Excelente (81-100)']
+            )
+            return df_p['rango'].value_counts()
+        
+        with col1:
+            st.markdown(f"**🔵 Período 1:** {fecha_ini_1.strftime('%d/%m')} - {fecha_fin_1.strftime('%d/%m/%Y')}")
+            rango1 = clasificar_rango(df_periodo1)
+            fig1 = px.pie(
+                values=rango1.values,
+                names=rango1.index,
+                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
+            )
+            fig1.update_layout(height=350, paper_bgcolor='#FFFFFF')
+            fig1.update_traces(textinfo='percent+label', textfont=dict(size=12))
+            st.plotly_chart(fig1, use_container_width=True)
+        
+        with col2:
+            st.markdown(f"**🔴 Período 2:** {fecha_ini_2.strftime('%d/%m')} - {fecha_fin_2.strftime('%d/%m/%Y')}")
+            rango2 = clasificar_rango(df_periodo2)
+            fig2 = px.pie(
+                values=rango2.values,
+                names=rango2.index,
+                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
+            )
+            fig2.update_layout(height=350, paper_bgcolor='#FFFFFF')
+            fig2.update_traces(textinfo='percent+label', textfont=dict(size=12))
+            st.plotly_chart(fig2, use_container_width=True)
+    
+    with tab2:
+        st.markdown("### 📈 Comparativa por Criterio de Evaluación")
+        
+        # Definir criterios
+        criterios = ['saludo_presentacion', 'identificacion_cliente', 'deteccion_necesidades',
+                     'oferta_productos', 'manejo_objeciones', 'cierre', 'despedida',
+                     'proactividad', 'empatia', 'resolucion_problemas']
+        
+        criterios_nombres = {
+            'saludo_presentacion': 'Saludo y Presentación',
+            'identificacion_cliente': 'Identificación Cliente',
+            'deteccion_necesidades': 'Detección Necesidades',
+            'oferta_productos': 'Oferta de Productos',
+            'manejo_objeciones': 'Manejo de Objeciones',
+            'cierre': 'Cierre de Venta',
+            'despedida': 'Despedida',
+            'proactividad': 'Proactividad',
+            'empatia': 'Empatía',
+            'resolucion_problemas': 'Resolución Problemas'
+        }
+        
+        # Calcular promedios por criterio
+        valores_p1 = []
+        valores_p2 = []
+        nombres_criterios = []
+        
+        for c in criterios:
+            if c in df_periodo1.columns and c in df_periodo2.columns:
+                nombres_criterios.append(criterios_nombres.get(c, c))
+                valores_p1.append(df_periodo1[c].mean())
+                valores_p2.append(df_periodo2[c].mean())
+        
+        # Crear gráfico de barras comparativo
+        df_comparativo = pd.DataFrame({
+            'Criterio': nombres_criterios,
+            f'Período 1 ({fecha_ini_1.strftime("%d/%m")}-{fecha_fin_1.strftime("%d/%m")})': valores_p1,
+            f'Período 2 ({fecha_ini_2.strftime("%d/%m")}-{fecha_fin_2.strftime("%d/%m")})': valores_p2
+        })
+        
+        df_melted = df_comparativo.melt(id_vars=['Criterio'], var_name='Período', value_name='Puntaje')
+        
+        fig = px.bar(
+            df_melted,
+            x='Criterio',
+            y='Puntaje',
+            color='Período',
+            barmode='group',
+            color_discrete_map={
+                f'Período 1 ({fecha_ini_1.strftime("%d/%m")}-{fecha_fin_1.strftime("%d/%m")})': '#3B82F6',
+                f'Período 2 ({fecha_ini_2.strftime("%d/%m")}-{fecha_fin_2.strftime("%d/%m")})': '#DC2626'
+            }
+        )
+        
+        fig.update_layout(
+            height=500,
+            paper_bgcolor='#FFFFFF',
+            plot_bgcolor='#FAFBFC',
+            xaxis_tickangle=-45,
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5)
+        )
+        fig.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Tabla de diferencias
+        st.markdown("#### 📋 Diferencias por Criterio")
+        df_diff = pd.DataFrame({
+            'Criterio': nombres_criterios,
+            'Período 1': [f"{v:.1f}" for v in valores_p1],
+            'Período 2': [f"{v:.1f}" for v in valores_p2],
+            'Diferencia': [f"{v2-v1:+.1f}" for v1, v2 in zip(valores_p1, valores_p2)],
+            'Tendencia': ['🔼 Mejoró' if v2 > v1 else '🔽 Bajó' if v2 < v1 else '➡️ Igual' for v1, v2 in zip(valores_p1, valores_p2)]
+        })
+        st.dataframe(df_diff, use_container_width=True, hide_index=True)
+    
+    with tab3:
+        st.markdown("### 👥 Evolución por Agente")
+        
+        # Calcular promedios por agente en cada período
+        if 'agente' in df_periodo1.columns and 'agente' in df_periodo2.columns:
+            prom_agente_p1 = df_periodo1.groupby('agente')['puntaje_total'].agg(['mean', 'count']).reset_index()
+            prom_agente_p1.columns = ['agente', 'puntaje_p1', 'n_p1']
+            
+            prom_agente_p2 = df_periodo2.groupby('agente')['puntaje_total'].agg(['mean', 'count']).reset_index()
+            prom_agente_p2.columns = ['agente', 'puntaje_p2', 'n_p2']
+            
+            # Merge
+            df_agentes = prom_agente_p1.merge(prom_agente_p2, on='agente', how='outer').fillna(0)
+            df_agentes['diferencia'] = df_agentes['puntaje_p2'] - df_agentes['puntaje_p1']
+            df_agentes['tendencia'] = df_agentes['diferencia'].apply(
+                lambda x: '🔼 Mejoró' if x > 2 else '🔽 Bajó' if x < -2 else '➡️ Estable'
+            )
+            
+            # Solo agentes con datos en ambos períodos
+            df_agentes_ambos = df_agentes[(df_agentes['n_p1'] > 0) & (df_agentes['n_p2'] > 0)]
+            
+            if len(df_agentes_ambos) > 0:
+                # Top mejoras y caídas
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("**🔼 Mayor Mejora:**")
+                    top_mejoras = df_agentes_ambos.nlargest(10, 'diferencia')
+                    fig = px.bar(
+                        top_mejoras,
+                        x='diferencia',
+                        y='agente',
+                        orientation='h',
+                        color='diferencia',
+                        color_continuous_scale='Greens',
+                        text=[f"{d:+.1f}" for d in top_mejoras['diferencia']]
+                    )
+                    fig.update_traces(textposition='outside')
+                    fig.update_layout(height=400, showlegend=False, yaxis={'categoryorder': 'total ascending'})
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    st.markdown("**🔽 Mayor Caída:**")
+                    top_caidas = df_agentes_ambos.nsmallest(10, 'diferencia')
+                    fig = px.bar(
+                        top_caidas,
+                        x='diferencia',
+                        y='agente',
+                        orientation='h',
+                        color='diferencia',
+                        color_continuous_scale='Reds_r',
+                        text=[f"{d:+.1f}" for d in top_caidas['diferencia']]
+                    )
+                    fig.update_traces(textposition='outside')
+                    fig.update_layout(height=400, showlegend=False, yaxis={'categoryorder': 'total descending'})
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                # Tabla completa
+                st.markdown("#### 📋 Detalle por Agente")
+                df_mostrar = df_agentes_ambos[['agente', 'puntaje_p1', 'n_p1', 'puntaje_p2', 'n_p2', 'diferencia', 'tendencia']].copy()
+                df_mostrar.columns = ['Agente', 'Puntaje P1', 'N° Eval P1', 'Puntaje P2', 'N° Eval P2', 'Diferencia', 'Tendencia']
+                df_mostrar = df_mostrar.sort_values('Diferencia', ascending=False)
+                df_mostrar['Puntaje P1'] = df_mostrar['Puntaje P1'].round(1)
+                df_mostrar['Puntaje P2'] = df_mostrar['Puntaje P2'].round(1)
+                df_mostrar['Diferencia'] = df_mostrar['Diferencia'].round(1)
+                st.dataframe(df_mostrar, use_container_width=True, hide_index=True)
+            else:
+                st.info("No hay agentes con datos en ambos períodos para comparar.")
+    
+    with tab4:
+        st.markdown("### 📋 Detalle Completo de Evaluaciones")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown(f"**🔵 Período 1:** {len(df_periodo1):,} evaluaciones")
+            if len(df_periodo1) > 0:
+                cols_mostrar = ['archivo', 'agente', 'puntaje_total', 'fecha_llamada']
+                cols_disp = [c for c in cols_mostrar if c in df_periodo1.columns]
+                st.dataframe(
+                    df_periodo1[cols_disp].sort_values('puntaje_total', ascending=False).head(50),
+                    use_container_width=True,
+                    hide_index=True
+                )
+        
+        with col2:
+            st.markdown(f"**🔴 Período 2:** {len(df_periodo2):,} evaluaciones")
+            if len(df_periodo2) > 0:
+                cols_mostrar = ['archivo', 'agente', 'puntaje_total', 'fecha_llamada']
+                cols_disp = [c for c in cols_mostrar if c in df_periodo2.columns]
+                st.dataframe(
+                    df_periodo2[cols_disp].sort_values('puntaje_total', ascending=False).head(50),
+                    use_container_width=True,
+                    hide_index=True
+                )
+
+
 def pagina_calidad():
     """Página de Calidad - Análisis de Llamadas Call Center"""
     
@@ -4132,12 +6921,13 @@ def pagina_calidad():
     </div>
     """, unsafe_allow_html=True)
     
-    # Tabs principales
-    tab1, tab2, tab3, tab4 = st.tabs([
+    # Tabs principales - AGREGADO TAB DE ANÁLISIS CRUZADO
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "📤 Carga de Datos", 
         "📊 Métricas por Vendedor", 
         "🚦 Semáforos de Tiempo",
-        "💰 KPIs de Cumplimiento"
+        "💰 KPIs de Cumplimiento",
+        "🏆 Análisis Cruzado (IQC)"
     ])
     
     # =========================================================================
@@ -4149,9 +6939,8 @@ def pagina_calidad():
         <div style='background: #EFF6FF; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6; margin-bottom: 20px;'>
             <strong>📋 Archivos necesarios:</strong><br>
             <ul style='margin: 10px 0;'>
-                <li><strong>Detalle Interacciones (Campaña - Lote).csv</strong> - Datos de llamadas</li>
-                <li><strong>CargaAgentes.xlsx</strong> - Mapeo de agentes a vendedores (opcional)</li>
-                <li><strong>Customer.csv/xlsx</strong> - Datos de ventas para KPIs (opcional)</li>
+                <li><strong>Acumuladores de Agentes (Mitrol)</strong> - Tiempos y métricas de llamadas</li>
+                <li><strong>Solicitudes (Customer)</strong> - Datos de ventas</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -4159,149 +6948,118 @@ def pagina_calidad():
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("#### 📁 Archivo de Interacciones")
-            archivo_interacciones = st.file_uploader(
-                "Subir Detalle Interacciones (CSV)", 
+            st.markdown("#### 📞 Archivo Mitrol (Acumuladores)")
+            archivo_mitrol = st.file_uploader(
+                "Subir Acumuladores de Agentes (CSV)", 
                 type=['csv'], 
-                key='calidad_interacciones'
+                key='calidad_mitrol'
             )
             
-            st.markdown("#### 👥 Archivo de Agentes")
-            archivo_agentes = st.file_uploader(
-                "Subir CargaAgentes (Excel)", 
-                type=['xlsx', 'xls'], 
-                key='calidad_agentes'
-            )
+            if archivo_mitrol is not None:
+                try:
+                    df_mitrol = pd.read_csv(archivo_mitrol, encoding='latin-1', sep=';')
+                    st.session_state['df_calidad_mitrol'] = df_mitrol
+                    st.success(f"✅ Mitrol cargado: {len(df_mitrol):,} registros")
+                    with st.expander("👁️ Vista previa Mitrol"):
+                        st.dataframe(df_mitrol.head(5), use_container_width=True)
+                except Exception as e:
+                    st.error(f"❌ Error: {str(e)}")
         
         with col2:
-            st.markdown("#### 💼 Archivo de Ventas (Customer)")
-            archivo_ventas = st.file_uploader(
-                "Subir Customer (CSV/Excel)", 
-                type=['csv', 'xlsx', 'xls'], 
-                key='calidad_ventas'
+            st.markdown("#### 💼 Archivo Solicitudes (Ventas)")
+            archivo_solicitudes = st.file_uploader(
+                "Subir Solicitudes/Customer (CSV)", 
+                type=['csv'], 
+                key='calidad_solicitudes'
             )
             
-            st.markdown("#### ⚙️ Configuración")
-            
-            # Filtro de agentes válidos
-            agentes_validos_default = "MZA 1, MZA 2, MZA 3, MZA 4, MZA 5, MZA 6, MZA 7, MZA 8, MZA 9, MZA 10, MZA 11, MZA 12, MZA 13, MZA 14, MZA 15, 304, 305, 306"
-            agentes_validos_input = st.text_area(
-                "Agentes válidos (separados por coma):",
-                value=agentes_validos_default,
-                height=80,
-                key='agentes_validos'
-            )
+            if archivo_solicitudes is not None:
+                try:
+                    df_solicitudes = pd.read_csv(archivo_solicitudes, encoding='latin-1')
+                    st.session_state['df_calidad_solicitudes'] = df_solicitudes
+                    st.success(f"✅ Solicitudes cargadas: {len(df_solicitudes):,} registros")
+                    with st.expander("👁️ Vista previa Solicitudes"):
+                        st.dataframe(df_solicitudes.head(5), use_container_width=True)
+                except Exception as e:
+                    st.error(f"❌ Error: {str(e)}")
         
-        # Procesar archivos si se cargan
-        if archivo_interacciones is not None:
-            try:
-                # Cargar CSV de interacciones
-                df_inter = pd.read_csv(archivo_interacciones, encoding='latin-1')
-                st.session_state['df_calidad_interacciones'] = df_inter
-                
-                st.success(f"✅ Archivo de interacciones cargado: {len(df_inter):,} registros")
-                
-                # Mostrar preview
-                with st.expander("👁️ Vista previa de datos", expanded=False):
-                    st.dataframe(df_inter.head(10), use_container_width=True)
-                    st.markdown(f"**Columnas detectadas:** {', '.join(df_inter.columns.tolist())}")
-                
-            except Exception as e:
-                st.error(f"❌ Error al cargar archivo: {str(e)}")
-        
-        if archivo_agentes is not None:
-            try:
-                df_agentes = pd.read_excel(archivo_agentes)
-                st.session_state['df_calidad_agentes'] = df_agentes
-                st.success(f"✅ Archivo de agentes cargado: {len(df_agentes):,} registros")
-            except Exception as e:
-                st.error(f"❌ Error al cargar agentes: {str(e)}")
-        
-        if archivo_ventas is not None:
-            try:
-                if archivo_ventas.name.endswith('.csv'):
-                    df_ventas = pd.read_csv(archivo_ventas, encoding='latin-1')
-                else:
-                    df_ventas = pd.read_excel(archivo_ventas)
-                st.session_state['df_calidad_ventas'] = df_ventas
-                st.success(f"✅ Archivo de ventas cargado: {len(df_ventas):,} registros")
-            except Exception as e:
-                st.error(f"❌ Error al cargar ventas: {str(e)}")
-        
-        # Botón para procesar datos
+        # Cargar mapeo de vendedores
         st.markdown("---")
-        if st.button("🚀 Procesar Datos", type="primary", use_container_width=True):
-            if 'df_calidad_interacciones' not in st.session_state:
-                st.warning("⚠️ Primero debes cargar el archivo de interacciones")
+        st.markdown("#### 🗂️ Mapeo de Vendedores")
+        
+        # Intentar cargar el archivo de listado automáticamente
+        ruta_listado = os.path.join(os.path.dirname(__file__), 'LISTADO-DE-VENDEDORES.csv')
+        if os.path.exists(ruta_listado):
+            try:
+                df_listado = pd.read_csv(ruta_listado, encoding='latin-1')
+                # Limpiar columnas y crear mapeo
+                df_listado.columns = ['Usuario', 'Nombre', 'Equipo'] + [f'col_{i}' for i in range(len(df_listado.columns)-3)]
+                df_listado = df_listado[['Usuario', 'Nombre', 'Equipo']].dropna(subset=['Usuario'])
+                df_listado = df_listado[df_listado['Usuario'] != 'Usuario']  # Quitar header
+                # Normalizar Usuario
+                df_listado['Usuario_norm'] = df_listado['Usuario'].str.lower().str.strip().str.replace(' ', '').str.replace('\t', '')
+                st.session_state['df_mapeo_vendedores'] = df_listado
+                st.success(f"✅ Mapeo de vendedores cargado: {len(df_listado)} agentes")
+                
+                # Mostrar resumen por equipo
+                equipos = df_listado['Equipo'].value_counts()
+                cols_eq = st.columns(len(equipos))
+                for i, (equipo, count) in enumerate(equipos.items()):
+                    with cols_eq[i]:
+                        st.metric(f"👥 {equipo}", count)
+            except Exception as e:
+                st.warning(f"⚠️ No se pudo cargar el mapeo automático: {str(e)}")
+        else:
+            st.info("ℹ️ Coloca el archivo LISTADO-DE-VENDEDORES.csv en la carpeta del proyecto")
+        
+        # Botón procesar
+        st.markdown("---")
+        if st.button("🚀 Procesar y Unificar Datos", type="primary", use_container_width=True):
+            errores = []
+            if 'df_calidad_mitrol' not in st.session_state:
+                errores.append("Falta archivo Mitrol")
+            if 'df_calidad_solicitudes' not in st.session_state:
+                errores.append("Falta archivo Solicitudes")
+            
+            if errores:
+                st.warning(f"⚠️ {', '.join(errores)}")
             else:
                 with st.spinner("Procesando datos..."):
-                    df_inter = st.session_state['df_calidad_interacciones'].copy()
+                    # Procesar Mitrol
+                    df_mitrol = st.session_state['df_calidad_mitrol'].copy()
+                    df_mapeo = st.session_state.get('df_mapeo_vendedores', pd.DataFrame())
                     
-                    # Normalizar nombres de columnas
-                    df_inter.columns = df_inter.columns.str.strip()
+                    # Normalizar columna Agente de Mitrol
+                    if 'Agente' in df_mitrol.columns:
+                        df_mitrol['Agente_norm'] = df_mitrol['Agente'].str.lower().str.strip().str.replace(' ', '')
                     
-                    # Detectar columnas relevantes
-                    col_agente = next((c for c in df_inter.columns if 'agente' in c.lower()), None)
-                    col_tipificacion = next((c for c in df_inter.columns if 'tipificaci' in c.lower()), None)
-                    col_origen_corte = next((c for c in df_inter.columns if 'origen' in c.lower() and 'corte' in c.lower()), None)
-                    col_talking = next((c for c in df_inter.columns if 'talking' in c.lower()), None)
-                    col_inicio = next((c for c in df_inter.columns if 'inicio' in c.lower()), None)
-                    col_campana = next((c for c in df_inter.columns if 'campa' in c.lower()), None)
-                    
-                    # Renombrar columnas
-                    rename_map = {}
-                    if col_agente: rename_map[col_agente] = 'Nombre Agente'
-                    if col_tipificacion: rename_map[col_tipificacion] = 'Tipificación'
-                    if col_origen_corte: rename_map[col_origen_corte] = 'Origen Corte'
-                    if col_talking: rename_map[col_talking] = 'TalkingTime'
-                    if col_inicio: rename_map[col_inicio] = 'Inicio'
-                    if col_campana: rename_map[col_campana] = 'Campaña'
-                    
-                    df_inter = df_inter.rename(columns=rename_map)
-                    
-                    # Normalizar a minúsculas para comparaciones
-                    if 'Tipificación' in df_inter.columns:
-                        df_inter['Tipificación_lower'] = df_inter['Tipificación'].astype(str).str.lower().str.strip()
-                    if 'Origen Corte' in df_inter.columns:
-                        df_inter['Origen Corte_lower'] = df_inter['Origen Corte'].astype(str).str.lower().str.strip()
-                    
-                    # Convertir TalkingTime a segundos
-                    if 'TalkingTime' in df_inter.columns:
-                        df_inter['TalkingTime_seg'] = df_inter['TalkingTime'].apply(to_seconds_calidad)
-                    
-                    # Determinar turno
-                    if 'Inicio' in df_inter.columns:
-                        df_inter['Turno'] = df_inter['Inicio'].apply(determinar_turno)
-                    
-                    # Filtrar agentes válidos si se especifican
-                    agentes_lista = [a.strip() for a in agentes_validos_input.split(',')]
-                    if 'Nombre Agente' in df_inter.columns and agentes_lista:
-                        # Filtro flexible - solo si coincide parcialmente
-                        df_inter['agente_valido'] = df_inter['Nombre Agente'].astype(str).apply(
-                            lambda x: any(av.lower() in x.lower() for av in agentes_lista if av)
+                    # Unir con mapeo
+                    if not df_mapeo.empty and 'Agente_norm' in df_mitrol.columns:
+                        df_mitrol = df_mitrol.merge(
+                            df_mapeo[['Usuario_norm', 'Nombre', 'Equipo']],
+                            left_on='Agente_norm',
+                            right_on='Usuario_norm',
+                            how='left'
                         )
+                        df_mitrol['Vendedor'] = df_mitrol['Nombre'].fillna(df_mitrol['Agente'])
+                    else:
+                        df_mitrol['Vendedor'] = df_mitrol.get('Agente', 'Desconocido')
+                        df_mitrol['Equipo'] = 'Sin Equipo'
                     
-                    # Guardar datos procesados
-                    st.session_state['df_calidad_procesado'] = df_inter
+                    st.session_state['df_calidad_procesado'] = df_mitrol
                     st.success("✅ Datos procesados correctamente")
                     
-                    # Mostrar resumen
-                    st.markdown("### 📊 Resumen de Datos Procesados")
-                    col1, col2, col3, col4 = st.columns(4)
+                    # Resumen
+                    st.markdown("### 📊 Resumen de Datos")
+                    col1, col2, col3 = st.columns(3)
                     with col1:
-                        st.metric("📞 Total Llamadas", f"{len(df_inter):,}")
+                        st.metric("📞 Registros Mitrol", f"{len(df_mitrol):,}")
                     with col2:
-                        agentes_unicos = df_inter['Nombre Agente'].nunique() if 'Nombre Agente' in df_inter.columns else 0
-                        st.metric("👥 Agentes", f"{agentes_unicos}")
+                        agentes = df_mitrol['Vendedor'].nunique() if 'Vendedor' in df_mitrol.columns else 0
+                        st.metric("👥 Agentes", agentes)
                     with col3:
-                        if 'TalkingTime_seg' in df_inter.columns:
-                            tiempo_total = df_inter['TalkingTime_seg'].sum()
-                            st.metric("⏱️ Tiempo Total", sec_to_hhmmss(tiempo_total))
-                    with col4:
-                        if 'Turno' in df_inter.columns:
-                            turnos = df_inter['Turno'].value_counts().to_dict()
-                            turno_principal = max(turnos, key=turnos.get) if turnos else "N/A"
-                            st.metric("🌅 Turno Principal", turno_principal)
+                        solicitudes = len(st.session_state['df_calidad_solicitudes'])
+                        st.metric("💼 Solicitudes", f"{solicitudes:,}")
     
     # =========================================================================
     # TAB 2: MÉTRICAS POR AGENTE
@@ -4874,6 +7632,1132 @@ def pagina_calidad():
                 )
             else:
                 st.warning("⚠️ No se encontraron las columnas necesarias (Vendedor, Estado)")
+    
+    # =========================================================================
+    # TAB 5: ANÁLISIS CRUZADO E IQC
+    # =========================================================================
+    with tab5:
+        st.markdown("### 🏆 Índice de Calidad Compuesto (IQC)")
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); 
+                    padding: 20px; border-radius: 15px; margin-bottom: 25px; color: white;'>
+            <h4 style='margin:0 0 10px 0; color: white;'>📊 Fórmula IQC</h4>
+            <p style='margin:0; font-family: monospace; font-size: 1.1rem;'>
+                IQC = (Puntaje_EVA × 0.40) + (Efectividad_Ventas × 0.30) + (Engagement × 0.30)
+            </p>
+            <hr style='border-color: rgba(255,255,255,0.3); margin: 15px 0;'>
+            <small>
+                <strong>Puntaje EVA:</strong> Calificación de evaluaciones de llamadas<br>
+                <strong>Efectividad Ventas:</strong> % de conversión (Aprobadas/Cargadas)<br>
+                <strong>Engagement:</strong> Adherencia operativa (login, tipificaciones)
+            </small>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Verificar datos necesarios
+        tiene_mitrol = 'df_calidad_procesado' in st.session_state
+        tiene_solicitudes = 'df_calidad_solicitudes' in st.session_state
+        tiene_eva = 'resumen_vendedores' in st.session_state or 'metricas_globales' in st.session_state
+        
+        # Status de datos
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if tiene_eva:
+                st.success("✅ Datos EVA disponibles")
+            else:
+                st.warning("⚠️ Ir a Panel Ejecutivo para generar datos EVA")
+        with col2:
+            if tiene_mitrol:
+                st.success("✅ Datos Mitrol cargados")
+            else:
+                st.warning("⚠️ Cargar Mitrol en pestaña 'Carga de Datos'")
+        with col3:
+            if tiene_solicitudes:
+                st.success("✅ Datos Ventas cargados")
+            else:
+                st.warning("⚠️ Cargar Solicitudes en pestaña 'Carga de Datos'")
+        
+        st.markdown("---")
+        
+        if tiene_mitrol and tiene_solicitudes:
+            # Configurar pesos del IQC
+            st.markdown("#### ⚖️ Configuración de Pesos")
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                peso_eva = st.slider("Peso EVA (%)", 0, 100, 40, 5, key='peso_eva')
+            with col2:
+                peso_ventas = st.slider("Peso Ventas (%)", 0, 100, 30, 5, key='peso_ventas')
+            with col3:
+                peso_engagement = st.slider("Peso Engagement (%)", 0, 100, 30, 5, key='peso_engagement')
+            
+            total_pesos = peso_eva + peso_ventas + peso_engagement
+            if total_pesos != 100:
+                st.warning(f"⚠️ La suma de pesos es {total_pesos}%, debe ser 100%")
+            else:
+                st.success(f"✅ Pesos configurados correctamente: {peso_eva}% EVA + {peso_ventas}% Ventas + {peso_engagement}% Engagement")
+            
+            st.markdown("---")
+            
+            # Calcular métricas
+            if st.button("📊 Calcular IQC", type="primary", use_container_width=True):
+                with st.spinner("Calculando Índice de Calidad Compuesto..."):
+                    df_mitrol = st.session_state['df_calidad_procesado'].copy()
+                    df_ventas = st.session_state['df_calidad_solicitudes'].copy()
+                    df_mapeo = st.session_state.get('df_mapeo_vendedores', pd.DataFrame())
+                    
+                    # ============================================
+                    # 1. MÉTRICAS DE VENTAS (Efectividad)
+                    # ============================================
+                    # Identificar columnas
+                    col_vendedor = None
+                    col_estado = None
+                    for c in df_ventas.columns:
+                        if 'vendedor' in c.lower():
+                            col_vendedor = c
+                        if 'estado' in c.lower():
+                            col_estado = c
+                    
+                    if col_vendedor and col_estado:
+                        # Agrupar por vendedor - convertir a string primero
+                        df_ventas[col_estado] = df_ventas[col_estado].astype(str)
+                        df_ventas['es_aprobada'] = df_ventas[col_estado].str.contains('APROB', case=False, na=False)
+                        ventas_por_vendedor = df_ventas.groupby(col_vendedor).agg(
+                            total_ventas=('es_aprobada', 'count'),
+                            ventas_aprobadas=('es_aprobada', 'sum')
+                        ).reset_index()
+                        ventas_por_vendedor.columns = ['Vendedor_Ventas', 'Total_Ventas', 'Ventas_Aprobadas']
+                        ventas_por_vendedor['Efectividad_Ventas'] = (
+                            ventas_por_vendedor['Ventas_Aprobadas'] / 
+                            ventas_por_vendedor['Total_Ventas'] * 100
+                        ).fillna(0)
+                        ventas_por_vendedor['Vendedor_norm'] = ventas_por_vendedor['Vendedor_Ventas'].astype(str).str.upper().str.strip()
+                    else:
+                        ventas_por_vendedor = pd.DataFrame()
+                    
+                    # ============================================
+                    # 2. MÉTRICAS MITROL (Engagement)
+                    # ============================================
+                    # Calcular engagement basado en tipificaciones y tiempos
+                    engagement_cols = ['Vendedor', 'Equipo']
+                    
+                    # Buscar columnas de tipificación
+                    cols_tipif_ok = [c for c in df_mitrol.columns if 'exitoso' in c.lower() and 'no' not in c.lower()]
+                    cols_tipif_no = [c for c in df_mitrol.columns if 'no exitoso' in c.lower() or 'noexitoso' in c.lower()]
+                    
+                    df_mitrol_agg = df_mitrol.groupby('Vendedor').agg({
+                        c: 'sum' for c in cols_tipif_ok + cols_tipif_no if c in df_mitrol.columns
+                    }).reset_index() if cols_tipif_ok or cols_tipif_no else pd.DataFrame()
+                    
+                    if not df_mitrol_agg.empty and cols_tipif_ok:
+                        df_mitrol_agg['Total_Tipif_OK'] = df_mitrol_agg[cols_tipif_ok].sum(axis=1) if cols_tipif_ok else 0
+                        df_mitrol_agg['Total_Tipif_NO'] = df_mitrol_agg[cols_tipif_no].sum(axis=1) if cols_tipif_no else 0
+                        df_mitrol_agg['Total_Tipif'] = df_mitrol_agg['Total_Tipif_OK'] + df_mitrol_agg['Total_Tipif_NO']
+                        df_mitrol_agg['Engagement'] = (
+                            df_mitrol_agg['Total_Tipif_OK'] / df_mitrol_agg['Total_Tipif'] * 100
+                        ).fillna(50)
+                    else:
+                        # Si no hay tipificaciones, usar engagement base
+                        df_mitrol_agg = df_mitrol[['Vendedor']].drop_duplicates()
+                        df_mitrol_agg['Engagement'] = 70  # Valor base
+                    
+                    df_mitrol_agg['Vendedor_norm'] = df_mitrol_agg['Vendedor'].str.upper().str.strip()
+                    
+                    # ============================================
+                    # 3. MÉTRICAS EVA (Puntaje Evaluaciones)
+                    # ============================================
+                    puntaje_eva_por_vendedor = pd.DataFrame()
+                    if tiene_eva and 'resumen_vendedores' in st.session_state:
+                        # Usar datos de EVA si existen
+                        df_eva = st.session_state.get('resumen_vendedores', pd.DataFrame())
+                        if not df_eva.empty and 'vendedor' in [c.lower() for c in df_eva.columns]:
+                            col_vend_eva = [c for c in df_eva.columns if 'vendedor' in c.lower()][0]
+                            col_punt_eva = [c for c in df_eva.columns if 'punt' in c.lower() or 'score' in c.lower() or 'nota' in c.lower()]
+                            if col_punt_eva:
+                                puntaje_eva_por_vendedor = df_eva[[col_vend_eva, col_punt_eva[0]]].copy()
+                                puntaje_eva_por_vendedor.columns = ['Vendedor_EVA', 'Puntaje_EVA']
+                                puntaje_eva_por_vendedor['Vendedor_norm'] = puntaje_eva_por_vendedor['Vendedor_EVA'].str.upper().str.strip()
+                    
+                    # ============================================
+                    # 4. UNIFICAR DATOS - CREAR IQC
+                    # ============================================
+                    # Base: vendedores de Mitrol
+                    df_iqc = df_mitrol_agg[['Vendedor', 'Vendedor_norm', 'Engagement']].copy()
+                    
+                    # Unir ventas
+                    if not ventas_por_vendedor.empty:
+                        df_iqc = df_iqc.merge(
+                            ventas_por_vendedor[['Vendedor_norm', 'Total_Ventas', 'Ventas_Aprobadas', 'Efectividad_Ventas']],
+                            on='Vendedor_norm',
+                            how='left'
+                        )
+                    else:
+                        df_iqc['Total_Ventas'] = 0
+                        df_iqc['Ventas_Aprobadas'] = 0
+                        df_iqc['Efectividad_Ventas'] = 50
+                    
+                    # Unir EVA
+                    if not puntaje_eva_por_vendedor.empty:
+                        df_iqc = df_iqc.merge(
+                            puntaje_eva_por_vendedor[['Vendedor_norm', 'Puntaje_EVA']],
+                            on='Vendedor_norm',
+                            how='left'
+                        )
+                    else:
+                        df_iqc['Puntaje_EVA'] = 70  # Valor base si no hay datos EVA
+                    
+                    # Rellenar NaN
+                    df_iqc['Engagement'] = df_iqc['Engagement'].fillna(50)
+                    df_iqc['Efectividad_Ventas'] = df_iqc['Efectividad_Ventas'].fillna(50)
+                    df_iqc['Puntaje_EVA'] = df_iqc['Puntaje_EVA'].fillna(70)
+                    
+                    # Normalizar métricas a escala 0-100
+                    df_iqc['EVA_norm'] = df_iqc['Puntaje_EVA'].clip(0, 100)
+                    df_iqc['Ventas_norm'] = df_iqc['Efectividad_Ventas'].clip(0, 100)
+                    df_iqc['Engagement_norm'] = df_iqc['Engagement'].clip(0, 100)
+                    
+                    # CALCULAR IQC
+                    df_iqc['IQC'] = (
+                        df_iqc['EVA_norm'] * (peso_eva / 100) +
+                        df_iqc['Ventas_norm'] * (peso_ventas / 100) +
+                        df_iqc['Engagement_norm'] * (peso_engagement / 100)
+                    )
+                    
+                    # Clasificar rendimiento
+                    def clasificar_iqc(score):
+                        if score >= 80:
+                            return '🟢 Excelente'
+                        elif score >= 60:
+                            return '🟡 Adecuado'
+                        elif score >= 40:
+                            return '🟠 En Desarrollo'
+                        else:
+                            return '🔴 Requiere Atención'
+                    
+                    df_iqc['Clasificación'] = df_iqc['IQC'].apply(clasificar_iqc)
+                    
+                    # Ordenar por IQC
+                    df_iqc = df_iqc.sort_values('IQC', ascending=False).reset_index(drop=True)
+                    df_iqc['Ranking'] = range(1, len(df_iqc) + 1)
+                    
+                    # Guardar en session_state
+                    st.session_state['df_iqc'] = df_iqc
+                
+                # =========================================
+                # MOSTRAR RESULTADOS IQC
+                # =========================================
+                if 'df_iqc' in st.session_state:
+                    df_iqc = st.session_state['df_iqc']
+                    
+                    st.markdown("### 🏆 Ranking de Calidad Integral")
+                    
+                    # KPIs resumen
+                    col1, col2, col3, col4 = st.columns(4)
+                    excelentes = len(df_iqc[df_iqc['IQC'] >= 80])
+                    adecuados = len(df_iqc[(df_iqc['IQC'] >= 60) & (df_iqc['IQC'] < 80)])
+                    desarrollo = len(df_iqc[(df_iqc['IQC'] >= 40) & (df_iqc['IQC'] < 60)])
+                    atencion = len(df_iqc[df_iqc['IQC'] < 40])
+                    
+                    with col1:
+                        st.markdown(f"""
+                        <div style='background: #D1FAE5; padding: 15px; border-radius: 10px; text-align: center;'>
+                            <span style='font-size: 28px;'>🟢</span><br>
+                            <span style='font-size: 24px; font-weight: bold; color: #065F46;'>{excelentes}</span><br>
+                            <small style='color: #065F46;'>Excelente (≥80)</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col2:
+                        st.markdown(f"""
+                        <div style='background: #FEF3C7; padding: 15px; border-radius: 10px; text-align: center;'>
+                            <span style='font-size: 28px;'>🟡</span><br>
+                            <span style='font-size: 24px; font-weight: bold; color: #92400E;'>{adecuados}</span><br>
+                            <small style='color: #92400E;'>Adecuado (60-79)</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col3:
+                        st.markdown(f"""
+                        <div style='background: #FFEDD5; padding: 15px; border-radius: 10px; text-align: center;'>
+                            <span style='font-size: 28px;'>🟠</span><br>
+                            <span style='font-size: 24px; font-weight: bold; color: #9A3412;'>{desarrollo}</span><br>
+                            <small style='color: #9A3412;'>En Desarrollo (40-59)</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col4:
+                        st.markdown(f"""
+                        <div style='background: #FEE2E2; padding: 15px; border-radius: 10px; text-align: center;'>
+                            <span style='font-size: 28px;'>🔴</span><br>
+                            <span style='font-size: 24px; font-weight: bold; color: #991B1B;'>{atencion}</span><br>
+                            <small style='color: #991B1B;'>Atención (&lt;40)</small>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    
+                    st.markdown("---")
+                    
+                    # Gráfico radar para top 5
+                    st.markdown("#### 📊 Comparativa Top 5 Agentes")
+                    top5 = df_iqc.head(5)
+                    
+                    fig_radar = go.Figure()
+                    colores = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
+                    for i, (_, row) in enumerate(top5.iterrows()):
+                        fig_radar.add_trace(go.Scatterpolar(
+                            r=[row['EVA_norm'], row['Ventas_norm'], row['Engagement_norm'], row['EVA_norm']],
+                            theta=['EVA', 'Ventas', 'Engagement', 'EVA'],
+                            fill='toself',
+                            name=f"{row['Ranking']}. {row['Vendedor'][:15]}",
+                            line_color=colores[i],
+                            opacity=0.7
+                        ))
+                    
+                    fig_radar.update_layout(
+                        polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+                        showlegend=True,
+                        height=400,
+                        paper_bgcolor='white'
+                    )
+                    st.plotly_chart(fig_radar, use_container_width=True)
+                    
+                    # Tabla detallada
+                    st.markdown("#### 📋 Tabla Detallada IQC")
+                    
+                    cols_mostrar = ['Ranking', 'Vendedor', 'IQC', 'Clasificación', 
+                                    'Puntaje_EVA', 'Efectividad_Ventas', 'Engagement',
+                                    'Total_Ventas', 'Ventas_Aprobadas']
+                    cols_disponibles = [c for c in cols_mostrar if c in df_iqc.columns]
+                    df_mostrar = df_iqc[cols_disponibles].copy()
+                    
+                    # Formatear números
+                    for col in ['IQC', 'Puntaje_EVA', 'Efectividad_Ventas', 'Engagement']:
+                        if col in df_mostrar.columns:
+                            df_mostrar[col] = df_mostrar[col].round(1)
+                    
+                    # Aplicar estilos
+                    def style_iqc(val):
+                        if val >= 80:
+                            return 'background-color: #D1FAE5; color: #065F46; font-weight: bold;'
+                        elif val >= 60:
+                            return 'background-color: #FEF3C7; color: #92400E; font-weight: bold;'
+                        elif val >= 40:
+                            return 'background-color: #FFEDD5; color: #9A3412; font-weight: bold;'
+                        else:
+                            return 'background-color: #FEE2E2; color: #991B1B; font-weight: bold;'
+                    
+                    styled_df = df_mostrar.style.applymap(style_iqc, subset=['IQC'])
+                    st.dataframe(styled_df, use_container_width=True, height=400)
+                    
+                    # Sistema de Alertas
+                    st.markdown("---")
+                    st.markdown("### ⚠️ Sistema de Alertas")
+                    
+                    alertas = df_iqc[df_iqc['IQC'] < 50]
+                    if len(alertas) > 0:
+                        st.error(f"🚨 **{len(alertas)} agentes requieren atención inmediata:**")
+                        for _, agente in alertas.iterrows():
+                            problemas = []
+                            if agente.get('Puntaje_EVA', 100) < 60:
+                                problemas.append("EVA bajo")
+                            if agente.get('Efectividad_Ventas', 100) < 40:
+                                problemas.append("Baja efectividad ventas")
+                            if agente.get('Engagement', 100) < 50:
+                                problemas.append("Engagement bajo")
+                            
+                            st.markdown(f"""
+                            <div style='background: #FEE2E2; padding: 10px 15px; border-radius: 8px; 
+                                        margin: 5px 0; border-left: 4px solid #EF4444;'>
+                                <strong>{agente['Vendedor']}</strong> · IQC: {agente['IQC']:.1f}<br>
+                                <small style='color: #991B1B;'>Áreas críticas: {', '.join(problemas) if problemas else 'Múltiples indicadores'}</small>
+                            </div>
+                            """, unsafe_allow_html=True)
+                    else:
+                        st.success("✅ No hay agentes en estado crítico")
+                    
+                    # Descargar reporte IQC
+                    st.markdown("---")
+                    csv_iqc = df_iqc.to_csv(index=False).encode('utf-8')
+                    st.download_button(
+                        label="📥 Descargar Reporte IQC Completo (CSV)",
+                        data=csv_iqc,
+                        file_name=f"reporte_iqc_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
+                        mime="text/csv",
+                        use_container_width=True
+                    )
+        else:
+            st.info("ℹ️ Carga los archivos de Mitrol y Solicitudes en la pestaña 'Carga de Datos' para calcular el IQC")
+
+
+def cargar_datos_calidad_procesados():
+    """Carga los datos de calidad preprocesados desde el JSON"""
+    ruta_json = os.path.join(os.path.dirname(__file__), 'datos_calidad', 'datos_calidad_procesados.json')
+    
+    if os.path.exists(ruta_json):
+        try:
+            with open(ruta_json, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            st.error(f"Error cargando datos de calidad: {e}")
+            return None
+    else:
+        return None
+
+
+def pagina_metricas_calidad():
+    """Página de Métricas de Calidad - 3 Apartados: Tiempos, Ventas, Llamadas + Comparativa"""
+    
+    st.markdown('<p class="main-header">📊 COMMAND · Métricas de Calidad</p>', unsafe_allow_html=True)
+    
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
+    
+    # Cargar datos preprocesados
+    datos = cargar_datos_calidad_procesados()
+    
+    if datos is None:
+        st.warning("⚠️ **No hay datos procesados.** Ejecute el script `procesar_calidad.py` primero.")
+        return
+    
+    fecha_proceso = datos.get('fecha_proceso', 'N/A')
+    datos_tiempos = datos.get('tiempos', {})
+    datos_ventas = datos.get('ventas', {})
+    datos_llamadas = datos.get('llamadas', {})
+    
+    # Obtener listas de agentes y equipos para filtros
+    tiempos_vendedor = datos_tiempos.get('por_vendedor', [])
+    ventas_vendedor = datos_ventas.get('por_vendedor', [])
+    llamadas_vendedor = datos_llamadas.get('por_vendedor', [])
+    
+    # =========================================================================
+    # APLICAR FILTRO POR PERMISOS
+    # =========================================================================
+    if permisos['rol'] == 'vendedor':
+        # Vendedor: Solo puede ver sus propios datos
+        nombre_vendedor = permisos['nombre_usuario'].lower()
+        tiempos_vendedor = [v for v in tiempos_vendedor if nombre_vendedor in str(v.get('vendedor', '')).lower()]
+        ventas_vendedor = [v for v in ventas_vendedor if nombre_vendedor in str(v.get('vendedor', '')).lower()]
+        llamadas_vendedor = [v for v in llamadas_vendedor if nombre_vendedor in str(v.get('vendedor', '')).lower()]
+        equipo_usuario = permisos['equipo'] if permisos['equipo'] else "Sin Equipo"
+        st.info(f"👤 Mostrando métricas de: **{permisos['nombre_usuario']}** | Equipo: **{equipo_usuario}**")
+        
+    elif permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+        # Supervisor: Solo puede ver datos de su equipo
+        equipo_supervisor = permisos['equipos_permitidos'][0]
+        tiempos_vendedor = [v for v in tiempos_vendedor if v.get('equipo') == equipo_supervisor]
+        ventas_vendedor = [v for v in ventas_vendedor if v.get('supervisor') == equipo_supervisor]
+        llamadas_vendedor = [v for v in llamadas_vendedor if v.get('equipo') == equipo_supervisor]
+        st.info(f"🏢 Mostrando métricas del equipo: **{equipo_supervisor}**")
+    
+    # Crear sets de agentes y equipos únicos - POR SECCIÓN
+    agentes_tiempos = set()
+    equipos_tiempos = set()
+    agentes_ventas = set()
+    equipos_ventas = set()  # supervisores en ventas
+    agentes_llamadas = set()
+    equipos_llamadas = set()
+    
+    for v in tiempos_vendedor:
+        if v.get('vendedor'): agentes_tiempos.add(v['vendedor'])
+        if v.get('equipo') and v.get('equipo') != 'Sin Equipo': equipos_tiempos.add(v['equipo'])
+    
+    for v in ventas_vendedor:
+        if v.get('vendedor'): agentes_ventas.add(v['vendedor'])
+        if v.get('supervisor') and v.get('supervisor') not in ['Sin Supervisor', '']: 
+            equipos_ventas.add(v['supervisor'])
+    
+    for v in llamadas_vendedor:
+        if v.get('vendedor'): agentes_llamadas.add(v['vendedor'])
+        if v.get('equipo') and v.get('equipo') != 'Sin Equipo': equipos_llamadas.add(v['equipo'])
+    
+    # Listas globales (unión de todas)
+    todos_agentes = sorted(list(agentes_tiempos | agentes_ventas | agentes_llamadas))
+    todos_equipos = sorted(list(equipos_tiempos | equipos_ventas | equipos_llamadas))
+    
+    # Listas por sección ordenadas
+    agentes_tiempos = sorted(list(agentes_tiempos))
+    equipos_tiempos = sorted(list(equipos_tiempos))
+    agentes_ventas = sorted(list(agentes_ventas))
+    equipos_ventas = sorted(list(equipos_ventas))
+    agentes_llamadas = sorted(list(agentes_llamadas))
+    equipos_llamadas = sorted(list(equipos_llamadas))
+    
+    # Header con fecha
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); 
+                padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; color: white;'>
+        <p style='margin: 0; font-size: 0.9rem;'>📅 <strong>Última actualización:</strong> {fecha_proceso}</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # =========================================================================
+    # FILTROS GLOBALES - Ajustados según permisos
+    # =========================================================================
+    if permisos['puede_ver_todos']:
+        # Admin: Mostrar filtros completos
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #1E3A5F 0%, #334155 100%); 
+                    padding: 20px; border-radius: 12px; margin-bottom: 20px;'>
+            <p style='margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 700; color: #FFFFFF;'>
+                🔍 FILTROS DE VISUALIZACIÓN
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col_filtro1, col_filtro2, col_filtro3 = st.columns([1.5, 2, 2])
+        
+        with col_filtro1:
+            st.markdown("""
+            <p style='color: #1E3A5F; font-weight: 700; font-size: 1rem; margin-bottom: 8px;'>
+                📋 Tipo de Vista:
+            </p>
+            """, unsafe_allow_html=True)
+            tipo_filtro = st.radio("", ["🌐 General", "🏢 Por Equipo", "👤 Por Agente"], 
+                                   horizontal=False, key='tipo_filtro_calidad', label_visibility="collapsed")
+        
+        equipo_seleccionado = None
+        agente_seleccionado = None
+        
+        with col_filtro2:
+            if tipo_filtro == "🏢 Por Equipo":
+                st.markdown("""
+                <p style='color: #1E3A5F; font-weight: 700; font-size: 1rem; margin-bottom: 8px;'>
+                    🏢 Seleccionar Equipo:
+                </p>
+                """, unsafe_allow_html=True)
+                equipo_seleccionado = st.selectbox("", ['Seleccione un equipo...'] + todos_equipos, 
+                                                   key='equipo_calidad', label_visibility="collapsed")
+                if equipo_seleccionado == 'Seleccione un equipo...':
+                    equipo_seleccionado = None
+            elif tipo_filtro == "👤 Por Agente":
+                st.markdown("""
+                <p style='color: #1E3A5F; font-weight: 700; font-size: 1rem; margin-bottom: 8px;'>
+                    👤 Seleccionar Agente:
+                </p>
+                """, unsafe_allow_html=True)
+                agente_seleccionado = st.selectbox("", ['Seleccione un agente...'] + todos_agentes, 
+                                                   key='agente_calidad', label_visibility="collapsed")
+                if agente_seleccionado == 'Seleccione un agente...':
+                    agente_seleccionado = None
+            else:
+                st.markdown("""
+                <div style='background: #EFF6FF; padding: 15px; border-radius: 8px; border-left: 4px solid #3B82F6;'>
+                    <p style='margin: 0; color: #1E40AF; font-weight: 600;'>
+                        ℹ️ Vista general: mostrando todos los datos
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+    elif permisos['rol'] == 'supervisor':
+        # Supervisor: Solo puede filtrar por agente dentro de su equipo
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #1E3A5F 0%, #334155 100%); 
+                    padding: 20px; border-radius: 12px; margin-bottom: 20px;'>
+            <p style='margin: 0 0 10px 0; font-size: 1.1rem; font-weight: 700; color: #FFFFFF;'>
+                🔍 FILTROS DE VISUALIZACIÓN
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col_filtro1, col_filtro2 = st.columns([1.5, 2])
+        
+        with col_filtro1:
+            st.markdown("""
+            <p style='color: #1E3A5F; font-weight: 700; font-size: 1rem; margin-bottom: 8px;'>
+                📋 Tipo de Vista:
+            </p>
+            """, unsafe_allow_html=True)
+            tipo_filtro = st.radio("", ["🌐 Todo el Equipo", "👤 Por Agente"], 
+                                   horizontal=False, key='tipo_filtro_calidad', label_visibility="collapsed")
+        
+        equipo_seleccionado = permisos['equipos_permitidos'][0] if permisos['equipos_permitidos'] else None
+        agente_seleccionado = None
+        
+        with col_filtro2:
+            if tipo_filtro == "👤 Por Agente":
+                st.markdown("""
+                <p style='color: #1E3A5F; font-weight: 700; font-size: 1rem; margin-bottom: 8px;'>
+                    👤 Seleccionar Agente:
+                </p>
+                """, unsafe_allow_html=True)
+                agente_seleccionado = st.selectbox("", ['Seleccione un agente...'] + todos_agentes, 
+                                                   key='agente_calidad', label_visibility="collapsed")
+                if agente_seleccionado == 'Seleccione un agente...':
+                    agente_seleccionado = None
+            else:
+                st.markdown("""
+                <div style='background: #EFF6FF; padding: 15px; border-radius: 8px; border-left: 4px solid #3B82F6;'>
+                    <p style='margin: 0; color: #1E40AF; font-weight: 600;'>
+                        ℹ️ Mostrando datos de todo el equipo
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+    else:
+        # Vendedor: Sin filtros, solo ve sus datos
+        tipo_filtro = "👤 Por Agente"
+        equipo_seleccionado = None
+        agente_seleccionado = todos_agentes[0] if todos_agentes else None
+    
+    # col_filtro3 solo para admin (muestra info adicional)
+    if permisos['puede_ver_todos']:
+        with col_filtro3:
+            if tipo_filtro == "🏢 Por Equipo" and equipo_seleccionado:
+                # Mostrar agentes del equipo
+                agentes_equipo = [v['vendedor'] for v in tiempos_vendedor if v.get('equipo') == equipo_seleccionado]
+                agentes_equipo += [v['vendedor'] for v in ventas_vendedor if v.get('supervisor') == equipo_seleccionado]
+                agentes_equipo += [v['vendedor'] for v in llamadas_vendedor if v.get('equipo') == equipo_seleccionado]
+                agentes_equipo = sorted(list(set(agentes_equipo)))
+                
+                # Verificar disponibilidad en cada sección
+                en_tiempos = equipo_seleccionado in equipos_tiempos
+                en_ventas = equipo_seleccionado in equipos_ventas
+                en_llamadas = equipo_seleccionado in equipos_llamadas
+                
+                st.markdown(f"""
+                <div style='background: #DCFCE7; padding: 15px; border-radius: 8px; border-left: 4px solid #22C55E;'>
+                    <p style='margin: 0 0 8px 0; color: #166534; font-weight: 700; font-size: 1.1rem;'>
+                        👥 {len(agentes_equipo)} agentes en este equipo
+                    </p>
+                    <p style='margin: 0; color: #166534; font-size: 0.85rem;'>
+                        ⏱️ Tiempos: {'✅' if en_tiempos else '❌'} | 
+                        💼 Ventas: {'✅' if en_ventas else '❌'} | 
+                        📞 Llamadas: {'✅' if en_llamadas else '❌'}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+            elif tipo_filtro == "👤 Por Agente" and agente_seleccionado:
+                # Verificar disponibilidad en cada sección
+                en_tiempos = agente_seleccionado in agentes_tiempos
+                en_ventas = agente_seleccionado in agentes_ventas
+                en_llamadas = agente_seleccionado in agentes_llamadas
+                
+                st.markdown(f"""
+                <div style='background: #DCFCE7; padding: 15px; border-radius: 8px; border-left: 4px solid #22C55E;'>
+                    <p style='margin: 0 0 8px 0; color: #166534; font-weight: 700;'>
+                        ✅ Mostrando datos de: <strong>{agente_seleccionado}</strong>
+                    </p>
+                    <p style='margin: 0; color: #166534; font-size: 0.85rem;'>
+                        ⏱️ Tiempos: {'✅' if en_tiempos else '❌'} | 
+                        💼 Ventas: {'✅' if en_ventas else '❌'} | 
+                        📞 Llamadas: {'✅' if en_llamadas else '❌'}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+            elif tipo_filtro == "🏢 Por Equipo" and not equipo_seleccionado:
+                # Mostrar info de disponibilidad de equipos
+                st.markdown(f"""
+                <div style='background: #FEF3C7; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>
+                    <p style='margin: 0; color: #92400E; font-size: 0.85rem;'>
+                        ⚠️ <strong>Equipos disponibles:</strong><br>
+                        ⏱️ Tiempos: {len(equipos_tiempos)} equipos<br>
+                        💼 Ventas: {len(equipos_ventas)} supervisores<br>
+                        📞 Llamadas: {len(equipos_llamadas)} equipos
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+            elif tipo_filtro == "👤 Por Agente" and not agente_seleccionado:
+                # Mostrar info de disponibilidad de agentes
+                st.markdown(f"""
+                <div style='background: #FEF3C7; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B;'>
+                    <p style='margin: 0; color: #92400E; font-size: 0.85rem;'>
+                        ⚠️ <strong>Agentes disponibles:</strong><br>
+                        ⏱️ Tiempos: {len(agentes_tiempos)}<br>
+                        💼 Ventas: {len(agentes_ventas)}<br>
+                        📞 Llamadas: {len(agentes_llamadas)}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # Función helper para normalizar nombres (quitar espacios, mayúsculas, etc.)
+    def normalizar_nombre(nombre):
+        if not nombre:
+            return ""
+        return str(nombre).upper().replace(" ", "").replace(".", "").strip()
+    
+    # Función helper para filtrar datos con matching flexible
+    def filtrar_datos(lista_datos, campo_equipo='equipo', campo_vendedor='vendedor'):
+        if not lista_datos:
+            return []
+        if tipo_filtro == "🌐 General":
+            return lista_datos
+        elif tipo_filtro == "🏢 Por Equipo" and equipo_seleccionado:
+            # Buscar por equipo o supervisor
+            return [v for v in lista_datos 
+                    if v.get(campo_equipo) == equipo_seleccionado 
+                    or v.get('supervisor') == equipo_seleccionado
+                    or v.get('equipo') == equipo_seleccionado]
+        elif tipo_filtro == "👤 Por Agente" and agente_seleccionado:
+            # Matching flexible: por nombre exacto o normalizado
+            agente_norm = normalizar_nombre(agente_seleccionado)
+            return [v for v in lista_datos 
+                    if v.get(campo_vendedor) == agente_seleccionado 
+                    or normalizar_nombre(v.get(campo_vendedor)) == agente_norm
+                    or normalizar_nombre(v.get('agente')) == agente_norm]
+        return lista_datos
+    
+    # 4 TABS PRINCIPALES (agregamos Comparativa)
+    tab1, tab2, tab3 = st.tabs(["⏱️ TIEMPOS", "💼 VENTAS", "📞 LLAMADAS"])
+    
+    # =========================================================================
+    # TAB 1: TIEMPOS (Break, Coaching, Administrativo, Baño, etc.)
+    # =========================================================================
+    with tab1:
+        st.markdown("### ⏱️ Reporte de Tiempos por Agente")
+        
+        tiempos_filtrados = filtrar_datos(tiempos_vendedor, campo_equipo='equipo', campo_vendedor='vendedor')
+        totales_t = datos_tiempos.get('totales', {})
+        
+        if not tiempos_filtrados:
+            st.info("No hay datos de tiempos disponibles para el filtro seleccionado")
+        else:
+            # Calcular totales para los datos filtrados
+            if tipo_filtro != "🌐 General":
+                # Recalcular totales para el subconjunto filtrado
+                df_temp = pd.DataFrame(tiempos_filtrados)
+                totales_t = {
+                    'break_prom_fmt': pd.to_timedelta(df_temp['break_seg'].mean(), unit='s').components if 'break_seg' in df_temp.columns else '00:00:00',
+                    'coaching_prom_fmt': pd.to_timedelta(df_temp['coaching_seg'].mean(), unit='s').components if 'coaching_seg' in df_temp.columns else '00:00:00',
+                    'administrativo_prom_fmt': pd.to_timedelta(df_temp['administrativo_seg'].mean(), unit='s').components if 'administrativo_seg' in df_temp.columns else '00:00:00',
+                    'baño_prom_fmt': pd.to_timedelta(df_temp['baño_seg'].mean(), unit='s').components if 'baño_seg' in df_temp.columns else '00:00:00',
+                    'almuerzo_prom_fmt': pd.to_timedelta(df_temp['almuerzo_seg'].mean(), unit='s').components if 'almuerzo_seg' in df_temp.columns else '00:00:00',
+                    'logueo_prom_fmt': pd.to_timedelta(df_temp['logueo_seg'].mean(), unit='s').components if 'logueo_seg' in df_temp.columns else '00:00:00',
+                }
+                # Formatear tiempos
+                for k in list(totales_t.keys()):
+                    if '_prom_fmt' in k:
+                        base_k = k.replace('_prom_fmt', '_seg')
+                        if base_k in df_temp.columns:
+                            seg = df_temp[base_k].mean()
+                            if pd.notna(seg):
+                                h = int(seg // 3600)
+                                m = int((seg % 3600) // 60)
+                                s = int(seg % 60)
+                                totales_t[k] = f"{h:02d}:{m:02d}:{s:02d}"
+                            else:
+                                totales_t[k] = '00:00:00'
+                
+                # Totales en segundos
+                totales_t['break'] = df_temp['break_seg'].sum() if 'break_seg' in df_temp.columns else 0
+                totales_t['coaching'] = df_temp['coaching_seg'].sum() if 'coaching_seg' in df_temp.columns else 0
+                totales_t['administrativo'] = df_temp['administrativo_seg'].sum() if 'administrativo_seg' in df_temp.columns else 0
+                totales_t['baño'] = df_temp['baño_seg'].sum() if 'baño_seg' in df_temp.columns else 0
+                totales_t['almuerzo'] = df_temp['almuerzo_seg'].sum() if 'almuerzo_seg' in df_temp.columns else 0
+                totales_t['llamada_manual'] = df_temp['llamada_manual_seg'].sum() if 'llamada_manual_seg' in df_temp.columns else 0
+            
+            # Título según filtro
+            if tipo_filtro == "👤 Por Agente" and agente_seleccionado:
+                st.markdown(f"#### 👤 Tiempos de: **{agente_seleccionado}**")
+            elif tipo_filtro == "🏢 Por Equipo" and equipo_seleccionado:
+                st.markdown(f"#### 🏢 Tiempos del Equipo: **{equipo_seleccionado}** ({len(tiempos_filtrados)} agentes)")
+            
+            # KPIs de tiempos
+            st.markdown("#### 📊 Promedios")
+            col1, col2, col3, col4, col5, col6 = st.columns(6)
+            with col1:
+                st.metric("☕ Break", totales_t.get('break_prom_fmt', '00:00:00'))
+            with col2:
+                st.metric("📚 Coaching", totales_t.get('coaching_prom_fmt', '00:00:00'))
+            with col3:
+                st.metric("📋 Admin", totales_t.get('administrativo_prom_fmt', '00:00:00'))
+            with col4:
+                st.metric("🚻 Baño", totales_t.get('baño_prom_fmt', '00:00:00'))
+            with col5:
+                st.metric("🍽️ Almuerzo", totales_t.get('almuerzo_prom_fmt', '00:00:00'))
+            with col6:
+                st.metric("⏰ Logueo", totales_t.get('logueo_prom_fmt', '00:00:00'))
+            
+            st.markdown("---")
+            
+            # Gráfico de distribución de tiempos
+            st.markdown("#### 📊 Distribución de Tiempos Auxiliares")
+            
+            tiempos_dist = {
+                'Break': totales_t.get('break', 0) / 3600 if totales_t.get('break') else 0,
+                'Coaching': totales_t.get('coaching', 0) / 3600 if totales_t.get('coaching') else 0,
+                'Administrativo': totales_t.get('administrativo', 0) / 3600 if totales_t.get('administrativo') else 0,
+                'Baño': totales_t.get('baño', 0) / 3600 if totales_t.get('baño') else 0,
+                'Almuerzo': totales_t.get('almuerzo', 0) / 3600 if totales_t.get('almuerzo') else 0,
+                'Llamada Manual': totales_t.get('llamada_manual', 0) / 3600 if totales_t.get('llamada_manual') else 0
+            }
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                fig_pie = go.Figure(data=[go.Pie(
+                    labels=list(tiempos_dist.keys()),
+                    values=list(tiempos_dist.values()),
+                    hole=0.4,
+                    marker_colors=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#10B981', '#6366F1']
+                )])
+                fig_pie.update_layout(title="Distribución de Tiempos Auxiliares (horas)", height=350)
+                st.plotly_chart(fig_pie, use_container_width=True)
+            
+            with col2:
+                # Top 10 con más tiempo auxiliar (o barra individual si es un agente)
+                df_t = pd.DataFrame(tiempos_filtrados)
+                if len(df_t) > 1:
+                    df_t = df_t.sort_values('tiempo_auxiliar_seg', ascending=False).head(10)
+                    fig_bar = go.Figure()
+                    fig_bar.add_trace(go.Bar(
+                        x=df_t['vendedor'],
+                        y=df_t['tiempo_auxiliar_seg'] / 60,
+                        marker_color='#EF4444',
+                        text=df_t['tiempo_auxiliar_fmt'],
+                        textposition='outside'
+                    ))
+                    fig_bar.update_layout(title="Top 10 Mayor Tiempo Auxiliar", yaxis_title="Minutos", height=350, xaxis_tickangle=-45)
+                    st.plotly_chart(fig_bar, use_container_width=True)
+                else:
+                    # Agente individual - mostrar desglose
+                    agente_data = tiempos_filtrados[0]
+                    tiempos_ind = {
+                        'Break': agente_data.get('break_seg', 0) / 60,
+                        'Coaching': agente_data.get('coaching_seg', 0) / 60,
+                        'Admin': agente_data.get('administrativo_seg', 0) / 60,
+                        'Baño': agente_data.get('baño_seg', 0) / 60,
+                        'Almuerzo': agente_data.get('almuerzo_seg', 0) / 60,
+                        'Logueo': agente_data.get('logueo_seg', 0) / 60
+                    }
+                    fig_bar = go.Figure()
+                    fig_bar.add_trace(go.Bar(
+                        x=list(tiempos_ind.keys()),
+                        y=list(tiempos_ind.values()),
+                        marker_color=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#10B981', '#6366F1'],
+                        text=[f"{v:.1f} min" for v in tiempos_ind.values()],
+                        textposition='outside'
+                    ))
+                    fig_bar.update_layout(title=f"Desglose de Tiempos - {agente_seleccionado}", yaxis_title="Minutos", height=350)
+                    st.plotly_chart(fig_bar, use_container_width=True)
+            
+            st.markdown("---")
+            
+            # Tabla detallada
+            st.markdown("#### 📋 Detalle por Vendedor/Agente")
+            
+            df_tiempos = pd.DataFrame(tiempos_filtrados)
+            
+            # Seleccionar columnas relevantes
+            cols_mostrar = ['vendedor', 'equipo', 'break_fmt', 'coaching_fmt', 'administrativo_fmt', 
+                           'baño_fmt', 'almuerzo_fmt', 'logueo_fmt', 'tiempo_auxiliar_fmt', 'pct_productivo']
+            cols_disponibles = [c for c in cols_mostrar if c in df_tiempos.columns]
+            df_display = df_tiempos[cols_disponibles].copy()
+            df_display.columns = ['Vendedor', 'Equipo', 'Break', 'Coaching', 'Admin', 'Baño', 'Almuerzo', 'Logueo', 'T. Auxiliar', '% Productivo'][:len(cols_disponibles)]
+            
+            st.dataframe(df_display.sort_values('Vendedor' if 'Vendedor' in df_display.columns else df_display.columns[0]), use_container_width=True, height=400)
+    
+    # =========================================================================
+    # TAB 2: VENTAS
+    # =========================================================================
+    with tab2:
+        st.markdown("### 💼 Reporte de Ventas")
+        
+        ventas_filtradas = filtrar_datos(ventas_vendedor, campo_equipo='supervisor', campo_vendedor='vendedor')
+        totales_v = datos_ventas.get('totales', {})
+        ventas_supervisor = datos_ventas.get('por_supervisor', [])
+        
+        if not ventas_filtradas:
+            st.info("No hay datos de ventas disponibles para el filtro seleccionado")
+        else:
+            # Recalcular totales si hay filtro
+            if tipo_filtro != "🌐 General":
+                df_temp = pd.DataFrame(ventas_filtradas)
+                totales_v = {
+                    'total_ventas': df_temp['total_ventas'].sum() if 'total_ventas' in df_temp.columns else 0,
+                    'total_aprobadas': df_temp['aprobadas'].sum() if 'aprobadas' in df_temp.columns else 0,
+                    'total_canceladas': df_temp['canceladas'].sum() if 'canceladas' in df_temp.columns else 0,
+                    'total_preventa': df_temp['preventa'].sum() if 'preventa' in df_temp.columns else 0,
+                    'total_pendientes': df_temp['pendientes'].sum() if 'pendientes' in df_temp.columns else 0,
+                    'promedio_aprobadas_esperado': round(df_temp['aprobadas'].mean(), 1) if 'aprobadas' in df_temp.columns else 0,
+                }
+                total_v = totales_v['total_ventas']
+                total_ap = totales_v['total_aprobadas']
+                totales_v['tasa_aprobacion_global'] = round((total_ap / total_v * 100), 1) if total_v > 0 else 0
+            
+            # Título según filtro
+            if tipo_filtro == "👤 Por Agente" and agente_seleccionado:
+                st.markdown(f"#### 👤 Ventas de: **{agente_seleccionado}**")
+            elif tipo_filtro == "🏢 Por Equipo" and equipo_seleccionado:
+                st.markdown(f"#### 🏢 Ventas del Equipo: **{equipo_seleccionado}** ({len(ventas_filtradas)} vendedores)")
+            
+            # KPIs
+            st.markdown("#### 📊 Métricas")
+            col1, col2, col3, col4, col5 = st.columns(5)
+            with col1:
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
+                            padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                    <p style='margin: 0; font-size: 0.8rem;'>💼 TOTAL VENTAS</p>
+                    <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{totales_v.get('total_ventas', 0):,}</p>
+                </div>
+                """, unsafe_allow_html=True)
+            with col2:
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
+                            padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                    <p style='margin: 0; font-size: 0.8rem;'>✅ APROBADAS</p>
+                    <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{totales_v.get('total_aprobadas', 0):,}</p>
+                </div>
+                """, unsafe_allow_html=True)
+            with col3:
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); 
+                            padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                    <p style='margin: 0; font-size: 0.8rem;'>❌ CANCELADAS</p>
+                    <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{totales_v.get('total_canceladas', 0):,}</p>
+                </div>
+                """, unsafe_allow_html=True)
+            with col4:
+                tasa = totales_v.get('tasa_aprobacion_global', 0)
+                color_tasa = '#10B981' if tasa >= 60 else '#F59E0B' if tasa >= 40 else '#EF4444'
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, {color_tasa} 0%, {color_tasa}CC 100%); 
+                            padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                    <p style='margin: 0; font-size: 0.8rem;'>📈 TASA APROB.</p>
+                    <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{tasa}%</p>
+                </div>
+                """, unsafe_allow_html=True)
+            with col5:
+                st.markdown(f"""
+                <div style='background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); 
+                            padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                    <p style='margin: 0; font-size: 0.8rem;'>📊 PROM. ESPERADO</p>
+                    <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{totales_v.get('promedio_aprobadas_esperado', 0)}</p>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            st.markdown("---")
+            
+            # Gráficos
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                if len(ventas_filtradas) > 1:
+                    st.markdown("#### 🏆 Top 10 Vendedores por Ventas Aprobadas")
+                    df_v = pd.DataFrame(ventas_filtradas).head(10)
+                else:
+                    st.markdown(f"#### 📊 Desglose de Ventas - {agente_seleccionado}")
+                    df_v = pd.DataFrame(ventas_filtradas)
+                
+                if len(df_v) > 1:
+                    colores = []
+                    for _, row in df_v.iterrows():
+                        if row['tasa_aprobacion'] >= 70: colores.append('#10B981')
+                        elif row['tasa_aprobacion'] >= 50: colores.append('#F59E0B')
+                        else: colores.append('#EF4444')
+                    
+                    fig = go.Figure()
+                    fig.add_trace(go.Bar(
+                        x=df_v['vendedor'],
+                        y=df_v['aprobadas'],
+                        marker_color=colores,
+                        text=df_v['aprobadas'],
+                        textposition='outside'
+                    ))
+                    prom = totales_v.get('promedio_aprobadas_esperado', 0)
+                    fig.add_hline(y=prom, line_dash="dash", line_color="#8B5CF6", annotation_text=f"Promedio: {prom}")
+                    fig.update_layout(height=400, xaxis_tickangle=-45, yaxis_title="Ventas Aprobadas")
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    # Agente individual - mostrar estados
+                    agente_data = ventas_filtradas[0]
+                    estados = {
+                        'Aprobadas': agente_data.get('aprobadas', 0),
+                        'Canceladas': agente_data.get('canceladas', 0),
+                        'Preventa': agente_data.get('preventa', 0),
+                        'Pendientes': agente_data.get('pendientes', 0)
+                    }
+                    fig = go.Figure()
+                    fig.add_trace(go.Bar(
+                        x=list(estados.keys()),
+                        y=list(estados.values()),
+                        marker_color=['#10B981', '#EF4444', '#F59E0B', '#6B7280'],
+                        text=list(estados.values()),
+                        textposition='outside'
+                    ))
+                    fig.update_layout(height=400, yaxis_title="Cantidad")
+                    st.plotly_chart(fig, use_container_width=True)
+            
+            with col2:
+                st.markdown("#### 📊 Distribución de Estados")
+                fig_pie = go.Figure(data=[go.Pie(
+                    labels=['Aprobadas', 'Canceladas', 'Preventa', 'Pendientes'],
+                    values=[totales_v.get('total_aprobadas', 0), totales_v.get('total_canceladas', 0),
+                            totales_v.get('total_preventa', 0), totales_v.get('total_pendientes', 0)],
+                    hole=0.4,
+                    marker_colors=['#10B981', '#EF4444', '#F59E0B', '#6B7280']
+                )])
+                fig_pie.update_layout(height=400)
+                st.plotly_chart(fig_pie, use_container_width=True)
+            
+            st.markdown("---")
+            
+            # Tabla por vendedor
+            st.markdown("#### 📋 Detalle por Vendedor")
+            
+            df_ventas = pd.DataFrame(ventas_filtradas)
+            cols_disponibles = [c for c in ['vendedor', 'supervisor', 'total_ventas', 'aprobadas', 'canceladas', 
+                                           'tasa_aprobacion', 'dif_vs_promedio', 'dif_aprobadas_vs_esperado', 'estado'] if c in df_ventas.columns]
+            df_ventas_display = df_ventas[cols_disponibles].copy()
+            cols_names = ['Vendedor', 'Supervisor', 'Total', 'Aprobadas', 'Canceladas', 
+                         'Tasa %', 'Dif vs Prom', 'Dif Aprob vs Esp', 'Estado'][:len(cols_disponibles)]
+            df_ventas_display.columns = cols_names
+            
+            def color_tasa_tabla(val):
+                if val >= 70: return 'background-color: #D1FAE5; color: #065F46;'
+                elif val >= 50: return 'background-color: #FEF3C7; color: #92400E;'
+                else: return 'background-color: #FEE2E2; color: #991B1B;'
+            
+            if 'Tasa %' in df_ventas_display.columns:
+                styled = df_ventas_display.style.applymap(color_tasa_tabla, subset=['Tasa %'])
+                st.dataframe(styled, use_container_width=True, height=400)
+            else:
+                st.dataframe(df_ventas_display, use_container_width=True, height=400)
+    
+    # =========================================================================
+    # TAB 3: LLAMADAS
+    # =========================================================================
+    with tab3:
+        st.markdown("### 📞 Reporte de Llamadas")
+        
+        llamadas_filtradas = filtrar_datos(llamadas_vendedor, campo_equipo='equipo', campo_vendedor='vendedor')
+        totales_ll = datos_llamadas.get('totales', {})
+        
+        if not llamadas_filtradas:
+            st.info("No hay datos de llamadas disponibles para el filtro seleccionado")
+        else:
+            # Recalcular totales si hay filtro
+            if tipo_filtro != "🌐 General":
+                df_temp = pd.DataFrame(llamadas_filtradas)
+                total = df_temp['total_llamadas'].sum() if 'total_llamadas' in df_temp.columns else 0
+                cortadas = df_temp['cortadas'].sum() if 'cortadas' in df_temp.columns else 0
+                sup_1 = df_temp['supera_1min'].sum() if 'supera_1min' in df_temp.columns else 0
+                sup_5 = df_temp['supera_5min'].sum() if 'supera_5min' in df_temp.columns else 0
+                capta = df_temp['capta_atencion'].sum() if 'capta_atencion' in df_temp.columns else 0
+                
+                # TMO promedio
+                if 'tmo_seg' in df_temp.columns:
+                    tmo_prom = df_temp['tmo_seg'].mean()
+                    h, m, s = int(tmo_prom // 3600), int((tmo_prom % 3600) // 60), int(tmo_prom % 60)
+                    tmo_fmt = f"{h:02d}:{m:02d}:{s:02d}"
+                else:
+                    tmo_fmt = '00:00:00'
+                
+                totales_ll = {
+                    'total_llamadas': total,
+                    'total_cortadas': cortadas,
+                    'supera_1min': sup_1,
+                    'supera_5min': sup_5,
+                    'capta_atencion': capta,
+                    'tmo_global_fmt': tmo_fmt,
+                    'pct_cortadas': round((cortadas / total * 100), 1) if total > 0 else 0,
+                    'pct_supera_1min': round((sup_1 / total * 100), 1) if total > 0 else 0,
+                    'pct_supera_5min': round((sup_5 / total * 100), 1) if total > 0 else 0,
+                    'pct_capta_atencion': round((capta / total * 100), 1) if total > 0 else 0,
+                    'menos_30seg': total - sup_1 - cortadas  # Aproximación
+                }
+            
+            # Título según filtro
+            if tipo_filtro == "👤 Por Agente" and agente_seleccionado:
+                st.markdown(f"#### 👤 Llamadas de: **{agente_seleccionado}**")
+            elif tipo_filtro == "🏢 Por Equipo" and equipo_seleccionado:
+                st.markdown(f"#### 🏢 Llamadas del Equipo: **{equipo_seleccionado}** ({len(llamadas_filtradas)} agentes)")
+            
+            # KPIs
+            st.markdown("#### 📊 Métricas")
+            col1, col2, col3, col4, col5, col6 = st.columns(6)
+            with col1:
+                st.metric("📞 Total Llamadas", f"{totales_ll.get('total_llamadas', 0):,}")
+            with col2:
+                st.metric("⏱️ TMO", totales_ll.get('tmo_global_fmt', '00:00:00'))
+            with col3:
+                st.metric("❌ Cortadas", f"{totales_ll.get('total_cortadas', 0):,} ({totales_ll.get('pct_cortadas', 0)}%)")
+            with col4:
+                st.metric("⏰ >1 min", f"{totales_ll.get('supera_1min', 0):,} ({totales_ll.get('pct_supera_1min', 0)}%)")
+            with col5:
+                st.metric("⏰ >5 min", f"{totales_ll.get('supera_5min', 0):,} ({totales_ll.get('pct_supera_5min', 0)}%)")
+            with col6:
+                st.metric("🎯 Capta Atención", f"{totales_ll.get('capta_atencion', 0):,} ({totales_ll.get('pct_capta_atencion', 0)}%)")
+            
+            st.markdown("---")
+            
+            # Gráficos
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("#### 📊 Distribución de Llamadas por Duración")
+                total = totales_ll.get('total_llamadas', 1)
+                menos_30 = totales_ll.get('menos_30seg', 0)
+                sup_1 = totales_ll.get('supera_1min', 0)
+                sup_5 = totales_ll.get('supera_5min', 0)
+                entre_30_60 = max(0, total - menos_30 - sup_1)
+                entre_1_5 = max(0, sup_1 - sup_5)
+                
+                categorias = ['< 30 seg', '30s - 1min', '1 - 5 min', '> 5 min']
+                valores = [menos_30, entre_30_60, entre_1_5, sup_5]
+                colores = ['#EF4444', '#F59E0B', '#10B981', '#3B82F6']
+                
+                fig_bar = go.Figure()
+                fig_bar.add_trace(go.Bar(x=categorias, y=valores, marker_color=colores, text=valores, textposition='outside'))
+                fig_bar.update_layout(height=350, yaxis_title="Cantidad")
+                st.plotly_chart(fig_bar, use_container_width=True)
+            
+            with col2:
+                st.markdown("#### 🎯 Capta de Atención (>1min y no cortadas)")
+                fig_pie = go.Figure(data=[go.Pie(
+                    labels=['Capta Atención', 'No Capta'],
+                    values=[totales_ll.get('capta_atencion', 0), total - totales_ll.get('capta_atencion', 0)],
+                    hole=0.5,
+                    marker_colors=['#10B981', '#E5E7EB']
+                )])
+                fig_pie.update_layout(height=350)
+                st.plotly_chart(fig_pie, use_container_width=True)
+            
+            st.markdown("---")
+            
+            # Gráfico de agentes
+            if len(llamadas_filtradas) > 1:
+                st.markdown("#### 🏆 Top 10 Agentes por Cantidad de Llamadas")
+                df_ll = pd.DataFrame(llamadas_filtradas).head(10)
+                
+                fig = go.Figure()
+                fig.add_trace(go.Bar(
+                    x=df_ll['vendedor'],
+                    y=df_ll['total_llamadas'],
+                    marker_color='#3B82F6',
+                    text=df_ll['total_llamadas'],
+                    textposition='outside',
+                    name='Total Llamadas'
+                ))
+                fig.add_trace(go.Bar(
+                    x=df_ll['vendedor'],
+                    y=df_ll['capta_atencion'],
+                    marker_color='#10B981',
+                    text=df_ll['capta_atencion'],
+                    textposition='outside',
+                    name='Capta Atención'
+                ))
+                fig.update_layout(barmode='group', height=400, xaxis_tickangle=-45)
+                st.plotly_chart(fig, use_container_width=True)
+            
+            st.markdown("---")
+            
+            # Tabla detallada
+            st.markdown("#### 📋 Detalle por Vendedor/Agente")
+            
+            df_llamadas = pd.DataFrame(llamadas_filtradas)
+            cols_disponibles = [c for c in ['vendedor', 'equipo', 'total_llamadas', 'tmo_fmt', 'cortadas', 
+                                         'pct_cortadas', 'supera_1min', 'supera_5min', 'capta_atencion', 
+                                         'pct_capta_atencion', 'estado'] if c in df_llamadas.columns]
+            df_ll_display = df_llamadas[cols_disponibles].copy()
+            cols_names = ['Vendedor', 'Equipo', 'Total', 'TMO', 'Cortadas', '% Cortadas',
+                         '>1min', '>5min', 'Capta', '% Capta', 'Estado'][:len(cols_disponibles)]
+            df_ll_display.columns = cols_names
+            
+            def color_capta(val):
+                if val >= 50: return 'background-color: #D1FAE5; color: #065F46;'
+                elif val >= 35: return 'background-color: #FEF3C7; color: #92400E;'
+                else: return 'background-color: #FEE2E2; color: #991B1B;'
+            
+            if '% Capta' in df_ll_display.columns:
+                styled = df_ll_display.style.applymap(color_capta, subset=['% Capta'])
+                st.dataframe(styled, use_container_width=True, height=400)
+            else:
+                st.dataframe(df_ll_display, use_container_width=True, height=400)
 
 
 def main():
@@ -4928,22 +8812,131 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.markdown("## 📊 Panel de Control")
     
-    paginas = {
-        "🏠 Panel Ejecutivo": "resumen",
-        "📋 Gestión de Cierres": "cierres",
-        "📱 Análisis de Productos": "planes",
-        "⚠️ Gestión de Reclamos": "quejas",
-        "⏱️ Control de Tiempos": "duracion",
-        "🔮 Clasificación de Llamadas": "clasificacion",
-        "🤖 Evaluación Automatizada": "gemini",
-        "🎯 Planes de Mejora": "coaching",
-        "👥 Rendimiento de Vendedores": "agentes",
-        "📅 Análisis por Período": "temporal",
-        "🔍 Detalle de Operaciones": "detalle",
-        "📞 Indicadores de Calidad": "calidad"
-    }
+    # Obtener usuario actual y permisos para el menú
+    usuario_actual = st.session_state.get('usuario', '').lower()
+    datos_usuario = st.session_state.get('datos_usuario', {})
+    rol_usuario = datos_usuario.get('rol', 'vendedor')
+    es_admin_calidad = usuario_actual in ['matias', 'calidad']
     
+    # Menú según rol del usuario
+    if rol_usuario == 'vendedor':
+        # Vendedores: Solo ven módulos relevantes para ellos
+        paginas = {
+            "📱 Mis Productos Ofrecidos": "planes",
+            "⚠️ Mis Reclamos": "quejas",
+            "🤖 Mi Evaluación": "gemini",
+            "🎯 Mi Plan de Mejora": "coaching",
+        }
+    elif rol_usuario == 'supervisor':
+        # Supervisores: Ven módulos de su equipo
+        paginas = {
+            "📱 Productos del Equipo": "planes",
+            "⚠️ Reclamos del Equipo": "quejas",
+            "🤖 Evaluaciones del Equipo": "gemini",
+            "🎯 Planes de Mejora": "coaching",
+            "👥 Análisis de Mi Equipo": "equipos",
+            "📊 Métricas de Calidad": "metricas_calidad"
+        }
+    else:
+        # Admin: Acceso completo
+        paginas = {
+            "📱 Análisis de Productos": "planes",
+            "⚠️ Gestión de Reclamos": "quejas",
+            "🤖 Evaluación Automatizada": "gemini",
+            "🎯 Planes de Mejora": "coaching",
+            "👥 Análisis de Equipos": "equipos",
+            "📊 Métricas de Calidad": "metricas_calidad"
+        }
+        # Agregar Indicadores de Calidad solo para admin/calidad
+        if es_admin_calidad:
+            paginas["📞 Indicadores de Calidad (Admin)"] = "calidad"
+        # Agregar Comparativa de Períodos solo para admin/supervisor
+        paginas["📅 Comparativa de Períodos"] = "comparativa"
     seleccion = st.sidebar.radio("Módulos disponibles:", list(paginas.keys()))
+    
+    # =========================================================================
+    # FILTROS DE FECHA EN SIDEBAR
+    # =========================================================================
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### 📅 Filtro por Fechas")
+    
+    # Obtener rango de fechas disponibles desde evaluaciones_gemini_df
+    fecha_min_disp = None
+    fecha_max_disp = None
+    
+    if 'evaluaciones_gemini_df' in datos and datos['evaluaciones_gemini_df'] is not None:
+        df_eval = datos['evaluaciones_gemini_df']
+        if 'fecha_llamada' in df_eval.columns:
+            fechas_validas = df_eval['fecha_llamada'].dropna()
+            if len(fechas_validas) > 0:
+                fecha_min_disp = fechas_validas.min().date() if hasattr(fechas_validas.min(), 'date') else fechas_validas.min()
+                fecha_max_disp = fechas_validas.max().date() if hasattr(fechas_validas.max(), 'date') else fechas_validas.max()
+    
+    # Inicializar filtros de fecha en session_state
+    if 'filtro_fecha_inicio' not in st.session_state:
+        st.session_state['filtro_fecha_inicio'] = fecha_min_disp
+    if 'filtro_fecha_fin' not in st.session_state:
+        st.session_state['filtro_fecha_fin'] = fecha_max_disp
+    
+    if fecha_min_disp and fecha_max_disp:
+        # Selector de período predefinido
+        periodos_predefinidos = {
+            "📆 Todo el período": None,
+            "📅 Semana 12-16 Enero": (datetime(2026, 1, 12).date(), datetime(2026, 1, 16).date()),
+            "📅 Semana 19-24 Enero": (datetime(2026, 1, 19).date(), datetime(2026, 1, 24).date()),
+            "🔧 Personalizado": "custom"
+        }
+        
+        periodo_sel = st.sidebar.selectbox(
+            "Período a analizar:",
+            list(periodos_predefinidos.keys()),
+            key="periodo_predefinido"
+        )
+        
+        if periodo_sel == "📆 Todo el período":
+            st.session_state['filtro_fecha_inicio'] = fecha_min_disp
+            st.session_state['filtro_fecha_fin'] = fecha_max_disp
+        elif periodo_sel == "🔧 Personalizado":
+            col_f1, col_f2 = st.sidebar.columns(2)
+            with col_f1:
+                fecha_inicio = st.date_input(
+                    "Desde:",
+                    value=st.session_state.get('filtro_fecha_inicio', fecha_min_disp),
+                    min_value=fecha_min_disp,
+                    max_value=fecha_max_disp,
+                    key="date_input_inicio"
+                )
+                st.session_state['filtro_fecha_inicio'] = fecha_inicio
+            with col_f2:
+                fecha_fin = st.date_input(
+                    "Hasta:",
+                    value=st.session_state.get('filtro_fecha_fin', fecha_max_disp),
+                    min_value=fecha_min_disp,
+                    max_value=fecha_max_disp,
+                    key="date_input_fin"
+                )
+                st.session_state['filtro_fecha_fin'] = fecha_fin
+        else:
+            # Período predefinido
+            rango = periodos_predefinidos.get(periodo_sel)
+            if rango and isinstance(rango, tuple):
+                st.session_state['filtro_fecha_inicio'] = rango[0]
+                st.session_state['filtro_fecha_fin'] = rango[1]
+        
+        # Mostrar período seleccionado
+        fecha_ini = st.session_state.get('filtro_fecha_inicio', fecha_min_disp)
+        fecha_fin = st.session_state.get('filtro_fecha_fin', fecha_max_disp)
+        if fecha_ini and fecha_fin:
+            st.sidebar.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%); padding: 10px 14px; border-radius: 8px; margin: 5px 0; border-left: 4px solid #60A5FA; box-shadow: 0 2px 8px rgba(0,0,0,0.2);'>
+                <small style='color: #FFFFFF;'>
+                    <strong style='color: #93C5FD;'>📅 Mostrando:</strong><br>
+                    <span style='color: #FFFFFF; font-weight: 600;'>{fecha_ini.strftime('%d/%m/%Y')} - {fecha_fin.strftime('%d/%m/%Y')}</span>
+                </small>
+            </div>
+            """, unsafe_allow_html=True)
+    else:
+        st.sidebar.info("📊 Las fechas se cargarán con los datos")
     
     # Info adicional en sidebar
     st.sidebar.markdown("---")
@@ -4956,30 +8949,22 @@ def main():
     st.sidebar.markdown(f"**Vendedores Activos:** {df['agente'].nunique()}")
     
     # Renderizar página seleccionada
-    if paginas[seleccion] == "resumen":
-        pagina_resumen_ejecutivo(datos, df)
-    elif paginas[seleccion] == "cierres":
-        pagina_cierres_comerciales(datos)
-    elif paginas[seleccion] == "planes":
+    if paginas[seleccion] == "planes":
         pagina_planes_ofrecidos(datos, df)
     elif paginas[seleccion] == "quejas":
         pagina_quejas_no_resueltas(datos)
-    elif paginas[seleccion] == "duracion":
-        pagina_analisis_duracion(datos)
-    elif paginas[seleccion] == "clasificacion":
-        pagina_clasificacion_integral(datos)
     elif paginas[seleccion] == "gemini":
         pagina_evaluaciones_gemini(datos)
     elif paginas[seleccion] == "coaching":
         pagina_coaching_vendedores(datos)
-    elif paginas[seleccion] == "agentes":
-        pagina_performance_agentes(df, datos)
-    elif paginas[seleccion] == "temporal":
-        pagina_analisis_temporal(df)
-    elif paginas[seleccion] == "detalle":
-        pagina_detalle_llamadas(df, datos)
+    elif paginas[seleccion] == "equipos":
+        pagina_analisis_equipos(datos)
+    elif paginas[seleccion] == "metricas_calidad":
+        pagina_metricas_calidad()
     elif paginas[seleccion] == "calidad":
         pagina_calidad()
+    elif paginas[seleccion] == "comparativa":
+        pagina_comparativa_periodos(datos)
     
     # Footer
     st.sidebar.markdown("---")
@@ -4991,3 +8976,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

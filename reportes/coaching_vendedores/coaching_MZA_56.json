@@ -1,0 +1,160 @@
+{
+  "agente": "MZA 56",
+  "fecha_generacion": "2026-01-26T14:26:39.340197",
+  "metricas": {
+    "agente": "MZA 56",
+    "evaluaciones": {
+      "total_evaluadas": 123,
+      "puntaje_promedio": 22.4,
+      "puntaje_min": 0.0,
+      "puntaje_max": 160.0,
+      "desviacion_std": 26.7,
+      "llamadas_excelentes": 4,
+      "llamadas_criticas": 68,
+      "criterios": {
+        "saludo_presentacion": 12.5,
+        "identificacion_cliente": 56.4,
+        "deteccion_necesidades": 3.8,
+        "oferta_productos": 10.0,
+        "manejo_objeciones": 25.9,
+        "cierre": 6.3,
+        "despedida": 23.3,
+        "proactividad": 6.0,
+        "empatia": 35.6,
+        "resolucion_problemas": 17.2
+      },
+      "areas_mejora_frecuentes": {
+        "Proactividad": 55,
+        "Presentación y Saludo": 39,
+        "Detección de necesidades": 38,
+        "Detección de Necesidades": 31,
+        "Manejo de objeciones": 28
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 24,
+        "Identificación correcta del cliente.": 12,
+        "Identificación del cliente.": 6,
+        "Verificación de la identidad del cliente.": 6,
+        "Empatía": 4
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 160.0,
+          "resumen": "El agente no cumple con los requisitos mínimos. No menciona la promoción del 80% de descuento, no realiza preguntas para detectar necesidades y el cierre es deficiente."
+        },
+        {
+          "puntaje_total": 140.0,
+          "resumen": "El agente no cumple con los requisitos mínimos de la llamada. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece los productos de manera adecuada ni menciona la promoción vigente. El manejo de objeciones es débil y no realiza un cierre directo. La proactividad es nula y la empatía es limitada. Necesita mejorar en todos los criterios de evaluación."
+        },
+        {
+          "puntaje_total": 110.0,
+          "resumen": "El agente no cumple con los requisitos obligatorios de Movistar. No menciona la promo del 80%, no se presenta ni despide correctamente, no detecta necesidades ni realiza un cierre directo. La proactividad y la oferta de productos son deficientes."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con ninguna de las reglas del negocio. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos ni menciona la promoción vigente. El cierre y la despedida son incorrectos."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No hay presentación, identificación, detección de necesidades, oferta de productos, manejo de objeciones, cierre, despedida, ni proactividad. No menciona la promoción ni muestra empatía."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos de manera adecuada ni menciona la promoción, no maneja objeciones, no cierra la venta, no se despide correctamente y no demuestra proactividad."
+        }
+      ]
+    },
+    "evaluaciones_semana_anterior": {},
+    "evaluaciones_semana_actual": {
+      "periodo": "19-24 Enero 2026",
+      "total_evaluadas": 123,
+      "puntaje_promedio": 22.4,
+      "llamadas_excelentes": 4,
+      "llamadas_criticas": 68,
+      "criterios": {
+        "saludo_presentacion": 12.5,
+        "identificacion_cliente": 56.4,
+        "deteccion_necesidades": 3.8,
+        "oferta_productos": 10.0,
+        "manejo_objeciones": 25.9,
+        "cierre": 6.3,
+        "despedida": 23.3,
+        "proactividad": 6.0,
+        "empatia": 35.6,
+        "resolucion_problemas": 17.2
+      }
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "calidad_llamadas": {},
+    "calidad_ventas": {}
+  },
+  "comparativa": {
+    "puntaje_ia": {
+      "agente": 22.4,
+      "general": 35.7,
+      "diferencia": -13.2,
+      "percentil": 41.3
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 12.5,
+        "general": 32.0,
+        "diferencia": -19.5
+      },
+      "identificacion_cliente": {
+        "agente": 56.4,
+        "general": 38.7,
+        "diferencia": 17.8
+      },
+      "deteccion_necesidades": {
+        "agente": 3.8,
+        "general": 23.3,
+        "diferencia": -19.5
+      },
+      "oferta_productos": {
+        "agente": 10.0,
+        "general": 28.6,
+        "diferencia": -18.6
+      },
+      "manejo_objeciones": {
+        "agente": 25.9,
+        "general": 33.0,
+        "diferencia": -7.1
+      },
+      "cierre": {
+        "agente": 6.3,
+        "general": 18.8,
+        "diferencia": -12.4
+      },
+      "despedida": {
+        "agente": 23.3,
+        "general": 38.5,
+        "diferencia": -15.3
+      },
+      "proactividad": {
+        "agente": 6.0,
+        "general": 13.9,
+        "diferencia": -7.8
+      },
+      "empatia": {
+        "agente": 35.6,
+        "general": 43.0,
+        "diferencia": -7.4
+      },
+      "resolucion_problemas": {
+        "agente": 17.2,
+        "general": 25.1,
+        "diferencia": -7.9
+      }
+    }
+  },
+  "analisis_coaching": "## ANÁLISIS DEL VENDEDOR: MZA 56\n\n### 1. DIAGNÓSTICO GENERAL Y EVOLUCIÓN\nMZA 56 se encuentra en un nivel crítico, con un puntaje IA de 22.4, significativamente inferior al promedio del equipo (35.7). Su desempeño se ubica en el percentil 41.3, lo que indica que necesita una mejora considerable para alcanzar los estándares del equipo. La diferencia de -13.2 puntos respecto al promedio general del equipo refleja la magnitud de la brecha a superar.\n\nSin información sobre el período anterior, no es posible evaluar su evolución. Sin embargo, el análisis de las métricas actuales revela un alto potencial de mejora, especialmente en áreas como la detección de necesidades, la oferta de productos, el cierre de ventas y la proactividad. Con un enfoque estructurado y un plan de acción específico, MZA 56 puede mejorar sustancialmente su desempeño.\n\n### 2. ANÁLISIS DE EVOLUCIÓN SEMANAL (19-24 Enero)\nDado que no se dispone de información comparativa de un período anterior, no es posible determinar qué mejoró, empeoró o sigue pendiente. Este análisis se centrará en identificar las áreas críticas de mejora y construir un plan de acción para abordarlas durante las próximas semanas.\n\n### 3. FORTALEZAS IDENTIFICADAS (mínimo 3)\n\n*   **Identificación del cliente:** MZA 56 muestra una fortaleza relativa en la identificación del cliente (56.4, superior al promedio del equipo de 38.7). Esto es un buen punto de partida, ya que asegurar el contacto con la persona correcta es fundamental para la efectividad de la llamada.\n*   **Empatía:** Su puntaje en empatía (35.6) es ligeramente inferior al promedio del equipo (43.0), pero aún representa un punto de apoyo. Mostrar empatía puede ayudar a construir una relación con el cliente, aunque debe combinarse con un enfoque más directo y persuasivo.\n*   **Manejo de Objeciones**: Su puntaje en manejo de objeciones (25.9) es cercano al promedio del equipo (33.0), pero aún representa un punto de apoyo.\n\n### 4. ÁREAS CRÍTICAS DE MEJORA (mínimo 3)\n\n*   **Detección de necesidades (PERSISTENTE):** Con un puntaje de 3.8 (vs. 23.3 del equipo), esta es una de las áreas más débiles. Sin una comprensión clara de las necesidades del cliente, es imposible ofrecer soluciones relevantes y personalizadas. Es crucial dejar de lado preguntas genéricas y comenzar a indagar directamente sobre el uso que el cliente hace de su celular y plan actual (\"¿Qué es lo que más usás del celular?\", \"¿Cuántos GB tenés en tu plan?\").\n*   **Oferta de productos (PERSISTENTE):** Su puntaje de 10.0 (vs. 28.6 del equipo) indica una dificultad para presentar los productos de Movistar de manera efectiva. Es necesario enfocarse en los beneficios concretos que los productos ofrecen al cliente, utilizando un lenguaje persuasivo y evitando preguntas innecesarias (\"Tengo una oferta que le VA a interesar\").\n*   **Cierre (PERSISTENTE):** Con un puntaje de 6.3 (vs. 18.8 del equipo), el cierre de ventas es un área crítica. Evitar preguntar si el cliente quiere seguir y proceder directamente a la asignación de sucursal o búsqueda de domicilio son acciones esenciales para cerrar la venta.\n*   **Proactividad (PERSISTENTE):** Con un puntaje de 6.0 (vs. 13.9 del equipo), esta área necesita una mejora drástica. Todos los vendedores deben ofrecer fibra de forma directa, sin preguntar si le interesa al cliente. La proactividad es fundamental para maximizar las oportunidades de venta.\n*   **Saludo y Presentación (PERSISTENTE):** Su puntaje es de 12.5 (vs. 32.0 del equipo). La primera impresión es clave para el resto de la llamada, por lo que necesita un saludo más impactante y enfocado en el beneficio que le traerá al cliente.\n\n### 5. ANÁLISIS DE MÉTRICAS DE CALIDAD\n\nDado que no se proporcionaron métricas de calidad de llamadas y ventas específicas para MZA 56, se utilizarán los promedios del equipo como referencia.\n\n*   **TMO promedio del equipo: 105.3 seg (aprox. 1.75 minutos).** Es probable que el TMO de MZA 56 también esté en este rango. Si es significativamente más bajo, podría indicar falta de profundidad en las llamadas. Si es más alto, podría sugerir dificultades para cerrar la venta.\n*   **% Capta Atención promedio: 35.6%.** Esta es una métrica clave. El objetivo para MZA 56 es superar este porcentaje, lo que indica que debe mejorar su capacidad para enganchar al cliente en el primer minuto de la llamada.\n*   **Tasa de conversión del equipo: 5.1%.** MZA 56 debe aspirar a alcanzar o superar esta tasa.\n\n### 6. ANÁLISIS DETALLADO POR COMPETENCIA\n\n*   **Saludo y Presentación (Crítico):** El saludo debe ser más directo y centrado en el beneficio para el cliente (\"Hola [Nombre], lo contacto de Movistar porque tengo una oferta que le VA a interesar en su plan\").\n*   **Identificación del cliente (Bueno):** MZA 56 identifica correctamente al cliente, lo cual es fundamental. Debe mantener esta práctica.\n*   **Detección de necesidades (Crítico):** Evitar preguntas abiertas y genéricas (\"¿Qué es lo más importante para ti en un plan?\"). En su lugar, preguntar directamente sobre el uso actual del cliente (\"¿Qué es lo que más usás del celular?\", \"¿Cuántos GB tenés en tu plan?\").\n*   **Oferta de productos (Bajo):** Presentar los productos de forma directa y persuasiva, destacando los beneficios concretos (\"Con este plan, vas a tener [beneficios] y vas a poder [acciones]\").\n*   **Manejo de objeciones (Regular):** Rebatir la objeción específica del cliente, sincronizando la respuesta (\"Es lógico que mires el precio. A varios clientes les pasó eso al comienzo, y cuando empezaron a usar la conexión y vieron la diferencia en el servicio, entendieron que el valor estaba ahí.\").\n*   **Cierre (Crítico):** Evitar preguntas como \"¿Te parece bien si procedemos?\". Asignar sucursal o buscar domicilio del cliente directamente.\n*   **Despedida (Regular):** Ofrecer acompañamiento SOLO durante la portabilidad, evitando frases genéricas.\n*   **Proactividad (Crítico):** Ofrecer fibra de forma directa, sin preguntar si le interesa (\"Además, quería comentarle sobre nuestra excelente conexión de fibra...\").\n*   **Empatía (Regular):** Mostrar comprensión y escucha activa, pero sin perder el foco en el cierre de la venta.\n*   **Resolución de problemas (Bajo):** Escuchar activamente el problema y ofrecer soluciones concretas, enfocándose en los beneficios del servicio de Movistar.\n\n### 7. PLAN DE ACCIÓN SEMANAL (4 semanas)\n\n**Semana 1:** **FUNDAMENTOS - Detección de Necesidades y Saludo:** Enfocarse en mejorar el saludo inicial y la detección de necesidades. El objetivo es que MZA 56 cambie sus preguntas genéricas por preguntas directas sobre el uso del cliente. Revisión diaria de llamadas y feedback inmediato.\n**Semana 2:** **OFERTA Y CIERRE:** Perfeccionar la presentación de productos y el cierre de ventas. Practicar scripts de cierre directo (asignación de sucursal, búsqueda de domicilio).\n**Semana 3:** **PROACTIVIDAD Y OBJECIONES:** Implementar la oferta sistemática de fibra y mejorar el manejo de objeciones comunes.\n**Semana 4:** **CONSOLIDACIÓN Y OPTIMIZACIÓN:** Reforzar las áreas trabajadas y optimizar el flujo de la llamada para maximizar la eficiencia y la tasa de conversión.\n\n### 8. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Verificación de identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Detección de necesidades:**\n    *   \"¿Qué es lo que más usás del celular?\"\n    *   \"¿Cuántos GB tenés en tu plan?\"\n*   **Oferta de fibra:** \"Además, quería comentarle sobre nuestra excelente conexión de fibra. Con nuestra fibra, vas a poder [beneficios]...\"\n*   **Cierre directo:** \"Para que pueda retirar su nuevo chip, la sucursal más cercana a su domicilio es...\" (buscar la sucursal). O bien \"Necesitaría que me confirme su domicilio para coordinar la entrega del chip\".\n*   **Manejo de objeciones:**\n    *   **Precio:** \"Es lógico que mires el precio. A varios clientes les pasó eso al comienzo, y cuando empezaron a usar la conexión y vieron la diferencia en el servicio, entendieron que el valor estaba ahí.\"\n    *   **No tengo tiempo:** \"Entiendo, esta oferta es por tiempo limitado y no quiero que la pierdas. ¿Te parece si te llamo mañana a esta misma hora para que podamos conversarla mejor?\"\n*   **Saludo:** \"Hola [Nombre], lo contacto de Movistar porque tengo una oferta que le VA a interesar en su plan actual.\"\n\n### 9. METAS CUANTIFICABLES\n\n*   **Puntaje IA:** Alcanzar un puntaje IA de 50 en 30 días.\n*   **Tasa de conversión:** Aumentar la tasa de conversión al 4% en 30 días.\n*   **Ofrecimiento de productos:** Ofrecer al menos 3 productos por llamada.\n*   **% Capta Atención:** Aumentar el % de llamadas >1 minuto al 40% en 30 días.\n*   **TMO:** Mantener el TMO entre 2 y 4 minutos (120-240 segundos).\n*   **KPIs específicos:**\n    *   Aumentar el puntaje en \"Detección de necesidades\" a 30 en 30 días.\n    *   Aumentar el puntaje en \"Cierre\" a 25 en 30 días.\n    *   Aumentar el puntaje en \"Proactividad\" a 20 en 30 días.\n\n### 10. MENSAJE MOTIVACIONAL PERSONALIZADO\n\nMZA 56, reconozco que los números pueden parecer desafiantes, pero veo potencial en tu capacidad para conectar con los clientes y en tu habilidad para identificarlos correctamente. Con un enfoque más directo y aplicando las técnicas que hemos revisado, estoy seguro de que puedes transformar tus resultados. ¡Confío en que en las próximas semanas veremos un crecimiento significativo en tu desempeño!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false,
+  "fecha_coaching_anterior": null,
+  "evolucion": null
+}
