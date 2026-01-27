@@ -9013,50 +9013,39 @@ def pagina_resumen_corporativo(datos):
                     criterios = evaluaciones.get('criterios', {})
                     
                     if criterios:
-                        col_g1, col_g2 = st.columns(2)
+                        st.markdown("#### 📊 Criterios de Evaluación (Promedio)")
                         
-                        with col_g1:
-                            st.markdown("#### 📊 Criterios de Evaluación (Promedio)")
-                            
-                            # Preparar datos para gráfico de barras usando constante global
-                            nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
-                            valores = list(criterios.values())
-                            
-                            fig_bar = px.bar(
-                                x=nombres,
-                                y=valores,
-                                labels={'x': 'Criterio', 'y': 'Puntaje'},
-                                color=valores,
-                                color_continuous_scale='Blues'
-                            )
-                            fig_bar.update_layout(
-                                height=400,
-                                showlegend=False,
-                                paper_bgcolor='#FFFFFF',
-                                plot_bgcolor='#FAFBFC'
-                            )
-                            fig_bar.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
-                            st.plotly_chart(fig_bar, use_container_width=True)
+                        # Preparar datos para gráfico de barras usando constante global
+                        nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
+                        valores = list(criterios.values())
                         
-                        with col_g2:
-                            st.markdown("#### 🎯 Distribución de Fortalezas y Mejoras")
-                            
-                            # Gráfico de torta con top 5 fortalezas y áreas de mejora
-                            fortalezas_freq = evaluaciones.get('fortalezas_frecuentes', {})
-                            mejoras_freq = evaluaciones.get('areas_mejora_frecuentes', {})
-                            
-                            if fortalezas_freq:
-                                # Top 5 fortalezas
-                                top_fortalezas = dict(sorted(fortalezas_freq.items(), key=lambda x: x[1], reverse=True)[:5])
-                                
-                                fig_pie = px.pie(
-                                    values=list(top_fortalezas.values()),
-                                    names=list(top_fortalezas.keys()),
-                                    title="Top 5 Fortalezas Identificadas",
-                                    color_discrete_sequence=px.colors.sequential.Greens_r
-                                )
-                                fig_pie.update_layout(height=400)
-                                st.plotly_chart(fig_pie, use_container_width=True)
+                        # Crear gráfico de barras horizontal con colores por valor
+                        fig_bar = px.bar(
+                            y=nombres,
+                            x=valores,
+                            orientation='h',
+                            labels={'y': 'Criterio', 'x': 'Puntaje'},
+                            color=valores,
+                            color_continuous_scale=[[0, '#EF4444'], [0.4, '#F59E0B'], [0.6, '#3B82F6'], [1, '#10B981']],
+                            text=valores
+                        )
+                        fig_bar.update_traces(
+                            texttemplate='%{text:.1f}',
+                            textposition='outside',
+                            textfont_size=12
+                        )
+                        fig_bar.update_layout(
+                            height=450,
+                            showlegend=False,
+                            paper_bgcolor='#FFFFFF',
+                            plot_bgcolor='#FAFBFC',
+                            yaxis={'categoryorder': 'total ascending'},
+                            xaxis={'range': [0, 100]},
+                            coloraxis_showscale=False,
+                            margin=dict(l=10, r=60, t=30, b=30)
+                        )
+                        fig_bar.add_vline(x=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+                        st.plotly_chart(fig_bar, use_container_width=True)
                     
                     st.markdown("---")
                     
@@ -9132,38 +9121,32 @@ def pagina_resumen_corporativo(datos):
                         if plan_accion:
                             for i, accion in enumerate(plan_accion, 1):
                                 prioridad = accion.get('prioridad', 0)
-                                color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
-                                bg_prioridad = '#FFF1F0' if prioridad == 1 else '#FFFBEB' if prioridad == 2 else '#EFF6FF'
+                                try:
+                                    pnum = int(prioridad)
+                                except Exception:
+                                    pnum = 2
+                                color_prioridad = '#E74C3C' if pnum == 1 else '#F39C12' if pnum == 2 else '#3B82F6'
+                                bg_prioridad = '#FFF1F0' if pnum == 1 else '#FFFBEB' if pnum == 2 else '#EFF6FF'
                                 
-                                # Reemplazar expander por un bloque <details> con estilo para mostrar barra coloreada y contenido plegable
-                            try:
-                                pnum = int(prioridad)
-                            except Exception:
-                                pnum = 2
-                            color_prioridad = '#E74C3C' if pnum == 1 else '#F39C12' if pnum == 2 else '#3B82F6'
-                            bg_prioridad = '#FFF1F0' if pnum == 1 else '#FFFBEB' if pnum == 2 else '#EFF6FF'
-
-                            html = f"""
-                            <details style='border-radius:8px; overflow:hidden; margin: 8px 0; border: 1px solid rgba(0,0,0,0.04);'>
-                              <summary style='list-style:none; display:flex; align-items:center; gap:12px; padding:10px 12px; cursor:pointer; background: {bg_prioridad}; border-left:4px solid {color_prioridad};'>
-                                <span style='width:10px; height:24px; display:inline-block; background:{color_prioridad}; border-radius:3px;'></span>
-                                <strong style="color: #1E293B;">**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})</strong>
-                              </summary>
-                              <div style='padding:12px; background:{bg_prioridad}; color:#475569;'>
-                                <div style='display:flex; gap:20px; margin-bottom:8px;'>
-                                    <div style='flex:1;'>
-                                        <strong>Responsable:</strong> {accion.get('responsable', 'N/A')}<br>
-                                        <strong>Plazo:</strong> {accion.get('plazo', 'N/A')}
-                                    </div>
-                                    <div style='flex:1;'>
-                                        <strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}<br>
-                                        <strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}
-                                    </div>
-                                </div>
-                              </div>
-                            </details>
-                            """
-                            st.markdown(html.strip(), unsafe_allow_html=True)
+                                html = f"""<details style='border-radius:8px; overflow:hidden; margin: 8px 0; border: 1px solid rgba(0,0,0,0.04);'>
+<summary style='list-style:none; display:flex; align-items:center; gap:12px; padding:10px 12px; cursor:pointer; background: {bg_prioridad}; border-left:4px solid {color_prioridad};'>
+<span style='background:{color_prioridad}; color:white; padding:4px 10px; border-radius:12px; font-weight:700; font-size:0.85rem;'>P{pnum}</span>
+<strong style="color: #1E293B;">Acción #{i}: {accion.get('accion', 'N/A')}</strong>
+</summary>
+<div style='padding:12px; background:{bg_prioridad}; color:#475569;'>
+<div style='display:flex; gap:20px; margin-bottom:8px;'>
+<div style='flex:1;'>
+<strong>Responsable:</strong> {accion.get('responsable', 'N/A')}<br>
+<strong>Plazo:</strong> {accion.get('plazo', 'N/A')}
+</div>
+<div style='flex:1;'>
+<strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}<br>
+<strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}
+</div>
+</div>
+</div>
+</details>"""
+                                st.markdown(html, unsafe_allow_html=True)
                         else:
                             st.info("No hay plan de acción registrado para este equipo.")
                     
@@ -9255,51 +9238,38 @@ def pagina_resumen_corporativo(datos):
             criterios = evaluaciones.get('criterios', {})
             
             if criterios:
-                col_g1, col_g2 = st.columns(2)
+                st.markdown("#### 📊 Criterios de Evaluación")
                 
-                with col_g1:
-                    st.markdown("#### 📊 Criterios de Evaluación")
-                    
-                    # Gráfico de barras usando constante global
-                    nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
-                    valores = list(criterios.values())
-                    
-                    fig_bar = px.bar(
-                        x=nombres,
-                        y=valores,
-                        labels={'x': 'Criterio', 'y': 'Puntaje'},
-                        color=valores,
-                        color_continuous_scale='Viridis'
-                    )
-                    fig_bar.update_layout(
-                        height=400,
-                        showlegend=False,
-                        paper_bgcolor='#FFFFFF',
-                        plot_bgcolor='#FAFBFC'
-                    )
-                    fig_bar.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
-                    st.plotly_chart(fig_bar, use_container_width=True)
+                # Gráfico de barras horizontal usando constante global
+                nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
+                valores = list(criterios.values())
                 
-                with col_g2:
-                    st.markdown("#### 🎯 Distribución de Fortalezas")
-                    
-                    # Gráfico de torta
-                    fortalezas_freq = evaluaciones.get('fortalezas_frecuentes', {})
-                    
-                    if fortalezas_freq:
-                        # Top 5 fortalezas
-                        top_fortalezas = dict(sorted(fortalezas_freq.items(), key=lambda x: x[1], reverse=True)[:5])
-                        
-                        fig_pie = px.pie(
-                            values=list(top_fortalezas.values()),
-                            names=list(top_fortalezas.keys()),
-                            title="Top 5 Fortalezas",
-                            color_discrete_sequence=px.colors.sequential.Teal_r
-                        )
-                        fig_pie.update_layout(height=400)
-                        st.plotly_chart(fig_pie, use_container_width=True)
-                    else:
-                        st.info("No hay fortalezas registradas.")
+                fig_bar = px.bar(
+                    y=nombres,
+                    x=valores,
+                    orientation='h',
+                    labels={'y': 'Criterio', 'x': 'Puntaje'},
+                    color=valores,
+                    color_continuous_scale=[[0, '#EF4444'], [0.4, '#F59E0B'], [0.6, '#3B82F6'], [1, '#10B981']],
+                    text=valores
+                )
+                fig_bar.update_traces(
+                    texttemplate='%{text:.1f}',
+                    textposition='outside',
+                    textfont_size=12
+                )
+                fig_bar.update_layout(
+                    height=450,
+                    showlegend=False,
+                    paper_bgcolor='#FFFFFF',
+                    plot_bgcolor='#FAFBFC',
+                    yaxis={'categoryorder': 'total ascending'},
+                    xaxis={'range': [0, 100]},
+                    coloraxis_showscale=False,
+                    margin=dict(l=10, r=60, t=30, b=30)
+                )
+                fig_bar.add_vline(x=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+                st.plotly_chart(fig_bar, use_container_width=True)
             
             st.markdown("---")
             
