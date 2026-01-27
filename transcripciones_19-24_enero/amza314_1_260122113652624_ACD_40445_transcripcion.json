@@ -1,0 +1,62 @@
+{
+  "archivo": "amza314_1_260122113652624_ACD_40445.wav",
+  "duracion_segundos": 71.36,
+  "num_segmentos": 4,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 29.7,
+    "Hablante B": 18.97
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.76,
+      "fin": 3.34,
+      "duracion": 2.58,
+      "texto": "Después del tono deja tu mensaje.",
+      "confianza": 0.751
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.82,
+      "fin": 23.34,
+      "duracion": 18.51,
+      "texto": "Para finalizar corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.77
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.97,
+      "fin": 47.94,
+      "duracion": 18.97,
+      "texto": "¿Cómo están?",
+      "confianza": 0.344
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.76,
+      "fin": 71.36,
+      "duracion": 8.61,
+      "texto": "¿Cómo van?",
+      "confianza": 0.418
+    }
+  ],
+  "transcripcion_completa": "Después del tono deja tu mensaje. Para finalizar corta o marca la tecla numeral para más opciones. ¿Cómo están? ¿Cómo van?",
+  "calidad": {
+    "confianza_promedio": 0.571,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T19:04:51.986542",
+    "version": "5.0_ecapa"
+  }
+}

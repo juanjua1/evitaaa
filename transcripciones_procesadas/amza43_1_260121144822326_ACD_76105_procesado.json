@@ -1,0 +1,106 @@
+{
+  "archivo": "amza43_1_260121144822326_ACD_76105.wav",
+  "duracion_segundos": 100.71,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 9.99,
+    "Hablante A": 1.88
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.72,
+      "fin": 9.87,
+      "duracion": 8.15,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.787,
+      "texto_original": "Hola, buenas tardes.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.7,
+      "fin": 46.58,
+      "duracion": 1.88,
+      "texto": "Muchas gracias.",
+      "confianza": 0.182,
+      "texto_original": "Muchas gracias.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 98.87,
+      "fin": 100.71,
+      "duracion": 1.84,
+      "texto": "Bueno, solo no porque no me están escuchando.",
+      "confianza": 0.513,
+      "texto_original": "Bueno, solo no porque no me están escuchando.",
+      "rol": "AGENTE"
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Muchas gracias. Bueno, solo no porque no me están escuchando.",
+  "calidad": {
+    "confianza_promedio": 0.494,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T21:34:52.665977",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:28.622144",
+    "agente_identificado": "Hablante B",
+    "scores_hablantes": {
+      "Hablante B": 0.0,
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260121144822326_ACD_76105",
+    "fecha_inicio": "21/1/2026 14:48:22",
+    "agente": {
+      "nombre": "MZA 43",
+      "login": "mza43",
+      "equipo": "0"
+    },
+    "tiempos": {
+      "duracion_total": 123,
+      "talking_time": 97,
+      "hold": 0,
+      "acw": 4,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Cliente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "Se corta durante la conversacion"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA",
+      "lote": "20260121_MZA_TT_MIXTO"
+    },
+    "cliente": {
+      "telefono": "223156811176.0",
+      "nombre": "nan"
+    },
+    "sentido": "Discador Predictivo"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:28.622186",
+    "version": "1.0",
+    "archivo_original": "amza43_1_260121144822326_ACD_76105_transcripcion.json",
+    "id_interaccion": "260121144822326_ACD_76105",
+    "tiene_metadatos_llamada": true
+  }
+}

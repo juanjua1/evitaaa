@@ -1,0 +1,206 @@
+{
+  "archivo": "amza59_1_260121101505822_MIT_01957.wav",
+  "duracion_segundos": 56.94,
+  "num_segmentos": 13,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 35.06,
+    "Hablante A": 12.05
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.8,
+      "fin": 8.51,
+      "duracion": 2.7,
+      "texto": "¿Hola?",
+      "confianza": 0.368,
+      "texto_original": "¿Hola?",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.53,
+      "fin": 24.65,
+      "duracion": 16.12,
+      "texto": "Hola, ¿cómo le va, caballero?",
+      "confianza": 0.473,
+      "texto_original": "Hola, ¿cómo le va, caballero?",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.67,
+      "fin": 31.34,
+      "duracion": 6.67,
+      "texto": "¿Quién ha llegado de Modistar?",
+      "confianza": 0.541,
+      "texto_original": "¿Quién ha llegado de Modistar?",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.9,
+      "fin": 35.23,
+      "duracion": 2.32,
+      "texto": "¿Lo escuchas?",
+      "confianza": 0.242,
+      "texto_original": "¿Lo escuchas?",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.25,
+      "fin": 37.57,
+      "duracion": 2.32,
+      "texto": "Sí, sí, ahora yo estoy trabajando.",
+      "confianza": 0.438,
+      "texto_original": "Sí, sí, ahora yo estoy trabajando.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.59,
+      "fin": 42.56,
+      "duracion": 4.97,
+      "texto": "Y puede ser el mediodía, a las dos y cinco, un momento.",
+      "confianza": 0.422,
+      "texto_original": "Y puede ser el mediodía, a las dos y cinco, un momento.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 42.58,
+      "fin": 44.3,
+      "duracion": 1.72,
+      "texto": "Bien, yo a las dos y cinco le llamo.",
+      "confianza": 0.104,
+      "texto_original": "Bien, yo a las dos y cinco le llamo.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.32,
+      "fin": 45.04,
+      "duracion": 0.72,
+      "texto": "¿Cómo es tu nombre?",
+      "confianza": 0.309,
+      "texto_original": "¿Cómo es tu nombre?",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.1,
+      "fin": 47.22,
+      "duracion": 0.12,
+      "texto": "Rubén.",
+      "confianza": 0.06,
+      "texto_original": "Rubén.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.24,
+      "fin": 53.73,
+      "duracion": 6.49,
+      "texto": "Rubén, entonces dos y cinco, yo me estoy poniendo en un grote, así estamos en contra, así le comenta la promoción.",
+      "confianza": 0.502,
+      "texto_original": "Rubén, entonces dos y cinco, yo me estoy poniendo en un grote, así estamos en contra, así le comenta la promoción.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.75,
+      "fin": 55.41,
+      "duracion": 1.66,
+      "texto": "Bueno, dale, dale.",
+      "confianza": 0.421,
+      "texto_original": "Bueno, dale, dale.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.44,
+      "fin": 56.5,
+      "duracion": 1.06,
+      "texto": "Hasta luego.",
+      "confianza": 0.456,
+      "texto_original": "Hasta luego.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 56.7,
+      "fin": 56.94,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.1,
+      "texto_original": "Hasta luego.",
+      "rol": "AGENTE"
+    }
+  ],
+  "transcripcion_completa": "¿Hola? Hola, ¿cómo le va, caballero? ¿Quién ha llegado de Modistar? ¿Lo escuchas? Sí, sí, ahora yo estoy trabajando. Y puede ser el mediodía, a las dos y cinco, un momento. Bien, yo a las dos y cinco le llamo. ¿Cómo es tu nombre? Rubén. Rubén, entonces dos y cinco, yo me estoy poniendo en un grote, así estamos en contra, así le comenta la promoción. Bueno, dale, dale. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.341,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-26T04:37:04.559011",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:37.424039",
+    "agente_identificado": "Hablante B",
+    "scores_hablantes": {
+      "Hablante B": 0.0,
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260121101505822_MIT_01957",
+    "fecha_inicio": "21/1/2026 10:15:07",
+    "agente": {
+      "nombre": "MZA 59",
+      "login": "mza59",
+      "equipo": "1"
+    },
+    "tiempos": {
+      "duracion_total": 83,
+      "talking_time": 60,
+      "hold": 0,
+      "acw": 22,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Cliente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "No Disp."
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA_OUT",
+      "lote": "nan"
+    },
+    "cliente": {
+      "telefono": "90351157627238.0",
+      "nombre": "nan"
+    },
+    "sentido": "Saliente"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:37.424111",
+    "version": "1.0",
+    "archivo_original": "amza59_1_260121101505822_MIT_01957_transcripcion.json",
+    "id_interaccion": "260121101505822_MIT_01957",
+    "tiene_metadatos_llamada": true
+  }
+}

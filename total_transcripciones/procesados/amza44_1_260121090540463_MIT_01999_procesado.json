@@ -1,0 +1,106 @@
+{
+  "archivo": "amza44_1_260121090540463_MIT_01999.wav",
+  "duracion_segundos": 83.87,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 32.22,
+    "Hablante A": 20.24
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.68,
+      "fin": 30.22,
+      "duracion": 20.54,
+      "texto": "¡Muchas gracias!",
+      "confianza": 0.266,
+      "texto_original": "¡Muchas gracias!",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 46.59,
+      "fin": 66.83,
+      "duracion": 20.24,
+      "texto": "No, no, no, no.",
+      "confianza": 0.519,
+      "texto_original": "No, no, no, no.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 72.19,
+      "fin": 83.87,
+      "duracion": 11.68,
+      "texto": "¡Muchas gracias!",
+      "confianza": 0.406,
+      "texto_original": "¡Muchas gracias!",
+      "rol": "AGENTE"
+    }
+  ],
+  "transcripcion_completa": "¡Muchas gracias! No, no, no, no. ¡Muchas gracias!",
+  "calidad": {
+    "confianza_promedio": 0.397,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T21:41:13.602464",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:29.102735",
+    "agente_identificado": "Hablante B",
+    "scores_hablantes": {
+      "Hablante B": 0.0,
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260121090540463_MIT_01999",
+    "fecha_inicio": "21/1/2026 09:05:41",
+    "agente": {
+      "nombre": "MZA 44",
+      "login": "mza44",
+      "equipo": "1"
+    },
+    "tiempos": {
+      "duracion_total": 110,
+      "talking_time": 92,
+      "hold": 0,
+      "acw": 18,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Cliente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "Conforme con plan-prestador actual"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA_OUT",
+      "lote": "nan"
+    },
+    "cliente": {
+      "telefono": "90381156293712.0",
+      "nombre": "nan"
+    },
+    "sentido": "Saliente"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:29.102845",
+    "version": "1.0",
+    "archivo_original": "amza44_1_260121090540463_MIT_01999_transcripcion.json",
+    "id_interaccion": "260121090540463_MIT_01999",
+    "tiene_metadatos_llamada": true
+  }
+}

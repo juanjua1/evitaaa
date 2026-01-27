@@ -1,0 +1,78 @@
+{
+  "archivo": "amza49_1_260123175752188_ACD_03251.wav",
+  "duracion_segundos": 78.13,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 43.1,
+    "Hablante B": 13.67
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 13.43,
+      "duracion": 13.4,
+      "texto": "¿La van a hacer algo con Fanny?",
+      "confianza": 0.403
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.45,
+      "fin": 17.39,
+      "duracion": 3.95,
+      "texto": "Sí, ella me ha dicho eso.",
+      "confianza": 0.263
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.41,
+      "fin": 23.94,
+      "duracion": 6.53,
+      "texto": "Fanny, ¿cómo le has dicho que me presento?",
+      "confianza": 0.294
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.96,
+      "fin": 28.16,
+      "duracion": 4.2,
+      "texto": "Que no hemos tomado...",
+      "confianza": 0.373
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.99,
+      "fin": 46.66,
+      "duracion": 13.67,
+      "texto": "Bien.",
+      "confianza": 0.506
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.11,
+      "fin": 78.13,
+      "duracion": 15.02,
+      "texto": "¡Muchas gracias!",
+      "confianza": 0.386
+    }
+  ],
+  "transcripcion_completa": "¿La van a hacer algo con Fanny? Sí, ella me ha dicho eso. Fanny, ¿cómo le has dicho que me presento? Que no hemos tomado... Bien. ¡Muchas gracias!",
+  "calidad": {
+    "confianza_promedio": 0.371,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-26T03:49:27.445859",
+    "version": "5.0_ecapa"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "archivo": "amza42_1_260121111844921_ACD_38099.wav",
+  "duracion_segundos": 63.01,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 27.84,
+    "Hablante B": 9.12
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.45,
+      "fin": 14.27,
+      "duracion": 12.82,
+      "texto": "Hola, buen día, hablo con Verónica.",
+      "confianza": 0.72,
+      "texto_original": "Hola, buen día, hablo con Verónica.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.29,
+      "fin": 14.39,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.051,
+      "texto_original": "Hola.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.41,
+      "fin": 29.33,
+      "duracion": 14.92,
+      "texto": "Hola, hablo con Verónica.",
+      "confianza": 0.516,
+      "texto_original": "Hola, hablo con Verónica.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.88,
+      "fin": 61.27,
+      "duracion": 7.39,
+      "texto": "Hola, Ana.",
+      "confianza": 0.59,
+      "texto_original": "Hola, Ana.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.29,
+      "fin": 63.01,
+      "duracion": 1.73,
+      "texto": "Corto por falta de respuesta.",
+      "confianza": 0.551,
+      "texto_original": "Corto por falta de respuesta.",
+      "rol": "CLIENTE"
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, hablo con Verónica. Hola. Hola, hablo con Verónica. Hola, Ana. Corto por falta de respuesta.",
+  "calidad": {
+    "confianza_promedio": 0.486,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T21:24:20.802522",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:28.061809",
+    "agente_identificado": "Hablante A",
+    "scores_hablantes": {
+      "Hablante A": 0.0,
+      "Hablante B": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260121111844921_ACD_38099",
+    "fecha_inicio": "21/1/2026 11:18:44",
+    "agente": {
+      "nombre": "MZA 42",
+      "login": "mza42",
+      "equipo": "4"
+    },
+    "tiempos": {
+      "duracion_total": 85,
+      "talking_time": 60,
+      "hold": 0,
+      "acw": 9,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Cliente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "Se corta durante la conversacion"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA",
+      "lote": "20260121_MZA_TM_MIXTO"
+    },
+    "cliente": {
+      "telefono": "111539358784.0",
+      "nombre": "nan"
+    },
+    "sentido": "Discador Predictivo"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:28.061854",
+    "version": "1.0",
+    "archivo_original": "amza42_1_260121111844921_ACD_38099_transcripcion.json",
+    "id_interaccion": "260121111844921_ACD_38099",
+    "tiene_metadatos_llamada": true
+  }
+}

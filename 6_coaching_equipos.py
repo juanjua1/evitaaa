@@ -35,6 +35,7 @@ DIR_REPORTES = "reportes"
 DIR_COACHING = os.path.join(DIR_REPORTES, "coaching_vendedores")
 DIR_COACHING_EQUIPOS = os.path.join(DIR_REPORTES, "coaching_equipos")
 DIR_CALIDAD = "datos_calidad"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(DIR_COACHING_EQUIPOS, exist_ok=True)
 
 def log(mensaje, tipo="info"):
@@ -131,27 +132,57 @@ def obtener_nombre_agente(agente_id, listado_vendedores):
     return listado_vendedores.get(agente_normalizado, str(agente_id))
 
 
+def normalizar_codigo_agente(agente):
+    """Normaliza código de agente para comparación (MZA 1 -> mza1, amza46 -> mza46)"""
+    if pd.isna(agente) or agente is None:
+        return ''
+    codigo = str(agente).lower().replace(' ', '').replace('_', '').replace('\t', '')
+    # Quitar prefijo 'a' si existe (ej: amza46 -> mza46)
+    if codigo.startswith('amza'):
+        codigo = codigo[1:]  # Quitar la 'a' inicial
+    return codigo
+
+
 def crear_mapeo_codigo_a_equipo(datos):
-    """Crea mapeo de código de agente normalizado a equipo desde datos de calidad"""
+    """Crea mapeo de código de agente normalizado a equipo desde listado de vendedores Y datos de calidad"""
     codigo_a_equipo = {}
     codigo_a_nombre = {}
     
+    # PRIMERO: Leer desde el listado de vendedores CSV (tiene los equipos correctos para DIANA y BYL)
+    try:
+        ruta_listado = os.path.join(BASE_DIR, 'LISTADO-DE-VENDEDORES.csv')
+        # Leer sin header para evitar problemas con columnas duplicadas
+        df_listado = pd.read_csv(ruta_listado, header=None, skiprows=1)
+        for _, row in df_listado.iterrows():
+            # Columna 0 = Usuario, Columna 1 = Nombre, Columna 2 = Equipo
+            usuario = str(row.iloc[0]).strip().lower().replace('\t', '').replace(' ', '') if pd.notna(row.iloc[0]) else ""
+            nombre = str(row.iloc[1]).strip() if pd.notna(row.iloc[1]) else ""
+            equipo = str(row.iloc[2]).strip() if len(row) > 2 and pd.notna(row.iloc[2]) else ""
+            
+            # Solo agregar si tiene usuario y equipo válido
+            if usuario and usuario != 'usuario' and equipo and equipo not in ['Sin Equipo', '', 'nan']:
+                # Normalizar el código
+                usuario_norm = normalizar_codigo_agente(usuario)
+                if usuario_norm:
+                    codigo_a_equipo[usuario_norm] = equipo
+                    codigo_a_nombre[usuario_norm] = nombre
+    except Exception as e:
+        log(f"Error leyendo listado de vendedores: {e}", "error")
+    
+    # SEGUNDO: Complementar desde datos de calidad (para los que no estén en el CSV)
     if 'calidad' in datos and 'llamadas' in datos['calidad']:
         for v in datos['calidad']['llamadas'].get('por_vendedor', []):
             agente = str(v.get('agente', '')).lower().replace(' ', '')
             equipo = v.get('equipo', 'Sin Equipo')
             nombre = v.get('vendedor', agente)
-            codigo_a_equipo[agente] = equipo
-            codigo_a_nombre[agente] = nombre
+            # Normalizar el código (quitar 'a' si es amza)
+            agente_norm = normalizar_codigo_agente(agente)
+            # Solo agregar si NO existe ya y tiene equipo válido
+            if agente_norm and agente_norm not in codigo_a_equipo and equipo and equipo not in ['Sin Equipo', '', 'nan']:
+                codigo_a_equipo[agente_norm] = equipo
+                codigo_a_nombre[agente_norm] = nombre
     
     return codigo_a_equipo, codigo_a_nombre
-
-
-def normalizar_codigo_agente(agente):
-    """Normaliza código de agente para comparación (MZA 1 -> mza1)"""
-    if pd.isna(agente) or agente is None:
-        return ''
-    return str(agente).lower().replace(' ', '').replace('_', '').replace('\t', '')
 
 
 def recopilar_metricas_equipo(equipo, vendedores_equipo, datos, listado_vendedores, codigo_a_equipo=None):
@@ -710,6 +741,20 @@ def main():
     codigo_a_equipo, codigo_a_nombre = crear_mapeo_codigo_a_equipo(datos)
     log(f"Mapeo creado: {len(codigo_a_equipo)} agentes")
     
+    # Debug: verificar mapeo para BYL y DIANA
+    diana_count = sum(1 for v in codigo_a_equipo.values() if v == 'DIANA')
+    byl_count = sum(1 for v in codigo_a_equipo.values() if v == 'BYL')
+    log(f"  Códigos asignados a DIANA: {diana_count}")
+    log(f"  Códigos asignados a BYL: {byl_count}")
+    
+    # Debug: verificar evaluaciones
+    if 'evaluaciones' in datos:
+        df_eval = datos['evaluaciones'].copy()
+        df_eval['agente_norm'] = df_eval['agente'].apply(normalizar_codigo_agente)
+        df_eval['equipo_test'] = df_eval['agente_norm'].map(codigo_a_equipo)
+        log(f"  Evaluaciones mapeadas a DIANA: {len(df_eval[df_eval['equipo_test'] == 'DIANA'])}")
+        log(f"  Evaluaciones mapeadas a BYL: {len(df_eval[df_eval['equipo_test'] == 'BYL'])}")
+    
     log("\nRecopilando métricas de todos los equipos...")
     todos_equipos_metricas = {}
     for equipo, vendedores in equipos_validos.items():
@@ -723,20 +768,15 @@ def main():
     coaching_existente = []
     equipos_procesados = []
     
-    # Filtrar equipos pendientes
-    if len(sys.argv) > 1:
-        max_equipos = int(sys.argv[1])
-        log(f"Procesando máximo {max_equipos} equipos")
-    else:
-        max_equipos = len(equipos_validos)
-    
-    equipos_pendientes = [e for e in equipos_validos.keys() if e not in equipos_procesados][:max_equipos]
+    # Filtrar equipos pendientes - SOLO BYL y DIANA
+    equipos_a_procesar = ['BYL', 'DIANA']
+    equipos_pendientes = [e for e in equipos_a_procesar if e in equipos_validos.keys()]
     
     if not equipos_pendientes:
-        log("Todos los equipos ya tienen coaching generado", "success")
+        log("No se encontraron los equipos BYL y DIANA", "warning")
         return
     
-    log(f"Pendientes a procesar: {len(equipos_pendientes)}")
+    log(f"Pendientes a procesar: {len(equipos_pendientes)} - {equipos_pendientes}")
     print("-" * 70)
     
     # Procesar cada equipo

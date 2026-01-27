@@ -1,0 +1,113 @@
+{
+  "archivo": "amza60_1_260119175529672_MIT_01987.wav",
+  "duracion_segundos": 41.36,
+  "num_segmentos": 4,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 37.87
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 18.92,
+      "duracion": 18.89,
+      "texto": "No, no, no.",
+      "confianza": 0.646,
+      "texto_original": "No, no, no.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.47,
+      "fin": 27.83,
+      "duracion": 8.36,
+      "texto": "Bienvenido al buzón de voz claro de 2233025108.",
+      "confianza": 0.88,
+      "texto_original": "Bienvenido al buzón de voz claro de 2233025108.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.27,
+      "fin": 33.78,
+      "duracion": 4.51,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.66,
+      "texto_original": "Después del tono, deja tu mensaje.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.25,
+      "fin": 41.36,
+      "duracion": 6.11,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.781,
+      "texto_original": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "rol": "AGENTE"
+    }
+  ],
+  "transcripcion_completa": "No, no, no. Bienvenido al buzón de voz claro de 2233025108. Después del tono, deja tu mensaje. Para finalizar, cortá o marca la tecla numeral para más opciones.",
+  "calidad": {
+    "confianza_promedio": 0.742,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-26T04:51:03.673994",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:37.936435",
+    "agente_identificado": "Hablante A",
+    "scores_hablantes": {
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260119175529672_MIT_01987",
+    "fecha_inicio": "19/1/2026 17:55:29",
+    "agente": {
+      "nombre": "MZA 60",
+      "login": "mza60",
+      "equipo": "1"
+    },
+    "tiempos": {
+      "duracion_total": 70,
+      "talking_time": 66,
+      "hold": 25,
+      "acw": 3,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Agente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "Se corta durante la conversacion"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA_OUT",
+      "lote": "nan"
+    },
+    "cliente": {
+      "telefono": "90223153025108.0",
+      "nombre": "nan"
+    },
+    "sentido": "Saliente"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:37.936484",
+    "version": "1.0",
+    "archivo_original": "amza60_1_260119175529672_MIT_01987_transcripcion.json",
+    "id_interaccion": "260119175529672_MIT_01987",
+    "tiene_metadatos_llamada": true
+  }
+}

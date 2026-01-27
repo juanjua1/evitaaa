@@ -1,0 +1,166 @@
+{
+  "archivo": "amza41_1_260122143507709_ACD_74459.wav",
+  "duracion_segundos": 69.24,
+  "num_segmentos": 9,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 22.69,
+    "Hablante A": 27.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.7,
+      "fin": 4.41,
+      "duracion": 2.7,
+      "texto": "¿Qué tal?",
+      "confianza": 0.647,
+      "texto_original": "¿Qué tal?",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.42,
+      "fin": 8.43,
+      "duracion": 4.0,
+      "texto": "Le hablo a Marina, me comunico a Desembovistar para brindarle una promoción en la línea.",
+      "confianza": 0.646,
+      "texto_original": "Le hablo a Marina, me comunico a Desembovistar para brindarle una promoción en la línea.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.21,
+      "fin": 13.3,
+      "duracion": 4.08,
+      "texto": "Es como hacer una consulta.",
+      "confianza": 0.421,
+      "texto_original": "Es como hacer una consulta.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.32,
+      "fin": 19.24,
+      "duracion": 5.93,
+      "texto": "Me fui a Desembovistar para no tener más problemas y todos los días me llaman.",
+      "confianza": 0.412,
+      "texto_original": "Me fui a Desembovistar para no tener más problemas y todos los días me llaman.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.26,
+      "fin": 20.84,
+      "duracion": 1.58,
+      "texto": "Pueden ser que no me llenen, por favor.",
+      "confianza": 0.556,
+      "texto_original": "Pueden ser que no me llenen, por favor.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.07,
+      "fin": 24.37,
+      "duracion": 2.3,
+      "texto": "Tienen problemas, no hay problema, no los he registrado.",
+      "confianza": 0.49,
+      "texto_original": "Tienen problemas, no hay problema, no los he registrado.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.39,
+      "fin": 25.51,
+      "duracion": 1.12,
+      "texto": "Muchas gracias.",
+      "confianza": 0.35,
+      "texto_original": "Muchas gracias.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.53,
+      "fin": 26.51,
+      "duracion": 0.98,
+      "texto": "Muchas gracias.",
+      "confianza": 0.366,
+      "texto_original": "Muchas gracias.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 42.23,
+      "fin": 69.24,
+      "duracion": 27.0,
+      "texto": "No, no, no, no.",
+      "confianza": 0.592,
+      "texto_original": "No, no, no, no.",
+      "rol": "CLIENTE"
+    }
+  ],
+  "transcripcion_completa": "¿Qué tal? Le hablo a Marina, me comunico a Desembovistar para brindarle una promoción en la línea. Es como hacer una consulta. Me fui a Desembovistar para no tener más problemas y todos los días me llaman. Pueden ser que no me llenen, por favor. Tienen problemas, no hay problema, no los he registrado. Muchas gracias. Muchas gracias. No, no, no, no.",
+  "calidad": {
+    "confianza_promedio": 0.498,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T21:17:56.237878",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:27.745985",
+    "agente_identificado": "Hablante B",
+    "scores_hablantes": {
+      "Hablante B": 0.0,
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260122143507709_ACD_74459",
+    "fecha_inicio": "22/1/2026 14:35:07",
+    "agente": {
+      "nombre": "MZA 41",
+      "login": "mza41",
+      "equipo": "4"
+    },
+    "tiempos": {
+      "duracion_total": 87,
+      "talking_time": 66,
+      "hold": 0,
+      "acw": 3,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Cliente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "No quiere volver a ser contactado"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA",
+      "lote": "20260122_MZA_TT_MIXTO"
+    },
+    "cliente": {
+      "telefono": "111561595655.0",
+      "nombre": "nan"
+    },
+    "sentido": "Discador Predictivo"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:27.746041",
+    "version": "1.0",
+    "archivo_original": "amza41_1_260122143507709_ACD_74459_transcripcion.json",
+    "id_interaccion": "260122143507709_ACD_74459",
+    "tiene_metadatos_llamada": true
+  }
+}

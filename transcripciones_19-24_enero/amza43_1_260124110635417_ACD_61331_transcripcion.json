@@ -1,0 +1,86 @@
+{
+  "archivo": "amza43_1_260124110635417_ACD_61331.wav",
+  "duracion_segundos": 83.45,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 3.73,
+    "Hablante B": 2.42
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.48,
+      "fin": 2.38,
+      "duracion": 0.9,
+      "texto": "Hola, buen día.",
+      "confianza": 0.792
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.5,
+      "fin": 3.43,
+      "duracion": 0.92,
+      "texto": "Hablo con Raúl.",
+      "confianza": 0.825
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.57,
+      "fin": 17.95,
+      "duracion": 0.38,
+      "texto": "Sí, hablo con Raúl.",
+      "confianza": 0.004
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.98,
+      "fin": 18.18,
+      "duracion": 0.2,
+      "texto": "Sí, hablo.",
+      "confianza": 0.084
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.17,
+      "fin": 41.88,
+      "duracion": 0.71,
+      "texto": "¿Qué pasaron?",
+      "confianza": 0.399
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.9,
+      "fin": 43.1,
+      "duracion": 1.2,
+      "texto": "¿Te quedaron del mundo?",
+      "confianza": 0.454
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 81.61,
+      "fin": 83.45,
+      "duracion": 1.84,
+      "texto": "Bueno, corto porque no se escucha nada.",
+      "confianza": 0.613
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hablo con Raúl. Sí, hablo con Raúl. Sí, hablo. ¿Qué pasaron? ¿Te quedaron del mundo? Bueno, corto porque no se escucha nada.",
+  "calidad": {
+    "confianza_promedio": 0.453,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-26T03:21:41.409435",
+    "version": "5.0_ecapa"
+  }
+}
