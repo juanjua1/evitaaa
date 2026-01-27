@@ -9337,8 +9337,7 @@ def main():
         if _DATOS_PRELOAD is not None:
             datos = _DATOS_PRELOAD
         else:
-            # Si la pre-carga está en curso, mostrar un mensaje agradable y esperar brevemente
-            st.markdown("""<div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #3B82F6;'><strong>⏳ Cargando datos en segundo plano...</strong><p style='margin:6px 0 0 0; color:#475569;'>Estamos preparando tu dashboard. Esto no demora más de unos segundos.</p></div>""", unsafe_allow_html=True)
+            # Pre-carga en curso: esperar silenciosamente hasta que termine
             import time
             while _DATOS_LOADING:
                 time.sleep(0.1)
