@@ -600,6 +600,30 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
 # Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Variables y helpers para precarga de datos en background
+_DATOS_PRELOAD = None
+_DATOS_LOADING = False
+
+def iniciar_preload_datos():
+    """Inicia la carga de datos en un thread de fondo para no bloquear la UI.
+    Guarda el resultado en la variable global _DATOS_PRELOAD.
+    """
+    global _DATOS_PRELOAD, _DATOS_LOADING
+    import threading
+    if _DATOS_LOADING or _DATOS_PRELOAD is not None:
+        return
+    def _bg():
+        global _DATOS_PRELOAD, _DATOS_LOADING
+        _DATOS_LOADING = True
+        try:
+            # Llamamos a la función cacheada; se ejecutará en background y no mostrará la notificación "Running cargar_datos()" en la UI
+            _DATOS_PRELOAD = cargar_datos()
+        finally:
+            _DATOS_LOADING = False
+
+    th = threading.Thread(target=_bg, daemon=True)
+    th.start()
+
 # Mapeo de nombres de criterios para gráficos
 CRITERIOS_NOMBRES = {
     'saludo_presentacion': 'Saludo',
@@ -1735,6 +1759,14 @@ def mostrar_login():
                 if usuario and password:
                     valido, datos_usuario = verificar_credenciales(usuario, password)
                     if valido:
+                        # Iniciar carga de datos en background para evitar que la UI muestre "Running cargar_datos()" inmediatamente
+                        try:
+                            iniciar_preload_datos()
+                            st.session_state['datos_preload_started'] = True
+                        except Exception:
+                            # En caso de algún error, no impedir el login
+                            pass
+
                         st.session_state['autenticado'] = True
                         st.session_state['usuario'] = usuario.lower()
                         st.session_state['datos_usuario'] = datos_usuario
@@ -5161,10 +5193,12 @@ def pagina_analisis_equipos(datos):
                         for accion in plan_accion:
                             prioridad = accion.get('prioridad', 0)
                             color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
+                            # Color de fondo suave según prioridad
+                            bg_prioridad = '#FFF1F0' if prioridad == 1 else '#FFFBEB' if prioridad == 2 else '#EFF6FF'
                             
                             st.markdown(f"""
-                            <div style='background: #FFFFFF; padding: 15px; border-radius: 10px; margin: 10px 0; 
-                                        border-left: 5px solid {color_prioridad}; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+                            <div style='background: {bg_prioridad}; padding: 15px; border-radius: 10px; margin: 10px 0; 
+                                        border-left: 5px solid {color_prioridad}; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'>
                                 <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;'>
                                     <span style='background: {color_prioridad}; color: white; padding: 3px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;'>
                                         Prioridad {prioridad}
@@ -9028,15 +9062,24 @@ def pagina_resumen_corporativo(datos):
                             for i, accion in enumerate(plan_accion, 1):
                                 prioridad = accion.get('prioridad', 0)
                                 color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
+                                bg_prioridad = '#FFF1F0' if prioridad == 1 else '#FFFBEB' if prioridad == 2 else '#EFF6FF'
                                 
                                 with st.expander(f"**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})"):
-                                    col_a1, col_a2 = st.columns(2)
-                                    with col_a1:
-                                        st.markdown(f"**Responsable:** {accion.get('responsable', 'N/A')}")
-                                        st.markdown(f"**Plazo:** {accion.get('plazo', 'N/A')}")
-                                    with col_a2:
-                                        st.markdown(f"**Indicador de Éxito:** {accion.get('indicador_exito', 'N/A')}")
-                                    st.markdown(f"**Recursos Necesarios:** {accion.get('recursos_necesarios', 'N/A')}")
+                                    # Mostrar contenido dentro de un cuadro con fondo de prioridad
+                                    st.markdown(f"""
+                                    <div style='background: {bg_prioridad}; padding: 12px; border-radius: 8px; border-left: 4px solid {color_prioridad}; box-shadow: 0 1px 6px rgba(0,0,0,0.05);'>
+                                        <div style='display:flex; gap:20px; margin-bottom:8px;'>
+                                            <div style='flex:1;'>
+                                                <strong>Responsable:</strong> {accion.get('responsable', 'N/A')}<br>
+                                                <strong>Plazo:</strong> {accion.get('plazo', 'N/A')}
+                                            </div>
+                                            <div style='flex:1;'>
+                                                <strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}<br>
+                                                <strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    """, unsafe_allow_html=True)
                         else:
                             st.info("No hay plan de acción registrado para este equipo.")
                     
@@ -9204,9 +9247,22 @@ def main():
     nombre_usuario = datos_usuario.get('nombre', 'Usuario')
     rol_usuario = datos_usuario.get('rol', 'vendedor')
     
-    # Cargar datos
-    with st.spinner('Cargando datos...'):
-        datos = cargar_datos()
+    # Cargar datos: preferir pre-carga en background iniciada en el login
+    if st.session_state.get('datos_preload_started'):
+        # Si la pre-carga ya completó, usamos los datos ya cargados
+        if _DATOS_PRELOAD is not None:
+            datos = _DATOS_PRELOAD
+        else:
+            # Si la pre-carga está en curso, esperar brevemente con un spinner y luego usar el resultado
+            with st.spinner('Cargando datos en segundo plano...'):
+                import time
+                while _DATOS_LOADING:
+                    time.sleep(0.1)
+            datos = _DATOS_PRELOAD or cargar_datos()
+    else:
+        # No hubo pre-carga: cargar de forma síncrona (comportamiento por defecto)
+        with st.spinner('Cargando datos...'):
+            datos = cargar_datos()
     
     if 'transcripciones' not in datos or not datos['transcripciones']:
         st.error("No se encontraron transcripciones procesadas. Asegúrate de tener archivos en 'total_transcripciones/procesados/'")
