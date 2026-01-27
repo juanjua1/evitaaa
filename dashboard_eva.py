@@ -2932,11 +2932,33 @@ def pagina_coaching_vendedores(datos):
                     plan = data['plan_accion']
                     
                     for i, item in enumerate(plan[:10], 1):
-                        with st.expander(f"📌 {i}. {item.get('titulo', 'Acción')}"):
-                            st.markdown(f"**Descripción:** {item.get('descripcion', 'Sin descripción')}")
-                            st.markdown(f"**Prioridad:** {item.get('prioridad', 'Media')}")
-                            if 'recursos' in item:
-                                st.markdown(f"**Recursos sugeridos:** {item.get('recursos', '')}")
+                        prioridad = item.get('prioridad', 'Media')
+                        # Determinar colores por prioridad (acepta 1/2/3 o etiquetas)
+                        try:
+                            pnum = int(prioridad)
+                        except Exception:
+                            pnum = 2 if str(prioridad).lower() in ['media','medium'] else 1 if str(prioridad).lower() in ['alta','high','1'] else 3
+                        color_prioridad = '#E74C3C' if pnum == 1 else '#F39C12' if pnum == 2 else '#3B82F6'
+                        bg_prioridad = '#FFF1F0' if pnum == 1 else '#FFFBEB' if pnum == 2 else '#EFF6FF'
+
+                        descripcion = item.get('descripcion', 'Sin descripción')
+                        recursos = item.get('recursos', '')
+
+                        html = f"""
+                        <details style='border-radius:8px; overflow:hidden; margin: 8px 0; border: 1px solid rgba(0,0,0,0.04);'>
+                          <summary style='list-style:none; display:flex; align-items:center; gap:12px; padding:10px 12px; cursor:pointer; background: {bg_prioridad}; border-left:4px solid {color_prioridad};'>
+                            <span style='width:10px; height:24px; display:inline-block; background:{color_prioridad}; border-radius:3px;'></span>
+                            <strong style="color: #1E293B;">📌 {i}. {item.get('titulo', 'Acción')}</strong>
+                            <span style='margin-left:auto; color:#64748B; font-size:0.9rem;'>Prioridad: {prioridad}</span>
+                          </summary>
+                          <div style='padding:12px; background:{bg_prioridad}; color:#475569;'>
+                            <p style='margin:0 0 8px 0;'><strong>Descripción:</strong> {descripcion}</p>
+                            <p style='margin:0 0 0 0;'><strong>Prioridad:</strong> {prioridad}</p>
+                            {f"<p style='margin-top:8px;'><strong>Recursos sugeridos:</strong> {recursos}</p>" if recursos else ''}
+                          </div>
+                        </details>
+                        """
+                        st.markdown(html, unsafe_allow_html=True)
                 
                 # Fortalezas y debilidades
                 if 'fortalezas' in data or 'debilidades' in data:
@@ -5254,28 +5276,13 @@ def pagina_analisis_equipos(datos):
                         st.markdown("#### 📝 Plan de Acción del Equipo")
                         plan_accion = coaching_ia.get('plan_accion_equipo', [])
                         
-                        for accion in plan_accion:
+                        for i, accion in enumerate(plan_accion, 1):
                             prioridad = accion.get('prioridad', 0)
                             color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
-                            # Color de fondo suave según prioridad
                             bg_prioridad = '#FFF1F0' if prioridad == 1 else '#FFFBEB' if prioridad == 2 else '#EFF6FF'
                             
-                            st.markdown(f"""
-                            <div style='background: {bg_prioridad}; padding: 15px; border-radius: 10px; margin: 10px 0; 
-                                        border-left: 5px solid {color_prioridad}; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'>
-                                <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;'>
-                                    <span style='background: {color_prioridad}; color: white; padding: 3px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;'>
-                                        Prioridad {prioridad}
-                                    </span>
-                                    <span style='color: #64748B; font-size: 0.85rem;'>📅 {accion.get('plazo', 'N/A')}</span>
-                                </div>
-                                <p style='margin: 0 0 8px 0; color: #1E293B; font-weight: 600;'>{accion.get('accion', '')}</p>
-                                <p style='margin: 0; color: #475569; font-size: 0.9rem;'>
-                                    <strong>Responsable:</strong> {accion.get('responsable', 'N/A')} | 
-                                    <strong>Indicador:</strong> {accion.get('indicador_exito', 'N/A')}
-                                </p>
-                            </div>
-                            """, unsafe_allow_html=True)
+                            # Usar HTML nativo <details> para un colapso claro y accesible
+                            st.markdown(f"""<details style='background: {bg_prioridad}; padding: 0; border-radius: 10px; margin: 10px 0; border-left: 5px solid {color_prioridad}; box-shadow: 0 2px 8px rgba(0,0,0,0.06);'><summary style='list-style: none; cursor: pointer; padding: 12px 15px; display:flex; justify-content:space-between; align-items:center;'><div style='display:flex; gap:12px; align-items:center;'><span style='background:{color_prioridad}; color:white; padding:4px 10px; border-radius:12px; font-weight:700;'>Prioridad {prioridad}</span><strong style='color:#0F172A; font-size:0.95rem;'>{accion.get('accion', '')}</strong></div><span style='color:#64748B; font-size:0.85rem;'>📅 {accion.get('plazo', 'N/A')}</span></summary><div style='padding: 12px 15px 16px 15px; color: #475569; border-top: 1px solid rgba(0,0,0,0.03);'><p style='margin:0 0 6px 0;'><strong>Responsable:</strong> {accion.get('responsable', 'N/A')}</p><p style='margin:0 0 6px 0;'><strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}</p><p style='margin:0;'><strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}</p></div></details>""", unsafe_allow_html=True)
                         
                         # Capacitaciones Recomendadas
                         capacitaciones = coaching_ia.get('capacitaciones_recomendadas', [])
@@ -9128,22 +9135,35 @@ def pagina_resumen_corporativo(datos):
                                 color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
                                 bg_prioridad = '#FFF1F0' if prioridad == 1 else '#FFFBEB' if prioridad == 2 else '#EFF6FF'
                                 
-                                with st.expander(f"**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})"):
-                                    # Mostrar contenido dentro de un cuadro con fondo de prioridad
-                                    st.markdown(f"""
-                                    <div style='background: {bg_prioridad}; padding: 12px; border-radius: 8px; border-left: 4px solid {color_prioridad}; box-shadow: 0 1px 6px rgba(0,0,0,0.05);'>
-                                        <div style='display:flex; gap:20px; margin-bottom:8px;'>
-                                            <div style='flex:1;'>
-                                                <strong>Responsable:</strong> {accion.get('responsable', 'N/A')}<br>
-                                                <strong>Plazo:</strong> {accion.get('plazo', 'N/A')}
-                                            </div>
-                                            <div style='flex:1;'>
-                                                <strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}<br>
-                                                <strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}
-                                            </div>
-                                        </div>
+                                # Reemplazar expander por un bloque <details> con estilo para mostrar barra coloreada y contenido plegable
+                            try:
+                                pnum = int(prioridad)
+                            except Exception:
+                                pnum = 2
+                            color_prioridad = '#E74C3C' if pnum == 1 else '#F39C12' if pnum == 2 else '#3B82F6'
+                            bg_prioridad = '#FFF1F0' if pnum == 1 else '#FFFBEB' if pnum == 2 else '#EFF6FF'
+
+                            html = f"""
+                            <details style='border-radius:8px; overflow:hidden; margin: 8px 0; border: 1px solid rgba(0,0,0,0.04);'>
+                              <summary style='list-style:none; display:flex; align-items:center; gap:12px; padding:10px 12px; cursor:pointer; background: {bg_prioridad}; border-left:4px solid {color_prioridad};'>
+                                <span style='width:10px; height:24px; display:inline-block; background:{color_prioridad}; border-radius:3px;'></span>
+                                <strong style="color: #1E293B;">**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})</strong>
+                              </summary>
+                              <div style='padding:12px; background:{bg_prioridad}; color:#475569;'>
+                                <div style='display:flex; gap:20px; margin-bottom:8px;'>
+                                    <div style='flex:1;'>
+                                        <strong>Responsable:</strong> {accion.get('responsable', 'N/A')}<br>
+                                        <strong>Plazo:</strong> {accion.get('plazo', 'N/A')}
                                     </div>
-                                    """, unsafe_allow_html=True)
+                                    <div style='flex:1;'>
+                                        <strong>Indicador de Éxito:</strong> {accion.get('indicador_exito', 'N/A')}<br>
+                                        <strong>Recursos Necesarios:</strong> {accion.get('recursos_necesarios', 'N/A')}
+                                    </div>
+                                </div>
+                              </div>
+                            </details>
+                            """
+                            st.markdown(html.strip(), unsafe_allow_html=True)
                         else:
                             st.info("No hay plan de acción registrado para este equipo.")
                     
@@ -9318,12 +9338,7 @@ def main():
             datos = _DATOS_PRELOAD
         else:
             # Si la pre-carga está en curso, mostrar un mensaje agradable y esperar brevemente
-            st.markdown("""
-            <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #3B82F6;'>
-                <strong>⏳ Cargando datos en segundo plano...</strong>
-                <p style='margin:6px 0 0 0; color:#475569;'>Estamos preparando tu dashboard. Esto no demora más de unos segundos.</p>
-            </div>
-            """, unsafe_allow_html=True)
+            st.markdown("""<div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #3B82F6;'><strong>⏳ Cargando datos en segundo plano...</strong><p style='margin:6px 0 0 0; color:#475569;'>Estamos preparando tu dashboard. Esto no demora más de unos segundos.</p></div>""", unsafe_allow_html=True)
             import time
             while _DATOS_LOADING:
                 time.sleep(0.1)
