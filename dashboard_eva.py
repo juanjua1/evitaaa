@@ -9167,91 +9167,17 @@ def pagina_resumen_corporativo(datos):
             
             st.markdown("---")
             
-            # Coaching IA del vendedor
-            coaching_ia = vendedor_data.get('coaching_ia', {})
+            # Análisis de Coaching del vendedor (texto)
+            analisis_coaching = vendedor_data.get('analisis_coaching', '')
             
-            if coaching_ia:
-                # Diagnóstico
-                diagnostico = coaching_ia.get('diagnostico', {})
-                if diagnostico:
-                    st.markdown("#### 🔍 Diagnóstico del Vendedor")
-                    
-                    col_d1, col_d2, col_d3, col_d4 = st.columns(4)
-                    with col_d1:
-                        nivel = diagnostico.get('nivel_rendimiento', 'N/A')
-                        st.metric("📊 Nivel", nivel)
-                    with col_d2:
-                        puntaje = diagnostico.get('puntaje_promedio', 0)
-                        st.metric("⭐ Puntaje", f"{puntaje:.1f}")
-                    with col_d3:
-                        posicion = diagnostico.get('posicion_equipo', 'N/A')
-                        st.metric("🏆 Posición", posicion)
-                    with col_d4:
-                        tendencia = diagnostico.get('tendencia', 'N/A')
-                        st.metric("📈 Tendencia", tendencia)
+            if analisis_coaching:
+                st.markdown("#### 📋 Análisis y Plan de Acción")
                 
-                # Resumen ejecutivo
-                resumen = coaching_ia.get('resumen_ejecutivo', '')
-                if resumen:
-                    st.markdown("#### 📋 Resumen Ejecutivo")
-                    st.markdown(f"""
-                    <div style='background: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid #3B82F6;'>
-                        <p style='margin: 0; color: #1E293B; line-height: 1.6;'>{resumen}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                
-                st.markdown("---")
-                
-                # Fortalezas y Áreas de Mejora
-                col_fm1, col_fm2 = st.columns(2)
-                
-                with col_fm1:
-                    st.markdown("#### 💪 Fortalezas Principales")
-                    fortalezas = coaching_ia.get('fortalezas', [])
-                    if fortalezas:
-                        for fort in fortalezas[:3]:  # Top 3
-                            st.markdown(f"""
-                            <div style='background: #ECFDF5; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #10B981;'>
-                                <strong style='color: #065F46;'>{fort.get('area', 'N/A')}</strong>
-                                <p style='margin: 5px 0 0 0; color: #047857; font-size: 0.85rem;'>{fort.get('evidencia', '')}</p>
-                            </div>
-                            """, unsafe_allow_html=True)
-                    else:
-                        st.info("No hay fortalezas destacadas registradas.")
-                
-                with col_fm2:
-                    st.markdown("#### 🎯 Áreas de Mejora Prioritarias")
-                    mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
-                    if mejoras:
-                        for mejora in mejoras[:3]:  # Top 3
-                            st.markdown(f"""
-                            <div style='background: #FEF3C7; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #F59E0B;'>
-                                <strong style='color: #92400E;'>{mejora.get('area', 'N/A')}</strong>
-                                <p style='margin: 5px 0 0 0; color: #B45309; font-size: 0.85rem;'>{mejora.get('situacion_actual', '')}</p>
-                            </div>
-                            """, unsafe_allow_html=True)
-                    else:
-                        st.info("No hay áreas de mejora registradas.")
-                
-                st.markdown("---")
-                
-                # Plan de Acción del Vendedor
-                st.markdown("#### 📝 Plan de Acción Personal")
-                plan_accion = coaching_ia.get('plan_accion', [])
-                
-                if plan_accion:
-                    for i, accion in enumerate(plan_accion, 1):
-                        prioridad = accion.get('prioridad', 0)
-                        
-                        with st.expander(f"**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})"):
-                            col_a1, col_a2 = st.columns(2)
-                            with col_a1:
-                                st.markdown(f"**Plazo:** {accion.get('plazo', 'N/A')}")
-                            with col_a2:
-                                st.markdown(f"**Indicador de Éxito:** {accion.get('indicador_exito', 'N/A')}")
-                            st.markdown(f"**Recursos Necesarios:** {accion.get('recursos_necesarios', 'N/A')}")
-                else:
-                    st.info("No hay plan de acción registrado para este vendedor.")
+                # Mostrar el análisis completo en un expander
+                with st.expander("**Ver Análisis Completo de Coaching**", expanded=True):
+                    st.markdown(analisis_coaching)
+            else:
+                st.info("No hay análisis de coaching disponible para este vendedor.")
 
 
 def main():
