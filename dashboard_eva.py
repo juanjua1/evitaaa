@@ -600,6 +600,20 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
 # Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Mapeo de nombres de criterios para gráficos
+CRITERIOS_NOMBRES = {
+    'saludo_presentacion': 'Saludo',
+    'identificacion_cliente': 'Identificación',
+    'deteccion_necesidades': 'Necesidades',
+    'oferta_productos': 'Oferta',
+    'manejo_objeciones': 'Objeciones',
+    'cierre': 'Cierre',
+    'despedida': 'Despedida',
+    'proactividad': 'Proactividad',
+    'empatia': 'Empatía',
+    'resolucion_problemas': 'Resolución'
+}
+
 # =============================================================================
 # SISTEMA DE AUTENTICACIÓN Y ROLES
 # =============================================================================
@@ -8781,6 +8795,18 @@ def pagina_resumen_corporativo(datos):
         st.warning("⚠️ Esta sección está disponible solo para supervisores y administradores.")
         return
     
+    # Función auxiliar para normalizar nombres de archivo
+    def normalizar_nombre_archivo(nombre):
+        """Normaliza el nombre del equipo para buscar el archivo de coaching"""
+        import unicodedata
+        # Eliminar acentos
+        nombre_sin_acentos = ''.join(
+            c for c in unicodedata.normalize('NFD', nombre)
+            if unicodedata.category(c) != 'Mn'
+        )
+        # Reemplazar espacios y convertir a mayúsculas
+        return nombre_sin_acentos.replace(" ", "_").upper()
+    
     # Cargar datos necesarios
     listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
     coaching_data = datos.get('coaching', {})
@@ -8829,7 +8855,7 @@ def pagina_resumen_corporativo(datos):
         
         if equipo_seleccionado:
             # Normalizar nombre del equipo para el archivo
-            nombre_archivo = equipo_seleccionado.replace(" ", "_").upper()
+            nombre_archivo = normalizar_nombre_archivo(equipo_seleccionado)
             ruta_coaching = f"reportes/coaching_equipos/coaching_{nombre_archivo}.json"
             
             if os.path.exists(ruta_coaching):
@@ -8887,21 +8913,8 @@ def pagina_resumen_corporativo(datos):
                         with col_g1:
                             st.markdown("#### 📊 Criterios de Evaluación (Promedio)")
                             
-                            # Preparar datos para gráfico de barras
-                            criterios_nombres = {
-                                'saludo_presentacion': 'Saludo',
-                                'identificacion_cliente': 'Identificación',
-                                'deteccion_necesidades': 'Necesidades',
-                                'oferta_productos': 'Oferta',
-                                'manejo_objeciones': 'Objeciones',
-                                'cierre': 'Cierre',
-                                'despedida': 'Despedida',
-                                'proactividad': 'Proactividad',
-                                'empatia': 'Empatía',
-                                'resolucion_problemas': 'Resolución'
-                            }
-                            
-                            nombres = [criterios_nombres.get(k, k) for k in criterios.keys()]
+                            # Preparar datos para gráfico de barras usando constante global
+                            nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
                             valores = list(criterios.values())
                             
                             fig_bar = px.bar(
@@ -9050,9 +9063,18 @@ def pagina_resumen_corporativo(datos):
         if permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
             equipo_supervisor = permisos['equipos_permitidos'][0]
             vendedores_equipo = equipos_vendedores.get(equipo_supervisor, [])
-            # Filtrar vendedores del equipo del supervisor
-            vendedores_disponibles = [v for v in vendedores_disponibles 
-                                     if any(ve.lower() in v.lower() for ve in vendedores_equipo)]
+            # Filtrar vendedores del equipo del supervisor - usar matching más preciso
+            vendedores_filtrados = []
+            for v in vendedores_disponibles:
+                v_lower = v.lower().strip()
+                # Buscar coincidencia exacta o por nombre completo
+                for ve in vendedores_equipo:
+                    ve_lower = ve.lower().strip()
+                    # Coincidencia si el nombre del vendedor está en la lista del equipo
+                    if v_lower == ve_lower or ve_lower in v_lower:
+                        vendedores_filtrados.append(v)
+                        break
+            vendedores_disponibles = vendedores_filtrados
         
         if not vendedores_disponibles:
             st.warning("⚠️ No se encontraron vendedores con datos de coaching.")
@@ -9111,21 +9133,8 @@ def pagina_resumen_corporativo(datos):
                 with col_g1:
                     st.markdown("#### 📊 Criterios de Evaluación")
                     
-                    # Gráfico de barras
-                    criterios_nombres = {
-                        'saludo_presentacion': 'Saludo',
-                        'identificacion_cliente': 'Identificación',
-                        'deteccion_necesidades': 'Necesidades',
-                        'oferta_productos': 'Oferta',
-                        'manejo_objeciones': 'Objeciones',
-                        'cierre': 'Cierre',
-                        'despedida': 'Despedida',
-                        'proactividad': 'Proactividad',
-                        'empatia': 'Empatía',
-                        'resolucion_problemas': 'Resolución'
-                    }
-                    
-                    nombres = [criterios_nombres.get(k, k) for k in criterios.keys()]
+                    # Gráfico de barras usando constante global
+                    nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
                     valores = list(criterios.values())
                     
                     fig_bar = px.bar(
