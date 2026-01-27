@@ -604,9 +604,74 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 _DATOS_PRELOAD = None
 _DATOS_LOADING = False
 
+def cargar_datos_io():
+    """Versión pura de IO de carga de datos sin usar Streamlit ni decoradores.
+    Usa la misma lógica que carga_datos() pero sin interacciones con Streamlit.
+    """
+    datos = {}
+
+    # Cargar transcripciones procesadas
+    carpeta = os.path.join(BASE_DIR, "total_transcripciones/procesados")
+    if os.path.exists(carpeta):
+        transcripciones = []
+        for archivo in os.listdir(carpeta):
+            if archivo.endswith('.json'):
+                try:
+                    with open(os.path.join(carpeta, archivo), 'r', encoding='utf-8') as f:
+                        transcripciones.append(json.load(f))
+                except Exception:
+                    continue
+        datos['transcripciones'] = transcripciones
+
+    # Cargar resumen de cierres
+    ruta_cierres = os.path.join(BASE_DIR, 'reportes/cierres_comerciales/resumen_cierres.json')
+    if os.path.exists(ruta_cierres):
+        try:
+            with open(ruta_cierres, 'r', encoding='utf-8') as f:
+                datos['cierres'] = json.load(f)
+        except Exception:
+            datos['cierres'] = None
+
+    # Cargar CSV de cierres
+    ruta = os.path.join(BASE_DIR, 'reportes/cierres_comerciales/cierres_comerciales.csv')
+    if os.path.exists(ruta):
+        try:
+            datos['cierres_df'] = pd.read_csv(ruta, sep=';')
+        except Exception:
+            datos['cierres_df'] = None
+
+    # Cargar resumen de planes
+    ruta = os.path.join(BASE_DIR, 'reportes/planes/resumen_planes.json')
+    if os.path.exists(ruta):
+        try:
+            with open(ruta, 'r', encoding='utf-8') as f:
+                datos['planes_resumen'] = json.load(f)
+        except Exception:
+            datos['planes_resumen'] = None
+
+    # Cargar para_gemini CSV
+    ruta = os.path.join(BASE_DIR, 'reportes/para_gemini/datos_consolidados_para_gemini.csv')
+    if os.path.exists(ruta):
+        try:
+            datos['para_gemini'] = pd.read_csv(ruta)
+        except Exception:
+            datos['para_gemini'] = None
+
+    # Cargar evaluaciones
+    ruta = os.path.join(BASE_DIR, 'reportes/evaluaciones_gemini.csv')
+    if os.path.exists(ruta):
+        try:
+            datos['evaluaciones'] = pd.read_csv(ruta)
+        except Exception:
+            datos['evaluaciones'] = None
+
+    return datos
+
+
 def iniciar_preload_datos():
     """Inicia la carga de datos en un thread de fondo para no bloquear la UI.
     Guarda el resultado en la variable global _DATOS_PRELOAD.
+    Usa la versión IO para evitar que Streamlit muestre mensajes internos como "Running cargar_datos()".
     """
     global _DATOS_PRELOAD, _DATOS_LOADING
     import threading
@@ -616,8 +681,7 @@ def iniciar_preload_datos():
         global _DATOS_PRELOAD, _DATOS_LOADING
         _DATOS_LOADING = True
         try:
-            # Llamamos a la función cacheada; se ejecutará en background y no mostrará la notificación "Running cargar_datos()" en la UI
-            _DATOS_PRELOAD = cargar_datos()
+            _DATOS_PRELOAD = cargar_datos_io()
         finally:
             _DATOS_LOADING = False
 
@@ -3338,8 +3402,8 @@ def pagina_coaching_vendedores(datos):
                 for i, (_, row) in enumerate(top_mejora.iterrows(), 1):
                     color = "#EF4444" if row['vs Equipo'] < -10 else "#F59E0B" if row['vs Equipo'] < 0 else "#10B981"
                     st.markdown(f"""
-                    <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
-                                border-left: 4px solid {color}; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
+                    <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 5px 0;
+                                border-left: 4px solid {color}; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'>
                         <strong style='color: #1E293B;'>{i}. {row['Agente']}</strong><br>
                         <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Críticas: {row['Tasa_Criticas']:.1f}% | Eval: {row['Evaluaciones']}</small>
                     </div>
@@ -3353,8 +3417,8 @@ def pagina_coaching_vendedores(datos):
                 for i, (_, row) in enumerate(top_performers.iterrows(), 1):
                     medal = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i}."
                     st.markdown(f"""
-                    <div style='background: #FFFFFF; padding: 12px; border-radius: 8px; margin: 5px 0;
-                                border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.08);'>
+                    <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 5px 0;
+                                border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'>
                         <strong style='color: #1E293B;'>{medal} {row['Agente']}</strong><br>
                         <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Conv: {row['Conversión']:.1f}% | Excelentes: {row['Excelentes']}</small>
                     </div>
@@ -5094,8 +5158,8 @@ def pagina_analisis_equipos(datos):
             if recomendaciones:
                 for rec in recomendaciones:
                     st.markdown(f"""
-                    <div style='background: #FFFFFF; padding: 15px; border-radius: 10px; margin: 10px 0; 
-                                border-left: 4px solid {rec['color']}; box-shadow: 0 2px 5px rgba(0,0,0,0.1);'>
+                    <div style='background: #F8FAFC; padding: 15px; border-radius: 10px; margin: 10px 0; 
+                                border-left: 4px solid {rec['color']}; box-shadow: 0 2px 5px rgba(0,0,0,0.06);'>
                         <div style='display: flex; justify-content: space-between; align-items: center;'>
                             <strong style='color: #1E293B;'>{rec['area']}</strong>
                             <span style='background: {rec['color']}; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8rem;'>
@@ -9253,11 +9317,16 @@ def main():
         if _DATOS_PRELOAD is not None:
             datos = _DATOS_PRELOAD
         else:
-            # Si la pre-carga está en curso, esperar brevemente con un spinner y luego usar el resultado
-            with st.spinner('Cargando datos en segundo plano...'):
-                import time
-                while _DATOS_LOADING:
-                    time.sleep(0.1)
+            # Si la pre-carga está en curso, mostrar un mensaje agradable y esperar brevemente
+            st.markdown("""
+            <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #3B82F6;'>
+                <strong>⏳ Cargando datos en segundo plano...</strong>
+                <p style='margin:6px 0 0 0; color:#475569;'>Estamos preparando tu dashboard. Esto no demora más de unos segundos.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            import time
+            while _DATOS_LOADING:
+                time.sleep(0.1)
             datos = _DATOS_PRELOAD or cargar_datos()
     else:
         # No hubo pre-carga: cargar de forma síncrona (comportamiento por defecto)
