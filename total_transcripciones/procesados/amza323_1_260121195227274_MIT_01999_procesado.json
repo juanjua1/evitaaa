@@ -1,0 +1,126 @@
+{
+  "archivo": "amza323_1_260121195227274_MIT_01999.wav",
+  "duracion_segundos": 62.13,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 19.57,
+    "Hablante A": 25.55
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.57,
+      "fin": 13.96,
+      "duracion": 8.4,
+      "texto": "Bienvenido al buzón de voz claro de Silvia.",
+      "confianza": 0.717,
+      "texto_original": "Bienvenido al buzón de voz claro de Silvia.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.98,
+      "fin": 16.37,
+      "duracion": 2.38,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.728,
+      "texto_original": "Después del tono, deja tu mensaje.",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.87,
+      "fin": 26.55,
+      "duracion": 8.68,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.808,
+      "texto_original": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "rol": "CLIENTE"
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.95,
+      "fin": 42.74,
+      "duracion": 8.79,
+      "texto": "¿Por qué te como cruzado ahora?",
+      "confianza": 0.468,
+      "texto_original": "¿Por qué te como cruzado ahora?",
+      "rol": "AGENTE"
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.27,
+      "fin": 62.13,
+      "duracion": 16.87,
+      "texto": "Como cruzado ahora.",
+      "confianza": 0.574,
+      "texto_original": "Como cruzado ahora.",
+      "rol": "CLIENTE"
+    }
+  ],
+  "transcripcion_completa": "Bienvenido al buzón de voz claro de Silvia. Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. ¿Por qué te como cruzado ahora? Como cruzado ahora.",
+  "calidad": {
+    "confianza_promedio": 0.659,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 3.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-01-25T19:24:57.625563",
+    "version": "5.0_ecapa"
+  },
+  "_correccion_diarizacion": {
+    "fecha_correccion": "2026-01-26T06:35:22.358420",
+    "agente_identificado": "Hablante B",
+    "scores_hablantes": {
+      "Hablante B": 0.0,
+      "Hablante A": 0.0
+    }
+  },
+  "info_llamada": {
+    "id_interaccion": "260121195227274_MIT_01999",
+    "fecha_inicio": "21/1/2026 19:52:27",
+    "agente": {
+      "nombre": "MZA 323",
+      "login": "mza323",
+      "equipo": "1"
+    },
+    "tiempos": {
+      "duracion_total": 63,
+      "talking_time": 60,
+      "hold": 0,
+      "acw": 2,
+      "en_cola": 0
+    },
+    "resultado": {
+      "origen_corte": "Agente",
+      "causa_terminacion": "Se contacta con el operador",
+      "tipificacion": "Cae Muda o Cortada"
+    },
+    "campana": {
+      "empresa": "AZO",
+      "campana": "MVS_MZA_OUT",
+      "lote": "nan"
+    },
+    "cliente": {
+      "telefono": "90221155564440.0",
+      "nombre": "nan"
+    },
+    "sentido": "Saliente"
+  },
+  "_procesamiento": {
+    "fecha": "2026-01-26T06:35:22.358467",
+    "version": "1.0",
+    "archivo_original": "amza323_1_260121195227274_MIT_01999_transcripcion.json",
+    "id_interaccion": "260121195227274_MIT_01999",
+    "tiene_metadatos_llamada": true
+  }
+}
