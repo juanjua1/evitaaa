@@ -148,10 +148,14 @@ def crear_mapeo_codigo_a_equipo(datos):
 
 
 def normalizar_codigo_agente(agente):
-    """Normaliza código de agente para comparación (MZA 1 -> mza1)"""
+    """Normaliza código de agente para comparación (MZA 1 -> mza1, amza46 -> mza46)"""
     if pd.isna(agente) or agente is None:
         return ''
-    return str(agente).lower().replace(' ', '').replace('_', '').replace('\t', '')
+    codigo = str(agente).lower().replace(' ', '').replace('_', '').replace('\t', '')
+    # Quitar prefijo 'a' si existe (ej: amza46 -> mza46)
+    if codigo.startswith('amza'):
+        codigo = codigo[1:]  # Quitar la 'a' inicial
+    return codigo
 
 
 def recopilar_metricas_equipo(equipo, vendedores_equipo, datos, listado_vendedores, codigo_a_equipo=None):
