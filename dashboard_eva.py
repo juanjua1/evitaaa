@@ -600,6 +600,20 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
 # Directorio base del script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Mapeo de nombres de criterios para gráficos
+CRITERIOS_NOMBRES = {
+    'saludo_presentacion': 'Saludo',
+    'identificacion_cliente': 'Identificación',
+    'deteccion_necesidades': 'Necesidades',
+    'oferta_productos': 'Oferta',
+    'manejo_objeciones': 'Objeciones',
+    'cierre': 'Cierre',
+    'despedida': 'Despedida',
+    'proactividad': 'Proactividad',
+    'empatia': 'Empatía',
+    'resolucion_problemas': 'Resolución'
+}
+
 # =============================================================================
 # SISTEMA DE AUTENTICACIÓN Y ROLES
 # =============================================================================
@@ -8760,6 +8774,421 @@ def pagina_metricas_calidad():
                 st.dataframe(df_ll_display, use_container_width=True, height=400)
 
 
+def pagina_resumen_corporativo(datos):
+    """Página de Resumen Corporativo - Vista consolidada de equipos y vendedores"""
+    st.markdown('<div class="main-header">📊 COMMAND · Resumen Corporativo</div>', unsafe_allow_html=True)
+    
+    # Subtítulo
+    st.markdown("""
+    <div style='background: #F0F9FF; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #0EA5E9;'>
+        <p style='margin: 0; color: #0C4A6E; font-size: 0.95rem;'>
+            <strong>Vista Consolidada de Rendimiento</strong> · Resumen ejecutivo de equipos y vendedores con sus planes de acción
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Obtener permisos del usuario actual
+    permisos = obtener_permisos_usuario()
+    
+    # Vendedores no tienen acceso a esta página
+    if permisos['rol'] == 'vendedor':
+        st.warning("⚠️ Esta sección está disponible solo para supervisores y administradores.")
+        return
+    
+    # Función auxiliar para normalizar nombres de archivo
+    def normalizar_nombre_archivo(nombre):
+        """Normaliza el nombre del equipo para buscar el archivo de coaching"""
+        import unicodedata
+        # Eliminar acentos
+        nombre_sin_acentos = ''.join(
+            c for c in unicodedata.normalize('NFD', nombre)
+            if unicodedata.category(c) != 'Mn'
+        )
+        # Reemplazar espacios y convertir a mayúsculas
+        return nombre_sin_acentos.replace(" ", "_").upper()
+    
+    # Cargar datos necesarios
+    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+    coaching_data = datos.get('coaching', {})
+    
+    # Selector de tipo de resumen
+    st.markdown("### 🎯 Selecciona el Tipo de Resumen")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        tipo_resumen = st.radio(
+            "Tipo de Análisis:",
+            ["👥 Resumen de Equipo", "👤 Resumen de Vendedor"],
+            key="tipo_resumen_corporativo"
+        )
+    
+    st.markdown("---")
+    
+    # =========================================================================
+    # RESUMEN DE EQUIPO
+    # =========================================================================
+    if tipo_resumen == "👥 Resumen de Equipo":
+        st.markdown("### 👥 Resumen de Equipo")
+        
+        # Obtener lista de equipos disponibles
+        equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+        equipos_disponibles = sorted(equipos_disponibles)
+        
+        # Restricción por rol
+        if permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+            equipo_supervisor = permisos['equipos_permitidos'][0]
+            if equipo_supervisor in equipos_disponibles:
+                equipos_disponibles = [equipo_supervisor]
+            else:
+                st.warning(f"⚠️ No se encontraron datos para el equipo: {equipo_supervisor}")
+                return
+        
+        if not equipos_disponibles:
+            st.warning("⚠️ No se encontraron equipos configurados.")
+            return
+        
+        equipo_seleccionado = st.selectbox(
+            "Selecciona un Equipo:",
+            equipos_disponibles,
+            key="equipo_resumen_corp"
+        )
+        
+        if equipo_seleccionado:
+            # Normalizar nombre del equipo para el archivo
+            nombre_archivo = normalizar_nombre_archivo(equipo_seleccionado)
+            ruta_coaching = f"reportes/coaching_equipos/coaching_{nombre_archivo}.json"
+            
+            if os.path.exists(ruta_coaching):
+                try:
+                    with open(ruta_coaching, 'r', encoding='utf-8') as f:
+                        coaching_equipo_data = json.load(f)
+                    
+                    # Header del equipo
+                    vendedores_equipo = equipos_vendedores.get(equipo_seleccionado, [])
+                    st.markdown(f"""
+                    <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                                padding: 20px; border-radius: 15px; margin: 20px 0; color: white;
+                                box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
+                        <h3 style='margin:0; color: #FFFFFF;'>📊 Equipo: {equipo_seleccionado}</h3>
+                        <p style='margin: 10px 0 0 0; color: #E0E7FF;'>
+                            <strong>{len(vendedores_equipo)}</strong> vendedores en este equipo
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    # Métricas principales
+                    metricas = coaching_equipo_data.get('metricas', {})
+                    coaching_ia = coaching_equipo_data.get('coaching_ia', {})
+                    comparativa = coaching_equipo_data.get('comparativa', {})
+                    
+                    # Métricas clave en columnas
+                    st.markdown("#### 📈 Indicadores Principales")
+                    col1, col2, col3, col4 = st.columns(4)
+                    
+                    with col1:
+                        puntaje_ia = comparativa.get('puntaje_ia', {}).get('equipo', 0)
+                        st.metric("⭐ Puntaje IA", f"{puntaje_ia:.1f}")
+                    
+                    with col2:
+                        conversion = comparativa.get('conversion', {}).get('equipo', 0)
+                        st.metric("💰 Conversión", f"{conversion:.1f}%")
+                    
+                    with col3:
+                        fibra = comparativa.get('fibra', {}).get('equipo', 0)
+                        st.metric("📡 Fibra", f"{fibra:.1f}%")
+                    
+                    with col4:
+                        ranking = comparativa.get('puntaje_ia', {}).get('ranking', 'N/A')
+                        st.metric("🏆 Ranking", ranking)
+                    
+                    st.markdown("---")
+                    
+                    # Gráficos de criterios de evaluación
+                    evaluaciones = metricas.get('evaluaciones', {})
+                    criterios = evaluaciones.get('criterios', {})
+                    
+                    if criterios:
+                        col_g1, col_g2 = st.columns(2)
+                        
+                        with col_g1:
+                            st.markdown("#### 📊 Criterios de Evaluación (Promedio)")
+                            
+                            # Preparar datos para gráfico de barras usando constante global
+                            nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
+                            valores = list(criterios.values())
+                            
+                            fig_bar = px.bar(
+                                x=nombres,
+                                y=valores,
+                                labels={'x': 'Criterio', 'y': 'Puntaje'},
+                                color=valores,
+                                color_continuous_scale='Blues'
+                            )
+                            fig_bar.update_layout(
+                                height=400,
+                                showlegend=False,
+                                paper_bgcolor='#FFFFFF',
+                                plot_bgcolor='#FAFBFC'
+                            )
+                            fig_bar.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+                            st.plotly_chart(fig_bar, use_container_width=True)
+                        
+                        with col_g2:
+                            st.markdown("#### 🎯 Distribución de Fortalezas y Mejoras")
+                            
+                            # Gráfico de torta con top 5 fortalezas y áreas de mejora
+                            fortalezas_freq = evaluaciones.get('fortalezas_frecuentes', {})
+                            mejoras_freq = evaluaciones.get('areas_mejora_frecuentes', {})
+                            
+                            if fortalezas_freq:
+                                # Top 5 fortalezas
+                                top_fortalezas = dict(sorted(fortalezas_freq.items(), key=lambda x: x[1], reverse=True)[:5])
+                                
+                                fig_pie = px.pie(
+                                    values=list(top_fortalezas.values()),
+                                    names=list(top_fortalezas.keys()),
+                                    title="Top 5 Fortalezas Identificadas",
+                                    color_discrete_sequence=px.colors.sequential.Greens_r
+                                )
+                                fig_pie.update_layout(height=400)
+                                st.plotly_chart(fig_pie, use_container_width=True)
+                    
+                    st.markdown("---")
+                    
+                    # Diagnóstico del equipo
+                    if coaching_ia:
+                        diagnostico = coaching_ia.get('diagnostico', {})
+                        if diagnostico:
+                            st.markdown("#### 🔍 Diagnóstico del Equipo")
+                            
+                            col_d1, col_d2, col_d3, col_d4 = st.columns(4)
+                            with col_d1:
+                                nivel = diagnostico.get('nivel_rendimiento', 'N/A')
+                                st.metric("📊 Nivel", nivel)
+                            with col_d2:
+                                puntaje = diagnostico.get('puntaje_equipo', 0)
+                                st.metric("⭐ Puntaje", f"{puntaje:.1f}")
+                            with col_d3:
+                                posicion = diagnostico.get('posicion_ranking', 'N/A')
+                                st.metric("🏆 Posición", posicion)
+                            with col_d4:
+                                tendencia = diagnostico.get('tendencia', 'N/A')
+                                st.metric("📈 Tendencia", tendencia)
+                        
+                        # Resumen ejecutivo
+                        resumen = coaching_ia.get('resumen_ejecutivo', '')
+                        if resumen:
+                            st.markdown("#### 📋 Resumen Ejecutivo")
+                            st.markdown(f"""
+                            <div style='background: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid #3B82F6;'>
+                                <p style='margin: 0; color: #1E293B; line-height: 1.6;'>{resumen}</p>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        
+                        st.markdown("---")
+                        
+                        # Fortalezas y Áreas de Mejora
+                        col_fm1, col_fm2 = st.columns(2)
+                        
+                        with col_fm1:
+                            st.markdown("#### 💪 Fortalezas del Equipo")
+                            fortalezas = coaching_ia.get('fortalezas_equipo', [])
+                            if fortalezas:
+                                for fort in fortalezas[:3]:  # Top 3
+                                    st.markdown(f"""
+                                    <div style='background: #ECFDF5; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #10B981;'>
+                                        <strong style='color: #065F46;'>{fort.get('area', 'N/A')}</strong>
+                                        <p style='margin: 5px 0 0 0; color: #047857; font-size: 0.85rem;'>{fort.get('evidencia', '')}</p>
+                                    </div>
+                                    """, unsafe_allow_html=True)
+                            else:
+                                st.info("No hay fortalezas destacadas registradas.")
+                        
+                        with col_fm2:
+                            st.markdown("#### 🎯 Áreas de Mejora Prioritarias")
+                            mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
+                            if mejoras:
+                                for mejora in mejoras[:3]:  # Top 3
+                                    st.markdown(f"""
+                                    <div style='background: #FEF3C7; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #F59E0B;'>
+                                        <strong style='color: #92400E;'>{mejora.get('area', 'N/A')}</strong>
+                                        <p style='margin: 5px 0 0 0; color: #B45309; font-size: 0.85rem;'>{mejora.get('situacion_actual', '')}</p>
+                                    </div>
+                                    """, unsafe_allow_html=True)
+                            else:
+                                st.info("No hay áreas de mejora registradas.")
+                        
+                        st.markdown("---")
+                        
+                        # Plan de Acción del Equipo
+                        st.markdown("#### 📝 Plan de Acción del Equipo")
+                        plan_accion = coaching_ia.get('plan_accion_equipo', [])
+                        
+                        if plan_accion:
+                            for i, accion in enumerate(plan_accion, 1):
+                                prioridad = accion.get('prioridad', 0)
+                                color_prioridad = '#E74C3C' if prioridad == 1 else '#F39C12' if prioridad == 2 else '#3B82F6'
+                                
+                                with st.expander(f"**Acción #{i}: {accion.get('accion', 'N/A')}** (Prioridad: {prioridad})"):
+                                    col_a1, col_a2 = st.columns(2)
+                                    with col_a1:
+                                        st.markdown(f"**Responsable:** {accion.get('responsable', 'N/A')}")
+                                        st.markdown(f"**Plazo:** {accion.get('plazo', 'N/A')}")
+                                    with col_a2:
+                                        st.markdown(f"**Indicador de Éxito:** {accion.get('indicador_exito', 'N/A')}")
+                                    st.markdown(f"**Recursos Necesarios:** {accion.get('recursos_necesarios', 'N/A')}")
+                        else:
+                            st.info("No hay plan de acción registrado para este equipo.")
+                    
+                except Exception as e:
+                    st.error(f"Error al cargar datos del equipo: {str(e)}")
+            else:
+                st.warning(f"⚠️ No se encontraron datos de coaching para el equipo: {equipo_seleccionado}")
+    
+    # =========================================================================
+    # RESUMEN DE VENDEDOR
+    # =========================================================================
+    else:
+        st.markdown("### 👤 Resumen de Vendedor")
+        
+        # Verificar si hay datos de coaching
+        if not coaching_data:
+            st.warning("⚠️ No hay datos de coaching disponibles para vendedores.")
+            return
+        
+        # Obtener lista de vendedores
+        vendedores_disponibles = sorted(list(coaching_data.keys()))
+        
+        # Aplicar filtro por permisos
+        if permisos['rol'] == 'supervisor' and permisos['equipos_permitidos']:
+            equipo_supervisor = permisos['equipos_permitidos'][0]
+            vendedores_equipo = equipos_vendedores.get(equipo_supervisor, [])
+            # Filtrar vendedores del equipo del supervisor - usar matching más preciso
+            vendedores_filtrados = []
+            for v in vendedores_disponibles:
+                v_lower = v.lower().strip()
+                # Buscar coincidencia exacta o por nombre completo
+                for ve in vendedores_equipo:
+                    ve_lower = ve.lower().strip()
+                    # Coincidencia si el nombre del vendedor está en la lista del equipo
+                    if v_lower == ve_lower or ve_lower in v_lower:
+                        vendedores_filtrados.append(v)
+                        break
+            vendedores_disponibles = vendedores_filtrados
+        
+        if not vendedores_disponibles:
+            st.warning("⚠️ No se encontraron vendedores con datos de coaching.")
+            return
+        
+        vendedor_seleccionado = st.selectbox(
+            "Selecciona un Vendedor:",
+            vendedores_disponibles,
+            key="vendedor_resumen_corp"
+        )
+        
+        if vendedor_seleccionado and vendedor_seleccionado in coaching_data:
+            vendedor_data = coaching_data[vendedor_seleccionado]
+            
+            # Header del vendedor
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                        padding: 20px; border-radius: 15px; margin: 20px 0; color: white;
+                        box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);'>
+                <h3 style='margin:0; color: #FFFFFF;'>👤 Vendedor: {vendedor_seleccionado}</h3>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Métricas principales del vendedor
+            metricas = vendedor_data.get('metricas', {})
+            comparativa = vendedor_data.get('comparativa', {})
+            
+            st.markdown("#### 📈 Indicadores Principales")
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                puntaje_ia = comparativa.get('puntaje_ia', {}).get('agente', 0)
+                st.metric("⭐ Puntaje IA", f"{puntaje_ia:.1f}")
+            
+            with col2:
+                conversion = comparativa.get('conversion', {}).get('agente', 0)
+                st.metric("💰 Conversión", f"{conversion:.1f}%")
+            
+            with col3:
+                fibra = comparativa.get('fibra', {}).get('agente', 0)
+                st.metric("📡 Fibra", f"{fibra:.1f}%")
+            
+            with col4:
+                evaluaciones = metricas.get('evaluaciones', {})
+                total_eval = evaluaciones.get('total_evaluadas', 0)
+                st.metric("📞 Evaluaciones", total_eval)
+            
+            st.markdown("---")
+            
+            # Gráficos del vendedor
+            criterios = evaluaciones.get('criterios', {})
+            
+            if criterios:
+                col_g1, col_g2 = st.columns(2)
+                
+                with col_g1:
+                    st.markdown("#### 📊 Criterios de Evaluación")
+                    
+                    # Gráfico de barras usando constante global
+                    nombres = [CRITERIOS_NOMBRES.get(k, k) for k in criterios.keys()]
+                    valores = list(criterios.values())
+                    
+                    fig_bar = px.bar(
+                        x=nombres,
+                        y=valores,
+                        labels={'x': 'Criterio', 'y': 'Puntaje'},
+                        color=valores,
+                        color_continuous_scale='Viridis'
+                    )
+                    fig_bar.update_layout(
+                        height=400,
+                        showlegend=False,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC'
+                    )
+                    fig_bar.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+                    st.plotly_chart(fig_bar, use_container_width=True)
+                
+                with col_g2:
+                    st.markdown("#### 🎯 Distribución de Fortalezas")
+                    
+                    # Gráfico de torta
+                    fortalezas_freq = evaluaciones.get('fortalezas_frecuentes', {})
+                    
+                    if fortalezas_freq:
+                        # Top 5 fortalezas
+                        top_fortalezas = dict(sorted(fortalezas_freq.items(), key=lambda x: x[1], reverse=True)[:5])
+                        
+                        fig_pie = px.pie(
+                            values=list(top_fortalezas.values()),
+                            names=list(top_fortalezas.keys()),
+                            title="Top 5 Fortalezas",
+                            color_discrete_sequence=px.colors.sequential.Teal_r
+                        )
+                        fig_pie.update_layout(height=400)
+                        st.plotly_chart(fig_pie, use_container_width=True)
+                    else:
+                        st.info("No hay fortalezas registradas.")
+            
+            st.markdown("---")
+            
+            # Análisis de Coaching del vendedor (texto)
+            analisis_coaching = vendedor_data.get('analisis_coaching', '')
+            
+            if analisis_coaching:
+                st.markdown("#### 📋 Análisis y Plan de Acción")
+                
+                # Mostrar el análisis completo en un expander
+                with st.expander("**Ver Análisis Completo de Coaching**", expanded=True):
+                    st.markdown(analisis_coaching)
+            else:
+                st.info("No hay análisis de coaching disponible para este vendedor.")
+
+
 def main():
     """Función principal del dashboard"""
     
@@ -8835,6 +9264,7 @@ def main():
             "🤖 Evaluaciones del Equipo": "gemini",
             "🎯 Planes de Mejora": "coaching",
             "👥 Análisis de Mi Equipo": "equipos",
+            "📊 Resumen Corporativo": "resumen_corporativo",
             "📊 Métricas de Calidad": "metricas_calidad"
         }
     else:
@@ -8845,6 +9275,7 @@ def main():
             "🤖 Evaluación Automatizada": "gemini",
             "🎯 Planes de Mejora": "coaching",
             "👥 Análisis de Equipos": "equipos",
+            "📊 Resumen Corporativo": "resumen_corporativo",
             "📊 Métricas de Calidad": "metricas_calidad"
         }
         # Agregar Indicadores de Calidad solo para admin/calidad
@@ -8959,6 +9390,8 @@ def main():
         pagina_coaching_vendedores(datos)
     elif paginas[seleccion] == "equipos":
         pagina_analisis_equipos(datos)
+    elif paginas[seleccion] == "resumen_corporativo":
+        pagina_resumen_corporativo(datos)
     elif paginas[seleccion] == "metricas_calidad":
         pagina_metricas_calidad()
     elif paginas[seleccion] == "calidad":
