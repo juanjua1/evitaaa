@@ -466,13 +466,14 @@ El plan de acción debe enfocarse en la ÚLTIMA SEMANA (19-24 Enero), destacando
    - CORRECTO: "¿Qué es lo que más usás del celular?" / "¿Cuántos GB tenés en tu plan?"
 
 3. **CIERRE DE VENTAS**:
-   - NUNCA preguntar "¿te parece bien si procedemos?" 
-   - CORRECTO: Asignar sucursal directamente o buscar domicilio del cliente
-   - REGLA: Nunca preguntar si quiere seguir, DIRECTAMENTE proceder
+   - EVALUAR: Que el cierre se complete (aunque haya interrupciones está bien)
+   - CORRECTO: Asignar sucursal o buscar domicilio del cliente para completar la venta
+   - NO PENALIZAR: Si el cierre no fue fluido o tuvo pausas, lo importante es que se haya completado
 
 4. **DESPEDIDA**:
+   - EVALUAR: Que se despida de forma cordial y profesional
+   - OPCIONAL: Ofrecer acompañamiento durante la portabilidad (no penalizar si no lo hace)
    - INCORRECTO: "Estaré encantado de ayudarte en el futuro"
-   - CORRECTO: Ofrecer acompañamiento SOLO durante la portabilidad
 
 5. **OFERTA DE FIBRA (Proactividad)**:
    - INCORRECTO: "¿Te interesaría conocer nuestros servicios de fibra?"

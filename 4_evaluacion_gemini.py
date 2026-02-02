@@ -191,7 +191,6 @@ CONTEXTO PRE-CLASIFICADO:
 - Score calidad previo: {contexto.get('score_calidad', 0)}/100
 - Planes ofrecidos: {contexto.get('planes_ofrecidos', 'ninguno')}
 - Ofrece fibra: {'Sí' if contexto.get('ofrece_fibra') else 'No'}
-- Menciona promo: {'Sí' if contexto.get('menciona_promo') else 'No'}
 - Objeciones detectadas: {contexto.get('objeciones', 'ninguna')}
 - Sentimiento cliente: {contexto.get('sentimiento', 'neutro')}
 - Tiene queja: {'Sí' if contexto.get('tiene_queja') else 'No'}
@@ -209,11 +208,6 @@ AGENTE: {agente}
 {contexto_str}
 
 ## REGLAS DEL NEGOCIO MOVISTAR (OBLIGATORIAS para evaluar):
-
-### PROMOCIÓN VIGENTE (MUY IMPORTANTE):
-- Durante enero 2026 hay PROMOCIÓN del 80% de descuento
-- Los agentes DEBEN mencionar esta promo: "80% de descuento", "ochenta por ciento"
-- Si no menciona el descuento del 80%, penalizar en PROACTIVIDAD y OFERTA_PRODUCTOS
 
 ### FRASES PROHIBIDAS (restar puntos si las usa):
 - "¿Te parece bien si...?" → NO se pregunta, se procede directamente
@@ -238,7 +232,6 @@ AGENTE: {agente}
 
 4. OFERTA_PRODUCTOS: ¿Ofreció productos de forma directa y adecuada?
    - Evaluar si ofreció planes, fibra, equipos
-   - IMPORTANTE: ¿Mencionó el 80% de descuento de la promo?
    - CORRECTO: Comentar directamente sobre fibra
    - INCORRECTO: Preguntar "¿Te interesaría conocer...?"
 
@@ -246,18 +239,19 @@ AGENTE: {agente}
    - CORRECTO: Rebatir la objeción específica del cliente
    - INCORRECTO: Respuestas genéricas iguales para todos
 
-6. CIERRE: ¿Hizo cierre DIRECTO sin preguntar?
-   - CORRECTO: Asignar sucursal directamente o buscar domicilio
-   - INCORRECTO: Preguntar "¿Te parece bien si procedemos?"
-   - REGLA: Nunca preguntar si quiere seguir, PROCEDER directamente
+6. CIERRE: ¿Completó el proceso de cierre?
+   - EVALUAR: Si el cierre se completó (aunque haya interrupciones del cliente está bien)
+   - CORRECTO: Asignar sucursal o buscar domicilio para completar la venta
+   - NO PENALIZAR: Si el cierre no fue fluido o tuvo pausas, lo importante es que se haya completado
 
 7. DESPEDIDA: ¿Se despidió correctamente?
-   - CORRECTO: Ofrecer acompañamiento durante la portabilidad
+   - EVALUAR: Que se haya despedido de forma cordial y profesional
+   - OPCIONAL: Ofrecer acompañamiento durante la portabilidad (no penalizar si no lo hace)
    - INCORRECTO: "Estaré encantado de ayudarte en el futuro"
 
-8. PROACTIVIDAD: ¿Ofreció fibra, la PROMO del 80% y productos adicionales?
-   - CORRECTO: Mencionar el 80% de descuento, comentar sobre fibra
-   - INCORRECTO: No mencionar la promo, preguntar si le interesa
+8. PROACTIVIDAD: ¿Ofreció fibra y productos adicionales de forma directa?
+   - CORRECTO: Comentar directamente sobre fibra y otros productos
+   - INCORRECTO: Preguntar "¿Te interesaría...?" en lugar de ofrecer directamente
 
 9. EMPATIA: ¿Mostró empatía con el cliente?
 
