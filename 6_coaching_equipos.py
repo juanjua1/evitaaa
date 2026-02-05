@@ -22,10 +22,28 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import google.generativeai as genai
+import numpy as np
 from config import api_key
 
 # Configurar API
 genai.configure(api_key=api_key)
+
+def convertir_tipos_nativos(obj):
+    """Convierte tipos numpy/pandas a tipos nativos de Python para JSON."""
+    if isinstance(obj, dict):
+        return {k: convertir_tipos_nativos(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convertir_tipos_nativos(v) for v in obj]
+    elif isinstance(obj, (np.int64, np.int32, np.int16, np.int8)):
+        return int(obj)
+    elif isinstance(obj, (np.float64, np.float32, np.float16)):
+        return float(obj) if not np.isnan(obj) else 0.0
+    elif isinstance(obj, np.bool_):
+        return bool(obj)
+    elif pd.isna(obj):
+        return None
+    else:
+        return obj
 
 # Usar modelo más potente para análisis exhaustivo de equipos
 MODEL_NAME = "gemini-2.0-flash"
@@ -501,6 +519,11 @@ def calcular_comparativa_equipos(equipo_actual, todos_equipos_metricas):
 def generar_prompt_coaching_equipo(equipo, metricas, comparativa, metricas_generales):
     """Genera el prompt para el análisis de coaching del equipo"""
     
+    # Convertir todos los tipos numpy/pandas a tipos nativos de Python
+    metricas = convertir_tipos_nativos(metricas)
+    comparativa = convertir_tipos_nativos(comparativa)
+    metricas_generales = convertir_tipos_nativos(metricas_generales)
+    
     prompt = f"""
 Eres un DIRECTOR DE OPERACIONES y estratega de ventas experimentado en telecomunicaciones (Movistar Argentina).
 Tu misión es analizar exhaustivamente el desempeño del EQUIPO COMPLETO y crear un plan de acción 
@@ -677,13 +700,14 @@ def generar_coaching_equipo(equipo, metricas, comparativa, model, metricas_gener
         
         coaching_ia = json.loads(texto)
         
-        resultado = {
+        # Convertir tipos numpy antes de retornar
+        resultado = convertir_tipos_nativos({
             'equipo': equipo,
             'fecha_generacion': datetime.now().isoformat(),
             'metricas': metricas,
             'comparativa': comparativa,
             'coaching_ia': coaching_ia
-        }
+        })
         
         return resultado, None
         

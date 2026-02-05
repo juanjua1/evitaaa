@@ -16,10 +16,28 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import google.generativeai as genai
+import numpy as np
 from config import api_key
 
 # Configurar API
 genai.configure(api_key=api_key)
+
+def convertir_tipos_nativos(obj):
+    """Convierte tipos numpy/pandas a tipos nativos de Python para JSON."""
+    if isinstance(obj, dict):
+        return {k: convertir_tipos_nativos(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convertir_tipos_nativos(v) for v in obj]
+    elif isinstance(obj, (np.int64, np.int32, np.int16, np.int8)):
+        return int(obj)
+    elif isinstance(obj, (np.float64, np.float32, np.float16)):
+        return float(obj) if not np.isnan(obj) else 0.0
+    elif isinstance(obj, np.bool_):
+        return bool(obj)
+    elif pd.isna(obj):
+        return None
+    else:
+        return obj
 
 # Usar modelo efectivo para análisis
 MODEL_NAME = "gemini-2.0-flash"  # Modelo efectivo y económico para coaching
@@ -381,9 +399,15 @@ def calcular_comparativa_general(agente, datos):
 def generar_prompt_coaching(agente, metricas, comparativa, metricas_generales, coaching_previo=None):
     """Genera el prompt para el análisis de coaching con historial"""
     
+    # Convertir todos los tipos numpy/pandas a tipos nativos de Python
+    metricas = convertir_tipos_nativos(metricas)
+    comparativa = convertir_tipos_nativos(comparativa)
+    metricas_generales = convertir_tipos_nativos(metricas_generales)
+    
     # Sección de historial si existe coaching previo
     seccion_historial = ""
     if coaching_previo:
+        coaching_previo = convertir_tipos_nativos(coaching_previo)
         metricas_prev = coaching_previo.get('metricas', {}).get('evaluaciones', {})
         fecha_prev = coaching_previo.get('fecha_generacion', 'Fecha desconocida')[:10]
         seccion_historial = f"""
@@ -644,11 +668,12 @@ def generar_coaching_agente(agente, datos, model, metricas_generales):
     prompt = generar_prompt_coaching(agente, metricas, comparativa, metricas_generales, coaching_previo)
     
     try:
+        log("Enviando a Gemini...")
         response = model.generate_content(prompt)
         analisis = response.text
         
-        # Estructurar resultado
-        resultado = {
+        # Estructurar resultado (convertir tipos numpy)
+        resultado = convertir_tipos_nativos({
             'agente': agente,
             'fecha_generacion': datetime.now().isoformat(),
             'metricas': metricas,
@@ -658,7 +683,7 @@ def generar_coaching_agente(agente, datos, model, metricas_generales):
             'tiene_historial': coaching_previo is not None,
             'fecha_coaching_anterior': coaching_previo.get('fecha_generacion', None) if coaching_previo else None,
             'evolucion': metricas.get('evolucion', None)
-        }
+        })
         
         return resultado, None
         

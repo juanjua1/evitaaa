@@ -610,12 +610,22 @@ def cargar_datos_io():
     """
     datos = {}
 
-    # Cargar transcripciones procesadas
-    carpeta = os.path.join(BASE_DIR, "total_transcripciones/procesados")
+    # Cargar evaluaciones primero para saber qué archivos cargar
+    ruta_eval = os.path.join(BASE_DIR, 'reportes/evaluaciones_gemini.csv')
+    archivos_evaluados = set()
+    if os.path.exists(ruta_eval):
+        try:
+            df_eval = pd.read_csv(ruta_eval)
+            archivos_evaluados = set(df_eval['archivo'].tolist())
+        except Exception:
+            pass
+
+    # Cargar transcripciones mejoradas (solo las que tienen evaluación)
+    carpeta = os.path.join(BASE_DIR, "transcripts/mejorados_gemini")
     if os.path.exists(carpeta):
         transcripciones = []
         for archivo in os.listdir(carpeta):
-            if archivo.endswith('.json'):
+            if archivo.endswith('.json') and archivo in archivos_evaluados:
                 try:
                     with open(os.path.join(carpeta, archivo), 'r', encoding='utf-8') as f:
                         transcripciones.append(json.load(f))
@@ -2008,12 +2018,19 @@ def cargar_datos():
     """Carga todos los datos necesarios para el dashboard"""
     datos = {}
     
-    # Cargar transcripciones procesadas
-    carpeta = os.path.join(BASE_DIR, "total_transcripciones/procesados")
+    # Cargar evaluaciones primero para saber qué archivos cargar
+    ruta_eval = os.path.join(BASE_DIR, 'reportes/evaluaciones_gemini.csv')
+    archivos_evaluados = set()
+    if os.path.exists(ruta_eval):
+        df_eval = pd.read_csv(ruta_eval)
+        archivos_evaluados = set(df_eval['archivo'].tolist())
+    
+    # Cargar transcripciones mejoradas (solo las que tienen evaluación)
+    carpeta = os.path.join(BASE_DIR, "transcripts/mejorados_gemini")
     if os.path.exists(carpeta):
         transcripciones = []
         for archivo in os.listdir(carpeta):
-            if archivo.endswith('.json'):
+            if archivo.endswith('.json') and archivo in archivos_evaluados:
                 with open(os.path.join(carpeta, archivo), 'r', encoding='utf-8') as f:
                     transcripciones.append(json.load(f))
         datos['transcripciones'] = transcripciones
@@ -2536,7 +2553,7 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     st.markdown('<p class="section-header">📱 Análisis de Ofertas de Planes Móviles</p>', unsafe_allow_html=True)
     
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
         st.metric("📞 Total Operaciones", f"{total_llamadas:,}")
@@ -2546,9 +2563,38 @@ def pagina_planes_ofrecidos(datos, df):
         pct_sin = 100 - pct_con_plan if pct_con_plan else 0
         st.metric("❌ Sin Oferta", f"{sin_plan:,}", f"{pct_sin:.1f}%", delta_color="inverse")
     with col4:
+        # Calcular si se ofreció fibra desde el CSV de evaluaciones
+        if 'evaluaciones_gemini_df' in datos and datos['evaluaciones_gemini_df'] is not None:
+            df_eval = datos['evaluaciones_gemini_df'].copy()
+            # Si hay filtros aplicados por equipo/agente, aplicarlos también aquí
+            if not df_filtrado.empty and 'agente_display' in df_filtrado.columns:
+                # Usar los mismos agentes que en df_filtrado
+                agentes_filtrados = df_filtrado['agente_display'].unique()
+                df_eval = df_eval[df_eval['agente'].isin(agentes_filtrados)]
+            
+            if not df_eval.empty and 'se_ofrecio_fibra' in df_eval.columns:
+                total_con_fibra = df_eval['se_ofrecio_fibra'].sum()
+                pct_fibra_eval = (total_con_fibra / len(df_eval) * 100) if len(df_eval) > 0 else 0
+                st.metric("🌐 Ofreció Fibra", f"{int(total_con_fibra):,}", f"{pct_fibra_eval:.1f}%")
+            else:
+                st.metric("🌐 Ofreció Fibra", "N/D")
+        else:
+            st.metric("🌐 Ofreció Fibra", "N/D")
+    with col5:
         # Plan más usado como primer ofrecimiento
         if not df_filtrado.empty and 'primer_plan' in df_filtrado.columns:
             primer_plan_conteo = df_filtrado['primer_plan'].dropna().value_counts().to_dict()
+        elif 'evaluaciones_gemini_df' in datos and datos['evaluaciones_gemini_df'] is not None:
+            df_eval = datos['evaluaciones_gemini_df'].copy()
+            # Si hay filtros aplicados, aplicarlos también aquí
+            if not df_filtrado.empty and 'agente_display' in df_filtrado.columns:
+                agentes_filtrados = df_filtrado['agente_display'].unique()
+                df_eval = df_eval[df_eval['agente'].isin(agentes_filtrados)]
+            
+            if 'primer_plan_ofrecido' in df_eval.columns:
+                primer_plan_conteo = df_eval['primer_plan_ofrecido'].dropna().value_counts().to_dict()
+            else:
+                primer_plan_conteo = stats.get('primer_plan_conteo', {})
         else:
             primer_plan_conteo = stats.get('primer_plan_conteo', {})
         if primer_plan_conteo:
@@ -2717,52 +2763,52 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     # SECCIÓN 3: PROMOCIONES
     # =========================================================================
-    st.markdown('<p class="section-header">🎁 Análisis de Cumplimiento de Promociones</p>', unsafe_allow_html=True)
+    #st.markdown('<p class="section-header">🎁 Análisis de Cumplimiento de Promociones</p>', unsafe_allow_html=True)
     
-    col1, col2, col3, col4 = st.columns(4)
+    #col1, col2, col3, col4 = st.columns(4)
     
-    with col1:
-        st.metric("📅 Llamadas en Días Promo", f"{dias_promo_total:,}")
-    with col2:
-        pct_menciona = menciona_promo / dias_promo_total * 100 if dias_promo_total > 0 else 0
-        st.metric("✅ Menciona Promo", f"{menciona_promo:,}", f"{pct_menciona:.1f}%")
-    with col3:
-        pct_no = 100 - pct_menciona if pct_menciona else 0
-        st.metric("❌ NO Menciona Promo", f"{no_menciona_promo:,}", f"-{pct_no:.1f}%", delta_color="inverse")
-    with col4:
+    #with col1:
+    #    st.metric("📅 Llamadas en Días Promo", f"{dias_promo_total:,}")
+    #with col2:
+    #    pct_menciona = menciona_promo / dias_promo_total * 100 if dias_promo_total > 0 else 0
+    #    st.metric("✅ Menciona Promo", f"{menciona_promo:,}", f"{pct_menciona:.1f}%")
+    #with col3:
+    #    pct_no = 100 - pct_menciona if pct_menciona else 0
+    #    st.metric("❌ NO Menciona Promo", f"{no_menciona_promo:,}", f"-{pct_no:.1f}%", delta_color="inverse")
+    #with col4:
         # Menciona promo en total (incluyendo días no promo)
-        if not df_filtrado.empty and 'menciona_promo' in df_filtrado.columns:
-            menciona_total = len(df_filtrado[df_filtrado['menciona_promo'] == True])
-        else:
-            menciona_total = stats.get('promociones', {}).get('menciona_promo', 0)
-        pct_total = menciona_total / total_llamadas * 100 if total_llamadas > 0 else 0
-        st.metric("📣 Menciona Promo (Total)", f"{menciona_total:,}", f"{pct_total:.1f}%")
+    #    if not df_filtrado.empty and 'menciona_promo' in df_filtrado.columns:
+    #        menciona_total = len(df_filtrado[df_filtrado['menciona_promo'] == True])
+    #    else:
+    #        menciona_total = stats.get('promociones', {}).get('menciona_promo', 0)
+    #    pct_total = menciona_total / total_llamadas * 100 if total_llamadas > 0 else 0
+    #    st.metric("📣 Menciona Promo (Total)", f"{menciona_total:,}", f"{pct_total:.1f}%")
     
     # Gráfico de promociones
-    col1, col2 = st.columns(2)
+    #col1, col2 = st.columns(2)
     
-    with col1:
-        if dias_promo_total > 0:
-            fig = go.Figure(data=[
-                go.Bar(name='Menciona Promo', x=['Días de Promo'], y=[menciona_promo], marker_color='#27AE60', 
-                       text=[f'{menciona_promo} ({pct_menciona:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12)),
-                go.Bar(name='NO Menciona', x=['Días de Promo'], y=[no_menciona_promo], marker_color='#E74C3C',
-                       text=[f'{no_menciona_promo} ({pct_no:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12))
-            ])
-            fig.update_layout(
-                barmode='stack',
-                height=250,
-                title={'text': 'Cumplimiento en Días de Promoción', 'font': {'size': 13, 'color': '#2C3E50'}},
-                margin=dict(t=50, b=30, l=40, r=20),
-                paper_bgcolor='#FFFFFF',
-                plot_bgcolor='#FAFBFC',
-                legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=10))
-            )
-            st.plotly_chart(fig, use_container_width=True)
+    #with col1:
+    #    if dias_promo_total > 0:
+    #        fig = go.Figure(data=[
+    #            go.Bar(name='Menciona Promo', x=['Días de Promo'], y=[menciona_promo], marker_color='#27AE60', 
+    #                   text=[f'{menciona_promo} ({pct_menciona:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12)),
+    #            go.Bar(name='NO Menciona', x=['Días de Promo'], y=[no_menciona_promo], marker_color='#E74C3C',
+    #                   text=[f'{no_menciona_promo} ({pct_no:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12))
+    #        ])
+    #        fig.update_layout(
+    #            barmode='stack',
+    #            height=250,
+    #            title={'text': 'Cumplimiento en Días de Promoción', 'font': {'size': 13, 'color': '#2C3E50'}},
+    #            margin=dict(t=50, b=30, l=40, r=20),
+    #            paper_bgcolor='#FFFFFF',
+    #            plot_bgcolor='#FAFBFC',
+    #            legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=10))
+    #        )
+    #        st.plotly_chart(fig, use_container_width=True)
 
 
 def pagina_coaching_vendedores(datos):
-    """Página de Coaching IA personalizado para cada vendedor"""
+    """Página de Coaching personalizado para cada vendedor"""
     st.markdown('<div class="main-header">🎯 COMMAND · Planes de Mejora y Desarrollo de Vendedores</div>', unsafe_allow_html=True)
     
     # Subtítulo corporativo
@@ -2860,7 +2906,7 @@ def pagina_coaching_vendedores(datos):
     
     with col2:
         if puntajes:
-            st.metric("📊 Puntaje IA Promedio", f"{np.mean(puntajes):.1f}")
+            st.metric("📊 Puntaje Promedio", f"{np.mean(puntajes):.1f}")
     
     with col3:
         if conversiones:
@@ -2897,7 +2943,7 @@ def pagina_coaching_vendedores(datos):
                     puntaje = comparativa.get('puntaje_ia', {}).get('agente', 0)
                     diferencia = comparativa.get('puntaje_ia', {}).get('diferencia', 0)
                     st.metric(
-                        "Puntaje IA",
+                        "Puntaje",
                         f"{puntaje:.1f}",
                         f"{diferencia:+.1f} vs equipo",
                         delta_color="normal"
@@ -3060,7 +3106,7 @@ def pagina_coaching_vendedores(datos):
                 puntaje = comparativa.get('puntaje_ia', {}).get('agente', 0)
                 diferencia = comparativa.get('puntaje_ia', {}).get('diferencia', 0)
                 st.metric(
-                    "Puntaje IA",
+                    "Puntaje",
                     f"{puntaje:.1f}",
                     f"{diferencia:+.1f} vs equipo",
                     delta_color="normal"
@@ -3191,7 +3237,7 @@ def pagina_coaching_vendedores(datos):
             analisis = data.get('analisis_coaching', '')
             
             if analisis:
-                # Limpiar introducciones genéricas de la IA
+                # Limpiar introducciones genéricas de Command
                 import re
                 # Patrones a eliminar al inicio del texto
                 patrones_intro = [
@@ -3245,7 +3291,7 @@ def pagina_coaching_vendedores(datos):
                 fortalezas = metricas.get('evaluaciones', {}).get('fortalezas_frecuentes', {})
                 if fortalezas:
                     for fort, count in fortalezas.items():
-                        st.markdown(f"- **{fort}**: {count} menciones")
+                        st.markdown(f"- **{fort}**")
                 else:
                     st.write("No hay datos")
             
@@ -3264,7 +3310,7 @@ def pagina_coaching_vendedores(datos):
                 areas = metricas.get('evaluaciones', {}).get('areas_mejora_frecuentes', {})
                 if areas:
                     for area, count in areas.items():
-                        st.markdown(f"- **{area}**: {count} menciones")
+                        st.markdown(f"- **{area}**")
                 else:
                     st.write("No hay datos")
     
@@ -3299,7 +3345,7 @@ def pagina_coaching_vendedores(datos):
             row = {
                 'Agente': agente,  # Ya tiene nombre real aplicado
                 'Equipo': equipo_agente,
-                'Puntaje IA': comp.get('puntaje_ia', {}).get('agente', 0),
+                'Puntaje': comp.get('puntaje_ia', {}).get('agente', 0),
                 'vs Equipo': comp.get('puntaje_ia', {}).get('diferencia', 0),
                 'Percentil': comp.get('puntaje_ia', {}).get('percentil', 0),
                 'Conversión': comp.get('conversion', {}).get('agente', 0),
@@ -3317,24 +3363,27 @@ def pagina_coaching_vendedores(datos):
             metricas_equipo.append(row)
         
         df_equipo = pd.DataFrame(metricas_equipo)
-        df_equipo = df_equipo.sort_values('Puntaje IA', ascending=False)
+        df_equipo = df_equipo.sort_values('Puntaje', ascending=False)
         
         # Gráfico de ranking
         fig = px.bar(
             df_equipo,
             x='Agente',
-            y='Puntaje IA',
+            y='Puntaje',
             color='vs Equipo',
             color_continuous_scale=['#EF4444', '#F59E0B', '#10B981'],
-            title='Ranking de Puntaje IA por Agente'
+            range_color=[0, 100],
+            title='Ranking de Puntaje por Agente'
         )
         fig.add_hline(
-            y=df_equipo['Puntaje IA'].mean(),
+            y=df_equipo['Puntaje'].mean(),
             line_dash="dash",
             line_color="gray",
             annotation_text="Promedio"
         )
         fig.update_layout(height=400, xaxis_tickangle=-45)
+        fig.update_yaxes(range=[0, 100])
+
         st.plotly_chart(fig, use_container_width=True)
         
         # Tabla detallada
@@ -3344,16 +3393,16 @@ def pagina_coaching_vendedores(datos):
         def color_diferencia(val):
             if isinstance(val, (int, float)):
                 if val > 0:
-                    return 'background-color: #d4edda'
+                    return 'background-color: #144736'
                 elif val < 0:
-                    return 'background-color: #f8d7da'
+                    return 'background-color: #56131b'
             return ''
         
         styled_df = df_equipo.style.applymap(
             color_diferencia,
             subset=['vs Equipo']
         ).format({
-            'Puntaje IA': '{:.1f}',
+            'Puntaje': '{:.1f}',
             'vs Equipo': '{:+.1f}',
             'Percentil': '{:.1f}',
             'Conversión': '{:.1f}%',
@@ -3405,7 +3454,7 @@ def pagina_coaching_vendedores(datos):
             
             # Calcular índice de potencial de mejora
             # Mayor puntaje para quienes tienen más margen de mejora pero buena base
-            df_mejora['Potencial'] = (100 - df_mejora['Puntaje IA']) * (df_mejora['Evaluaciones'] / df_mejora['Evaluaciones'].max())
+            df_mejora['Potencial'] = (100 - df_mejora['Puntaje']) * (df_mejora['Evaluaciones'] / df_mejora['Evaluaciones'].max())
             df_mejora['Tasa_Criticas'] = df_mejora['Críticas'] / df_mejora['Evaluaciones'] * 100
             
             df_mejora = df_mejora.sort_values('Potencial', ascending=False)
@@ -3427,14 +3476,14 @@ def pagina_coaching_vendedores(datos):
                     <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 5px 0;
                                 border-left: 4px solid {color}; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'>
                         <strong style='color: #1E293B;'>{i}. {row['Agente']}</strong><br>
-                        <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Críticas: {row['Tasa_Criticas']:.1f}% | Eval: {row['Evaluaciones']}</small>
+                        <small style='color: #475569;'>Puntaje: {row['Puntaje']:.1f} | Críticas: {row['Tasa_Criticas']:.1f}% | Eval: {row['Evaluaciones']}</small>
                     </div>
                     """, unsafe_allow_html=True)
             
             with col2:
                 st.markdown("#### 🟢 Top Performers")
                 
-                top_performers = df_ranking.sort_values('Puntaje IA', ascending=False).head(10)
+                top_performers = df_ranking.sort_values('Puntaje', ascending=False).head(10)
                 
                 for i, (_, row) in enumerate(top_performers.iterrows(), 1):
                     medal = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i}."
@@ -3442,7 +3491,7 @@ def pagina_coaching_vendedores(datos):
                     <div style='background: #F8FAFC; padding: 12px; border-radius: 8px; margin: 5px 0;
                                 border-left: 4px solid #10B981; box-shadow: 0 2px 6px rgba(0,0,0,0.06);'>
                         <strong style='color: #1E293B;'>{medal} {row['Agente']}</strong><br>
-                        <small style='color: #475569;'>Puntaje: {row['Puntaje IA']:.1f} | Conv: {row['Conversión']:.1f}% | Excelentes: {row['Excelentes']}</small>
+                        <small style='color: #475569;'>Puntaje: {row['Puntaje']:.1f} | Conv: {row['Conversión']:.1f}% | Excelentes: {row['Excelentes']}</small>
                     </div>
                     """, unsafe_allow_html=True)
         
@@ -3454,8 +3503,8 @@ def pagina_coaching_vendedores(datos):
         df_grafico = df_ranking if 'df_ranking' in dir() and len(df_ranking) > 0 else df_equipo
         
         # Calcular estadísticas
-        promedio = df_grafico['Puntaje IA'].mean()
-        mediana = df_grafico['Puntaje IA'].median()
+        promedio = df_grafico['Puntaje'].mean()
+        mediana = df_grafico['Puntaje'].median()
         
         # Definir colores por zona para las barras del histograma
         colores_zona = {
@@ -3466,7 +3515,7 @@ def pagina_coaching_vendedores(datos):
         }
         
         # Crear datos para histograma coloreado por zona
-        puntajes = df_grafico['Puntaje IA'].values
+        puntajes = df_grafico['Puntaje'].values
         
         # Separar datos por zona
         criticos_data = [p for p in puntajes if p < 30]
@@ -3540,7 +3589,7 @@ def pagina_coaching_vendedores(datos):
             paper_bgcolor='#FFFFFF',
             plot_bgcolor='#FAFBFC',
             font=dict(family="Arial, sans-serif", size=12, color='#1E293B'),
-            xaxis_title=dict(text="Puntaje IA", font=dict(size=14, color='#1E293B', family="Arial Black")),
+            xaxis_title=dict(text="Puntaje", font=dict(size=14, color='#1E293B', family="Arial Black")),
             yaxis_title=dict(text="Cantidad de Agentes", font=dict(size=14, color='#1E293B', family="Arial Black")),
             xaxis=dict(
                 gridcolor='#E2E8F0', 
@@ -3578,30 +3627,30 @@ def pagina_coaching_vendedores(datos):
         # Resumen estadístico compacto debajo del gráfico (con colores que coinciden)
         col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
         with col_stat1:
-            criticos = len(df_ranking[df_ranking['Puntaje IA'] < 30])
+            criticos = len(df_ranking[df_ranking['Puntaje'] < 30])
             st.markdown(f"<div style='text-align:center; padding:10px; background:#FEE2E2; border-radius:8px; border-left: 4px solid #DC2626;'><span style='font-size:24px; font-weight:bold; color:#DC2626;'>{criticos}</span><br><small style='color:#991B1B; font-weight:600;'>Críticos (&lt;30)</small></div>", unsafe_allow_html=True)
         with col_stat2:
-            bajos = len(df_ranking[(df_ranking['Puntaje IA'] >= 30) & (df_ranking['Puntaje IA'] < 60)])
+            bajos = len(df_ranking[(df_ranking['Puntaje'] >= 30) & (df_ranking['Puntaje'] < 60)])
             st.markdown(f"<div style='text-align:center; padding:10px; background:#FEF3C7; border-radius:8px; border-left: 4px solid #F59E0B;'><span style='font-size:24px; font-weight:bold; color:#B45309;'>{bajos}</span><br><small style='color:#78350F; font-weight:600;'>En Desarrollo (30-60)</small></div>", unsafe_allow_html=True)
         with col_stat3:
-            buenos = len(df_ranking[(df_ranking['Puntaje IA'] >= 60) & (df_ranking['Puntaje IA'] < 80)])
+            buenos = len(df_ranking[(df_ranking['Puntaje'] >= 60) & (df_ranking['Puntaje'] < 80)])
             st.markdown(f"<div style='text-align:center; padding:10px; background:#DBEAFE; border-radius:8px; border-left: 4px solid #3B82F6;'><span style='font-size:24px; font-weight:bold; color:#1D4ED8;'>{buenos}</span><br><small style='color:#1E3A8A; font-weight:600;'>Buenos (60-80)</small></div>", unsafe_allow_html=True)
         with col_stat4:
-            excelentes = len(df_ranking[df_ranking['Puntaje IA'] >= 80])
+            excelentes = len(df_ranking[df_ranking['Puntaje'] >= 80])
             st.markdown(f"<div style='text-align:center; padding:10px; background:#D1FAE5; border-radius:8px; border-left: 4px solid #10B981;'><span style='font-size:24px; font-weight:bold; color:#059669;'>{excelentes}</span><br><small style='color:#065F46; font-weight:600;'>Excelentes (≥80)</small></div>", unsafe_allow_html=True)
         
         # Recomendaciones generales
         st.markdown("---")
         st.markdown("### 💡 Recomendaciones para el Equipo")
         
-        prom_puntaje = df_ranking['Puntaje IA'].mean()
+        prom_puntaje = df_ranking['Puntaje'].mean()
         prom_conv = df_ranking['Conversión'].mean()
-        agentes_bajo_prom = len(df_ranking[df_ranking['Puntaje IA'] < prom_puntaje])
+        agentes_bajo_prom = len(df_ranking[df_ranking['Puntaje'] < prom_puntaje])
         agentes_criticos = len(df_ranking[df_ranking['vs Equipo'] < -15])
         
         st.markdown(f"""
         📌 **Situación actual del equipo:**
-        - Puntaje IA promedio: **{prom_puntaje:.1f}/100**
+        - Puntaje promedio: **{prom_puntaje:.1f}/100**
         - Conversión promedio: **{prom_conv:.1f}%**
         - Agentes bajo el promedio: **{agentes_bajo_prom}**
         - Agentes en situación crítica: **{agentes_criticos}**
@@ -3904,12 +3953,12 @@ def pagina_detalle_llamadas(df, datos):
             
             if len(eval_match) > 0:
                 st.markdown("---")
-                st.markdown("**🤖 Evaluación IA:**")
+                st.markdown("**🤖 Evaluación:**")
                 eval_data = eval_match.iloc[0]
                 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.metric("Puntaje IA", f"{eval_data.get('puntaje_total', 0)}/100")
+                    st.metric("Puntaje", f"{eval_data.get('puntaje_total', 0)}/100")
                 with col2:
                     st.markdown(f"**Resumen:** {eval_data.get('resumen', 'N/A')}")
     
@@ -3930,37 +3979,37 @@ def pagina_detalle_llamadas(df, datos):
         st.markdown(f"**Total registros:** {len(df_filtrado):,}")
 
 
-def pagina_quejas_no_resueltas(datos):
-    """Página de análisis de quejas no resueltas"""
-    st.markdown('<div class="main-header">⚠️ COMMAND · Gestión de Reclamos y Quejas Pendientes</div>', unsafe_allow_html=True)
-    
-    # Subtítulo corporativo
-    st.markdown("""
-    <div style='background: #FEF2F2; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #EF4444;'>
-        <p style='margin: 0; color: #7F1D1D; font-size: 0.95rem;'>
-            <strong>Panel de Seguimiento de Reclamos</strong> · Casos que requieren atención y resolución
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Obtener permisos del usuario actual
-    permisos = obtener_permisos_usuario()
-    
-    if 'quejas' not in datos:
-        st.warning("⚠️ No hay datos de quejas disponibles.")
-        return
-    
-    quejas = datos['quejas']
-    stats_original = quejas.get('estadisticas', {})
-    
-    # Cargar datos de filtrado
-    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
-    
-    # Crear mapeo inverso: nombre -> equipo
-    nombre_a_equipo = {}
-    for equipo, vendedores in equipos_vendedores.items():
-        for vendedor in vendedores:
-            nombre_a_equipo[vendedor.lower().strip()] = equipo
+        #def pagina_quejas_no_resueltas(datos):
+        #    """Página de análisis de quejas no resueltas"""
+        #    st.markdown('<div class="main-header">⚠️ COMMAND · Gestión de Reclamos y Quejas Pendientes</div>', unsafe_allow_html=True)
+        #    
+            # Subtítulo corporativo
+        #    st.markdown("""
+        #    <div style='background: #FEF2F2; padding: 12px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #EF4444;'>
+        #        <p style='margin: 0; color: #7F1D1D; font-size: 0.95rem;'>
+        #            <strong>Panel de Seguimiento de Reclamos</strong> · Casos que requieren atención y resolución
+        #        </p>
+        #    </div>
+        #    """, unsafe_allow_html=True)
+            
+            # Obtener permisos del usuario actual
+        #    permisos = obtener_permisos_usuario()
+            
+        #    if 'quejas' not in datos:
+        #        st.warning("⚠️ No hay datos de quejas disponibles.")
+        #        return
+            
+        #    quejas = datos['quejas']
+        #    stats_original = quejas.get('estadisticas', {})
+            
+            # Cargar datos de filtrado
+        #    listado_vendedores, equipos_vendedores = cargar_listado_vendedores()
+            
+            # Crear mapeo inverso: nombre -> equipo
+        #    nombre_a_equipo = {}
+        #    for equipo, vendedores in equipos_vendedores.items():
+        #        for vendedor in vendedores:
+        #            nombre_a_equipo[vendedor.lower().strip()] = equipo
     
     def obtener_equipo_por_nombre(nombre):
         """Obtiene el equipo del vendedor por su nombre"""
@@ -5016,7 +5065,7 @@ def pagina_analisis_equipos(datos):
                         metricas_equipo['total_evaluaciones'] += evaluaciones
                         metricas_equipo['vendedores_data'].append({
                             'Vendedor': agente_key,
-                            'Puntaje IA': puntaje,
+                            'Puntaje': puntaje,
                             'Conversión %': conversion,
                             'Evaluaciones': evaluaciones
                         })
@@ -5032,7 +5081,7 @@ def pagina_analisis_equipos(datos):
                 st.metric("👥 Vendedores", len(vendedores_equipo))
             with col2:
                 prom_puntaje = np.mean(metricas_equipo['puntajes_ia']) if metricas_equipo['puntajes_ia'] else 0
-                st.metric("📊 Puntaje IA Promedio", f"{prom_puntaje:.1f}")
+                st.metric("📊 Puntaje Promedio", f"{prom_puntaje:.1f}")
             with col3:
                 prom_conversion = np.mean(metricas_equipo['conversiones']) if metricas_equipo['conversiones'] else 0
                 st.metric("💰 Conversión Promedio", f"{prom_conversion:.1f}%")
@@ -5074,29 +5123,29 @@ def pagina_analisis_equipos(datos):
                         st.metric("🎁 Menciona Promo", f"{pct_promo:.1f}%", f"{menciona_promo}/{len(df_promo)} en días promo")
             
             # Análisis de Quejas del equipo
-            if not quejas_df.empty and 'agente' in quejas_df.columns:
-                quejas_df_temp = quejas_df.copy()
-                quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
-                quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+            #if not quejas_df.empty and 'agente' in quejas_df.columns:
+            #    quejas_df_temp = quejas_df.copy()
+            #    quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
+            #    quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
                 
-                df_equipo_quejas = quejas_df_temp[quejas_df_temp['equipo'] == equipo_seleccionado]
+            #    df_equipo_quejas = quejas_df_temp[quejas_df_temp['equipo'] == equipo_seleccionado]
                 
-                if not df_equipo_quejas.empty:
-                    st.markdown("---")
-                    st.markdown('<p class="section-header">⚠️ Gestión de Quejas</p>', unsafe_allow_html=True)
+            #    if not df_equipo_quejas.empty:
+            #        st.markdown("---")
+            #        st.markdown('<p class="section-header">⚠️ Gestión de Quejas</p>', unsafe_allow_html=True)
                     
-                    total_quejas = len(df_equipo_quejas)
-                    no_resueltas = int(df_equipo_quejas['quejas_no_resueltas'].sum())
-                    resueltas = total_quejas - no_resueltas
-                    pct_resolucion = resueltas / total_quejas * 100 if total_quejas > 0 else 0
+            #        total_quejas = len(df_equipo_quejas)
+            #        no_resueltas = int(df_equipo_quejas['quejas_no_resueltas'].sum())
+            #        resueltas = total_quejas - no_resueltas
+            #        pct_resolucion = resueltas / total_quejas * 100 if total_quejas > 0 else 0
                     
-                    col1, col2, col3 = st.columns(3)
-                    with col1:
-                        st.metric("📋 Total Quejas", total_quejas)
-                    with col2:
-                        st.metric("✅ Resueltas", resueltas, f"{pct_resolucion:.1f}%")
-                    with col3:
-                        st.metric("❌ No Resueltas", no_resueltas)
+            #        col1, col2, col3 = st.columns(3)
+            #        with col1:
+            #            st.metric("📋 Total Quejas", total_quejas)
+            #        with col2:
+            #            st.metric("✅ Resueltas", resueltas, f"{pct_resolucion:.1f}%")
+            #        with col3:
+            #            st.metric("❌ No Resueltas", no_resueltas)
             
             # Tabla de vendedores del equipo
             st.markdown("---")
@@ -5104,16 +5153,17 @@ def pagina_analisis_equipos(datos):
             
             if metricas_equipo['vendedores_data']:
                 df_vendedores = pd.DataFrame(metricas_equipo['vendedores_data'])
-                df_vendedores = df_vendedores.sort_values('Puntaje IA', ascending=False)
+                df_vendedores = df_vendedores.sort_values('Puntaje', ascending=False)
                 
                 # Gráfico de barras de puntajes
                 fig = px.bar(
                     df_vendedores,
                     x='Vendedor',
-                    y='Puntaje IA',
-                    color='Puntaje IA',
+                    y='Puntaje',
+                    color='Puntaje',
                     color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                    text='Puntaje IA'
+                    range_color=[0, 100],
+                    text='Puntaje'
                 )
                 fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
                 fig.update_layout(
@@ -5122,7 +5172,18 @@ def pagina_analisis_equipos(datos):
                     plot_bgcolor='#FAFBFC',
                     showlegend=False,
                     xaxis_tickangle=-45,
-                    margin=dict(t=30, b=80)
+                    margin=dict(t=30, b=80),
+                    font=dict(color="#000000")
+                )
+                fig.update_xaxes(
+                    tickfont=dict(color="#000000"),
+                    title=dict(font=dict(color="#000000"))
+                )
+
+                fig.update_yaxes(
+                    range=[0, 100],
+                    tickfont=dict(color="#000000"),
+                    title=dict(font=dict(color="#000000"))
                 )
                 st.plotly_chart(fig, use_container_width=True)
                 
@@ -5141,14 +5202,14 @@ def pagina_analisis_equipos(datos):
                 prom_puntaje = np.mean(metricas_equipo['puntajes_ia'])
                 if prom_puntaje < 50:
                     recomendaciones.append({
-                        'area': '📊 Puntaje IA',
+                        'area': '📊 Puntaje',
                         'estado': 'Crítico',
                         'color': '#E74C3C',
                         'recomendacion': 'Implementar capacitaciones intensivas de técnicas de venta y manejo de objeciones.'
                     })
                 elif prom_puntaje < 70:
                     recomendaciones.append({
-                        'area': '📊 Puntaje IA',
+                        'area': '📊 Puntaje',
                         'estado': 'En desarrollo',
                         'color': '#F39C12',
                         'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de scripts.'
@@ -5195,10 +5256,10 @@ def pagina_analisis_equipos(datos):
                 st.success("✅ El equipo está cumpliendo los objetivos principales. Continuar con las buenas prácticas.")
             
             # =================================================================
-            # COACHING IA DEL EQUIPO - CARGAR DESDE ARCHIVO JSON
+            # COACHING COMMAND DEL EQUIPO - CARGAR DESDE ARCHIVO JSON
             # =================================================================
             st.markdown("---")
-            st.markdown('<p class="section-header">🤖 Plan de Acción IA del Equipo</p>', unsafe_allow_html=True)
+            st.markdown('<p class="section-header">🤖 Plan de Acción del Equipo</p>', unsafe_allow_html=True)
             
             # Intentar cargar el archivo de coaching del equipo
             import os
@@ -5246,7 +5307,24 @@ def pagina_analisis_equipos(datos):
                         
                         # Fortalezas y Áreas de Mejora en columnas
                         col_fm1, col_fm2 = st.columns(2)
-                        
+                        fortalezas = coaching_ia.get('fortalezas_equipo', [])
+                        mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
+
+                        # =========================
+                        # Normalizar áreas de fortalezas (lower + strip)
+                        # =========================
+                        areas_fortalezas = {
+                            f.get("area", "").strip().lower()
+                            for f in fortalezas
+                            if f.get("area")
+                        }
+
+                        # =========================
+                        # Filtrar mejoras que NO estén en fortalezas
+                        # =========================
+                        mejoras_filtradas = [
+                                m for m in mejoras
+                                if m.get("area", "").strip().lower() not in areas_fortalezas]
                         with col_fm1:
                             st.markdown("#### 💪 Fortalezas del Equipo")
                             fortalezas = coaching_ia.get('fortalezas_equipo', [])
@@ -5347,11 +5425,11 @@ def pagina_analisis_equipos(datos):
                                 for metrica in seguimiento.get('metricas_monitorear', []):
                                     st.markdown(f"- {metrica}")
                             with col_s2:
-                                st.markdown("**⚠️ Alertas:**")
+                                st.markdown("<span style='color:#000000; font-weight:bold;'>⚠️ Alertas:</span>", unsafe_allow_html=True)
                                 for alerta in seguimiento.get('alertas', []):
-                                    st.warning(alerta)
+                                    st.markdown(f"<div style='background:#FEF3C7; color:#000000; padding:10px; border-radius:6px; margin-bottom:6px;'>⚠️ {alerta}</div>", unsafe_allow_html=True)
                     else:
-                        st.info("ℹ️ No hay datos de coaching IA disponibles para este equipo.")
+                        st.info("ℹ️ No hay datos de coaching disponibles para este equipo.")
                         
                 except Exception as e:
                     st.warning(f"⚠️ Error al cargar el coaching del equipo: {str(e)}")
@@ -5374,203 +5452,251 @@ def pagina_analisis_equipos(datos):
                 key="equipos_comparativa"
             )
         
-        if len(equipos_comparar) < 2:
-            st.warning("⚠️ Selecciona al menos 2 equipos para comparar.")
-        else:
-            # Recopilar métricas de todos los equipos seleccionados
-            comparativa_data = []
-            
-            for equipo in equipos_comparar:
-                vendedores_eq = equipos_vendedores.get(equipo, [])
+            if len(equipos_comparar) < 2:
+                st.warning("⚠️ Selecciona al menos 2 equipos para comparar.")
+            else:
+                # Recopilar métricas de todos los equipos seleccionados
+                comparativa_data = []
                 
-                metricas_eq = {
-                    'Equipo': equipo,
-                    'Vendedores': len(vendedores_eq),
-                    'Puntaje IA': 0,
-                    'Conversión %': 0,
-                    'Ofrece Fibra %': 0,
-                    'Ofrece Plan %': 0,
-                    'Quejas Resueltas %': 0
-                }
-                
-                # Métricas de coaching
-                puntajes = []
-                conversiones = []
-                for vendedor in vendedores_eq:
-                    for agente_key, data in coaching_data.items():
-                        if vendedor.lower() in agente_key.lower() or agente_key.lower() in vendedor.lower():
-                            puntajes.append(data.get('comparativa', {}).get('puntaje_ia', {}).get('agente', 0))
-                            conversiones.append(data.get('comparativa', {}).get('conversion', {}).get('agente', 0))
-                            break
-                
-                metricas_eq['Puntaje IA'] = round(np.mean(puntajes), 1) if puntajes else 0
-                metricas_eq['Conversión %'] = round(np.mean(conversiones), 1) if conversiones else 0
-                
-                # Métricas de planes
-                if not planes_df.empty and 'agente' in planes_df.columns:
-                    planes_df_temp = planes_df.copy()
-                    planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
-                    planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
-                    df_eq = planes_df_temp[planes_df_temp['equipo'] == equipo]
+                for equipo in equipos_comparar:
+                    vendedores_eq = equipos_vendedores.get(equipo, [])
                     
-                    if not df_eq.empty:
-                        total = len(df_eq)
-                        metricas_eq['Ofrece Fibra %'] = round(len(df_eq[df_eq['ofrece_fibra'] == True]) / total * 100, 1)
-                        metricas_eq['Ofrece Plan %'] = round(len(df_eq[df_eq['cantidad_planes'] > 0]) / total * 100, 1)
-                
-                # Métricas de quejas
-                if not quejas_df.empty and 'agente' in quejas_df.columns:
-                    quejas_df_temp = quejas_df.copy()
-                    quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
-                    quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
-                    df_eq_q = quejas_df_temp[quejas_df_temp['equipo'] == equipo]
+                    metricas_eq = {
+                        'Equipo': equipo,
+                        'Vendedores': len(vendedores_eq),
+                        'Puntaje': 0,
+                        'Conversión %': 0,
+                        'Ofrece Fibra %': 0,
+                        'Ofrece Plan %': 0,
+                        'Quejas Resueltas %': 0
+                    }
                     
-                    if not df_eq_q.empty:
-                        total_q = len(df_eq_q)
-                        no_res = int(df_eq_q['quejas_no_resueltas'].sum())
-                        metricas_eq['Quejas Resueltas %'] = round((total_q - no_res) / total_q * 100, 1) if total_q > 0 else 0
+                    # Métricas de coaching
+                    puntajes = []
+                    conversiones = []
+                    for vendedor in vendedores_eq:
+                        for agente_key, data in coaching_data.items():
+                            if vendedor.lower() in agente_key.lower() or agente_key.lower() in vendedor.lower():
+                                puntajes.append(data.get('comparativa', {}).get('puntaje_ia', {}).get('agente', 0))
+                                conversiones.append(data.get('comparativa', {}).get('conversion', {}).get('agente', 0))
+                                break
+                    
+                    metricas_eq['Puntaje'] = round(np.mean(puntajes), 1) if puntajes else 0
+                    metricas_eq['Conversión %'] = round(np.mean(conversiones), 1) if conversiones else 0
+                    
+                    # Métricas de planes
+                    if not planes_df.empty and 'agente' in planes_df.columns:
+                        planes_df_temp = planes_df.copy()
+                        planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
+                        planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                        df_eq = planes_df_temp[planes_df_temp['equipo'] == equipo]
+                        
+                        if not df_eq.empty:
+                            total = len(df_eq)
+                            metricas_eq['Ofrece Fibra %'] = round(len(df_eq[df_eq['ofrece_fibra'] == True]) / total * 100, 1)
+                            metricas_eq['Ofrece Plan %'] = round(len(df_eq[df_eq['cantidad_planes'] > 0]) / total * 100, 1)
+                    
+                    # Métricas de quejas
+                    if not quejas_df.empty and 'agente' in quejas_df.columns:
+                        quejas_df_temp = quejas_df.copy()
+                        quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
+                        quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                        df_eq_q = quejas_df_temp[quejas_df_temp['equipo'] == equipo]
+                        
+                        if not df_eq_q.empty:
+                            total_q = len(df_eq_q)
+                            no_res = int(df_eq_q['quejas_no_resueltas'].sum())
+                            metricas_eq['Quejas Resueltas %'] = round((total_q - no_res) / total_q * 100, 1) if total_q > 0 else 0
+                    
+                    comparativa_data.append(metricas_eq)
                 
-                comparativa_data.append(metricas_eq)
-            
-            df_comparativa = pd.DataFrame(comparativa_data)
-            
-            # Métricas principales
-            st.markdown("---")
-            st.markdown('<p class="section-header">📈 Resumen Comparativo</p>', unsafe_allow_html=True)
-            
-            # Mostrar tabla comparativa
-            st.dataframe(
-                df_comparativa.style.background_gradient(subset=['Puntaje IA', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %', 'Quejas Resueltas %'], cmap='RdYlGn'),
-                use_container_width=True,
-                hide_index=True
-            )
-            
-            st.markdown("---")
-            
-            # Gráficos comparativos
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                st.markdown("**📊 Puntaje IA por Equipo**")
-                fig = px.bar(
-                    df_comparativa,
-                    x='Equipo',
-                    y='Puntaje IA',
-                    color='Puntaje IA',
-                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                    text='Puntaje IA'
+                df_comparativa = pd.DataFrame(comparativa_data)
+                df_comparativa = df_comparativa.drop(columns=['Quejas Resueltas %'], errors='ignore')
+
+                # Métricas principales
+                st.markdown("---")
+                st.markdown('<p class="section-header">📈 Resumen Comparativo</p>', unsafe_allow_html=True)
+                
+                # Mostrar tabla comparativa
+                st.dataframe(
+                    df_comparativa.style.background_gradient(subset=['Puntaje', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %'], cmap='RdYlGn'),
+                    use_container_width=True,
+                    hide_index=True
                 )
-                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
-                fig.update_layout(
-                    height=300,
-                    paper_bgcolor='#FFFFFF',
-                    plot_bgcolor='#FAFBFC',
-                    showlegend=False
-                )
-                st.plotly_chart(fig, use_container_width=True)
-            
-            with col2:
-                st.markdown("**💰 Conversión por Equipo**")
-                fig = px.bar(
-                    df_comparativa,
-                    x='Equipo',
-                    y='Conversión %',
-                    color='Conversión %',
-                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                    text='Conversión %'
-                )
-                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-                fig.update_layout(
-                    height=300,
-                    paper_bgcolor='#FFFFFF',
-                    plot_bgcolor='#FAFBFC',
-                    showlegend=False
-                )
-                st.plotly_chart(fig, use_container_width=True)
-            
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                st.markdown("**🏠 Oferta de Fibra por Equipo**")
-                fig = px.bar(
-                    df_comparativa,
-                    x='Equipo',
-                    y='Ofrece Fibra %',
-                    color='Ofrece Fibra %',
-                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                    text='Ofrece Fibra %'
-                )
-                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-                fig.update_layout(
-                    height=300,
-                    paper_bgcolor='#FFFFFF',
-                    plot_bgcolor='#FAFBFC',
-                    showlegend=False
-                )
-                st.plotly_chart(fig, use_container_width=True)
-            
-            with col2:
-                st.markdown("**📱 Oferta de Planes por Equipo**")
-                fig = px.bar(
-                    df_comparativa,
-                    x='Equipo',
-                    y='Ofrece Plan %',
-                    color='Ofrece Plan %',
-                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                    text='Ofrece Plan %'
-                )
-                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
-                fig.update_layout(
-                    height=300,
-                    paper_bgcolor='#FFFFFF',
-                    plot_bgcolor='#FAFBFC',
-                    showlegend=False
-                )
-                st.plotly_chart(fig, use_container_width=True)
+                
+                st.markdown("---")
+                
+                # Gráficos comparativos
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("**📊 Puntaje por Equipo**")
+                    fig = px.bar(
+                        df_comparativa,
+                        x='Equipo',
+                        y='Puntaje',
+                        color='Puntaje',
+                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                        text='Puntaje'
+                    )
+                    fig.update_traces(texttemplate='%{text:.1f}', textposition='outside')
+                    fig.update_layout(
+                        height=300,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        showlegend=False,
+                        font=dict(color="#000000")
+                    )
+                    fig.update_xaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+
+                    fig.update_yaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+                    fig.update_yaxes(range=[0, df_comparativa['Puntaje'].max() + 10])
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    st.markdown("**💰 Conversión por Equipo**")
+                    fig = px.bar(
+                        df_comparativa,
+                        x='Equipo',
+                        y='Conversión %',
+                        color='Conversión %',
+                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                        text='Conversión %'
+                    )
+                    fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                    fig.update_layout(
+                        height=300,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        showlegend=False,
+                        font=dict(color="#000000")
+                    )
+                    fig.update_xaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+
+                    fig.update_yaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+                    fig.update_yaxes(range=[0, df_comparativa['Conversión %'].max() + 5])
+
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("**🏠 Oferta de Fibra por Equipo**")
+                    fig = px.bar(
+                        df_comparativa,
+                        x='Equipo',
+                        y='Ofrece Fibra %',
+                        color='Ofrece Fibra %',
+                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                        text='Ofrece Fibra %'
+                    )
+                    fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                    fig.update_layout(
+                        height=300,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        showlegend=False,
+                        font=dict(color="#000000")
+                    )
+                    fig.update_xaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+
+                    fig.update_yaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+                    fig.update_yaxes(range=[0, df_comparativa['Ofrece Fibra %'].max() + 5])
+
+                    st.plotly_chart(fig, use_container_width=True)
+                
+                with col2:
+                    st.markdown("**📱 Oferta de Planes por Equipo**")
+                    fig = px.bar(
+                        df_comparativa,
+                        x='Equipo',
+                        y='Ofrece Plan %',
+                        color='Ofrece Plan %',
+                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                        text='Ofrece Plan %'
+                    )
+                    fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                    fig.update_layout(
+                        height=300,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FAFBFC',
+                        showlegend=False,
+                        font=dict(color="#000000")
+                    )
+                    fig.update_xaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+
+                    fig.update_yaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+                    fig.update_yaxes(range=[0, df_comparativa['Ofrece Plan %'].max() + 5])
+
+                    st.plotly_chart(fig, use_container_width=True)
             
             # Gráfico radar comparativo
-            st.markdown("---")
-            st.markdown('<p class="section-header">🎯 Radar de Rendimiento</p>', unsafe_allow_html=True)
+            #st.markdown("---")
+            #st.markdown('<p class="section-header">🎯 Radar de Rendimiento</p>', unsafe_allow_html=True)
             
-            categorias = ['Puntaje IA', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %', 'Quejas Resueltas %']
+            #categorias = ['Puntaje', 'Conversión %', 'Ofrece Fibra %', 'Ofrece Plan %', 'Quejas Resueltas %']
             
-            fig = go.Figure()
+            #fig = go.Figure()
             
-            colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
+            #colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6']
             
-            for i, equipo in enumerate(equipos_comparar):
-                eq_data = df_comparativa[df_comparativa['Equipo'] == equipo].iloc[0]
-                valores = [eq_data[cat] for cat in categorias]
-                valores.append(valores[0])  # Cerrar el radar
+            #for i, equipo in enumerate(equipos_comparar):
+            #    eq_data = df_comparativa[df_comparativa['Equipo'] == equipo].iloc[0]
+            #    valores = [eq_data[cat] for cat in categorias]
+            #    valores.append(valores[0])  # Cerrar el radar
                 
-                fig.add_trace(go.Scatterpolar(
-                    r=valores,
-                    theta=categorias + [categorias[0]],
-                    fill='toself',
-                    name=equipo,
-                    line_color=colors[i % len(colors)],
-                    opacity=0.7
-                ))
+            #    fig.add_trace(go.Scatterpolar(
+            #        r=valores,
+            #        theta=categorias + [categorias[0]],
+            #        fill='toself',
+            #        name=equipo,
+            #        line_color=colors[i % len(colors)],
+            #        opacity=0.7
+            #    ))
             
-            fig.update_layout(
-                polar=dict(
-                    radialaxis=dict(
-                        visible=True,
-                        range=[0, 100]
-                    )
-                ),
-                showlegend=True,
-                height=450,
-                paper_bgcolor='#FFFFFF',
-                legend=dict(
-                    orientation='h',
-                    yanchor='bottom',
-                    y=-0.2,
-                    xanchor='center',
-                    x=0.5
-                )
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            #fig.update_layout(
+            #    polar=dict(
+            #        radialaxis=dict(
+            #            visible=True,
+            #            range=[0, 100]
+            #        )
+            #    ),
+            #    showlegend=True,
+            #    height=450,
+            #    paper_bgcolor='#FFFFFF',
+            #    legend=dict(
+            #        orientation='h',
+            #        yanchor='bottom',
+            #        y=-0.2,
+            #        xanchor='center',
+            #        x=0.5
+            #    )
+            #)
+            #st.plotly_chart(fig, use_container_width=True)
             
             # Ranking final
             st.markdown("---")
@@ -5578,25 +5704,25 @@ def pagina_analisis_equipos(datos):
             
             # Calcular score general (promedio de todas las métricas)
             df_comparativa['Score General'] = (
-                df_comparativa['Puntaje IA'] + 
+                df_comparativa['Puntaje'] + 
                 df_comparativa['Conversión %'] + 
                 df_comparativa['Ofrece Fibra %'] + 
-                df_comparativa['Ofrece Plan %'] + 
-                df_comparativa['Quejas Resueltas %']
-            ) / 5
+                df_comparativa['Ofrece Plan %']
+            ) / 4
             
             df_ranking = df_comparativa[['Equipo', 'Score General']].sort_values('Score General', ascending=False)
             
             for idx, row in df_ranking.iterrows():
                 posicion = df_ranking.index.tolist().index(idx) + 1
                 medalla = "🥇" if posicion == 1 else "🥈" if posicion == 2 else "🥉" if posicion == 3 else f"#{posicion}"
-                color = "#FFD700" if posicion == 1 else "#C0C0C0" if posicion == 2 else "#CD7F32" if posicion == 3 else "#94A3B8"
-                
+                color = "#FFD700" if posicion == 1 else "#C0C0C0" if posicion == 2 else "#CD7F32" if posicion == 3 else "#000000"
+                color_medalla = "#000000" if posicion > 3 else color
+
                 st.markdown(f"""
                 <div style='background: linear-gradient(90deg, {color}22, #FFFFFF); padding: 15px 20px; 
                             border-radius: 10px; margin: 8px 0; border-left: 4px solid {color};
                             display: flex; justify-content: space-between; align-items: center;'>
-                    <span style='font-size: 1.5rem;'>{medalla}</span>
+                    <span style='font-size: 1.5rem; color: {color_medalla};'>{medalla}</span>
                     <strong style='color: #1E293B; font-size: 1.1rem;'>{row['Equipo']}</strong>
                     <span style='background: {color}; color: {"#000" if posicion <= 2 else "#FFF"}; 
                                  padding: 5px 15px; border-radius: 20px; font-weight: bold;'>
@@ -5624,7 +5750,7 @@ def pagina_evaluaciones_gemini(datos):
     
     # Verificar datos
     if 'evaluaciones_gemini_df' not in datos:
-        st.warning("⚠️ No se encontraron evaluaciones de IA disponibles.")
+        st.warning("⚠️ No se encontraron evaluaciones de disponibles.")
         st.info("💡 Los datos de evaluación no están disponibles actualmente.")
         
         # Mostrar progreso si existe el archivo parcial
@@ -5730,7 +5856,7 @@ def pagina_evaluaciones_gemini(datos):
         # Vendedores solo ven sus evaluaciones individuales
         tab1, tab2 = st.tabs(["📊 Mi Rendimiento", "🔍 Detalle de Evaluaciones"])
     else:
-        tab1, tab2, tab3, tab4 = st.tabs(["📊 Resumen Ejecutivo", "👤 Análisis por Vendedor", "🎯 Indicadores de Calidad", "🔍 Detalle de Evaluaciones"])
+        tab1, tab2, tab4 = st.tabs(["📊 Resumen Ejecutivo", "👤 Análisis por Vendedor", "🔍 Detalle de Evaluaciones"])
     
     with tab1:
         # =============================================================================
@@ -5754,7 +5880,7 @@ def pagina_evaluaciones_gemini(datos):
             color = "🔴" if puntaje_promedio < 40 else "🟡" if puntaje_promedio < 60 else "🟢"
             st.metric(f"{color} Índice de Calidad", f"{puntaje_promedio:.1f}/100")
         with col3:
-            excelentes = len(df[df['puntaje_total'] >= 80])
+            excelentes = (df['rango_puntaje'] == 'Excelente (81-100)').sum()
             st.metric("🌟 Rendimiento Excelente", f"{excelentes:,} ({excelentes/total*100:.1f}%)")
         with col4:
             criticos = len(df[df['puntaje_total'] <= 20])
@@ -5782,11 +5908,7 @@ def pagina_evaluaciones_gemini(datos):
                 title_font=dict(color='#1E3A5F', size=16, family='Arial Black'),
                 legend=dict(font=dict(color='#1E293B', size=12))
             )
-            fig.update_traces(
-                textfont=dict(color='#FFFFFF', size=13),
-                textinfo='percent+label',
-                insidetextorientation='radial'
-            )
+            fig.update_traces(textinfo="none")
             st.plotly_chart(fig, use_container_width=True)
         
         # Ranking de agentes resumen
@@ -5811,11 +5933,9 @@ def pagina_evaluaciones_gemini(datos):
                     x='Puntaje_Prom',
                     y='agente',
                     orientation='h',
-                    color='Puntaje_Prom',
-                    color_continuous_scale='Greens',
                     text='Puntaje_Prom'
                 )
-                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_traces(marker_color="#27AE60", texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
                 fig.update_layout(
                     height=350, 
                     paper_bgcolor='#FFFFFF', 
@@ -5824,7 +5944,7 @@ def pagina_evaluaciones_gemini(datos):
                     yaxis={'categoryorder': 'total ascending'},
                     font=dict(color='#1E293B', size=11)
                 )
-                fig.update_xaxes(tickfont=dict(color='#1E293B', size=10))
+                fig.update_xaxes(range=[0, 100], tickfont=dict(color='#1E293B', size=10))
                 fig.update_yaxes(tickfont=dict(color='#1E293B', size=10))
                 st.plotly_chart(fig, use_container_width=True)
             
@@ -5836,11 +5956,9 @@ def pagina_evaluaciones_gemini(datos):
                     x='Puntaje_Prom',
                     y='agente',
                     orientation='h',
-                    color='Puntaje_Prom',
-                    color_continuous_scale='Reds_r',
                     text='Puntaje_Prom'
                 )
-                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_traces(marker_color="#E74C3C", texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
                 fig.update_layout(
                     height=350, 
                     paper_bgcolor='#FFFFFF', 
@@ -5849,9 +5967,131 @@ def pagina_evaluaciones_gemini(datos):
                     yaxis={'categoryorder': 'total descending'},
                     font=dict(color='#1E293B', size=11)
                 )
-                fig.update_xaxes(tickfont=dict(color='#1E293B', size=10))
+                fig.update_xaxes(range=[0, 100], tickfont=dict(color='#1E293B', size=10))
                 fig.update_yaxes(tickfont=dict(color='#1E293B', size=10))
                 st.plotly_chart(fig, use_container_width=True)
+            
+            # =============================================================================
+            # ANÁLISIS DETALLADO POR CRITERIO (RESERVADO)
+            # =============================================================================
+
+            # Calcular promedios por criterio
+            promedios = {}
+            for c in criterios:
+                if c in df.columns:
+                    promedios[criterios_nombres.get(c, c)] = pd.to_numeric(df[c], errors="coerce").mean()
+
+            if promedios:
+                df_criterios = pd.DataFrame({
+                    'Criterio': list(promedios.keys()),
+                    'Puntaje': list(promedios.values())
+                }).sort_values('Puntaje', ascending=True)
+
+                col1, col2 = st.columns([2, 1])
+
+                with col1:
+                    fig = px.bar(
+                        df_criterios,
+                        y='Criterio',
+                        x='Puntaje',
+                        orientation='h',
+                        title="Puntaje Promedio por Criterio",
+                        color='Puntaje',
+                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
+                        range_color=[0, 100]
+                    )
+                    fig.update_layout(
+                        height=450,
+                        paper_bgcolor='#FFFFFF',
+                        plot_bgcolor='#FFFFFF',
+                        showlegend=False,
+                        font=dict(color="#000000"),
+                        title=dict(
+                            text="Puntaje Promedio por Criterio",
+                            font=dict(color="#000000", size=16)
+                        )  
+                    )
+                    fig.update_xaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+                    fig.update_yaxes(
+                        tickfont=dict(color="#000000"),
+                        title=dict(font=dict(color="#000000"))
+                    )
+
+                    fig.add_vline(x=50, line_dash="dash", line_color="gray", annotation_text="Meta: 50")
+                    st.plotly_chart(fig, use_container_width=True)
+
+                with col2:
+                    st.markdown("**📋 Detalle por Criterio:**")
+                    for criterio, puntaje in sorted(promedios.items(), key=lambda x: -x[1]):
+                        emoji = "🟢" if puntaje >= 50 else "🟡" if puntaje >= 30 else "🔴"
+                        st.markdown(f"{emoji} **{criterio}**: {puntaje:.1f}/100")
+
+            # =============================================================================
+            # ÁREAS DE MEJORA (RESERVADO)
+            # =============================================================================
+
+            if 'areas_mejora' in df.columns:
+                from collections import Counter
+                all_areas = []
+
+                for areas in df['areas_mejora'].dropna():
+                    if isinstance(areas, str):
+                        for area in areas.split(','):
+                            area = area.strip().strip('"').strip("'").strip('[').strip(']')
+                            if area:
+                                all_areas.append(area)
+
+                if all_areas:
+                    area_counts = Counter(all_areas)
+                    top_areas = area_counts.most_common(15)
+
+                    total = sum(area_counts.values())
+
+                    col1, col2 = st.columns([2, 1])
+
+                    with col1:
+                        df_areas = pd.DataFrame(top_areas, columns=['Área', 'Frecuencia'])
+                        fig = px.bar(
+                            df_areas,
+                            x='Frecuencia',
+                            y='Área',
+                            orientation='h',
+                            title="Top 15 Áreas de Mejora Identificadas",
+                            color='Frecuencia',
+                            color_continuous_scale='Reds',
+                            range_color=[0, df_areas['Frecuencia'].max()]
+                        )
+                        fig.update_layout(
+                            height=450,
+                            paper_bgcolor='#FFFFFF',
+                            plot_bgcolor='#FFFFFF',
+                            yaxis={'categoryorder': 'total ascending'},
+                            title=dict(
+                              text="Top 15 Áreas de Mejora Identificadas",
+                                font=dict(color="#000000", size=16)
+                            )
+                        )
+                        
+                        fig.update_xaxes(
+                            tickfont=dict(color="#000000"),
+                            title=dict(font=dict(color="#000000"))
+                        )
+
+                        fig.update_yaxes(
+                            tickfont=dict(color="#000000"),
+                            title=dict(font=dict(color="#000000"))
+                        )
+                        
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    with col2:
+                        st.markdown("**🎯 Prioridades de Capacitación:**")
+                        for i, (area, freq) in enumerate(top_areas[:10], 1):
+                            pct = freq / total * 100
+                            st.markdown(f"{i}. **{area}**: {freq:,} ({pct:.1f}%)")
     
     # El tab2 solo existe para admin y supervisor (vendedores tienen tabs diferentes)
     if permisos['rol'] != 'vendedor':
@@ -6227,102 +6467,31 @@ def pagina_evaluaciones_gemini(datos):
                                 df_areas,
                                 x='Frecuencia',
                                 y='Área',
-                                orientation='h',
-                                color='Frecuencia',
-                                color_continuous_scale='Oranges'
+                                orientation='h'
                             )
+                            fig.update_traces(marker_color="#F39C12")
                             fig.update_layout(height=350, paper_bgcolor='#FFFFFF', 
                                               yaxis={'categoryorder': 'total ascending'})
+                            
+                            fig.update_xaxes(
+                                tickfont=dict(color="#000000"),
+                                title=dict(font=dict(color="#000000"))
+                            )
+
+                            fig.update_yaxes(
+                                tickfont=dict(color="#000000"),
+                                title=dict(font=dict(color="#000000"))
+                            )
+                            
                             st.plotly_chart(fig, use_container_width=True)
-                        
+
                         with col2:
                             st.markdown("**📝 Plan de Capacitación Sugerido:**")
                             for i, (area, freq) in enumerate(top_areas_agente[:5], 1):
                                 st.markdown(f"{i}. **{area}** ({freq} veces)")
     
     # Tab3 y Tab4 solo existen para admin y supervisor
-    if permisos['rol'] != 'vendedor':
-        with tab3:
-            # =============================================================================
-            # ANÁLISIS DETALLADO POR CRITERIO
-            # =============================================================================
-            st.markdown('<p class="section-header">🎯 Análisis Detallado por Criterio de Evaluación</p>', unsafe_allow_html=True)
-        
-        # Calcular promedios por criterio
-        promedios = {}
-        for c in criterios:
-            if c in df.columns:
-                promedios[criterios_nombres.get(c, c)] = df[c].mean()
-        
-        if promedios:
-            # Gráfico de barras horizontal
-            df_criterios = pd.DataFrame({
-                'Criterio': list(promedios.keys()),
-                'Puntaje': list(promedios.values())
-            }).sort_values('Puntaje', ascending=True)
-            
-            col1, col2 = st.columns([2, 1])
-            
-            with col1:
-                fig = px.bar(
-                    df_criterios,
-                    y='Criterio',
-                    x='Puntaje',
-                    orientation='h',
-                    title="Puntaje Promedio por Criterio",
-                    color='Puntaje',
-                    color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60']
-                )
-                fig.update_layout(height=450, paper_bgcolor='#FFFFFF', showlegend=False)
-                fig.add_vline(x=50, line_dash="dash", line_color="gray", annotation_text="Meta: 50")
-                st.plotly_chart(fig, use_container_width=True)
-            
-            with col2:
-                st.markdown("**📋 Detalle por Criterio:**")
-                for criterio, puntaje in sorted(promedios.items(), key=lambda x: -x[1]):
-                    emoji = "🟢" if puntaje >= 50 else "🟡" if puntaje >= 30 else "🔴"
-                    st.markdown(f"{emoji} **{criterio}**: {puntaje:.1f}/100")
-        
-        # Áreas de mejora más frecuentes
-        st.markdown("---")
-        st.markdown('<p class="section-header">📝 Áreas de Mejora Identificadas por IA</p>', unsafe_allow_html=True)
-        
-        if 'areas_mejora' in df.columns:
-            from collections import Counter
-            all_areas = []
-            for areas in df['areas_mejora'].dropna():
-                if isinstance(areas, str):
-                    for area in areas.split(','):
-                        area = area.strip().strip('"').strip("'").strip('[').strip(']')
-                        if area:
-                            all_areas.append(area)
-            
-            if all_areas:
-                area_counts = Counter(all_areas)
-                top_areas = area_counts.most_common(15)
-                
-                col1, col2 = st.columns([2, 1])
-                
-                with col1:
-                    df_areas = pd.DataFrame(top_areas, columns=['Área', 'Frecuencia'])
-                    fig = px.bar(
-                        df_areas,
-                        x='Frecuencia',
-                        y='Área',
-                        orientation='h',
-                        title="Top 15 Áreas de Mejora Identificadas",
-                        color='Frecuencia',
-                        color_continuous_scale='Reds'
-                    )
-                    fig.update_layout(height=450, paper_bgcolor='#FFFFFF', yaxis={'categoryorder': 'total ascending'})
-                    st.plotly_chart(fig, use_container_width=True)
-                
-                with col2:
-                    st.markdown("**🎯 Prioridades de Capacitación:**")
-                    for i, (area, freq) in enumerate(top_areas[:10], 1):
-                        pct = freq / total * 100
-                        st.markdown(f"{i}. **{area}**: {freq:,} ({pct:.1f}%)")
-    
+    if permisos['rol'] != 'vendedor':   
         with tab4:
             # =============================================================================
             # EXPLORADOR DE EVALUACIONES (Admin/Supervisor)
@@ -6814,10 +6983,8 @@ def pagina_comparativa_periodos(datos):
         "👥 Evolución por Agente",
         "📋 Detalle Completo"
     ])
-    
     with tab1:
         st.markdown("### 📊 Distribución por Rango de Puntaje")
-        
         col1, col2 = st.columns(2)
         
         # Clasificar por rangos
@@ -6836,9 +7003,8 @@ def pagina_comparativa_periodos(datos):
             fig1 = px.pie(
                 values=rango1.values,
                 names=rango1.index,
-                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
-            )
-            fig1.update_layout(height=350, paper_bgcolor='#FFFFFF')
+                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71'])
+            fig1.update_layout(height=350, paper_bgcolor='#FFFFFF', font=dict(color="#000000"),legend=dict(font=dict(color="#000000")))
             fig1.update_traces(textinfo='percent+label', textfont=dict(size=12))
             st.plotly_chart(fig1, use_container_width=True)
         
@@ -6848,9 +7014,8 @@ def pagina_comparativa_periodos(datos):
             fig2 = px.pie(
                 values=rango2.values,
                 names=rango2.index,
-                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71']
-            )
-            fig2.update_layout(height=350, paper_bgcolor='#FFFFFF')
+                color_discrete_sequence=['#E74C3C', '#F39C12', '#F1C40F', '#27AE60', '#2ECC71'])
+            fig2.update_layout(height=350, paper_bgcolor='#FFFFFF', font=dict(color="#000000"),legend=dict(font=dict(color="#000000")))
             fig2.update_traces(textinfo='percent+label', textfont=dict(size=12))
             st.plotly_chart(fig2, use_container_width=True)
     
@@ -6912,9 +7077,26 @@ def pagina_comparativa_periodos(datos):
             paper_bgcolor='#FFFFFF',
             plot_bgcolor='#FAFBFC',
             xaxis_tickangle=-45,
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="center", x=0.5)
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="center",
+                x=0.5,
+                font=dict(color="#000000")
+            ),
+            font=dict(color="#000000")
         )
-        fig.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+        fig.update_xaxes(
+            tickfont=dict(color="#000000"),
+            title=dict(font=dict(color="#000000"))
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="#000000"),
+            title=dict(font=dict(color="#000000"))
+        )
+        fig.add_hline(y=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80", annotation_font_color="#000000")
         
         st.plotly_chart(fig, use_container_width=True)
         
@@ -8927,8 +9109,7 @@ def pagina_resumen_corporativo(datos):
             key="tipo_resumen_corporativo"
         )
     
-    st.markdown("---")
-    
+    st.markdown("--- ")
     # =========================================================================
     # RESUMEN DE EQUIPO
     # =========================================================================
@@ -8992,7 +9173,7 @@ def pagina_resumen_corporativo(datos):
                     
                     with col1:
                         puntaje_ia = comparativa.get('puntaje_ia', {}).get('equipo', 0)
-                        st.metric("⭐ Puntaje IA", f"{puntaje_ia:.1f}")
+                        st.metric("⭐ Puntaje", f"{puntaje_ia:.1f}")
                     
                     with col2:
                         conversion = comparativa.get('conversion', {}).get('equipo', 0)
@@ -9032,8 +9213,10 @@ def pagina_resumen_corporativo(datos):
                         fig_bar.update_traces(
                             texttemplate='%{text:.1f}',
                             textposition='outside',
-                            textfont_size=12
+                            textfont_size=12,
+                            textfont=dict(color="#000000")
                         )
+
                         fig_bar.update_layout(
                             height=450,
                             showlegend=False,
@@ -9042,9 +9225,28 @@ def pagina_resumen_corporativo(datos):
                             yaxis={'categoryorder': 'total ascending'},
                             xaxis={'range': [0, 100]},
                             coloraxis_showscale=False,
-                            margin=dict(l=10, r=60, t=30, b=30)
+                            margin=dict(l=10, r=60, t=30, b=30),
+                            font=dict(color="#000000")
                         )
-                        fig_bar.add_vline(x=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+
+                        fig_bar.update_xaxes(
+                            tickfont=dict(color="#000000"),
+                            title=dict(font=dict(color="#000000"))
+                        )
+
+                        fig_bar.update_yaxes(
+                            tickfont=dict(color="#000000"),
+                            title=dict(font=dict(color="#000000"))
+                        )
+
+                        fig_bar.add_vline(
+                            x=80,
+                            line_dash="dot",
+                            line_color="#10B981",
+                            annotation_text="Meta: 80",
+                            annotation_font_color="#000000"
+                        )
+
                         st.plotly_chart(fig_bar, use_container_width=True)
                     
                     st.markdown("---")
@@ -9083,39 +9285,58 @@ def pagina_resumen_corporativo(datos):
                         
                         # Fortalezas y Áreas de Mejora
                         col_fm1, col_fm2 = st.columns(2)
-                        
+
+                        # =========================
+                        # Obtener datos
+                        # =========================
+                        fortalezas = coaching_ia.get('fortalezas_equipo', [])
+                        mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
+
+                        # =========================
+                        # Normalizar áreas de fortalezas (lower + strip)
+                        # =========================
+                        areas_fortalezas = {
+                            f.get("area", "").strip().lower()
+                            for f in fortalezas
+                            if f.get("area")
+                        }
+
+                        # =========================
+                        # Filtrar mejoras que NO estén en fortalezas
+                        # =========================
+                        mejoras_filtradas = [
+                            m for m in mejoras
+                            if m.get("area", "").strip().lower() not in areas_fortalezas
+                        ]
+
                         with col_fm1:
                             st.markdown("#### 💪 Fortalezas del Equipo")
-                            fortalezas = coaching_ia.get('fortalezas_equipo', [])
-                            if fortalezas:
-                                for fort in fortalezas[:3]:  # Top 3
-                                    st.markdown(f"""
-                                    <div style='background: #ECFDF5; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #10B981;'>
-                                        <strong style='color: #065F46;'>{fort.get('area', 'N/A')}</strong>
-                                        <p style='margin: 5px 0 0 0; color: #047857; font-size: 0.85rem;'>{fort.get('evidencia', '')}</p>
-                                    </div>
-                                    """, unsafe_allow_html=True)
-                            else:
-                                st.info("No hay fortalezas destacadas registradas.")
-                        
+
+                            for fort in fortalezas:
+                                st.markdown(f"""
+                                <div style='background: #ECFDF5; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #10B981;'>
+                                    <strong style='color: #065F46;'>{fort.get('area', 'N/A')}</strong>
+                                    <p style='margin: 5px 0; color: #047857; font-size: 0.9rem;'>{fort.get('evidencia', '')}</p>
+                                    <p style='margin: 0; color: #064E3B; font-size: 0.85rem;'><em>Impacto: {fort.get('impacto', '')}</em></p>
+                                </div>
+                                """, unsafe_allow_html=True)
+
                         with col_fm2:
                             st.markdown("#### 🎯 Áreas de Mejora Prioritarias")
-                            mejoras = coaching_ia.get('areas_mejora_prioritarias', [])
-                            if mejoras:
-                                for mejora in mejoras[:3]:  # Top 3
-                                    st.markdown(f"""
-                                    <div style='background: #FEF3C7; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #F59E0B;'>
-                                        <strong style='color: #92400E;'>{mejora.get('area', 'N/A')}</strong>
-                                        <p style='margin: 5px 0 0 0; color: #B45309; font-size: 0.85rem;'>{mejora.get('situacion_actual', '')}</p>
-                                    </div>
-                                    """, unsafe_allow_html=True)
-                            else:
-                                st.info("No hay áreas de mejora registradas.")
+
+                            for mejora in mejoras_filtradas:
+                                st.markdown(f"""
+                                <div style='background: #FEF3C7; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 4px solid #F59E0B;'>
+                                    <strong style='color: #92400E;'>{mejora.get('area', 'N/A')}</strong>
+                                    <p style='margin: 5px 0; color: #B45309; font-size: 0.9rem;'>{mejora.get('situacion_actual', '')}</p>
+                                    <p style='margin: 0; color: #78350F; font-size: 0.85rem;'><strong>Meta:</strong> {mejora.get('meta', '')}</p>
+                                </div>
+                                """, unsafe_allow_html=True)
                         
                         st.markdown("---")
                         
                         # Plan de Acción del Equipo
-                        st.markdown("#### 📝 Plan de Acción del Equipo")
+                        st.markdown("#### 📝 Plan de Acción del Equipo- EN PROCESO")
                         plan_accion = coaching_ia.get('plan_accion_equipo', [])
                         
                         if plan_accion:
@@ -9217,7 +9438,7 @@ def pagina_resumen_corporativo(datos):
             
             with col1:
                 puntaje_ia = comparativa.get('puntaje_ia', {}).get('agente', 0)
-                st.metric("⭐ Puntaje IA", f"{puntaje_ia:.1f}")
+                st.metric("⭐ Puntaje", f"{puntaje_ia:.1f}")
             
             with col2:
                 conversion = comparativa.get('conversion', {}).get('agente', 0)
@@ -9256,8 +9477,10 @@ def pagina_resumen_corporativo(datos):
                 fig_bar.update_traces(
                     texttemplate='%{text:.1f}',
                     textposition='outside',
-                    textfont_size=12
+                    textfont_size=12,
+                    textfont=dict(color="#000000")
                 )
+
                 fig_bar.update_layout(
                     height=450,
                     showlegend=False,
@@ -9266,9 +9489,27 @@ def pagina_resumen_corporativo(datos):
                     yaxis={'categoryorder': 'total ascending'},
                     xaxis={'range': [0, 100]},
                     coloraxis_showscale=False,
-                    margin=dict(l=10, r=60, t=30, b=30)
+                    margin=dict(l=10, r=60, t=30, b=30),
+                    font=dict(color="#000000")
                 )
-                fig_bar.add_vline(x=80, line_dash="dot", line_color="#10B981", annotation_text="Meta: 80")
+
+                fig_bar.update_xaxes(
+                    tickfont=dict(color="#000000"),
+                    title=dict(font=dict(color="#000000"))
+                )
+
+                fig_bar.update_yaxes(
+                    tickfont=dict(color="#000000"),
+                    title=dict(font=dict(color="#000000"))
+                )
+
+                fig_bar.add_vline(
+                    x=80,
+                    line_dash="dot",
+                    line_color="#10B981",
+                    annotation_text="Meta: 80",
+                    annotation_font_color="#000000"
+                )
                 st.plotly_chart(fig_bar, use_container_width=True)
             
             st.markdown("---")
@@ -9318,7 +9559,7 @@ def main():
             datos = cargar_datos()
     
     if 'transcripciones' not in datos or not datos['transcripciones']:
-        st.error("No se encontraron transcripciones procesadas. Asegúrate de tener archivos en 'total_transcripciones/procesados/'")
+        st.error("No se encontraron transcripciones procesadas. Asegúrate de tener archivos evaluados en 'reportes/evaluaciones_gemini.csv' y 'transcripts/mejorados_gemini/'")
         return
     
     # Crear DataFrame de llamadas
@@ -9380,7 +9621,7 @@ def main():
         # Admin: Acceso completo
         paginas = {
             "📱 Análisis de Productos": "planes",
-            "⚠️ Gestión de Reclamos": "quejas",
+            # "⚠️ Gestión de Reclamos": "quejas",
             "🤖 Evaluación Automatizada": "gemini",
             "🎯 Planes de Mejora": "coaching",
             "👥 Análisis de Equipos": "equipos",

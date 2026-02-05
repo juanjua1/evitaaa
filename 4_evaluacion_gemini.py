@@ -39,7 +39,8 @@ model = genai.GenerativeModel("gemini-2.0-flash-lite")
 
 # Rutas de archivos y carpetas - RUTAS LOCALES
 BASE_DIR = Path(__file__).parent
-CARPETA_TRANSCRIPCIONES = BASE_DIR / "total_transcripciones" / "procesados"
+# USAR ARCHIVOS MEJORADOS POR GEMINI (con roles AGENTE/CLIENTE ya identificados)
+CARPETA_TRANSCRIPCIONES = BASE_DIR / "transcripts" / "mejorados_gemini"
 CARPETA_REGLAS = BASE_DIR / "reglas"
 CSV_CLASIFICACION = BASE_DIR / "reportes" / "clasificacion_completa" / "clasificacion_completa.csv"
 CSV_CONSOLIDADO = BASE_DIR / "reportes" / "para_gemini" / "datos_consolidados_para_gemini.csv"
@@ -48,7 +49,7 @@ ARCHIVO_PROCESADOS = BASE_DIR / "reportes" / "gemini_procesados.json"
 LOG_ERRORES = BASE_DIR / "reportes" / "errores_gemini.log"
 
 # Configuración de rate limiting
-DELAY_ENTRE_LLAMADAS = 2  # segundos entre llamadas a Gemini
+DELAY_ENTRE_LLAMADAS = 1.5  # segundos entre llamadas a Gemini
 MAX_REINTENTOS = 3
 
 # =============================================================================
@@ -130,19 +131,31 @@ def cargar_clasificacion_previa() -> Optional[pd.DataFrame]:
 def construir_dialogo(data: Dict) -> str:
     """Construye representación textual del diálogo."""
     dialogo = []
-    conversacion = data.get("conversacion", [])
     
-    for seg in conversacion:
-        # Usar 'rol' si está disponible (archivos nuevos), sino usar 'hablante'
-        hablante = seg.get("rol", seg.get("hablante", "Desconocido"))
-        # Normalizar nombres
-        if hablante.upper() in ['AGENTE', 'VENDEDOR']:
-            hablante = "Agente"
-        elif hablante.upper() in ['CLIENTE', 'USUARIO']:
-            hablante = "Cliente"
-        texto = seg.get("texto", "").strip()
-        if texto:
-            dialogo.append(f"{hablante}: {texto}")
+    # Usar transcripcion_mejorada de Gemini si está disponible
+    mejora_gemini = data.get("mejora_gemini", {})
+    if mejora_gemini and "transcripcion_mejorada" in mejora_gemini:
+        for seg in mejora_gemini["transcripcion_mejorada"]:
+            rol = seg.get("rol", "Desconocido")
+            if rol.upper() in ['AGENTE', 'VENDEDOR']:
+                rol = "Agente"
+            elif rol.upper() in ['CLIENTE', 'USUARIO']:
+                rol = "Cliente"
+            texto = seg.get("texto", "").strip()
+            if texto:
+                dialogo.append(f"{rol}: {texto}")
+    else:
+        # Fallback a conversación original
+        conversacion = data.get("conversacion", [])
+        for seg in conversacion:
+            hablante = seg.get("rol", seg.get("hablante", "Desconocido"))
+            if hablante.upper() in ['AGENTE', 'VENDEDOR']:
+                hablante = "Agente"
+            elif hablante.upper() in ['CLIENTE', 'USUARIO']:
+                hablante = "Cliente"
+            texto = seg.get("texto", "").strip()
+            if texto:
+                dialogo.append(f"{hablante}: {texto}")
     
     return "\n".join(dialogo)
 
@@ -276,11 +289,21 @@ Devolvé SOLO este JSON (sin texto adicional, sin markdown):
     "empatia": {{"puntaje": 0, "comentario": ""}},
     "resolucion_problemas": {{"puntaje": 0, "comentario": ""}}
   }},
+  "productos_ofrecidos": {{
+    "primer_plan_ofrecido": "",
+    "se_ofrecio_fibra": false,
+    "planes_mencionados": []
+  }},
   "puntaje_total": 0,
   "resumen": "",
   "areas_mejora": [],
   "fortalezas": []
 }}
+
+IMPORTANTE sobre "productos_ofrecidos":
+- "primer_plan_ofrecido": El PRIMER plan que mencionó el agente (ej: "Plan 10GB", "Plan 20GB", etc.)
+- "se_ofrecio_fibra": true si mencionó fibra/internet hogar, false si no
+- "planes_mencionados": Lista de todos los planes que mencionó
 """
     
     for intento in range(MAX_REINTENTOS):
@@ -327,6 +350,7 @@ def guardar_resultado_csv(resultado: Dict, es_primera_vez: bool) -> None:
     try:
         # Aplanar la estructura
         evaluacion = resultado.get('evaluacion', {})
+        productos = resultado.get('productos_ofrecidos', {})
         
         fila = {
             'archivo': resultado.get('archivo', ''),
@@ -342,6 +366,9 @@ def guardar_resultado_csv(resultado: Dict, es_primera_vez: bool) -> None:
             'empatia': evaluacion.get('empatia', {}).get('puntaje', 0),
             'resolucion_problemas': evaluacion.get('resolucion_problemas', {}).get('puntaje', 0),
             'puntaje_total': resultado.get('puntaje_total', 0),
+            'primer_plan_ofrecido': productos.get('primer_plan_ofrecido', ''),
+            'se_ofrecio_fibra': productos.get('se_ofrecio_fibra', False),
+            'planes_mencionados': ', '.join(productos.get('planes_mencionados', [])),
             'resumen': resultado.get('resumen', ''),
             'areas_mejora': ', '.join(resultado.get('areas_mejora', [])),
             'fortalezas': ', '.join(resultado.get('fortalezas', [])),

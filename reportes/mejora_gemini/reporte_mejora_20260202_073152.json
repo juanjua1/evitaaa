@@ -1,0 +1,2423 @@
+{
+  "fecha_proceso": "2026-02-02T07:31:52.294324",
+  "modelo": "gemini-2.0-flash-lite",
+  "total_archivos": 5238,
+  "procesados_ok": 869,
+  "estadisticas": {
+    "ok": 869,
+    "calidad_REGULAR": 284,
+    "resultado_RECHAZO": 608,
+    "calidad_BUENA": 580,
+    "resultado_PENDIENTE": 189,
+    "error": 343,
+    "resultado_SIN_DECISION": 45,
+    "resultado_CORTE_CLIENTE": 17,
+    "calidad_MALA": 5,
+    "diarizacion_corregida": 6,
+    "resultado_VENTA_EXITOSA": 4,
+    "resultado_CORTE_AGENTE": 6
+  },
+  "detalles_errores": [
+    {
+      "archivo": "amza100_1_260128140718983_ACD_96235_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza100_1_260129111424795_ACD_54605_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza10_1_260128131516698_ACD_52213_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza10_1_260128132715660_ACD_85311_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza10_1_260128134812293_ACD_40701_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260126104956098_ACD_50751_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260126114259866_ACD_36585_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260126125257427_ACD_75599_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260127104109378_ACD_46337_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260127142344086_MIT_01958_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260127145218782_ACD_78721_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260128105933045_ACD_21285_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260128110830794_ACD_49123_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260128144713553_ACD_95097_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260129101116615_MIT_01980_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260129122851979_ACD_54617_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza12_1_260129123807855_ACD_69567_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260127111752949_ACD_79455_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260127140241577_ACD_29085_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260127143330850_ACD_25687_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260128120855359_ACD_20083_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260129102436756_MIT_01959_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza13_1_260129105618134_MIT_01947_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza14_1_260127132312147_ACD_11415_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza14_1_260128124312728_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza14_1_260129110944043_ACD_36303_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza14_1_260129130114463_ACD_29501_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260126105438894_ACD_68147_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260126120511106_ACD_94421_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260126140509518_ACD_11729_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260127121157470_ACD_50733_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260127124525386_ACD_97113_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260127140253579_ACD_29965_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260127143759040_MIT_01982_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260128100737041_MIT_01972_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260128102953744_MIT_01942_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza16_1_260128134812293_ACD_40707_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza18_1_260127105653774_MIT_01977_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza18_1_260127140258227_MIT_01946_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza18_1_260127145614540_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260126114051387_ACD_30483_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260127103216244_ACD_17313_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260127111907836_MIT_01936_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260127132916555_MIT_01981_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260127142956470_ACD_15013_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260127145442567_ACD_84943_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260129102831615_MIT_01951_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260129104143818_MIT_01988_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260129112701147_MIT_01941_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza19_1_260129131534209_MIT_01996_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126101503437_ACD_31485_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126103447443_ACD_96593_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126103832353_ACD_10071_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126110005396_ACD_88339_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126130456307_MIT_01952_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126131846797_ACD_58205_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260126140238718_ACD_03541_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127102340073_ACD_89387_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127111419625_ACD_66311_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127112549899_MIT_01978_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127113545305_ACD_42655_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127123229540_MIT_01992_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127135913696_ACD_17583_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260127144051731_ACD_45557_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260128110710207_ACD_44659_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260128111943508_ACD_84793_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260128130032122_ACD_12747_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260128134711146_ACD_37843_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260128141716744_MIT_01958_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129102307334_MIT_01951_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129102847537_MIT_01967_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129114125199_ACD_47595_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129130758132_ACD_52777_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129133301196_ACD_37841_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129135615306_ACD_15841_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza1_1_260129140839707_ACD_66853_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260126113650488_ACD_16967_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260126125445979_ACD_81429_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260126132513359_ACD_78813_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260126143347927_ACD_98157_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260127124500290_ACD_96591_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260127141823504_ACD_78795_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260127142451899_MIT_01986_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260128123342228_MIT_01995_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260128140654900_MIT_01972_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260129131342946_ACD_72415_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260129133720992_ACD_53405_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza20_1_260129141236350_MIT_01955_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260126133958432_MIT_01969_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260127114905876_ACD_92057_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260127144405540_MIT_01970_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260128111349822_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260128121346900_MIT_01989_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260129103237450_ACD_99587_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260129111934724_ACD_76711_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza21_1_260129113624850_MIT_01957_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260126103402169_ACD_94075_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260126114015372_ACD_28543_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260126142521803_ACD_75431_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127105632243_ACD_99289_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127111040719_ACD_52651_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127114125780_ACD_65801_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127120055104_ACD_26763_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127135939926_ACD_18951_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260127141529821_MIT_01976_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260128113608922_ACD_34943_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260129104923541_ACD_61123_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260129110717553_MIT_01950_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260129130534333_ACD_44587_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza22_1_260129134131447_ACD_67807_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260126111123113_ACD_27663_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260126125640505_ACD_86817_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260126143009031_ACD_88063_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127111848229_ACD_83019_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127120557180_ACD_37021_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127125626858_ACD_25501_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127134217989_ACD_67191_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127135823294_ACD_14851_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127141443347_ACD_68907_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260127142410276_ACD_96759_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260128104905590_ACD_88519_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260129112641177_ACD_99633_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260129123240654_ACD_60755_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260129124636109_ACD_85419_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260129132657897_MIT_01982_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza23_1_260129143151292_ACD_55953_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126102835530_ACD_76531_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126104739451_ACD_42449_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126105426807_MIT_01981_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126110922034_ACD_22233_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126114652767_ACD_47835_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126130350378_ACD_11027_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126135725796_ACD_84971_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260126144052741_ACD_14735_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260127111621317_ACD_73699_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260127130601292_ACD_57047_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128102848553_ACD_28273_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128105425285_ACD_05931_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128113818532_ACD_40737_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128124955070_ACD_80991_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128130149392_ACD_16421_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128131501656_ACD_51625_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128132655580_ACD_84171_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128135724814_ACD_66033_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128143403580_ACD_65327_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260128144041802_ACD_79681_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260129104049397_MIT_01986_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260129105130281_ACD_69045_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260129111635588_ACD_64403_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260129133400662_MIT_01981_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza24_1_260129145321542_ACD_39977_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260126104547657_ACD_35507_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260126131815695_ACD_56363_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260126133757579_ACD_17419_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260126140010135_ACD_94647_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260127115320336_MIT_01949_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260127120642453_ACD_38603_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260127142125719_ACD_88467_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260128101156923_ACD_73681_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260128124448439_ACD_66161_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260128125446404_ACD_96069_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260128130643576_ACD_30121_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260129111855647_MIT_01950_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260129133240140_ACD_36395_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza25_1_260129141642713_ACD_99197_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260126105352737_ACD_65235_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260126115815483_ACD_78767_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260126124621263_ACD_61447_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260126132548607_ACD_80541_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260127110332186_ACD_25567_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260127142819034_ACD_09875_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260128111447591_ACD_68237_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260128112110078_ACD_89471_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260128132528348_ACD_80209_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260128140724035_ACD_96369_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260129110346225_MIT_01998_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza26_1_260129114750522_ACD_70433_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260126113904037_ACD_24713_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260126114314971_ACD_37471_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260126121117870_ACD_06757_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260126124550171_ACD_60643_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260126145629250_ACD_61291_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260127103227118_MIT_01949_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260127120456951_ACD_34867_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260128101514989_ACD_84749_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260128135730807_ACD_66335_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260128144723589_ACD_95463_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129101222260_ACD_32655_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129112923020_ACD_08995_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129123512101_ACD_64561_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129124908034_ACD_90351_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129130926552_ACD_58215_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129132350360_ACD_06861_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza27_1_260129135736776_ACD_20791_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza28_1_260126140849850_ACD_25037_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza28_1_260127121030995_ACD_47671_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza28_1_260127125819669_ACD_31801_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza28_1_260127144916734_ACD_70589_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza28_1_260128111502711_ACD_69003_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260126105714244_MIT_01982_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260126115049926_ACD_58871_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127112859144_ACD_17353_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127113615180_MIT_01946_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127120019939_ACD_25267_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127125343029_ACD_16935_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127140109419_ACD_24063_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127141934071_MIT_01949_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260127145725203_ACD_91757_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260128120820110_ACD_18837_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260128142501792_ACD_47205_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260128145546468_ACD_13175_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129104426907_ACD_43279_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129114440162_MIT_01997_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129125121371_ACD_95743_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129134956065_ACD_95457_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129140655662_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza29_1_260129144551693_MIT_01953_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260127111847602_MIT_01954_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260127113426960_ACD_37343_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260128105023044_ACD_92811_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260128105928010_ACD_21059_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260128115454809_ACD_85309_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260128120627657_ACD_14549_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260129105115175_ACD_67905_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza2_1_260129114831746_ACD_72411_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza301_1_260128105400192_ACD_04015_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza302_1_260128112845088_ACD_13993_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza302_1_260129120741300_ACD_22609_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126105417840_ACD_66799_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126110609802_ACD_11719_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126111047451_ACD_26257_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126113121465_ACD_97657_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126120859153_ACD_02249_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126133302696_ACD_02417_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260126145933051_ACD_67787_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260127105128623_ACD_81777_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260127111454836_MIT_01998_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260127112217165_MIT_01965_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260127115722506_ACD_16669_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260127143345939_ACD_26455_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260128121657878_ACD_39347_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260128125456471_ACD_96637_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260128134029051_ACD_19857_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260129122736639_ACD_52375_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza306_1_260129131317751_ACD_71025_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260126115351688_ACD_66741_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260126131257745_ACD_39725_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260126132659074_ACD_84145_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260126134252961_ACD_33333_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260127110904099_ACD_46267_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260127125941136_ACD_36305_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260127152701508_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260127203629072_MIT_01999_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128103655815_ACD_51215_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128121652873_ACD_39213_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128132903034_ACD_90441_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128135515292_ACD_59751_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128141023871_ACD_08577_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260128145057287_ACD_03341_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129101310389_ACD_34915_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129104007279_ACD_25577_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129105250831_ACD_74415_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129110612209_MIT_01984_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129113748248_ACD_36307_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129123903109_ACD_71035_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129132232135_ACD_02107_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129133508334_MIT_01969_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129134740321_ACD_87763_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza30_1_260129143856155_ACD_85819_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126102207269_ACD_53805_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126103724195_ACD_06375_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126112727583_ACD_83267_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126130104714_MIT_01986_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126134202709_ACD_30653_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260126145012416_MIT_01967_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127105703431_ACD_00881_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127112037446_MIT_01997_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127121954615_ACD_71657_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127132024165_ACD_02609_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127143646572_ACD_34397_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260127171719336_MIT_01997_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260128112135211_ACD_91035_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260128135057801_ACD_48395_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260128142623325_ACD_50301_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260129105150377_ACD_70335_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260129131719500_ACD_84141_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260129143322069_ACD_61783_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza313_1_260129145125157_ACD_33067_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260126105644407_ACD_76099_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260126111128631_ACD_27933_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260126124412849_ACD_57509_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260126142410474_ACD_71605_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260127105729585_ACD_02615_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260127141352015_ACD_65821_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260127142445438_ACD_98385_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260128102613900_MIT_01972_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129102801405_ACD_85319_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129105904886_ACD_98281_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129114257669_ACD_53679_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129122501222_ACD_48745_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129124210241_ACD_77609_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza314_1_260129143038796_ACD_51369_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260126124817794_ACD_65051_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260126125338657_ACD_77715_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260126162543526_MIT_01985_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260127105607094_ACD_97327_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260127130158813_ACD_43819_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260127133545569_ACD_49455_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260127144736281_ACD_65727_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260127150011833_ACD_97953_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260128100534369_MIT_01969_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260128105350117_ACD_03633_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260128114629349_ACD_62465_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260128121937602_ACD_45633_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260128141944244_MIT_01980_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260129111333478_ACD_50925_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260129130815125_ACD_53813_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza316_1_260129132314236_ACD_04513_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260126104951054_ACD_50409_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260126105327575_ACD_64047_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260126125430887_ACD_80665_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260127132327266_ACD_12163_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260128112130204_ACD_90641_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260128121316543_ACD_30089_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260128131805874_ACD_60047_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260128135953683_ACD_73493_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129102720212_ACD_83085_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129111243124_ACD_47299_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129113320959_MIT_01966_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129125024241_ACD_92701_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129130534333_ACD_44585_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza31_1_260129135347277_ACD_07081_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126111149160_ACD_28847_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126134319125_ACD_34767_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126153500205_ACD_96195_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126154436450_ACD_04661_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126155312912_ACD_12029_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126161826550_ACD_33027_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126183054470_ACD_36759_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260126195047432_ACD_97115_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260127110915096_ACD_46881_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260127112104733_ACD_90699_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    },
+    {
+      "archivo": "amza323_1_260127133500281_ACD_47171_enriquecido.json",
+      "status": "error",
+      "mensaje": "No se obtuvo respuesta de Gemini",
+      "diarizacion_corregida": false,
+      "calidad": ""
+    }
+  ]
+}
