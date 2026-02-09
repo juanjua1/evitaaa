@@ -2119,6 +2119,18 @@ def cargar_datos():
             # Convertir lista a diccionario por agente (aplicando mapeo de nombres)
             datos['coaching'] = {}
             for item in coaching_list:
+                comparativa = item.get('comparativa', {}) or {}
+                if 'puntaje_ia' not in comparativa and 'puntaje_modelo' in comparativa:
+                    comparativa['puntaje_ia'] = comparativa['puntaje_modelo']
+                if 'puntaje_ia' not in comparativa:
+                    puntaje_prom = item.get('metricas', {}).get('evaluaciones', {}).get('puntaje_promedio', 0)
+                    comparativa['puntaje_ia'] = {
+                        'agente': puntaje_prom,
+                        'general': 0,
+                        'diferencia': 0,
+                        'percentil': 0
+                    }
+                item['comparativa'] = comparativa
                 nombre_real = obtener_nombre_vendedor_global(item['agente'])
                 item['agente'] = nombre_real
                 datos['coaching'][nombre_real] = item
