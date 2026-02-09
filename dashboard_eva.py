@@ -6889,6 +6889,7 @@ def aplicar_semaforo_cumplimiento(porcentaje):
 def pagina_comparativa_periodos(datos):
     """Página para comparar métricas entre dos períodos diferentes"""
     st.markdown('<div class="main-header">📅 COMMAND · Comparativa de Períodos</div>', unsafe_allow_html=True)
+    st.warning("🛠️ En desarrollo")
     
     # Subtítulo corporativo
     st.markdown("""
@@ -7359,6 +7360,7 @@ def pagina_calidad():
     """Página de Calidad - Análisis de Llamadas Call Center"""
     
     st.markdown('<p class="main-header">📞 COMMAND · Indicadores de Calidad y Cumplimiento</p>', unsafe_allow_html=True)
+    st.warning("🛠️ En desarrollo")
     
     # Subtítulo corporativo
     st.markdown("""
@@ -8451,6 +8453,7 @@ def pagina_metricas_calidad():
     """Página de Métricas de Calidad - 3 Apartados: Tiempos, Ventas, Llamadas + Comparativa"""
     
     st.markdown('<p class="main-header">📊 COMMAND · Métricas de Calidad</p>', unsafe_allow_html=True)
+    st.warning("🛠️ En desarrollo")
     
     # Obtener permisos del usuario actual
     permisos = obtener_permisos_usuario()
