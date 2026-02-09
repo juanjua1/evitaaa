@@ -27,12 +27,27 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 import numpy as np
 import google.generativeai as genai
-from config import api_key
 
 # ============================================================
 # CONFIGURACIÓN
 # ============================================================
-genai.configure(api_key=api_key)
+def obtener_api_key():
+    api_key = os.environ.get('GEMINI_API_KEY', '').strip()
+    if api_key:
+        return api_key
+    try:
+        from config import api_key as config_api_key
+        return str(config_api_key).strip()
+    except Exception:
+        return ''
+
+
+API_KEY = obtener_api_key()
+if not API_KEY:
+    log("No se encontro GEMINI_API_KEY. Configura la variable de entorno.", "error")
+    sys.exit(1)
+
+genai.configure(api_key=API_KEY)
 MODEL_NAME = "gemini-2.0-flash"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -113,6 +128,20 @@ def extraer_fecha_de_archivo(nombre_archivo):
     return None
 
 
+def normalizar_equipo(equipo):
+    return re.sub(r'[^a-z0-9]', '', str(equipo).lower())
+
+
+def obtener_archivo_mas_reciente(directorio, prefijo, sufijo):
+    if not os.path.exists(directorio):
+        return None
+    candidatos = [f for f in os.listdir(directorio) if f.startswith(prefijo) and f.endswith(sufijo)]
+    if not candidatos:
+        return None
+    candidatos = [os.path.join(directorio, f) for f in candidatos]
+    return max(candidatos, key=lambda p: os.path.getmtime(p))
+
+
 # ============================================================
 # CARGA DE DATOS
 # ============================================================
@@ -188,6 +217,17 @@ def cargar_datos_completos():
     if os.path.exists(ruta):
         datos['clasificacion'] = pd.read_csv(ruta)
         log(f"Clasificacion: {len(datos['clasificacion'])} registros")
+
+    # Clasificacion por equipos (ultimo reporte disponible)
+    dir_clasif = os.path.join(DIR_REPORTES, "clasificacion_agentes_equipos")
+    ruta_json = obtener_archivo_mas_reciente(dir_clasif, "reportes_equipos_", ".json")
+    if ruta_json:
+        try:
+            with open(ruta_json, 'r', encoding='utf-8') as f:
+                datos['clasificacion_equipos_json'] = json.load(f)
+            log(f"Clasificacion equipos: {os.path.basename(ruta_json)}")
+        except Exception as e:
+            log(f"Error cargando clasificacion equipos: {e}", "warning")
 
     # Datos de calidad
     ruta = os.path.join(BASE_DIR, "datos_calidad", "datos_calidad_procesados.json")
@@ -663,6 +703,19 @@ def obtener_metricas_equipo(equipo, vendedores, datos, codigo_a_equipo):
                     'total_ventas': sum(v.get('total_ventas', v.get('cantidad_ventas', 0)) for v in ventas_eq),
                 }
 
+    # === CLASIFICACION POR EQUIPO (REPORTE CONSOLIDADO) ===
+    if 'clasificacion_equipos_json' in datos:
+        clasif = datos['clasificacion_equipos_json']
+        if isinstance(clasif, dict):
+            equipo_norm = normalizar_equipo(equipo)
+            encontrado = None
+            for key, value in clasif.items():
+                if normalizar_equipo(key) == equipo_norm:
+                    encontrado = value
+                    break
+            if encontrado:
+                metricas['clasificacion'] = encontrado
+
     return metricas
 
 
@@ -717,6 +770,9 @@ estratégico para mejorar el rendimiento grupal.
 
 ### EVALUACIONES DEL MODELO DEL EQUIPO:
 {json.dumps(metricas.get('evaluaciones', {}), indent=2, ensure_ascii=False)}
+
+### CLASIFICACION DEL EQUIPO (RESUMEN):
+{json.dumps(metricas.get('clasificacion', {}), indent=2, ensure_ascii=False)}
 
 ### PLANES OFRECIDOS:
 {json.dumps(metricas.get('planes', {}), indent=2, ensure_ascii=False)}

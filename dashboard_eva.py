@@ -2280,6 +2280,48 @@ def crear_df_llamadas_desde_evaluaciones(df_eval):
     return df
 
 
+def cargar_coaching_equipo(ruta_coaching):
+    """Carga y normaliza el coaching de un equipo desde JSON."""
+    if not os.path.exists(ruta_coaching):
+        return None
+    try:
+        with open(ruta_coaching, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception:
+        return None
+
+    comparativa = data.get('comparativa', {}) or {}
+    if 'puntaje_ia' not in comparativa and 'puntaje_modelo' in comparativa:
+        comparativa['puntaje_ia'] = comparativa['puntaje_modelo']
+    data['comparativa'] = comparativa
+
+    coaching_modelo = data.get('coaching_modelo', {}) or {}
+    coaching_ia = data.get('coaching_ia') or coaching_modelo or {}
+
+    if 'plan_accion_equipo' not in coaching_ia:
+        if 'plan_accion_equipo' in coaching_modelo:
+            coaching_ia['plan_accion_equipo'] = coaching_modelo.get('plan_accion_equipo', [])
+
+    if not coaching_ia.get('plan_accion_equipo'):
+        areas = coaching_ia.get('areas_mejora_prioritarias', []) or []
+        plan = []
+        for idx, area in enumerate(areas[:4], 1):
+            nombre_area = area.get('area', 'Area clave')
+            meta = area.get('meta', 'Mejorar el puntaje del equipo')
+            plan.append({
+                'prioridad': idx,
+                'accion': f"Mejorar {nombre_area} con practicas semanales del equipo.",
+                'responsable': 'Lider del equipo',
+                'plazo': 'Corto plazo',
+                'indicador_exito': meta
+            })
+        if plan:
+            coaching_ia['plan_accion_equipo'] = plan
+
+    data['coaching_ia'] = coaching_ia
+    return data
+
+
 def pagina_resumen_ejecutivo(datos, df):
     """Página de resumen ejecutivo"""
     st.markdown('<div class="main-header">📈 COMMAND · Panel Ejecutivo de Rendimiento Comercial</div>', unsafe_allow_html=True)
@@ -5369,10 +5411,8 @@ def pagina_analisis_equipos(datos):
             
             if os.path.exists(ruta_coaching):
                 try:
-                    with open(ruta_coaching, 'r', encoding='utf-8') as f:
-                        coaching_equipo_data = json.load(f)
-                    
-                    coaching_ia = coaching_equipo_data.get('coaching_ia', {})
+                    coaching_equipo_data = cargar_coaching_equipo(ruta_coaching)
+                    coaching_ia = (coaching_equipo_data or {}).get('coaching_ia', {})
                     
                     if coaching_ia:
                         # Resumen Ejecutivo
@@ -9253,8 +9293,7 @@ def pagina_resumen_corporativo(datos):
             
             if os.path.exists(ruta_coaching):
                 try:
-                    with open(ruta_coaching, 'r', encoding='utf-8') as f:
-                        coaching_equipo_data = json.load(f)
+                    coaching_equipo_data = cargar_coaching_equipo(ruta_coaching)
                     
                     # Header del equipo
                     vendedores_equipo = equipos_vendedores.get(equipo_seleccionado, [])
@@ -9270,9 +9309,9 @@ def pagina_resumen_corporativo(datos):
                     """, unsafe_allow_html=True)
                     
                     # Métricas principales
-                    metricas = coaching_equipo_data.get('metricas', {})
-                    coaching_ia = coaching_equipo_data.get('coaching_ia', {})
-                    comparativa = coaching_equipo_data.get('comparativa', {})
+                    metricas = (coaching_equipo_data or {}).get('metricas', {})
+                    coaching_ia = (coaching_equipo_data or {}).get('coaching_ia', {})
+                    comparativa = (coaching_equipo_data or {}).get('comparativa', {})
                     
                     # Métricas clave en columnas
                     st.markdown("#### 📈 Indicadores Principales")
