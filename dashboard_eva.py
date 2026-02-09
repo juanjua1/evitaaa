@@ -2191,6 +2191,83 @@ def crear_df_llamadas(transcripciones):
     return df
 
 
+def crear_df_llamadas_desde_evaluaciones(df_eval):
+    """Crea un DataFrame de llamadas usando solo evaluaciones."""
+    if df_eval is None or df_eval.empty:
+        return pd.DataFrame()
+
+    base = df_eval.copy()
+    idx = base.index
+
+    if 'fecha_evaluacion' in base.columns:
+        fecha_eval = pd.to_datetime(base['fecha_evaluacion'], errors='coerce')
+    else:
+        fecha_eval = pd.Series([pd.NaT] * len(base), index=idx)
+
+    if 'archivo' in base.columns:
+        fecha_archivo = pd.to_datetime(base['archivo'].apply(extraer_fecha_de_archivo), errors='coerce')
+    else:
+        fecha_archivo = pd.Series([pd.NaT] * len(base), index=idx)
+
+    fecha_final = fecha_eval.fillna(fecha_archivo)
+
+    if 'archivo' in base.columns:
+        ids = base['archivo']
+    else:
+        ids = base.index.astype(str)
+
+    if 'agente' in base.columns:
+        agentes = base['agente']
+    else:
+        agentes = pd.Series(['Desconocido'] * len(base), index=idx)
+
+    if 'puntaje_total' in base.columns:
+        score_calidad = pd.to_numeric(base['puntaje_total'], errors='coerce').fillna(0)
+    else:
+        score_calidad = pd.Series([0] * len(base), index=idx)
+
+    if 'saludo_presentacion' in base.columns:
+        tiene_saludo = pd.to_numeric(base['saludo_presentacion'], errors='coerce').fillna(0) > 0
+    else:
+        tiene_saludo = pd.Series([False] * len(base), index=idx)
+
+    if 'cierre' in base.columns:
+        tiene_cierre = pd.to_numeric(base['cierre'], errors='coerce').fillna(0) > 0
+    else:
+        tiene_cierre = pd.Series([False] * len(base), index=idx)
+
+    if 'planes_mencionados' in base.columns:
+        planes = base['planes_mencionados'].fillna('')
+    else:
+        planes = pd.Series([''] * len(base), index=idx)
+
+    if 'primer_plan_ofrecido' in base.columns:
+        primer_plan = base['primer_plan_ofrecido'].fillna('')
+    else:
+        primer_plan = pd.Series([''] * len(base), index=idx)
+
+    df = pd.DataFrame({
+        'id': ids,
+        'fecha': fecha_final,
+        'agente': agentes,
+        'duracion': 0,
+        'tipificacion': 'Sin datos',
+        'tipo': 'Sin datos',
+        'score_calidad': score_calidad,
+        'tiene_saludo': tiene_saludo,
+        'tiene_cierre': tiene_cierre,
+        'planes': planes,
+        'primer_plan': primer_plan,
+    })
+
+    df['agente'] = df['agente'].apply(obtener_nombre_vendedor_global)
+    df['fecha'] = pd.to_datetime(df['fecha'], errors='coerce')
+    if 'fecha' in df.columns and len(df) > 0:
+        df['dia'] = df['fecha'].dt.date
+        df['hora'] = df['fecha'].dt.hour
+    return df
+
+
 def pagina_resumen_ejecutivo(datos, df):
     """Página de resumen ejecutivo"""
     st.markdown('<div class="main-header">📈 COMMAND · Panel Ejecutivo de Rendimiento Comercial</div>', unsafe_allow_html=True)
@@ -9576,12 +9653,19 @@ def main():
         with st.spinner('Cargando datos...'):
             datos = cargar_datos()
     
-    if 'transcripciones' not in datos or not datos['transcripciones']:
-        st.error("No se encontraron transcripciones procesadas. Asegúrate de tener archivos evaluados en 'reportes/evaluaciones_gemini.csv' y 'transcripts/mejorados_gemini/'")
-        return
+    transcripciones = datos.get('transcripciones', [])
+    if transcripciones:
+        df = crear_df_llamadas(transcripciones)
+    else:
+        df_eval = datos.get('evaluaciones_gemini_df') or datos.get('evaluaciones')
+        df = crear_df_llamadas_desde_evaluaciones(df_eval)
+        if df.empty:
+            st.error("No se encontraron transcripciones procesadas ni evaluaciones. Verifica 'reportes/evaluaciones_gemini.csv'.")
+            return
+        st.info("No se encontraron JSON de transcripciones. Usando solo 'reportes/evaluaciones_gemini.csv'.")
     
     # Crear DataFrame de llamadas
-    df = crear_df_llamadas(datos['transcripciones'])
+    
     
     # Sidebar - Logo COMMAND y Usuario
     st.sidebar.markdown("""
