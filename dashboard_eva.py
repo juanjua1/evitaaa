@@ -9657,7 +9657,9 @@ def main():
     if transcripciones:
         df = crear_df_llamadas(transcripciones)
     else:
-        df_eval = datos.get('evaluaciones_gemini_df') or datos.get('evaluaciones')
+        df_eval = datos.get('evaluaciones_gemini_df')
+        if df_eval is None:
+            df_eval = datos.get('evaluaciones')
         df = crear_df_llamadas_desde_evaluaciones(df_eval)
         if df.empty:
             st.error("No se encontraron transcripciones procesadas ni evaluaciones. Verifica 'reportes/evaluaciones_gemini.csv'.")
