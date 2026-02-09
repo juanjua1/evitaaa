@@ -1,6 +1,6 @@
 {
   "equipo": "DIANA",
-  "fecha_generacion": "2026-02-02T23:19:11.357840",
+  "fecha_generacion": "2026-02-09T10:09:32.288110",
   "metricas": {
     "equipo": "DIANA",
     "vendedores": [
@@ -49,289 +49,552 @@
     ],
     "total_vendedores": 42,
     "evaluaciones": {
-      "total_evaluadas": 30,
-      "puntaje_promedio": 29.2,
+      "total_evaluadas": 2869,
+      "puntaje_promedio": 28.5,
       "puntaje_min": 0,
-      "puntaje_max": 70,
-      "desviacion_std": 20.6,
-      "llamadas_excelentes": 0,
-      "llamadas_buenas": 2,
-      "llamadas_regulares": 8,
-      "llamadas_criticas": 21,
+      "puntaje_max": 1000,
+      "llamadas_excelentes": 138,
+      "llamadas_buenas": 303,
+      "llamadas_regulares": 503,
+      "llamadas_criticas": 1925,
       "criterios": {
-        "saludo_presentacion": 34.3,
-        "identificacion_cliente": 62.0,
-        "deteccion_necesidades": 18.7,
-        "oferta_productos": 42.3,
-        "manejo_objeciones": 31.3,
-        "cierre": 3.7,
-        "despedida": 45.0,
-        "proactividad": 5.7,
-        "empatia": 34.0,
-        "resolucion_problemas": 9.0
+        "saludo_presentacion": 16.7,
+        "identificacion_cliente": 47.9,
+        "deteccion_necesidades": 11.6,
+        "oferta_productos": 34.6,
+        "manejo_objeciones": 25.6,
+        "cierre": 18.8,
+        "despedida": 48.7,
+        "proactividad": 6.8,
+        "empatia": 35.6,
+        "resolucion_problemas": 17.7
       },
       "areas_mejora": {
-        "Detección de necesidades": 13,
-        "Proactividad": 12,
-        "Manejo de objeciones": 11,
-        "Empatía": 8,
-        "Cierre": 7,
-        "Identificación del cliente": 6,
-        "Oferta de productos": 6,
-        "Cierre de la venta": 5,
-        "Despedida": 5,
-        "Presentación": 5
+        "Detección de necesidades": 1498,
+        "Proactividad": 1039,
+        "Manejo de objeciones": 913,
+        "Presentación": 774,
+        "Identificación del cliente": 765,
+        "Cierre": 673,
+        "Oferta de productos": 667,
+        "Empatía": 452,
+        "Despedida": 388,
+        "Presentación y Saludo": 320
       },
       "fortalezas": {
-        "Identificación del cliente": 7,
-        "Despedida cordial.": 4,
-        "Manejo de objeciones": 3,
-        "Identificación del cliente.": 3,
-        "Presentación": 2,
-        "Empatía": 2,
-        "Saludo y presentación": 2,
-        "Despedida": 2,
-        "Identificación correcta del cliente.": 2,
-        "Despedida cordial": 2
+        "Identificación del cliente": 689,
+        "Empatía": 423,
+        "Despedida": 353,
+        "Despedida cordial": 249,
+        "Manejo de objeciones": 225,
+        "Despedida cordial.": 196,
+        "Saludo y presentación": 151,
+        "Identificación del cliente.": 147,
+        "Manejo de objeciones.": 141,
+        "Empatía.": 117
       },
       "rendimiento_vendedores": [
         {
-          "vendedor": "Mza 323",
-          "puntaje_promedio": 29.2,
-          "evaluaciones": 30,
+          "vendedor": "MZA 52",
+          "puntaje_promedio": 61.8,
+          "evaluaciones": 12,
+          "excelentes": 3,
+          "criticas": 3
+        },
+        {
+          "vendedor": "MZA 91",
+          "puntaje_promedio": 44.7,
+          "evaluaciones": 79,
+          "excelentes": 7,
+          "criticas": 46
+        },
+        {
+          "vendedor": "MZA 62",
+          "puntaje_promedio": 43.2,
+          "evaluaciones": 19,
+          "excelentes": 2,
+          "criticas": 7
+        },
+        {
+          "vendedor": "Mza 51",
+          "puntaje_promedio": 43.0,
+          "evaluaciones": 70,
+          "excelentes": 3,
+          "criticas": 41
+        },
+        {
+          "vendedor": "MZA 90",
+          "puntaje_promedio": 42.8,
+          "evaluaciones": 138,
+          "excelentes": 13,
+          "criticas": 60
+        },
+        {
+          "vendedor": "MZA 86",
+          "puntaje_promedio": 41.8,
+          "evaluaciones": 39,
+          "excelentes": 5,
+          "criticas": 20
+        },
+        {
+          "vendedor": "MZA 71",
+          "puntaje_promedio": 37.7,
+          "evaluaciones": 138,
+          "excelentes": 10,
+          "criticas": 68
+        },
+        {
+          "vendedor": "MZA 92",
+          "puntaje_promedio": 36.6,
+          "evaluaciones": 113,
+          "excelentes": 8,
+          "criticas": 64
+        },
+        {
+          "vendedor": "MZA 327",
+          "puntaje_promedio": 35.6,
+          "evaluaciones": 16,
+          "excelentes": 1,
+          "criticas": 9
+        },
+        {
+          "vendedor": "MZA 48",
+          "puntaje_promedio": 35.6,
+          "evaluaciones": 74,
+          "excelentes": 3,
+          "criticas": 53
+        },
+        {
+          "vendedor": "MZA 69",
+          "puntaje_promedio": 33.8,
+          "evaluaciones": 8,
           "excelentes": 0,
-          "criticas": 21
+          "criticas": 4
+        },
+        {
+          "vendedor": "MZA 70",
+          "puntaje_promedio": 33.2,
+          "evaluaciones": 104,
+          "excelentes": 6,
+          "criticas": 65
+        },
+        {
+          "vendedor": "MZA 87",
+          "puntaje_promedio": 31.1,
+          "evaluaciones": 79,
+          "excelentes": 3,
+          "criticas": 51
+        },
+        {
+          "vendedor": "MZA 54",
+          "puntaje_promedio": 30.5,
+          "evaluaciones": 71,
+          "excelentes": 2,
+          "criticas": 41
+        },
+        {
+          "vendedor": "MZA 88",
+          "puntaje_promedio": 29.4,
+          "evaluaciones": 68,
+          "excelentes": 4,
+          "criticas": 39
+        },
+        {
+          "vendedor": "MZA 66",
+          "puntaje_promedio": 29.1,
+          "evaluaciones": 94,
+          "excelentes": 2,
+          "criticas": 58
+        },
+        {
+          "vendedor": "MZA 93",
+          "puntaje_promedio": 29.1,
+          "evaluaciones": 95,
+          "excelentes": 8,
+          "criticas": 64
+        },
+        {
+          "vendedor": "MZA 61",
+          "puntaje_promedio": 29.0,
+          "evaluaciones": 50,
+          "excelentes": 5,
+          "criticas": 33
+        },
+        {
+          "vendedor": "MZA 46",
+          "puntaje_promedio": 28.8,
+          "evaluaciones": 16,
+          "excelentes": 1,
+          "criticas": 9
+        },
+        {
+          "vendedor": "MZA 85",
+          "puntaje_promedio": 28.8,
+          "evaluaciones": 110,
+          "excelentes": 7,
+          "criticas": 72
+        },
+        {
+          "vendedor": "MZA 67",
+          "puntaje_promedio": 28.4,
+          "evaluaciones": 100,
+          "excelentes": 3,
+          "criticas": 65
+        },
+        {
+          "vendedor": "MZA 47",
+          "puntaje_promedio": 27.3,
+          "evaluaciones": 82,
+          "excelentes": 4,
+          "criticas": 55
+        },
+        {
+          "vendedor": "MZA 325",
+          "puntaje_promedio": 27.0,
+          "evaluaciones": 71,
+          "excelentes": 3,
+          "criticas": 49
+        },
+        {
+          "vendedor": "MZA 326",
+          "puntaje_promedio": 26.5,
+          "evaluaciones": 56,
+          "excelentes": 5,
+          "criticas": 39
+        },
+        {
+          "vendedor": "MZA 84",
+          "puntaje_promedio": 26.2,
+          "evaluaciones": 40,
+          "excelentes": 2,
+          "criticas": 25
+        },
+        {
+          "vendedor": "MZA 323",
+          "puntaje_promedio": 25.5,
+          "evaluaciones": 107,
+          "excelentes": 3,
+          "criticas": 75
+        },
+        {
+          "vendedor": "MZA 64",
+          "puntaje_promedio": 25.5,
+          "evaluaciones": 59,
+          "excelentes": 1,
+          "criticas": 39
+        },
+        {
+          "vendedor": "MZA 65",
+          "puntaje_promedio": 24.8,
+          "evaluaciones": 67,
+          "excelentes": 2,
+          "criticas": 50
+        },
+        {
+          "vendedor": "MZA 58",
+          "puntaje_promedio": 24.3,
+          "evaluaciones": 75,
+          "excelentes": 3,
+          "criticas": 57
+        },
+        {
+          "vendedor": "MZA 324",
+          "puntaje_promedio": 23.9,
+          "evaluaciones": 108,
+          "excelentes": 4,
+          "criticas": 82
+        },
+        {
+          "vendedor": "MZA 89",
+          "puntaje_promedio": 23.3,
+          "evaluaciones": 42,
+          "excelentes": 3,
+          "criticas": 33
+        },
+        {
+          "vendedor": "MZA 53",
+          "puntaje_promedio": 21.1,
+          "evaluaciones": 80,
+          "excelentes": 2,
+          "criticas": 65
+        },
+        {
+          "vendedor": "MZA 50",
+          "puntaje_promedio": 20.6,
+          "evaluaciones": 78,
+          "excelentes": 1,
+          "criticas": 60
+        },
+        {
+          "vendedor": "MZA 68",
+          "puntaje_promedio": 20.5,
+          "evaluaciones": 89,
+          "excelentes": 1,
+          "criticas": 72
+        },
+        {
+          "vendedor": "MZA 63",
+          "puntaje_promedio": 19.4,
+          "evaluaciones": 41,
+          "excelentes": 2,
+          "criticas": 34
+        },
+        {
+          "vendedor": "MZA 56",
+          "puntaje_promedio": 18.5,
+          "evaluaciones": 68,
+          "excelentes": 1,
+          "criticas": 55
+        },
+        {
+          "vendedor": "MZA 57",
+          "puntaje_promedio": 17.7,
+          "evaluaciones": 69,
+          "excelentes": 2,
+          "criticas": 56
+        },
+        {
+          "vendedor": "MZA 55",
+          "puntaje_promedio": 16.2,
+          "evaluaciones": 79,
+          "excelentes": 2,
+          "criticas": 68
+        },
+        {
+          "vendedor": "MZA 59",
+          "puntaje_promedio": 13.7,
+          "evaluaciones": 15,
+          "excelentes": 1,
+          "criticas": 14
+        },
+        {
+          "vendedor": "MZA 60",
+          "puntaje_promedio": 13.2,
+          "evaluaciones": 53,
+          "excelentes": 0,
+          "criticas": 44
+        },
+        {
+          "vendedor": "MZA 49",
+          "puntaje_promedio": 12.8,
+          "evaluaciones": 97,
+          "excelentes": 0,
+          "criticas": 81
         }
       ]
     },
-    "coaching_resumen": [
-      {
-        "vendedor": "MZA 323",
-        "puntaje_ia": 29.2,
-        "conversion": 0,
-        "percentil": 50.4
-      }
-    ],
     "clasificacion": {},
     "planes": {},
     "quejas": {},
-    "calidad": {},
-    "cierres": {}
+    "calidad": {}
   },
   "comparativa": {
-    "puntaje_ia": {
-      "equipo": 29.2,
-      "general": 28.8,
-      "diferencia": 0.4,
-      "ranking": 4
-    }
+    "puntaje_modelo": {
+      "equipo": 28.5,
+      "general": 32.2,
+      "diferencia": -3.7,
+      "ranking": "5 de 7"
+    },
+    "ranking_completo": [
+      {
+        "equipo": "ARENAS YASMIN",
+        "puntaje": 43.6
+      },
+      {
+        "equipo": "JOSEFINA ZEBALLOS",
+        "puntaje": 35.5
+      },
+      {
+        "equipo": "MELANIE CARMONA",
+        "puntaje": 31.8
+      },
+      {
+        "equipo": "MARINA MARTINEZ",
+        "puntaje": 31.7
+      },
+      {
+        "equipo": "DIANA",
+        "puntaje": 28.5
+      },
+      {
+        "equipo": "NATALI SANCHE",
+        "puntaje": 27.6
+      },
+      {
+        "equipo": "BYL",
+        "puntaje": 26.6
+      }
+    ]
   },
-  "coaching_ia": {
-    "resumen_ejecutivo": "El equipo Diana muestra un rendimiento promedio con un puntaje de 29.2 sobre 100, ubicándose en el puesto 4 de 7 equipos. Si bien supera ligeramente el promedio general de la operación, existe una alta desviación estándar (20.6) en los puntajes, lo que indica una variabilidad significativa en el desempeño individual. Las áreas de mejora prioritarias son la detección de necesidades, la proactividad y el manejo de objeciones, mientras que la identificación del cliente y la despedida cordial son fortalezas a potenciar.",
+  "coaching_modelo": {
+    "resumen_ejecutivo": "El equipo Diana muestra un rendimiento por debajo del promedio general en comparación con otros equipos de Movistar Argentina, ocupando el quinto lugar de siete. Si bien existen fortalezas en la identificación del cliente, la empatía y la despedida, las áreas de mejora prioritarias se centran en la detección de necesidades, la proactividad y el manejo de objeciones. Se requiere un plan de acción estratégico y capacitaciones específicas para impulsar el rendimiento del equipo y alcanzar los objetivos de portabilidad.",
     "diagnostico": {
       "nivel_rendimiento": "EN DESARROLLO",
-      "puntaje_equipo": 29.2,
-      "posicion_ranking": "4 de 7 equipos",
+      "puntaje_equipo": 28.5,
+      "posicion_ranking": "5 de 7 equipos",
       "tendencia": "ESTABLE"
     },
     "fortalezas_equipo": [
       {
         "area": "Identificación del cliente",
-        "evidencia": "Puntaje de 62.0 en el criterio de 'identificación_cliente', con 7 menciones como fortaleza individual.",
-        "impacto": "Establece una base sólida para la conversación y personaliza la oferta."
+        "evidencia": "47.9% de puntaje en el criterio de 'identificación_cliente' y 689 menciones en las fortalezas.",
+        "impacto": "Permite personalizar la oferta y generar una conexión inicial con el cliente."
       },
       {
-        "area": "Despedida cordial",
-        "evidencia": "Puntaje de 45.0 en el criterio de 'despedida', con múltiples menciones como fortaleza individual.",
+        "area": "Empatía",
+        "evidencia": "35.6% de puntaje en el criterio de 'empatía' y 423 menciones en las fortalezas.",
+        "impacto": "Facilita la construcción de relaciones y la comprensión de las necesidades del cliente."
+      },
+      {
+        "area": "Despedida",
+        "evidencia": "48.7% de puntaje en el criterio de 'despedida' y 353 menciones en las fortalezas.",
         "impacto": "Deja una impresión positiva y fomenta la posibilidad de futuras interacciones."
       }
     ],
     "areas_mejora_prioritarias": [
       {
         "area": "Detección de necesidades",
-        "situacion_actual": "Puntaje bajo de 18.7 en 'deteccion_necesidades', siendo la principal área de mejora identificada en 13 evaluaciones.",
-        "meta": "Aumentar el puntaje promedio en 'deteccion_necesidades' a 40 en 30 días.",
-        "impacto_potencial": "Aumentar la relevancia de la oferta y la probabilidad de cierre al comprender mejor las necesidades del cliente."
+        "situacion_actual": "El puntaje promedio en 'detección de necesidades' es de 11.6%, y es la principal área de mejora con 1498 menciones.",
+        "meta": "Aumentar el puntaje promedio en 'detección de necesidades' al 30% en 30 días.",
+        "impacto_potencial": "Mejorar la precisión de la oferta, aumentar la tasa de conversión y la satisfacción del cliente."
       },
       {
         "area": "Proactividad",
-        "situacion_actual": "Puntaje muy bajo de 5.7 en 'proactividad', identificada como área de mejora en 12 evaluaciones.",
-        "meta": "Aumentar el puntaje promedio en 'proactividad' a 20 en 30 días.",
-        "impacto_potencial": "Anticipar las necesidades del cliente y ofrecer soluciones personalizadas, generando mayor valor y diferenciación."
+        "situacion_actual": "El puntaje promedio en 'proactividad' es de 6.8%, y es la segunda área de mejora con 1039 menciones.",
+        "meta": "Aumentar el puntaje promedio en 'proactividad' al 20% en 60 días.",
+        "impacto_potencial": "Anticipar las necesidades del cliente, ofrecer soluciones personalizadas y generar mayor valor en la interacción."
       },
       {
         "area": "Manejo de objeciones",
-        "situacion_actual": "Puntaje de 31.3 en 'manejo_objeciones', identificada como área de mejora en 11 evaluaciones.",
-        "meta": "Aumentar el puntaje promedio en 'manejo_objeciones' a 50 en 30 días.",
-        "impacto_potencial": "Superar las dudas y preocupaciones del cliente, aumentando la confianza y la probabilidad de cierre."
-      },
-      {
-        "area": "Cierre",
-        "situacion_actual": "Puntaje extremadamente bajo de 3.7 en 'cierre', siendo una de las principales áreas de mejora.",
-        "meta": "Aumentar el puntaje promedio en 'cierre' a 20 en 60 días.",
-        "impacto_potencial": "Convertir las oportunidades en ventas concretas, maximizando la eficiencia del equipo."
+        "situacion_actual": "El puntaje promedio en 'manejo de objeciones' es de 25.6%, y es la tercera área de mejora con 913 menciones.",
+        "meta": "Aumentar el puntaje promedio en 'manejo de objeciones' al 40% en 90 días.",
+        "impacto_potencial": "Superar las barreras a la venta, aumentar la tasa de cierre y la confianza del cliente."
       }
     ],
     "analisis_vendedores": {
       "top_performers": [
-        "Identificar a los vendedores con puntajes más altos en 'identificación_cliente' y 'despedida' y reconocer sus técnicas."
+        "MZA 52 (puntaje promedio 61.8): Fuerte en la conversión de llamadas en excelentes (3 de 12).",
+        "MZA 91 (puntaje promedio 44.7): Alto volumen de evaluaciones y llamadas excelentes (7 de 79)."
       ],
       "necesitan_apoyo": [
-        "Mza 323: Requiere atención inmediata debido a su bajo puntaje promedio (29.2) y el alto número de evaluaciones críticas (21)."
+        "MZA 49 (puntaje promedio 12.8): Bajo puntaje promedio y alta proporción de llamadas críticas (81 de 97).",
+        "MZA 60 (puntaje promedio 13.2): Sin llamadas excelentes y alta proporción de llamadas críticas (44 de 53)."
       ],
       "potencial_alto": [
-        "Identificar a los vendedores con puntajes cercanos al promedio pero con fortalezas individuales marcadas, y brindarles coaching específico en las áreas de mejora prioritarias."
+        "MZA 86 (puntaje promedio 41.8): Proporción decente de llamadas excelentes (5 de 39) con margen de mejora.",
+        "MZA 62 (puntaje promedio 43.2): Buena proporción de llamadas excelentes (2 de 19) con necesidad de aumentar el volumen de evaluaciones."
       ]
     },
     "plan_accion_equipo": [
       {
         "prioridad": 1,
-        "accion": "Implementar role-playing enfocados en la detección de necesidades y el manejo de objeciones.",
-        "responsable": "Líder del equipo",
+        "accion": "Implementar sesiones de role-playing enfocadas en la detección de necesidades y manejo de objeciones.",
+        "responsable": "Lider del equipo",
         "plazo": "Inmediato",
-        "indicador_exito": "Aumento del puntaje promedio en 'deteccion_necesidades' y 'manejo_objeciones' en un 10% en la próxima evaluación.",
-        "recursos_necesarios": "Guiones de role-playing, tiempo para las sesiones."
+        "indicador_exito": "Aumento del 10% en el puntaje promedio de 'detección de necesidades' y 'manejo de objeciones' en las evaluaciones semanales."
       },
       {
         "prioridad": 2,
-        "accion": "Realizar sesiones de coaching individualizadas con los vendedores que obtuvieron puntajes más bajos en la evaluación.",
-        "responsable": "Líder del equipo",
+        "accion": "Crear un repositorio de respuestas efectivas a objeciones comunes y compartirlo con el equipo.",
+        "responsable": "Lider del equipo",
         "plazo": "Corto plazo",
-        "indicador_exito": "Mejora del puntaje individual en las áreas de mejora identificadas en la próxima evaluación.",
-        "recursos_necesarios": "Tiempo para las sesiones de coaching, herramientas de seguimiento."
+        "indicador_exito": "Reducción del 15% en la frecuencia de menciones de 'manejo de objeciones' como área de mejora en las evaluaciones mensuales."
       },
       {
         "prioridad": 3,
-        "accion": "Compartir ejemplos de llamadas exitosas donde se haya realizado una excelente detección de necesidades y manejo de objeciones.",
+        "accion": "Implementar un sistema de reconocimiento para los vendedores que demuestren proactividad en la identificación de oportunidades de venta.",
         "responsable": "Todos",
-        "plazo": "Inmediato",
-        "indicador_exito": "Mayor aplicación de las técnicas observadas en las llamadas reales.",
-        "recursos_necesarios": "Grabaciones de llamadas, plataforma para compartir información."
+        "plazo": "Mediano plazo",
+        "indicador_exito": "Aumento del 5% en el número de ofertas personalizadas presentadas por vendedor por semana."
       },
       {
         "prioridad": 4,
-        "accion": "Implementar un sistema de reconocimiento para los vendedores que demuestren mejoras significativas en las áreas de mejora prioritarias.",
-        "responsable": "Líder del equipo",
-        "plazo": "Mediano plazo",
-        "indicador_exito": "Aumento de la motivación y el compromiso del equipo.",
-        "recursos_necesarios": "Presupuesto para premios, sistema de seguimiento del desempeño."
+        "accion": "Realizar sesiones de coaching individualizadas con los vendedores que obtienen puntajes más bajos en las evaluaciones.",
+        "responsable": "Lider del equipo",
+        "plazo": "Corto plazo",
+        "indicador_exito": "Mejora del 10% en el puntaje promedio de los vendedores que reciben coaching individualizado en las evaluaciones mensuales."
       }
     ],
     "capacitaciones_recomendadas": [
       {
-        "tema": "Técnicas de detección de necesidades efectivas",
-        "objetivo": "Enseñar a los vendedores a realizar preguntas abiertas, escuchar activamente y comprender las motivaciones del cliente.",
+        "tema": "Detección de necesidades avanzadas",
+        "objetivo": "Enseñar técnicas para identificar las necesidades latentes del cliente y ofrecer soluciones personalizadas.",
         "modalidad": "Grupal",
         "duracion_sugerida": "4 horas",
         "vendedores_prioritarios": [
-          "Mza 46",
-          "Mza 47",
-          "Mza 48",
-          "Mza 49",
-          "Mza 50",
-          "Mza 51",
-          "Mza Sup5",
-          "Mza 52",
-          "Mza 53",
-          "Mza 54"
+          "MZA 49",
+          "MZA 60",
+          "MZA 55",
+          "MZA 56",
+          "MZA 57",
+          "MZA 50",
+          "MZA 53",
+          "MZA 68"
         ]
       },
       {
-        "tema": "Manejo de objeciones y técnicas de persuasión",
-        "objetivo": "Proporcionar a los vendedores herramientas para superar las objeciones comunes y persuadir a los clientes de los beneficios de los productos de Movistar.",
-        "modalidad": "Mixta (grupal e individual)",
-        "duracion_sugerida": "6 horas",
+        "tema": "Manejo de objeciones persuasivo",
+        "objetivo": "Proporcionar herramientas para superar las objeciones del cliente de manera efectiva y convertir las dudas en oportunidades.",
+        "modalidad": "Mixta",
+        "duracion_sugerida": "6 horas (4 grupal, 2 individual)",
         "vendedores_prioritarios": [
-          "Mza 46",
-          "Mza 47",
-          "Mza 48",
-          "Mza 49",
-          "Mza 50",
-          "Mza 51",
-          "Mza Sup5",
-          "Mza 52",
-          "Mza 53",
-          "Mza 54"
+          "MZA 49",
+          "MZA 60",
+          "MZA 55",
+          "MZA 56",
+          "MZA 57",
+          "MZA 50",
+          "MZA 53",
+          "MZA 68"
         ]
       },
       {
-        "tema": "Técnicas de cierre efectivas",
-        "objetivo": "Enseñar a los vendedores a identificar las señales de compra y a cerrar la venta de manera efectiva.",
-        "modalidad": "Grupal",
-        "duracion_sugerida": "4 horas",
+        "tema": "Proactividad y upselling estratégico",
+        "objetivo": "Desarrollar habilidades para anticipar las necesidades del cliente y ofrecer productos o servicios adicionales que generen valor.",
+        "modalidad": "Individual",
+        "duracion_sugerida": "2 sesiones de 2 horas",
         "vendedores_prioritarios": [
-          "Mza 46",
-          "Mza 47",
-          "Mza 48",
-          "Mza 49",
-          "Mza 50",
-          "Mza 51",
-          "Mza Sup5",
-          "Mza 52",
-          "Mza 53",
-          "Mza 54"
+          "MZA 49",
+          "MZA 60",
+          "MZA 55",
+          "MZA 56",
+          "MZA 57",
+          "MZA 50",
+          "MZA 53",
+          "MZA 68"
         ]
-      }
-    ],
-    "dinamicas_equipo": [
-      {
-        "nombre": "El cliente misterioso",
-        "objetivo": "Practicar la detección de necesidades y el manejo de objeciones en un entorno simulado.",
-        "frecuencia": "Semanal",
-        "descripcion": "Un miembro del equipo actúa como cliente con objeciones predefinidas, y otro vendedor debe intentar cerrar la venta. Luego se realiza una retroalimentación constructiva."
-      },
-      {
-        "nombre": "Compartiendo éxitos",
-        "objetivo": "Fomentar el aprendizaje mutuo y la motivación compartiendo experiencias positivas.",
-        "frecuencia": "Semanal",
-        "descripcion": "Cada semana, un vendedor comparte una historia de éxito y explica las estrategias que utilizó para cerrar la venta."
       }
     ],
     "metas_equipo": {
       "corto_plazo_30_dias": [
         {
-          "meta": "Aumentar el puntaje promedio del equipo en 'deteccion_necesidades'.",
-          "valor_actual": "18.7",
-          "valor_objetivo": "30",
-          "estrategia": "Implementar role-playing y capacitaciones enfocadas en la detección de necesidades."
+          "meta": "Aumentar el puntaje promedio del equipo en las evaluaciones del modelo.",
+          "valor_actual": "28.5",
+          "valor_objetivo": "33",
+          "estrategia": "Implementar sesiones de role-playing y coaching individualizado enfocadas en las áreas de mejora prioritarias."
         },
         {
-          "meta": "Aumentar el puntaje promedio del equipo en 'manejo_objeciones'.",
-          "valor_actual": "31.3",
-          "valor_objetivo": "45",
-          "estrategia": "Implementar role-playing y capacitaciones enfocadas en el manejo de objeciones."
+          "meta": "Aumentar la tasa de conversión de llamadas en portabilidades.",
+          "valor_actual": "TBD",
+          "valor_objetivo": "Aumentar en un 15%",
+          "estrategia": "Mejorar la detección de necesidades y el manejo de objeciones para ofrecer soluciones más personalizadas y persuasivas."
         }
       ],
       "mediano_plazo_90_dias": [
         {
-          "meta": "Aumentar la tasa de conversión del equipo.",
-          "valor_actual": "0.0%",
-          "valor_objetivo": "2.0%",
-          "estrategia": "Mejorar la detección de necesidades, el manejo de objeciones y las técnicas de cierre."
+          "meta": "Mejorar la posición del equipo en el ranking general de rendimiento.",
+          "valor_actual": "5 de 7",
+          "valor_objetivo": "3 de 7",
+          "estrategia": "Implementar un plan de seguimiento individualizado para los vendedores con bajo rendimiento y fomentar la colaboración y el intercambio de mejores prácticas entre los miembros del equipo."
         },
         {
-          "meta": "Reducir el número de llamadas clasificadas como 'críticas'.",
-          "valor_actual": "21",
-          "valor_objetivo": "10",
-          "estrategia": "Implementar coaching individualizado y monitorear el progreso de cada vendedor."
+          "meta": "Aumentar la satisfacción del cliente medida a través de encuestas post-venta.",
+          "valor_actual": "TBD",
+          "valor_objetivo": "Aumentar en un 10%",
+          "estrategia": "Fomentar la empatía y la resolución de problemas durante la interacción con el cliente."
         }
       ]
     },
-    "seguimiento": {
-      "reuniones_sugeridas": "Reuniones semanales de equipo para revisar el progreso hacia las metas, compartir mejores prácticas y abordar desafíos. Reuniones individuales mensuales con cada vendedor para brindar coaching personalizado.",
-      "metricas_monitorear": [
-        "Puntaje promedio del equipo en 'deteccion_necesidades'",
-        "Puntaje promedio del equipo en 'manejo_objeciones'",
-        "Tasa de conversión del equipo",
-        "Número de llamadas clasificadas como 'críticas'",
-        "Puntaje individual de cada vendedor"
-      ],
-      "alertas": [
-        "Disminución en el puntaje promedio del equipo en cualquiera de las áreas clave",
-        "Aumento en el número de llamadas clasificadas como 'críticas'",
-        "Estancamiento en la tasa de conversión",
-        "Falta de participación en las capacitaciones y dinámicas de equipo"
-      ]
-    }
+    "mensaje_motivacional_equipo": "Equipo Diana, tenemos el potencial para superar cualquier desafío. Con enfoque, capacitación y colaboración, podemos alcanzar nuestras metas y convertirnos en un referente en Movistar Argentina. ¡Confío en cada uno de ustedes!"
   }
 }

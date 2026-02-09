@@ -671,9 +671,12 @@ def cargar_datos_io():
     ruta = os.path.join(BASE_DIR, 'reportes/evaluaciones_gemini.csv')
     if os.path.exists(ruta):
         try:
-            datos['evaluaciones'] = pd.read_csv(ruta)
+            df_eval = pd.read_csv(ruta)
+            datos['evaluaciones'] = df_eval
+            datos['evaluaciones_gemini_df'] = df_eval
         except Exception:
             datos['evaluaciones'] = None
+            datos['evaluaciones_gemini_df'] = None
 
     return datos
 
@@ -1932,9 +1935,11 @@ def cargar_listado_vendedores():
             equipo = str(row.iloc[2]).strip() if len(row) > 2 and pd.notna(row.iloc[2]) else "Sin Equipo"
             if usuario and nombre and usuario != 'usuario':
                 listado_vendedores[usuario] = nombre.title()
-                if equipo not in equipos_vendedores:
-                    equipos_vendedores[equipo] = []
-                equipos_vendedores[equipo].append(nombre.title())
+                # Solo agregar a equipos_vendedores si no es "Sin Equipo"
+                if equipo != "Sin Equipo":
+                    if equipo not in equipos_vendedores:
+                        equipos_vendedores[equipo] = []
+                    equipos_vendedores[equipo].append(nombre.title())
     except:
         pass
     return listado_vendedores, equipos_vendedores
@@ -2434,6 +2439,9 @@ def pagina_planes_ofrecidos(datos, df):
         planes_df['agente_display'] = planes_df['agente'].apply(obtener_nombre_agente)
         planes_df['equipo'] = planes_df['agente_display'].apply(obtener_equipo_por_nombre)
         
+        # Filtrar vendedores sin equipo
+        planes_df = planes_df[planes_df['equipo'] != "Sin Equipo"]
+        
         # =========================================================================
         # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
         # =========================================================================
@@ -2469,11 +2477,9 @@ def pagina_planes_ofrecidos(datos, df):
             # Admin o supervisor sin restricciones: Mostrar todos los filtros
             st.markdown('<p class="section-header">🔍 Filtros</p>', unsafe_allow_html=True)
             
-            # Obtener listas de equipos únicos
+            # Obtener listas de equipos únicos (excluyendo Sin Equipo)
             equipos_unicos = planes_df['equipo'].unique().tolist()
             equipos_ordenados = sorted([e for e in equipos_unicos if e != "Sin Equipo"])
-            if "Sin Equipo" in equipos_unicos:
-                equipos_ordenados.append("Sin Equipo")
             equipos_disponibles = ["Todos los Equipos"] + equipos_ordenados
             
             col_filtro1, col_filtro2 = st.columns(2)
@@ -3033,21 +3039,22 @@ def pagina_coaching_vendedores(datos):
         # Selector de agente con filtro por equipo
         st.markdown("### Selecciona un Vendedor")
         
-        # Crear diccionario de agentes por equipo
+        # Crear diccionario de agentes por equipo (excluyendo Sin Equipo)
         agentes_por_equipo = {}
         for agente in agentes_coaching:
             equipo = obtener_equipo_vendedor(agente)
-            if equipo not in agentes_por_equipo:
-                agentes_por_equipo[equipo] = []
-            agentes_por_equipo[equipo].append(agente)
+            if equipo != "Sin Equipo":
+                if equipo not in agentes_por_equipo:
+                    agentes_por_equipo[equipo] = []
+                agentes_por_equipo[equipo].append(agente)
         
         # Filtro por equipo - Ajustado según permisos
         col_equipo, col_vendedor = st.columns([1, 2])
         
         with col_equipo:
             if permisos['puede_ver_todos']:
-                # Admin: puede ver todos los equipos
-                equipos_disponibles = ["Todos los Equipos"] + sorted([e for e in agentes_por_equipo.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in agentes_por_equipo else [])
+                # Admin: puede ver todos los equipos (excluyendo Sin Equipo)
+                equipos_disponibles = ["Todos los Equipos"] + sorted([e for e in agentes_por_equipo.keys() if e != "Sin Equipo"])
                 equipo_seleccionado = st.selectbox(
                     "🏢 Filtrar por Equipo",
                     equipos_disponibles,
@@ -3319,7 +3326,7 @@ def pagina_coaching_vendedores(datos):
         
         # Filtro por equipo en comparativa - Ajustado según permisos
         if permisos['puede_ver_todos']:
-            equipos_disponibles_tab2 = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores.keys() if e != "Sin Equipo"]) + (["Sin Equipo"] if "Sin Equipo" in equipos_vendedores else [])
+            equipos_disponibles_tab2 = ["Todos los Equipos"] + sorted([e for e in equipos_vendedores.keys() if e != "Sin Equipo"])
             equipo_filtro_tab2 = st.selectbox(
                 "🏢 Filtrar por Equipo",
                 equipos_disponibles_tab2,
@@ -4034,6 +4041,9 @@ def pagina_detalle_llamadas(df, datos):
         quejas_df['agente_display'] = quejas_df['agente'].apply(obtener_nombre_agente)
         quejas_df['equipo'] = quejas_df['agente_display'].apply(obtener_equipo_por_nombre)
         
+        # Filtrar vendedores sin equipo
+        quejas_df = quejas_df[quejas_df['equipo'] != "Sin Equipo"]
+        
         # =========================================================================
         # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
         # =========================================================================
@@ -4078,8 +4088,6 @@ def pagina_detalle_llamadas(df, datos):
             
             equipos_unicos = quejas_df['equipo'].unique().tolist()
             equipos_ordenados = sorted([e for e in equipos_unicos if e != "Sin Equipo"])
-            if "Sin Equipo" in equipos_unicos:
-                equipos_ordenados.append("Sin Equipo")
             equipos_disponibles = ["Todos los Equipos"] + equipos_ordenados
             
             col_filtro1, col_filtro2 = st.columns(2)
@@ -4982,8 +4990,8 @@ def pagina_analisis_equipos(datos):
         st.warning("⚠️ No hay suficientes datos para el análisis de equipos.")
         return
     
-    # Obtener lista de equipos disponibles (excluyendo "Sin Equipo" y vacíos)
-    equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+    # Obtener lista de equipos disponibles (excluyendo vacíos y sin equipo)
+    equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "nan" and e != "Sin Equipo"]
     equipos_disponibles = sorted(equipos_disponibles)
     
     # =========================================================================
@@ -5093,6 +5101,7 @@ def pagina_analisis_equipos(datos):
                 planes_df_temp = planes_df.copy()
                 planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
                 planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                planes_df_temp = planes_df_temp[planes_df_temp['equipo'] != "Sin Equipo"]
                 
                 df_equipo_planes = planes_df_temp[planes_df_temp['equipo'] == equipo_seleccionado]
                 
@@ -5444,7 +5453,7 @@ def pagina_analisis_equipos(datos):
             st.markdown("### 📊 Comparativa entre Equipos")
             
             # Selector múltiple de equipos
-            todos_equipos_comparar = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+            todos_equipos_comparar = [e for e in equipos_vendedores.keys() if e and e != "nan" and e != "Sin Equipo"]
             equipos_comparar = st.multiselect(
                 "Selecciona los equipos a comparar:",
                 sorted(todos_equipos_comparar),
@@ -5489,6 +5498,7 @@ def pagina_analisis_equipos(datos):
                         planes_df_temp = planes_df.copy()
                         planes_df_temp['agente_display'] = planes_df_temp['agente'].apply(obtener_nombre_agente)
                         planes_df_temp['equipo'] = planes_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                        planes_df_temp = planes_df_temp[planes_df_temp['equipo'] != "Sin Equipo"]
                         df_eq = planes_df_temp[planes_df_temp['equipo'] == equipo]
                         
                         if not df_eq.empty:
@@ -5501,6 +5511,7 @@ def pagina_analisis_equipos(datos):
                         quejas_df_temp = quejas_df.copy()
                         quejas_df_temp['agente_display'] = quejas_df_temp['agente'].apply(obtener_nombre_agente)
                         quejas_df_temp['equipo'] = quejas_df_temp['agente_display'].apply(obtener_equipo_por_nombre)
+                        quejas_df_temp = quejas_df_temp[quejas_df_temp['equipo'] != "Sin Equipo"]
                         df_eq_q = quejas_df_temp[quejas_df_temp['equipo'] == equipo]
                         
                         if not df_eq_q.empty:
@@ -5810,6 +5821,9 @@ def pagina_evaluaciones_gemini(datos):
     # Agregar columna de equipo
     df['equipo'] = df['agente'].apply(obtener_equipo_por_nombre)
     
+    # Filtrar vendedores sin equipo
+    df = df[df['equipo'] != "Sin Equipo"]
+    
     # =========================================================================
     # APLICAR RESTRICCIONES SEGÚN ROL DEL USUARIO
     # =========================================================================
@@ -6039,9 +6053,11 @@ def pagina_evaluaciones_gemini(datos):
 
                 for areas in df['areas_mejora'].dropna():
                     if isinstance(areas, str):
+                        areas_unicas = set()  # Usar set para evitar duplicados por fila
                         for area in areas.split(','):
-                            area = area.strip().strip('"').strip("'").strip('[').strip(']')
-                            if area:
+                            area = area.strip().strip('"').strip("'").strip('[').strip(']').strip()
+                            if area and area not in areas_unicas:
+                                areas_unicas.add(area)
                                 all_areas.append(area)
 
                 if all_areas:
@@ -6451,9 +6467,11 @@ def pagina_evaluaciones_gemini(datos):
                     areas_agente = []
                     for areas in df_agente['areas_mejora'].dropna():
                         if isinstance(areas, str):
+                            areas_unicas = set()  # Deduplicar por fila
                             for area in areas.split(','):
-                                area = area.strip().strip('"').strip("'").strip('[').strip(']')
-                                if area:
+                                area = area.strip().strip('"').strip("'").strip('[').strip(']').strip()
+                                if area and area not in areas_unicas:
+                                    areas_unicas.add(area)
                                     areas_agente.append(area)
                     
                     if areas_agente:
@@ -6866,7 +6884,7 @@ def pagina_comparativa_periodos(datos):
         return "Sin Equipo"
     
     # Obtener equipos únicos
-    equipos_lista = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+    equipos_lista = [e for e in equipos_vendedores.keys() if e and e != "nan" and e != "Sin Equipo"]
     equipos_lista = sorted(equipos_lista)
     
     # Selector de equipos (multiselect)
@@ -9117,7 +9135,7 @@ def pagina_resumen_corporativo(datos):
         st.markdown("### 👥 Resumen de Equipo")
         
         # Obtener lista de equipos disponibles
-        equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
+        equipos_disponibles = [e for e in equipos_vendedores.keys() if e and e != "nan" and e != "Sin Equipo"]
         equipos_disponibles = sorted(equipos_disponibles)
         
         # Restricción por rol
