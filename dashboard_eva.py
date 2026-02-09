@@ -6889,7 +6889,18 @@ def aplicar_semaforo_cumplimiento(porcentaje):
 def pagina_comparativa_periodos(datos):
     """Página para comparar métricas entre dos períodos diferentes"""
     st.markdown('<div class="main-header">📅 COMMAND · Comparativa de Períodos</div>', unsafe_allow_html=True)
-    st.warning("🛠️ En desarrollo")
+    st.markdown(
+        """
+        <div style='background: #F1F5F9; padding: 20px; border-radius: 12px; border-left: 5px solid #3B82F6;'>
+            <h3 style='margin: 0; color: #1E293B;'>🛠️ En desarrollo</h3>
+            <p style='margin: 8px 0 0 0; color: #475569;'>
+                Este apartado estara disponible pronto con comparativas avanzadas entre periodos.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    return
     
     # Subtítulo corporativo
     st.markdown("""
@@ -7360,7 +7371,18 @@ def pagina_calidad():
     """Página de Calidad - Análisis de Llamadas Call Center"""
     
     st.markdown('<p class="main-header">📞 COMMAND · Indicadores de Calidad y Cumplimiento</p>', unsafe_allow_html=True)
-    st.warning("🛠️ En desarrollo")
+    st.markdown(
+        """
+        <div style='background: #F1F5F9; padding: 20px; border-radius: 12px; border-left: 5px solid #0EA5E9;'>
+            <h3 style='margin: 0; color: #1E293B;'>🛠️ En desarrollo</h3>
+            <p style='margin: 8px 0 0 0; color: #475569;'>
+                Este apartado estara disponible pronto con indicadores operativos y KPIs.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    return
     
     # Subtítulo corporativo
     st.markdown("""
@@ -8453,7 +8475,18 @@ def pagina_metricas_calidad():
     """Página de Métricas de Calidad - 3 Apartados: Tiempos, Ventas, Llamadas + Comparativa"""
     
     st.markdown('<p class="main-header">📊 COMMAND · Métricas de Calidad</p>', unsafe_allow_html=True)
-    st.warning("🛠️ En desarrollo")
+    st.markdown(
+        """
+        <div style='background: #F1F5F9; padding: 20px; border-radius: 12px; border-left: 5px solid #6366F1;'>
+            <h3 style='margin: 0; color: #1E293B;'>🛠️ En desarrollo</h3>
+            <p style='margin: 8px 0 0 0; color: #475569;'>
+                Este apartado estara disponible pronto con metricas de tiempos, ventas y llamadas.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    return
     
     # Obtener permisos del usuario actual
     permisos = obtener_permisos_usuario()
