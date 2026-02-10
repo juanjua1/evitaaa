@@ -6176,6 +6176,57 @@ def pagina_evaluaciones_gemini(datos):
             # ÁREAS DE MEJORA (RESERVADO)
             # =============================================================================
 
+            def _normalizar_area(texto):
+                import re
+                import unicodedata
+
+                texto = str(texto).strip().lower()
+                texto = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode('ascii')
+                texto = re.sub(r'[^a-z0-9\s]', ' ', texto)
+                texto = re.sub(r'\s+', ' ', texto).strip()
+                return texto
+
+            def _mapear_area(texto):
+                normalizada = _normalizar_area(texto)
+                excluir = {
+                    _normalizar_area('Completar el proceso de cierre'),
+                    _normalizar_area('Realizar preguntas para detectar las necesidades del cliente'),
+                    _normalizar_area('Resolucion de problemas'),
+                    _normalizar_area('Presentacion inicial'),
+                    _normalizar_area('Profundizar en la deteccion de necesidades'),
+                    _normalizar_area('Mejorar la presentacion inicial')
+                }
+                if normalizada in excluir:
+                    return None
+                mapa = {
+                    'saludo y presentacion': 'Saludo y Presentación',
+                    'presentacion y saludo': 'Saludo y Presentación',
+                    'presentacion y saludo inicial': 'Saludo y Presentación',
+                    'presentacion': 'Saludo y Presentación',
+                    'saludo': 'Saludo y Presentación',
+                    'identificacion cliente': 'Identificación del Cliente',
+                    'identificacion del cliente': 'Identificación del Cliente',
+                    'deteccion necesidades': 'Detección de Necesidades',
+                    'deteccion de necesidades': 'Detección de Necesidades',
+                    'deteccion de necesidades del cliente': 'Detección de Necesidades',
+                    'manejo de objeciones': 'Manejo de Objeciones',
+                    'oferta de productos': 'Oferta de Productos',
+                    'ofrecer productos adicionales': 'Oferta de Productos',
+                    'presentacion y oferta de productos': 'Oferta de Productos',
+                    'cierre de ventas': 'Cierre de Venta',
+                    'cierre de venta': 'Cierre de Venta',
+                    'cierre de la venta': 'Cierre de Venta',
+                    'cierre': 'Cierre de Venta',
+                    'resolucion problemas': 'Resolución de Problemas',
+                    'resolucion de problemas': 'Resolución de Problemas',
+                    'empatia': 'Empatía',
+                    'despedida': 'Despedida',
+                    'proactividad': 'Proactividad',
+                    'proactividad ofrecer fibra': 'Proactividad',
+                    'proactividad en la oferta de productos': 'Proactividad'
+                }
+                return mapa.get(normalizada, texto.strip())
+
             if 'areas_mejora' in df.columns:
                 from collections import Counter
                 all_areas = []
@@ -6185,9 +6236,13 @@ def pagina_evaluaciones_gemini(datos):
                         areas_unicas = set()  # Usar set para evitar duplicados por fila
                         for area in areas.split(','):
                             area = area.strip().strip('"').strip("'").strip('[').strip(']').strip()
-                            if area and area not in areas_unicas:
-                                areas_unicas.add(area)
-                                all_areas.append(area)
+                            if area:
+                                area_mapeada = _mapear_area(area)
+                                if area_mapeada:
+                                    area_norm = _normalizar_area(area_mapeada)
+                                    if area_norm not in areas_unicas:
+                                        areas_unicas.add(area_norm)
+                                        all_areas.append(area_mapeada)
 
                 if all_areas:
                     area_counts = Counter(all_areas)
@@ -6599,9 +6654,13 @@ def pagina_evaluaciones_gemini(datos):
                             areas_unicas = set()  # Deduplicar por fila
                             for area in areas.split(','):
                                 area = area.strip().strip('"').strip("'").strip('[').strip(']').strip()
-                                if area and area not in areas_unicas:
-                                    areas_unicas.add(area)
-                                    areas_agente.append(area)
+                                if area:
+                                    area_mapeada = _mapear_area(area)
+                                    if area_mapeada:
+                                        area_norm = _normalizar_area(area_mapeada)
+                                        if area_norm not in areas_unicas:
+                                            areas_unicas.add(area_norm)
+                                            areas_agente.append(area_mapeada)
                     
                     if areas_agente:
                         area_counts = Counter(areas_agente)
