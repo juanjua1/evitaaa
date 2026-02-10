@@ -5666,8 +5666,8 @@ def pagina_analisis_equipos(datos):
                 </p>
                 <p style='color: #34495E; margin-bottom: 10px;'>
                     <strong>Llamadas que Requieren Atención:</strong><br>
-                    Son aquellas evaluaciones con puntaje menor a 70 (consideradas críticas) que requieren 
-                    coaching o capacitación adicional para mejorar el desempeño.
+                    Son aquellas evaluaciones con puntaje entre 41-79 que necesitan mejoras específicas, 
+                    y las críticas (≤40) que requieren coaching intensivo o capacitación adicional.
                 </p>
                 <p style='color: #34495E; margin-bottom: 0;'>
                     <strong>Llamadas Sin Evaluación:</strong><br>
