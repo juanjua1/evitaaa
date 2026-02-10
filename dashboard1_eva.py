@@ -597,7 +597,7 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
             st.dataframe(df_otros, use_container_width=True, hide_index=True)
 
 
-# Directorio base del script
+# Directorio base de la aplicación
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Variables y helpers para precarga de datos en background
@@ -3051,6 +3051,29 @@ def pagina_coaching_vendedores(datos):
             st.markdown(f"### 📊 Métricas de {agente_seleccionado}")
             st.caption(f"📍 Equipo: **{equipo_actual}**")
             
+            # Sección explicativa sobre evaluaciones
+            st.markdown("""
+            <div style='background-color: #FFF4E6; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #F59E0B;'>
+                <h4 style='color: #92400E; margin-top: 0; font-size: 1rem;'>📋 ¿Cómo funciona la Evaluación?</h4>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Evaluaciones = Llamadas Analizadas:</strong> Cada llamada es transcrita y evaluada automáticamente 
+                    por IA según criterios de calidad establecidos.
+                </p>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Puntaje (0-100):</strong> Se calcula en base a 10 criterios: saludo, identificación, detección de necesidades, 
+                    oferta de productos, manejo de objeciones, cierre, despedida, proactividad, empatía y resolución de problemas.
+                </p>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Clasificación:</strong> 
+                    • Excelentes (≥80) • Buenas (70-79) • Críticas (<70)
+                </p>
+                <p style='color: #78350F; margin-bottom: 0; font-size: 0.9rem;'>
+                    <strong>vs Equipo:</strong> Muestra la diferencia entre el puntaje del agente y el promedio de su equipo. 
+                    Un valor positivo (+) indica que está por encima del equipo, negativo (-) indica que está por debajo.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
             comparativa = data.get('comparativa', {})
             metricas = data.get('metricas', {})
             
@@ -5151,7 +5174,7 @@ def pagina_analisis_equipos(datos):
                         'area': '📊 Puntaje IA',
                         'estado': 'En desarrollo',
                         'color': '#F39C12',
-                        'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de scripts.'
+                        'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de llamadas.'
                     })
             
             if 'pct_fibra' in dir() and pct_fibra < 30:
@@ -5356,7 +5379,7 @@ def pagina_analisis_equipos(datos):
                 except Exception as e:
                     st.warning(f"⚠️ Error al cargar el coaching del equipo: {str(e)}")
             else:
-                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el script de coaching de equipos primero.")
+                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el proceso de coaching de equipos primero."))
     
     # =========================================================================
     # TAB 2: COMPARATIVA DE EQUIPOS (Solo para admin)
@@ -5364,6 +5387,32 @@ def pagina_analisis_equipos(datos):
     if tab2 is not None:
         with tab2:
             st.markdown("### 📊 Comparativa entre Equipos")
+            
+            # Sección explicativa
+            st.markdown("""
+            <div style='background-color: #E8F4F8; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #3498DB;'>
+                <h4 style='color: #2C3E50; margin-top: 0;'>📋 Información sobre Evaluaciones de Equipo</h4>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>¿Qué representa el Total de Evaluaciones?</strong><br>
+                    El total de evaluaciones incluye todas las llamadas procesadas de todos los agentes pertenecientes a cada equipo.
+                </p>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>¿Cómo se calcula el Índice de Calidad?</strong><br>
+                    El índice de calidad se obtiene del promedio del puntaje de evaluación de todas las llamadas del equipo, 
+                    basado en criterios como: saludo correcto, identificación, oferta de productos (fibra, planes), 
+                    resolución de quejas, y cierre de llamada. El puntaje máximo es 100.
+                </p>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>Llamadas que Requieren Atención:</strong><br>
+                    Son aquellas evaluaciones con puntaje menor a 70 (consideradas críticas) que requieren 
+                    coaching o capacitación adicional para mejorar el desempeño.
+                </p>
+                <p style='color: #34495E; margin-bottom: 0;'>
+                    <strong>Llamadas Sin Evaluación:</strong><br>
+                    Representa el porcentaje de llamadas que aún no han sido procesadas o evaluadas por el sistema de IA.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
             # Selector múltiple de equipos
             todos_equipos_comparar = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
@@ -8130,7 +8179,7 @@ def pagina_metricas_calidad():
     datos = cargar_datos_calidad_procesados()
     
     if datos is None:
-        st.warning("⚠️ **No hay datos procesados.** Ejecute el script `procesar_calidad.py` primero.")
+        st.warning("⚠️ **No hay datos procesados.** Ejecute el proceso `procesar_calidad.py` primero."))
         return
     
     fecha_proceso = datos.get('fecha_proceso', 'N/A')
