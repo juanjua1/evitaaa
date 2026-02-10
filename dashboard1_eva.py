@@ -5425,7 +5425,7 @@ def pagina_analisis_equipos(datos):
                 except Exception as e:
                     st.warning(f"⚠️ Error al cargar el coaching del equipo: {str(e)}")
             else:
-                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el proceso de coaching de equipos primero."))
+                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el proceso de coaching de equipos primero.")
     
     # =========================================================================
     # TAB 2: COMPARATIVA DE EQUIPOS (Solo para admin)
@@ -8232,7 +8232,7 @@ def pagina_metricas_calidad():
     datos = cargar_datos_calidad_procesados()
     
     if datos is None:
-        st.warning("⚠️ **No hay datos procesados.** Ejecute el proceso `procesar_calidad.py` primero."))
+        st.warning("⚠️ **No hay datos procesados.** Ejecute el proceso `procesar_calidad.py` primero.")
         return
     
     fecha_proceso = datos.get('fecha_proceso', 'N/A')
