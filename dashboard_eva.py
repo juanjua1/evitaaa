@@ -3248,8 +3248,8 @@ def pagina_coaching_vendedores(datos):
                     oferta de productos, manejo de objeciones, cierre, despedida, proactividad, empatía y resolución de problemas.
                 </p>
                 <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
-                    <strong>Clasificación:</strong> 
-                    • Excelentes (≥80) • Buenas (70-79) • Críticas (<70)
+                    <strong>Clasificación Individual:</strong> 
+                    • Excelentes (≥80) • Buenas (21-79) • Críticas (≤20)
                 </p>
                 <p style='color: #78350F; margin-bottom: 0; font-size: 0.9rem;'>
                     <strong>vs Equipo:</strong> Muestra la diferencia entre el puntaje del agente y el promedio de su equipo. 
@@ -3293,7 +3293,7 @@ def pagina_coaching_vendedores(datos):
             
             with col5:
                 criticas = metricas.get('evaluaciones', {}).get('llamadas_criticas', 0)
-                st.metric("Críticas", criticas, delta_color="inverse", help="Puntaje < 30")
+                st.metric("Críticas", criticas, delta_color="inverse", help="Puntaje <= 20")
             
             # Mostrar información de percentil y ranking si está disponible
             percentil = comparativa.get('puntaje_ia', {}).get('percentil', 0)
@@ -5391,10 +5391,10 @@ def pagina_analisis_equipos(datos):
                     El sistema transcribe cada llamada y la evalúa automáticamente con IA.
                 </p>
                 <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
-                    <strong>Clasificación de Llamadas:</strong><br>
-                    • <span style='color: #10B981;'>✓ Buenas</span> (Puntaje ≥ 70): Cumplen con el protocolo establecido<br>
-                    • <span style='color: #F59E0B;'>⚠ Requieren Atención</span> (Puntaje 40-69): Necesitan mejoras en algunos criterios<br>
-                    • <span style='color: #EF4444;'>⚠ Críticas</span> (Puntaje < 40): No cumplen con los estándares mínimos de calidad
+                    <strong>Clasificación de Llamadas (Equipo):</strong><br>
+                    • <span style='color: #10B981;'>✓ Excelentes</span> (Puntaje ≥ 80): Cumplen con estándares de excelencia<br>
+                    • <span style='color: #F59E0B;'>⚠ Requieren Atención</span> (Puntaje 41-79): Necesitan mejoras en algunos criterios<br>
+                    • <span style='color: #EF4444;'>⚠ Críticas</span> (Puntaje ≤ 40): No cumplen con los estándares mínimos de calidad
                 </p>
                 <p style='color: #0C4A6E; margin-bottom: 0; font-size: 0.9rem;'>
                     <strong>Base del Puntaje:</strong> Se evalúan 10 criterios por llamada (saludo, identificación, necesidades, 
