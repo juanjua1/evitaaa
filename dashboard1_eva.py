@@ -6407,9 +6407,7 @@ def pagina_evaluaciones_gemini(datos):
             ascending = 'menor' in orden
             df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
             
-            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
-            
-            # Tabla expandida
+            st.markdown(f"**Mostrando las primeras 100 de {len(df_filtrado):,} evaluaciones:**")
             columnas_mostrar = ['archivo', 'agente', 'puntaje_total', 'saludo_presentacion', 
                                'cierre', 'oferta_productos', 'resumen']
             columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
@@ -6426,7 +6424,12 @@ def pagina_evaluaciones_gemini(datos):
             st.markdown("**📄 Ver Detalle de Evaluación Específica:**")
             
             if len(df_filtrado) > 0:
-                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                # Aumentar límite de archivos mostrados en el selector
+                max_archivos = min(200, len(df_filtrado))
+                archivos_lista = df_filtrado['archivo'].tolist()[:max_archivos]
+                
+                st.info(f"ℹ️ Mostrando {max_archivos} de {len(df_filtrado)} evaluaciones en el selector. Usa los filtros para reducir la lista.")
+                
                 archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle')
                 
                 eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
@@ -6476,9 +6479,7 @@ def pagina_evaluaciones_gemini(datos):
             ascending = 'menor' in orden
             df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
             
-            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
-            
-            # Tabla de evaluaciones del vendedor
+            st.markdown(f"**Mostrando las primeras 100 de {len(df_filtrado):,} evaluaciones:**")
             columnas_mostrar = ['archivo', 'puntaje_total', 'saludo_presentacion', 
                                'cierre', 'oferta_productos', 'resumen']
             columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
@@ -6494,7 +6495,13 @@ def pagina_evaluaciones_gemini(datos):
             if len(df_filtrado) > 0:
                 st.markdown("---")
                 st.markdown("**📄 Ver Detalle de Evaluación:**")
-                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                
+                # Aumentar límite de archivos mostrados en el selector
+                max_archivos = min(200, len(df_filtrado))
+                archivos_lista = df_filtrado['archivo'].tolist()[:max_archivos]
+                
+                st.info(f"ℹ️ Mostrando {max_archivos} de {len(df_filtrado)} evaluaciones en el selector. Usa los filtros para reducir la lista.")
+                
                 archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle_vendedor')
                 
                 eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
