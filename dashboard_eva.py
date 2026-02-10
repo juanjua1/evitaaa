@@ -3295,8 +3295,32 @@ def pagina_coaching_vendedores(datos):
                 criticas = metricas.get('evaluaciones', {}).get('llamadas_criticas', 0)
                 st.metric("Críticas", criticas, delta_color="inverse", help="Puntaje < 30")
             
+            # Mostrar información de percentil y ranking si está disponible
+            percentil = comparativa.get('puntaje_ia', {}).get('percentil', 0)
+            if percentil > 0:
+                st.markdown(f"""
+                <div style='background-color: #ECFDF5; padding: 10px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #10B981;'>
+                    <p style='color: #065F46; margin: 0; font-size: 0.9rem;'>
+                        🎯 <strong>Posicionamiento:</strong> Este agente se encuentra en el <strong>percentil {percentil:.0f}</strong> 
+                        de su equipo, lo que significa que supera al {percentil:.0f}% de los agentes del equipo.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+            
             # Gráfico radar de criterios
             st.markdown("### 📈 Comparativa por Criterio")
+            
+            # Sección explicativa sobre la comparativa
+            equipo_del_agente = obtener_equipo_vendedor(agente_seleccionado)
+            st.markdown(f"""
+            <div style='background-color: #FEF3C7; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #F59E0B;'>
+                <p style='color: #78350F; margin: 0; font-size: 0.9rem;'>
+                    <strong>📊 Promedio del Equipo:</strong> Se calcula como el promedio de puntajes de todos los agentes del equipo <strong>{equipo_del_agente}</strong>. 
+                    Esta comparativa muestra si el agente está por encima o por debajo del rendimiento promedio de su equipo en cada criterio.
+                    Un valor positivo (+) indica mejor desempeño que el equipo, negativo (-) indica área de mejora.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
             criterios_comp = comparativa.get('criterios', {})
             if criterios_comp:
@@ -5357,6 +5381,28 @@ def pagina_analisis_equipos(datos):
             # Plan de mejora del equipo
             st.markdown("---")
             st.markdown('<p class="section-header">🎯 Plan de Mejora del Equipo</p>', unsafe_allow_html=True)
+            
+            # Sección explicativa sobre planes de mejora
+            st.markdown("""
+            <div style='background-color: #F0F9FF; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #0EA5E9;'>
+                <h4 style='color: #075985; margin-top: 0; font-size: 1rem;'>📊 ¿Cómo se evalúa el puntaje?</h4>
+                <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Evaluaciones = Llamadas del Equipo:</strong> Todas las llamadas grabadas y procesadas de los agentes del equipo.
+                    El sistema transcribe cada llamada y la evalúa automáticamente con IA.
+                </p>
+                <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Clasificación de Llamadas:</strong><br>
+                    • <span style='color: #10B981;'>✓ Buenas</span> (Puntaje ≥ 70): Cumplen con el protocolo establecido<br>
+                    • <span style='color: #F59E0B;'>⚠ Requieren Atención</span> (Puntaje 40-69): Necesitan mejoras en algunos criterios<br>
+                    • <span style='color: #EF4444;'>⚠ Críticas</span> (Puntaje < 40): No cumplen con los estándares mínimos de calidad
+                </p>
+                <p style='color: #0C4A6E; margin-bottom: 0; font-size: 0.9rem;'>
+                    <strong>Base del Puntaje:</strong> Se evalúan 10 criterios por llamada (saludo, identificación, necesidades, 
+                    oferta, objeciones, cierre, despedida, proactividad, empatía, resolución). El promedio de todos los criterios 
+                    da el puntaje total de 0 a 100 por llamada.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
             # Identificar áreas de mejora
             recomendaciones = []
