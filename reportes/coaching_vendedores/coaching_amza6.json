@@ -1,0 +1,182 @@
+{
+  "agente": "Colilaf Micaela",
+  "agente_codigo": "amza6",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:09:26.848542",
+  "metricas": {
+    "agente": "Colilaf Micaela",
+    "agente_codigo": "amza6",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 14,
+      "puntaje_promedio": 40.0,
+      "puntaje_min": 0,
+      "puntaje_max": 90,
+      "desviacion_std": 27.2,
+      "llamadas_excelentes": 2,
+      "llamadas_buenas": 2,
+      "llamadas_regulares": 2,
+      "llamadas_criticas": 8,
+      "criterios": {
+        "saludo_presentacion": 50.0,
+        "identificacion_cliente": 78.6,
+        "deteccion_necesidades": 32.1,
+        "oferta_productos": 57.1,
+        "manejo_objeciones": 28.6,
+        "cierre": 21.4,
+        "despedida": 71.4,
+        "proactividad": 21.4,
+        "empatia": 35.7,
+        "resolucion_problemas": 10.7
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 6,
+        "Manejo de objeciones": 5,
+        "Oferta de productos": 4,
+        "Cierre": 4,
+        "Presentación": 3
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 7,
+        "Despedida": 2,
+        "Manejo de objeciones": 2,
+        "Saludo y presentación": 2,
+        "Despedida cordial": 2
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 90.0,
+          "resumen": "El agente se presentó correctamente, identificó al cliente, detectó necesidades, ofreció los productos de manera directa y efectiva, manejó objeciones, cerró la venta parcialmente y se despidió correctamente.  Además fue proactivo y demostró empatía."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente y detecta sus necesidades. Ofrece los planes directamente y maneja la objeción sobre el precio. No se logra el cierre de la venta. Se despide cordialmente."
+        },
+        {
+          "puntaje_total": 70.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente, ofrece planes, maneja la objeción y coordina un llamado de seguimiento.  No se detectan preguntas de detección de necesidades ni ofertas de fibra."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada no cumple con los criterios obligatorios. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos y no cierra la venta."
+        },
+        {
+          "puntaje_total": 10.0,
+          "resumen": "El agente se enfoca en verificar con quién habla y no cumple con las reglas de presentación y oferta de productos. No se detectan necesidades, no hay cierre ni despedida."
+        },
+        {
+          "puntaje_total": 20.0,
+          "resumen": "El agente no cumple con los criterios de la evaluación. No se presenta correctamente, no detecta necesidades, no ofrece productos, no maneja objeciones ni intenta cerrar la venta."
+        }
+      ],
+      "pct_ofrece_fibra": 0.0
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {
+      "total_llamadas": 267,
+      "tmo_seg": 69.8,
+      "pct_capta_atencion": 23.2,
+      "menos_30seg": 119,
+      "corte_cliente": 213,
+      "corte_agente": 53
+    },
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 77,
+      "dias_trabajados": 3,
+      "llamadas_por_dia_promedio": 25.7,
+      "duracion_promedio_seg": 108.7,
+      "talking_total_min": 105.5,
+      "talking_promedio_seg": 82.2,
+      "hold_total_min": 0.0,
+      "acw_total_min": 11.4,
+      "promedio_min_hablados_por_hora": 17.6,
+      "horas_trabajadas": 6,
+      "exitosas": 15,
+      "no_exitosas": 57,
+      "tasa_contacto_efectivo": 19.5,
+      "ventas": 0,
+      "agendados": 0,
+      "no_quiere_contacto": 0,
+      "conforme_actual": 9,
+      "cortes_conversacion": 4,
+      "mudas_cortadas": 45,
+      "con_conversacion_real_30s": 28,
+      "tasa_conversacion_real": 36.4,
+      "corte_cliente": 60,
+      "corte_agente": 16,
+      "llamadas_largas_1min": 18,
+      "llamadas_cortas_1min": 59,
+      "score_integral": 42.0,
+      "score_operacional": 44.9
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 40.0,
+      "general": 33.0,
+      "diferencia": 7.0,
+      "percentil": 59.9
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 50.0,
+        "general": 32.4,
+        "diferencia": 17.6
+      },
+      "identificacion_cliente": {
+        "agente": 78.6,
+        "general": 62.7,
+        "diferencia": 15.9
+      },
+      "deteccion_necesidades": {
+        "agente": 32.1,
+        "general": 22.0,
+        "diferencia": 10.1
+      },
+      "oferta_productos": {
+        "agente": 57.1,
+        "general": 35.0,
+        "diferencia": 22.2
+      },
+      "manejo_objeciones": {
+        "agente": 28.6,
+        "general": 28.1,
+        "diferencia": 0.5
+      },
+      "cierre": {
+        "agente": 21.4,
+        "general": 12.9,
+        "diferencia": 8.5
+      },
+      "despedida": {
+        "agente": 71.4,
+        "general": 59.4,
+        "diferencia": 12.0
+      },
+      "proactividad": {
+        "agente": 21.4,
+        "general": 9.1,
+        "diferencia": 12.3
+      },
+      "empatia": {
+        "agente": 35.7,
+        "general": 39.5,
+        "diferencia": -3.8
+      },
+      "resolucion_problemas": {
+        "agente": 10.7,
+        "general": 19.0,
+        "diferencia": -8.3
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Colilaf Micaela\n\n### 1. DIAGNOSTICO GENERAL\nColilaf Micaela se encuentra en un nivel que necesita mejora, con un puntaje promedio de 40 sobre 100. Si bien supera el puntaje promedio del equipo (33 sobre 100) por 7 puntos, existe un margen considerable para optimizar su desempeño, especialmente en áreas críticas como detección de necesidades, manejo de objeciones y cierre. Su puntaje la ubica en el percentil 59.9, lo que indica que aún hay margen para escalar posiciones dentro del equipo. Su proactividad es un punto a destacar y potenciar, pero necesita direccionarse a las necesidades del cliente.\n\nEl mayor desafío radica en convertir las interacciones en ventas efectivas, evidenciado por la falta de cierres comerciales. Para lograr esto, Micaela debe enfocarse en comprender mejor las necesidades de los clientes, superar las objeciones de manera efectiva y concretar los cierres de venta de forma más agresiva.\n\n### 2. FORTALEZAS\n*   **Identificación del Cliente:** Logra una buena Identificación del Cliente, con un puntaje de 78.6 de 100, superando el promedio del equipo. Continúa implementando este proceso consistentemente para asegurar que te diriges a la persona correcta.\n*   **Saludo y Presentación:** Muestra un buen desempeño en el saludo y presentación (50 de 100), superior al promedio del equipo. Mantén esta actitud positiva y profesional al inicio de cada interacción.\n*   **Despedida:** Obtiene un puntaje aceptable en la despedida (71.4 de 100), también superior al promedio del equipo. Continua despidiendote cordialmente, dejando una buena impresión final.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de Necesidades:** El puntaje de 32.1 de 100 indica una clara oportunidad de mejora. Sin una comprensión sólida de las necesidades del cliente, es difícil ofrecer soluciones personalizadas y persuasivas.\n*   **Manejo de Objeciones:** Con un puntaje de 28.6 de 100, el manejo de objeciones es un área que requiere atención inmediata. Micaela necesita desarrollar estrategias más efectivas para abordar las preocupaciones de los clientes y convertirlas en oportunidades.\n*   **Cierre:** El puntaje de 21.4 de 100 en cierre revela una dificultad significativa para concretar ventas. Es fundamental implementar técnicas de cierre más directas y persuasivas para aumentar la tasa de conversión.\n\n### 4. ANALISIS POR COMPETENCIA\n*   **Saludo y Presentación:** Nivel actual bueno (50 de 100). Lo hace bien al presentarse, pero puede mejorar incluyendo un beneficio breve en el saludo inicial para captar la atención (\"Hola, soy Micaela de Movistar y tengo una oferta exclusiva para vos en tu zona\").\n*   **Identificación del Cliente:** Nivel actual bueno (78.6 de 100). Lo hace bien al verificar la identidad del cliente. Debe continuar implementando este proceso consistentemente.\n*   **Detección de Necesidades:** Nivel actual bajo (32.1 de 100). No está realizando preguntas efectivas para comprender las necesidades del cliente. **Como mejorar:** Después de la identificación, preguntar directamente \"¿Qué es lo que más usás de tu celular?\" y \"¿Cuántos GB tenés contratados actualmente?\". Profundizar sobre la respuesta para obtener más información.\n*   **Oferta de Productos:** Nivel actual promedio (57.1 de 100). Ofrece productos, pero sin conectar con las necesidades del cliente. **Como mejorar:** Una vez detectada la necesidad, ofrecer planes que se ajusten a ella, enfatizando los beneficios específicos. Comentar directamente la oferta de fibra: \"Además, en tu zona tenemos fibra óptica de alta velocidad. Te comento, tenemos...\"\n*   **Manejo de Objeciones:** Nivel actual bajo (28.6 de 100). No está rebatido las objeciones de manera efectiva. **Como mejorar:** Escuchar atentamente la objeción y responder de manera puntual, resaltando el valor de la oferta. **Ejemplo:** Si el cliente dice \"Es muy caro\", responder \"Es lógico que mires el precio. A varios clientes les pasó eso... pero cuando ven todo lo que incluye el plan, se dan cuenta que vale la pena por [beneficio específico]\".\n*   **Cierre:** Nivel actual muy bajo (21.4 de 100). No está intentando cerrar la venta de manera efectiva. **Como mejorar:** Después de manejar la objeción, cerrar directamente: \"Perfecto, entonces te asigno la sucursal más cercana para que retires el chip\" o \"Para coordinar la instalación de la fibra, ¿me confirmás tu domicilio?\".\n*   **Despedida:** Nivel actual bueno (71.4 de 100). La despedida es correcta, pero puede ser más personalizada. **Como mejorar:** Agradecer al cliente por su tiempo y ofrecer acompañamiento durante el proceso de portabilidad: \"Gracias por tu tiempo. Te voy a acompañar durante todo el proceso de portabilidad, así que no dudes en contactarme si tenés alguna duda\".\n*   **Proactividad:** Nivel actual bajo (21.4 de 100). No demuestra iniciativa para ofrecer soluciones adicionales o anticiparse a las necesidades del cliente. **Como mejorar:** Después de presentar el plan principal, ofrecer servicios adicionales que complementen la oferta.\n*   **Empatía:** Nivel actual promedio (35.7 de 100). Su empatía es un poco inferior al promedio del equipo, lo que impacta en la conexión con el cliente. **Como mejorar:** Escuchar activamente al cliente y demostrar comprensión ante sus necesidades y preocupaciones.\n*   **Resolución de Problemas:** Nivel actual muy bajo (10.7 de 100). No demuestra habilidades para solucionar problemas o encontrar alternativas. **Como mejorar:** Buscar soluciones creativas y ofrecer alternativas para satisfacer las necesidades del cliente.\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Detección de Necesidades Intensiva.** Micaela se enfocará en mejorar sus habilidades para detectar las necesidades de los clientes. Revisará grabaciones de llamadas exitosas para identificar preguntas clave y practicará role-playing con Melanie Carmona. El objetivo es realizar al menos 3 preguntas relevantes en cada llamada.\n**Semana 2:** **Manejo de Objeciones Estratégico.** Se concentrará en desarrollar respuestas efectivas para las objeciones más comunes. Analizará las objeciones recurrentes en sus llamadas y preparará guiones personalizados. Practicará con Melanie Carmona para simular situaciones reales y perfeccionar sus técnicas.\n**Semana 3:** **Cierre Directo y Efectivo.** Se enfocará en implementar técnicas de cierre más agresivas. Revisará ejemplos de cierres exitosos y practicará con Melanie Carmona. El objetivo es cerrar al menos el 20% de las llamadas en las que detecta una necesidad clara.\n**Semana 4:** **Optimización Integral.** Consolidará las habilidades adquiridas en las semanas anteriores. Analizará sus resultados y ajustará su enfoque según sea necesario. Continuará practicando role-playing con Melanie Carmona y buscará feedback de sus compañeros para seguir mejorando.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:**\n    *   \"Hola, ¿me comunico con [Nombre]?\"\n    *   \"¿Hablo con [Nombre y Apellido]?\"\n*   **Preguntas para detectar necesidades:**\n    *   \"¿Qué es lo que más usás de tu celular?\"\n    *   \"¿Cuántos GB tenés contratados actualmente?\"\n    *   \"¿Compartís internet con otros dispositivos?\"\n    *   \"¿Usás mucho las redes sociales?\"\n*   **Como ofrecer fibra directamente:**\n    *   \"Además, en tu zona tenemos fibra óptica de alta velocidad. Te comento, tenemos planes con...\"\n    *   \"Y para que tengas una mejor experiencia en casa, te ofrezco fibra óptica de alta velocidad. Tenemos...\"\n*   **Técnicas de cierre directo:**\n    *   \"Perfecto, entonces te asigno la sucursal más cercana para que retires el chip.\"\n    *   \"Para coordinar la instalación de la fibra, ¿me confirmás tu domicilio?\"\n    *   \"Genial, entonces te paso a confirmar los datos para el envío del equipo.\"\n*   **Manejo de objeciones personalizado:**\n    *   **\"Es muy caro\":** \"Es lógico que mires el precio. A varios clientes les pasó eso... pero cuando ven todo lo que incluye el plan, se dan cuenta que vale la pena por [beneficio específico].\"\n    *   **\"Estoy conforme con mi compañía actual\":** \"Entiendo, pero te comento que Movistar te ofrece [beneficio específico] que no tenés actualmente. Además, te igualamos o mejoramos el precio.\"\n    *   **\"No me interesa\":** \"Entiendo, pero te aseguro que esta oferta es exclusiva para vos y no la vas a encontrar en otro lado. Te ofrezco [beneficio específico] sin costo adicional.\"\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio del modelo a 65 sobre 100.\n*   **Meta de calidad de llamadas:** Reducir la cantidad de llamadas \"criticas\" en un 50% y aumentar la cantidad de llamadas \"buenas\" y \"excelentes\" en un 30%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar la tasa de detección de necesidades al 70%.\n    *   Aumentar la tasa de efectividad en el manejo de objeciones al 50%.\n    *   Aumentar la tasa de cierre al 20%.\n    *   Aumentar la oferta de fibra al 80% de los clientes.\n    *   Aumentar el tiempo de conversación real (más de 30 segundos) al 50%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nMicaela, tenés la capacidad de superar tus propios límites. Tu facilidad para identificar al cliente y tu buena presentación son un excelente punto de partida. Ahora, con un enfoque estratégico en la detección de necesidades, el manejo de objeciones y el cierre, podés convertir cada llamada en una oportunidad de éxito. Confío en tu potencial y estoy acá para apoyarte en cada paso del camino. ¡Vamos por esos objetivos!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false
+}

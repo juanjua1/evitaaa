@@ -1,0 +1,175 @@
+{
+  "agente": "Noelia Ramirez",
+  "agente_codigo": "amza12",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:06:06.649513",
+  "metricas": {
+    "agente": "Noelia Ramirez",
+    "agente_codigo": "amza12",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 95,
+      "puntaje_promedio": 27.0,
+      "puntaje_min": 0,
+      "puntaje_max": 90,
+      "desviacion_std": 22.8,
+      "llamadas_excelentes": 3,
+      "llamadas_buenas": 6,
+      "llamadas_regulares": 22,
+      "llamadas_criticas": 64,
+      "criterios": {
+        "saludo_presentacion": 20.4,
+        "identificacion_cliente": 58.7,
+        "deteccion_necesidades": 19.5,
+        "oferta_productos": 21.4,
+        "manejo_objeciones": 26.0,
+        "cierre": 8.9,
+        "despedida": 58.8,
+        "proactividad": 5.7,
+        "empatia": 36.9,
+        "resolucion_problemas": 14.6
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 47,
+        "Manejo de objeciones": 38,
+        "Oferta de productos": 33,
+        "Proactividad": 33,
+        "Presentación": 29
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 25,
+        "Despedida cordial": 15,
+        "Despedida": 14,
+        "Identificación del cliente.": 11,
+        "Empatía": 10
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 90.0,
+          "resumen": "El agente realiza una buena presentación y verificación del cliente. Detecta necesidades, ofrece productos de forma directa y maneja objeciones de manera efectiva. Cierra la venta parcialmente y se despide correctamente."
+        },
+        {
+          "puntaje_total": 90.0,
+          "resumen": "El agente se presenta, verifica la identidad, detecta necesidades, ofrece planes, maneja objeciones y realiza un intento de cierre. Muestra empatía y proactividad.  La comunicación es clara y profesional."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente, detecta necesidades, ofrece un plan adecuado y maneja objeciones.  El cierre es parcial pero se inicia el proceso.  No ofrece fibra, y no hay problemas a resolver."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no detecta necesidades, no ofrece productos de forma adecuada, no maneja objeciones y no cierra la venta. No muestra empatía y no resuelve problemas. Ofrece fibra."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada no se desarrolló. El agente no se presentó ni realizó ninguna acción."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con ninguna de las reglas del negocio. No se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones ni intenta cerrar la venta. No muestra empatía."
+        }
+      ],
+      "pct_ofrece_fibra": 7.4
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {},
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 779,
+      "dias_trabajados": 5,
+      "llamadas_por_dia_promedio": 155.8,
+      "duracion_promedio_seg": 86.8,
+      "talking_total_min": 656.9,
+      "talking_promedio_seg": 50.6,
+      "hold_total_min": 2.2,
+      "acw_total_min": 234.0,
+      "promedio_min_hablados_por_hora": 65.7,
+      "horas_trabajadas": 10,
+      "exitosas": 232,
+      "no_exitosas": 471,
+      "tasa_contacto_efectivo": 29.8,
+      "ventas": 0,
+      "agendados": 16,
+      "no_quiere_contacto": 173,
+      "conforme_actual": 2,
+      "cortes_conversacion": 431,
+      "mudas_cortadas": 17,
+      "con_conversacion_real_30s": 263,
+      "tasa_conversacion_real": 33.8,
+      "corte_cliente": 585,
+      "corte_agente": 179,
+      "llamadas_largas_1min": 125,
+      "llamadas_cortas_1min": 654,
+      "score_integral": 38.4,
+      "score_operacional": 55.4
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 27.0,
+      "general": 33.0,
+      "diferencia": -6.0,
+      "percentil": 44.4
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 20.4,
+        "general": 32.4,
+        "diferencia": -12.0
+      },
+      "identificacion_cliente": {
+        "agente": 58.7,
+        "general": 62.7,
+        "diferencia": -4.0
+      },
+      "deteccion_necesidades": {
+        "agente": 19.5,
+        "general": 22.0,
+        "diferencia": -2.5
+      },
+      "oferta_productos": {
+        "agente": 21.4,
+        "general": 35.0,
+        "diferencia": -13.6
+      },
+      "manejo_objeciones": {
+        "agente": 26.0,
+        "general": 28.1,
+        "diferencia": -2.1
+      },
+      "cierre": {
+        "agente": 8.9,
+        "general": 12.9,
+        "diferencia": -4.0
+      },
+      "despedida": {
+        "agente": 58.8,
+        "general": 59.4,
+        "diferencia": -0.6
+      },
+      "proactividad": {
+        "agente": 5.7,
+        "general": 9.1,
+        "diferencia": -3.4
+      },
+      "empatia": {
+        "agente": 36.9,
+        "general": 39.5,
+        "diferencia": -2.5
+      },
+      "resolucion_problemas": {
+        "agente": 14.6,
+        "general": 19.0,
+        "diferencia": -4.4
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Noelia Ramirez\n\n### 1. DIAGNOSTICO GENERAL\nEl nivel actual de Noelia es **Crítico**. Su puntaje promedio de 27.0 de 100 la ubica significativamente por debajo del promedio del equipo (33.0 de 100), situándose en el percentil 44.4. Si bien muestra fortalezas en la identificación del cliente y la despedida, áreas críticas como la detección de necesidades, la oferta de productos y la proactividad necesitan atención urgente. Comparado con el coaching anterior, el puntaje promedio no ha mejorado, indicando que las intervenciones anteriores no han tenido el impacto deseado. Sin embargo, es importante destacar que se mantiene la fortaleza en Identificación del cliente, lo cual es una base sólida para construir. El potencial de mejora es alto, pero requiere un enfoque estructurado y constante en las áreas deficientes. La tasa de conversación real es baja (33.8%), indicando que muchas llamadas se cortan antes de los 30 segundos, lo cual limita la posibilidad de vender.\n\n### 2. FORTALEZAS\n*   **Identificación del Cliente:** Noelia logra identificar al cliente correctamente en un 58.7 de 100. Esto es crucial porque permite personalizar la interacción y evitar errores de comunicación.\n*   **Despedida:** La despedida es correcta en un 58.8 de 100. Dejar una buena última impresión es importante para mantener la imagen de Movistar.\n*   **Empatía:** Noelia muestra empatía en un 36.9 de 100. Aunque puede mejorar, es una buena base para construir relaciones con los clientes.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de Necesidades:** Con un puntaje de 19.5 de 100, esta es la debilidad más crítica. Sin comprender las necesidades del cliente, es imposible ofrecer el producto adecuado.\n*   **Oferta de Productos:** Con un puntaje de 21.4 de 100, Noelia tiene dificultades para presentar los productos de manera atractiva y directa.\n*   **Proactividad:** Con un puntaje de 5.7 de 100, Noelia rara vez toma la iniciativa para ofrecer soluciones adicionales o anticiparse a las necesidades del cliente.\n*   **Cierre:** Con un puntaje de 8.9 de 100, Noelia no está cerrando ventas.\n\n### 4. ANALISIS POR COMPETENCIA\n\n*   **Saludo y Presentación:** 20.4 de 100. Debe ser más enérgico y enfocado en los beneficios.\n    *   **Qué hace mal:** Saludo poco memorable o genérico.\n    *   **Cómo mejorar:** Empezar con un saludo que genere interés. \"Hola [Nombre], tengo una oferta de Movistar que LE VA a interesar en su factura.\"\n*   **Identificación del Cliente:** 58.7 de 100. Ya lo hace bien, pero puede reforzar la confianza.\n    *   **Qué hace bien:** Confirma la identidad del cliente.\n    *   **Cómo mejorar:** Usar la confirmación para generar un gancho. \"Hola, ¿me comunico con [Nombre]? Perfecto, es para comentarte sobre beneficios exclusivos para clientes como vos.\"\n*   **Detección de Necesidades:** 19.5 de 100. Fundamental para ofrecer lo que el cliente necesita.\n    *   **Qué hace mal:** No pregunta o hace preguntas muy generales.\n    *   **Cómo mejorar:** Preguntas específicas y enfocadas en el uso del cliente. \"¿Qué es lo que más usás del celular? Redes sociales, videos, llamadas? ¿Y cuántos GB tenés actualmente en tu plan?\"\n*   **Oferta de Productos:** 21.4 de 100. Debe ser más directa y centrada en los beneficios.\n    *   **Qué hace mal:** No ofrece productos concretos o lo hace tímidamente.\n    *   **Cómo mejorar:** Ofrecer directamente planes específicos después de detectar las necesidades. \"Perfecto, con lo que me comentás, el plan de [cantidad] GB de Movistar te VA a venir genial. Incluye [beneficios clave] y sale [precio].\"\n*   **Manejo de Objeciones:** 26.0 de 100. Debe abordar las objeciones de manera puntual y con argumentos sólidos.\n    *   **Qué hace mal:** No responde a las objeciones o da respuestas genéricas.\n    *   **Cómo mejorar:** Escuchar atentamente la objeción y responder directamente. \"Es lógico que mires el precio. A varios clientes les pasó eso, pero al final se dieron cuenta de que con este plan ahorran en [aspecto específico].\"\n*   **Cierre:** 8.9 de 100. Debe ser más proactiva en cerrar la venta.\n    *   **Qué hace mal:** No intenta cerrar la venta o lo hace de manera poco convincente.\n    *   **Cómo mejorar:** Después de presentar la oferta, buscar el cierre directo. \"Para activar este plan ahora mismo, ¿te queda bien que lo activemos en la sucursal de [ubicación] o buscamos un domicilio que te quede cómodo?\"\n*   **Despedida:** 58.8 de 100. Ya lo hace bien, pero puede añadir un toque personal.\n    *   **Qué hace bien:** Se despide cordialmente.\n    *   **Cómo mejorar:** Agradecer al cliente por su tiempo y ofrecer ayuda adicional. \"Gracias por tu tiempo, [Nombre]. Que tengas un excelente día. Si tenés alguna duda, podés contactarme por este medio.\"\n*   **Proactividad:** 5.7 de 100. Debe ofrecer soluciones adicionales y anticiparse a las necesidades del cliente.\n    *   **Qué hace mal:** No ofrece otros productos o servicios de Movistar.\n    *   **Cómo mejorar:** Comentar la oferta de fibra directamente. \"Aprovechando que te estoy contactando, te comento que tenemos una oferta increíble de fibra óptica en tu zona, con [velocidad] megas y [beneficios adicionales].\"\n*   **Empatía:** 36.9 de 100. Debe mostrar más comprensión y conexión con el cliente.\n    *   **Qué hace mal:** No muestra interés genuino en las necesidades del cliente.\n    *   **Cómo mejorar:** Escuchar activamente y responder con frases que demuestren comprensión. \"Entiendo perfectamente lo que me comentás, [Nombre]. Muchos clientes se sienten así, por eso te ofrezco esta solución.\"\n*   **Resolución de Problemas:** 14.6 de 100. Debe abordar los problemas del cliente de manera efectiva.\n    *   **Qué hace mal:** No ofrece soluciones claras a los problemas del cliente.\n    *   **Cómo mejorar:** Escuchar atentamente el problema y ofrecer una solución concreta. \"Entiendo la situación. Para solucionar esto, lo que te propongo es [solución específica].\"\n\n### 5. PLAN DE ACCION SEMANAL\n\n**Semana 1: Detección de Necesidades y Saludo Impactante.**\n*   **Foco principal:** Mejorar las habilidades de detección de necesidades y saludo inicial.\n*   **Acciones:**\n    *   Practicar preguntas específicas sobre el uso del celular y las necesidades del cliente.\n    *   Grabar y analizar las propias llamadas para identificar áreas de mejora en la detección de necesidades.\n    *   Implementar un nuevo saludo impactante que genere interés en el cliente.\n    *   Realizar al menos 155 llamadas por día.\n\n**Semana 2: Oferta Directa de Productos y Manejo de Objeciones.**\n*   **Foco principal:** Ofrecer los productos de manera directa y efectiva, y mejorar el manejo de objeciones.\n*   **Acciones:**\n    *   Practicar la presentación de los planes de Movistar de manera clara y concisa, destacando los beneficios clave.\n    *   Identificar las objeciones más comunes y preparar respuestas efectivas.\n    *   Grabar y analizar las llamadas para identificar áreas de mejora en la oferta de productos y el manejo de objeciones.\n    *   Ofrecer fibra en TODAS las llamadas.\n    *   Realizar al menos 155 llamadas por día.\n\n**Semana 3: Cierre Directo y Proactividad.**\n*   **Foco principal:** Implementar técnicas de cierre directo y ser más proactiva al ofrecer soluciones adicionales.\n*   **Acciones:**\n    *   Practicar técnicas de cierre directo, como la asignación de sucursal o la búsqueda de domicilio.\n    *   Ofrecer la oferta de fibra en todas las llamadas.\n    *   Grabar y analizar las llamadas para identificar áreas de mejora en el cierre y la proactividad.\n    *   Realizar al menos 155 llamadas por día.\n\n**Semana 4: Consolidación y Optimización.**\n*   **Foco principal:** Consolidar las mejoras realizadas y optimizar el proceso de venta.\n*   **Acciones:**\n    *   Continuar practicando las habilidades aprendidas en las semanas anteriores.\n    *   Analizar las métricas de desempeño y ajustar el enfoque según sea necesario.\n    *   Solicitar retroalimentación a compañeras y supervisores para identificar áreas de mejora adicionales.\n    *   Realizar al menos 155 llamadas por día.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n\n*   **Frases para verificar identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Preguntas para detectar necesidades:**\n    *   \"¿Qué es lo que más usás del celular? Redes sociales, videos, llamadas?\"\n    *   \"¿Cuántos GB tenés actualmente en tu plan?\"\n*   **Como ofrecer fibra directamente:** \"Aprovechando que te estoy contactando, te comento que tenemos una oferta increíble de fibra óptica en tu zona, con [velocidad] megas y [beneficios adicionales].\"\n*   **Técnicas de cierre directo:**\n    *   \"Para activar este plan ahora mismo, ¿te queda bien que lo activemos en la sucursal de [ubicación] o buscamos un domicilio que te quede cómodo?\"\n*   **Manejo de objeciones personalizado:**\n    *   **\"Es caro\":** \"Es lógico que mires el precio. A varios clientes les pasó eso, pero al final se dieron cuenta de que con este plan ahorran en [aspecto específico] y tienen [beneficios adicionales].\"\n    *   **\"No me interesa\":** \"Entiendo, pero te aseguro que esta oferta es exclusiva para clientes como vos. Te VA a permitir [beneficios clave] y ahorrar en [aspecto específico].\"\n    *   **\"Estoy conforme con mi plan actual\":** \"Qué bueno que estés conforme, pero te aseguro que con este nuevo plan vas a tener aún más beneficios por el mismo precio, como [beneficios clave] y [beneficios adicionales].\"\n\n### 7. METAS CUANTIFICABLES\n\n*   **Meta de puntaje del modelo a 30 días:** Alcanzar un puntaje promedio de 50 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas \"Buenas\" y \"Excelentes\" al 30%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar la tasa de conversación real (llamadas con más de 30 segundos de conversación) al 50%.\n    *   Reducir la cantidad de cortes de conversación por parte del cliente en un 20%.\n    *   Aumentar la tasa de contacto efectivo al 40%.\n    *   Lograr al menos 2 ventas en los próximos 30 días.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\nNoelia, sé que este análisis puede parecer desafiante, pero confío en tu potencial para superar estas áreas de mejora. Ya tenés una base sólida en la identificación del cliente y la despedida, y estoy seguro de que con un enfoque estructurado y constante, podés convertir tus debilidades en fortalezas. Recordá que cada llamada es una oportunidad para aprender y mejorar. Con tu dedicación y mi apoyo, vamos a lograr que alcances tu máximo potencial y te conviertas en una vendedora estrella de Movistar. ¡Vamos por esos objetivos!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": true
+}

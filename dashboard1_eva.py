@@ -597,7 +597,7 @@ def mostrar_popup_grafico(titulo, values, names, colors, otros_info, key_id):
             st.dataframe(df_otros, use_container_width=True, hide_index=True)
 
 
-# Directorio base del script
+# Directorio base de la aplicación
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Variables y helpers para precarga de datos en background
@@ -3051,6 +3051,29 @@ def pagina_coaching_vendedores(datos):
             st.markdown(f"### 📊 Métricas de {agente_seleccionado}")
             st.caption(f"📍 Equipo: **{equipo_actual}**")
             
+            # Sección explicativa sobre evaluaciones
+            st.markdown("""
+            <div style='background-color: #FFF4E6; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #F59E0B;'>
+                <h4 style='color: #92400E; margin-top: 0; font-size: 1rem;'>📋 ¿Cómo funciona la Evaluación?</h4>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Evaluaciones = Llamadas Analizadas:</strong> Cada llamada es transcrita y evaluada automáticamente 
+                    por COMMAND según criterios de calidad establecidos.
+                </p>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Puntaje (0-100):</strong> Se calcula en base a 10 criterios: saludo, identificación, detección de necesidades, 
+                    oferta de productos, manejo de objeciones, cierre, despedida, proactividad, empatía y resolución de problemas.
+                </p>
+                <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Clasificación Individual:</strong> 
+                    • Excelentes (≥80) • Buenas (21-79) • Críticas (≤20)
+                </p>
+                <p style='color: #78350F; margin-bottom: 0; font-size: 0.9rem;'>
+                    <strong>vs Equipo:</strong> Muestra la diferencia entre el puntaje del agente y el promedio de su equipo. 
+                    Un valor positivo (+) indica que está por encima del equipo, negativo (-) indica que está por debajo.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
             comparativa = data.get('comparativa', {})
             metricas = data.get('metricas', {})
             
@@ -3086,10 +3109,34 @@ def pagina_coaching_vendedores(datos):
             
             with col5:
                 criticas = metricas.get('evaluaciones', {}).get('llamadas_criticas', 0)
-                st.metric("Críticas", criticas, delta_color="inverse", help="Puntaje < 30")
+                st.metric("Críticas", criticas, delta_color="inverse", help="Puntaje <= 20")
+            
+            # Mostrar información de percentil y ranking si está disponible
+            percentil = comparativa.get('puntaje_ia', {}).get('percentil', 0)
+            if percentil > 0:
+                st.markdown(f"""
+                <div style='background-color: #ECFDF5; padding: 10px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #10B981;'>
+                    <p style='color: #065F46; margin: 0; font-size: 0.9rem;'>
+                        🎯 <strong>Posicionamiento:</strong> Este agente se encuentra en el <strong>percentil {percentil:.0f}</strong> 
+                        de su equipo, lo que significa que supera al {percentil:.0f}% de los agentes del equipo.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
             
             # Gráfico radar de criterios
             st.markdown("### 📈 Comparativa por Criterio")
+            
+            # Sección explicativa sobre la comparativa
+            equipo_del_agente = obtener_equipo_vendedor(agente_seleccionado)
+            st.markdown(f"""
+            <div style='background-color: #FEF3C7; padding: 12px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #F59E0B;'>
+                <p style='color: #78350F; margin: 0; font-size: 0.9rem;'>
+                    <strong>📊 Promedio del Equipo:</strong> Se calcula como el promedio de puntajes de todos los agentes del equipo <strong>{equipo_del_agente}</strong>. 
+                    Esta comparativa muestra si el agente está por encima o por debajo del rendimiento promedio de su equipo en cada criterio.
+                    Un valor positivo (+) indica mejor desempeño que el equipo, negativo (-) indica área de mejora.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
             criterios_comp = comparativa.get('criterios', {})
             if criterios_comp:
@@ -5134,6 +5181,28 @@ def pagina_analisis_equipos(datos):
             st.markdown("---")
             st.markdown('<p class="section-header">🎯 Plan de Mejora del Equipo</p>', unsafe_allow_html=True)
             
+            # Sección explicativa sobre planes de mejora
+            st.markdown("""
+            <div style='background-color: #F0F9FF; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 5px solid #0EA5E9;'>
+                <h4 style='color: #075985; margin-top: 0; font-size: 1rem;'>📊 ¿Cómo se evalúa el puntaje?</h4>
+                <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Evaluaciones = Llamadas del Equipo:</strong> Todas las llamadas grabadas y procesadas de los agentes del equipo.
+                    El sistema transcribe cada llamada y la evalúa automáticamente con COMMAND.
+                </p>
+                <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
+                    <strong>Clasificación de Llamadas (Equipo):</strong><br>
+                    • <span style='color: #10B981;'>✓ Excelentes</span> (Puntaje ≥ 80): Cumplen con estándares de excelencia<br>
+                    • <span style='color: #F59E0B;'>⚠ Requieren Atención</span> (Puntaje 41-79): Necesitan mejoras en algunos criterios<br>
+                    • <span style='color: #EF4444;'>⚠ Críticas</span> (Puntaje ≤ 40): No cumplen con los estándares mínimos de calidad
+                </p>
+                <p style='color: #0C4A6E; margin-bottom: 0; font-size: 0.9rem;'>
+                    <strong>Base del Puntaje:</strong> Se evalúan 10 criterios por llamada (saludo, identificación, necesidades, 
+                    oferta, objeciones, cierre, despedida, proactividad, empatía, resolución). El promedio de todos los criterios 
+                    da el puntaje total de 0 a 100 por llamada.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
             # Identificar áreas de mejora
             recomendaciones = []
             
@@ -5151,7 +5220,7 @@ def pagina_analisis_equipos(datos):
                         'area': '📊 Puntaje IA',
                         'estado': 'En desarrollo',
                         'color': '#F39C12',
-                        'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de scripts.'
+                        'recomendacion': 'Reforzar prácticas de cierre comercial y seguimiento de llamadas.'
                     })
             
             if 'pct_fibra' in dir() and pct_fibra < 30:
@@ -5356,7 +5425,7 @@ def pagina_analisis_equipos(datos):
                 except Exception as e:
                     st.warning(f"⚠️ Error al cargar el coaching del equipo: {str(e)}")
             else:
-                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el script de coaching de equipos primero.")
+                st.info(f"ℹ️ No se encontró el archivo de coaching para el equipo '{equipo_seleccionado}'. Ejecute el proceso de coaching de equipos primero.")
     
     # =========================================================================
     # TAB 2: COMPARATIVA DE EQUIPOS (Solo para admin)
@@ -5364,6 +5433,32 @@ def pagina_analisis_equipos(datos):
     if tab2 is not None:
         with tab2:
             st.markdown("### 📊 Comparativa entre Equipos")
+            
+            # Sección explicativa
+            st.markdown("""
+            <div style='background-color: #E8F4F8; padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid #3498DB;'>
+                <h4 style='color: #2C3E50; margin-top: 0;'>📋 Información sobre Evaluaciones de Equipo</h4>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>¿Qué representa el Total de Evaluaciones?</strong><br>
+                    El total de evaluaciones incluye todas las llamadas procesadas de todos los agentes pertenecientes a cada equipo.
+                </p>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>¿Cómo se calcula el Índice de Calidad?</strong><br>
+                    El índice de calidad se obtiene del promedio del puntaje de evaluación de todas las llamadas del equipo, 
+                    basado en criterios como: saludo correcto, identificación, oferta de productos (fibra, planes), 
+                    resolución de quejas, y cierre de llamada. El puntaje máximo es 100.
+                </p>
+                <p style='color: #34495E; margin-bottom: 10px;'>
+                    <strong>Llamadas que Requieren Atención:</strong><br>
+                    Son aquellas evaluaciones con puntaje entre 41-79 que necesitan mejoras específicas, 
+                    y las críticas (≤40) que requieren coaching intensivo o capacitación adicional.
+                </p>
+                <p style='color: #34495E; margin-bottom: 0;'>
+                    <strong>Llamadas Sin Evaluación:</strong><br>
+                    Representa el porcentaje de llamadas que aún no han sido procesadas o evaluadas por el sistema de COMMAND.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
             # Selector múltiple de equipos
             todos_equipos_comparar = [e for e in equipos_vendedores.keys() if e and e != "Sin Equipo" and e != "nan"]
@@ -6358,9 +6453,7 @@ def pagina_evaluaciones_gemini(datos):
             ascending = 'menor' in orden
             df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
             
-            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
-            
-            # Tabla expandida
+            st.markdown(f"**Mostrando las primeras 100 de {len(df_filtrado):,} evaluaciones:**")
             columnas_mostrar = ['archivo', 'agente', 'puntaje_total', 'saludo_presentacion', 
                                'cierre', 'oferta_productos', 'resumen']
             columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
@@ -6377,7 +6470,12 @@ def pagina_evaluaciones_gemini(datos):
             st.markdown("**📄 Ver Detalle de Evaluación Específica:**")
             
             if len(df_filtrado) > 0:
-                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                # Aumentar límite de archivos mostrados en el selector
+                max_archivos = min(200, len(df_filtrado))
+                archivos_lista = df_filtrado['archivo'].tolist()[:max_archivos]
+                
+                st.info(f"ℹ️ Mostrando {max_archivos} de {len(df_filtrado)} evaluaciones en el selector. Usa los filtros para reducir la lista.")
+                
                 archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle')
                 
                 eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
@@ -6427,9 +6525,7 @@ def pagina_evaluaciones_gemini(datos):
             ascending = 'menor' in orden
             df_filtrado = df_filtrado.sort_values('puntaje_total', ascending=ascending)
             
-            st.markdown(f"**Mostrando {len(df_filtrado):,} evaluaciones:**")
-            
-            # Tabla de evaluaciones del vendedor
+            st.markdown(f"**Mostrando las primeras 100 de {len(df_filtrado):,} evaluaciones:**")
             columnas_mostrar = ['archivo', 'puntaje_total', 'saludo_presentacion', 
                                'cierre', 'oferta_productos', 'resumen']
             columnas_disponibles = [c for c in columnas_mostrar if c in df_filtrado.columns]
@@ -6445,7 +6541,13 @@ def pagina_evaluaciones_gemini(datos):
             if len(df_filtrado) > 0:
                 st.markdown("---")
                 st.markdown("**📄 Ver Detalle de Evaluación:**")
-                archivos_lista = df_filtrado['archivo'].tolist()[:50]
+                
+                # Aumentar límite de archivos mostrados en el selector
+                max_archivos = min(200, len(df_filtrado))
+                archivos_lista = df_filtrado['archivo'].tolist()[:max_archivos]
+                
+                st.info(f"ℹ️ Mostrando {max_archivos} de {len(df_filtrado)} evaluaciones en el selector. Usa los filtros para reducir la lista.")
+                
                 archivo_sel = st.selectbox("Selecciona un archivo:", archivos_lista, key='archivo_detalle_vendedor')
                 
                 eval_sel = df_filtrado[df_filtrado['archivo'] == archivo_sel].iloc[0]
@@ -8130,7 +8232,7 @@ def pagina_metricas_calidad():
     datos = cargar_datos_calidad_procesados()
     
     if datos is None:
-        st.warning("⚠️ **No hay datos procesados.** Ejecute el script `procesar_calidad.py` primero.")
+        st.warning("⚠️ **No hay datos procesados.** Ejecute el proceso `procesar_calidad.py` primero.")
         return
     
     fecha_proceso = datos.get('fecha_proceso', 'N/A')
