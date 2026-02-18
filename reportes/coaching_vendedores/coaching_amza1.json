@@ -1,0 +1,182 @@
+{
+  "agente": "Evangelina Kruger",
+  "agente_codigo": "amza1",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:06:46.500438",
+  "metricas": {
+    "agente": "Evangelina Kruger",
+    "agente_codigo": "amza1",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 67,
+      "puntaje_promedio": 38.1,
+      "puntaje_min": 0,
+      "puntaje_max": 90,
+      "desviacion_std": 24.8,
+      "llamadas_excelentes": 5,
+      "llamadas_buenas": 11,
+      "llamadas_regulares": 15,
+      "llamadas_criticas": 36,
+      "criterios": {
+        "saludo_presentacion": 45.7,
+        "identificacion_cliente": 73.9,
+        "deteccion_necesidades": 27.9,
+        "oferta_productos": 35.8,
+        "manejo_objeciones": 34.0,
+        "cierre": 14.6,
+        "despedida": 62.7,
+        "proactividad": 10.9,
+        "empatia": 53.1,
+        "resolucion_problemas": 34.6
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 29,
+        "Manejo de objeciones": 21,
+        "Oferta de productos": 19,
+        "Proactividad": 18,
+        "Cierre": 17
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 24,
+        "Despedida": 14,
+        "Empatía": 12,
+        "Saludo y presentación": 9,
+        "Empatía.": 6
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 90.0,
+          "resumen": "El agente se desempeñó correctamente en todos los criterios. Hubo una buena presentación, identificación, detección de necesidades, oferta de productos y manejo de objeciones. El cierre fue intentado, y la despedida fue cordial. Se demostró proactividad y empatía."
+        },
+        {
+          "puntaje_total": 88.0,
+          "resumen": "La agente realiza una buena presentación y cierre, ofreciendo los productos de forma directa.  Maneja las objeciones y muestra empatía.  Podría mejorar profundizando en la detección de necesidades."
+        },
+        {
+          "puntaje_total": 85.0,
+          "resumen": "El agente realiza una buena presentación, identifica correctamente al cliente, detecta necesidades y ofrece productos de forma directa. Maneja las objeciones y muestra empatía. El cierre no se completa, pero intenta ofrecer alternativas."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios obligatorios. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no maneja objeciones ni cierra la venta de forma adecuada. Además, no muestra empatía ni proactividad."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos, no cierra la venta y no muestra proactividad. Intenta resolver un problema existente, lo que le da algo de empatía y resolución de problemas."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con ninguna de las reglas del negocio. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones y no cierra la venta."
+        }
+      ],
+      "pct_ofrece_fibra": 3.0
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {
+      "total_llamadas": 232,
+      "tmo_seg": 126.2,
+      "pct_capta_atencion": 41.4,
+      "menos_30seg": 64,
+      "corte_cliente": 151,
+      "corte_agente": 81
+    },
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 582,
+      "dias_trabajados": 5,
+      "llamadas_por_dia_promedio": 116.4,
+      "duracion_promedio_seg": 95.8,
+      "talking_total_min": 608.2,
+      "talking_promedio_seg": 62.7,
+      "hold_total_min": 0.0,
+      "acw_total_min": 140.5,
+      "promedio_min_hablados_por_hora": 60.8,
+      "horas_trabajadas": 10,
+      "exitosas": 111,
+      "no_exitosas": 429,
+      "tasa_contacto_efectivo": 19.1,
+      "ventas": 1,
+      "agendados": 16,
+      "no_quiere_contacto": 44,
+      "conforme_actual": 14,
+      "cortes_conversacion": 370,
+      "mudas_cortadas": 32,
+      "con_conversacion_real_30s": 191,
+      "tasa_conversacion_real": 32.8,
+      "corte_cliente": 441,
+      "corte_agente": 137,
+      "llamadas_largas_1min": 101,
+      "llamadas_cortas_1min": 481,
+      "score_integral": 45.3,
+      "score_operacional": 56.1
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 38.1,
+      "general": 33.0,
+      "diferencia": 5.1,
+      "percentil": 59.6
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 45.7,
+        "general": 32.4,
+        "diferencia": 13.2
+      },
+      "identificacion_cliente": {
+        "agente": 73.9,
+        "general": 62.7,
+        "diferencia": 11.2
+      },
+      "deteccion_necesidades": {
+        "agente": 27.9,
+        "general": 22.0,
+        "diferencia": 5.9
+      },
+      "oferta_productos": {
+        "agente": 35.8,
+        "general": 35.0,
+        "diferencia": 0.8
+      },
+      "manejo_objeciones": {
+        "agente": 34.0,
+        "general": 28.1,
+        "diferencia": 5.9
+      },
+      "cierre": {
+        "agente": 14.6,
+        "general": 12.9,
+        "diferencia": 1.7
+      },
+      "despedida": {
+        "agente": 62.7,
+        "general": 59.4,
+        "diferencia": 3.2
+      },
+      "proactividad": {
+        "agente": 10.9,
+        "general": 9.1,
+        "diferencia": 1.8
+      },
+      "empatia": {
+        "agente": 53.1,
+        "general": 39.5,
+        "diferencia": 13.6
+      },
+      "resolucion_problemas": {
+        "agente": 34.6,
+        "general": 19.0,
+        "diferencia": 15.6
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Evangelina Kruger\n\n### 1. DIAGNOSTICO GENERAL\nEl nivel actual de Evangelina es **Necesita Mejora**. Si bien su puntaje promedio (38.1 de 100) es superior al promedio del equipo (33.0 de 100), la alta cantidad de llamadas críticas (36 de 67) indica una inconsistencia importante en su desempeño. Su fortaleza radica en la identificación del cliente y la empatía, pero necesita mejorar significativamente en la detección de necesidades, el manejo de objeciones y el cierre de ventas. Con un enfoque en estas áreas clave, Evangelina tiene un alto potencial de mejora.\n\n### 2. FORTALEZAS\n*   **Identificación del Cliente:** Con un puntaje de 73.9 de 100, Evangelina demuestra ser efectiva en verificar la identidad de la persona con la que se comunica.\n*   **Empatía:** Obtiene un puntaje de 53.1 de 100, lo que sugiere que Evangelina conecta con los clientes y muestra comprensión.\n*   **Despedida:** Con 62.7 de 100, las despedidas de Evangelina son correctas y cordiales, dejando una buena impresión final.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de Necesidades:** Con un bajo puntaje de 27.9 de 100, Evangelina necesita profundizar en la comprensión de las necesidades específicas de cada cliente.\n*   **Cierre:** El puntaje de 14.6 de 100 indica dificultades significativas en concretar las ventas. Necesita implementar técnicas de cierre más efectivas y directas.\n*   **Manejo de Objeciones:** Con un puntaje de 34.0 de 100, Evangelina necesita desarrollar estrategias específicas para rebatir las objeciones de los clientes de manera persuasiva.\n\n### 4. ANALISIS POR COMPETENCIA\n\n*   **Saludo y Presentación:** (45.7 de 100) - *Bien:* Correcta pero necesita ser más enérgica y enfocada en generar interés. *Mal:* Puede sonar genérica. *Mejora:* Practicar un saludo conciso y atractivo que destaque los beneficios inmediatos para el cliente. \"Hola, [Nombre], tengo una oferta de Movistar que le VA a interesar para [mencionar beneficio principal, ejemplo: duplicar sus gigas]!\".\n*   **Identificación del Cliente:** (73.9 de 100) - *Bien:* Se asegura de hablar con la persona correcta. *Mal:* Podría ser más rápida y eficiente. *Mejora:* Utilizar un tono de voz confiado y una pregunta directa: \"Hola, ¿me comunico con [Nombre]?\".\n*   **Detección de Necesidades:** (27.9 de 100) - *Bien:* Intenta indagar, pero no lo hace de manera efectiva. *Mal:* Preguntas genéricas que no revelan las verdaderas necesidades del cliente. *Mejora:* Cambiar a preguntas específicas: \"¿Qué es lo que más usás del celular? ¿Redes sociales, videos, o videollamadas?\", \"¿Cuántos GB tenés actualmente y te alcanzan?\".\n*   **Oferta de Productos:** (35.8 de 100) - *Bien:* Menciona los productos. *Mal:* No los presenta de manera atractiva ni resalta los beneficios. *Mejora:* Ofrecer fibra directamente sin preguntar si le interesa: \"Además, en su zona tenemos cobertura de fibra óptica de Movistar. Con [velocidad] megas, va a poder [beneficios: ver películas sin interrupciones, trabajar desde casa sin problemas, etc.]\".\n*   **Manejo de Objeciones:** (34.0 de 100) - *Bien:* Intenta responder, pero no es persuasiva. *Mal:* Respuestas genéricas que no abordan la objeción específica. *Mejora:* Preparar respuestas específicas para las objeciones más comunes: \"Es lógico que mire el precio. A varios clientes les pasó eso... Pero si lo comparás con los beneficios, como la estabilidad de la conexión y el ahorro a largo plazo, vas a ver que vale la pena\".\n*   **Cierre:** (14.6 de 100) - *Bien:* Intenta cerrar. *Mal:* Falta de confianza y técnicas de cierre efectivas. *Mejora:* Asignar directamente sucursal o solicitar la dirección para la instalación: \"Perfecto, para que pueda empezar a disfrutar de estos beneficios, ¿le queda bien si lo agendamos para el [día] en la sucursal de [ubicación] o preferís que te lo instalemos en tu domicilio?\".\n*   **Despedida:** (62.7 de 100) - *Bien:* Correcta y cordial. *Mal:* Puede ser más personalizada. *Mejora:* Agradecer al cliente por su tiempo y reafirmar el valor de la oferta.\n*   **Proactividad:** (10.9 de 100) - *Bien:* Poco proactiva. *Mal:* No anticipa las necesidades del cliente. *Mejora:* Ofrecer soluciones adicionales antes de que el cliente las solicite.\n*   **Empatía:** (53.1 de 100) - *Bien:* Muestra conexión con el cliente. *Mal:* Podría ser más genuina y personalizada. *Mejora:* Escuchar activamente al cliente y demostrar comprensión.\n*   **Resolución de Problemas:** (34.6 de 100) - *Bien:* Intenta solucionar problemas. *Mal:* Podría ser más eficiente. *Mejora:* Ofrecer soluciones rápidas y efectivas.\n\n### 5. PLAN DE ACCION SEMANAL\n\n**Semana 1: Detección de Necesidades y Saludo Impactante**\n*   **Foco principal:** Mejorar la calidad de las preguntas iniciales para identificar las necesidades del cliente.\n*   **Acciones:** Practicar preguntas específicas y personalizadas, analizar grabaciones de llamadas exitosas y ajustar el saludo inicial para captar la atención del cliente desde el principio.\n**Semana 2: Manejo de Objeciones Específico**\n*   **Siguiente prioridad:** Preparar un guion detallado para rebatir las objeciones más comunes.\n*   **Acciones:** Identificar las objeciones más frecuentes, crear respuestas persuasivas y practicar la fluidez en la presentación de estas respuestas.\n**Semana 3: Cierre Directo y Proactividad**\n*   **Consolidación:** Implementar técnicas de cierre directo y ofrecer soluciones adicionales antes de que el cliente las solicite.\n*   **Acciones:** Practicar cierres directos, anticipar las necesidades del cliente y ofrecer soluciones proactivas.\n**Semana 4: Optimización y Personalización**\n*   **Optimización:** Revisar y ajustar el proceso de venta completo para mejorar la eficiencia y la persuasión.\n*   **Acciones:** Analizar grabaciones de llamadas, identificar áreas de mejora y personalizar el enfoque de venta para cada cliente.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:** \"Hola, ¿me comunico con [Nombre]?\".\n*   **Preguntas para detectar necesidades:** \"¿Qué es lo que más usás del celular? ¿Redes sociales, videos, o videollamadas?\", \"¿Cuántos GB tenés actualmente y te alcanzan?\".\n*   **Como ofrecer fibra directamente:** \"Además, en su zona tenemos cobertura de fibra óptica de Movistar. Con [velocidad] megas, va a poder [beneficios: ver películas sin interrupciones, trabajar desde casa sin problemas, etc.]\".\n*   **Técnicas de cierre directo:** \"Perfecto, para que pueda empezar a disfrutar de estos beneficios, ¿le queda bien si lo agendamos para el [día] en la sucursal de [ubicación] o preferís que te lo instalemos en tu domicilio?\".\n*   **Manejo de objeciones personalizado:**\n    *   **Precio:** \"Es lógico que mires el precio. A varios clientes les pasó eso... Pero si lo comparás con los beneficios, como la estabilidad de la conexión y el ahorro a largo plazo, vas a ver que vale la pena\".\n    *   **Competencia:** \"Entiendo que tengas otras opciones, pero Movistar te ofrece [ventaja diferencial, como mejor cobertura, mejor servicio al cliente, o beneficios exclusivos]\".\n    *   **No necesito más datos:** \"Comprendo, pero con el aumento del uso de internet, tener más datos te asegura que nunca te quedes sin conexión y puedas disfrutar de todo lo que te gusta sin preocuparte\".\n\n### 7. METAS CUANTIFICABLES\n\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio del modelo a 65 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas calificadas como \"buenas\" o \"excelentes\" al 50%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar la tasa de conversión de llamadas a ventas del 0.17% al 1%.\n    *   Disminuir la cantidad de \"cortes de conversación\" del cliente en un 20%.\n    *   Aumentar la tasa de conversación real (más de 30 segundos) al 45%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\nEvangelina, tenés una gran capacidad para conectar con los clientes. Ahora, vamos a enfocar esa empatía en entender sus necesidades y ofrecerles soluciones concretas. Con un poco de práctica y las herramientas adecuadas, estoy seguro de que vas a superar tus propios límites y alcanzar el éxito que te merecés. ¡Confío en vos y estoy acá para apoyarte en cada paso del camino!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false
+}

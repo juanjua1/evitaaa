@@ -1,0 +1,182 @@
+{
+  "agente": "Notarnicola Luciana",
+  "agente_codigo": "amza2",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:08:26.720711",
+  "metricas": {
+    "agente": "Notarnicola Luciana",
+    "agente_codigo": "amza2",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 50,
+      "puntaje_promedio": 41.0,
+      "puntaje_min": 0,
+      "puntaje_max": 95,
+      "desviacion_std": 24.4,
+      "llamadas_excelentes": 3,
+      "llamadas_buenas": 12,
+      "llamadas_regulares": 14,
+      "llamadas_criticas": 21,
+      "criterios": {
+        "saludo_presentacion": 54.8,
+        "identificacion_cliente": 81.0,
+        "deteccion_necesidades": 29.8,
+        "oferta_productos": 45.8,
+        "manejo_objeciones": 36.0,
+        "cierre": 15.4,
+        "despedida": 74.0,
+        "proactividad": 16.4,
+        "empatia": 47.2,
+        "resolucion_problemas": 18.4
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 29,
+        "Manejo de objeciones": 19,
+        "Oferta de productos": 18,
+        "Cierre": 16,
+        "Proactividad": 14
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 26,
+        "Saludo y presentación": 15,
+        "Despedida": 14,
+        "Empatía": 12,
+        "Despedida cordial": 7
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 95.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente. Detecta la necesidad de fibra óptica y la ofrece directamente, manejando las objeciones y iniciando el proceso de cierre. Se despide de manera cordial y muestra empatía."
+        },
+        {
+          "puntaje_total": 84.0,
+          "resumen": "El agente se presenta y verifica al cliente, detecta necesidades y ofrece planes.  Inicia el cierre pero no lo completa. No ofrece fibra."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente y detecta sus necesidades. Ofrece planes de manera directa y muestra empatía.  No ofrece fibra. El cierre se intenta, pero no se concreta."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumplió con los criterios mínimos de la evaluación, principalmente en la presentación, detección de necesidades y oferta de productos. La llamada se centró en aclarar un malentendido con el cliente."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos de forma directa, no maneja objeciones y no cierra la venta."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "Llamada deficiente. El agente no se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones, no cierra la venta, no se despide y no muestra proactividad ni empatía. No hay resolución de problemas."
+        }
+      ],
+      "pct_ofrece_fibra": 14.0
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {
+      "total_llamadas": 170,
+      "tmo_seg": 116.5,
+      "pct_capta_atencion": 34.1,
+      "menos_30seg": 70,
+      "corte_cliente": 123,
+      "corte_agente": 40
+    },
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 600,
+      "dias_trabajados": 5,
+      "llamadas_por_dia_promedio": 120.0,
+      "duracion_promedio_seg": 79.9,
+      "talking_total_min": 441.9,
+      "talking_promedio_seg": 44.2,
+      "hold_total_min": 0.0,
+      "acw_total_min": 184.6,
+      "promedio_min_hablados_por_hora": 73.6,
+      "horas_trabajadas": 6,
+      "exitosas": 60,
+      "no_exitosas": 476,
+      "tasa_contacto_efectivo": 10.0,
+      "ventas": 0,
+      "agendados": 17,
+      "no_quiere_contacto": 25,
+      "conforme_actual": 4,
+      "cortes_conversacion": 414,
+      "mudas_cortadas": 38,
+      "con_conversacion_real_30s": 185,
+      "tasa_conversacion_real": 30.8,
+      "corte_cliente": 435,
+      "corte_agente": 158,
+      "llamadas_largas_1min": 72,
+      "llamadas_cortas_1min": 528,
+      "score_integral": 44.3,
+      "score_operacional": 49.2
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 41.0,
+      "general": 33.0,
+      "diferencia": 8.0,
+      "percentil": 66.3
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 54.8,
+        "general": 32.4,
+        "diferencia": 22.4
+      },
+      "identificacion_cliente": {
+        "agente": 81.0,
+        "general": 62.7,
+        "diferencia": 18.3
+      },
+      "deteccion_necesidades": {
+        "agente": 29.8,
+        "general": 22.0,
+        "diferencia": 7.8
+      },
+      "oferta_productos": {
+        "agente": 45.8,
+        "general": 35.0,
+        "diferencia": 10.8
+      },
+      "manejo_objeciones": {
+        "agente": 36.0,
+        "general": 28.1,
+        "diferencia": 7.9
+      },
+      "cierre": {
+        "agente": 15.4,
+        "general": 12.9,
+        "diferencia": 2.5
+      },
+      "despedida": {
+        "agente": 74.0,
+        "general": 59.4,
+        "diferencia": 14.6
+      },
+      "proactividad": {
+        "agente": 16.4,
+        "general": 9.1,
+        "diferencia": 7.3
+      },
+      "empatia": {
+        "agente": 47.2,
+        "general": 39.5,
+        "diferencia": 7.7
+      },
+      "resolucion_problemas": {
+        "agente": 18.4,
+        "general": 19.0,
+        "diferencia": -0.6
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Notarnicola Luciana\n\n### 1. DIAGNOSTICO GENERAL\nLuciana, tu nivel actual es de **Necesita Mejora**. Si bien tu puntaje promedio (41.0 de 100) es superior al promedio general del equipo (33.0 de 100), lo que te ubica en el percentil 66.3, hay áreas críticas que necesitan atención urgente para desbloquear tu máximo potencial y alcanzar tus objetivos de ventas. Observo una gran disparidad entre tus fortalezas, como la identificación del cliente y el saludo, y tus debilidades, especialmente en la detección de necesidades y el cierre de ventas. Esto sugiere que tienes la capacidad de conectar con los clientes al inicio, pero te falta la habilidad para llevar la conversación hacia una venta concreta. El potencial de mejora es significativo. Con un enfoque estructurado y entrenamiento específico, podemos elevar tu desempeño sustancialmente.\n\n### 2. FORTALEZAS\n*   **Identificación del cliente (81.0 de 100):** Logras verificar la identidad del cliente de manera efectiva al inicio de la llamada. Mantené este enfoque directo.\n*   **Saludo y presentación (54.8 de 100):**  Te presentas correctamente, lo que genera una primera impresión positiva.\n*   **Despedida (74.0 de 100):** Cierras la interacción de manera cordial y respetuosa.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de necesidades (29.8 de 100):**  Este es tu punto más débil. No estás identificando las necesidades reales del cliente para ofrecer soluciones personalizadas. Esto impacta directamente en tu capacidad para generar valor y cerrar ventas.\n*   **Cierre (15.4 de 100):**  Tienes dificultades para cerrar la venta después de presentar la oferta.  Esto indica falta de confianza y técnicas de cierre efectivas.\n*   **Proactividad (16.4 de 100):** No estás siendo lo suficientemente proactiva para ofrecer productos o servicios adicionales que puedan beneficiar al cliente.\n*   **Manejo de objeciones (36.0 de 100):** Te cuesta rebatir las objeciones de los clientes y superar las barreras que impiden el cierre de la venta.\n\n### 4. ANALISIS POR COMPETENCIA\n*   **Saludo y Presentación (54.8 de 100):** Lo haces bien, pero podés hacerlo aún mejor. Evitá saludos genéricos. Iniciá la conversación con un saludo personalizado: \"Hola Luciana, buenos días, te habla [tu nombre] de Movistar. ¿Estoy hablando con [Nombre del cliente]?\"\n*   **Identificación del cliente (81.0 de 100):** Excelente trabajo aquí. Seguí confirmando la identidad del cliente al inicio de la llamada para evitar confusiones.\n*   **Detección de necesidades (29.8 de 100):**  Aquí es donde más necesitas mejorar. NO preguntes genéricamente \"¿Qué necesitás?\". En su lugar, preguntá: \"¿Qué es lo que más usás de tu celular?\" o \"¿Cuántos GB tenés actualmente en tu plan?\".  Esto te dará información específica para personalizar tu oferta.\n*   **Oferta de productos (45.8 de 100):** No preguntes si \"le interesaría conocer\".  Directamente, después de detectar la necesidad, ofrecé el plan: \"Tengo una oferta que LE VA a interesar. Con este plan vas a tener [beneficios específicos relacionados con la necesidad del cliente]\". Siempre después de identificar la necesidad.\n*   **Manejo de objeciones (36.0 de 100):**  Necesitas preparar respuestas específicas para las objeciones más comunes. No des respuestas genéricas. Si el cliente dice \"Es muy caro\", respondé: \"Es lógico que mires el precio. A varios clientes les pasó eso... Pero déjame mostrarte cómo los beneficios de este plan superan la diferencia de precio.\"\n*   **Cierre (15.4 de 100):**  Debés ser más directa al cierre.  No preguntes \"¿Le gustaría que...?\".  Después de presentar la oferta y rebatir las objeciones, cerrá directamente: \"Perfecto, entonces asignamos una sucursal para que retires el chip/programamos la visita a domicilio\".\n*   **Despedida (74.0 de 100):** Bien, mantené la cordialidad.\n*   **Proactividad (16.4 de 100):** Después de ofrecer el plan de celular, comentá DIRECTAMENTE sobre la oferta de fibra: \"Y además, te comento que también tenemos una excelente oferta de fibra óptica para tu hogar. Con [velocidad] vas a poder [beneficios específicos]\". No preguntes si le interesa, simplemente informale.\n*   **Empatía (47.2 de 100):** Es importante mostrar empatía, pero no te excedas. Mantén un tono profesional y enfocado en la solución.\n*   **Resolución de problemas (18.4 de 100):** Enfócate en resolver el problema rápidamente y dirigir la conversación hacia una oportunidad de venta.\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Foco: Detección de Necesidades y Oferta Directa.** Practicá las preguntas clave para detectar necesidades (\"¿Qué es lo que más usás del celular?\" / \"¿Cuántos GB tenés?\").  Ofrecé el plan directamente después de la pregunta, sin rodeos. Escuchá activamente las grabaciones de tus mejores llamadas (las 3 con puntaje superior a 80) e identificá cómo detectan necesidades y ofrecen el producto.\n**Acciones:**\n    *   Repasar el speech de detección de necesidades y oferta directa (ver abajo).\n    *   Escuchar 10 grabaciones de llamadas exitosas del equipo (pedirle a Melanie).\n    *   Simular 5 llamadas con Melanie enfocándote en la detección de necesidades y oferta directa.\n    *   Monitoreo diario de 3 llamadas para dar feedback puntual.\n\n**Semana 2:** **Foco: Manejo de Objeciones y Cierre Directo.** Prepará respuestas específicas para las objeciones más comunes (precio, competencia, etc.). Practicá técnicas de cierre directo (asignar sucursal/domicilio).\n**Acciones:**\n    *   Crear un listado de las 5 objeciones más frecuentes.\n    *   Redactar 3 respuestas efectivas para cada objeción.\n    *   Simular 5 llamadas con Melanie enfocándote en el manejo de objeciones y cierre directo.\n    *   Monitoreo diario de 3 llamadas para dar feedback puntual.\n\n**Semana 3:** **Foco: Proactividad (Oferta de Fibra) y Consolidación.** Integrá la oferta de fibra en tu speech de manera natural, después del plan de celular. Revisá y reforzá las técnicas aprendidas en las semanas anteriores.\n**Acciones:**\n    *   Incorporar la oferta de fibra en el speech de venta.\n    *   Revisar las grabaciones de las semanas anteriores e identificar áreas de mejora.\n    *   Simular 3 llamadas con Melanie integrando todos los elementos aprendidos.\n    *   Monitoreo diario de 3 llamadas para dar feedback puntual.\n\n**Semana 4:** **Foco: Optimización y Seguimiento.** Analizá tus resultados de las últimas semanas e identificá áreas donde aún podés mejorar. Continuá practicando y refinando tus habilidades.\n**Acciones:**\n    *   Analizar los resultados de las últimas 3 semanas (puntaje del modelo, ventas, etc.).\n    *   Identificar las áreas donde aún se puede mejorar.\n    *   Simular 2 llamadas con Melanie enfocándote en las áreas de mejora identificadas.\n    *   Monitoreo diario de 3 llamadas para dar feedback puntual.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:** \"Hola Luciana, buenos días, te habla [tu nombre] de Movistar. ¿Estoy hablando con [Nombre del cliente]?\"\n*   **Preguntas para detectar necesidades:**\n    *   \"¿Qué es lo que más usás de tu celular?\"\n    *   \"¿Cuántos GB tenés actualmente en tu plan?\"\n    *   \"¿Compartís datos con otros dispositivos?\"\n    *   \"¿Usás mucho las redes sociales?\"\n*   **Como ofrecer fibra directamente:** \"Y además, te comento que también tenemos una excelente oferta de fibra óptica para tu hogar. Con [velocidad] vas a poder ver películas y series en streaming sin interrupciones, trabajar desde casa con una conexión estable y jugar online sin lag.  De hecho, en tu zona tenemos cobertura total.\"\n*   **Técnicas de cierre directo:**\n    *   \"Perfecto, entonces asignamos una sucursal para que retires el chip.\"\n    *   \"Genial, entonces agendamos la visita del técnico para la instalación.\"\n*   **Manejo de objeciones personalizado:**\n    *   **\"Es muy caro\":** \"Es lógico que mires el precio. A varios clientes les pasó eso... Pero déjame mostrarte cómo los beneficios de este plan superan la diferencia de precio. Con [beneficios específicos] vas a [resultado deseado].\"\n    *   **\"Estoy conforme con mi compañía actual\":** \"Entiendo, pero te invito a que compares los beneficios que te ofrece Movistar con lo que tenés actualmente.  Con nuestro plan vas a tener [beneficios específicos] que tu compañía actual no te ofrece. Además, la portabilidad es muy sencilla, nosotros nos encargamos de todo.\"\n    *   **\"No tengo tiempo ahora\":** \"Entiendo, pero esta oferta es por tiempo limitado.  Si te parece, te llamo en 15 minutos para que puedas aprovecharla.\"\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:**  Aumentar el puntaje promedio del modelo a 65 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas calificadas como \"Buenas\" o \"Excelentes\" al 60%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar la tasa de contacto efectivo al 15%.\n    *   Disminuir la cantidad de \"cortes de cliente\" en un 20%.\n    *   Aumentar la tasa de conversión (ventas) en un 50%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nLuciana, tenés el potencial para ser una vendedora estrella. Ya contás con una buena base en la identificación del cliente y la comunicación inicial. Ahora, es momento de enfocarte en desarrollar tus habilidades para detectar necesidades, ofrecer soluciones personalizadas y cerrar ventas de manera efectiva.  Sé que con este plan de acción y tu dedicación, vas a alcanzar tus objetivos y superar tus propias expectativas. ¡Vamos por ese aumento de puntaje y a cerrar más ventas!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false
+}

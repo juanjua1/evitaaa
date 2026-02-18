@@ -1,0 +1,182 @@
+{
+  "agente": "Puente Jacquelina",
+  "agente_codigo": "amza5",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:08:48.626211",
+  "metricas": {
+    "agente": "Puente Jacquelina",
+    "agente_codigo": "amza5",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 38,
+      "puntaje_promedio": 36.9,
+      "puntaje_min": 0,
+      "puntaje_max": 95,
+      "desviacion_std": 27.4,
+      "llamadas_excelentes": 4,
+      "llamadas_buenas": 5,
+      "llamadas_regulares": 6,
+      "llamadas_criticas": 23,
+      "criterios": {
+        "saludo_presentacion": 24.2,
+        "identificacion_cliente": 58.2,
+        "deteccion_necesidades": 28.2,
+        "oferta_productos": 51.3,
+        "manejo_objeciones": 31.6,
+        "cierre": 28.7,
+        "despedida": 64.7,
+        "proactividad": 15.5,
+        "empatia": 44.7,
+        "resolucion_problemas": 22.1
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 16,
+        "Manejo de objeciones": 13,
+        "Proactividad": 13,
+        "Presentación": 9,
+        "Oferta de productos": 9
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 10,
+        "Despedida": 7,
+        "Manejo de objeciones.": 5,
+        "Despedida cordial.": 4,
+        "Despedida cordial": 4
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 95.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente y detecta necesidades básicas. Ofrece fibra y maneja objeciones de forma efectiva. Completa el proceso de cierre y se despide de forma cordial."
+        },
+        {
+          "puntaje_total": 88.0,
+          "resumen": "El agente se presentó correctamente, identificó al cliente, ofreció un plan claro y manejó la objeción inicial. El cierre fue un poco indirecto, pero se logró el objetivo de enviar información. Se recomienda profundizar en la detección de necesidades y ofrecer soluciones más concretas ante objeciones."
+        },
+        {
+          "puntaje_total": 87.0,
+          "resumen": "El agente se desempeña bien en la detección de necesidades, oferta de productos y manejo de objeciones. Muestra empatía y proactividad al ofrecer soluciones personalizadas y alternativas. El cierre no es inmediato, pero intenta mantener el contacto y resolver la situación del cliente. La presentación inicial podría mejorar."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumplió con ninguna de las reglas del negocio, no realizó una presentación adecuada, no detectó necesidades, no ofreció productos, no manejó objeciones ni intentó cerrar la venta. La llamada fue deficiente en todos los aspectos."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. El diálogo es inapropiado y no se enfoca en la venta. No hay presentación, identificación, detección de necesidades, oferta de productos, manejo de objeciones ni cierre. El lenguaje utilizado es incorrecto."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumplió con las reglas de negocio en la presentación, detección de necesidades, manejo de objeciones y cierre. No ofreció productos de forma proactiva. La despedida fue correcta."
+        }
+      ],
+      "pct_ofrece_fibra": 10.5
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {
+      "total_llamadas": 162,
+      "tmo_seg": 75.2,
+      "pct_capta_atencion": 24.1,
+      "menos_30seg": 77,
+      "corte_cliente": 132,
+      "corte_agente": 30
+    },
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 527,
+      "dias_trabajados": 4,
+      "llamadas_por_dia_promedio": 131.8,
+      "duracion_promedio_seg": 86.8,
+      "talking_total_min": 432.7,
+      "talking_promedio_seg": 49.3,
+      "hold_total_min": 0.0,
+      "acw_total_min": 155.7,
+      "promedio_min_hablados_por_hora": 43.3,
+      "horas_trabajadas": 10,
+      "exitosas": 150,
+      "no_exitosas": 369,
+      "tasa_contacto_efectivo": 28.5,
+      "ventas": 2,
+      "agendados": 48,
+      "no_quiere_contacto": 60,
+      "conforme_actual": 2,
+      "cortes_conversacion": 316,
+      "mudas_cortadas": 18,
+      "con_conversacion_real_30s": 127,
+      "tasa_conversacion_real": 24.1,
+      "corte_cliente": 412,
+      "corte_agente": 115,
+      "llamadas_largas_1min": 58,
+      "llamadas_cortas_1min": 469,
+      "score_integral": 43.3,
+      "score_operacional": 52.8
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 36.9,
+      "general": 33.0,
+      "diferencia": 3.9,
+      "percentil": 58.4
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 24.2,
+        "general": 32.4,
+        "diferencia": -8.2
+      },
+      "identificacion_cliente": {
+        "agente": 58.2,
+        "general": 62.7,
+        "diferencia": -4.6
+      },
+      "deteccion_necesidades": {
+        "agente": 28.2,
+        "general": 22.0,
+        "diferencia": 6.2
+      },
+      "oferta_productos": {
+        "agente": 51.3,
+        "general": 35.0,
+        "diferencia": 16.3
+      },
+      "manejo_objeciones": {
+        "agente": 31.6,
+        "general": 28.1,
+        "diferencia": 3.5
+      },
+      "cierre": {
+        "agente": 28.7,
+        "general": 12.9,
+        "diferencia": 15.8
+      },
+      "despedida": {
+        "agente": 64.7,
+        "general": 59.4,
+        "diferencia": 5.3
+      },
+      "proactividad": {
+        "agente": 15.5,
+        "general": 9.1,
+        "diferencia": 6.4
+      },
+      "empatia": {
+        "agente": 44.7,
+        "general": 39.5,
+        "diferencia": 5.3
+      },
+      "resolucion_problemas": {
+        "agente": 22.1,
+        "general": 19.0,
+        "diferencia": 3.1
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Puente Jacquelina\n\n### 1. DIAGNOSTICO GENERAL\nJacquelina, tu nivel actual es **Crítico**. Si bien superás el promedio del equipo en 3.9 puntos (36.9 de 100 contra 33.0 de 100), el puntaje general es bajo y requiere una atención inmediata. El análisis revela un marcado contraste entre las fortalezas puntuales (identificación del cliente y despedida) y las áreas de mejora crítica (detección de necesidades, manejo de objeciones, proactividad y presentación). El porcentaje bajo de oferta de fibra (10.5%) es alarmante. El potencial de mejora es considerable, pero requiere un enfoque intensivo en las áreas identificadas. Con el entrenamiento adecuado y la aplicación consistente de las técnicas, podemos llevar tus resultados a un nivel superior.\n\n### 2. FORTALEZAS\n*   **Identificación del cliente:** Obtienes un puntaje alto (58.2 de 100) en la identificación del cliente, lo cual es fundamental para establecer una conversación personalizada.\n*   **Despedida:** Tu despedida es cordial y efectiva (64.7 de 100), dejando una buena impresión final al cliente.\n*   **Oferta de productos**: Tenes un puntaje relativamente alto (51.3 de 100) respecto al promedio del equipo (35.0 de 100). Potencialmente tenes la capacidad de ofrecer los productos.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de necesidades:** Es el área más crítica (28.2 de 100). Sin una comprensión clara de las necesidades del cliente, las ofertas serán genéricas e ineficaces.\n*   **Manejo de objeciones:** Tu puntaje es bajo (31.6 de 100), lo que indica dificultades para superar las dudas y preocupaciones de los clientes.\n*   **Proactividad:** Tu puntuación es muy baja (15.5 de 100). Necesitás anticiparte a las necesidades del cliente y ofrecer soluciones antes de que las soliciten.\n*   **Presentación:** Con un puntaje de 24.2 de 100, tu presentación no está generando el impacto necesario para captar la atención del cliente.\n\n### 4. ANALISIS POR COMPETENCIA\n*   **Saludo y Presentación (24.2 de 100):**\n    *   **Qué hace mal:** La presentación es débil y no logra captar la atención del cliente rápidamente.\n    *   **Cómo mejorar:** Comenzá la llamada con un saludo enérgico y una presentación concisa que destaque el beneficio principal de la llamada.\n    *   *Ejemplo:* \"¡Hola, Jacquelina! Soy [Tu nombre] de Movistar. Tengo una oferta que le VA a interesar para mejorar su conectividad.\"\n*   **Identificación del Cliente (58.2 de 100):**\n    *   **Qué hace bien:** Identificás al cliente, lo cual es un buen punto de partida.\n    *   **Cómo mejorar:** Confirmá el nombre y agregá un toque personal.\n    *   *Ejemplo:* \"Hola, ¿me comunico con Jacquelina Puente?\" (Esperar confirmación) \"¡Excelente, Jacquelina! ¿Cómo estás hoy?\"\n*   **Detección de Necesidades (28.2 de 100):**\n    *   **Qué hace mal:** No indagás lo suficiente para comprender las necesidades del cliente.\n    *   **Cómo mejorar:** Hacé preguntas abiertas para descubrir qué es importante para el cliente.\n    *   *Ejemplo:* \"¿Qué es lo que más usás del celular, Jacquelina?\" \"¿Cuántos GB tenés contratados actualmente?\"\n*   **Oferta de Productos (51.3 de 100):**\n    *   **Qué hace bien:** Tenes el potencial de ofrecer productos, pero debés hacerlo de forma más directa y atractiva.\n    *   **Cómo mejorar:** Comentá la oferta de fibra directamente, sin preguntar si le interesa. Destacá los beneficios específicos que satisfacen las necesidades detectadas.\n    *   *Ejemplo:* \"Jacquelina, tenemos disponible en tu zona fibra óptica de alta velocidad. Esto significa que vas a poder [beneficio específico relacionado con la necesidad del cliente], sin interrupciones.\"\n*   **Manejo de Objeciones (31.6 de 100):**\n    *   **Qué hace mal:** No rebatís las objeciones de forma efectiva y personalizada.\n    *   **Cómo mejorar:** Escuchá atentamente la objeción y respondé con un argumento específico y convincente.\n    *   *Ejemplo (Objeción: \"Es caro\"):* \"Es lógico que mires el precio, Jacquelina. A varios clientes les pasó eso. Pero considerá que con nuestra oferta, vas a tener [beneficio específico que justifica el precio], además de [otro beneficio].\"\n*   **Cierre (28.7 de 100):**\n    *   **Qué hace mal:** El cierre es débil y poco efectivo.\n    *   **Cómo mejorar:** Asigná la sucursal o solicitá la dirección directamente, sin preguntar si le gustaría.\n    *   *Ejemplo:* \"Perfecto, Jacquelina. Para avanzar con la instalación, ¿tenés una sucursal de Movistar cerca o preferís que coordinemos la visita de un técnico a tu domicilio?\"\n*   **Despedida (64.7 de 100):**\n    *   **Qué hace bien:** La despedida es cordial.\n    *   **Cómo mejorar:** Reforzar la actitud durante el acompañamiento de la portabilidad.\n    *   *Ejemplo:* \"Jacquelina, la voy a estar acompañando durante todo el proceso de portabilidad. Cualquier duda que tengas, no dudes en consultarme.\"\n*   **Proactividad (15.5 de 100):**\n    *   **Qué hace mal:** Falta iniciativa para ofrecer soluciones personalizadas.\n    *   **Cómo mejorar:** Anticipate a las necesidades del cliente y ofrecé opciones adicionales.\n    *   *Ejemplo:* \"Además de la fibra, Jacquelina, te VA a interesar saber que tenemos promociones en paquetes de TV y streaming. ¿Te gustaría que te cuente más?\"\n*   **Empatía (44.7 de 100):**\n    *   **Qué hace bien:** Mostrás un nivel básico de empatía, pero podés profundizarlo.\n    *   **Cómo mejorar:** Escuchá atentamente al cliente y mostrá comprensión.\n    *   *Ejemplo:* \"Entiendo tu situación, Jacquelina. A muchos clientes les preocupa [problema que mencionó el cliente]. Pero con nuestra solución, vas a poder [beneficio].\"\n*   **Resolución de Problemas (22.1 de 100):**\n    *   **Qué hace mal:** Dificultad para resolver problemas y ofrecer soluciones alternativas.\n    *   **Cómo mejorar:** Investigá las opciones disponibles y ofrecé alternativas viables.\n    *   *Ejemplo:* \"Si la fibra no está disponible en tu zona, Jacquelina, tenemos otras opciones de conectividad que te VA a interesar para mejorar tu velocidad y estabilidad.\"\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Foco: Presentación y Detección de Necesidades**\n    *   **Acciones:** Practicar el saludo y la presentación inicial (ver ejemplos). Grabar y revisar tus llamadas. Implementar las preguntas sugeridas para la detección de necesidades. Analizar 5 grabaciones de llamadas excelentes del equipo.\n**Semana 2:** **Foco: Oferta Directa de Fibra y Manejo de Objeciones**\n    *   **Acciones:** Practicar la oferta de fibra directa (ver ejemplos). Crear un listado de las objeciones más comunes y preparar respuestas específicas. Role-playing con Melanie Carmona para practicar el manejo de objeciones.\n**Semana 3:** **Foco: Cierre y Proactividad**\n    *   **Acciones:** Implementar las técnicas de cierre directo (ver ejemplos). Buscar oportunidades para ser más proactiva y ofrecer soluciones adicionales. Escuchar 3 llamadas excelente y 3 criticas, analizando las diferencias en el manejo de cierre y proactividad.\n**Semana 4:** **Foco: Consolidación y Optimización**\n    *   **Acciones:** Revisar y ajustar las técnicas según los resultados obtenidos. Continuar grabando y revisando llamadas para identificar áreas de mejora continua. Evaluar los KPIs y ajustar el plan de acción si es necesario.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:**\n    *   \"Hola, ¿me comunico con Jacquelina Puente?\"\n*   **Preguntas para detectar necesidades:**\n    *   \"¿Qué es lo que más usás del celular, Jacquelina?\"\n    *   \"¿Cuántos GB tenés contratados actualmente?\"\n    *   \"¿Qué tan importante es para vos tener una conexión estable y rápida?\"\n*   **Cómo ofrecer fibra directamente:**\n    *   \"Jacquelina, tenemos disponible en tu zona fibra óptica de alta velocidad. Esto significa que vas a poder [beneficio específico relacionado con la necesidad del cliente], sin interrupciones.\"\n*   **Técnicas de cierre directo:**\n    *   \"Perfecto, Jacquelina. Para avanzar con la instalación, ¿tenés una sucursal de Movistar cerca o preferís que coordinemos la visita de un técnico a tu domicilio?\"\n*   **Manejo de objeciones personalizado:**\n    *   *(Objeción: \"Es caro\")* \"Es lógico que mires el precio, Jacquelina. A varios clientes les pasó eso. Pero considerá que con nuestra oferta, vas a tener [beneficio específico que justifica el precio], además de [otro beneficio].\"\n    *   *(Objeción: \"Ya tengo un proveedor\")* \"Entiendo, Jacquelina. Pero te VA a interesar saber que con Movistar, además de [beneficio], también tenés [otro beneficio] que no encontrás con tu proveedor actual.\"\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:** Alcanzar un puntaje de 65 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas excelentes y buenas al 50%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar la tasa de conversación real (más de 30 segundos) del 24.1% al 40%.\n    *   Disminuir el porcentaje de llamadas cortas (menos de 1 minuto) del 89% al 60%.\n    *   Aumentar el porcentaje de oferta de fibra del 10.5% al 50%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nJacquelina, sé que tenés el potencial para ser una vendedora estrella. Este análisis te muestra las áreas donde podés enfocarte para crecer y alcanzar tus metas. Con dedicación, práctica y el apoyo de tu equipo, vas a superar estos desafíos y lograr resultados increíbles. ¡Confío en vos y en tu capacidad para brillar!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false
+}

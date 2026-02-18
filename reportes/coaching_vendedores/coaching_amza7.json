@@ -1,0 +1,175 @@
+{
+  "agente": "Alvarez Pablo",
+  "agente_codigo": "amza7",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-18T11:07:46.386150",
+  "metricas": {
+    "agente": "Alvarez Pablo",
+    "agente_codigo": "amza7",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 59,
+      "puntaje_promedio": 27.8,
+      "puntaje_min": 0,
+      "puntaje_max": 92,
+      "desviacion_std": 26.3,
+      "llamadas_excelentes": 3,
+      "llamadas_buenas": 5,
+      "llamadas_regulares": 15,
+      "llamadas_criticas": 36,
+      "criterios": {
+        "saludo_presentacion": 25.9,
+        "identificacion_cliente": 32.4,
+        "deteccion_necesidades": 10.2,
+        "oferta_productos": 23.4,
+        "manejo_objeciones": 19.7,
+        "cierre": 9.2,
+        "despedida": 44.4,
+        "proactividad": 5.4,
+        "empatia": 37.6,
+        "resolucion_problemas": 24.9
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 35,
+        "Proactividad": 29,
+        "Identificación del cliente": 25,
+        "Oferta de productos": 20,
+        "Manejo de objeciones": 15
+      },
+      "fortalezas_frecuentes": {
+        "Empatía": 10,
+        "Despedida": 9,
+        "Resolución de problemas": 8,
+        "Saludo y presentación": 8,
+        "Identificación del cliente": 8
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 92.0,
+          "resumen": "El agente demostró un buen desempeño en la venta, presentando el plan, detectando las necesidades del cliente y manejando las objeciones. El cierre y la presentación fueron adecuados, aunque podría mejorar la forma de detección de necesidades y la despedida."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente y ofrece un plan. Demuestra empatía y maneja una objeción.  El cierre no se concreta."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente correctamente. Detecta las necesidades y ofrece los planes de manera directa, aunque no hay despedida."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos, no cierra la venta y no muestra proactividad."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumplió con los criterios de evaluación. No se presentó correctamente, no realizó una correcta identificación del cliente, no detectó las necesidades y no realizó un cierre efectivo. No ofreció productos de forma adecuada."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones y no cierra la venta. No hay proactividad ni empatía."
+        }
+      ],
+      "pct_ofrece_fibra": 3.4
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {},
+    "calidad_ventas": {},
+    "operacionales": {
+      "total_llamadas": 587,
+      "dias_trabajados": 5,
+      "llamadas_por_dia_promedio": 117.4,
+      "duracion_promedio_seg": 90.7,
+      "talking_total_min": 582.6,
+      "talking_promedio_seg": 59.6,
+      "hold_total_min": 0.7,
+      "acw_total_min": 143.9,
+      "promedio_min_hablados_por_hora": 58.3,
+      "horas_trabajadas": 10,
+      "exitosas": 97,
+      "no_exitosas": 455,
+      "tasa_contacto_efectivo": 16.5,
+      "ventas": 0,
+      "agendados": 20,
+      "no_quiere_contacto": 12,
+      "conforme_actual": 11,
+      "cortes_conversacion": 301,
+      "mudas_cortadas": 106,
+      "con_conversacion_real_30s": 205,
+      "tasa_conversacion_real": 34.9,
+      "corte_cliente": 423,
+      "corte_agente": 148,
+      "llamadas_largas_1min": 87,
+      "llamadas_cortas_1min": 500,
+      "score_integral": 38.8,
+      "score_operacional": 55.2
+    }
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 27.8,
+      "general": 33.0,
+      "diferencia": -5.2,
+      "percentil": 44.4
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 25.9,
+        "general": 32.4,
+        "diferencia": -6.5
+      },
+      "identificacion_cliente": {
+        "agente": 32.4,
+        "general": 62.7,
+        "diferencia": -30.3
+      },
+      "deteccion_necesidades": {
+        "agente": 10.2,
+        "general": 22.0,
+        "diferencia": -11.8
+      },
+      "oferta_productos": {
+        "agente": 23.4,
+        "general": 35.0,
+        "diferencia": -11.6
+      },
+      "manejo_objeciones": {
+        "agente": 19.7,
+        "general": 28.1,
+        "diferencia": -8.4
+      },
+      "cierre": {
+        "agente": 9.2,
+        "general": 12.9,
+        "diferencia": -3.8
+      },
+      "despedida": {
+        "agente": 44.4,
+        "general": 59.4,
+        "diferencia": -15.0
+      },
+      "proactividad": {
+        "agente": 5.4,
+        "general": 9.1,
+        "diferencia": -3.7
+      },
+      "empatia": {
+        "agente": 37.6,
+        "general": 39.5,
+        "diferencia": -1.9
+      },
+      "resolucion_problemas": {
+        "agente": 24.9,
+        "general": 19.0,
+        "diferencia": 5.9
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Alvarez Pablo\n\n### 1. DIAGNOSTICO GENERAL\nEl nivel actual de desempeño de Alvarez Pablo es **Crítico**, con un puntaje promedio de 27.8 de 100, significativamente por debajo del promedio del equipo (33.0 de 100). Su percentil es 44.4, lo que indica que se encuentra en la mitad inferior del equipo en términos de rendimiento. El potencial de mejora es alto, considerando la baja puntuación en áreas clave como detección de necesidades, oferta de productos, manejo de objeciones e identificación del cliente. Su tasa de contacto efectivo es de 16.5% y tasa de conversación real es de 34.9% ambas bajas, y no ha realizado ventas en el periodo evaluado. Las llamadas cortas (<1min) son muy altas (500 de 587). Esto sugiere que las interacciones son breves y posiblemente no están generando valor.\n\n### 2. FORTALEZAS\n*   **Empatía:** Con un puntaje de 37.6 de 100, Pablo demuestra tener una base en la conexión con el cliente. Esta habilidad puede ser una gran ventaja si se combina con un mejor manejo de las técnicas de venta.\n*   **Despedida:** Obtiene una puntuación relativamente alta (44.4 de 100) en este criterio, lo que indica que finaliza las llamadas de manera correcta. Aunque este aspecto es positivo, debe enfocarse en mejorar la efectividad de la conversación antes de llegar a la despedida.\n*   **Resolución de problemas:** Su puntaje de 24.9 de 100, aunque no es alto, es superior al promedio del equipo (19.0 de 100). Esto sugiere que tiene capacidad para encontrar soluciones, aunque debe mejorar en la identificación de los problemas y la presentación de soluciones efectivas.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de necesidades:** Con un alarmante 10.2 de 100, esta es la principal área de mejora. Sin comprender las necesidades del cliente, es imposible ofrecer soluciones relevantes y cerrar ventas.\n*   **Identificación del cliente:** Con un bajo 32.4 de 100, es crucial confirmar que se está hablando con la persona correcta. Sin esto, el resto de la conversación carece de sentido.\n*   **Oferta de productos:** Un puntaje de 23.4 de 100 indica que la presentación de los productos no es efectiva, posiblemente debido a la falta de conexión con las necesidades del cliente.\n*   **Manejo de objeciones:** Con un puntaje de 19.7 de 100, Pablo necesita aprender a rebatir objeciones de manera efectiva para superar las dudas de los clientes y avanzar hacia el cierre.\n*   **Proactividad:** Con un pobre 5.4 de 100, es necesario que Pablo tome la iniciativa en la conversación para guiar al cliente hacia una solución y demostrar valor.\n\n### 4. ANALISIS POR COMPETENCIA\n\n*   **Saludo y presentación:** 25.9 de 100. *Qué hace mal:* Es posible que el saludo sea genérico y no genere interés en el cliente. *Cómo mejorar:* Iniciar con un saludo personalizado y una frase que capte la atención. Por ejemplo: \"Hola Pablo, me comunico desde Movistar con una oferta exclusiva para vos\".\n*   **Identificación del cliente:** 32.4 de 100. *Qué hace mal:* Puede que no esté confirmando si habla con la persona correcta o no está prestando atención a la información que proporciona el cliente. *Cómo mejorar:* Siempre preguntar: \"Hola, ¿me comunico con [Nombre y Apellido del Cliente]?\". Verificar la información antes de continuar.\n*   **Detección de necesidades:** 10.2 de 100. *Qué hace mal:* No está haciendo preguntas relevantes para entender las necesidades del cliente. *Cómo mejorar:* Preguntar directamente: \"¿Qué es lo que más usás del celular?\" o \"¿Cuántos GB tenés en tu plan actual?\". Escuchar atentamente la respuesta y tomar notas.\n*   **Oferta de productos:** 23.4 de 100. *Qué hace mal:* La oferta no está conectada a las necesidades del cliente y puede resultar irrelevante. *Cómo mejorar:* Después de detectar las necesidades, presentar la oferta directamente: \"Tengo una oferta que le VA a interesar: un plan con [X GB] que se adapta perfecto a tu consumo de [redes sociales/videos/etc.]\". Ofrecer fibra directamente: \"Además, Movistar está expandiendo su red de fibra óptica en tu zona. ¿Tenés internet en casa?\".\n*   **Manejo de objeciones:** 19.7 de 100. *Qué hace mal:* No está abordando las objeciones de manera efectiva y puede estar dando respuestas genéricas. *Cómo mejorar:* Escuchar atentamente la objeción y responder de forma específica. Por ejemplo, si el cliente dice \"Es caro\", responder: \"Es lógico que mires el precio. A varios clientes les pasó eso, pero después de probar el servicio se dieron cuenta de que la calidad y los beneficios valen la pena\".\n*   **Cierre:** 9.2 de 100. *Qué hace mal:* No está intentando cerrar la venta o lo hace de forma tímida. *Cómo mejorar:* Después de presentar la oferta y rebatir objeciones, pasar al cierre directo: \"Para activar este plan, ¿te queda bien que te asigne una sucursal cerca de tu casa o preferís que lo gestionemos a domicilio?\".\n*   **Despedida:** 44.4 de 100. *Qué hace mal:* Si bien la despedida es correcta, puede sentirse forzada si la conversación no fue efectiva. *Cómo mejorar:* Asegurarse de que la despedida sea genuina y agradecida, incluso si no se concreta la venta.\n*   **Proactividad:** 5.4 de 100. *Qué hace mal:* No está tomando la iniciativa para guiar la conversación y ofrecer soluciones. *Cómo mejorar:* Después de detectar las necesidades, tomar el control de la conversación y presentar la oferta de forma proactiva. Ofrecer fibra sin preguntar.\n*   **Empatía:** 37.6 de 100. *Qué hace bien:* Demuestra cierta conexión con el cliente. *Cómo mejorar:* Usar esta habilidad para generar confianza y personalizar la oferta.\n*   **Resolución de problemas:** 24.9 de 100. *Qué hace bien:* Tiene cierta capacidad para encontrar soluciones. *Cómo mejorar:* Escuchar atentamente al cliente y ofrecer soluciones creativas y personalizadas.\n\n### 5. PLAN DE ACCION SEMANAL\n\n**Semana 1:** **Identificación del cliente y detección de necesidades.** Practicar el saludo y la verificación de la identidad del cliente. Enfocarse en hacer las preguntas correctas para entender sus necesidades. Monitoreo cercano de las llamadas para asegurar el cumplimiento de estas dos etapas.\n**Semana 2:** **Oferta de productos y manejo de objeciones.** Conectar las necesidades del cliente con los beneficios de los productos ofrecidos. Aprender a rebatir objeciones comunes de forma efectiva. Role playing con Melanie para practicar diferentes escenarios.\n**Semana 3:** **Cierre y proactividad.** Implementar técnicas de cierre directo y tomar la iniciativa en la conversación. Ofrecer fibra sistemáticamente. Analizar las llamadas de la semana para identificar áreas de mejora y corregir errores.\n**Semana 4:** **Consolidación y optimización.** Revisar todas las áreas y enfocarse en mejorar la fluidez de la conversación y la persuasión. Analizar las métricas y realizar ajustes según sea necesario.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n\n*   **Frases para verificar identidad:**\n    *   \"Hola, ¿me comunico con [Nombre y Apellido del Cliente]?\"\n*   **Preguntas para detectar necesidades:**\n    *   \"¿Qué es lo que más usás del celular?\"\n    *   \"¿Cuántos GB tenés en tu plan actual?\"\n*   **Como ofrecer fibra directamente:**\n    *   \"Además, Movistar está expandiendo su red de fibra óptica en tu zona. ¿Tenés internet en casa?\"\n*   **Técnicas de cierre directo:**\n    *   \"Para activar este plan, ¿te queda bien que te asigne una sucursal cerca de tu casa o preferís que lo gestionemos a domicilio?\"\n*   **Manejo de objeciones personalizado:**\n    *   **\"Es caro\":** \"Es lógico que mires el precio. A varios clientes les pasó eso, pero después de probar el servicio se dieron cuenta de que la calidad y los beneficios valen la pena.\"\n    *   **\"Estoy conforme con mi compañía actual\":** \"Entiendo. Sin embargo, con Movistar vas a tener [X beneficio] que no tenés actualmente, además de un mejor precio.\"\n    *   **\"No tengo tiempo\":** \"No te preocupes, esto no te va a tomar más de 5 minutos. Quiero asegurarme de que estés aprovechando al máximo tu servicio de telefonía.\"\n\n### 7. METAS CUANTIFICABLES\n\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio del modelo a 50 de 100.\n*   **Meta de calidad de llamadas:** Aumentar la tasa de conversación real a 50% y reducir las llamadas cortas (<1min) en un 50%.\n*   **KPIs específicos a mejorar:**\n    *   **Detección de necesidades:** Aumentar el puntaje de este criterio a 40 de 100.\n    *   **Oferta de productos:** Aumentar el puntaje de este criterio a 40 de 100.\n    *   **Cierre:** Aumentar el puntaje de este criterio a 25 de 100.\n    *   **Tasa de contacto efectivo:** Aumentar la tasa a 30%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\n\nPablo, tenés la capacidad de conectar con la gente, y eso es invaluable. Ahora, necesitamos pulir tus habilidades de venta y convertir esa empatía en resultados. Este plan de acción está diseñado para que puedas explotar tu potencial y convertirte en un vendedor estrella. ¡Confío en vos y sé que lo vas a lograr! Melanie está acá para apoyarte en todo el proceso, no dudes en pedirle ayuda. ¡Vamos con todo!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false
+}
