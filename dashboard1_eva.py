@@ -3057,7 +3057,7 @@ def pagina_coaching_vendedores(datos):
                 <h4 style='color: #92400E; margin-top: 0; font-size: 1rem;'>📋 ¿Cómo funciona la Evaluación?</h4>
                 <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
                     <strong>Evaluaciones = Llamadas Analizadas:</strong> Cada llamada es transcrita y evaluada automáticamente 
-                    por IA según criterios de calidad establecidos.
+                    por COMMAND según criterios de calidad establecidos.
                 </p>
                 <p style='color: #78350F; margin-bottom: 8px; font-size: 0.9rem;'>
                     <strong>Puntaje (0-100):</strong> Se calcula en base a 10 criterios: saludo, identificación, detección de necesidades, 
@@ -5187,7 +5187,7 @@ def pagina_analisis_equipos(datos):
                 <h4 style='color: #075985; margin-top: 0; font-size: 1rem;'>📊 ¿Cómo se evalúa el puntaje?</h4>
                 <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
                     <strong>Evaluaciones = Llamadas del Equipo:</strong> Todas las llamadas grabadas y procesadas de los agentes del equipo.
-                    El sistema transcribe cada llamada y la evalúa automáticamente con IA.
+                    El sistema transcribe cada llamada y la evalúa automáticamente con COMMAND.
                 </p>
                 <p style='color: #0C4A6E; margin-bottom: 8px; font-size: 0.9rem;'>
                     <strong>Clasificación de Llamadas (Equipo):</strong><br>
@@ -5455,7 +5455,7 @@ def pagina_analisis_equipos(datos):
                 </p>
                 <p style='color: #34495E; margin-bottom: 0;'>
                     <strong>Llamadas Sin Evaluación:</strong><br>
-                    Representa el porcentaje de llamadas que aún no han sido procesadas o evaluadas por el sistema de IA.
+                    Representa el porcentaje de llamadas que aún no han sido procesadas o evaluadas por el sistema de COMMAND.
                 </p>
             </div>
             """, unsafe_allow_html=True)

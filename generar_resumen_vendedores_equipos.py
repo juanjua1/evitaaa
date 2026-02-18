@@ -243,6 +243,14 @@ def cargar_datos_completos():
             datos['coaching_individual'] = json.load(f)
         log(f"Coaching previo: {len(datos['coaching_individual'])} vendedores")
 
+    # Resumen integral (métricas operacionales + calidad cruzadas)
+    ruta = os.path.join(DIR_REPORTES, "resumen_vendedores_integral.json")
+    if os.path.exists(ruta):
+        with open(ruta, 'r', encoding='utf-8') as f:
+            datos['resumen_integral'] = json.load(f)
+        vendedores_integral = datos['resumen_integral'].get('vendedores', {})
+        log(f"Resumen integral: {len(vendedores_integral)} vendedores con métricas operacionales")
+
     return datos
 
 
@@ -401,6 +409,42 @@ def obtener_metricas_vendedor(agente, datos, codigo_a_equipo, codigo_a_nombre):
                     }
                     break
 
+    # === MÉTRICAS OPERACIONALES (del resumen integral) ===
+    if 'resumen_integral' in datos:
+        vendedores_integral = datos['resumen_integral'].get('vendedores', {})
+        agente_norm = normalizar_codigo_agente(agente)
+        datos_integral = vendedores_integral.get(agente_norm, {})
+        if datos_integral:
+            metricas['operacionales'] = {
+                'total_llamadas': datos_integral.get('total_llamadas', 0),
+                'dias_trabajados': datos_integral.get('dias_trabajados', 0),
+                'llamadas_por_dia_promedio': datos_integral.get('llamadas_por_dia_promedio', 0),
+                'duracion_promedio_seg': datos_integral.get('duracion_promedio_seg', 0),
+                'talking_total_min': datos_integral.get('talking_total_min', 0),
+                'talking_promedio_seg': datos_integral.get('talking_promedio_seg', 0),
+                'hold_total_min': datos_integral.get('hold_total_min', 0),
+                'acw_total_min': datos_integral.get('acw_total_min', 0),
+                'promedio_min_hablados_por_hora': datos_integral.get('promedio_min_hablados_por_hora', 0),
+                'horas_trabajadas': datos_integral.get('horas_trabajadas', 0),
+                'exitosas': datos_integral.get('exitosas', 0),
+                'no_exitosas': datos_integral.get('no_exitosas', 0),
+                'tasa_contacto_efectivo': datos_integral.get('tasa_contacto_efectivo', 0),
+                'ventas': datos_integral.get('ventas', 0),
+                'agendados': datos_integral.get('agendados', 0),
+                'no_quiere_contacto': datos_integral.get('no_quiere_contacto', 0),
+                'conforme_actual': datos_integral.get('conforme_actual', 0),
+                'cortes_conversacion': datos_integral.get('cortes_conversacion', 0),
+                'mudas_cortadas': datos_integral.get('mudas_cortadas', 0),
+                'con_conversacion_real_30s': datos_integral.get('con_conversacion_real_30s', 0),
+                'tasa_conversacion_real': datos_integral.get('tasa_conversacion_real', 0),
+                'corte_cliente': datos_integral.get('corte_cliente', 0),
+                'corte_agente': datos_integral.get('corte_agente', 0),
+                'llamadas_largas_1min': datos_integral.get('llamadas_largas_1min', 0),
+                'llamadas_cortas_1min': datos_integral.get('llamadas_cortas_1min', 0),
+                'score_integral': datos_integral.get('score_integral', 0),
+                'score_operacional': datos_integral.get('score_operacional', 0),
+            }
+
     return metricas
 
 
@@ -506,6 +550,13 @@ personalizado para ayudarlo a alcanzar su MÁXIMO POTENCIAL.
 
 ### CALIDAD - VENTAS:
 {json.dumps(metricas.get('calidad_ventas', {}), indent=2, ensure_ascii=False)}
+
+### METRICAS OPERACIONALES (Detalle de Interacciones):
+{json.dumps(metricas.get('operacionales', {}), indent=2, ensure_ascii=False)}
+(total_llamadas: llamadas totales del periodo. talking_total_min: minutos hablados totales.
+promedio_min_hablados_por_hora: productividad por hora. tasa_contacto_efectivo: % de llamadas exitosas.
+tasa_conversacion_real: % de llamadas con mas de 30s de conversacion.
+corte_cliente vs corte_agente: quien corta la llamada. ventas: cierres efectivos. agendados: reagendamientos.)
 
 ### COMPARATIVA CON EL EQUIPO:
 {json.dumps(comparativa, indent=2, ensure_ascii=False)}
