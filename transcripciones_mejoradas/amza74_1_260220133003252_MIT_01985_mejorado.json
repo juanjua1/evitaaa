@@ -1,0 +1,355 @@
+{
+  "archivo": "amza74_1_260220133003252_MIT_01985.wav",
+  "duracion_segundos": 91.84,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 57.77,
+    "Hablante B": 26.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 29.9,
+      "texto": "Hola, buenas tardes, hablo con Juan."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.5,
+      "fin": 30.7,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.3,
+      "fin": 32.5,
+      "texto": "Hola, Juan."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.6,
+      "fin": 33.3,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.3,
+      "fin": 34.0,
+      "texto": "Yo soy Sara."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.0,
+      "fin": 41.8,
+      "texto": "Ayer nos comunicamos y me estás consultando si tenías el plan de Movistar en proceso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.8,
+      "fin": 45.7,
+      "texto": "Yo lo consulté con mi supervisora y todavía no está cargado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.6,
+      "fin": 48.1,
+      "texto": "Te llamaba para que lo carguemos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.1,
+      "fin": 50.8,
+      "texto": "¿Vos tenías más líneas a tu nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.8,
+      "fin": 58.1,
+      "texto": "Yo tengo todo cargado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.2,
+      "fin": 59.5,
+      "texto": "O sea, me mandaron comprobantes todos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.5,
+      "fin": 60.1,
+      "texto": "¿Cuándo se lo han mandado?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.7,
+      "fin": 63.1,
+      "texto": "¿Ayer?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 63.2,
+      "fin": 67.1,
+      "texto": "No, antes de ayer."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.5,
+      "fin": 74.0,
+      "texto": "Me mandaron el WhatsApp, tengo todo yo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 74.0,
+      "fin": 74.4,
+      "texto": "¿Ya llegó el chip?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 74.4,
+      "fin": 79.5,
+      "texto": "No, no me llegó el chip, pero tengo el número del chip, tengo todo, que me tiene que llegar nomás."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 79.5,
+      "fin": 81.0,
+      "texto": "Ah, bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 81.0,
+      "fin": 86.5,
+      "texto": "Bueno, avíseme cualquier cosita, yo le voy a enviar un mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 86.5,
+      "fin": 89.9,
+      "texto": "Bueno, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 89.9,
+      "fin": 90.4,
+      "texto": "Muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 91.3,
+      "fin": 91.8,
+      "texto": "Adiós."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes, hablo con Juan. Sí. Hola, Juan. ¿Cómo estás? Yo soy Sara. Ayer nos comunicamos y me estás consultando si tenías el plan de Movistar en proceso. Yo lo consulté con mi supervisora y todavía no está cargado. Te llamaba para que lo carguemos. ¿Vos tenías más líneas a tu nombre? Yo tengo todo cargado. O sea, me mandaron comprobantes todos. ¿Cuándo se lo han mandado? ¿Ayer? No, antes de ayer. Me mandaron el WhatsApp, tengo todo yo. ¿Ya llegó el chip? No, no me llegó el chip, pero tengo el número del chip, tengo todo, que me tiene que llegar nomás. Ah, bien. Bueno, avíseme cualquier cosita, yo le voy a enviar un mensaje. Bueno, sí. Muchas gracias. Adiós.",
+  "calidad": {
+    "confianza_promedio": 0.403,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T16:58:16.788288",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron errores menores de puntuación y se identificaron los roles de cada hablante."
+    },
+    "fecha_mejora": "2026-02-22T23:24:49.355240",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 29.9,
+      "duracion": 29.87,
+      "texto": "Hola, buenas tardes, hablo con Juan.",
+      "confianza": 0.63
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.52,
+      "fin": 30.72,
+      "duracion": 0.2,
+      "texto": "Sí.",
+      "confianza": 0.409
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.29,
+      "fin": 32.55,
+      "duracion": 0.26,
+      "texto": "Hola, Juan.",
+      "confianza": 0.21
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.57,
+      "fin": 33.29,
+      "duracion": 0.72,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.187
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.31,
+      "fin": 33.95,
+      "duracion": 0.64,
+      "texto": "Yo soy Sara.",
+      "confianza": 0.396
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.97,
+      "fin": 41.81,
+      "duracion": 7.85,
+      "texto": "Ayer nos comunicamos y me estás consultando si tenías el plan de movistar en proceso.",
+      "confianza": 0.568
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.84,
+      "fin": 45.66,
+      "duracion": 3.82,
+      "texto": "Yo lo consulté con mi supervisora y todavía no está cargado.",
+      "confianza": 0.614
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.64,
+      "fin": 48.12,
+      "duracion": 1.48,
+      "texto": "Te llamaba para que lo carguemos.",
+      "confianza": 0.824
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.14,
+      "fin": 50.82,
+      "duracion": 2.68,
+      "texto": "¿Vos tenías más líneas a tu nombre?",
+      "confianza": 0.582
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.84,
+      "fin": 58.15,
+      "duracion": 7.31,
+      "texto": "Yo tengo todo cargado.",
+      "confianza": 0.269
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.17,
+      "fin": 59.51,
+      "duracion": 1.34,
+      "texto": "O sea, me mandaron comprobantes todos.",
+      "confianza": 0.278
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.53,
+      "fin": 60.09,
+      "duracion": 0.56,
+      "texto": "¿Cuándo se lo han mandado?",
+      "confianza": 0.074
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.71,
+      "fin": 63.15,
+      "duracion": 1.44,
+      "texto": "¿Ayer?",
+      "confianza": 0.31
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.17,
+      "fin": 67.11,
+      "duracion": 3.94,
+      "texto": "No, antes de ayer.",
+      "confianza": 0.523
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.52,
+      "fin": 73.98,
+      "duracion": 5.47,
+      "texto": "Me mandaron el WhatsApp, tengo todo yo.",
+      "confianza": 0.506
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 74.0,
+      "fin": 74.36,
+      "duracion": 0.36,
+      "texto": "¿Ya llegó el chip?",
+      "confianza": 0.024
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 74.38,
+      "fin": 79.47,
+      "duracion": 5.09,
+      "texto": "No, no me llegó el chip, pero tengo el número del chip, tengo todo, que me tiene que llegar nomás.",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 79.49,
+      "fin": 80.95,
+      "duracion": 1.46,
+      "texto": "Ah, bien.",
+      "confianza": 0.4
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.97,
+      "fin": 86.46,
+      "duracion": 5.49,
+      "texto": "Bueno, avíseme cualquier cosita, yo le voy a enviar un mensaje.",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 86.48,
+      "fin": 89.86,
+      "duracion": 3.38,
+      "texto": "Bueno, sí.",
+      "confianza": 0.455
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 89.88,
+      "fin": 90.4,
+      "duracion": 0.52,
+      "texto": "Muchas gracias.",
+      "confianza": 0.164
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 91.29,
+      "fin": 91.84,
+      "duracion": 0.55,
+      "texto": "Adiós.",
+      "confianza": 0.282
+    }
+  ]
+}

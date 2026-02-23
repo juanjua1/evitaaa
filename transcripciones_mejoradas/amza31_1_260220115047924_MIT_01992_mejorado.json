@@ -1,0 +1,117 @@
+{
+  "archivo": "amza31_1_260220115047924_MIT_01992.wav",
+  "duracion_segundos": 51.89,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 2.84,
+    "Hablante A": 12.28
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.4,
+      "fin": 23.7,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.3,
+      "fin": 34.0,
+      "texto": "Bienvenido al buzón de voz claro de 1-1-6-2-7-2-2-7-4-6."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.2,
+      "fin": 38.5,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.1,
+      "fin": 44.6,
+      "texto": "Para finalizar, cortá o marcá la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.6,
+      "fin": 51.9,
+      "texto": "Voy a llamar."
+    }
+  ],
+  "transcripcion_completa": "Hola. Bienvenido al buzón de voz claro de 1-1-6-2-7-2-2-7-4-6. Después del tono, deja tu mensaje. Para finalizar, cortá o marcá la tecla numeral para más opciones. Voy a llamar.",
+  "calidad": {
+    "confianza_promedio": 0.57,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:18:06.093925",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción y se identificaron los roles de los hablantes."
+    },
+    "fecha_mejora": "2026-02-22T22:54:31.427500",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.45,
+      "fin": 23.67,
+      "duracion": 0.22,
+      "texto": "Hola.",
+      "confianza": 0.368
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.26,
+      "fin": 34.01,
+      "duracion": 7.75,
+      "texto": "Bienvenido al buzón de voz claro de 1-1-6-2-7-2-2-7-4-6.",
+      "confianza": 0.824
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.19,
+      "fin": 38.55,
+      "duracion": 2.36,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.772
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.08,
+      "fin": 44.6,
+      "duracion": 4.53,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.839
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.63,
+      "fin": 51.89,
+      "duracion": 0.26,
+      "texto": "Voy a llamar.",
+      "confianza": 0.048
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "archivo": "amza7_1_260210185608717_ACD_68405.wav",
+  "duracion_segundos": 78.08,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 58.3,
+    "Hablante A": 10.35
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.2,
+      "fin": 4.0,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 4.5,
+      "texto": "Hola, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.0,
+      "fin": 9.0,
+      "texto": "Me comunico con Anderson."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.0,
+      "fin": 9.2,
+      "texto": "De parte."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.2,
+      "fin": 11.7,
+      "texto": "Mi nombre es Mariana, un placer saludarle."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.7,
+      "fin": 20.5,
+      "texto": "Lo llamo con el objetivo de informarle acerca de un 85% de descuento que tiene actualmente en su línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.2,
+      "fin": 27.1,
+      "texto": "Me aseguro acá en el sistema que tiene una línea activa en Claro, ¿correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.2,
+      "fin": 27.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.4,
+      "fin": 28.0,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.0,
+      "fin": 31.2,
+      "texto": "¿Su línea es de abono o es prepago?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.2,
+      "fin": 33.9,
+      "texto": "Ah, bueno."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.9,
+      "fin": 36.1,
+      "texto": "Vale, le comento un poco."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.2,
+      "fin": 45.6,
+      "texto": "Estamos llamando de Movistar y contamos con grandes promociones activas que, si se cambiara hoy a la compañía, podría adquirir."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.6,
+      "fin": 47.2,
+      "texto": "No, no me interesa, muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.2,
+      "fin": 51.7,
+      "texto": "Vale, comprendo perfectamente que se encuentre cómodo en la compañía actual."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.2,
+      "fin": 56.4,
+      "texto": "Sin embargo, es posible sacarle mayor provecho a su línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.0,
+      "fin": 66.4,
+      "texto": "No me interesa, porque ya me han llamado muchas veces y si les dije que nada me interesaba, pues no tienen nada mejor que ofrecerme."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.5,
+      "fin": 69.4,
+      "texto": "Vale, ¿y qué le ofrece actualmente la competencia, Claro?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 71.0,
+      "fin": 75.7,
+      "texto": "No recuerdo en este momento, pero la verdad no me interesa, me comprende, muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 75.8,
+      "fin": 78.1,
+      "texto": "Vale, perfecto, que tenga feliz día."
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Hola, ¿sí? Me comunico con Anderson. De parte. Mi nombre es Mariana, un placer saludarle. Lo llamo con el objetivo de informarle acerca de un 85% de descuento que tiene actualmente en su línea. Me aseguro acá en el sistema que tiene una línea activa en Claro, ¿correcto? Sí. Perfecto. ¿Su línea es de abono o es prepago? Ah, bueno. Vale, le comento un poco. Estamos llamando de Movistar y contamos con grandes promociones activas que, si se cambiara hoy a la compañía, podría adquirir. No, no me interesa, muchas gracias. Vale, comprendo perfectamente que se encuentre cómodo en la compañía actual. Sin embargo, es posible sacarle mayor provecho a su línea. No me interesa, porque ya me han llamado muchas veces y si les dije que nada me interesaba, pues no tienen nada mejor que ofrecerme. Vale, ¿y qué le ofrece actualmente la competencia, Claro? No recuerdo en este momento, pero la verdad no me interesa, me comprende, muchas gracias. Vale, perfecto, que tenga feliz día.",
+  "calidad": {
+    "confianza_promedio": 0.546,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T11:46:15.345996",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, mejora de la gramática y la puntuación, y asignación de roles."
+    },
+    "fecha_mejora": "2026-02-22T23:34:39.038549",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.23,
+      "fin": 3.95,
+      "duracion": 1.72,
+      "texto": "Hola, buen día.",
+      "confianza": 0.154
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.97,
+      "fin": 4.55,
+      "duracion": 0.58,
+      "texto": "Hola, ¿sí?",
+      "confianza": 0.516
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.03,
+      "fin": 8.97,
+      "duracion": 3.94,
+      "texto": "Me comunico con Anderson.",
+      "confianza": 0.882
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.99,
+      "fin": 9.19,
+      "duracion": 0.2,
+      "texto": "De parte.",
+      "confianza": 0.162
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.21,
+      "fin": 11.65,
+      "duracion": 2.44,
+      "texto": "Mi nombre es Mariana, un placer saludarle.",
+      "confianza": 0.429
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.67,
+      "fin": 20.46,
+      "duracion": 8.79,
+      "texto": "Voy a llamar con el objetivo para que tenga conocimiento acerca de un 85% de descuento que tiene actualmente su línea.",
+      "confianza": 0.651
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.16,
+      "fin": 27.15,
+      "duracion": 5.99,
+      "texto": "Me aseguro acá en el sistema que tiene una línea activa en claro, ¿correcto?",
+      "confianza": 0.712
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.17,
+      "fin": 27.29,
+      "duracion": 0.12,
+      "texto": "Sí.",
+      "confianza": 0.452
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.39,
+      "fin": 27.99,
+      "duracion": 0.6,
+      "texto": "Perfecto.",
+      "confianza": 0.845
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.01,
+      "fin": 31.25,
+      "duracion": 3.24,
+      "texto": "¿Su línea es de abono o es prepago?",
+      "confianza": 0.48
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.24,
+      "fin": 33.87,
+      "duracion": 1.62,
+      "texto": "A bueno.",
+      "confianza": 0.395
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.89,
+      "fin": 36.15,
+      "duracion": 2.26,
+      "texto": "Vale, yo le comento un poco.",
+      "confianza": 0.682
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.19,
+      "fin": 45.57,
+      "duracion": 9.38,
+      "texto": "Estamos llamándolo en el Movistar y contamos con grandes promociones activas que si retomara el día de hoy a la compañía podría adquirirlo.",
+      "confianza": 0.698
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.59,
+      "fin": 47.17,
+      "duracion": 1.58,
+      "texto": "No, no me interesa, muchas gracias.",
+      "confianza": 0.045
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.19,
+      "fin": 51.72,
+      "duracion": 4.53,
+      "texto": "Vale, comprendo perfectamente que se encuentre cómodo en la compañía actual.",
+      "confianza": 0.706
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.17,
+      "fin": 56.4,
+      "duracion": 4.22,
+      "texto": "Sin embargo, es posible sacarle mayor provecho a su línea.",
+      "confianza": 0.828
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.02,
+      "fin": 66.43,
+      "duracion": 7.41,
+      "texto": "No me interesa, porque ya me he llamado muchas veces y si les dije que nada me interesaba, pues no tienen nada mejor que ofrecerme.",
+      "confianza": 0.524
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 66.45,
+      "fin": 69.39,
+      "duracion": 2.94,
+      "texto": "Vale, ¿y qué le ofrece actualmente la compañera, es claro?",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 70.97,
+      "fin": 75.74,
+      "duracion": 4.77,
+      "texto": "No recuerdo en este momento, pero la verdad no me interesa con mí, me comprende, muchas gracias.",
+      "confianza": 0.344
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 75.76,
+      "fin": 78.08,
+      "duracion": 2.32,
+      "texto": "Vale, perfecto, que tenga feliz día.",
+      "confianza": 0.68
+    }
+  ]
+}

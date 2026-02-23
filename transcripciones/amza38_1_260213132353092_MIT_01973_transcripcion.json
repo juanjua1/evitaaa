@@ -1,0 +1,86 @@
+{
+  "archivo": "amza38_1_260213132353092_MIT_01973.wav",
+  "duracion_segundos": 54.84,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 14.42,
+    "Hablante A": 7.73
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.16,
+      "fin": 26.62,
+      "duracion": 5.46,
+      "texto": "Hola, ¿qué tal, Ricardo?",
+      "confianza": 0.134
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.64,
+      "fin": 30.45,
+      "duracion": 3.8,
+      "texto": "Hola, Ricardo, ¿me escuchas?",
+      "confianza": 0.613
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.47,
+      "fin": 34.97,
+      "duracion": 4.5,
+      "texto": "Le habla Ayanna, usted pidió que le llamáramos en una hora de movistar, más o menos le llamamos.",
+      "confianza": 0.661
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.11,
+      "fin": 44.84,
+      "duracion": 4.72,
+      "texto": "Hola.",
+      "confianza": 0.669
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.86,
+      "fin": 46.3,
+      "duracion": 1.44,
+      "texto": "Hola, ¿me escuchas, caballero?",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.76,
+      "fin": 50.42,
+      "duracion": 0.66,
+      "texto": "Hola.",
+      "confianza": 0.661
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.27,
+      "fin": 54.84,
+      "duracion": 1.57,
+      "texto": "Gracias por ver.",
+      "confianza": 0.288
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal, Ricardo? Hola, Ricardo, ¿me escuchas? Le habla Ayanna, usted pidió que le llamáramos en una hora de movistar, más o menos le llamamos. Hola. Hola, ¿me escuchas, caballero? Hola. Gracias por ver.",
+  "calidad": {
+    "confianza_promedio": 0.522,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:10:05.502268",
+    "version": "5.0_ecapa"
+  }
+}

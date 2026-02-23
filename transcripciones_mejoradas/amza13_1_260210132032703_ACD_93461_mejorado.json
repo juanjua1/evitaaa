@@ -1,0 +1,271 @@
+{
+  "archivo": "amza13_1_260210132032703_ACD_93461.wav",
+  "duracion_segundos": 59.55,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 42.03,
+    "Hablante A": 4.46
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 5.1,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.1,
+      "fin": 5.4,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.7,
+      "fin": 7.4,
+      "texto": "Mi nombre es Rodrigo, ¿cómo le va el día de hoy?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.4,
+      "fin": 9.1,
+      "texto": "¿Todo bien?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.1,
+      "fin": 10.5,
+      "texto": "Sí, todo bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.5,
+      "fin": 13.2,
+      "texto": "¿Nos estamos comunicando del área de beneficios de Movistar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.1,
+      "fin": 22.2,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.3,
+      "fin": 22.4,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.4,
+      "fin": 22.5,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.6,
+      "fin": 23.0,
+      "texto": "No, no, ya me llamaron."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.0,
+      "fin": 25.7,
+      "texto": "Yo les dije que no, por el momento no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.7,
+      "fin": 26.7,
+      "texto": "Claro, ¿por qué motivo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.4,
+      "fin": 44.1,
+      "texto": "Sí, porque ya tuve mucho tiempo Movistar y después me habían subido la cuota, me acuerdo, que era 25.000 en ese año, en ese entonces, bueno, y era mucho y bueno, yo me pasé y ya está, ya no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.1,
+      "fin": 48.7,
+      "texto": "¿Quiere que vea las promos de WhatsApp?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.7,
+      "fin": 51.7,
+      "texto": "Por las dudas, dejá, pero lo voy a ver."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.0,
+      "fin": 59.5,
+      "texto": "Como yo soy jubilada, lo único que uso es el celular y los mensajes, nada más, no uso tantas cosas."
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. ¿Qué tal? Mi nombre es Rodrigo, ¿cómo le va el día de hoy? ¿Todo bien? Sí, todo bien. ¿Nos estamos comunicando del área de beneficios de Movistar? Sí, sí. ¿Hola? Sí, sí. No, no, ya me llamaron. Yo les dije que no, por el momento no. Claro, ¿por qué motivo? Sí, porque ya tuve mucho tiempo Movistar y después me habían subido la cuota, me acuerdo, que era 25.000 en ese año, en ese entonces, bueno, y era mucho y bueno, yo me pasé y ya está, ya no. ¿Quiere que vea las promos de WhatsApp? Por las dudas, dejá, pero lo voy a ver. Como yo soy jubilada, lo único que uso es el celular y los mensajes, nada más, no uso tantas cosas.",
+  "calidad": {
+    "confianza_promedio": 0.401,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-18T23:21:11.416701",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, palabras cortadas y errores de transcripción. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T00:27:13.091519",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.52,
+      "fin": 5.1,
+      "duracion": 3.58,
+      "texto": "Hola, buen día.",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.12,
+      "fin": 5.44,
+      "duracion": 0.32,
+      "texto": "¿Qué tal?",
+      "confianza": 0.731
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.72,
+      "fin": 7.38,
+      "duracion": 1.66,
+      "texto": "Mi nombre es Rodriod, ¿cómo le van el día de hoy?",
+      "confianza": 0.598
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.42,
+      "fin": 9.06,
+      "duracion": 1.64,
+      "texto": "¿Todo bien?",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.08,
+      "fin": 10.49,
+      "duracion": 1.4,
+      "texto": "Sí, todo bien.",
+      "confianza": 0.251
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.51,
+      "fin": 13.19,
+      "duracion": 2.68,
+      "texto": "¿No estamos comunicando del área de beneficio de movistar?",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.1,
+      "fin": 22.24,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.005
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.26,
+      "fin": 22.38,
+      "duracion": 0.12,
+      "texto": "¿Hola?",
+      "confianza": 0.004
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.4,
+      "fin": 22.54,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.034
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.56,
+      "fin": 23.02,
+      "duracion": 0.46,
+      "texto": "No, no, ya me llamaron.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.04,
+      "fin": 25.7,
+      "duracion": 2.66,
+      "texto": "Yo les dije que no, por el momento no.",
+      "confianza": 0.371
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.72,
+      "fin": 26.66,
+      "duracion": 0.94,
+      "texto": "Claro, ¿por qué motiro?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.45,
+      "fin": 44.09,
+      "duracion": 15.65,
+      "texto": "Sí, porque ya tuve mucho tiempo movistar y después me habían llevado la cota, me acuerdo, que era 25.000 en ese año, en ese entonces, bueno, y era mucho y bueno, yo me pasé y ya está, ya no.",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.11,
+      "fin": 48.66,
+      "duracion": 4.55,
+      "texto": "¿Quiere que vea que las promos vieron WhatsApp?",
+      "confianza": 0.399
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.68,
+      "fin": 51.7,
+      "duracion": 3.02,
+      "texto": "Por las dudas dejá, pero lo voy a ver.",
+      "confianza": 0.479
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.02,
+      "fin": 59.55,
+      "duracion": 7.53,
+      "texto": "Como yo soy jubilada, lo único que uso es el celular y los mensajes, nada más, no uso tantas cosas.",
+      "confianza": 0.553
+    }
+  ]
+}

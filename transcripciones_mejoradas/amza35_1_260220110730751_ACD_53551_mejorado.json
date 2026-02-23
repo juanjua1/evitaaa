@@ -1,0 +1,215 @@
+{
+  "archivo": "amza35_1_260220110730751_ACD_53551.wav",
+  "duracion_segundos": 66.67,
+  "num_segmentos": 12,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 63.26
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 5.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.0,
+      "fin": 6.3,
+      "texto": "Hablo con Luis."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.4,
+      "fin": 7.0,
+      "texto": "Luis, un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.0,
+      "fin": 7.8,
+      "texto": "Te hablo de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.8,
+      "fin": 11.3,
+      "texto": "Me contacto con vos para poder brindarte los beneficios en tu línea, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.7,
+      "fin": 17.9,
+      "texto": "Es un plan que tiene en total 14 gigas por tan solo $7,780, ¿bien?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.9,
+      "fin": 19.1,
+      "texto": "¿Cómo lo ves?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.8,
+      "fin": 27.9,
+      "texto": "Como dije, no lo escuché bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.1,
+      "fin": 34.0,
+      "texto": "Serían 14 gigas en total por el precio de tan solo $7,780, ¿bien?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.2,
+      "fin": 53.3,
+      "texto": "Contarías con lo que es básicamente también roaming incluido, WhatsApp, datos, te conviene un montón para abonar menos, básicamente para poder volver a lo que es la compañía de Movistar, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.3,
+      "fin": 53.8,
+      "texto": "Ah, no, todavía gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.6,
+      "fin": 66.7,
+      "texto": "Muy bien, pero te convido ya que tienes lo que serían cuatro líneas para que puedas pagar menos."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hablo con Luis. Luis, un gusto. Te hablo de Movistar. Me contacto con vos para poder brindarte los beneficios en tu línea, ¿sí? Es un plan que tiene en total 14 gigas por tan solo $7,780, ¿bien? ¿Cómo lo ves? Como dije, no lo escuché bien. Serían 14 gigas en total por el precio de tan solo $7,780, ¿bien? Contarías con lo que es básicamente también roaming incluido, WhatsApp, datos, te conviene un montón para abonar menos, básicamente para poder volver a lo que es la compañía de Movistar, ¿sí? Ah, no, todavía gracias. Muy bien, pero te convido ya que tienes lo que serían cuatro líneas para que puedas pagar menos.",
+  "calidad": {
+    "confianza_promedio": 0.499,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:36:16.658152",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 14 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de 'gigas', nombres propios, y palabras cortadas. Mejora de la fluidez general."
+    },
+    "fecha_mejora": "2026-02-22T22:58:42.288468",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 5.94,
+      "duracion": 5.91,
+      "texto": "Hola.",
+      "confianza": 0.19
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.96,
+      "fin": 6.34,
+      "duracion": 0.38,
+      "texto": "Hablo con Luis.",
+      "confianza": 0.083
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.36,
+      "fin": 6.98,
+      "duracion": 0.62,
+      "texto": "Luis, un gusto.",
+      "confianza": 0.659
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.0,
+      "fin": 7.8,
+      "duracion": 0.8,
+      "texto": "Te hablo de Guadalupe.",
+      "confianza": 0.317
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.82,
+      "fin": 11.31,
+      "duracion": 3.49,
+      "texto": "Me contacto con vos para poder brindarte los recuerdos en tu línea, ¿sí?",
+      "confianza": 0.669
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.71,
+      "fin": 17.86,
+      "duracion": 5.15,
+      "texto": "Es un plan que tiene en total 14 ciudades por tan solo $7,780, ¿bien?",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.88,
+      "fin": 19.1,
+      "duracion": 1.22,
+      "texto": "¿Cómo lo ves?",
+      "confianza": 0.613
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.8,
+      "fin": 27.91,
+      "duracion": 8.11,
+      "texto": "Como dije, no lo escuché bien.",
+      "confianza": 0.55
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.06,
+      "fin": 34.01,
+      "duracion": 5.95,
+      "texto": "Serían 14 rigas en total por el precio de tan solo $7,780, ¿bien?",
+      "confianza": 0.792
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.19,
+      "fin": 53.3,
+      "duracion": 19.11,
+      "texto": "Contarías con lo que es básicamente también Rubin incluido, WhatsApp, Darpis, te conviene un montón para abonar menos, básicamente para poder volver a lo que es la compañía de Movistar, ¿sí?",
+      "confianza": 0.727
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.32,
+      "fin": 53.8,
+      "duracion": 0.48,
+      "texto": "Ah, no, todavía gracias.",
+      "confianza": 0.049
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.64,
+      "fin": 66.67,
+      "duracion": 12.04,
+      "texto": "Muy bien, pero te conviro ya que tienes lo que serían cuatro líneas para que puedas pagar menos.",
+      "confianza": 0.616
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "archivo": "amza41_1_260213124513058_ACD_62469.wav",
+  "duracion_segundos": 62.02,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 26.09,
+    "Hablante A": 23.75
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 1.7,
+      "fin": 2.9,
+      "texto": "Hola, buenas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.9,
+      "fin": 3.7,
+      "texto": "Hablo con Graciela."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.0,
+      "fin": 7.3,
+      "texto": "Eh, sí, de parte."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.4,
+      "fin": 8.1,
+      "texto": "¿Cómo estás, Graciela?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.2,
+      "fin": 8.5,
+      "texto": "Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.5,
+      "fin": 9.3,
+      "texto": "Te habla Marina."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.3,
+      "fin": 12.5,
+      "texto": "Me comunico de Movistar para ofrecerte una promoción en tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.2,
+      "fin": 16.0,
+      "texto": "¿Actualmente estás en Claro, es correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.9,
+      "fin": 18.0,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.0,
+      "fin": 18.5,
+      "texto": "Bien, buenísimo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.6,
+      "fin": 23.6,
+      "texto": "Mira, lo que tenemos hoy para ofrecerte es un plan de 14 GB que incluye WhatsApp."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.6,
+      "fin": 25.1,
+      "texto": "Roaming libre para todas las compañías."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.8,
+      "fin": 28.9,
+      "texto": "Y te queda en $7,790, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.4,
+      "fin": 36.3,
+      "texto": "¿Te parece bien ese plan? Tiene el 80% de descuento por 6 meses."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.4,
+      "fin": 39.7,
+      "texto": "Sí, pero por ahora no me voy a cambiar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.4,
+      "fin": 43.9,
+      "texto": "Bien, ¿por algún motivo en especial? ¿Has tenido algún inconveniente en la compañía?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.9,
+      "fin": 53.8,
+      "texto": "No, no, pero ahora estoy pagando 4200 pesos, dice, por ahí me duele un mes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.8,
+      "fin": 58.5,
+      "texto": "Bien, bueno, dale listo entonces, voy a dejar registrado, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 58.5,
+      "fin": 59.0,
+      "texto": "Bueno, bárbaro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.5,
+      "fin": 61.3,
+      "texto": "Muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.3,
+      "fin": 62.0,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas. Hablo con Graciela. Eh, sí, de parte. ¿Cómo estás, Graciela? Un gusto. Te habla Marina. Me comunico de Movistar para ofrecerte una promoción en tu línea. ¿Actualmente estás en Claro, es correcto? Sí. Bien, buenísimo. Mira, lo que tenemos hoy para ofrecerte es un plan de 14 GB que incluye WhatsApp. Roaming libre para todas las compañías. Y te queda en $7,790, ¿sí? ¿Te parece bien ese plan? Tiene el 80% de descuento por 6 meses. Sí, pero por ahora no me voy a cambiar. Bien, ¿por algún motivo en especial? ¿Has tenido algún inconveniente en la compañía? No, no, pero ahora estoy pagando 4200 pesos, dice, por ahí me duele un mes. Bien, bueno, dale listo entonces, voy a dejar registrado, ¿sí? Bueno, bárbaro. Muchas gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.466,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:46:42.587927",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 14 GB"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios, y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T10:43:11.778517",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.74,
+      "fin": 2.88,
+      "duracion": 1.14,
+      "texto": "Hola, buenas.",
+      "confianza": 0.15
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.9,
+      "fin": 3.74,
+      "duracion": 0.84,
+      "texto": "Hablo con Graciela.",
+      "confianza": 0.352
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.0,
+      "fin": 7.34,
+      "duracion": 0.34,
+      "texto": "Eh, sí, de parte.",
+      "confianza": 0.005
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.36,
+      "fin": 8.14,
+      "duracion": 0.78,
+      "texto": "¿Cómo estás, Graciela?",
+      "confianza": 0.262
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.16,
+      "fin": 8.5,
+      "duracion": 0.34,
+      "texto": "Un gusto.",
+      "confianza": 0.531
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.52,
+      "fin": 9.26,
+      "duracion": 0.74,
+      "texto": "Te hablo a Marina.",
+      "confianza": 0.529
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.28,
+      "fin": 12.53,
+      "duracion": 3.24,
+      "texto": "Me comunico a Desdemonizar para mejorar la promoción de la línea.",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.25,
+      "fin": 15.97,
+      "duracion": 2.72,
+      "texto": "Es la figura que estás a ver en la compañía de Claro, ¿es correcto?",
+      "confianza": 0.504
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.91,
+      "fin": 17.97,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.336
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.99,
+      "fin": 18.51,
+      "duracion": 0.52,
+      "texto": "Bien, buenísimo.",
+      "confianza": 0.651
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.57,
+      "fin": 23.6,
+      "duracion": 5.02,
+      "texto": "Mira, lo que tenemos hoy para brindarte es un stand de 14 GB que te incluye un WhatsApp.",
+      "confianza": 0.657
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.62,
+      "fin": 25.14,
+      "duracion": 1.52,
+      "texto": "Ya me vas libre para todas las compañías.",
+      "confianza": 0.57
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.82,
+      "fin": 28.94,
+      "duracion": 3.12,
+      "texto": "Y te queda en $7,790, ¿sí?",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.39,
+      "fin": 36.34,
+      "duracion": 6.95,
+      "texto": "¿Está buen ese plan porque tiene el 80% de descuento por 6 meses?",
+      "confianza": 0.653
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.36,
+      "fin": 39.69,
+      "duracion": 3.33,
+      "texto": "Sí, pero por ahora no me voy a cambiar.",
+      "confianza": 0.586
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.35,
+      "fin": 43.93,
+      "duracion": 3.59,
+      "texto": "Bien, por algún motivo en especial, ¿has tenido algún inconveniente en la compañía?",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.92,
+      "fin": 53.79,
+      "duracion": 7.87,
+      "texto": "No, no, pero ahora estoy pagando 4200 pesos, dice, por ahí me duele un mes.",
+      "confianza": 0.37
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.81,
+      "fin": 58.47,
+      "duracion": 4.67,
+      "texto": "Bien, bueno, dale listo entonces, voy a dejar registrado, ¿sí?",
+      "confianza": 0.42
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.49,
+      "fin": 58.99,
+      "duracion": 0.5,
+      "texto": "Bueno, bárbaro.",
+      "confianza": 0.184
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.45,
+      "fin": 61.31,
+      "duracion": 1.86,
+      "texto": "Muchas gracias.",
+      "confianza": 0.508
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.33,
+      "fin": 62.02,
+      "duracion": 0.69,
+      "texto": "Hasta luego.",
+      "confianza": 0.446
+    }
+  ]
+}

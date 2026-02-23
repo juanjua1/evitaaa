@@ -1,0 +1,259 @@
+{
+  "archivo": "amza76_1_260213114657476_ACD_55529.wav",
+  "duracion_segundos": 58.78,
+  "num_segmentos": 15,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 47.79,
+    "Hablante B": 2.32
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 2.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 5.8,
+      "texto": "Buen día, ¿hablo con Emiliano?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.8,
+      "fin": 6.1,
+      "texto": "¿Quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.1,
+      "fin": 9.5,
+      "texto": "Soy Rocío, llamo para brindarte un beneficio en la línea de internet en casa."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.5,
+      "fin": 10.1,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 11.2,
+      "fin": 12.8,
+      "texto": "¿De qué ofrecen hablar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.9,
+      "fin": 16.1,
+      "texto": "Te cuento sobre la portabilidad numérica e fibra óptica de Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.4,
+      "fin": 21.0,
+      "texto": "Les pedí 50.000 veces que no me llamaran y siguen haciéndolo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.4,
+      "fin": 23.2,
+      "texto": "¿Por qué tengo que hablar para que no me llamen más?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.5,
+      "fin": 25.3,
+      "texto": "Lamento mucho el tema de los llamados."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.3,
+      "fin": 27.6,
+      "texto": "Sinceramente, es la primera vez que me contacto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.2,
+      "fin": 33.1,
+      "texto": "Quisiera saber... Todos me dicen lo mismo, pero me siguen llamando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.9,
+      "fin": 35.1,
+      "texto": "Y nadie lo deja asentado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.3,
+      "fin": 52.6,
+      "texto": "Todos me dicen lo mismo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.5,
+      "fin": 58.8,
+      "texto": "¿Qué pasa?"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, ¿hablo con Emiliano? ¿Quién habla? Soy Rocío, llamo para brindarte un beneficio en la línea de internet en casa. ¿Cómo estás? ¿De qué ofrecen hablar? Te cuento sobre la portabilidad numérica e fibra óptica de Movistar. Les pedí 50.000 veces que no me llamaran y siguen haciéndolo. ¿Por qué tengo que hablar para que no me llamen más? Lamento mucho el tema de los llamados. Sinceramente, es la primera vez que me contacto. Quisiera saber... Todos me dicen lo mismo, pero me siguen llamando. Y nadie lo deja asentado. Todos me dicen lo mismo. ¿Qué pasa?",
+  "calidad": {
+    "confianza_promedio": 0.479,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T10:57:44.245553",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "fibra óptica"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": true,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se mejoró la claridad general del texto."
+    },
+    "fecha_mejora": "2026-02-20T11:10:54.351710",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 2.41,
+      "duracion": 2.38,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.256
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.43,
+      "fin": 5.78,
+      "duracion": 3.34,
+      "texto": "Buen día, ¿hablo con Emiliano?",
+      "confianza": 0.394
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.8,
+      "fin": 6.06,
+      "duracion": 0.26,
+      "texto": "¿Quién habla?",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.08,
+      "fin": 9.46,
+      "duracion": 3.39,
+      "texto": "Soy Rocío, llamada para brindar tu beneficio en la línea internet en casa.",
+      "confianza": 0.666
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.48,
+      "fin": 10.09,
+      "duracion": 0.6,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.643
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.15,
+      "fin": 12.85,
+      "duracion": 1.7,
+      "texto": "¿De qué ofrecen hablar?",
+      "confianza": 0.562
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.87,
+      "fin": 16.09,
+      "duracion": 3.22,
+      "texto": "Me contáis todo el portabilidad numérica e insfira óptica, Movistar.",
+      "confianza": 0.564
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.45,
+      "fin": 21.02,
+      "duracion": 3.57,
+      "texto": "Les pedí 50.000 veces que no me hubieran llamado y siguen haciéndolo.",
+      "confianza": 0.502
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.42,
+      "fin": 23.2,
+      "duracion": 1.78,
+      "texto": "¿Por qué tengo que hablar para que no me llamen más?",
+      "confianza": 0.616
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.52,
+      "fin": 25.28,
+      "duracion": 1.76,
+      "texto": "Lamento mucho el tema de los llamados.",
+      "confianza": 0.087
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.3,
+      "fin": 27.61,
+      "duracion": 2.3,
+      "texto": "Sinceramente, es la primera vez que me contacto.",
+      "confianza": 0.636
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.21,
+      "fin": 33.11,
+      "duracion": 4.91,
+      "texto": "Quisiera saber... Todos me dicen lo mismo, pero me siguen llamando.",
+      "confianza": 0.741
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.88,
+      "fin": 35.14,
+      "duracion": 1.26,
+      "texto": "Y nadie lo deja sentado.",
+      "confianza": 0.707
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.28,
+      "fin": 52.6,
+      "duracion": 17.32,
+      "texto": "Todos me dicen lo mismo.",
+      "confianza": 0.611
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 56.46,
+      "fin": 58.78,
+      "duracion": 2.32,
+      "texto": "¿Qué pasa?",
+      "confianza": 0.181
+    }
+  ]
+}

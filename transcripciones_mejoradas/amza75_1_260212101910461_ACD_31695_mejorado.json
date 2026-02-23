@@ -1,0 +1,315 @@
+{
+  "archivo": "amza75_1_260212101910461_ACD_31695.wav",
+  "duracion_segundos": 66.81,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 36.66,
+    "Hablante A": 18.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 3.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.4,
+      "fin": 3.9,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.9,
+      "fin": 5.0,
+      "texto": "¿Me comunico con Lelia?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.2,
+      "fin": 6.7,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.7,
+      "fin": 7.2,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 8.8,
+      "texto": "Mi nombre es Macarena."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.8,
+      "fin": 16.0,
+      "texto": "Me comunico con vos el día de hoy desde el área de promociones de Movistar, porque estamos brindando nuestros planes con el 80% de descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.0,
+      "fin": 20.0,
+      "texto": "¿Vos actualmente estás en Claro, Lelia?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.0,
+      "fin": 20.2,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.2,
+      "fin": 20.7,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.7,
+      "fin": 24.3,
+      "texto": "¿Y tenés que hablar a vos o vas a recargar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.3,
+      "fin": 24.6,
+      "texto": "No, a vos no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.4,
+      "fin": 38.4,
+      "texto": "Bueno, mira, nosotros lo que estamos brindando es justamente nuestros planes de 4 gigas de base, más 10 de regalo, por $7,790 pesos, con WhatsApp gratis, vas a tener llamadas libres a cualquier compañía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.4,
+      "fin": 40.7,
+      "texto": "¿Tú actualmente cuánto lo llegas a utilizar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.0,
+      "fin": 48.5,
+      "texto": "Mira, por el momento no, no, no, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.5,
+      "fin": 50.0,
+      "texto": "Después y en lo posterior le solicito."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.3,
+      "fin": 53.2,
+      "texto": "Bueno, Macarena, muchas gracias, que tengas lindo día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.9,
+      "fin": 55.0,
+      "texto": "Bueno, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.0,
+      "fin": 66.8,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. ¿Me comunico con Lelia? Sí. ¿Qué tal? Mi nombre es Macarena. Me comunico con vos el día de hoy desde el área de promociones de Movistar, porque estamos brindando nuestros planes con el 80% de descuento. ¿Vos actualmente estás en Claro, Lelia? Sí, sí. Perfecto. ¿Y tenés que hablar a vos o vas a recargar? No, a vos no. Bueno, mira, nosotros lo que estamos brindando es justamente nuestros planes de 4 gigas de base, más 10 de regalo, por $7,790 pesos, con WhatsApp gratis, vas a tener llamadas libres a cualquier compañía. ¿Tú actualmente cuánto lo llegas a utilizar? Mira, por el momento no, no, no, gracias. Después y en lo posterior le solicito. Bueno, Macarena, muchas gracias, que tengas lindo día. Bueno, gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.472,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T10:41:29.789710",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 4GB + 10GB de regalo"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (gigas, nombres propios), mejora de la fluidez y claridad del texto."
+    },
+    "fecha_mejora": "2026-02-20T11:06:46.264864",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.85,
+      "fin": 3.38,
+      "duracion": 1.52,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.391
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.4,
+      "fin": 3.86,
+      "duracion": 0.46,
+      "texto": "Buen día.",
+      "confianza": 0.176
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.88,
+      "fin": 5.02,
+      "duracion": 1.14,
+      "texto": "¿Me comunico con Lelia?",
+      "confianza": 0.609
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.18,
+      "fin": 6.7,
+      "duracion": 0.52,
+      "texto": "Sí.",
+      "confianza": 0.525
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.72,
+      "fin": 7.2,
+      "duracion": 0.48,
+      "texto": "¿Qué tal?",
+      "confianza": 0.266
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.22,
+      "fin": 8.78,
+      "duracion": 1.56,
+      "texto": "Mi nombre es Macarena.",
+      "confianza": 0.729
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.84,
+      "fin": 15.97,
+      "duracion": 7.13,
+      "texto": "Me comunicaré con vos el día de hoy de la área de promociones de Montar, porque estamos vinando nuestros planes con el 80% de descuento.",
+      "confianza": 0.752
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.99,
+      "fin": 20.02,
+      "duracion": 4.03,
+      "texto": "¿Vos actualmente estás en claro, Lelia?",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.04,
+      "fin": 20.18,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.048
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.2,
+      "fin": 20.66,
+      "duracion": 0.46,
+      "texto": "Perfecto.",
+      "confianza": 0.758
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.68,
+      "fin": 24.32,
+      "duracion": 3.65,
+      "texto": "¿Y tenés que hablar a vos o vas a recargar?",
+      "confianza": 0.399
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.34,
+      "fin": 24.6,
+      "duracion": 0.26,
+      "texto": "No, a vos no.",
+      "confianza": 0.091
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.39,
+      "fin": 38.39,
+      "duracion": 12.99,
+      "texto": "Bueno, mira, nosotros lo que estamos brindando es justamente nuestros planes de 4 gigas de base, más 10 de regalo, por $7,790 pesos, con WhatsApp gratis, vas a tener más libres a cualquier compañía.",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.41,
+      "fin": 40.73,
+      "duracion": 2.32,
+      "texto": "¿Tú actualmente cuánto lo llegas a utilizar?",
+      "confianza": 0.602
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.95,
+      "fin": 48.46,
+      "duracion": 2.5,
+      "texto": "Mira, por el momento no, no, no, gracias.",
+      "confianza": 0.096
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.48,
+      "fin": 49.96,
+      "duracion": 1.48,
+      "texto": "Después y en lo posterior le solicito.",
+      "confianza": 0.31
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 51.34,
+      "fin": 53.24,
+      "duracion": 1.9,
+      "texto": "Bueno, Aurelia, muchas gracias, que tengas lindo día.",
+      "confianza": 0.617
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.9,
+      "fin": 55.02,
+      "duracion": 1.13,
+      "texto": "Bueno, gracias.",
+      "confianza": 0.694
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.04,
+      "fin": 66.81,
+      "duracion": 11.77,
+      "texto": "Hasta luego.",
+      "confianza": 0.645
+    }
+  ]
+}

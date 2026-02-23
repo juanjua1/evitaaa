@@ -1,0 +1,522 @@
+{
+  "archivo": "amza76_1_260212161024157_MIT_01989.wav",
+  "duracion_segundos": 251.56,
+  "num_segmentos": 51,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 135.2,
+    "Hablante B": 81.22
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.9,
+      "fin": 11.2,
+      "texto": "Hola, ¿te escuchás ahí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.1,
+      "fin": 13.7,
+      "texto": "Sí, Cari, se cortó, no hay problema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.3,
+      "fin": 18.0,
+      "texto": "No hay problema, no sé en qué parte te quedaste."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.0,
+      "fin": 20.3,
+      "texto": "No, en que te tenía que... Tengo que pasar el código."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.0,
+      "fin": 27.2,
+      "texto": "Claro, sí, con ese código yo hago lo que es la solicitud de la portabilidad, así la analiza el sector administrativo,"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.5,
+      "fin": 34.7,
+      "texto": "y te avisamos cuando está el chip en la sucursal para que lo retires, y te avisamos cuándo vas a empezar a usarlo, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.5,
+      "fin": 36.2,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.4,
+      "fin": 37.4,
+      "texto": "Ahí te paso entonces."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.0,
+      "fin": 45.6,
+      "texto": "Sería 11-46-16-38-27."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.7,
+      "fin": 53.8,
+      "texto": "¿Quién me acaba de edificar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.8,
+      "fin": 54.6,
+      "texto": "Ay, no, pará."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 55.0,
+      "fin": 60.1,
+      "texto": "Me dice, recibió una llamada acá con el código, pero no es..."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿te escuchás ahí? Sí, Cari, se cortó, no hay problema. No hay problema, no sé en qué parte te quedaste. No, en que te tenía que... Tengo que pasar el código. Claro, sí, con ese código yo hago lo que es la solicitud de la portabilidad, así la analiza el sector administrativo, y te avisamos cuando está el chip en la sucursal para que lo retires, y te avisamos cuándo vas a empezar a usarlo, ¿sí? Bien, perfecto. Ahí te paso entonces. Sería 11-46-16-38-27. ¿Quién me acaba de edificar? Ay, no, pará. Me dice, recibió una llamada acá con el código, pero no es...",
+  "calidad": {
+    "confianza_promedio": 0.491,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 15.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T10:56:25.517569",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "reparación parcial por truncamiento"
+    },
+    "fecha_mejora": "2026-02-20T11:10:53.701679",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.88,
+      "fin": 11.25,
+      "duracion": 10.38,
+      "texto": "Hola, ¿te escuchás ahí?",
+      "confianza": 0.47
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.05,
+      "fin": 13.71,
+      "duracion": 1.66,
+      "texto": "Sí, Cari, se cortó, no hay problema.",
+      "confianza": 0.482
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.32,
+      "fin": 17.96,
+      "duracion": 3.65,
+      "texto": "No hay problema, no sé en qué parte te quedaste.",
+      "confianza": 0.408
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.98,
+      "fin": 20.27,
+      "duracion": 2.28,
+      "texto": "No, en que te tenía que... Tengo que pasar el código.",
+      "confianza": 0.669
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.03,
+      "fin": 27.24,
+      "duracion": 6.21,
+      "texto": "Claro, sí, con ese código yo hago lo que es la solicitud de la portabilidad, así la analiza el sector administrativo,",
+      "confianza": 0.536
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.5,
+      "fin": 34.73,
+      "duracion": 7.23,
+      "texto": "y te avisamos cuando está el chip en la sucursal para que lo retire, y te avisamos cuándo vas a empezar a usarlo, ¿sí?",
+      "confianza": 0.591
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.45,
+      "fin": 36.24,
+      "duracion": 0.78,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.805
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.38,
+      "fin": 37.36,
+      "duracion": 0.98,
+      "texto": "Ahí te paso entonces.",
+      "confianza": 0.584
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.96,
+      "fin": 45.65,
+      "duracion": 7.69,
+      "texto": "Sería 11-46-16-38-27.",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.67,
+      "fin": 53.78,
+      "duracion": 8.11,
+      "texto": "¿Quién me acaba de edificar?",
+      "confianza": 0.507
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.8,
+      "fin": 54.64,
+      "duracion": 0.84,
+      "texto": "Ay, no, pará.",
+      "confianza": 0.537
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.04,
+      "fin": 60.15,
+      "duracion": 5.11,
+      "texto": "Me dice, recibió una llamada acá con el código, pero no es...",
+      "confianza": 0.463
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.25,
+      "fin": 82.01,
+      "duracion": 21.76,
+      "texto": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,",
+      "confianza": 0.311
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 82.14,
+      "fin": 85.87,
+      "duracion": 3.73,
+      "texto": "necesito el frente y dorso de la titular, de la línea.",
+      "confianza": 0.64
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 87.45,
+      "fin": 87.71,
+      "duracion": 0.26,
+      "texto": "Bien.",
+      "confianza": 0.93
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 89.26,
+      "fin": 92.14,
+      "duracion": 2.88,
+      "texto": "Esto también lo tienes que mandar por WhatsApp, ¿no?",
+      "confianza": 0.392
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 92.16,
+      "fin": 106.38,
+      "duracion": 14.22,
+      "texto": "Sí, si hay a mi WhatsApp, yo te pido que ya directamente me asiente porque ese es un número que directamente con el que yo hablo con los clientes y obviamente que cualquier cosa que necesites, estando también ya en la compañera, me mandas también un mensaje y yo te puedo ayudar, ¿sí?",
+      "confianza": 0.499
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 107.4,
+      "fin": 108.34,
+      "duracion": 0.94,
+      "texto": "Vale, genial.",
+      "confianza": 0.682
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 108.48,
+      "fin": 110.55,
+      "duracion": 2.06,
+      "texto": "Entonces, esto lo tengo que copiar.",
+      "confianza": 0.678
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 113.35,
+      "fin": 119.44,
+      "duracion": 6.09,
+      "texto": "Y ahí te mando el DNI, aguanto un minutito.",
+      "confianza": 0.698
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 121.2,
+      "fin": 128.82,
+      "duracion": 7.62,
+      "texto": "Sí, sí, no hay problema, te espero.",
+      "confianza": 0.191
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 128.84,
+      "fin": 129.4,
+      "duracion": 0.56,
+      "texto": "A ver.",
+      "confianza": 0.418
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 129.42,
+      "fin": 135.15,
+      "duracion": 5.73,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.159
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 135.17,
+      "fin": 135.73,
+      "duracion": 0.56,
+      "texto": "Ahí me llegó el código.",
+      "confianza": 0.118
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 135.75,
+      "fin": 136.13,
+      "duracion": 0.38,
+      "texto": "Y ahí falta el DNI.",
+      "confianza": 0.056
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 144.95,
+      "fin": 173.0,
+      "duracion": 28.05,
+      "texto": "Tengo una foto de acá.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 175.43,
+      "fin": 177.23,
+      "duracion": 1.8,
+      "texto": "Ahí estaría.",
+      "confianza": 0.258
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 177.25,
+      "fin": 178.94,
+      "duracion": 1.68,
+      "texto": "Bueno, perfecto.",
+      "confianza": 0.627
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 178.96,
+      "fin": 179.82,
+      "duracion": 0.86,
+      "texto": "Sí, me llegó bien.",
+      "confianza": 0.536
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 180.4,
+      "fin": 184.73,
+      "duracion": 4.33,
+      "texto": "Entonces, bueno, gracias que está media cortada la foto.",
+      "confianza": 0.596
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 185.21,
+      "fin": 187.09,
+      "duracion": 1.88,
+      "texto": "El de mí no tiene que estar cortado.",
+      "confianza": 0.704
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 187.13,
+      "fin": 192.26,
+      "duracion": 5.13,
+      "texto": "Si lo puedes apoyar en la mesa, me sacas en la mesa, me sirve.",
+      "confianza": 0.665
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 193.44,
+      "fin": 194.24,
+      "duracion": 0.8,
+      "texto": "Dale.",
+      "confianza": 0.917
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 194.26,
+      "fin": 195.56,
+      "duracion": 1.3,
+      "texto": "A ver, ahí lo...",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 197.27,
+      "fin": 198.99,
+      "duracion": 1.72,
+      "texto": "Bueno, Cari, igual no te preocupes.",
+      "confianza": 0.366
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 199.07,
+      "fin": 199.91,
+      "duracion": 0.84,
+      "texto": "Ahí mandámelos.",
+      "confianza": 0.395
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 199.93,
+      "fin": 206.76,
+      "duracion": 6.83,
+      "texto": "Yo ahora, a corto de la jornada, voy subiendo la portabilidad y, apenas me pases bien el documento, lo agrego al legajo de la empresa, ¿sí?",
+      "confianza": 0.546
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 207.54,
+      "fin": 209.46,
+      "duracion": 1.92,
+      "texto": "Vale, genial, entonces.",
+      "confianza": 0.661
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 209.48,
+      "fin": 211.87,
+      "duracion": 2.38,
+      "texto": "Bueno, Cari, nosotros seguimos en contacto por WhatsApp.",
+      "confianza": 0.566
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 212.25,
+      "fin": 224.29,
+      "duracion": 12.04,
+      "texto": "Acordate que cualquier cosa que necesites, te contactás solo conmigo porque, bueno, también me estará a cargo de mi nombre en trámite, así que, si llega a haber alguna, algún inconveniente, vamos a estar nosotras contestándonos, ¿sí?",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 225.21,
+      "fin": 226.19,
+      "duracion": 0.98,
+      "texto": "Bueno, dale.",
+      "confianza": 0.532
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 226.55,
+      "fin": 228.03,
+      "duracion": 1.48,
+      "texto": "Ah, para decirme, este es el viejo.",
+      "confianza": 0.446
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 228.05,
+      "fin": 229.88,
+      "duracion": 1.82,
+      "texto": "Ya saco una foto del nuevo.",
+      "confianza": 0.581
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 230.48,
+      "fin": 239.91,
+      "duracion": 9.43,
+      "texto": "Porque la fecha de vencimiento está... Sí, si está vencido no lo puedo cargar.",
+      "confianza": 0.385
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 239.93,
+      "fin": 241.81,
+      "duracion": 1.88,
+      "texto": "Así que si le mando a hacer el nuevo, mucho mejor.",
+      "confianza": 0.167
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 241.83,
+      "fin": 242.09,
+      "duracion": 0.26,
+      "texto": "Vale, bueno.",
+      "confianza": 0.082
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 242.11,
+      "fin": 244.21,
+      "duracion": 2.1,
+      "texto": "Bueno, tenemos en contacto entonces.",
+      "confianza": 0.06
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 244.23,
+      "fin": 246.67,
+      "duracion": 2.44,
+      "texto": "Espero el DNI, con esto cargo la promo de las líneas, ¿sí?",
+      "confianza": 0.238
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 246.69,
+      "fin": 247.39,
+      "duracion": 0.7,
+      "texto": "Dale, listo.",
+      "confianza": 0.671
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 248.89,
+      "fin": 249.89,
+      "duracion": 1.0,
+      "texto": "Que tengas muy lindo día, gracias.",
+      "confianza": 0.2
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 250.5,
+      "fin": 251.56,
+      "duracion": 1.06,
+      "texto": "Hasta el 2 de febrero.",
+      "confianza": 0.476
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "archivo": "amza37_1_260220143121945_ACD_24991.wav",
+  "duracion_segundos": 64.46,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 49.75,
+    "Hablante A": 5.86
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.0,
+      "fin": 3.1,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.1,
+      "fin": 3.7,
+      "texto": "Hola, buenas tardes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.8,
+      "fin": 6.7,
+      "texto": "Hablo con Jorge."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.7,
+      "fin": 6.8,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.8,
+      "fin": 7.9,
+      "texto": "Mucho gusto, Jorge."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.9,
+      "fin": 8.7,
+      "texto": "Soy Gerardo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.7,
+      "fin": 16.4,
+      "texto": "Me estoy contactando de la línea de beneficios de Movistar para comentarte nuestras promociones del día de hoy."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.5,
+      "fin": 18.2,
+      "texto": "No, también, igual no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.3,
+      "fin": 27.3,
+      "texto": "Yo en realidad lo que estoy esperando es que me traigan un dispositivo, como ese, en la caja de TV."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.2,
+      "fin": 33.6,
+      "texto": "Ah, vos tenés fibra óptica con Movistar y pediste uno para la tele."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.6,
+      "fin": 40.0,
+      "texto": "Me dijeron cinco días, no sé, me agarró justo en feria o esto, pero hace varios días ya."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.7,
+      "fin": 42.2,
+      "texto": "Son días hábiles siempre."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.4,
+      "fin": 46.5,
+      "texto": "Vos siempre contaste como días hábiles."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.5,
+      "fin": 46.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.6,
+      "fin": 50.3,
+      "texto": "Y bueno, ahora después que venga voy a ver qué pasa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.3,
+      "fin": 51.3,
+      "texto": "Buenísima."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.0,
+      "fin": 53.2,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.0,
+      "fin": 59.7,
+      "texto": "Vale, es por eso hablarle, Jorge, que nos contactamos contigo luego de que ya tengas el dispositivo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.8,
+      "fin": 64.5,
+      "texto": "Vale."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas tardes. Hablo con Jorge. Sí. Mucho gusto, Jorge. Soy Gerardo. Me estoy contactando de la línea de beneficios de Movistar para comentarte nuestras promociones del día de hoy. No, también, igual no. Yo en realidad lo que estoy esperando es que me traigan un dispositivo, como ese, en la caja de TV. Ah, vos tenés fibra óptica con Movistar y pediste uno para la tele. Me dijeron cinco días, no sé, me agarró justo en feria o esto, pero hace varios días ya. Son días hábiles siempre. Vos siempre contaste como días hábiles. Sí. Y bueno, ahora después que venga voy a ver qué pasa. Buenísima. Sí. Vale, es por eso hablarle, Jorge, que nos contactamos contigo luego de que ya tengas el dispositivo. Vale.",
+  "calidad": {
+    "confianza_promedio": 0.548,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:42:48.220359",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:00:23.360592",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.04,
+      "fin": 3.08,
+      "duracion": 1.04,
+      "texto": "Hola.",
+      "confianza": 0.542
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.1,
+      "fin": 3.74,
+      "duracion": 0.64,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.486
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.78,
+      "fin": 6.68,
+      "duracion": 2.9,
+      "texto": "Hablo con Jorge.",
+      "confianza": 0.692
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.71,
+      "fin": 6.76,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.333
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.79,
+      "fin": 7.87,
+      "duracion": 1.08,
+      "texto": "Mucho gusto, Jorge.",
+      "confianza": 0.631
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.89,
+      "fin": 8.67,
+      "duracion": 0.78,
+      "texto": "Soy Gerardo.",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.69,
+      "fin": 16.44,
+      "duracion": 7.75,
+      "texto": "Me estoy contactando de la línea de beneficios de Movistar para comentarte nuestras promociones del día de hoy.",
+      "confianza": 0.705
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.46,
+      "fin": 18.24,
+      "duracion": 1.78,
+      "texto": "No, también, igual no.",
+      "confianza": 0.303
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.26,
+      "fin": 27.27,
+      "duracion": 9.01,
+      "texto": "Yo en realidad lo que estoy esperando es que me traigan un dispositivo, como ese, en la caja de TV.",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.18,
+      "fin": 33.58,
+      "duracion": 5.41,
+      "texto": "Ah, vos tenés fibra óptica con morristar y pediste un para la tele.",
+      "confianza": 0.526
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.6,
+      "fin": 39.95,
+      "duracion": 6.35,
+      "texto": "Me dijeron cinco días, no sé, me agarró justo en feria o esto, pero hace varios días ya.",
+      "confianza": 0.461
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.71,
+      "fin": 42.17,
+      "duracion": 1.46,
+      "texto": "Son días hábiles siempre.",
+      "confianza": 0.724
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.37,
+      "fin": 46.46,
+      "duracion": 4.09,
+      "texto": "Vos siempre contaste como días hábiles.",
+      "confianza": 0.466
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.48,
+      "fin": 46.56,
+      "duracion": 0.08,
+      "texto": "Sí.",
+      "confianza": 0.253
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.58,
+      "fin": 50.26,
+      "duracion": 3.69,
+      "texto": "Y bueno, ahora después que venga voy a ver qué pasa.",
+      "confianza": 0.47
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.28,
+      "fin": 51.28,
+      "duracion": 1.0,
+      "texto": "Buenísima.",
+      "confianza": 0.797
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.99,
+      "fin": 53.21,
+      "duracion": 0.22,
+      "texto": "Sí.",
+      "confianza": 0.879
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.03,
+      "fin": 59.67,
+      "duracion": 5.64,
+      "texto": "Vale, es por eso hablarle, Jorge, que nos contactamos contigo luego de que ya tengas el dispositivo.",
+      "confianza": 0.608
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.84,
+      "fin": 64.46,
+      "duracion": 2.63,
+      "texto": "Vale.",
+      "confianza": 0.477
+    }
+  ]
+}

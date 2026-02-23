@@ -1,0 +1,341 @@
+{
+  "archivo": "amza10_1_260219121822862_ACD_18659.wav",
+  "duracion_segundos": 68.92,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 35.62,
+    "Hablante B": 27.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 6.8,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.9,
+      "fin": 7.2,
+      "texto": "Hablo con Miguel."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 7.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 8.0,
+      "texto": "Miguel, un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.0,
+      "fin": 8.2,
+      "texto": "¿Cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.3,
+      "fin": 12.4,
+      "texto": "¿Todo bien?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.4,
+      "fin": 12.7,
+      "texto": "Bien, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.7,
+      "fin": 12.9,
+      "texto": "Adiós, bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.0,
+      "fin": 13.2,
+      "texto": "Me alegro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.2,
+      "fin": 19.4,
+      "texto": "Miguel, le llamo para brindarle una bonificación que tenemos al día de hoy, con un 80% de descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.4,
+      "fin": 21.4,
+      "texto": "Obviamente, me gustaría que la pueda escuchar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.7,
+      "fin": 22.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.7,
+      "fin": 28.2,
+      "texto": "No sé si recuerda, Miguel, cuánto es lo que está gastando actualmente en su línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.9,
+      "fin": 33.4,
+      "texto": "No, porque tengo otras cosas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.5,
+      "fin": 43.6,
+      "texto": "Internet, cable, tengo todo un paquete."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.7,
+      "fin": 55.2,
+      "texto": "Ah, un paquete sería la fibra óptica."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.3,
+      "fin": 58.1,
+      "texto": "¿Alguna vez tuvo fibra Movistar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.5,
+      "fin": 62.5,
+      "texto": "Sí, no, le agradezco."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 62.8,
+      "fin": 65.2,
+      "texto": "Tuve muy mala experiencia con Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.2,
+      "fin": 66.5,
+      "texto": "No quiero saber nada de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 66.6,
+      "fin": 68.9,
+      "texto": "Le agradezco, gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Miguel. Sí. Miguel, un gusto. ¿Cómo le va? ¿Todo bien? Bien, gracias. Adiós, bien. Me alegro. Miguel, le llamo para brindarle una bonificación que tenemos al día de hoy, con un 80% de descuento. Obviamente, me gustaría que la pueda escuchar. Sí. No sé si recuerda, Miguel, cuánto es lo que está gastando actualmente en su línea. No, porque tengo otras cosas. Internet, cable, tengo todo un paquete. Ah, un paquete sería la fibra óptica. ¿Alguna vez tuvo fibra Movistar? Sí, no, le agradezco. Tuve muy mala experiencia con Movistar. No quiero saber nada de Movistar. Le agradezco, gracias.",
+  "calidad": {
+    "confianza_promedio": 0.374,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T13:28:16.624057",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de palabras mal transcritas, como 'fibra' y nombres propios. Se mejoró la fluidez de la conversación y se identificaron los roles."
+    },
+    "fecha_mejora": "2026-02-22T22:17:33.198616",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 6.84,
+      "duracion": 6.81,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.061
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.86,
+      "fin": 7.2,
+      "duracion": 0.34,
+      "texto": "Hablo con Miguel.",
+      "confianza": 0.025
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.22,
+      "fin": 7.28,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.09
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.3,
+      "fin": 7.98,
+      "duracion": 0.68,
+      "texto": "Miguel, un gusto.",
+      "confianza": 0.092
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.0,
+      "fin": 8.24,
+      "duracion": 0.24,
+      "texto": "¿Cómo le va?",
+      "confianza": 0.018
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.26,
+      "fin": 12.39,
+      "duracion": 4.13,
+      "texto": "¿Todos bien?",
+      "confianza": 0.508
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.41,
+      "fin": 12.69,
+      "duracion": 0.28,
+      "texto": "Bien, gracias.",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.71,
+      "fin": 12.95,
+      "duracion": 0.24,
+      "texto": "Adiós, bien.",
+      "confianza": 0.001
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.97,
+      "fin": 13.17,
+      "duracion": 0.2,
+      "texto": "Me alegro.",
+      "confianza": 0.011
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.19,
+      "fin": 19.42,
+      "duracion": 6.23,
+      "texto": "Miguel, dame así para brindarte una bonificación que nosotros tenemos al día de hoy con un 80% de cuenta.",
+      "confianza": 0.658
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.44,
+      "fin": 21.38,
+      "duracion": 1.94,
+      "texto": "Obviamente, me gustaría que la puedas escuchar.",
+      "confianza": 0.678
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.73,
+      "fin": 22.65,
+      "duracion": 0.92,
+      "texto": "Sí.",
+      "confianza": 0.725
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.67,
+      "fin": 28.21,
+      "duracion": 5.55,
+      "texto": "No sé si recuerdas, Miguel, cuánto es lo que no estás hablando actualmente en tu línea.",
+      "confianza": 0.459
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.91,
+      "fin": 33.44,
+      "duracion": 2.52,
+      "texto": "No, porque tengo otras cosas.",
+      "confianza": 0.355
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.45,
+      "fin": 43.65,
+      "duracion": 10.19,
+      "texto": "Internet, cable, tengo todo un paquete.",
+      "confianza": 0.551
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.67,
+      "fin": 55.22,
+      "duracion": 11.55,
+      "texto": "Ah, un paquete sería la fibra óptica.",
+      "confianza": 0.734
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.28,
+      "fin": 58.08,
+      "duracion": 2.8,
+      "texto": "¿Alguna vez tuviste lo que de fibra movistar?",
+      "confianza": 0.56
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.49,
+      "fin": 62.51,
+      "duracion": 2.01,
+      "texto": "Sí, no, te agradezco.",
+      "confianza": 0.748
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.81,
+      "fin": 65.18,
+      "duracion": 2.37,
+      "texto": "Tuve muy mala experiencia por movistar.",
+      "confianza": 0.731
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 65.2,
+      "fin": 66.5,
+      "duracion": 1.31,
+      "texto": "No quiero saber nada por movistar.",
+      "confianza": 0.323
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 66.61,
+      "fin": 68.92,
+      "duracion": 2.31,
+      "texto": "Te agradezco, gracias.",
+      "confianza": 0.515
+    }
+  ]
+}

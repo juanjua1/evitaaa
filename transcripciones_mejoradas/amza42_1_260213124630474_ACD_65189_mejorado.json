@@ -1,0 +1,327 @@
+{
+  "archivo": "amza42_1_260213124630474_ACD_65189.wav",
+  "duracion_segundos": 62.44,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 50.18,
+    "Hablante B": 3.82
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.3,
+      "fin": 2.7,
+      "texto": "¿Sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.8,
+      "fin": 3.3,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 6.1,
+      "texto": "¿Hablo con Orlando?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.1,
+      "fin": 6.4,
+      "texto": "Sí, ¿quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.5,
+      "fin": 7.6,
+      "texto": "Como habló Orlando, un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.6,
+      "fin": 8.6,
+      "texto": "Mi nombre es Cynthia."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.6,
+      "fin": 12.7,
+      "texto": "Me estoy comunicando con usted porque tengo un beneficio para la línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.7,
+      "fin": 15.1,
+      "texto": "¿Actualmente tiene línea en Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.6,
+      "fin": 17.7,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.7,
+      "fin": 18.4,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.4,
+      "fin": 21.5,
+      "texto": "¿Actualmente cuenta con un plan mensual o tiene prepago?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.5,
+      "fin": 23.8,
+      "texto": "No, mensual."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.8,
+      "fin": 29.1,
+      "texto": "Bien, vale, más o menos, ¿cuánto paga actualmente para poder ofrecerle uno mejor o similar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.1,
+      "fin": 37.9,
+      "texto": "No, pero usted solo es de Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.9,
+      "fin": 39.6,
+      "texto": "De Movistar me estoy comunicando, porque ayer hubo un 80% de descuento en los planes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 39.6,
+      "fin": 49.3,
+      "texto": "No, ya hablé un rato con uno y le dije que en Claro y Movistar no me interesa nada, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.3,
+      "fin": 50.4,
+      "texto": "Bien, ¿podría saber el motivo para dejarlo asentado?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.4,
+      "fin": 58.8,
+      "texto": "Porque ya, porque... Ya le dije a todos, que ya hablé con todos, me llaman todos los días, siete veces por día, y ya le dije que no me llamen más."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.1,
+      "fin": 62.0,
+      "texto": "No necesita."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 62.0,
+      "fin": 62.4,
+      "texto": "Chao."
+    }
+  ],
+  "transcripcion_completa": "¿Sí? Hola, buen día. ¿Hablo con Orlando? Sí, ¿quién habla? Como habló Orlando, un gusto. Mi nombre es Cynthia. Me estoy comunicando con usted porque tengo un beneficio para la línea. ¿Actualmente tiene línea en Claro? Sí. Bien, perfecto. ¿Actualmente cuenta con un plan mensual o tiene prepago? No, mensual. Bien, vale, más o menos, ¿cuánto paga actualmente para poder ofrecerle uno mejor o similar? No, pero usted solo es de Claro. De Movistar me estoy comunicando, porque ayer hubo un 80% de descuento en los planes. No, ya hablé un rato con uno y le dije que en Claro y Movistar no me interesa nada, gracias. Bien, ¿podría saber el motivo para dejarlo asentado? Porque ya, porque... Ya le dije a todos, que ya hablé con todos, me llaman todos los días, siete veces por día, y ya le dije que no me llamen más. No necesita. Chao.",
+  "calidad": {
+    "confianza_promedio": 0.398,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:59:01.816664",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se mejoró la claridad de las frases."
+    },
+    "fecha_mejora": "2026-02-20T10:46:32.139222",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.28,
+      "fin": 2.74,
+      "duracion": 1.46,
+      "texto": "¿Sí?",
+      "confianza": 0.226
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.76,
+      "fin": 3.3,
+      "duracion": 0.54,
+      "texto": "Hola, buen día.",
+      "confianza": 0.393
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.32,
+      "fin": 6.07,
+      "duracion": 2.74,
+      "texto": "¿Habló con Orlando?",
+      "confianza": 0.505
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.08,
+      "fin": 6.43,
+      "duracion": 0.34,
+      "texto": "Sí, ¿quién habla?",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.45,
+      "fin": 7.61,
+      "duracion": 1.16,
+      "texto": "Como habló Orlando, un gusto.",
+      "confianza": 0.571
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.63,
+      "fin": 8.55,
+      "duracion": 0.92,
+      "texto": "Mi nombre es Cynthia.",
+      "confianza": 0.396
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.57,
+      "fin": 12.67,
+      "duracion": 4.1,
+      "texto": "Me estoy comunicando con usted porque el día le tengo para brindarle un beneficio para la línea.",
+      "confianza": 0.696
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.69,
+      "fin": 15.1,
+      "duracion": 2.4,
+      "texto": "¿Actualmente decidió este parte en ese claro?",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.6,
+      "fin": 17.66,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.18
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.68,
+      "fin": 18.4,
+      "duracion": 0.72,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.634
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.42,
+      "fin": 21.46,
+      "duracion": 3.04,
+      "texto": "¿Actualmente se cuenta con lo que es un plan mensual o tiene prepago?",
+      "confianza": 0.641
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.54,
+      "fin": 23.78,
+      "duracion": 0.24,
+      "texto": "No, mensual.",
+      "confianza": 0.02
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.8,
+      "fin": 29.11,
+      "duracion": 5.31,
+      "texto": "Bien, vale, más o menos, ¿cuánto es su plan actualmente para poder brindarle alguno mejor o similar al tuyo?",
+      "confianza": 0.531
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.05,
+      "fin": 37.9,
+      "duracion": 7.85,
+      "texto": "No, pero vos solo es claro.",
+      "confianza": 0.062
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.92,
+      "fin": 39.61,
+      "duracion": 1.68,
+      "texto": "De movistarme estoy comunicando, porque el día de ayer fue el 80% en los planes.",
+      "confianza": 0.078
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 39.63,
+      "fin": 49.32,
+      "duracion": 9.7,
+      "texto": "No, ya hablé un rato con uno y le dije que en declaros de movistar no me interesa nada, gracias.",
+      "confianza": 0.488
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.34,
+      "fin": 50.42,
+      "duracion": 1.08,
+      "texto": "Bien, podría saber el motivo si lo dejo asentado.",
+      "confianza": 0.075
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 50.44,
+      "fin": 58.78,
+      "duracion": 8.33,
+      "texto": "Porque ya, porque... Ya le dije a todos, que ya hablé con todos, me llaman todos los días, siete veces por día a ustedes, y ya le dije que no me llaman más.",
+      "confianza": 0.496
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.09,
+      "fin": 62.03,
+      "duracion": 1.94,
+      "texto": "No necesitas.",
+      "confianza": 0.756
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.05,
+      "fin": 62.44,
+      "duracion": 0.39,
+      "texto": "Chao.",
+      "confianza": 0.623
+    }
+  ]
+}

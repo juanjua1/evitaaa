@@ -1,0 +1,313 @@
+{
+  "archivo": "amza14_1_260219142029041_ACD_60651.wav",
+  "duracion_segundos": 65.64,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 24.28,
+    "Hablante B": 28.33
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.0,
+      "fin": 4.2,
+      "texto": "Hola, buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.2,
+      "fin": 4.7,
+      "texto": "¿Cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.7,
+      "fin": 9.0,
+      "texto": "Un gusto, mi nombre es Bruno, me estaba comunicando desde el área de recuperar clientes Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.3,
+      "fin": 12.3,
+      "texto": "Tenemos una oferta disponible para su línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.6,
+      "fin": 19.3,
+      "texto": "Actualmente tiene..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.3,
+      "fin": 22.7,
+      "texto": "No, por ahora no, porque tengo eso con prepago, tengo con tarjeta."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.7,
+      "fin": 23.6,
+      "texto": "¿Hacer recargas?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.5,
+      "fin": 25.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.6,
+      "fin": 26.4,
+      "texto": "¿Y cuánto se gasta?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.4,
+      "fin": 28.8,
+      "texto": "Porque nos andan bien, viste, y..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.2,
+      "fin": 35.7,
+      "texto": "Y, por lo menos, con el recargo, si no, me están en cuenta obligado, que estoy en una pagación sin."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.7,
+      "fin": 38.8,
+      "texto": "Claro, bien, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.9,
+      "fin": 42.1,
+      "texto": "¿Y si no estás gastando mucho haciendo recargas?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.6,
+      "fin": 48.7,
+      "texto": "No, pues el recargo, cuando tengo, no es tanto, tampoco, ¿viste?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.7,
+      "fin": 52.1,
+      "texto": "Moviendo, ya te digo, no..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.1,
+      "fin": 53.1,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.1,
+      "fin": 56.0,
+      "texto": "Bien, no hay problema, entonces, lo dejó sentado en su tema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.3,
+      "fin": 58.8,
+      "texto": "De tener buen día, hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.9,
+      "fin": 65.6,
+      "texto": "final."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. ¿Cómo le va? Un gusto, mi nombre es Bruno, me estaba comunicando desde el área de recuperar clientes Movistar. Tenemos una oferta disponible para su línea. Actualmente tiene... No, por ahora no, porque tengo eso con prepago, tengo con tarjeta. ¿Hacer recargas? Sí. ¿Y cuánto se gasta? Porque nos andan bien, viste, y... Y, por lo menos, con el recargo, si no, me están en cuenta obligado, que estoy en una pagación sin. Claro, bien, entiendo. ¿Y si no estás gastando mucho haciendo recargas? No, pues el recargo, cuando tengo, no es tanto, tampoco, ¿viste? Moviendo, ya te digo, no... Bien. Bien, no hay problema, entonces, lo dejó sentado en su tema. De tener buen día, hasta luego. final.",
+  "calidad": {
+    "confianza_promedio": 0.531,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T13:42:14.111049",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:24:53.844285",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.98,
+      "fin": 4.18,
+      "duracion": 3.2,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.392
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.2,
+      "fin": 4.68,
+      "duracion": 0.48,
+      "texto": "¿Cómo le va?",
+      "confianza": 0.676
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.74,
+      "fin": 9.01,
+      "duracion": 4.27,
+      "texto": "Un gusto, mi nombre es Bruno, me estaba comunicando desde la área de recuperar clientes Movistar.",
+      "confianza": 0.62
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.33,
+      "fin": 12.29,
+      "duracion": 1.96,
+      "texto": "Tenemos una troma disponible para su línea.",
+      "confianza": 0.764
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.55,
+      "fin": 19.26,
+      "duracion": 5.71,
+      "texto": "Actualmente tiene...",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.28,
+      "fin": 22.66,
+      "duracion": 3.38,
+      "texto": "No, por ahora no, porque tengo eso con prepago, tengo con tarjeta.",
+      "confianza": 0.119
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.68,
+      "fin": 23.56,
+      "duracion": 0.88,
+      "texto": "¿Hacer recargas?",
+      "confianza": 0.779
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.5,
+      "fin": 25.56,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.58,
+      "fin": 26.38,
+      "duracion": 0.8,
+      "texto": "¿Y cuánto se gastan?",
+      "confianza": 0.719
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.4,
+      "fin": 28.81,
+      "duracion": 2.4,
+      "texto": "Porque nos andan bien, viste, y...",
+      "confianza": 0.459
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.21,
+      "fin": 35.74,
+      "duracion": 6.53,
+      "texto": "Y, por lo menos, con el recargo, si no, me están en cuenta obligado, que estoy en una pagación sin.",
+      "confianza": 0.469
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.72,
+      "fin": 38.84,
+      "duracion": 1.12,
+      "texto": "Claro, bien, entiendo.",
+      "confianza": 0.876
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 38.86,
+      "fin": 42.15,
+      "duracion": 3.28,
+      "texto": "¿Y si no estás gastando mucho haciendo recargas?",
+      "confianza": 0.693
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.59,
+      "fin": 48.7,
+      "duracion": 4.11,
+      "texto": "No, pues el recargo, cuando tengo, no es tanto, tampoco, ¿viste?",
+      "confianza": 0.093
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.72,
+      "fin": 52.1,
+      "duracion": 3.38,
+      "texto": "Mueviendo, ya te digo, no...",
+      "confianza": 0.418
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.12,
+      "fin": 53.06,
+      "duracion": 0.94,
+      "texto": "Bien.",
+      "confianza": 0.873
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.08,
+      "fin": 55.97,
+      "duracion": 2.88,
+      "texto": "Bien, no hay problema, entonces, lo dejó sentado en su tema.",
+      "confianza": 0.519
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.29,
+      "fin": 58.81,
+      "duracion": 1.52,
+      "texto": "De tener buen día, hasta luego.",
+      "confianza": 0.386
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.94,
+      "fin": 65.64,
+      "duracion": 5.71,
+      "texto": "final.",
+      "confianza": 0.519
+    }
+  ]
+}

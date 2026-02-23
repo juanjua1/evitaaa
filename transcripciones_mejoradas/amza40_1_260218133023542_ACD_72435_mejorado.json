@@ -1,0 +1,327 @@
+{
+  "archivo": "amza40_1_260218133023542_ACD_72435.wav",
+  "duracion_segundos": 63.87,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 5.32,
+    "Hablante B": 50.54
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 1.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.0,
+      "fin": 3.2,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.2,
+      "fin": 5.4,
+      "texto": "Hablo con usted con alguna de sus líneas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.2,
+      "fin": 7.7,
+      "texto": "Sí, habla."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 8.3,
+      "fin": 10.3,
+      "texto": "Cómo le va, mi nombre es Juliana, mucho gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.7,
+      "fin": 14.6,
+      "texto": "Estaba contactando hoy para hacerle entrega de un beneficio para su línea móvil."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.6,
+      "fin": 17.5,
+      "texto": "¿Me hablan de Movistar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.1,
+      "fin": 20.7,
+      "texto": "De parte de Movistar, me estoy comunicando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.8,
+      "fin": 27.3,
+      "texto": "Vos sabés que ya me han llamado, no sé, un montón de veces y les pedí que dejaran asentado en el sistema"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.7,
+      "fin": 29.7,
+      "texto": "Entiendo que tengan base todo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.2,
+      "fin": 41.6,
+      "texto": "Yo trabajo hace 13 años en Movistar y una vez ya me pasé las líneas porque obviamente me conviene, pero en el barrio, en la zona donde yo estoy de Córdoba, no me funciona."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.1,
+      "fin": 43.7,
+      "texto": "O sea, no tengo buena señal."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.2,
+      "fin": 46.1,
+      "texto": "Así que por eso no me paso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.4,
+      "fin": 51.2,
+      "texto": "Pero le pedí que lo dejaran si podían ahí asentado porque a mí me conviene."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.2,
+      "fin": 53.5,
+      "texto": "Obviamente como ha empleado"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.6,
+      "fin": 57.4,
+      "texto": "poder gastarme, pero bueno, a causa de eso no lo puedo hacer."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.4,
+      "fin": 58.0,
+      "texto": "Me imagino."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.1,
+      "fin": 60.7,
+      "texto": "Bien, le pido disculpas, ahora sí lo voy a dar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.6,
+      "fin": 62.3,
+      "texto": "Dale, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.6,
+      "fin": 63.9,
+      "texto": "Hasta luego, que tenga un lindo día."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. Hablo con usted con alguna de sus líneas. Sí, habla. Cómo le va, mi nombre es Juliana, mucho gusto. Estaba contactando hoy para hacerle entrega de un beneficio para su línea móvil. ¿Me hablan de Movistar? De parte de Movistar, me estoy comunicando. Vos sabés que ya me han llamado, no sé, un montón de veces y les pedí que dejaran asentado en el sistema Entiendo que tengan base todo. Yo trabajo hace 13 años en Movistar y una vez ya me pasé las líneas porque obviamente me conviene, pero en el barrio, en la zona donde yo estoy de Córdoba, no me funciona. O sea, no tengo buena señal. Así que por eso no me paso. Pero le pedí que lo dejaran si podían ahí asentado porque a mí me conviene. Obviamente como ha empleado poder gastarme, pero bueno, a causa de eso no lo puedo hacer. Me imagino. Bien, le pido disculpas, ahora sí lo voy a dar. Dale, gracias. Hasta luego, que tenga un lindo día.",
+  "calidad": {
+    "confianza_promedio": 0.617,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:39:40.190619",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T10:41:41.867619",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 1.95,
+      "duracion": 1.92,
+      "texto": "Hola.",
+      "confianza": 0.609
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.97,
+      "fin": 3.23,
+      "duracion": 1.26,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.25,
+      "fin": 5.4,
+      "duracion": 2.14,
+      "texto": "Hablo contigo con alguna de sus líneas.",
+      "confianza": 0.447
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.2,
+      "fin": 7.68,
+      "duracion": 0.48,
+      "texto": "Sí, ella habla.",
+      "confianza": 0.262
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.28,
+      "fin": 10.34,
+      "duracion": 2.06,
+      "texto": "Como le va, mi nombre es Juliana, mucho gusto.",
+      "confianza": 0.539
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.74,
+      "fin": 14.57,
+      "duracion": 3.82,
+      "texto": "Estaba contactando hoy para hacerle entregar un beneficio para su línea móvil.",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.59,
+      "fin": 17.53,
+      "duracion": 2.94,
+      "texto": "¿Me hablan de Movistar?",
+      "confianza": 0.605
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.11,
+      "fin": 20.73,
+      "duracion": 2.62,
+      "texto": "De parte de Movistar, me estoy comunicando.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.75,
+      "fin": 27.32,
+      "duracion": 6.57,
+      "texto": "Vos sabés que ya me han llamado, no sé, un montón de veces y les pedí que dejaran asentado en el sistema",
+      "confianza": 0.627
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.66,
+      "fin": 29.74,
+      "duracion": 2.08,
+      "texto": "entiendo que tengan base todo.",
+      "confianza": 0.779
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.16,
+      "fin": 41.65,
+      "duracion": 11.49,
+      "texto": "Yo trabajo hace 13 años en Movistar y una vez ya me pasé las líneas porque obviamente me conviene, pero en el barrio, en la zona donde yo estoy de Córdoba, no me funciona.",
+      "confianza": 0.819
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.11,
+      "fin": 43.71,
+      "duracion": 1.6,
+      "texto": "O sea, no tengo buena señal.",
+      "confianza": 0.662
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.25,
+      "fin": 46.06,
+      "duracion": 1.8,
+      "texto": "Así que por eso no me paso.",
+      "confianza": 0.737
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.4,
+      "fin": 51.18,
+      "duracion": 3.78,
+      "texto": "Pero le pedí que lo dejaran si podían ahí asentado porque a mí me conviene.",
+      "confianza": 0.659
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.24,
+      "fin": 53.55,
+      "duracion": 2.3,
+      "texto": "Obviamente como ha empleado",
+      "confianza": 0.734
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.64,
+      "fin": 57.37,
+      "duracion": 3.73,
+      "texto": "poder gastarme, pero bueno, a causa de eso no lo puedo hacer.",
+      "confianza": 0.729
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.39,
+      "fin": 57.95,
+      "duracion": 0.56,
+      "texto": "Me imagino.",
+      "confianza": 0.786
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.06,
+      "fin": 60.74,
+      "duracion": 2.69,
+      "texto": "Bien, le pido disculpas, ahora sí lo voy a dar.",
+      "confianza": 0.533
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.59,
+      "fin": 62.33,
+      "duracion": 0.74,
+      "texto": "Dale, gracias.",
+      "confianza": 0.728
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 62.59,
+      "fin": 63.87,
+      "duracion": 1.28,
+      "texto": "Hasta luego, que tenga un lindo día.",
+      "confianza": 0.437
+    }
+  ]
+}

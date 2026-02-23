@@ -1,0 +1,329 @@
+{
+  "archivo": "amza20_1_260218112630755_ACD_47739.wav",
+  "duracion_segundos": 66.32,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 35.98,
+    "Hablante B": 21.54
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 0.6,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.6,
+      "fin": 1.3,
+      "texto": "Buen día, Adriana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 2.5,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.0,
+      "fin": 3.9,
+      "texto": "Adriana, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.9,
+      "fin": 6.3,
+      "texto": "Tomás es mi nombre, me comunico del área de beneficios Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.8,
+      "fin": 10.2,
+      "texto": "Usted actualmente está con Claro, ¿correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.2,
+      "fin": 10.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.3,
+      "fin": 12.4,
+      "texto": "De verdad que le vamos a mejorar el teléfono de línea, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.9,
+      "fin": 15.2,
+      "texto": "Tenemos un plan de 40 gigas, 17.750 pesos para brindarte."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.2,
+      "fin": 17.7,
+      "texto": "¿Vos estás en Claro actualmente con una línea con abono o prepago?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.8,
+      "fin": 27.6,
+      "texto": "No, prepago, pero no, yo me pasé de Movistar por el tema del servicio."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.1,
+      "fin": 30.0,
+      "texto": "Bien, decime quién comentó tu visita."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.4,
+      "fin": 35.9,
+      "texto": "Estaba en comunicada casi todo el tiempo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.0,
+      "fin": 37.7,
+      "texto": "Ah, bien, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.8,
+      "fin": 46.2,
+      "texto": "Te consulto, imagino que fue en el código de área, ¿en qué localidad te pasaba este problema que me contaste?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 46.2,
+      "fin": 46.8,
+      "texto": "En La Matanza, en Ciudadela."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 46.8,
+      "fin": 47.6,
+      "texto": "Bien, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.9,
+      "fin": 49.4,
+      "texto": "A ver, en La Matanza me dijiste."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.4,
+      "fin": 55.4,
+      "texto": "¿Te consulto en general o en algún lugar en específico?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 57.0,
+      "fin": 66.3,
+      "texto": "Bueno, así que hace poco que me trasladé a Claro y por el momento estoy bien con la empresa."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, Adriana. Sí. Adriana, ¿cómo estás? Tomás es mi nombre, me comunico del área de beneficios Movistar. Usted actualmente está con Claro, ¿correcto? Sí. De verdad que le vamos a mejorar el teléfono de línea, ¿sí? Tenemos un plan de 40 gigas, 17.750 pesos para brindarte. ¿Vos estás en Claro actualmente con una línea con abono o prepago? No, prepago, pero no, yo me pasé de Movistar por el tema del servicio. Bien, decime quién comentó tu visita. Estaba en comunicada casi todo el tiempo. Ah, bien, entiendo. Te consulto, imagino que fue en el código de área, ¿en qué localidad te pasaba este problema que me contaste? En La Matanza, en Ciudadela. Bien, entiendo. A ver, en La Matanza me dijiste. ¿Te consulto en general o en algún lugar en específico? Bueno, así que hace poco que me trasladé a Claro y por el momento estoy bien con la empresa.",
+  "calidad": {
+    "confianza_promedio": 0.531,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T13:57:29.667882",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 40gb"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, nombres propios, y palabras mal entendidas. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:31:48.781386",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 0.55,
+      "duracion": 0.52,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.426
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.57,
+      "fin": 1.29,
+      "duracion": 0.72,
+      "texto": "Buen día, Adriana.",
+      "confianza": 0.593
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.43,
+      "fin": 2.5,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.0,
+      "fin": 3.86,
+      "duracion": 0.86,
+      "texto": "Adriana, ¿cómo estás?",
+      "confianza": 0.578
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.9,
+      "fin": 6.28,
+      "duracion": 2.38,
+      "texto": "Tomás es mi nombre, me comunicó el área de beneficios Movistar.",
+      "confianza": 0.675
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.8,
+      "fin": 10.19,
+      "duracion": 3.38,
+      "texto": "Usted actualmente está con claro, ¿correcto?",
+      "confianza": 0.822
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.21,
+      "fin": 10.27,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.054
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.29,
+      "fin": 12.41,
+      "duracion": 2.12,
+      "texto": "De verdad que le vamos a mejorar el teléfono de línea, ¿sí?",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.87,
+      "fin": 15.17,
+      "duracion": 2.3,
+      "texto": "Teníamos un plan de lo que son 40 gigas, 117.750 pesos para brindarte.",
+      "confianza": 0.697
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.19,
+      "fin": 17.74,
+      "duracion": 2.54,
+      "texto": "¿Vos estás en claro actualmente con una línea bono o prepago?",
+      "confianza": 0.224
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.76,
+      "fin": 27.59,
+      "duracion": 9.83,
+      "texto": "No, prepago, pero no, yo me pasé de movistar por el tema del servicio.",
+      "confianza": 0.373
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.14,
+      "fin": 30.01,
+      "duracion": 1.86,
+      "texto": "Bien, decime quién comente tu vista.",
+      "confianza": 0.659
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.35,
+      "fin": 35.91,
+      "duracion": 3.56,
+      "texto": "Estaba en comunicada casi todo el tiempo.",
+      "confianza": 0.647
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.0,
+      "fin": 37.74,
+      "duracion": 0.74,
+      "texto": "Ah, bien, entiendo.",
+      "confianza": 0.298
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.76,
+      "fin": 46.17,
+      "duracion": 8.41,
+      "texto": "Te consulto, imagino que fue en el Código de Área, ¿en qué localidad te pasaba este problema que me contaste?",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.19,
+      "fin": 46.75,
+      "duracion": 0.56,
+      "texto": "En La Matanza, en Ciudadita.",
+      "confianza": 0.004
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.77,
+      "fin": 47.57,
+      "duracion": 0.8,
+      "texto": "Bien, entiendo.",
+      "confianza": 0.772
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.91,
+      "fin": 49.39,
+      "duracion": 1.48,
+      "texto": "A ver, en La Matanza me dijiste.",
+      "confianza": 0.686
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.41,
+      "fin": 55.4,
+      "duracion": 5.99,
+      "texto": "¿Te consulto en general o en algún lugar en específico?",
+      "confianza": 0.678
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.97,
+      "fin": 66.32,
+      "duracion": 9.35,
+      "texto": "Bueno, así que hace poco que me trasladea claro y por el momento estoy bien con la empresa.",
+      "confianza": 0.705
+    }
+  ]
+}

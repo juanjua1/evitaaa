@@ -1,0 +1,159 @@
+{
+  "archivo": "amza41_1_260210105000977_ACD_44449.wav",
+  "duracion_segundos": 162.1,
+  "num_segmentos": 8,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 47.87,
+    "Hablante B": 65.29
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.8,
+      "fin": 3.3,
+      "texto": "Después del tono, deje su mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.8,
+      "fin": 21.3,
+      "texto": "Para finalizar, corte o marque la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.5,
+      "fin": 48.0,
+      "texto": "No tengo ni idea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.0,
+      "fin": 65.3,
+      "texto": "¿Qué pasa?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.3,
+      "fin": 81.7,
+      "texto": "¿Qué pasa?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 86.3,
+      "fin": 97.7,
+      "texto": "¿Qué haces?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 112.2,
+      "fin": 138.3,
+      "texto": "¿Por qué no?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 145.8,
+      "fin": 162.1,
+      "texto": "No sé cuál es."
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deje su mensaje. Para finalizar, corte o marque la tecla numeral para más opciones. No tengo ni idea. ¿Qué pasa? ¿Qué pasa? ¿Qué haces? ¿Por qué no? No sé cuál es.",
+  "calidad": {
+    "confianza_promedio": 0.545,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:42:43.960182",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción y se mejoró la claridad de algunas frases. Se identificaron los roles de agente y cliente."
+    },
+    "fecha_mejora": "2026-02-20T10:42:20.251215",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.76,
+      "fin": 3.28,
+      "duracion": 2.52,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.736
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.8,
+      "fin": 21.3,
+      "duracion": 16.49,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.8
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.46,
+      "fin": 48.03,
+      "duracion": 17.57,
+      "texto": "No tengo ni la piscera.",
+      "confianza": 0.722
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.01,
+      "fin": 65.28,
+      "duracion": 6.27,
+      "texto": "¿Qué pasa?",
+      "confianza": 0.44
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 65.34,
+      "fin": 81.67,
+      "duracion": 16.34,
+      "texto": "¿Qué pasa?",
+      "confianza": 0.442
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 86.3,
+      "fin": 97.74,
+      "duracion": 11.44,
+      "texto": "¿Qué haces?",
+      "confianza": 0.349
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 112.15,
+      "fin": 138.34,
+      "duracion": 26.19,
+      "texto": "¿Por qué no?",
+      "confianza": 0.443
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 145.76,
+      "fin": 162.1,
+      "duracion": 16.34,
+      "texto": "No sé cuál es.",
+      "confianza": 0.431
+    }
+  ]
+}

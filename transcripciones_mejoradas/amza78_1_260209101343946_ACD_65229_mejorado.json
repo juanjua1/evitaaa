@@ -1,0 +1,313 @@
+{
+  "archivo": "amza78_1_260209101343946_ACD_65229.wav",
+  "duracion_segundos": 70.66,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 50.8,
+    "Hablante B": 11.88
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 7.5,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.5,
+      "fin": 7.9,
+      "texto": "Hablo con la línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.9,
+      "fin": 13.5,
+      "texto": "Hablo con la línea a nombre de Melisa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.6,
+      "fin": 14.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.4,
+      "fin": 15.3,
+      "texto": "Melisa, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.4,
+      "fin": 16.2,
+      "texto": "Soy Tamara."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.3,
+      "fin": 19.6,
+      "texto": "¿Me comunico con vos porque tengo un descuento para esta línea?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.6,
+      "fin": 20.7,
+      "texto": "Te hablo desde Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.8,
+      "fin": 22.3,
+      "texto": "Ah, ¿qué tal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.7,
+      "fin": 27.4,
+      "texto": "Mira, yo uso prepago, así que por el momento no voy a entrar a un abono."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.4,
+      "fin": 31.1,
+      "texto": "Bien, o sea, ¿es prepago de Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.1,
+      "fin": 32.1,
+      "texto": "¿Prepago de Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.1,
+      "fin": 40.0,
+      "texto": "Sí, sí, porque estoy en casa con Wi-Fi todo el día, así que no pago abono."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.0,
+      "fin": 40.4,
+      "texto": "Te agradezco."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.4,
+      "fin": 41.0,
+      "texto": "Bueno, no hay problema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.6,
+      "fin": 53.7,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.7,
+      "fin": 54.0,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.0,
+      "fin": 54.2,
+      "texto": "Chau, chau."
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.8,
+      "fin": 70.7,
+      "texto": "Para pasarme a revisar un poco el trabajo en Tenerife o bueno, al número 2."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con la línea. Hablo con la línea a nombre de Melisa. Sí. Melisa, ¿cómo estás? Soy Tamara. ¿Me comunico con vos porque tengo un descuento para esta línea? Te hablo desde Movistar. Ah, ¿qué tal? Mira, yo uso prepago, así que por el momento no voy a entrar a un abono. Bien, o sea, ¿es prepago de Claro? ¿Prepago de Claro? Sí, sí, porque estoy en casa con Wi-Fi todo el día, así que no pago abono. Te agradezco. Bueno, no hay problema. Hasta luego. Hasta luego. Chau, chau. Para pasarme a revisar un poco el trabajo en Tenerife o bueno, al número 2.",
+  "calidad": {
+    "confianza_promedio": 0.431,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T11:15:52.551233",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se mejoró la puntuación."
+    },
+    "fecha_mejora": "2026-02-20T11:15:34.361291",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 7.5,
+      "duracion": 7.47,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.389
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.52,
+      "fin": 7.9,
+      "duracion": 0.38,
+      "texto": "Hablo con la línea.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.92,
+      "fin": 13.53,
+      "duracion": 5.61,
+      "texto": "Hablo con la línea a nombre de Melisa.",
+      "confianza": 0.271
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.55,
+      "fin": 14.39,
+      "duracion": 0.84,
+      "texto": "Sí.",
+      "confianza": 0.589
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.41,
+      "fin": 15.31,
+      "duracion": 0.9,
+      "texto": "Melisa, ¿cómo estás?",
+      "confianza": 0.676
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.37,
+      "fin": 16.25,
+      "duracion": 0.88,
+      "texto": "Soy Tamara.",
+      "confianza": 0.516
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.27,
+      "fin": 19.57,
+      "duracion": 3.3,
+      "texto": "¿Me comunicaré con vos porque tengo un descuento para esta línea?",
+      "confianza": 0.664
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.59,
+      "fin": 20.66,
+      "duracion": 1.06,
+      "texto": "Te hablo desde Movistar.",
+      "confianza": 0.525
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.76,
+      "fin": 22.28,
+      "duracion": 0.52,
+      "texto": "Ah, ¿qué tal?",
+      "confianza": 0.518
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.7,
+      "fin": 27.41,
+      "duracion": 4.71,
+      "texto": "Mira, yo uso prepago, así que por el momento no voy a entrar a Bono.",
+      "confianza": 0.685
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.45,
+      "fin": 31.07,
+      "duracion": 2.62,
+      "texto": "Bien, o sea, ¿es prepago de claro?",
+      "confianza": 0.283
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.09,
+      "fin": 32.11,
+      "duracion": 1.02,
+      "texto": "¿Prepago de claro?",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.13,
+      "fin": 40.0,
+      "duracion": 7.87,
+      "texto": "Sí, sí, porque estoy en casa con Wi-Fi todo el día, así que no pago abono.",
+      "confianza": 0.574
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.02,
+      "fin": 40.36,
+      "duracion": 0.34,
+      "texto": "Te agradezco.",
+      "confianza": 0.056
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.38,
+      "fin": 41.04,
+      "duracion": 0.66,
+      "texto": "Bueno, no hay problema.",
+      "confianza": 0.244
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.56,
+      "fin": 53.72,
+      "duracion": 12.16,
+      "texto": "Hasta luego.",
+      "confianza": 0.445
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.74,
+      "fin": 53.98,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.009
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.0,
+      "fin": 54.22,
+      "duracion": 0.22,
+      "texto": "Chau, chau.",
+      "confianza": 0.124
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.77,
+      "fin": 70.66,
+      "duracion": 11.88,
+      "texto": "Para pasarme a revisar un poco el trabajo en Tenerife o bueno, al número 2.",
+      "confianza": 0.411
+    }
+  ]
+}

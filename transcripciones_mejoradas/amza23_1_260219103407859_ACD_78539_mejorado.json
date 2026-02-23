@@ -1,0 +1,301 @@
+{
+  "archivo": "amza23_1_260219103407859_ACD_78539.wav",
+  "duracion_segundos": 63.6,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 14.09,
+    "Hablante B": 43.04
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.4,
+      "fin": 4.8,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.8,
+      "fin": 5.2,
+      "texto": "Buen día, ¿Joana?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.2,
+      "fin": 5.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.3,
+      "fin": 5.7,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.7,
+      "fin": 7.5,
+      "texto": "¿Cómo le va, Joana? Mi nombre es Karen."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.6,
+      "fin": 12.2,
+      "texto": "Nosotros estamos con gusto para brindarte en el día de hoy una muy buena promoción en tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.3,
+      "fin": 15.8,
+      "texto": "¿Te consulto, actualmente, sos de Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.0,
+      "fin": 18.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.1,
+      "fin": 19.0,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.5,
+      "fin": 19.9,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.9,
+      "fin": 23.5,
+      "texto": "Y te consulto acerca de tu plan, más que todo, para saber qué ofrecerte."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.6,
+      "fin": 29.7,
+      "texto": "¿Cuánto estás abonando aproximadamente y qué cantidad de gigas se brindan?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.7,
+      "fin": 30.4,
+      "texto": "Ocho mil gigas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.2,
+      "fin": 47.0,
+      "texto": "Bueno, mira, te comento que tenemos dos propuestas en el día de hoy. Una es por un plan intermedio, 18 gigas en total, son 8 gigas de base, más 10 de regalo que tienen una durabilidad por 6 meses."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.7,
+      "fin": 52.4,
+      "texto": "Vas a tener también el roaming incluido en el caso de que seas de viajar por un costo de 10.730."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.4,
+      "fin": 56.4,
+      "texto": "Mira, no me interesa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.9,
+      "fin": 61.3,
+      "texto": "Porque tengo todas las líneas en Claro, así que te agradezco mucho."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.3,
+      "fin": 63.6,
+      "texto": "Gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día, ¿Joana? Sí. ¿Qué tal? ¿Cómo le va, Joana? Mi nombre es Karen. Nosotros estamos con gusto para brindarte en el día de hoy una muy buena promoción en tu línea. ¿Te consulto, actualmente, sos de Claro? Sí. Bien, perfecto. Perfecto. Y te consulto acerca de tu plan, más que todo, para saber qué ofrecerte. ¿Cuánto estás abonando aproximadamente y qué cantidad de gigas se brindan? Ocho mil gigas. Bueno, mira, te comento que tenemos dos propuestas en el día de hoy. Una es por un plan intermedio, 18 gigas en total, son 8 gigas de base, más 10 de regalo que tienen una durabilidad por 6 meses. Vas a tener también el roaming incluido en el caso de que seas de viajar por un costo de 10.730. Mira, no me interesa. Porque tengo todas las líneas en Claro, así que te agradezco mucho. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.486,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:09:19.159962",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 18gb"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: 'gigas' por 'sigas', nombres propios, palabras cortadas). Se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:34:57.195699",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.36,
+      "fin": 4.83,
+      "duracion": 3.46,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.211
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.85,
+      "fin": 5.19,
+      "duracion": 0.34,
+      "texto": "Buen día, ¿Joana?",
+      "confianza": 0.004
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.21,
+      "fin": 5.27,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.09
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.29,
+      "fin": 5.67,
+      "duracion": 0.38,
+      "texto": "¿Qué tal?",
+      "confianza": 0.518
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.71,
+      "fin": 7.51,
+      "duracion": 1.8,
+      "texto": "¿Cómo le va, Karen, a mi nombre?",
+      "confianza": 0.58
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.63,
+      "fin": 12.22,
+      "duracion": 4.59,
+      "texto": "Nosotros estamos con gracia para brindarte en el día de hoy una muy buena promoción en tu línea.",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.3,
+      "fin": 15.76,
+      "duracion": 3.46,
+      "texto": "¿Te consulto actualmente en su situaría de claro?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.01,
+      "fin": 18.07,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.074
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.09,
+      "fin": 18.97,
+      "duracion": 0.88,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.51
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.49,
+      "fin": 19.87,
+      "duracion": 0.38,
+      "texto": "Perfecto.",
+      "confianza": 0.743
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.95,
+      "fin": 23.53,
+      "duracion": 3.58,
+      "texto": "Y te consulto acerca de tu plan, más que todo, para saber qué ofrecerte.",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.55,
+      "fin": 29.7,
+      "duracion": 6.15,
+      "texto": "¿Cuánto estás sabonando aproximadamente y qué cantidad de sigas se brindan?",
+      "confianza": 0.713
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.72,
+      "fin": 30.44,
+      "duracion": 0.72,
+      "texto": "Ocho mil dosis sigas.",
+      "confianza": 0.222
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.16,
+      "fin": 47.05,
+      "duracion": 15.89,
+      "texto": "Bueno, mira, te comento que tenemos dos propuestas en el día de hoy, una es por un plan intermedio, 18 gibas en total, son 8 gibas de base, más 10 de regalo que tienen una durabilidad por 6 meses.",
+      "confianza": 0.643
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.67,
+      "fin": 52.4,
+      "duracion": 4.73,
+      "texto": "Vas a tener también el roaming incluido en el caso de que seas de viajar por un costo de 10.730.",
+      "confianza": 0.646
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.42,
+      "fin": 56.35,
+      "duracion": 3.93,
+      "texto": "Mira, no me interesa.",
+      "confianza": 0.341
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 56.87,
+      "fin": 61.3,
+      "duracion": 4.44,
+      "texto": "porque tengo todas las líneas en claro, así que te agradezco mucho.",
+      "confianza": 0.593
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.32,
+      "fin": 63.6,
+      "duracion": 2.28,
+      "texto": "Gracias.",
+      "confianza": 0.885
+    }
+  ]
+}

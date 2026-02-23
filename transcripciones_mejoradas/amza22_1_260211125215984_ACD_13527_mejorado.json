@@ -1,0 +1,243 @@
+{
+  "archivo": "amza22_1_260211125215984_ACD_13527.wav",
+  "duracion_segundos": 87.3,
+  "num_segmentos": 14,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 34.6,
+    "Hablante B": 27.41
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 10.9,
+      "texto": "Después del tono, deje su mensaje. Para finalizar, para más opciones..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.1,
+      "fin": 34.6,
+      "texto": "Y otra vez, en rodilla reúne que le dices una barca y ya te arreglaste tanto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.7,
+      "fin": 42.1,
+      "texto": "No, no, es que sí, sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.1,
+      "fin": 51.3,
+      "texto": "Bueno, bueno, sí, pero no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.3,
+      "fin": 51.6,
+      "texto": "Ay, no, no, no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 57.1,
+      "fin": 62.5,
+      "texto": "Así como le doblé, 20... 20... ¿Cuántos metí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 62.5,
+      "fin": 67.6,
+      "texto": "Ay, ¿cuántos, espérate?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 67.6,
+      "fin": 68.6,
+      "texto": "¿70 operaciones?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.6,
+      "fin": 74.0,
+      "texto": "No sé qué cosas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 74.0,
+      "fin": 75.9,
+      "texto": "No, el mes pasado doblé."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 75.9,
+      "fin": 78.9,
+      "texto": "Así como lo era, calladí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 78.9,
+      "fin": 80.1,
+      "texto": "Es el chico multiel."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 80.2,
+      "fin": 81.0,
+      "texto": "Siempre es múltiple."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 85.3,
+      "fin": 87.3,
+      "texto": "¿Qué pasa?"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deje su mensaje. Para finalizar, para más opciones... Y otra vez, en rodilla reúne que le dices una barca y ya te arreglaste tanto. No, no, es que sí, sí, sí. Bueno, bueno, sí, pero no. Ay, no, no, no. Así como le doblé, 20... 20... ¿Cuántos metí? Ay, ¿cuántos, espérate? ¿70 operaciones? No sé qué cosas. No, el mes pasado doblé. Así como lo era, calladí. Es el chico multiel. Siempre es múltiple. ¿Qué pasa?",
+  "calidad": {
+    "confianza_promedio": 0.441,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T01:01:49.513812",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T02:29:23.544968",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 10.88,
+      "duracion": 10.85,
+      "texto": "después del tono deja tu mensaje para finalizar para más opciones",
+      "confianza": 0.774
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.1,
+      "fin": 34.64,
+      "duracion": 8.53,
+      "texto": "Y otra vez, en rodilla reúne que le dices una barca y ya te arreglaste tanto.",
+      "confianza": 0.469
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.66,
+      "fin": 42.07,
+      "duracion": 7.41,
+      "texto": "No, no, es que sí, sí, sí.",
+      "confianza": 0.297
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.09,
+      "fin": 51.3,
+      "duracion": 9.21,
+      "texto": "Bueno, bueno, sí, pero no.",
+      "confianza": 0.289
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.32,
+      "fin": 51.62,
+      "duracion": 0.3,
+      "texto": "Ay, no, no, no.",
+      "confianza": 0.088
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.12,
+      "fin": 62.53,
+      "duracion": 5.41,
+      "texto": "Así como le doblé, 20... 20... ¿Cuántos metí?",
+      "confianza": 0.388
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.55,
+      "fin": 67.62,
+      "duracion": 5.07,
+      "texto": "Ay, ¿cuántos, espérate?",
+      "confianza": 0.53
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 67.64,
+      "fin": 68.58,
+      "duracion": 0.94,
+      "texto": "¿70 operaciones?",
+      "confianza": 0.788
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.6,
+      "fin": 73.99,
+      "duracion": 5.39,
+      "texto": "No sé qué cosas.",
+      "confianza": 0.559
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 74.01,
+      "fin": 75.91,
+      "duracion": 1.9,
+      "texto": "No, el mes pasado doblé.",
+      "confianza": 0.289
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 75.93,
+      "fin": 78.91,
+      "duracion": 2.98,
+      "texto": "Así como lo era, calladí.",
+      "confianza": 0.409
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 78.93,
+      "fin": 80.14,
+      "duracion": 1.2,
+      "texto": "Es el chico multiel.",
+      "confianza": 0.378
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.16,
+      "fin": 81.02,
+      "duracion": 0.86,
+      "texto": "Siempre es múltiple.",
+      "confianza": 0.567
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 85.33,
+      "fin": 87.3,
+      "duracion": 1.96,
+      "texto": "¿Qué pasa?",
+      "confianza": 0.347
+    }
+  ]
+}

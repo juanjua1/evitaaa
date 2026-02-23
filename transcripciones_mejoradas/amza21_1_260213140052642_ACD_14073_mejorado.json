@@ -1,0 +1,301 @@
+{
+  "archivo": "amza21_1_260213140052642_ACD_14073.wav",
+  "duracion_segundos": 70.69,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 41.57,
+    "Hablante B": 18.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 4.0,
+      "texto": "Hola, ¿qué tal un día?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 9.4,
+      "texto": "¿Me comunico con Miguel Ángel?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.4,
+      "fin": 9.5,
+      "texto": "No."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.5,
+      "fin": 17.4,
+      "texto": "¿Con quién hablo, por favor?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.4,
+      "fin": 17.7,
+      "texto": "No, con la mamá."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.8,
+      "fin": 18.0,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.8,
+      "fin": 20.0,
+      "texto": "¿Señora Zulma sería?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.5,
+      "fin": 24.6,
+      "texto": "¿Eh?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.6,
+      "fin": 26.7,
+      "texto": "¿Cómo es tu nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.7,
+      "fin": 27.2,
+      "texto": "No, Zulma."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.9,
+      "fin": 29.7,
+      "texto": "Zulma, bueno Zulma, ¿cómo andas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.7,
+      "fin": 32.7,
+      "texto": "Mirá, estás hablando con Oriana del área de recupero de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.2,
+      "fin": 39.8,
+      "texto": "Mirá, te llamaba hoy para ofrecerte un descuento del 80% en la portabilidad para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.3,
+      "fin": 44.5,
+      "texto": "Mirá, necesariamente sale que antes estaba en Movistar y se pasaron a Claro, ¿correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.2,
+      "fin": 51.6,
+      "texto": "No sé, porque este teléfono es de mi hijo, la línea de mi hijo no es mía."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.6,
+      "fin": 53.0,
+      "texto": "No tengo ni idea, él está trabajando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.0,
+      "fin": 56.1,
+      "texto": "Bien, ¿y el tiempo disponible?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.1,
+      "fin": 70.7,
+      "texto": "Después de las siete de la tarde."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal un día? ¿Me comunico con Miguel Ángel? No. ¿Con quién hablo, por favor? No, con la mamá. Bien. ¿Señora Zulma sería? ¿Eh? ¿Cómo es tu nombre? No, Zulma. Zulma, bueno Zulma, ¿cómo andas? Mirá, estás hablando con Oriana del área de recupero de Movistar. Mirá, te llamaba hoy para ofrecerte un descuento del 80% en la portabilidad para tu línea. Mirá, necesariamente sale que antes estaba en Movistar y se pasaron a Claro, ¿correcto? No sé, porque este teléfono es de mi hijo, la línea de mi hijo no es mía. No tengo ni idea, él está trabajando. Bien, ¿y el tiempo disponible? Después de las siete de la tarde.",
+  "calidad": {
+    "confianza_promedio": 0.432,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T00:53:56.054428",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "portabilidad"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T02:17:36.280937",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 3.98,
+      "duracion": 3.94,
+      "texto": "Hola, ¿qué tal un día?",
+      "confianza": 0.386
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.0,
+      "fin": 9.4,
+      "duracion": 5.41,
+      "texto": "¿Me comunico con Miguel Ángel?",
+      "confianza": 0.441
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.42,
+      "fin": 9.48,
+      "duracion": 0.06,
+      "texto": "No.",
+      "confianza": 0.146
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.5,
+      "fin": 17.35,
+      "duracion": 7.85,
+      "texto": "¿Con quién digo el precio de comunicarme?",
+      "confianza": 0.55
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.37,
+      "fin": 17.73,
+      "duracion": 0.36,
+      "texto": "No, con la mamá.",
+      "confianza": 0.054
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.75,
+      "fin": 18.03,
+      "duracion": 0.28,
+      "texto": "Bien.",
+      "confianza": 0.792
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.75,
+      "fin": 20.0,
+      "duracion": 1.24,
+      "texto": "Eh... ¿Señora Artilla Sería?",
+      "confianza": 0.503
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.54,
+      "fin": 24.62,
+      "duracion": 0.08,
+      "texto": "¿Eh?",
+      "confianza": 0.121
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.64,
+      "fin": 26.7,
+      "duracion": 2.06,
+      "texto": "¿Cómo es tu nombre?",
+      "confianza": 0.172
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.72,
+      "fin": 27.2,
+      "duracion": 0.48,
+      "texto": "No, Turma.",
+      "confianza": 0.484
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.86,
+      "fin": 29.66,
+      "duracion": 1.8,
+      "texto": "Zulma, bueno Zulma, ¿cómo andas?",
+      "confianza": 0.392
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.68,
+      "fin": 32.73,
+      "duracion": 3.04,
+      "texto": "Mirá, estás hablando con Oriana del área de recupero o movistar.",
+      "confianza": 0.531
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.25,
+      "fin": 39.77,
+      "duracion": 6.53,
+      "texto": "Mirá, antes te llamaba hoy para ofrecerte un descuento del 80% de la portabilidad para tu línea.",
+      "confianza": 0.657
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.34,
+      "fin": 44.54,
+      "duracion": 4.21,
+      "texto": "Mirá, necesariamente sale que antes estaba en el movistar y se pasaron a claro, ¿correcto?",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 46.2,
+      "fin": 51.61,
+      "duracion": 5.41,
+      "texto": "No sé, porque este teléfono es de mi hijo, la línea de mi hijo no es mía.",
+      "confianza": 0.445
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 51.63,
+      "fin": 53.05,
+      "duracion": 1.42,
+      "texto": "No tengo ni idea, él está trabajando.",
+      "confianza": 0.284
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.0,
+      "fin": 56.06,
+      "duracion": 2.06,
+      "texto": "Bien, ¿y el tiempo disponible?",
+      "confianza": 0.374
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.15,
+      "fin": 70.69,
+      "duracion": 13.54,
+      "texto": "Después de las siete de la tarde.",
+      "confianza": 0.718
+    }
+  ]
+}

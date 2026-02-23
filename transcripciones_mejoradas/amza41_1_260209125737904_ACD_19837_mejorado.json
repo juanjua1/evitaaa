@@ -1,0 +1,145 @@
+{
+  "archivo": "amza41_1_260209125737904_ACD_19837.wav",
+  "duracion_segundos": 93.28,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 30.18,
+    "Hablante B": 42.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 2.4,
+      "texto": "Después del tono, deje su mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 21.0,
+      "texto": "Para finalizar, corte o marque la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.5,
+      "fin": 61.1,
+      "texto": "Dice que no se puede porque está siendo procesado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.6,
+      "fin": 82.3,
+      "texto": "Todos mis intentos de comunicarme."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 82.4,
+      "fin": 88.3,
+      "texto": "Los tiempos en el mar se me atrasaron y sobraron."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 88.3,
+      "fin": 90.5,
+      "texto": "Voy de piraterías."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 92.1,
+      "fin": 93.3,
+      "texto": "Que compartan a mí."
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deje su mensaje. Para finalizar, corte o marque la tecla numeral para más opciones. Dice que no se puede porque está siendo procesado. Todos mis intentos de comunicarme. Los tiempos en el mar se me atrasaron y sobraron. Voy de piraterías. Que compartan a mí.",
+  "calidad": {
+    "confianza_promedio": 0.607,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:41:14.536046",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, palabras sin sentido y se intentó mejorar la comprensión general."
+    },
+    "fecha_mejora": "2026-02-20T10:41:55.689059",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 2.43,
+      "duracion": 2.4,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.767
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.02,
+      "fin": 20.98,
+      "duracion": 16.96,
+      "texto": "Para finalizar, corta o marca la tecla mineral para más opciones.",
+      "confianza": 0.759
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.47,
+      "fin": 61.09,
+      "duracion": 26.62,
+      "texto": "Dice que no se puede porque está siendo procesado.",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 64.64,
+      "fin": 82.35,
+      "duracion": 17.7,
+      "texto": "Todos mis intentos de comerse la roca.",
+      "confianza": 0.647
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 82.37,
+      "fin": 88.3,
+      "duracion": 5.93,
+      "texto": "Los tiempos en el mar se me atrolaran y sobraron.",
+      "confianza": 0.337
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 88.32,
+      "fin": 90.52,
+      "duracion": 2.2,
+      "texto": "Voy de piraturas.",
+      "confianza": 0.507
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 92.12,
+      "fin": 93.28,
+      "duracion": 1.16,
+      "texto": "Que compartan a mí.",
+      "confianza": 0.66
+    }
+  ]
+}

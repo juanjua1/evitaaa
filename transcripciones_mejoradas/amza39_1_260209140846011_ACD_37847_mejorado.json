@@ -1,0 +1,285 @@
+{
+  "archivo": "amza39_1_260209140846011_ACD_37847.wav",
+  "duracion_segundos": 75.87,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 55.55,
+    "Hablante A": 1.12
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.6,
+      "fin": 4.9,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.0,
+      "fin": 6.7,
+      "texto": "Me comunico con Demián Alberto Davido."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.7,
+      "fin": 9.0,
+      "texto": "¿Alguna línea a su nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.1,
+      "fin": 9.3,
+      "texto": "Sí, sí, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.3,
+      "fin": 10.1,
+      "texto": "Me da un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.1,
+      "fin": 11.1,
+      "texto": "Mi nombre es Catalina."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.3,
+      "fin": 15.8,
+      "texto": "Lo contacto del área de beneficios de Movistar para brindarle una promoción para sus líneas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.6,
+      "fin": 23.6,
+      "texto": "Me figura... Ah, pero no lo manejo yo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.7,
+      "fin": 24.2,
+      "texto": "Lo maneja Administraciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.2,
+      "fin": 25.3,
+      "texto": "Ah, pero... Ah, bien, bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.3,
+      "fin": 31.1,
+      "texto": "En ese caso, sabrá en qué termina el número de administración ya que me figuran cuatro números más a su nombre."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.4,
+      "fin": 34.2,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.3,
+      "fin": 49.7,
+      "texto": "¿Has dicho a Pedido?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.8,
+      "fin": 51.1,
+      "texto": "Bueno, no hay problema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.0,
+      "fin": 59.1,
+      "texto": "¿Dónde está el nombre?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.2,
+      "fin": 72.7,
+      "texto": "Perfecto, ahí lo dejo asentado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 72.7,
+      "fin": 75.9,
+      "texto": "Muchísimas gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Me comunico con Demián Alberto Davido. ¿Alguna línea a su nombre? Sí, sí, sí. Me da un gusto. Mi nombre es Catalina. Lo contacto del área de beneficios de Movistar para brindarle una promoción para sus líneas. Me figura... Ah, pero no lo manejo yo. Lo maneja Administraciones. Ah, pero... Ah, bien, bien. En ese caso, sabrá en qué termina el número de administración ya que me figuran cuatro números más a su nombre. Hola. ¿Has dicho a Pedido? Bueno, no hay problema. ¿Dónde está el nombre? Perfecto, ahí lo dejo asentado. Muchísimas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.412,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:15:26.080552",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T10:35:51.735783",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.63,
+      "fin": 4.94,
+      "duracion": 3.31,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.064
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.96,
+      "fin": 6.66,
+      "duracion": 1.7,
+      "texto": "Me comunico con Demián Alberto Davido.",
+      "confianza": 0.347
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.68,
+      "fin": 9.04,
+      "duracion": 2.36,
+      "texto": "¿Alguna línea a su nombre?",
+      "confianza": 0.715
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.06,
+      "fin": 9.29,
+      "duracion": 0.22,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.04
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.3,
+      "fin": 10.11,
+      "duracion": 0.8,
+      "texto": "Me da un gusto.",
+      "confianza": 0.234
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.13,
+      "fin": 11.05,
+      "duracion": 0.92,
+      "texto": "Mi nombre es Catalina.",
+      "confianza": 0.758
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.33,
+      "fin": 15.81,
+      "duracion": 4.49,
+      "texto": "Lo contacto es del área de beneficios de Movistar para brindarle una promoción para sus líneas.",
+      "confianza": 0.692
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.55,
+      "fin": 23.64,
+      "duracion": 7.09,
+      "texto": "Me figura... Ah, pero no lo manejo yo.",
+      "confianza": 0.176
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.66,
+      "fin": 24.2,
+      "duracion": 0.54,
+      "texto": "Lo manejo Administraciones.",
+      "confianza": 0.001
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.23,
+      "fin": 25.27,
+      "duracion": 1.04,
+      "texto": "Ah, pero... Ah, bien, bien.",
+      "confianza": 0.363
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.33,
+      "fin": 31.14,
+      "duracion": 5.81,
+      "texto": "En ese caso, sabrá en qué termina el número de administración ya que me figuran cuatro números más a su nombre.",
+      "confianza": 0.747
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.45,
+      "fin": 34.23,
+      "duracion": 2.78,
+      "texto": "Hola.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.26,
+      "fin": 49.73,
+      "duracion": 15.47,
+      "texto": "¿Has dicho a Pedido?",
+      "confianza": 0.379
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.75,
+      "fin": 51.13,
+      "duracion": 1.38,
+      "texto": "Bueno, no hay problema.",
+      "confianza": 0.395
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.98,
+      "fin": 59.1,
+      "duracion": 1.12,
+      "texto": "¿Dónde está el nombre?",
+      "confianza": 0.106
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 68.19,
+      "fin": 72.69,
+      "duracion": 4.5,
+      "texto": "Perfecto, ahí lo dejo asentado.",
+      "confianza": 0.699
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 72.73,
+      "fin": 75.87,
+      "duracion": 3.14,
+      "texto": "Muchísimas gracias.",
+      "confianza": 0.82
+    }
+  ]
+}

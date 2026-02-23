@@ -1,0 +1,327 @@
+{
+  "archivo": "amza41_1_260213120107644_ACD_92781.wav",
+  "duracion_segundos": 77.12,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 41.73,
+    "Hablante A": 24.5
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 6.2,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.2,
+      "fin": 6.5,
+      "texto": "Hola, buenas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.5,
+      "fin": 7.0,
+      "texto": "Hablo con Ana."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.0,
+      "fin": 7.5,
+      "texto": "Sí, con ella hablamos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.5,
+      "fin": 8.1,
+      "texto": "Hola, Marina."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.1,
+      "fin": 11.4,
+      "texto": "Te comunicamos de Movistar para brindarte una promoción en la línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.5,
+      "fin": 18.4,
+      "texto": "Me figura que es hora de ver la compañía de Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.4,
+      "fin": 18.5,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.6,
+      "fin": 19.2,
+      "texto": "Bien, buenísimo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.2,
+      "fin": 21.6,
+      "texto": "Mira lo que nosotros te queremos brindar el día de hoy."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.1,
+      "fin": 29.7,
+      "texto": "Es un plan en donde vas a tener 10 días de regalo, 8 días de base, 4 gratis."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.9,
+      "fin": 34.1,
+      "texto": "Programa en América y te va a quedar en 10,320, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.9,
+      "fin": 39.6,
+      "texto": "Esta promoción que nosotros te brindamos es el 80% de descuento por 6 meses."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.7,
+      "fin": 44.0,
+      "texto": "Sí, pero yo lo tengo prepago."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.1,
+      "fin": 50.6,
+      "texto": "Sí, que no te agradecería, pero no me interesa porque yo ya fui cliente de Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.2,
+      "fin": 51.5,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.5,
+      "fin": 57.8,
+      "texto": "Me pasé a Claro por el tema que tenía siempre problemas con el internet y con todas esas cosas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.5,
+      "fin": 76.1,
+      "texto": "Entonces, estoy cómoda acá porque lo tengo prestado, si bien cargo más de 10.000 por mes, pero no tengo nunca problema con el internet, con mi viaje, ni nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 76.1,
+      "fin": 76.7,
+      "texto": "Lo agradezco."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 76.7,
+      "fin": 77.1,
+      "texto": "Vale, muchas gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas. Hablo con Ana. Sí, con ella hablamos. Hola, Marina. Te comunicamos de Movistar para brindarte una promoción en la línea. Me figura que es hora de ver la compañía de Claro. Sí, sí. Bien, buenísimo. Mira lo que nosotros te queremos brindar el día de hoy. Es un plan en donde vas a tener 10 días de regalo, 8 días de base, 4 gratis. Programa en América y te va a quedar en 10,320, ¿sí? Esta promoción que nosotros te brindamos es el 80% de descuento por 6 meses. Sí, pero yo lo tengo prepago. Sí, que no te agradecería, pero no me interesa porque yo ya fui cliente de Movistar. Sí. Me pasé a Claro por el tema que tenía siempre problemas con el internet y con todas esas cosas. Entonces, estoy cómoda acá porque lo tengo prestado, si bien cargo más de 10.000 por mes, pero no tengo nunca problema con el internet, con mi viaje, ni nada. Lo agradezco. Vale, muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.46,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:46:18.361781",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T10:43:03.658654",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.36,
+      "fin": 6.18,
+      "duracion": 3.82,
+      "texto": "Hola.",
+      "confianza": 0.201
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.2,
+      "fin": 6.46,
+      "duracion": 0.26,
+      "texto": "Hola, buenas.",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.48,
+      "fin": 6.99,
+      "duracion": 0.5,
+      "texto": "Hablo con Ana.",
+      "confianza": 0.256
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.0,
+      "fin": 7.45,
+      "duracion": 0.44,
+      "texto": "Sí, con ella hablamos.",
+      "confianza": 0.019
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.46,
+      "fin": 8.07,
+      "duracion": 0.6,
+      "texto": "Hola, Marina.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.13,
+      "fin": 11.39,
+      "duracion": 3.26,
+      "texto": "Me comunicabas de movistar para brindarte una promoción en la línea.",
+      "confianza": 0.759
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.49,
+      "fin": 18.38,
+      "duracion": 4.89,
+      "texto": "Me figura que es hora de ver la compañía de claro.",
+      "confianza": 0.467
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.4,
+      "fin": 18.54,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.176
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.56,
+      "fin": 19.16,
+      "duracion": 0.6,
+      "texto": "Bien, buenísimo.",
+      "confianza": 0.622
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.22,
+      "fin": 21.6,
+      "duracion": 2.38,
+      "texto": "Mirá lo que nosotros te queremos brindar el día de hoy.",
+      "confianza": 0.709
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.08,
+      "fin": 29.67,
+      "duracion": 7.59,
+      "texto": "Es un plan en donde vas a tener 10 días de regalo, 8 días de base, 4 gratis,",
+      "confianza": 0.755
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.9,
+      "fin": 34.06,
+      "duracion": 4.16,
+      "texto": "programa en América y te va a quedar en 10,320, ¿sí?",
+      "confianza": 0.506
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.88,
+      "fin": 39.63,
+      "duracion": 4.74,
+      "texto": "Esta promoción que nosotros te brindamos es el 80% de descuento por 6 meses.",
+      "confianza": 0.581
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.67,
+      "fin": 43.97,
+      "duracion": 1.3,
+      "texto": "Sí, pero yo lo tengo prepago.",
+      "confianza": 0.645
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.13,
+      "fin": 50.6,
+      "duracion": 6.47,
+      "texto": "Sí que no te agradecería, pero no me interesa porque yo ya fui clienta de movistar.",
+      "confianza": 0.689
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.18,
+      "fin": 51.52,
+      "duracion": 0.34,
+      "texto": "Sí.",
+      "confianza": 0.553
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.54,
+      "fin": 57.75,
+      "duracion": 6.21,
+      "texto": "Me pasé, claro, por el tema que tenía siempre problemas con el internet y con todas esas cosas.",
+      "confianza": 0.752
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.55,
+      "fin": 76.08,
+      "duracion": 17.53,
+      "texto": "Entonces, estoy cómoda acá porque lo tengo prestado, si bien cargo más de 10.000 por mes, pero no tengo nunca problema con el internet, con mi viaje, ni nada.",
+      "confianza": 0.713
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 76.1,
+      "fin": 76.68,
+      "duracion": 0.58,
+      "texto": "Lo agradezco.",
+      "confianza": 0.08
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 76.7,
+      "fin": 77.12,
+      "duracion": 0.42,
+      "texto": "Vale, muchas gracias.",
+      "confianza": 0.049
+    }
+  ]
+}

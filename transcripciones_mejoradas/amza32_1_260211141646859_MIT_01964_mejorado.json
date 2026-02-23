@@ -1,0 +1,315 @@
+{
+  "archivo": "amza32_1_260211141646859_MIT_01964.wav",
+  "duracion_segundos": 80.65,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 16.67,
+    "Hablante B": 56.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.6,
+      "fin": 17.2,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.7,
+      "fin": 25.5,
+      "texto": "Hola, Rubén."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.5,
+      "fin": 26.4,
+      "texto": "No lo escucho, Rubén."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.4,
+      "fin": 28.8,
+      "texto": "Si usted me escucha, no lo escucho."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.9,
+      "fin": 30.9,
+      "texto": "Decime."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.9,
+      "fin": 32.7,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.7,
+      "fin": 40.4,
+      "texto": "¿Estabas ocupado o tú harías... Ya no puedes... Decime, decime."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.4,
+      "fin": 47.8,
+      "texto": "Yo soy Agustín, te llamé recién, me dijiste que más tarde te llamé, que estabas muy ocupado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.8,
+      "fin": 55.5,
+      "texto": "¿Podemos hablar ahora?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.6,
+      "fin": 56.4,
+      "texto": "A ver, no te dije eso, pero bueno, no sé."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.4,
+      "fin": 57.0,
+      "texto": "¿Por qué no hablas más hablado?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.0,
+      "fin": 59.7,
+      "texto": "Hablamos recién que te había llamado anteriormente una chica."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.0,
+      "fin": 66.0,
+      "texto": "No, no me llamo, me llamo nombre."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.0,
+      "fin": 68.7,
+      "texto": "Tienes que decirme."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 68.7,
+      "fin": 72.8,
+      "texto": "¿Tienes la propuesta de la promoción de 8 mil pesos que te había comentado de 18 días?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 73.2,
+      "fin": 80.1,
+      "texto": "Sí, tengo Movistar, yo no me hace falta de la promoción, yo la tengo ya."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 80.1,
+      "fin": 80.3,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 80.3,
+      "fin": 80.5,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 80.5,
+      "fin": 80.7,
+      "texto": "Gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, Rubén. No lo escucho, Rubén. Si usted me escucha, no lo escucho. Decime. ¿Cómo estás? ¿Estabas ocupado o tú harías... Ya no puedes... Decime, decime. Yo soy Agustín, te llamé recién, me dijiste que más tarde te llamé, que estabas muy ocupado. ¿Podemos hablar ahora? A ver, no te dije eso, pero bueno, no sé. ¿Por qué no hablas más hablado? Hablamos recién que te había llamado anteriormente una chica. No, no me llamo, me llamo nombre. Tienes que decirme. ¿Tienes la propuesta de la promoción de 8 mil pesos que te había comentado de 18 días? Sí, tengo Movistar, yo no me hace falta de la promoción, yo la tengo ya. Gracias. Perfecto. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.343,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T03:48:10.522186",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "promoción de 8 mil pesos"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T09:27:14.976592",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.57,
+      "fin": 17.24,
+      "duracion": 16.67,
+      "texto": "Hola.",
+      "confianza": 0.846
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.7,
+      "fin": 25.47,
+      "duracion": 4.77,
+      "texto": "Hola, Rubén.",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.49,
+      "fin": 26.39,
+      "duracion": 0.9,
+      "texto": "No lo escucho, Rubén.",
+      "confianza": 0.364
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.41,
+      "fin": 28.75,
+      "duracion": 2.34,
+      "texto": "Si usted me escucha, no lo escucho.",
+      "confianza": 0.32
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.85,
+      "fin": 30.89,
+      "duracion": 1.04,
+      "texto": "Decime.",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.89,
+      "fin": 32.71,
+      "duracion": 0.82,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.222
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.73,
+      "fin": 40.38,
+      "duracion": 7.65,
+      "texto": "¿Estabas ocupado o tú harías... Ya no puedes... Decime, decime.",
+      "confianza": 0.382
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.4,
+      "fin": 47.81,
+      "duracion": 7.41,
+      "texto": "Yo soy Agustín, te llamé recién, me dijiste que más tarde te llamé, que estabas muy ocupado.",
+      "confianza": 0.526
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.83,
+      "fin": 55.54,
+      "duracion": 7.71,
+      "texto": "¿Podemos hablar ahora?",
+      "confianza": 0.404
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.56,
+      "fin": 56.39,
+      "duracion": 0.82,
+      "texto": "A ver, no te dije eso, pero bueno, no sé.",
+      "confianza": 0.006
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 56.41,
+      "fin": 57.03,
+      "duracion": 0.62,
+      "texto": "¿Por qué no hablas más hablado?",
+      "confianza": 0.038
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.05,
+      "fin": 59.67,
+      "duracion": 2.62,
+      "texto": "Hablamos recién que te había llamado anteriormente una chica.",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 60.05,
+      "fin": 65.97,
+      "duracion": 5.91,
+      "texto": "No, no me llamo, me llamo nombre.",
+      "confianza": 0.047
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 65.99,
+      "fin": 68.72,
+      "duracion": 2.73,
+      "texto": "Tienes que decirme.",
+      "confianza": 0.266
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 68.74,
+      "fin": 72.85,
+      "duracion": 4.11,
+      "texto": "¿Tienes la propuesta de la promoción de 8 mil pesos que te había comentado de 18 días?",
+      "confianza": 0.611
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 73.25,
+      "fin": 80.08,
+      "duracion": 6.84,
+      "texto": "Sí, tengo movistar, yo no me hace falta de la promoción, yo la tengo ya.",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 80.11,
+      "fin": 80.27,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 80.28,
+      "fin": 80.47,
+      "duracion": 0.18,
+      "texto": "Perfecto.",
+      "confianza": 0.009
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 80.49,
+      "fin": 80.65,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.131
+    }
+  ]
+}

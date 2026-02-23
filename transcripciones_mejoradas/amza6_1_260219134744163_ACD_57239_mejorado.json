@@ -1,0 +1,341 @@
+{
+  "archivo": "amza6_1_260219134744163_ACD_57239.wav",
+  "duracion_segundos": 65.58,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 35.48,
+    "Hablante B": 10.32
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.0,
+      "fin": 1.8,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 2.3,
+      "texto": "¿Buen día?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.5,
+      "fin": 6.7,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.7,
+      "fin": 7.6,
+      "texto": "Hola, mi nombre es Mikaela."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.6,
+      "fin": 9.2,
+      "texto": "Hablo con una de las niñas de Andrea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.5,
+      "fin": 13.2,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.2,
+      "fin": 13.7,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.7,
+      "fin": 16.4,
+      "texto": "Me estoy comunicando desde el área de recupero de clientes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.4,
+      "fin": 17.2,
+      "texto": "¿Tenemos que avisar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.2,
+      "fin": 22.9,
+      "texto": "Sí, pero no me interesaría por el momento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.9,
+      "fin": 23.0,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.1,
+      "fin": 24.4,
+      "texto": "¿Y por qué motivo no te interesa?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.0,
+      "fin": 28.2,
+      "texto": "Porque..."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.7,
+      "fin": 42.6,
+      "texto": "Recién tengo edad de baja a la línea porque no me ponen un precio y después cuando me voy a pagar distintos meses me cobran más."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 42.6,
+      "fin": 43.5,
+      "texto": "Ah, bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 43.5,
+      "fin": 53.8,
+      "texto": "De todas maneras, nosotros tenemos aquí un 80% de descuento, sí, 70% se mantienen por seis meses."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.8,
+      "fin": 53.9,
+      "texto": "Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.0,
+      "fin": 58.2,
+      "texto": "Nosotros tenemos un pleno horario bastante económico, hoy en día es 1,730 pesos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.0,
+      "fin": 64.1,
+      "texto": "Sí, pero no me interesaría."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.1,
+      "fin": 64.8,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.9,
+      "fin": 65.6,
+      "texto": "Muchas gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Buen día? Buen día. Hola, mi nombre es Mikaela. Hablo con una de las niñas de Andrea. Sí. Perfecto. Me estoy comunicando desde el área de recupero de clientes. ¿Tenemos que avisar? Sí, pero no me interesaría por el momento. Bien. ¿Y por qué motivo no te interesa? Porque... Recién tengo edad de baja a la línea porque no me ponen un precio y después cuando me voy a pagar distintos meses me cobran más. Ah, bien, perfecto. De todas maneras, nosotros tenemos aquí un 80% de descuento, sí, 70% se mantienen por seis meses. Claro. Nosotros tenemos un pleno horario bastante económico, hoy en día es 1,730 pesos. Sí, pero no me interesaría. Bien, perfecto. Muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.435,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T16:45:30.620803",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:21:27.515294",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.98,
+      "fin": 1.84,
+      "duracion": 0.86,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.457
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.88,
+      "fin": 2.32,
+      "duracion": 0.44,
+      "texto": "¿Buen día?",
+      "confianza": 0.382
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.49,
+      "fin": 6.67,
+      "duracion": 0.18,
+      "texto": "Buen día.",
+      "confianza": 0.032
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.68,
+      "fin": 7.61,
+      "duracion": 0.92,
+      "texto": "Hola, mi nombre es Mikaela.",
+      "confianza": 0.344
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.63,
+      "fin": 9.21,
+      "duracion": 1.58,
+      "texto": "Hablo con una de las niñas de Andrea.",
+      "confianza": 0.541
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.53,
+      "fin": 13.21,
+      "duracion": 0.68,
+      "texto": "Sí.",
+      "confianza": 0.523
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.23,
+      "fin": 13.72,
+      "duracion": 0.48,
+      "texto": "Perfecto.",
+      "confianza": 0.665
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.74,
+      "fin": 16.38,
+      "duracion": 2.64,
+      "texto": "Me estoy comunicando desde el área de recupero de clientes.",
+      "confianza": 0.571
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.4,
+      "fin": 17.16,
+      "duracion": 0.76,
+      "texto": "¿Tenemos que avisar?",
+      "confianza": 0.421
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.19,
+      "fin": 22.89,
+      "duracion": 1.7,
+      "texto": "Sí, pero no me interesaría por el momento.",
+      "confianza": 0.082
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.91,
+      "fin": 23.01,
+      "duracion": 0.1,
+      "texto": "Bien.",
+      "confianza": 0.209
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.05,
+      "fin": 24.41,
+      "duracion": 1.36,
+      "texto": "¿Y por qué motivo no te interesa?",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.02,
+      "fin": 28.2,
+      "duracion": 0.18,
+      "texto": "Porque...",
+      "confianza": 0.111
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.67,
+      "fin": 42.6,
+      "duracion": 13.93,
+      "texto": "Recién tengo edad de baja a la línea porque no me ponen un precio y después cuando me voy a pagar distintos meses me cobran más.",
+      "confianza": 0.615
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 42.62,
+      "fin": 43.52,
+      "duracion": 0.9,
+      "texto": "Ah, bien, perfecto.",
+      "confianza": 0.659
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.54,
+      "fin": 53.79,
+      "duracion": 10.25,
+      "texto": "De todas maneras, nosotros tenemos aquí un 80% de descuento, sí, 70% se mantienen por seis meses.",
+      "confianza": 0.622
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.81,
+      "fin": 53.93,
+      "duracion": 0.12,
+      "texto": "Claro.",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.99,
+      "fin": 58.24,
+      "duracion": 4.24,
+      "texto": "Nosotros tenemos un pleno horario bastante económico, hoy en día es 1,730 pesos.",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.05,
+      "fin": 64.07,
+      "duracion": 3.02,
+      "texto": "Sí, pero no me interesaría.",
+      "confianza": 0.657
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 64.09,
+      "fin": 64.85,
+      "duracion": 0.76,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.399
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 64.87,
+      "fin": 65.58,
+      "duracion": 0.7,
+      "texto": "Muchas gracias.",
+      "confianza": 0.286
+    }
+  ]
+}

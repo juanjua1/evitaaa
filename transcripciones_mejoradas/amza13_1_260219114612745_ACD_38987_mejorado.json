@@ -1,0 +1,329 @@
+{
+  "archivo": "amza13_1_260219114612745_ACD_38987.wav",
+  "duracion_segundos": 70.99,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 32.38,
+    "Hablante A": 27.19
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.1,
+      "fin": 2.9,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.6,
+      "fin": 5.2,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.2,
+      "fin": 7.7,
+      "texto": "Lo estamos comunicando desde el área de beneficios de movilidad."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.9,
+      "fin": 9.4,
+      "texto": "Hola, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.4,
+      "fin": 10.1,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.1,
+      "fin": 16.3,
+      "texto": "Tenemos un descuento exclusivo para los clientes de Claro, un plan de 18GB en 10.730 pesos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.7,
+      "fin": 24.4,
+      "texto": "Ah, mira, por ahora no, porque yo estoy con mi deuda muy cara, ¿viste?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.4,
+      "fin": 24.6,
+      "texto": "Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.6,
+      "fin": 31.8,
+      "texto": "Tengan presente que en el caso de realizar la portabilidad conmigo, le bonificaremos el 100% de la deuda."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.3,
+      "fin": 46.0,
+      "texto": "Te quería comentar que me llamaron porque yo puse dos líneas a nombre de mi hija porque yo no podía, ¿viste?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 46.0,
+      "fin": 50.4,
+      "texto": "Y un fin todavía no me llegó y ya hace más de un mes que yo no podía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.4,
+      "fin": 53.5,
+      "texto": "Ah, eso lo tendrás que consultar con el asesor que le asesoró."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.3,
+      "fin": 59.3,
+      "texto": "Y mandé un mensaje, pero no, nadie me responde, nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.4,
+      "fin": 62.5,
+      "texto": "Bueno, si quieren me ponen en contacto por WhatsApp y vemos bien todo, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.5,
+      "fin": 63.2,
+      "texto": "Y de paso"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.6,
+      "fin": 65.4,
+      "texto": "Le dejo las promos por si les llega a interesar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.4,
+      "fin": 67.7,
+      "texto": "Bueno, vale, vale, vale."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 67.7,
+      "fin": 68.8,
+      "texto": "Bueno, ha sido un gusto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 68.8,
+      "fin": 70.4,
+      "texto": "Adiós."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 70.5,
+      "fin": 71.0,
+      "texto": "Chao."
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. ¿Qué tal? Lo estamos comunicando desde el área de beneficios de movilidad. Hola, ¿sí? ¿Qué tal? Tenemos un descuento exclusivo para los clientes de Claro, un plan de 18GB en 10.730 pesos. Ah, mira, por ahora no, porque yo estoy con mi deuda muy cara, ¿viste? Claro. Tengan presente que en el caso de realizar la portabilidad conmigo, le bonificaremos el 100% de la deuda. Te quería comentar que me llamaron porque yo puse dos líneas a nombre de mi hija porque yo no podía, ¿viste? Y un fin todavía no me llegó y ya hace más de un mes que yo no podía. Ah, eso lo tendrás que consultar con el asesor que le asesoró. Y mandé un mensaje, pero no, nadie me responde, nada. Bueno, si quieren me ponen en contacto por WhatsApp y vemos bien todo, ¿sí? Y de paso Le dejo las promos por si les llega a interesar. Bueno, vale, vale, vale. Bueno, ha sido un gusto. Adiós. Chao.",
+  "calidad": {
+    "confianza_promedio": 0.511,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T13:36:26.855540",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 18GB"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:23:38.586972",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.07,
+      "fin": 2.87,
+      "duracion": 0.8,
+      "texto": "Hola, ¿buen día?",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.65,
+      "fin": 5.2,
+      "duracion": 1.54,
+      "texto": "¿Qué tal?",
+      "confianza": 0.549
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.22,
+      "fin": 7.66,
+      "duracion": 2.44,
+      "texto": "Lo estamos comunicando del área de beneficio de movilidad.",
+      "confianza": 0.687
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.86,
+      "fin": 9.38,
+      "duracion": 0.52,
+      "texto": "Hola, ¿sí?",
+      "confianza": 0.476
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.4,
+      "fin": 10.08,
+      "duracion": 0.68,
+      "texto": "¿Qué tal?",
+      "confianza": 0.136
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.1,
+      "fin": 16.33,
+      "duracion": 6.23,
+      "texto": "Tenemos un descuento exclusivo para los clientes de Claro, un plan de 18GB en 10.730 pesos.",
+      "confianza": 0.788
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.71,
+      "fin": 24.42,
+      "duracion": 5.71,
+      "texto": "Ah, mira, por ahora no, porque yo estoy con mi deuda muy caro, ¿viste?",
+      "confianza": 0.309
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.44,
+      "fin": 24.56,
+      "duracion": 0.12,
+      "texto": "Claro.",
+      "confianza": 0.075
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.58,
+      "fin": 31.81,
+      "duracion": 7.23,
+      "texto": "Tengan presente que en el caso de realizar la portabilidad conmigo, le bonificaremos el 100% de la deuda.",
+      "confianza": 0.813
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.33,
+      "fin": 46.0,
+      "duracion": 12.68,
+      "texto": "Te quería como el chat que me llamara porque yo puse dos líneas a nombre de mi hija porque yo no podía, ¿viste?",
+      "confianza": 0.457
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.02,
+      "fin": 50.37,
+      "duracion": 4.35,
+      "texto": "Y un fin todavía no me llegó y ya hace más de un mes que yo no podía.",
+      "confianza": 0.482
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.39,
+      "fin": 53.53,
+      "duracion": 3.14,
+      "texto": "Ah, eso lo tendrás que consultar con el asesor que le asesoró.",
+      "confianza": 0.602
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.31,
+      "fin": 59.34,
+      "duracion": 4.02,
+      "texto": "Y mandé un mensaje, pero no, nadie me responde, nada.",
+      "confianza": 0.438
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.36,
+      "fin": 62.48,
+      "duracion": 3.12,
+      "texto": "Bueno, si quieren me ponen en contacto video WhatsApp y vemos bien todo, ¿sí?",
+      "confianza": 0.623
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.5,
+      "fin": 63.16,
+      "duracion": 0.66,
+      "texto": "Y de paso",
+      "confianza": 0.775
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.56,
+      "fin": 65.43,
+      "duracion": 1.87,
+      "texto": "Le dejo las proms por si les llega a interesar.",
+      "confianza": 0.673
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 66.36,
+      "fin": 67.68,
+      "duracion": 1.33,
+      "texto": "Bueno, vale, vale, vale.",
+      "confianza": 0.234
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 67.7,
+      "fin": 68.78,
+      "duracion": 1.08,
+      "texto": "Bueno, ha sido un gusto.",
+      "confianza": 0.506
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.81,
+      "fin": 70.37,
+      "duracion": 1.57,
+      "texto": "Adiós.",
+      "confianza": 0.645
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 70.51,
+      "fin": 70.99,
+      "duracion": 0.48,
+      "texto": "Chao.",
+      "confianza": 0.479
+    }
+  ]
+}

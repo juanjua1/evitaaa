@@ -1,0 +1,341 @@
+{
+  "archivo": "amza5_1_260212165601885_ACD_27339.wav",
+  "duracion_segundos": 60.94,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 24.75,
+    "Hablante A": 28.52
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 5.0,
+      "texto": "Hola, buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.0,
+      "fin": 5.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.1,
+      "fin": 8.5,
+      "texto": "¿Me comunico con la señorita María Laura?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 8.5,
+      "fin": 9.5,
+      "texto": "No."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.5,
+      "fin": 11.0,
+      "texto": "¿Con quién tengo el gusto de hablar?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.0,
+      "fin": 12.6,
+      "texto": "José Juliana, ejecutivo comercial."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.0,
+      "fin": 14.9,
+      "texto": "Sí, no, no, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.0,
+      "fin": 16.1,
+      "texto": "María Laura es mi hermana, ¿no?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.2,
+      "fin": 23.6,
+      "texto": "Pero si me llaman para cambio de línea o de plan, esas cosas, yo no puedo hacer nada porque la titular es ella."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.6,
+      "fin": 24.2,
+      "texto": "La titular es ella."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.2,
+      "fin": 25.1,
+      "texto": "Así que te agradezco."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.1,
+      "fin": 26.1,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.2,
+      "fin": 27.1,
+      "texto": "Le hago una consulta."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.5,
+      "fin": 29.5,
+      "texto": "¿Usted tiene el número de las titular?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.3,
+      "fin": 41.0,
+      "texto": "Sí, sí, pero no, porque yo ya quise hacer cambios y como el trámite es engorroso o había que mandar la foto del DNI, esa no quiere mandar la foto por las encargadas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.6,
+      "fin": 50.8,
+      "texto": "Entonces, te agradezco porque yo ya me quise removilizar, ya me quise cambiar otra vez, pero es solo un trámite y no lo puedo hacer."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.8,
+      "fin": 53.6,
+      "texto": "Lamentablemente se la de mi hermana y es un tema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.6,
+      "fin": 56.8,
+      "texto": "Así que bueno, te agradezco."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.8,
+      "fin": 59.7,
+      "texto": "No, por favor, que tenga buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.2,
+      "fin": 60.5,
+      "texto": "Gracias, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.5,
+      "fin": 60.9,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Sí. ¿Me comunico con la señorita María Laura? No. ¿Con quién tengo el gusto de hablar? José Juliana, ejecutivo comercial. Sí, no, no, no. María Laura es mi hermana, ¿no? Pero si me llaman para cambio de línea o de plan, esas cosas, yo no puedo hacer nada porque la titular es ella. La titular es ella. Así que te agradezco. Bien. Le hago una consulta. ¿Usted tiene el número de las titular? Sí, sí, pero no, porque yo ya quise hacer cambios y como el trámite es engorroso o había que mandar la foto del DNI, esa no quiere mandar la foto por las encargadas. Entonces, te agradezco porque yo ya me quise removilizar, ya me quise cambiar otra vez, pero es solo un trámite y no lo puedo hacer. Lamentablemente se la de mi hermana y es un tema. Así que bueno, te agradezco. No, por favor, que tenga buenas tardes. Gracias, gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.396,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T06:54:18.481084",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:17:30.566652",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.89,
+      "fin": 4.99,
+      "duracion": 3.1,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.07
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.01,
+      "fin": 5.07,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.119
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.09,
+      "fin": 8.51,
+      "duracion": 3.42,
+      "texto": "¿Me comunico con la señorita María Laura?",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.53,
+      "fin": 9.49,
+      "duracion": 0.96,
+      "texto": "No.",
+      "confianza": 0.887
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.51,
+      "fin": 10.96,
+      "duracion": 1.44,
+      "texto": "¿Con quién tengo el gusto de hablar?",
+      "confianza": 0.631
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.97,
+      "fin": 12.64,
+      "duracion": 1.66,
+      "texto": "José Juliana, ejecutiva comercial.",
+      "confianza": 0.569
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.98,
+      "fin": 14.94,
+      "duracion": 0.96,
+      "texto": "Sí, no, no, no.",
+      "confianza": 0.308
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.96,
+      "fin": 16.12,
+      "duracion": 1.16,
+      "texto": "María Laura es mi hermana, ¿no?",
+      "confianza": 0.434
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.18,
+      "fin": 23.55,
+      "duracion": 7.37,
+      "texto": "Pero si me llaman para cambio de línea o de plan, esas cosas, yo no puedo hacer nada porque la titular es ella.",
+      "confianza": 0.441
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.57,
+      "fin": 24.17,
+      "duracion": 0.6,
+      "texto": "La titular es ella.",
+      "confianza": 0.177
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.19,
+      "fin": 25.15,
+      "duracion": 0.96,
+      "texto": "Así que te agradezco.",
+      "confianza": 0.338
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.05,
+      "fin": 26.15,
+      "duracion": 0.1,
+      "texto": "Bien.",
+      "confianza": 0.068
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.17,
+      "fin": 27.13,
+      "duracion": 0.96,
+      "texto": "Le hago una consulta.",
+      "confianza": 0.509
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.53,
+      "fin": 29.53,
+      "duracion": 2.0,
+      "texto": "¿Usted tiene el número de las titulas?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.28,
+      "fin": 41.05,
+      "duracion": 9.77,
+      "texto": "Sí, sí, pero no, porque yo ya quise hacer cambios y como el trámite es engorroso o había que mandar la foto de DNI, esa no quiere mandar la foto por las encardas.",
+      "confianza": 0.632
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.59,
+      "fin": 50.77,
+      "duracion": 9.17,
+      "texto": "Entonces, te agradezco porque yo ya me quise removizar, ya me quise cambiar otra vez, pero es solo un trámite y no lo puedo hacer.",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 50.78,
+      "fin": 53.59,
+      "duracion": 2.8,
+      "texto": "Lamentablemente se se la de mi hermana y es un tema.",
+      "confianza": 0.376
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.61,
+      "fin": 56.75,
+      "duracion": 3.14,
+      "texto": "Así que bueno, te agradezco.",
+      "confianza": 0.203
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.77,
+      "fin": 59.67,
+      "duracion": 2.9,
+      "texto": "No, por favor, que tenga buenas tardes.",
+      "confianza": 0.408
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.17,
+      "fin": 60.52,
+      "duracion": 0.34,
+      "texto": "Gracias, gracias.",
+      "confianza": 0.032
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.54,
+      "fin": 60.94,
+      "duracion": 0.4,
+      "texto": "Hasta luego.",
+      "confianza": 0.354
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "archivo": "amza27_1_260210135541004_ACD_93461.wav",
+  "duracion_segundos": 71.45,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 16.8,
+    "Hablante B": 45.35
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.3,
+      "fin": 2.1,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.1,
+      "fin": 3.4,
+      "texto": "Hola, ¿qué tal? ¿Con Julián?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 4.8,
+      "texto": "Sí, ¿cómo te va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.8,
+      "fin": 5.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.4,
+      "fin": 5.8,
+      "texto": "Mucho gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.9,
+      "fin": 7.2,
+      "texto": "¿Julián Rossi, le saluda?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 12.4,
+      "texto": "Me estoy contactando con usted por un beneficio para lo que es la línea de Wi-Fi en casa, ¿cómo le va?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.6,
+      "fin": 19.1,
+      "texto": "No, vos sabés que nosotros habíamos pedido la baja y ya pedimos otra empresa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.1,
+      "fin": 25.9,
+      "texto": "Bueno, pero... ¿Me estás diciendo por el domicilio de... de Víctor Hugo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.4,
+      "fin": 28.0,
+      "texto": "Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.1,
+      "fin": 36.5,
+      "texto": "Ya pedí y entró otra empresa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.4,
+      "fin": 39.6,
+      "texto": "Ya está la baja."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 39.7,
+      "fin": 44.3,
+      "texto": "¿Y cómo podrían ser para entregarte el router?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.3,
+      "fin": 47.6,
+      "texto": "Esos mismos técnicos los van a ir a buscar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.6,
+      "fin": 53.8,
+      "texto": "Ellos te mandan un mensajito antes para poder ir a buscarlo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.0,
+      "fin": 55.0,
+      "texto": "Sí, comunica."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.0,
+      "fin": 59.6,
+      "texto": "Ah, eso se comunica con vos por WhatsApp, justamente a esta línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.9,
+      "fin": 63.9,
+      "texto": "Ah, buenísimo, buenísimo, buenísimo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.9,
+      "fin": 67.7,
+      "texto": "Perfecto, muchas gracias entonces por tu tiempo, que tengas hermoso día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 68.5,
+      "fin": 71.5,
+      "texto": "Vale, igualmente, chau, chau."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? ¿Con Julián? Sí, ¿cómo te va? Sí. Mucho gusto. ¿Julián Rossi, le saluda? Me estoy contactando con usted por un beneficio para lo que es la línea de Wi-Fi en casa, ¿cómo le va? No, vos sabés que nosotros habíamos pedido la baja y ya pedimos otra empresa. Bueno, pero... ¿Me estás diciendo por el domicilio de... de Víctor Hugo? Claro. Ya pedí y entró otra empresa. Ya está la baja. ¿Y cómo podrían ser para entregarte el router? Esos mismos técnicos los van a ir a buscar. Ellos te mandan un mensajito antes para poder ir a buscarlo. Sí, comunica. Ah, eso se comunica con vos por WhatsApp, justamente a esta línea. Ah, buenísimo, buenísimo, buenísimo. Perfecto, muchas gracias entonces por tu tiempo, que tengas hermoso día. Vale, igualmente, chau, chau.",
+  "calidad": {
+    "confianza_promedio": 0.565,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T02:02:59.031712",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "Wi-Fi en casa"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T08:55:59.474499",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.3,
+      "fin": 2.1,
+      "duracion": 1.8,
+      "texto": "Hola.",
+      "confianza": 0.508
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.12,
+      "fin": 3.4,
+      "duracion": 1.28,
+      "texto": "Hola, ¿qué tal con Julián?",
+      "confianza": 0.589
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.97,
+      "fin": 4.79,
+      "duracion": 0.82,
+      "texto": "Sí, ¿cómo te vas?",
+      "confianza": 0.409
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.81,
+      "fin": 5.35,
+      "duracion": 0.54,
+      "texto": "Sí.",
+      "confianza": 0.453
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.37,
+      "fin": 5.83,
+      "duracion": 0.46,
+      "texto": "Mucho gusto.",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.89,
+      "fin": 7.15,
+      "duracion": 1.26,
+      "texto": "Julián Rossi, ¿les saludan?",
+      "confianza": 0.556
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.17,
+      "fin": 12.38,
+      "duracion": 5.21,
+      "texto": "Me estoy contactando con usted por un beneficio para lo que es la línea del Wi-Fi en casa, ¿cómo le va?",
+      "confianza": 0.673
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.62,
+      "fin": 19.05,
+      "duracion": 5.43,
+      "texto": "No, vos sabes que nosotros habíamos pedido la baja y ya pedimos otra empresa.",
+      "confianza": 0.688
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.05,
+      "fin": 25.94,
+      "duracion": 4.89,
+      "texto": "Bueno, pero... ¿Me estás diciendo por el domicilio de... de Víctor Hugo?",
+      "confianza": 0.557
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.4,
+      "fin": 27.98,
+      "duracion": 0.58,
+      "texto": "Claro.",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.13,
+      "fin": 36.48,
+      "duracion": 8.35,
+      "texto": "Ya pedí y entró otra empresa.",
+      "confianza": 0.691
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.42,
+      "fin": 39.56,
+      "duracion": 2.14,
+      "texto": "Ya está la baja.",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.72,
+      "fin": 44.27,
+      "duracion": 4.55,
+      "texto": "¿Y cómo podrían ser para entregarte el router?",
+      "confianza": 0.564
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.29,
+      "fin": 47.61,
+      "duracion": 3.32,
+      "texto": "Esos mismos técnicos los van a ir a buscar.",
+      "confianza": 0.637
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.63,
+      "fin": 53.8,
+      "duracion": 6.17,
+      "texto": "Ellos te mandan un mensajito antes para poder ir a buscarlo.",
+      "confianza": 0.562
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.96,
+      "fin": 55.03,
+      "duracion": 1.06,
+      "texto": "Sí, comunica.",
+      "confianza": 0.67
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.97,
+      "fin": 59.56,
+      "duracion": 3.59,
+      "texto": "Ah, eso se comunica con vos por WhatsApp, justamente a esta línea.",
+      "confianza": 0.586
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.91,
+      "fin": 63.92,
+      "duracion": 4.02,
+      "texto": "Ah, buenísimo, buenísimo, buenísimo.",
+      "confianza": 0.304
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 63.94,
+      "fin": 67.72,
+      "duracion": 3.77,
+      "texto": "Perfecto, muchas gracias entonces por tu tiempo, que tengas hermoso día.",
+      "confianza": 0.471
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 68.54,
+      "fin": 71.45,
+      "duracion": 2.91,
+      "texto": "Vale, igualmente, chau, chau.",
+      "confianza": 0.384
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "archivo": "amza35_1_260209125625412_ACD_15399.wav",
+  "duracion_segundos": 76.29,
+  "num_segmentos": 21,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 71.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.5,
+      "fin": 3.1,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.1,
+      "fin": 10.7,
+      "texto": "¿Hablo con María?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.7,
+      "fin": 10.7,
+      "texto": "No."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.8,
+      "fin": 16.0,
+      "texto": "Ah, bien, estoy segura de que esa es la titular."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.0,
+      "fin": 16.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.1,
+      "fin": 20.2,
+      "texto": "Bien, sería para darle un descuento, para quienes tienen dos líneas activas, ¿no es claro?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.7,
+      "fin": 25.3,
+      "texto": "Es un plan que tiene en total 14 gigas por tan solo $7,790 pesos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.7,
+      "fin": 32.2,
+      "texto": "Tendrían un descuento del 80% por seis meses, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.3,
+      "fin": 32.4,
+      "texto": "Ajá."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.2,
+      "fin": 38.7,
+      "texto": "Esto sería para volver a la compañía de Movistar y es muy sencilla la gestión porque en cuantas horas hábiles ya tienen el chip en sus manos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.8,
+      "fin": 47.6,
+      "texto": "O sea, el día miércoles ya tendrían todo lo que es el chip y yo les aviso cuándo colocarlo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.6,
+      "fin": 50.3,
+      "texto": "No estoy interesado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.3,
+      "fin": 50.5,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.5,
+      "fin": 51.3,
+      "texto": "Bien, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.3,
+      "fin": 58.9,
+      "texto": "¿Por algún motivo en particular no te interesa?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.9,
+      "fin": 59.3,
+      "texto": "No, estoy bien, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.4,
+      "fin": 60.0,
+      "texto": "Bien, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.1,
+      "fin": 63.1,
+      "texto": "Bueno, pero siempre se puede estar mejor igual."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.6,
+      "fin": 65.9,
+      "texto": "No, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.9,
+      "fin": 70.0,
+      "texto": "Bien, bueno, entonces ahora dejo su entabla, no te preocupes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 70.0,
+      "fin": 76.3,
+      "texto": "Por lo menos nos reímos, por lo menos."
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Hablo con María? No. Ah, bien, estoy segura de que esa es la titular. Sí. Bien, sería para darle un descuento, para quienes tienen dos líneas activas, ¿no es claro? Es un plan que tiene en total 14 gigas por tan solo $7,790 pesos. Tendrían un descuento del 80% por seis meses, ¿sí? Ajá. Esto sería para volver a la compañía de Movistar y es muy sencilla la gestión porque en cuantas horas hábiles ya tienen el chip en sus manos. O sea, el día miércoles ya tendrían todo lo que es el chip y yo les aviso cuándo colocarlo. No estoy interesado. Gracias. Bien, entiendo. ¿Por algún motivo en particular no te interesa? No, estoy bien, gracias. Bien, entiendo. Bueno, pero siempre se puede estar mejor igual. No, gracias. Bien, bueno, entonces ahora dejo su entabla, no te preocupes. Por lo menos nos reímos, por lo menos.",
+  "calidad": {
+    "confianza_promedio": 0.449,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:25:15.106987",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 14 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: gigas, palabras cortadas), mejora de la fluidez y claridad del texto."
+    },
+    "fecha_mejora": "2026-02-20T09:37:17.561717",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.53,
+      "fin": 3.13,
+      "duracion": 0.6,
+      "texto": "¿Hola?",
+      "confianza": 0.153
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.15,
+      "fin": 10.66,
+      "duracion": 7.51,
+      "texto": "¿Habló con María?",
+      "confianza": 0.625
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.68,
+      "fin": 10.74,
+      "duracion": 0.06,
+      "texto": "No.",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.78,
+      "fin": 15.99,
+      "duracion": 5.21,
+      "texto": "Ah, bien, estoy segura de que esa es como titular.",
+      "confianza": 0.288
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.01,
+      "fin": 16.07,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.108
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.09,
+      "fin": 20.19,
+      "duracion": 4.11,
+      "texto": "Bien, sería para darle lo que es un descuento, que es aquello que tiene dos líneas activas, ¿no es claro?",
+      "confianza": 0.552
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.67,
+      "fin": 25.28,
+      "duracion": 4.61,
+      "texto": "Es un plan que tiene en total 14 rigas por tan solo $7,790 pesos.",
+      "confianza": 0.6
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.74,
+      "fin": 32.25,
+      "duracion": 6.51,
+      "texto": "Tendrían un descuento del 80% de descuento por seis meses, ¿sí?",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.27,
+      "fin": 32.35,
+      "duracion": 0.08,
+      "texto": "Ajá.",
+      "confianza": 0.246
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.22,
+      "fin": 38.67,
+      "duracion": 5.45,
+      "texto": "Esto sería para volver a la compañía de Movistar y es muy sencilla la gestión porque en cuantas horas hábiles ya tienen el chip en sus manos.",
+      "confianza": 0.64
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.75,
+      "fin": 47.56,
+      "duracion": 8.81,
+      "texto": "O sea, el día de miércoles ya tendrían todo lo que es el chip y yo les aviso cuándo colocarlo.",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.58,
+      "fin": 50.28,
+      "duracion": 2.7,
+      "texto": "No estoy interesado.",
+      "confianza": 0.19
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.3,
+      "fin": 50.46,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.015
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.48,
+      "fin": 51.27,
+      "duracion": 0.78,
+      "texto": "Bien, entiendo.",
+      "confianza": 0.754
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.28,
+      "fin": 58.85,
+      "duracion": 7.57,
+      "texto": "Por algún motivo en particular no te interesa.",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.87,
+      "fin": 59.34,
+      "duracion": 0.46,
+      "texto": "No, estoy bien y claro.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.35,
+      "fin": 60.05,
+      "duracion": 0.7,
+      "texto": "Bien, entiendo.",
+      "confianza": 0.432
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 60.08,
+      "fin": 63.08,
+      "duracion": 3.0,
+      "texto": "Bueno, pero siempre se puede estar mejor igual.",
+      "confianza": 0.63
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 63.63,
+      "fin": 65.9,
+      "duracion": 2.27,
+      "texto": "No, gracias.",
+      "confianza": 0.638
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 65.92,
+      "fin": 69.95,
+      "duracion": 4.03,
+      "texto": "Bien, bueno, entonces ahora deja su entabla, no te preocupes.",
+      "confianza": 0.585
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 69.97,
+      "fin": 76.29,
+      "duracion": 6.32,
+      "texto": "Por lo menos nos reímos, por lo menos.",
+      "confianza": 0.481
+    }
+  ]
+}

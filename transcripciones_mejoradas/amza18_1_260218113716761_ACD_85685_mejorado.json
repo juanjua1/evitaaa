@@ -1,0 +1,327 @@
+{
+  "archivo": "amza18_1_260218113716761_ACD_85685.wav",
+  "duracion_segundos": 60.62,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 46.97,
+    "Hablante B": 1.35
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.7,
+      "fin": 0.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.1,
+      "fin": 4.6,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.6,
+      "fin": 5.0,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.6,
+      "fin": 6.1,
+      "texto": "¿Cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.1,
+      "fin": 10.0,
+      "texto": "¿Nos comunicamos desde el área del edificio Movistar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.9,
+      "fin": 12.2,
+      "texto": "Sí, disculpa que te interrumpa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.2,
+      "fin": 14.9,
+      "texto": "Recién me acabo de cortar con Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.6,
+      "fin": 18.6,
+      "texto": "Le pidiendo que por favor ya se dejen de molestar, hijo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.9,
+      "fin": 20.4,
+      "texto": "Todo el día me están llamando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.8,
+      "fin": 27.6,
+      "texto": "Tengo 40 llamadas diarias de Movistar, a toda hora, hasta las 11 de la noche, llama a Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.3,
+      "fin": 33.1,
+      "texto": "¿En algún momento vas a escuchar algún tipo de promoción y más?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.1,
+      "fin": 35.7,
+      "texto": "No, no me interesa escuchar ningún tipo de promoción."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.8,
+      "fin": 42.6,
+      "texto": "Quiero que me dejen de molestar, porque no puede ser que me estén llamando domingos, feriados, de día, de noche, de tarde."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.2,
+      "fin": 45.4,
+      "texto": "Suena el teléfono únicamente de ustedes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.3,
+      "fin": 47.5,
+      "texto": "No quiero saber más nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.3,
+      "fin": 53.0,
+      "texto": "Ahí lo vamos a dejar haciendo nuevamente, entonces."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.0,
+      "fin": 53.4,
+      "texto": "Muchísimas gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.4,
+      "fin": 53.8,
+      "texto": "Chau, hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.8,
+      "fin": 54.0,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.3,
+      "fin": 60.6,
+      "texto": "No."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día. Buen día. ¿Cómo le va? ¿Nos comunicamos desde el área del edificio Movistar? Sí, disculpa que te interrumpa. Recién me acabo de cortar con Movistar. Le pidiendo que por favor ya se dejen de molestar, hijo. Todo el día me están llamando. Tengo 40 llamadas diarias de Movistar, a toda hora, hasta las 11 de la noche, llama a Movistar. ¿En algún momento vas a escuchar algún tipo de promoción y más? No, no me interesa escuchar ningún tipo de promoción. Quiero que me dejen de molestar, porque no puede ser que me estén llamando domingos, feriados, de día, de noche, de tarde. Suena el teléfono únicamente de ustedes. No quiero saber más nada. Ahí lo vamos a dejar haciendo nuevamente, entonces. Muchísimas gracias. Chau, hasta luego. Hasta luego. No.",
+  "calidad": {
+    "confianza_promedio": 0.497,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T00:10:46.481520",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "RECLAMO",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T01:33:29.893144",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.69,
+      "fin": 0.87,
+      "duracion": 0.18,
+      "texto": "Hola.",
+      "confianza": 0.51
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.11,
+      "fin": 4.61,
+      "duracion": 3.5,
+      "texto": "Hola, buen día.",
+      "confianza": 0.5
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.63,
+      "fin": 5.03,
+      "duracion": 0.4,
+      "texto": "Buen día.",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.59,
+      "fin": 6.07,
+      "duracion": 0.48,
+      "texto": "¿Cómo le va?",
+      "confianza": 0.221
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.09,
+      "fin": 9.98,
+      "duracion": 3.88,
+      "texto": "¿Nos comunicamos desde el área del edificio Movistar?",
+      "confianza": 0.283
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.88,
+      "fin": 12.2,
+      "duracion": 1.32,
+      "texto": "Sí, disculpa que te interrumpa.",
+      "confianza": 0.569
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.24,
+      "fin": 14.94,
+      "duracion": 2.7,
+      "texto": "Recién me acabo de cortar con Movistar.",
+      "confianza": 0.787
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.64,
+      "fin": 18.55,
+      "duracion": 2.9,
+      "texto": "Le pidiéndole que por favor ya se dejen de joder, hijo.",
+      "confianza": 0.766
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.93,
+      "fin": 20.35,
+      "duracion": 1.42,
+      "texto": "Todo el día me están llamando.",
+      "confianza": 0.764
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.75,
+      "fin": 27.57,
+      "duracion": 6.83,
+      "texto": "Tengo 40 llamadas diarias de Movistar, a toda hora, hasta las 11 de la noche, llama a Movistar.",
+      "confianza": 0.611
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.26,
+      "fin": 33.07,
+      "duracion": 4.8,
+      "texto": "¿En algún momento vas a escuchar algún tipo de promoción y más?",
+      "confianza": 0.061
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.13,
+      "fin": 35.71,
+      "duracion": 2.58,
+      "texto": "No, no me interesa escuchar ningún tipo de promoción.",
+      "confianza": 0.652
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.77,
+      "fin": 42.64,
+      "duracion": 6.87,
+      "texto": "Quiero que me dejen de molestar, porque no puede ser que me estén llamando domingos, feriados, de día, de noche, de tarde.",
+      "confianza": 0.838
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.22,
+      "fin": 45.42,
+      "duracion": 2.2,
+      "texto": "Suena el teléfono únicamente de ustedes.",
+      "confianza": 0.825
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 46.34,
+      "fin": 47.54,
+      "duracion": 1.2,
+      "texto": "No quiero saber más nada.",
+      "confianza": 0.847
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.28,
+      "fin": 52.97,
+      "duracion": 4.69,
+      "texto": "Ahí lo vamos a dejar haciendo nuevamente, entonces.",
+      "confianza": 0.144
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.99,
+      "fin": 53.39,
+      "duracion": 0.4,
+      "texto": "Muchísimas gracias.",
+      "confianza": 0.072
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.41,
+      "fin": 53.79,
+      "duracion": 0.38,
+      "texto": "Chau, hasta luego.",
+      "confianza": 0.094
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.81,
+      "fin": 54.05,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.095
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.26,
+      "fin": 60.62,
+      "duracion": 1.35,
+      "texto": "No.",
+      "confianza": 0.586
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "archivo": "amza31_1_260213104431513_MIT_01955.wav",
+  "duracion_segundos": 74.49,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 40.53,
+    "Hablante A": 4.65
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.7,
+      "fin": 9.3,
+      "texto": "Bienvenido al buzón de voz. Hola, soy Mariana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.3,
+      "fin": 10.9,
+      "texto": "En este momento no puedo atenderte."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.0,
+      "fin": 15.3,
+      "texto": "Después me comunico con vos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.3,
+      "fin": 17.7,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.2,
+      "fin": 23.9,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.9,
+      "fin": 74.5,
+      "texto": "Maravillosa."
+    }
+  ],
+  "transcripcion_completa": "Bienvenido al buzón de voz. Hola, soy Mariana. En este momento no puedo atenderte. Después me comunico con vos. Después del tono, deja tu mensaje. Para finalizar, cortá o marca la tecla numeral para más opciones. Maravillosa.",
+  "calidad": {
+    "confianza_promedio": 0.627,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T03:28:43.007408",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "NO_ATENDIDA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada como no atendida."
+    },
+    "fecha_mejora": "2026-02-20T09:22:38.934484",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.66,
+      "fin": 9.33,
+      "duracion": 5.67,
+      "texto": "Bienvenido al buzón de voz claro de... Hola, soy Mariana.",
+      "confianza": 0.612
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.35,
+      "fin": 10.95,
+      "duracion": 1.6,
+      "texto": "En este momento no puedo atenderte.",
+      "confianza": 0.434
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.97,
+      "fin": 15.32,
+      "duracion": 4.35,
+      "texto": "Después me comunico con vos.",
+      "confianza": 0.727
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.34,
+      "fin": 17.7,
+      "duracion": 2.36,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.74
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.25,
+      "fin": 23.89,
+      "duracion": 4.65,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.765
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.94,
+      "fin": 74.49,
+      "duracion": 26.55,
+      "texto": "Maravillosa.",
+      "confianza": 0.486
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "archivo": "amza38_1_260218112945378_ACD_61445.wav",
+  "duracion_segundos": 63.21,
+  "num_segmentos": 20,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 57.56
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 3.7,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.7,
+      "fin": 5.8,
+      "texto": "¿Hablo con Flavio?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.8,
+      "fin": 6.4,
+      "texto": "Correcto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 8.3,
+      "texto": "¿Cómo está Flavio?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.3,
+      "fin": 8.9,
+      "texto": "Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.9,
+      "fin": 13.4,
+      "texto": "Mi nombre es Galdada y estamos hablando para brindarte un plan para tus cuatro líneas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.6,
+      "fin": 17.3,
+      "texto": "No, no, no interesa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.3,
+      "fin": 21.6,
+      "texto": "No, no, muy agradecido, pero no, no, no interesa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.6,
+      "fin": 23.8,
+      "texto": "No, no, por favor."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.8,
+      "fin": 26.1,
+      "texto": "Disculpe si no ha escuchado la promoción aún."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.5,
+      "fin": 31.9,
+      "texto": "No, no, no, pero igual no porque estoy bien donde estoy y no quiero cambiar por nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.6,
+      "fin": 34.0,
+      "texto": "Muy agradecido igual."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.0,
+      "fin": 35.9,
+      "texto": "Le agradezco muchísimo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.9,
+      "fin": 42.7,
+      "texto": "Bien caballero, ¿le puedo ofrecer una promoción más económica de lo que usted tiene con Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.7,
+      "fin": 43.0,
+      "texto": "Sí, no, no, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.0,
+      "fin": 47.3,
+      "texto": "Yo estoy bien, le soy sincero."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.3,
+      "fin": 53.6,
+      "texto": "Yo, yo, o sea, tuve Claro, tuve Movistar, tuve Personal, pero no, estoy bien como estoy."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.0,
+      "fin": 60.0,
+      "texto": "Igualmente muy agradecido por su llamado, pero no, no, no voy a cambiar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.9,
+      "fin": 62.3,
+      "texto": "Muchas gracias, hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.4,
+      "fin": 63.2,
+      "texto": "Listo, adiós."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Hablo con Flavio? Correcto. ¿Cómo está Flavio? Un gusto. Mi nombre es Galdada y estamos hablando para brindarte un plan para tus cuatro líneas. No, no, no interesa. No, no, muy agradecido, pero no, no, no interesa. No, no, por favor. Disculpe si no ha escuchado la promoción aún. No, no, no, pero igual no porque estoy bien donde estoy y no quiero cambiar por nada. Muy agradecido igual. Le agradezco muchísimo. Bien caballero, ¿le puedo ofrecer una promoción más económica de lo que usted tiene con Claro? Sí, no, no, no. Yo estoy bien, le soy sincero. Yo, yo, o sea, tuve Claro, tuve Movistar, tuve Personal, pero no, estoy bien como estoy. Igualmente muy agradecido por su llamado, pero no, no, no voy a cambiar. Muchas gracias, hasta luego. Listo, adiós.",
+  "calidad": {
+    "confianza_promedio": 0.545,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:11:37.300538",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan para cuatro líneas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se mejoró la fluidez del texto y se identificaron los roles."
+    },
+    "fecha_mejora": "2026-02-20T10:34:43.620655",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 3.68,
+      "duracion": 3.65,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.183
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.7,
+      "fin": 5.76,
+      "duracion": 2.06,
+      "texto": "¿Hablo con Flavio?",
+      "confianza": 0.582
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.78,
+      "fin": 6.42,
+      "duracion": 0.64,
+      "texto": "Correcto.",
+      "confianza": 0.839
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.26,
+      "fin": 8.32,
+      "duracion": 1.06,
+      "texto": "¿Cómo está Flavio?",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.34,
+      "fin": 8.9,
+      "duracion": 0.56,
+      "texto": "Un gusto.",
+      "confianza": 0.618
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.93,
+      "fin": 13.41,
+      "duracion": 4.49,
+      "texto": "Mi nombre es Galdada y estamos hablando para brindarte un plan para tus cuatro líneas.",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.55,
+      "fin": 17.26,
+      "duracion": 2.7,
+      "texto": "No, no, no interesa.",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.28,
+      "fin": 21.55,
+      "duracion": 4.27,
+      "texto": "No, no, muy agradecido, pero no, no, no intereso.",
+      "confianza": 0.723
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.61,
+      "fin": 23.81,
+      "duracion": 2.2,
+      "texto": "No, no, por favor.",
+      "confianza": 0.313
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.83,
+      "fin": 26.07,
+      "duracion": 2.24,
+      "texto": "Disculpe si no has escuchado la promoción aún.",
+      "confianza": 0.501
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.51,
+      "fin": 31.92,
+      "duracion": 5.41,
+      "texto": "No, no, no, pero igual no porque estoy bien donde estoy y no quiero cambiar por nada.",
+      "confianza": 0.691
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.6,
+      "fin": 34.02,
+      "duracion": 1.42,
+      "texto": "Muy agradecido igual.",
+      "confianza": 0.686
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.96,
+      "fin": 35.88,
+      "duracion": 0.92,
+      "texto": "Le agradezco muchísimo.",
+      "confianza": 0.052
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.9,
+      "fin": 42.69,
+      "duracion": 6.79,
+      "texto": "Bien caballero, ¿procedamos una promoción más económica de lo que usted pone con claro?",
+      "confianza": 0.511
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 42.71,
+      "fin": 43.01,
+      "duracion": 0.3,
+      "texto": "Sí, no, no, no.",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.03,
+      "fin": 47.26,
+      "duracion": 4.23,
+      "texto": "Yo estoy bien, le estoy sincero.",
+      "confianza": 0.644
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.28,
+      "fin": 53.65,
+      "duracion": 6.37,
+      "texto": "Yo, yo, o sea, tuve claro, tuve movistar, tuve personal, pero no, estoy bien como estoy.",
+      "confianza": 0.755
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.0,
+      "fin": 60.04,
+      "duracion": 6.04,
+      "texto": "Igualmente muy agradecido por su llamado, pero no, no, no voy a ir.",
+      "confianza": 0.736
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.92,
+      "fin": 62.29,
+      "duracion": 1.37,
+      "texto": "Muchas gracias, hasta luego.",
+      "confianza": 0.46
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.37,
+      "fin": 63.21,
+      "duracion": 0.84,
+      "texto": "Listo, adiós.",
+      "confianza": 0.831
+    }
+  ]
+}

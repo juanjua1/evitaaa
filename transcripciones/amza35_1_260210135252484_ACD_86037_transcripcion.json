@@ -1,0 +1,46 @@
+{
+  "archivo": "amza35_1_260210135252484_ACD_86037.wav",
+  "duracion_segundos": 48.01,
+  "num_segmentos": 2,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 28.05,
+    "Hablante A": 0.43
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.53,
+      "fin": 30.58,
+      "duracion": 28.05,
+      "texto": "Hola, hablo con Gartón.",
+      "confianza": 0.383
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.59,
+      "fin": 48.01,
+      "duracion": 0.43,
+      "texto": "a la...",
+      "confianza": 0.398
+    }
+  ],
+  "transcripcion_completa": "Hola, hablo con Gartón. a la...",
+  "calidad": {
+    "confianza_promedio": 0.39,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:30:57.752086",
+    "version": "5.0_ecapa"
+  }
+}

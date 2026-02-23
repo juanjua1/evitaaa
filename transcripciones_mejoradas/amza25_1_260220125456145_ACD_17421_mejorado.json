@@ -1,0 +1,229 @@
+{
+  "archivo": "amza25_1_260220125456145_ACD_17421.wav",
+  "duracion_segundos": 77.08,
+  "num_segmentos": 13,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 52.64,
+    "Hablante A": 9.6
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.6,
+      "fin": 2.8,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.8,
+      "fin": 3.6,
+      "texto": "¿Hablo con Ezequiel?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.6,
+      "fin": 5.8,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.8,
+      "fin": 6.8,
+      "texto": "¿Cómo estás, Ezequiel?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.8,
+      "fin": 7.6,
+      "texto": "Te habla Dayana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.0,
+      "fin": 14.7,
+      "texto": "Te contacto desde el área de Recuperación de clientes de Movistar porque al día de hoy tenemos una promoción exclusiva para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.0,
+      "fin": 27.9,
+      "texto": "¿Vos no estás en Claro, verdad?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.9,
+      "fin": 28.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.1,
+      "fin": 28.4,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.8,
+      "fin": 37.9,
+      "texto": "Hola, ¿se escucha bien?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.9,
+      "fin": 56.1,
+      "texto": "¿Qué?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.8,
+      "fin": 67.4,
+      "texto": "Sí, se hizo recortita esta semana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 76.8,
+      "fin": 77.1,
+      "texto": "Bueno."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Hablo con Ezequiel? Sí. ¿Cómo estás, Ezequiel? Te habla Dayana. Te contacto desde el área de Recuperación de clientes de Movistar porque al día de hoy tenemos una promoción exclusiva para tu línea. ¿Vos no estás en Claro, verdad? Hola. Hola, buen día. Hola, ¿se escucha bien? ¿Qué? Sí, se hizo recortita esta semana. Bueno.",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:31:41.945542",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles de hablantes y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:40:34.973629",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.58,
+      "fin": 2.8,
+      "duracion": 1.22,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.283
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.82,
+      "fin": 3.62,
+      "duracion": 0.8,
+      "texto": "¿Hablo con Ezequiel?",
+      "confianza": 0.385
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.65,
+      "fin": 5.79,
+      "duracion": 2.14,
+      "texto": "Sí.",
+      "confianza": 0.59
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.81,
+      "fin": 6.79,
+      "duracion": 0.98,
+      "texto": "¿Cómo estás, Ezequiel?",
+      "confianza": 0.437
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.81,
+      "fin": 7.59,
+      "duracion": 0.78,
+      "texto": "¿Te habla Dayana?",
+      "confianza": 0.474
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.95,
+      "fin": 14.74,
+      "duracion": 6.79,
+      "texto": "Te contacto desde la Ría de Recupera de clientes de Movistar porque al día de hoy tenemos una promoción exclusiva para tu línea.",
+      "confianza": 0.733
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.0,
+      "fin": 27.91,
+      "duracion": 12.91,
+      "texto": "¿Vos no estás en claro, verdad?",
+      "confianza": 0.206
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.93,
+      "fin": 28.03,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.047
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.05,
+      "fin": 28.35,
+      "duracion": 0.3,
+      "texto": "Hola, buen día.",
+      "confianza": 0.09
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.77,
+      "fin": 37.88,
+      "duracion": 8.11,
+      "texto": "Hola, ¿se escucha bien?",
+      "confianza": 0.468
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.9,
+      "fin": 56.13,
+      "duracion": 18.23,
+      "texto": "¿Qué?",
+      "confianza": 0.741
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.81,
+      "fin": 67.41,
+      "duracion": 9.6,
+      "texto": "Sí, se hizo recortita esta semana.",
+      "confianza": 0.77
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 76.81,
+      "fin": 77.08,
+      "duracion": 0.28,
+      "texto": "Bueno.",
+      "confianza": 0.948
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "archivo": "amza83_1_260220101737799_MIT_01997.wav",
+  "duracion_segundos": 67.28,
+  "num_segmentos": 4,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 52.0,
+    "Hablante B": 12.42
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 25.3,
+      "texto": "Bienvenido al buzón de voz. Después del tono, deje su mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.4,
+      "fin": 26.4,
+      "texto": "Para finalizar,"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.7,
+      "fin": 52.4,
+      "texto": "Corte o marque la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.9,
+      "fin": 67.3,
+      "texto": "No, no, no."
+    }
+  ],
+  "transcripcion_completa": "Bienvenido al buzón de voz. Después del tono, deje su mensaje. Para finalizar, Corte o marque la tecla numeral para más opciones. No, no, no.",
+  "calidad": {
+    "confianza_promedio": 0.699,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T18:17:45.929350",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "CORTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se ajustó la puntuación y se mejoró la claridad general."
+    },
+    "fecha_mejora": "2026-02-22T23:45:48.953026",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 25.33,
+      "duracion": 25.3,
+      "texto": "Bienvenido al buzón de voz claro de... Después del tono, deja tu mensaje.",
+      "confianza": 0.698
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.35,
+      "fin": 26.41,
+      "duracion": 1.06,
+      "texto": "Para finalizar,",
+      "confianza": 0.88
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.73,
+      "fin": 52.36,
+      "duracion": 25.64,
+      "texto": "Corta o marca la tecla numeral para más obsidianes.",
+      "confianza": 0.671
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.86,
+      "fin": 67.28,
+      "duracion": 12.42,
+      "texto": "No, no, no.",
+      "confianza": 0.548
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "archivo": "amza31_1_260210134130520_MIT_01960.wav",
+  "duracion_segundos": 85.3,
+  "num_segmentos": 18,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 83.02
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 0.0,
+      "fin": 10.5,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.6,
+      "fin": 25.6,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.2,
+      "fin": 33.6,
+      "texto": "Hablé con mi hija y no, te agradezco."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.9,
+      "fin": 37.1,
+      "texto": "Por el momento me quedo donde estoy."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.1,
+      "fin": 53.8,
+      "texto": "Porque no estoy en mi casa y bueno, con mi hija va a ser un lío con el chip porque dice estoy de vacaciones y eso y no, no me quiero quedar sin celular ni nada de eso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.4,
+      "fin": 59.4,
+      "texto": "Por el momento, yo te lo puedo enviar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.4,
+      "fin": 59.9,
+      "texto": "Sí, sí, no, no, pero no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.9,
+      "fin": 60.9,
+      "texto": "Por el momento no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.0,
+      "fin": 65.2,
+      "texto": "En otro momento por ahí vemos si cambiamos o no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 65.2,
+      "fin": 66.3,
+      "texto": "Por el momento no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 66.3,
+      "fin": 68.8,
+      "texto": "¿Y alguno de tus hijos que quieren aprovechar la promoción?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 68.9,
+      "fin": 76.7,
+      "texto": "No, no, porque ellos cambiaron de celular y están con un plan con otras alturas, así que por el momento no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 76.7,
+      "fin": 78.5,
+      "texto": "Más adelante."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 78.6,
+      "fin": 80.0,
+      "texto": "Más adelante por ahí sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 80.0,
+      "fin": 80.7,
+      "texto": "Así que bueno."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 81.0,
+      "fin": 82.8,
+      "texto": "Te agradezco, disculpa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 82.9,
+      "fin": 84.6,
+      "texto": "Gracias a vos, que tengamos un lindo día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 84.6,
+      "fin": 85.3,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día. Hablé con mi hija y no, te agradezco. Por el momento me quedo donde estoy. Porque no estoy en mi casa y bueno, con mi hija va a ser un lío con el chip porque dice estoy de vacaciones y eso y no, no me quiero quedar sin celular ni nada de eso. Por el momento, yo te lo puedo enviar. Sí, sí, no, no, pero no. Por el momento no. En otro momento por ahí vemos si cambiamos o no. Por el momento no. ¿Y alguno de tus hijos que quieren aprovechar la promoción? No, no, porque ellos cambiaron de celular y están con un plan con otras alturas, así que por el momento no. Más adelante. Más adelante por ahí sí. Así que bueno. Te agradezco, disculpa. Gracias a vos, que tengamos un lindo día. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.554,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T03:23:40.173019",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron algunas palabras y se identificaron los roles de hablantes."
+    },
+    "fecha_mejora": "2026-02-20T09:21:42.205325",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 10.53,
+      "duracion": 10.49,
+      "texto": "Hola.",
+      "confianza": 0.558
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.56,
+      "fin": 25.57,
+      "duracion": 15.0,
+      "texto": "Hola, buen día.",
+      "confianza": 0.564
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.17,
+      "fin": 33.62,
+      "duracion": 7.45,
+      "texto": "Hablé con mi hija y no, te agradezco.",
+      "confianza": 0.717
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.88,
+      "fin": 37.08,
+      "duracion": 3.2,
+      "texto": "Por el momento me quedo donde estoy.",
+      "confianza": 0.637
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.1,
+      "fin": 53.8,
+      "duracion": 16.7,
+      "texto": "Porque no estoy en mi casa y bueno, con mi hija va a ser un lío con el chip porque dice estoy de vacaciones y eso y no, no me quiero quedar sin celular ni nada de eso.",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.35,
+      "fin": 59.4,
+      "duracion": 5.05,
+      "texto": "Por el último, yo te lo puedo enviar.",
+      "confianza": 0.275
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.42,
+      "fin": 59.9,
+      "duracion": 0.48,
+      "texto": "Sí, sí, no, no, pero no.",
+      "confianza": 0.045
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.92,
+      "fin": 60.88,
+      "duracion": 0.96,
+      "texto": "Por el momento no.",
+      "confianza": 0.681
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.04,
+      "fin": 65.17,
+      "duracion": 4.13,
+      "texto": "En otro momento por ahí vemos si cambiamos o no.",
+      "confianza": 0.763
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 65.23,
+      "fin": 66.33,
+      "duracion": 1.1,
+      "texto": "Por el momento no.",
+      "confianza": 0.787
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 66.35,
+      "fin": 68.83,
+      "duracion": 2.48,
+      "texto": "¿Y alguno de tus hijos que quieren aprovechar la promoción?",
+      "confianza": 0.681
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.88,
+      "fin": 76.69,
+      "duracion": 7.81,
+      "texto": "No, no, porque ellos cambiaron de celular y están con un plan con otras alturas, así que por el momento no.",
+      "confianza": 0.623
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 76.71,
+      "fin": 78.55,
+      "duracion": 1.84,
+      "texto": "Más adelante.",
+      "confianza": 0.513
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 78.57,
+      "fin": 80.01,
+      "duracion": 1.44,
+      "texto": "Más adelante por ahí sí.",
+      "confianza": 0.219
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.03,
+      "fin": 80.71,
+      "duracion": 0.68,
+      "texto": "Así que bueno.",
+      "confianza": 0.568
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.98,
+      "fin": 82.84,
+      "duracion": 1.86,
+      "texto": "Te agradezco, disculpa.",
+      "confianza": 0.582
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 82.94,
+      "fin": 84.56,
+      "duracion": 1.62,
+      "texto": "Gracias a vos, que tengamos un lindo día.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 84.58,
+      "fin": 85.3,
+      "duracion": 0.73,
+      "texto": "Hasta luego.",
+      "confianza": 0.636
+    }
+  ]
+}

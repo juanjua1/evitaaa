@@ -1,0 +1,313 @@
+{
+  "archivo": "amza29_1_260219104040582_ACD_02803.wav",
+  "duracion_segundos": 84.83,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 56.26,
+    "Hablante A": 10.99
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.1,
+      "fin": 3.7,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.8,
+      "fin": 4.6,
+      "texto": "Mi nombre es Luz."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 4.8,
+      "fin": 5.8,
+      "texto": "¿Hablo con Silvia?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.4,
+      "fin": 10.4,
+      "texto": "No."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.4,
+      "fin": 10.8,
+      "texto": "Habla el esposo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.8,
+      "fin": 11.3,
+      "texto": "Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.4,
+      "fin": 14.9,
+      "texto": "Me estaba comunicando de Movistar, de la idea de recuperar clientes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.5,
+      "fin": 17.7,
+      "texto": "Me figura tu línea en Claro, ¿es correcto?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.9,
+      "fin": 20.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.6,
+      "fin": 20.8,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.8,
+      "fin": 23.4,
+      "texto": "Quería saber qué fue lo que te llevó a cambiar de compañía."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.9,
+      "fin": 32.0,
+      "texto": "Es largo para explicártelo y estoy laburando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.8,
+      "fin": 61.5,
+      "texto": "Eh, desde que salió, yo era Movistar, Unifón, ajá, que yo tenía la línea con ustedes y nunca, nunca, pero nunca, te estoy hablando, vos no sé cuánto hace que trabajás, pero Unifón hace un montón que estaba, ajá, llamaron para darte una promoción, cuando yo me corté, bajé la línea y pasé a Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.3,
+      "fin": 65.7,
+      "texto": "Me están llamando todos los días para volver."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 67.1,
+      "fin": 83.2,
+      "texto": "Y bueno, como yo estuve desde Unifón como diez años, ahora voy a estar diez años en Claro, para ver si en algún momento me llama Claro, seguiré con ellos y si no, volveré con ustedes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 83.2,
+      "fin": 83.6,
+      "texto": "Entiendo, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 83.6,
+      "fin": 84.3,
+      "texto": "No hay problema, lo he presentado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 84.3,
+      "fin": 84.6,
+      "texto": "Lita, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 84.6,
+      "fin": 84.8,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Mi nombre es Luz. ¿Hablo con Silvia? No. Habla el esposo. Un gusto. Me estaba comunicando de Movistar, de la idea de recuperar clientes. Me figura tu línea en Claro, ¿es correcto? Sí. Bien. Quería saber qué fue lo que te llevó a cambiar de compañía. Es largo para explicártelo y estoy laburando. Eh, desde que salió, yo era Movistar, Unifón, ajá, que yo tenía la línea con ustedes y nunca, nunca, pero nunca, te estoy hablando, vos no sé cuánto hace que trabajás, pero Unifón hace un montón que estaba, ajá, llamaron para darte una promoción, cuando yo me corté, bajé la línea y pasé a Claro. Me están llamando todos los días para volver. Y bueno, como yo estuve desde Unifón como diez años, ahora voy a estar diez años en Claro, para ver si en algún momento me llama Claro, seguiré con ellos y si no, volveré con ustedes. Entiendo, entiendo. No hay problema, lo he presentado. Lita, gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.464,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:47:42.202534",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres, palabras cortadas y errores de transcripción. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:44:37.754796",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.12,
+      "fin": 3.73,
+      "duracion": 1.6,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.273
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.75,
+      "fin": 4.63,
+      "duracion": 0.88,
+      "texto": "Mi nombre es Luz.",
+      "confianza": 0.678
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.77,
+      "fin": 5.75,
+      "duracion": 0.98,
+      "texto": "¿Hablo con Silvia?",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.36,
+      "fin": 10.41,
+      "duracion": 0.06,
+      "texto": "No.",
+      "confianza": 0.001
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.44,
+      "fin": 10.76,
+      "duracion": 0.32,
+      "texto": "Habla de esposo.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.78,
+      "fin": 11.3,
+      "duracion": 0.52,
+      "texto": "Un gusto.",
+      "confianza": 0.945
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.44,
+      "fin": 14.86,
+      "duracion": 3.43,
+      "texto": "Me estaba comunicando de la idea de recuperar clientes y de movistar.",
+      "confianza": 0.716
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.46,
+      "fin": 17.68,
+      "duracion": 2.22,
+      "texto": "Me figura tu línea en claro, ¿es correcto?",
+      "confianza": 0.533
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.91,
+      "fin": 20.55,
+      "duracion": 1.64,
+      "texto": "Sí.",
+      "confianza": 0.495
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.57,
+      "fin": 20.79,
+      "duracion": 0.22,
+      "texto": "Bien.",
+      "confianza": 0.79
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.83,
+      "fin": 23.41,
+      "duracion": 2.58,
+      "texto": "Quería saber qué fue lo que te llevó a cambiar de compañía.",
+      "confianza": 0.667
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.94,
+      "fin": 32.05,
+      "duracion": 3.1,
+      "texto": "Es largo para explicártelo y estoy laburando.",
+      "confianza": 0.821
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.82,
+      "fin": 61.46,
+      "duracion": 28.64,
+      "texto": "eh desde que salió no era movistarero unifón ajá que yo tenía la línea con ustedes y nunca nunca pero nunca te estoy hablando vos no sé cuánto hace que trabajás pero unifón hace un montón que estaba ajá llamaron para darte una promoción cuando yo me corte bajé la línea y pasea claro",
+      "confianza": 0.738
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 62.27,
+      "fin": 65.65,
+      "duracion": 3.38,
+      "texto": "Me están llamando todos los días para volver.",
+      "confianza": 0.557
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 67.07,
+      "fin": 83.17,
+      "duracion": 16.1,
+      "texto": "Y bueno, como yo estuve desde Unifón como diez años, ahora voy a estar diez años claro para ver si en algún momento me llama claro, seguiré con ello y si no volveré con ustedes.",
+      "confianza": 0.726
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 83.19,
+      "fin": 83.57,
+      "duracion": 0.38,
+      "texto": "Entiendo, entiendo.",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 83.59,
+      "fin": 84.27,
+      "duracion": 0.68,
+      "texto": "No hay problema, lo he presentado.",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 84.29,
+      "fin": 84.57,
+      "duracion": 0.28,
+      "texto": "Lita, gracias.",
+      "confianza": 0.024
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 84.59,
+      "fin": 84.83,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.084
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "archivo": "amza7_1_260211111216176_ACD_83765.wav",
+  "duracion_segundos": 79.6,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 28.43,
+    "Hablante A": 44.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.0,
+      "fin": 12.1,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.1,
+      "fin": 12.6,
+      "texto": "Buen día, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.6,
+      "fin": 13.0,
+      "texto": "¿Qué tal, Jessica?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.0,
+      "fin": 13.5,
+      "texto": "Todo bien, muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.5,
+      "fin": 13.8,
+      "texto": "¿Vos cómo andás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.9,
+      "fin": 14.2,
+      "texto": "Bien, acá estamos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.2,
+      "fin": 14.4,
+      "texto": "Me alegra."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.5,
+      "fin": 14.9,
+      "texto": "Me alegra, Jessica."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.9,
+      "fin": 16.2,
+      "texto": "Te comento, mi nombre es Pablo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.4,
+      "fin": 19.1,
+      "texto": "Te estoy contactando en el área de recuperación de clientes de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.3,
+      "fin": 24.1,
+      "texto": "No para quitarte mucho tiempo, sino para contarte que tenemos el 85% de descuento en nuestros planes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.2,
+      "fin": 25.3,
+      "texto": "¿Sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.2,
+      "fin": 31.9,
+      "texto": "Por lo cual, por ejemplo, un plan de 25 días te queda solamente $11,932."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.9,
+      "fin": 55.4,
+      "texto": "No, sí, pero por ahora no me estaría interesando, no sólo por el tema de que en su momento se lo pagué a una tarifa muy alta de movilidad y no me servía, sino en que hoy en día tengo un mejor servicio, el cual antes, movilizar por más que me dé mucho más ayuda, no me servía en todos lados la conexión, ¿entendés?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.4,
+      "fin": 59.4,
+      "texto": "En cambio, con la compañía en la cual estoy ahora, sí me sirve."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.4,
+      "fin": 62.1,
+      "texto": "Bien, ¿en qué lugar estuvo este inconveniente, contame, Jessica?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.0,
+      "fin": 78.1,
+      "texto": "Más desamorados, quizás en San Vicente, o entre el centro de donde yo vivo, en el centro, yo vivo en Monte Grande, más alejado del centro, donde iba al centro no tenía señal quizás."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 78.1,
+      "fin": 79.6,
+      "texto": "Bien Jessica, eso las puede constatar."
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día. Buen día, ¿cómo estás? ¿Qué tal, Jessica? Todo bien, muchas gracias. ¿Vos cómo andás? Bien, acá estamos. Me alegra. Me alegra, Jessica. Te comento, mi nombre es Pablo. Te estoy contactando en el área de recuperación de clientes de Movistar. No para quitarte mucho tiempo, sino para contarte que tenemos el 85% de descuento en nuestros planes. ¿Sí? Por lo cual, por ejemplo, un plan de 25 días te queda solamente $11,932. No, sí, pero por ahora no me estaría interesando, no sólo por el tema de que en su momento se lo pagué a una tarifa muy alta de movilidad y no me servía, sino en que hoy en día tengo un mejor servicio, el cual antes, movilizar por más que me dé mucho más ayuda, no me servía en todos lados la conexión, ¿entendés? En cambio, con la compañía en la cual estoy ahora, sí me sirve. Bien, ¿en qué lugar estuvo este inconveniente, contame, Jessica? Más desamorados, quizás en San Vicente, o entre el centro de donde yo vivo, en el centro, yo vivo en Monte Grande, más alejado del centro, donde iba al centro no tenía señal quizás. Bien Jessica, eso las puede constatar.",
+  "calidad": {
+    "confianza_promedio": 0.377,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 20.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T19:25:26.499553",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 25 días"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-18T08:06:45.655508",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.97,
+      "fin": 12.12,
+      "duracion": 10.15,
+      "texto": "Hola, buen día.",
+      "confianza": 0.359
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.14,
+      "fin": 12.58,
+      "duracion": 0.44,
+      "texto": "Buen día, ¿cómo estás?",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.6,
+      "fin": 12.96,
+      "duracion": 0.36,
+      "texto": "¿Qué tal, Jessica?",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.98,
+      "fin": 13.5,
+      "duracion": 0.52,
+      "texto": "Todo bien, muchas gracias.",
+      "confianza": 0.011
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.52,
+      "fin": 13.84,
+      "duracion": 0.32,
+      "texto": "¿Vos cómo andás?",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.86,
+      "fin": 14.22,
+      "duracion": 0.36,
+      "texto": "Bien, acá estamos.",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.24,
+      "fin": 14.44,
+      "duracion": 0.2,
+      "texto": "Me alegra.",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.46,
+      "fin": 14.9,
+      "duracion": 0.44,
+      "texto": "Me alegra, Jessica.",
+      "confianza": 0.19
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.92,
+      "fin": 16.16,
+      "duracion": 1.24,
+      "texto": "Te comento, mi nombre es Pablo.",
+      "confianza": 0.576
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.39,
+      "fin": 19.07,
+      "duracion": 2.68,
+      "texto": "Te estoy contactando en el área de recuperación de clientes de Movistar.",
+      "confianza": 0.492
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.27,
+      "fin": 24.15,
+      "duracion": 4.88,
+      "texto": "No para quitarte mucho tiempo, sino para contarte que tenemos el 85% de descuento en nuestros planes.",
+      "confianza": 0.754
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.17,
+      "fin": 25.31,
+      "duracion": 1.14,
+      "texto": "¿Sí?",
+      "confianza": 0.815
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.16,
+      "fin": 31.86,
+      "duracion": 5.7,
+      "texto": "Por lo cual, por ejemplo, un plan de 25 días te queda solamente $11,932.",
+      "confianza": 0.709
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.87,
+      "fin": 55.4,
+      "duracion": 21.53,
+      "texto": "No, sí, pero por ahora no me estaría interesando, no sólo por el tema de que en su momento se lo pague una tarifa muy alta de movilidad y no me servía, sino en que hoy en día tengo un mejor servicio, el cual antes, movilizar por más que me dé mucho más ayuda, no me servía en todos lados la conexión, ¿entendés?",
+      "confianza": 0.649
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.42,
+      "fin": 59.38,
+      "duracion": 3.97,
+      "texto": "En cambio, con la compañía en la cual estoy ahora, sí me sirve.",
+      "confianza": 0.692
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.4,
+      "fin": 62.07,
+      "duracion": 2.66,
+      "texto": "Bien, ¿en qué lugar estuvo este inconveniente, contame, Jessica?",
+      "confianza": 0.297
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.96,
+      "fin": 78.09,
+      "duracion": 15.14,
+      "texto": "más desamorados, quizás en San Vicente, o entre el centro de donde yo vivo, en el centro, yo vivo en Montegrande, más alejado del centro, donde iba el centro no tenía señal quizás.",
+      "confianza": 0.53
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 78.11,
+      "fin": 79.6,
+      "duracion": 1.48,
+      "texto": "Bien Jessica, eso las puede constatar.",
+      "confianza": 0.311
+    }
+  ]
+}

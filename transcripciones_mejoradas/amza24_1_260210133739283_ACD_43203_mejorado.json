@@ -1,0 +1,231 @@
+{
+  "archivo": "amza24_1_260210133739283_ACD_43203.wav",
+  "duracion_segundos": 66.56,
+  "num_segmentos": 13,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 44.03,
+    "Hablante B": 11.13
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 5.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.0,
+      "fin": 5.7,
+      "texto": "Hola, ¿cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.7,
+      "fin": 9.4,
+      "texto": "Buenos días, hablo con Ana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.4,
+      "fin": 13.0,
+      "texto": "Álvarez, mi nombre, me comunico del área de recupero de clientes Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.9,
+      "fin": 16.8,
+      "texto": "Me figura, Ana, que actualmente usted está sin Claro, ¿verdad?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.1,
+      "fin": 19.2,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.2,
+      "fin": 22.5,
+      "texto": "Le consulto, el motivo por el que se fue de Movistar, ¿cuál fue?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.3,
+      "fin": 26.8,
+      "texto": "Las cuotas están elevadas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.9,
+      "fin": 28.5,
+      "texto": "Entiendo, entiendo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.9,
+      "fin": 40.5,
+      "texto": "Bien, bueno, le cuento, si en este caso la estoy llamando es del área de recupero, como le decía anteriormente, porque tenemos promociones exclusivas para aquellos clientes que han sido parte de la compañía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.2,
+      "fin": 53.8,
+      "texto": "En este caso tengo para brindarle lo que es un plan de 8 gigas de base más 10 de regalo, van a ser 18 gigas en total, WhatsApp gratis, llamadas libres a todas las compañías por un precio final de 8.047 pesos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.7,
+      "fin": 58.1,
+      "texto": "No, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.1,
+      "fin": 66.6,
+      "texto": "Estoy con Claro y tengo un buen plan, así que le agradezco."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿cómo le va? Buenos días, hablo con Ana. Álvarez, mi nombre, me comunico del área de recupero de clientes Movistar. Me figura, Ana, que actualmente usted está sin Claro, ¿verdad? Sí. Le consulto, el motivo por el que se fue de Movistar, ¿cuál fue? Las cuotas están elevadas. Entiendo, entiendo. Bien, bueno, le cuento, si en este caso la estoy llamando es del área de recupero, como le decía anteriormente, porque tenemos promociones exclusivas para aquellos clientes que han sido parte de la compañía. En este caso tengo para brindarle lo que es un plan de 8 gigas de base más 10 de regalo, van a ser 18 gigas en total, WhatsApp gratis, llamadas libres a todas las compañías por un precio final de 8.047 pesos. No, gracias. Estoy con Claro y tengo un buen plan, así que le agradezco.",
+  "calidad": {
+    "confianza_promedio": 0.564,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T01:20:57.911912",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 18gb"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, reemplazo de 'sigas' por 'gigas', y ajuste de frases para mejor comprensión."
+    },
+    "fecha_mejora": "2026-02-20T02:56:18.714498",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 5.0,
+      "duracion": 4.97,
+      "texto": "Hola.",
+      "confianza": 0.295
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.02,
+      "fin": 5.7,
+      "duracion": 0.68,
+      "texto": "Hola, ¿cómo le va?",
+      "confianza": 0.562
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.72,
+      "fin": 9.42,
+      "duracion": 3.7,
+      "texto": "Buenos días, hablo con Anar.",
+      "confianza": 0.693
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.44,
+      "fin": 13.01,
+      "duracion": 3.56,
+      "texto": "Álcines, mi nombre, me comunico, el área de recupero de clientes Movistar.",
+      "confianza": 0.689
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.91,
+      "fin": 16.75,
+      "duracion": 2.84,
+      "texto": "Me figuras, Ana, que actualmente vos estás sin claro, ¿verdad?",
+      "confianza": 0.63
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.15,
+      "fin": 19.21,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.23,
+      "fin": 22.48,
+      "duracion": 3.24,
+      "texto": "Te consulto, el motivo por el que te fuiste de Movistar, ¿cuál fue?",
+      "confianza": 0.694
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.28,
+      "fin": 26.84,
+      "duracion": 2.56,
+      "texto": "Las montas están elevadas.",
+      "confianza": 0.285
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.86,
+      "fin": 28.5,
+      "duracion": 1.64,
+      "texto": "Entiendo, entiendo.",
+      "confianza": 0.831
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.95,
+      "fin": 40.45,
+      "duracion": 11.5,
+      "texto": "Bien, bueno te cuento si en este caso te estoy llamando es la día de recupero como te decía anteriormente porque tenemos promociones exclusivas para aquellos clientes que han sido parte de la compañía.",
+      "confianza": 0.636
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.21,
+      "fin": 53.79,
+      "duracion": 12.58,
+      "texto": "En este caso tengo para brindarte lo que es un plan de 8 sigas de base más 10 de regalo van a ser 18 sigas en total, whatsapp gratis, llamas libres a todas las compañías por un precio final de 8.047.",
+      "confianza": 0.781
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.73,
+      "fin": 58.15,
+      "duracion": 0.42,
+      "texto": "No, gracias.",
+      "confianza": 0.557
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.14,
+      "fin": 66.56,
+      "duracion": 7.41,
+      "texto": "Estoy con claro y tengo un buen plan, así que te agradezco.",
+      "confianza": 0.662
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "archivo": "amza33_1_260209134541567_ACD_64173.wav",
+  "duracion_segundos": 62.15,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 48.25,
+    "Hablante B": 4.29
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.2,
+      "fin": 3.3,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 4.1,
+      "texto": "Hola, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.1,
+      "fin": 4.9,
+      "texto": "Buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.0,
+      "fin": 10.6,
+      "texto": "Estoy contactando justamente con Ariel."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.6,
+      "fin": 10.7,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.7,
+      "fin": 11.5,
+      "texto": "Ariel, un placer."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.6,
+      "fin": 14.3,
+      "texto": "Mi nombre es Katy, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.3,
+      "fin": 14.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.4,
+      "fin": 19.1,
+      "texto": "Te comento, justamente me contacto con vos porque queríamos detectar"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.4,
+      "fin": 23.6,
+      "texto": "¿Por qué motivo te diste de baja de la empresa Movistar con la gestión anterior?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.7,
+      "fin": 29.8,
+      "texto": "Sí, el tema, escúchame, yo estoy en el trabajo y pensé que era bueno, que no sabía por qué era."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.9,
+      "fin": 36.6,
+      "texto": "Está más o menos en otro momento, si no te molesta, porque si no, se me complica."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.6,
+      "fin": 37.1,
+      "texto": "Tengo una consulta, Ariel."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.1,
+      "fin": 41.7,
+      "texto": "Más que nada, ¿te puedo mandar lo que son los beneficios que tenemos para lo que es tu línea?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.8,
+      "fin": 44.9,
+      "texto": "La verdad que estamos con esta campaña como te dije, Recuperos de Clientes,"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.2,
+      "fin": 52.5,
+      "texto": "para recuperar a los que se fueron con la mala gestión que tuvimos anteriormente y ustedes aprovechen el mejor beneficio."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.8,
+      "fin": 61.2,
+      "texto": "Perfecto, que tengas bonito día, muchísimas gracias por tu atención."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.2,
+      "fin": 62.1,
+      "texto": "Igualmente, hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿cómo estás? Buenas tardes. Estoy contactando justamente con Ariel. Sí. Ariel, un placer. Mi nombre es Katy, ¿sí? Sí. Te comento, justamente me contacto con vos porque queríamos detectar ¿Por qué motivo te diste de baja de la empresa Movistar con la gestión anterior? Sí, el tema, escúchame, yo estoy en el trabajo y pensé que era bueno, que no sabía por qué era. Está más o menos en otro momento, si no te molesta, porque si no, se me complica. Tengo una consulta, Ariel. Más que nada, ¿te puedo mandar lo que son los beneficios que tenemos para lo que es tu línea? La verdad que estamos con esta campaña como te dije, Recuperos de Clientes, para recuperar a los que se fueron con la mala gestión que tuvimos anteriormente y ustedes aprovechen el mejor beneficio. Perfecto, que tengas bonito día, muchísimas gracias por tu atención. Igualmente, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.46,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:01:19.894178",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de palabras cortadas, errores de transcripción y mejora de la comprensión general."
+    },
+    "fecha_mejora": "2026-02-20T09:31:01.536212",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.2,
+      "fin": 3.26,
+      "duracion": 2.06,
+      "texto": "Hola.",
+      "confianza": 0.357
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.28,
+      "fin": 4.08,
+      "duracion": 0.8,
+      "texto": "Hola, ¿cómo estás?",
+      "confianza": 0.184
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.1,
+      "fin": 4.86,
+      "duracion": 0.76,
+      "texto": "Buenas tardes.",
+      "confianza": 0.688
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.04,
+      "fin": 10.57,
+      "duracion": 4.53,
+      "texto": "Estoy contactando justamente con Ariel.",
+      "confianza": 0.647
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.59,
+      "fin": 10.65,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.023
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.67,
+      "fin": 11.53,
+      "duracion": 0.86,
+      "texto": "Ariel, un placer.",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.55,
+      "fin": 14.32,
+      "duracion": 2.77,
+      "texto": "Mi nombre es Katy, ¿sí?",
+      "confianza": 0.493
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.34,
+      "fin": 14.4,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.106
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.42,
+      "fin": 19.1,
+      "duracion": 4.69,
+      "texto": "Te comento, justamente me contacto con vos porque queríamos detectar",
+      "confianza": 0.801
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.37,
+      "fin": 23.56,
+      "duracion": 4.19,
+      "texto": "¿Por qué motivó que fuiste de la empresa Movistar con la gestión anterior?",
+      "confianza": 0.751
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.66,
+      "fin": 29.83,
+      "duracion": 5.17,
+      "texto": "Sí, el tema, escúchame, yo estoy en el trabajo y pensé que era bueno, que no sabía por qué era.",
+      "confianza": 0.527
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.85,
+      "fin": 36.58,
+      "duracion": 6.73,
+      "texto": "Está más o menos en otro momento, si no te molesta, porque si no, se me complice.",
+      "confianza": 0.376
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.6,
+      "fin": 37.12,
+      "duracion": 0.52,
+      "texto": "Tengo una consulta, Ariel.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.14,
+      "fin": 41.72,
+      "duracion": 4.59,
+      "texto": "Más que nada, ¿te pudo mandar lo que son los beneficios que tenemos para lo que es tu línea?",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.82,
+      "fin": 44.89,
+      "duracion": 3.06,
+      "texto": "La verdad que estamos con esta campaña como te hice, Recuperos de Clientes,",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.16,
+      "fin": 52.55,
+      "duracion": 7.4,
+      "texto": "para recuperarlos los que se fueron con la mala gestión que tuvimos anteriormente y ustedes aprovechen el mejor beneficio.",
+      "confianza": 0.766
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.84,
+      "fin": 61.23,
+      "duracion": 3.39,
+      "texto": "Perfecto, que tengas bonito día, muchísimas gracias por tu atención.",
+      "confianza": 0.489
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.25,
+      "fin": 62.15,
+      "duracion": 0.9,
+      "texto": "Igualmente, hasta luego.",
+      "confianza": 0.424
+    }
+  ]
+}

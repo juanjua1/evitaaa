@@ -1,0 +1,26 @@
+Error: CUDA failed with error out of memory
+
+Traceback (most recent call last):
+  File "C:\Users\JUAN-T3\Desktop\scraper_transcripcion\3_speech_eva.py", line 318, in transcribir_audio_worker
+    result = model.transcribe(
+        audio,
+        batch_size=32,
+        language="es"
+    )
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\whisperx\asr.py", line 259, in transcribe
+    for idx, out in enumerate(self.__call__(data(audio, vad_segments), batch_size=batch_size, num_workers=num_workers)):
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\pipelines\pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\pipelines\pt_utils.py", line 125, in __next__
+    processed = self.infer(item, **self.params)
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\pipelines\base.py", line 1275, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\whisperx\asr.py", line 163, in _forward
+    outputs = self.model.generate_segment_batched(model_inputs['inputs'], self.tokenizer, self.options)
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\whisperx\asr.py", line 60, in generate_segment_batched
+    encoder_output = self.encode(features)
+  File "C:\Users\JUAN-T3\AppData\Local\Programs\Python\Python313\Lib\site-packages\whisperx\asr.py", line 97, in encode
+    return self.model.encode(features, to_cpu=to_cpu)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA failed with error out of memory

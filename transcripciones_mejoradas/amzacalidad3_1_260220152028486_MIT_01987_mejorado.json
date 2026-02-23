@@ -1,0 +1,229 @@
+{
+  "archivo": "amzacalidad3_1_260220152028486_MIT_01987.wav",
+  "duracion_segundos": 65.64,
+  "num_segmentos": 13,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 62.64
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.8,
+      "fin": 6.2,
+      "texto": "En la calle 3 de febrero al 2727, sí, en Buenos Aires, El Palomar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.2,
+      "fin": 15.6,
+      "texto": "Sí, es el casero, está en casero."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.6,
+      "fin": 16.3,
+      "texto": "Es la más cercana que... ¿Verdad?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.3,
+      "fin": 16.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.4,
+      "fin": 16.5,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.5,
+      "fin": 20.8,
+      "texto": "Les recuerdo que el costo al día de hoy es 10.730 pesos, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.3,
+      "fin": 23.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.4,
+      "fin": 27.3,
+      "texto": "Incluye el descuento fijo del 80%, sí, por una evaluación de seis meses."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.8,
+      "fin": 30.0,
+      "texto": "Recuerden que el servicio se factura mes adelantado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.2,
+      "fin": 34.2,
+      "texto": "Su plan base es de 8 gigas más 10 gigas de regalo con una duración de seis meses."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.8,
+      "fin": 52.4,
+      "texto": "Estos últimos se habilitarán 48 horas después de la activación de su línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.4,
+      "fin": 52.8,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.1,
+      "fin": 65.6,
+      "texto": "La compañía de Movistar se baja en la app Movistar, que es una herramienta que les brindamos para que ustedes puedan ver el paso a paso de su calculación, lo que van a estar abonando mes a mes."
+    }
+  ],
+  "transcripcion_completa": "En la calle 3 de febrero al 2727, sí, en Buenos Aires, El Palomar. Sí, es el casero, está en casero. Es la más cercana que... ¿Verdad? Sí. Bien. Les recuerdo que el costo al día de hoy es 10.730 pesos, ¿sí? Sí. Incluye el descuento fijo del 80%, sí, por una evaluación de seis meses. Recuerden que el servicio se factura mes adelantado. Su plan base es de 8 gigas más 10 gigas de regalo con una duración de seis meses. Estos últimos se habilitarán 48 horas después de la activación de su línea. Bien. La compañía de Movistar se baja en la app Movistar, que es una herramienta que les brindamos para que ustedes puedan ver el paso a paso de su calculación, lo que van a estar abonando mes a mes.",
+  "calidad": {
+    "confianza_promedio": 0.474,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T18:56:52.707555",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "VENTA_EXITOSA",
+      "productos_mencionados": [
+        "plan 8GB + 10GB de regalo"
+      ],
+      "plan_vendido": "plan 8GB + 10GB de regalo",
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como 'gigas', se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:59:01.844644",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.79,
+      "fin": 6.18,
+      "duracion": 5.39,
+      "texto": "en la calle 3 de febrero al 2727, sí, en Buenos Aires, el Palomar.",
+      "confianza": 0.635
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.2,
+      "fin": 15.59,
+      "duracion": 9.39,
+      "texto": "Sí, es el casero, está en casero.",
+      "confianza": 0.454
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.61,
+      "fin": 16.27,
+      "duracion": 0.66,
+      "texto": "Es la más cercana que... ¿Verdad?",
+      "confianza": 0.002
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.29,
+      "fin": 16.35,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.37,
+      "fin": 16.47,
+      "duracion": 0.1,
+      "texto": "Bien.",
+      "confianza": 0.015
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.49,
+      "fin": 20.81,
+      "duracion": 4.32,
+      "texto": "Les recuerdo que el costo al día de hoy es 10.730 pesos, ¿sí?",
+      "confianza": 0.74
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.31,
+      "fin": 23.41,
+      "duracion": 2.1,
+      "texto": "Sí.",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.43,
+      "fin": 27.26,
+      "duracion": 3.82,
+      "texto": "Incluye el descuento fijo de 80%, sí, por una evaluación de seis meses.",
+      "confianza": 0.588
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.76,
+      "fin": 30.02,
+      "duracion": 2.26,
+      "texto": "Recuerden que el servicio se factura mes adelantado.",
+      "confianza": 0.792
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.22,
+      "fin": 34.25,
+      "duracion": 4.03,
+      "texto": "Su plan base es de 8 gigas más 10 gigas de regalo con una duración de seis meses.",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.79,
+      "fin": 52.39,
+      "duracion": 17.61,
+      "texto": "Estos últimos habitarán 48 horas después de la activación de su línea.",
+      "confianza": 0.429
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.41,
+      "fin": 52.75,
+      "duracion": 0.34,
+      "texto": "Bien.",
+      "confianza": 0.556
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.09,
+      "fin": 65.64,
+      "duracion": 12.56,
+      "texto": "La compañía de Movistar se baja en la app Movistar, que es una herramienta que les brindamos para que ustedes puedan ver el paso a paso de su calculación, lo que van a estar abonando mes a mes.",
+      "confianza": 0.598
+    }
+  ]
+}

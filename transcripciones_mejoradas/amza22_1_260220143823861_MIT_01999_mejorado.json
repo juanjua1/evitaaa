@@ -1,0 +1,285 @@
+{
+  "archivo": "amza22_1_260220143823861_MIT_01999.wav",
+  "duracion_segundos": 76.02,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 41.18,
+    "Hablante A": 7.1
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.7,
+      "fin": 24.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.0,
+      "fin": 27.9,
+      "texto": "Hola, ¿hoy hablo con Marcelo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.9,
+      "fin": 28.0,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.0,
+      "fin": 35.1,
+      "texto": "Marcelo, no sé si te llegaron los mensajitos que te envié al WhatsApp, pero no sé si te acordarás de mí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.1,
+      "fin": 36.9,
+      "texto": "Ah, ¿cómo te va?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.9,
+      "fin": 40.8,
+      "texto": "Estaba mirando, pero no estoy contestando porque estoy en la calle."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.7,
+      "fin": 44.1,
+      "texto": "Cuando llego a un lugar, contesto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.6,
+      "fin": 45.5,
+      "texto": "Te contesto, dale."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.5,
+      "fin": 45.9,
+      "texto": "Ah, no, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.9,
+      "fin": 46.6,
+      "texto": "Bueno, espérate."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.7,
+      "fin": 49.5,
+      "texto": "¿Cuánto llegas a algún lugar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.5,
+      "fin": 50.0,
+      "texto": "Dale."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.2,
+      "fin": 53.7,
+      "texto": "Te pones a brillar, no sé, porque esto es sumamente rápido."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.2,
+      "fin": 63.9,
+      "texto": "Está bien, pero yo ahora estoy en la calle."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.0,
+      "fin": 67.2,
+      "texto": "Más o menos cuando llegarías a algún lugar donde estés resguardado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.8,
+      "fin": 72.5,
+      "texto": "En dos horas más o menos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 72.6,
+      "fin": 76.0,
+      "texto": "Bien, vale, no hay problema entonces."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿hoy hablo con Marcelo? Sí. Marcelo, no sé si te llegaron los mensajitos que te envié al WhatsApp, pero no sé si te acordarás de mí. Ah, ¿cómo te va? Estaba mirando, pero no estoy contestando porque estoy en la calle. Cuando llego a un lugar, contesto. Te contesto, dale. Ah, no, no. Bueno, espérate. ¿Cuánto llegas a algún lugar? Dale. Te pones a brillar, no sé, porque esto es sumamente rápido. Está bien, pero yo ahora estoy en la calle. Más o menos cuando llegarías a algún lugar donde estés resguardado. En dos horas más o menos. Bien, vale, no hay problema entonces.",
+  "calidad": {
+    "confianza_promedio": 0.492,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:08:45.866843",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:34:50.019824",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.68,
+      "fin": 24.0,
+      "duracion": 1.32,
+      "texto": "Hola.",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.02,
+      "fin": 27.92,
+      "duracion": 3.9,
+      "texto": "Hola, ¿hoy en día hablo con Marcelo?",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.94,
+      "fin": 28.0,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.229
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.02,
+      "fin": 35.13,
+      "duracion": 7.11,
+      "texto": "Marcelo, no sé si te llenaron los mensajitos que te envié al WhatsApp, pero no sé si te acordarás de mí.",
+      "confianza": 0.529
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.15,
+      "fin": 36.87,
+      "duracion": 1.72,
+      "texto": "Ah, ¿cómo te vas?",
+      "confianza": 0.517
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.89,
+      "fin": 40.76,
+      "duracion": 3.86,
+      "texto": "Estaba mirando, pero no estoy contestando porque estoy en la calle.",
+      "confianza": 0.416
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.7,
+      "fin": 44.08,
+      "duracion": 2.38,
+      "texto": "Cuando llego a un lugar, contesto.",
+      "confianza": 0.716
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.58,
+      "fin": 45.5,
+      "duracion": 0.92,
+      "texto": "Te contesto, dale.",
+      "confianza": 0.207
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.52,
+      "fin": 45.86,
+      "duracion": 0.34,
+      "texto": "Ah, no, no.",
+      "confianza": 0.275
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.88,
+      "fin": 46.64,
+      "duracion": 0.76,
+      "texto": "Bueno, espérate.",
+      "confianza": 0.68
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.66,
+      "fin": 49.51,
+      "duracion": 2.84,
+      "texto": "¿Cuánto llegas a algún lugar?",
+      "confianza": 0.364
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.53,
+      "fin": 49.97,
+      "duracion": 0.44,
+      "texto": "Dale.",
+      "confianza": 0.758
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.23,
+      "fin": 53.74,
+      "duracion": 3.5,
+      "texto": "te pones a brillar, no sé, porque esto es sumamente rápido.",
+      "confianza": 0.632
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.18,
+      "fin": 63.93,
+      "duracion": 8.75,
+      "texto": "Está bien, pero yo ahora estoy en la calle.",
+      "confianza": 0.209
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 63.95,
+      "fin": 67.23,
+      "duracion": 3.28,
+      "texto": "Más o menos cuando llegarías a algún lugar donde estés resguardado.",
+      "confianza": 0.579
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.83,
+      "fin": 72.54,
+      "duracion": 3.7,
+      "texto": "Y las dos horas más o menos.",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 72.62,
+      "fin": 76.02,
+      "duracion": 3.4,
+      "texto": "Bien, vale, no hay problema entonces.",
+      "confianza": 0.656
+    }
+  ]
+}

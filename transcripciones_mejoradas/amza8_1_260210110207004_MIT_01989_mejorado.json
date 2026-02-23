@@ -1,0 +1,163 @@
+{
+  "archivo": "amza8_1_260210110207004_MIT_01989.wav",
+  "duracion_segundos": 83.04,
+  "num_segmentos": 8,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 30.79,
+    "Hablante A": 16.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.1,
+      "fin": 20.9,
+      "texto": "Bienvenido al buzón de voz. Claro, el número es 1140462090."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.8,
+      "fin": 25.1,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.8,
+      "fin": 31.4,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.6,
+      "fin": 37.1,
+      "texto": "¿En cuánto está el plan de cuatro gigas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 42.8,
+      "fin": 43.5,
+      "texto": "5.835."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 43.5,
+      "fin": 44.1,
+      "texto": "El de 8, 47."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.2,
+      "fin": 61.3,
+      "texto": "Y el de 15, está rebajado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 70.2,
+      "fin": 83.0,
+      "texto": "Muchas gracias."
+    }
+  ],
+  "transcripcion_completa": "Bienvenido al buzón de voz. Claro, el número es 1140462090. Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. ¿En cuánto está el plan de cuatro gigas? 5.835. El de 8, 47. Y el de 15, está rebajado. Muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.686,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T12:42:49.771793",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [
+        "plan 4gb",
+        "plan 8gb",
+        "plan 15gb"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se mejoró la claridad de la conversación. Se corrigieron números y se identificaron los planes ofrecidos."
+    },
+    "fecha_mejora": "2026-02-22T23:47:08.197863",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.09,
+      "fin": 20.86,
+      "duracion": 7.77,
+      "texto": "Bienvenido al buzón de voz claro de 1140462090.",
+      "confianza": 0.813
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.75,
+      "fin": 25.15,
+      "duracion": 2.4,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.835
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.75,
+      "fin": 31.38,
+      "duracion": 4.63,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.791
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.6,
+      "fin": 37.12,
+      "duracion": 1.52,
+      "texto": "¿En cuanto está el de cuatro días?",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.79,
+      "fin": 43.53,
+      "duracion": 0.74,
+      "texto": "5.835.",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.55,
+      "fin": 44.12,
+      "duracion": 0.56,
+      "texto": "El de 8, 47.",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.22,
+      "fin": 61.31,
+      "duracion": 17.09,
+      "texto": "Y el de 15, está rebalado.",
+      "confianza": 0.774
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 70.18,
+      "fin": 83.04,
+      "duracion": 12.86,
+      "texto": "Muchas gracias.",
+      "confianza": 0.49
+    }
+  ]
+}

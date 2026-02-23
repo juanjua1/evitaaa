@@ -1,0 +1,131 @@
+{
+  "archivo": "amza10_1_260218134311767_MIT_01973.wav",
+  "duracion_segundos": 90.72,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 10.15,
+    "Hablante A": 9.06
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.6,
+      "fin": 16.9,
+      "texto": "Hola, buenos días, buenas tardes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.9,
+      "fin": 18.8,
+      "texto": "Queremos hablar con Sandra Ambrosetto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.4,
+      "fin": 20.8,
+      "texto": "Sí, de parte de quién."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.0,
+      "fin": 26.7,
+      "texto": "Lourdes, le habla de este lado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.7,
+      "fin": 30.6,
+      "texto": "A ver, aguanta."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 86.8,
+      "fin": 90.7,
+      "texto": "No, no."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días, buenas tardes. Queremos hablar con Sandra Ambrosetto. Sí, de parte de quién. Lourdes, le habla de este lado. A ver, aguanta. No, no.",
+  "calidad": {
+    "confianza_promedio": 0.492,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-18T22:54:50.271859",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "CORTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada como sin contacto y corte."
+    },
+    "fecha_mejora": "2026-02-20T00:11:05.331048",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.55,
+      "fin": 16.9,
+      "duracion": 4.35,
+      "texto": "Hola, buenos días, buenas tardes.",
+      "confianza": 0.503
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.92,
+      "fin": 18.78,
+      "duracion": 1.86,
+      "texto": "Queremos hablar con Sandra Ambrosetto.",
+      "confianza": 0.256
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.41,
+      "fin": 20.81,
+      "duracion": 0.4,
+      "texto": "Sí, parte.",
+      "confianza": 0.703
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.97,
+      "fin": 26.68,
+      "duracion": 4.71,
+      "texto": "Lourdes, le habla de este lado.",
+      "confianza": 0.424
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.7,
+      "fin": 30.64,
+      "duracion": 3.95,
+      "texto": "A ver, aguanta.",
+      "confianza": 0.46
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 86.78,
+      "fin": 90.72,
+      "duracion": 3.94,
+      "texto": "No, no.",
+      "confianza": 0.608
+    }
+  ]
+}
