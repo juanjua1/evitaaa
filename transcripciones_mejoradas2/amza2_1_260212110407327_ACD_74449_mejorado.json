@@ -1,0 +1,131 @@
+{
+  "archivo": "amza2_1_260212110407327_ACD_74449.wav",
+  "duracion_segundos": 73.68,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 42.22,
+    "Hablante B": 23.17
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.4,
+      "fin": 4.1,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.6,
+      "fin": 28.8,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.8,
+      "fin": 43.9,
+      "texto": "¿Para qué me mandaste este número?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.9,
+      "fin": 47.8,
+      "texto": "¿Qué hacés?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.1,
+      "fin": 56.2,
+      "texto": "Ay, Dios."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.2,
+      "fin": 73.7,
+      "texto": "..."
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. ¿Para qué me mandaste este número? ¿Qué hacés? Ay, Dios. ...",
+  "calidad": {
+    "confianza_promedio": 0.61,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 14.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T17:05:58.000827",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "CORTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de puntuación y se mejoró la legibilidad. Se identificó el rol de los hablantes y se clasificó la llamada como sin contacto debido a la falta de interacción."
+    },
+    "fecha_mejora": "2026-02-18T07:55:14.987994",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.42,
+      "fin": 4.06,
+      "duracion": 2.64,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.699
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.64,
+      "fin": 28.81,
+      "duracion": 23.17,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.823
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.82,
+      "fin": 43.92,
+      "duracion": 11.1,
+      "texto": "¿Para qué me mandales de número?",
+      "confianza": 0.513
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.94,
+      "fin": 47.82,
+      "duracion": 3.88,
+      "texto": "¿Qué haces?",
+      "confianza": 0.496
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.08,
+      "fin": 56.19,
+      "duracion": 8.11,
+      "texto": "Ay, Dios.",
+      "confianza": 0.547
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.19,
+      "fin": 73.68,
+      "duracion": 16.49,
+      "texto": "... ... ...",
+      "confianza": 0.58
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "archivo": "amza22_1_260218113939788_ACD_93293.wav",
+  "duracion_segundos": 69.64,
+  "num_segmentos": 14,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 18.12,
+    "Hablante B": 44.38
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 2.7,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.7,
+      "fin": 3.4,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.5,
+      "fin": 4.6,
+      "texto": "Hablo con Cecilia."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.5,
+      "fin": 6.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.6,
+      "fin": 7.3,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 8.8,
+      "texto": "Mi nombre es Belén, me presento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.3,
+      "fin": 16.5,
+      "texto": "Mira, te estoy llamando desde el área de beneficios Movistar, que hoy estamos con el 75% de descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.5,
+      "fin": 20.7,
+      "texto": "¿Vos actualmente te encontrás en Claro, Cecilia?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.7,
+      "fin": 26.2,
+      "texto": "Sí, yo me encuentro en Claro, pero por ahora no voy a hacer el cambio."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.2,
+      "fin": 28.4,
+      "texto": "Sí, te pido disculpas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.3,
+      "fin": 34.9,
+      "texto": "Primero porque estoy caminando en la calle y yendo a la verdulería."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.6,
+      "fin": 50.2,
+      "texto": "Y segundo es porque tengo un plan barato y ahí está, no necesito mucho más."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.0,
+      "fin": 64.6,
+      "texto": "No, no, no, no soy muy entendida, no, de verdad, de verdad, no entiendo mucho y aparte de verdad estoy caminando por la calle, así que en otro momento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 64.6,
+      "fin": 69.6,
+      "texto": "No hay problema, no hay problema, yo te voy a enviar un mensaje y cuando vos quieras me avisas."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buen día. Hablo con Cecilia. Sí. ¿Cómo estás? Mi nombre es Belén, me presento. Mira, te estoy llamando desde el área de beneficios Movistar, que hoy estamos con el 75% de descuento. ¿Vos actualmente te encontrás en Claro, Cecilia? Sí, yo me encuentro en Claro, pero por ahora no voy a hacer el cambio. Sí, te pido disculpas. Primero porque estoy caminando en la calle y yendo a la verdulería. Y segundo es porque tengo un plan barato y ahí está, no necesito mucho más. No, no, no, no soy muy entendida, no, de verdad, de verdad, no entiendo mucho y aparte de verdad estoy caminando por la calle, así que en otro momento. No hay problema, no hay problema, yo te voy a enviar un mensaje y cuando vos quieras me avisas.",
+  "calidad": {
+    "confianza_promedio": 0.425,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T01:07:21.362384",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como palabras cortadas, nombres propios y se mejoró la fluidez de la conversación."
+    },
+    "fecha_mejora": "2026-02-20T02:37:50.624848",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 2.71,
+      "duracion": 2.68,
+      "texto": "Hola.",
+      "confianza": 0.734
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.73,
+      "fin": 3.44,
+      "duracion": 0.7,
+      "texto": "Hola, buen día.",
+      "confianza": 0.455
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.46,
+      "fin": 4.56,
+      "duracion": 1.1,
+      "texto": "Hablo con Cecilia.",
+      "confianza": 0.583
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.5,
+      "fin": 6.56,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.183
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.58,
+      "fin": 7.28,
+      "duracion": 0.7,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.28
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.3,
+      "fin": 8.76,
+      "duracion": 1.46,
+      "texto": "Mi nombre es Belén, me presento.",
+      "confianza": 0.482
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.32,
+      "fin": 16.51,
+      "duracion": 7.19,
+      "texto": "Mira, yo te estoy llamando desde el área de beneficios movistrales, de que hoy estamos con el 75% del descuento.",
+      "confianza": 0.297
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.53,
+      "fin": 20.72,
+      "duracion": 4.19,
+      "texto": "¿Vos altamente te encontrás en claro, Cecilia?",
+      "confianza": 0.265
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.74,
+      "fin": 26.23,
+      "duracion": 5.49,
+      "texto": "Sí, yo me encuentro en claro, pero por ahora no voy a hacer el cambio.",
+      "confianza": 0.428
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.25,
+      "fin": 28.35,
+      "duracion": 2.1,
+      "texto": "Sí, yo te pido disculpas.",
+      "confianza": 0.297
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.31,
+      "fin": 34.92,
+      "duracion": 5.61,
+      "texto": "Primero porque estoy caminando en la calle y siendo a la verdulería.",
+      "confianza": 0.442
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.58,
+      "fin": 50.22,
+      "duracion": 13.64,
+      "texto": "Y segundo es porque tengo un plancito barato y ahí está, no necesito mucho más.",
+      "confianza": 0.703
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.04,
+      "fin": 64.61,
+      "duracion": 12.57,
+      "texto": "No, no, no, no, no soy muy entendida, no, no, de verdad, de verdad, no entiendo mucho y aparte de verdad estoy caminando por la calle, así que en otro momento.",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 64.63,
+      "fin": 69.64,
+      "duracion": 5.01,
+      "texto": "No hay problema, no hay problema, yo te voy a mensaje y cuando vos me hagas lo que quieras.",
+      "confianza": 0.185
+    }
+  ]
+}

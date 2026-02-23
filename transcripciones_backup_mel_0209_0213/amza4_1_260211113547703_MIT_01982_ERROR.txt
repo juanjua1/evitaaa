@@ -1,0 +1,18 @@
+Error: 'waveform' must be provided as a (channel, time) torch Tensor.
+
+Traceback (most recent call last):
+  File "C:\Users\rodri\Documents\codigo-WC\eva\3_speech_eva.py", line 318, in transcribir_audio_worker
+    result = model.transcribe(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib\site-packages\whisperx\asr.py", line 223, in transcribe
+    vad_segments = self.vad_model({"waveform": waveform, "sample_rate": SAMPLE_RATE})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib\site-packages\whisperx\vads\pyannote.py", line 243, in __call__
+    return self.vad_pipeline(audio)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyannote\audio\core\pipeline.py", line 322, in __call__
+    file = Audio.validate_file(file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rodri\AppData\Local\Programs\Python\Python312\Lib\site-packages\pyannote\audio\core\io.py", line 176, in validate_file
+    raise ValueError(
+ValueError: 'waveform' must be provided as a (channel, time) torch Tensor.

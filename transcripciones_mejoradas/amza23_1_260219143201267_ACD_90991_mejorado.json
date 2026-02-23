@@ -1,0 +1,329 @@
+{
+  "archivo": "amza23_1_260219143201267_ACD_90991.wav",
+  "duracion_segundos": 82.23,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 52.9,
+    "Hablante B": 19.67
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.3,
+      "fin": 3.1,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.2,
+      "fin": 4.7,
+      "texto": "Buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.7,
+      "fin": 10.0,
+      "texto": "¿Me comunico con alguna de las líneas de Paula?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.1,
+      "fin": 10.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.1,
+      "fin": 10.6,
+      "texto": "Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.3,
+      "fin": 15.8,
+      "texto": "Nos estamos contactando para brindarle en el día de hoy una muy buena promoción en la línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.6,
+      "fin": 20.0,
+      "texto": "Ella actualmente se suele aclarar con cuatro líneas, ¿es correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.6,
+      "fin": 22.9,
+      "texto": "Sí, es correcto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.9,
+      "fin": 30.3,
+      "texto": "Pero nos fuimos este poquito, no tanto de molestar justamente por esto,"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.4,
+      "fin": 34.1,
+      "texto": "No se ría más claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.1,
+      "fin": 37.4,
+      "texto": "No tiene más claro que las promociones que nos ofrecen."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.8,
+      "fin": 39.4,
+      "texto": "Así que por el momento no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 39.4,
+      "fin": 41.1,
+      "texto": "¿Por tema costos fue?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.1,
+      "fin": 43.0,
+      "texto": "Claro, por tema costos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.6,
+      "fin": 49.3,
+      "texto": "Bien, ¿y cuánto están volando en claro próximamente ahora?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.4,
+      "fin": 56.2,
+      "texto": "No, la verdad yo no llego a la cuenta, pero tengo entendido que es menos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.5,
+      "fin": 64.6,
+      "texto": "Bien, porque en realidad teníamos para brindar y que pueda volver un plan de 7.780 con 4.500 gigas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.6,
+      "fin": 75.8,
+      "texto": "No, pero es que están llamando todo el tiempo y no... Bueno, no hay problema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 76.3,
+      "fin": 81.2,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 81.2,
+      "fin": 82.2,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buenas tardes. ¿Me comunico con alguna de las líneas de Paula? Sí. Un gusto. Nos estamos contactando para brindarle en el día de hoy una muy buena promoción en la línea. Ella actualmente se suele aclarar con cuatro líneas, ¿es correcto? Sí, es correcto. Pero nos fuimos este poquito, no tanto de molestar justamente por esto, No se ría más claro. No tiene más claro que las promociones que nos ofrecen. Así que por el momento no. ¿Por tema costos fue? Claro, por tema costos. Bien, ¿y cuánto están volando en claro próximamente ahora? No, la verdad yo no llego a la cuenta, pero tengo entendido que es menos. Bien, porque en realidad teníamos para brindar y que pueda volver un plan de 7.780 con 4.500 gigas. No, pero es que están llamando todo el tiempo y no... Bueno, no hay problema. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.529,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:12:17.316321",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 4500 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: 'gigas' en lugar de 'llenas'), y mejora de la puntuación y fluidez."
+    },
+    "fecha_mejora": "2026-02-22T22:35:44.649796",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.26,
+      "fin": 3.15,
+      "duracion": 1.88,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.523
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.17,
+      "fin": 4.67,
+      "duracion": 1.5,
+      "texto": "Buenas tardes.",
+      "confianza": 0.548
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.69,
+      "fin": 10.04,
+      "duracion": 5.35,
+      "texto": "¿Me comunico con alguna de las líneas de Paula?",
+      "confianza": 0.679
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.05,
+      "fin": 10.12,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.019
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.13,
+      "fin": 10.62,
+      "duracion": 0.48,
+      "texto": "Un gusto.",
+      "confianza": 0.586
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.3,
+      "fin": 15.78,
+      "duracion": 4.49,
+      "texto": "Nos estamos contactando para brindarle en el día de hoy una muy buena promoción en la línea.",
+      "confianza": 0.65
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.62,
+      "fin": 19.99,
+      "duracion": 3.36,
+      "texto": "Ella actualmente se suele aclarar con cuatro líneas, ¿es correcto?",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.61,
+      "fin": 22.87,
+      "duracion": 1.26,
+      "texto": "Sí, es correcto.",
+      "confianza": 0.287
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.89,
+      "fin": 30.34,
+      "duracion": 7.45,
+      "texto": "Pero nos fuimos este poquito, no tanto de molestar justamente por esto,",
+      "confianza": 0.715
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.42,
+      "fin": 34.11,
+      "duracion": 3.68,
+      "texto": "No se ría más claro.",
+      "confianza": 0.499
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.13,
+      "fin": 37.37,
+      "duracion": 3.24,
+      "texto": "No tiene más claro que las promociones que nos ofrecen.",
+      "confianza": 0.679
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.83,
+      "fin": 39.38,
+      "duracion": 1.54,
+      "texto": "Así que por el momento no.",
+      "confianza": 0.516
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.4,
+      "fin": 41.06,
+      "duracion": 1.66,
+      "texto": "¿Por tema costos fue?",
+      "confianza": 0.528
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.14,
+      "fin": 42.98,
+      "duracion": 0.84,
+      "texto": "Claro, por tema costos.",
+      "confianza": 0.435
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.6,
+      "fin": 49.33,
+      "duracion": 4.73,
+      "texto": "Bien, ¿y cuánto están volando en claro próximamente ahora?",
+      "confianza": 0.433
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.35,
+      "fin": 56.16,
+      "duracion": 6.81,
+      "texto": "No, la verdad yo no llego a la cuenta, pero tengo entendido que es menos.",
+      "confianza": 0.496
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.53,
+      "fin": 64.64,
+      "duracion": 8.11,
+      "texto": "Bien, porque en realidad teníamos para brindar y que pueda volver un plan de 7.780 con 4.500 gigas.",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 65.58,
+      "fin": 75.8,
+      "duracion": 10.22,
+      "texto": "No, pero es que están llamando todo el tiempo y no... Bueno, no hay problema.",
+      "confianza": 0.601
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 76.3,
+      "fin": 81.17,
+      "duracion": 4.87,
+      "texto": "Hasta luego.",
+      "confianza": 0.744
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 81.19,
+      "fin": 82.23,
+      "duracion": 1.04,
+      "texto": "Hasta luego.",
+      "confianza": 0.298
+    }
+  ]
+}

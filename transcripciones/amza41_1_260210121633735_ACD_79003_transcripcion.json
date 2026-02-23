@@ -1,0 +1,86 @@
+{
+  "archivo": "amza41_1_260210121633735_ACD_79003.wav",
+  "duracion_segundos": 109.08,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 7.92,
+    "Hablante B": 15.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.36,
+      "fin": 7.19,
+      "duracion": 5.83,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.499
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.69,
+      "fin": 8.83,
+      "duracion": 1.14,
+      "texto": "Me comunico con Sara.",
+      "confianza": 0.711
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.4,
+      "fin": 13.84,
+      "duracion": 2.44,
+      "texto": "Hola.",
+      "confianza": 0.738
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.86,
+      "fin": 17.27,
+      "duracion": 3.4,
+      "texto": "Hola.",
+      "confianza": 0.662
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.35,
+      "fin": 18.05,
+      "duracion": 0.7,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.477
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.07,
+      "fin": 26.9,
+      "duracion": 8.83,
+      "texto": "Me comunico con Sara.",
+      "confianza": 0.747
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 108.13,
+      "fin": 109.08,
+      "duracion": 0.95,
+      "texto": "No.",
+      "confianza": 0.49
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Me comunico con Sara. Hola. Hola. Hola, buenas tardes. Me comunico con Sara. No.",
+  "calidad": {
+    "confianza_promedio": 0.618,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:42:48.765999",
+    "version": "5.0_ecapa"
+  }
+}

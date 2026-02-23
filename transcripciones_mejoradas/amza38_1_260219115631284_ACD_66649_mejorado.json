@@ -1,0 +1,285 @@
+{
+  "archivo": "amza38_1_260219115631284_ACD_66649.wav",
+  "duracion_segundos": 58.64,
+  "num_segmentos": 17,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 53.43
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.2,
+      "fin": 1.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.4,
+      "fin": 2.5,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.5,
+      "fin": 3.2,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.4,
+      "fin": 10.6,
+      "texto": "Hablo con algún usuario de las líneas de Durso Analía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.7,
+      "fin": 10.9,
+      "texto": "¿Por lo qué?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.9,
+      "fin": 19.3,
+      "texto": "Desde el día de hoy, teníamos una promoción para la señorita... Ah, pero no está ahora."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.3,
+      "fin": 23.3,
+      "texto": "Bien, ¿usted no puede tomar decisiones sobre su línea?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.3,
+      "fin": 25.3,
+      "texto": "No, no puedo tomar decisiones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.4,
+      "fin": 26.1,
+      "texto": "¿Qué promociones?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.1,
+      "fin": 31.5,
+      "texto": "Perfecto, teníamos la promoción de 14 gigas a $7,780."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.7,
+      "fin": 39.6,
+      "texto": "Bueno, se lo voy a comunicar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 39.7,
+      "fin": 41.0,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.1,
+      "fin": 45.4,
+      "texto": "¿Usted sabe bien en qué número termina su línea para nosotros poder hablarle a ella?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 46.7,
+      "fin": 49.5,
+      "texto": "No, ni idea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.6,
+      "fin": 50.7,
+      "texto": "Perfecto, bueno, listo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.8,
+      "fin": 53.2,
+      "texto": "Muchas gracias, hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.1,
+      "fin": 58.6,
+      "texto": "El caramelito de..."
+    }
+  ],
+  "transcripcion_completa": "Hola. ¿Qué tal? Buen día. Hablo con algún usuario de las líneas de Durso Analía. ¿Por lo qué? Desde el día de hoy, teníamos una promoción para la señorita... Ah, pero no está ahora. Bien, ¿usted no puede tomar decisiones sobre su línea? No, no puedo tomar decisiones. ¿Qué promociones? Perfecto, teníamos la promoción de 14 gigas a $7,780. Bueno, se lo voy a comunicar. Bien, perfecto. ¿Usted sabe bien en qué número termina su línea para nosotros poder hablarle a ella? No, ni idea. Perfecto, bueno, listo. Muchas gracias, hasta luego. El caramelito de...",
+  "calidad": {
+    "confianza_promedio": 0.483,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:44:11.645800",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [
+        "plan 14 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, palabras cortadas y transcripción de 'gigas'."
+    },
+    "fecha_mejora": "2026-02-22T23:00:50.005478",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.23,
+      "fin": 1.43,
+      "duracion": 0.2,
+      "texto": "Hola.",
+      "confianza": 0.325
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.45,
+      "fin": 2.53,
+      "duracion": 1.08,
+      "texto": "¿Qué tal?",
+      "confianza": 0.389
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.55,
+      "fin": 3.21,
+      "duracion": 0.66,
+      "texto": "Buen día.",
+      "confianza": 0.75
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.35,
+      "fin": 10.64,
+      "duracion": 7.29,
+      "texto": "Hablo con algún usuario de las líneas de Durso Analiaris.",
+      "confianza": 0.372
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.66,
+      "fin": 10.9,
+      "duracion": 0.24,
+      "texto": "¿Por lo qué?",
+      "confianza": 0.018
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.92,
+      "fin": 19.31,
+      "duracion": 8.39,
+      "texto": "Desde la día muy tarde, teníamos una promoción para la señorita... Ah, pero no está ahora.",
+      "confianza": 0.576
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.33,
+      "fin": 23.27,
+      "duracion": 3.94,
+      "texto": "Bien, ¿usted no puede tomar decisiones sobre su línea?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.29,
+      "fin": 25.33,
+      "duracion": 2.04,
+      "texto": "No, no puedo tomar decisiones.",
+      "confianza": 0.6
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.35,
+      "fin": 26.05,
+      "duracion": 0.7,
+      "texto": "¿Qué promociones?",
+      "confianza": 0.136
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.08,
+      "fin": 31.51,
+      "duracion": 4.43,
+      "texto": "Perfecto, teníamos la promoción de 14 gigas a $7,780.",
+      "confianza": 0.71
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.71,
+      "fin": 39.64,
+      "duracion": 7.93,
+      "texto": "Bueno, se lo voy a comunicar.",
+      "confianza": 0.236
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 39.66,
+      "fin": 41.04,
+      "duracion": 1.38,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.06,
+      "fin": 45.38,
+      "duracion": 4.33,
+      "texto": "¿Usted sabe bien en qué número termina su línea para nosotros poder hablarle a ella?",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 46.74,
+      "fin": 49.55,
+      "duracion": 2.8,
+      "texto": "No, ni idea.",
+      "confianza": 0.357
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.65,
+      "fin": 50.71,
+      "duracion": 1.06,
+      "texto": "Perfecto, bueno, listo.",
+      "confianza": 0.76
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 50.79,
+      "fin": 53.17,
+      "duracion": 2.38,
+      "texto": "Muchas gracias, hasta luego.",
+      "confianza": 0.576
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.06,
+      "fin": 58.64,
+      "duracion": 4.58,
+      "texto": "El caramelito de...",
+      "confianza": 0.555
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "archivo": "amza41_1_260209102757663_ACD_15283.wav",
+  "duracion_segundos": 71.18,
+  "num_segmentos": 13,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 23.71,
+    "Hablante B": 17.0
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.1,
+      "fin": 2.6,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.2,
+      "fin": 8.7,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.2,
+      "fin": 24.3,
+      "texto": "Si estás conforme con el mensaje, marca 1."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.0,
+      "fin": 27.7,
+      "texto": "Para revisar el mensaje, marca 2."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.0,
+      "fin": 31.7,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.2,
+      "fin": 35.3,
+      "texto": "Para continuar grabando desde aquí marca 4."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.2,
+      "fin": 44.3,
+      "texto": "Si estás conforme con el mensaje marca 1."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.0,
+      "fin": 47.5,
+      "texto": "Para revisar el mensaje marca 2."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 48.2,
+      "fin": 51.8,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.3,
+      "fin": 55.6,
+      "texto": "Para continuar grabando desde aquí marca 4."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.0,
+      "fin": 64.2,
+      "texto": "Si estás conforme con el mensaje, marca 1."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 64.9,
+      "fin": 67.3,
+      "texto": "Para revisar el mensaje, marca 2."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.0,
+      "fin": 71.2,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente, marca"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. Si estás conforme con el mensaje, marca 1. Para revisar el mensaje, marca 2. Para borrar el mensaje y grabarlo nuevamente marca 3. Para continuar grabando desde aquí marca 4. Si estás conforme con el mensaje marca 1. Para revisar el mensaje marca 2. Para borrar el mensaje y grabarlo nuevamente marca 3. Para continuar grabando desde aquí marca 4. Si estás conforme con el mensaje, marca 1. Para revisar el mensaje, marca 2. Para borrar el mensaje y grabarlo nuevamente, marca",
+  "calidad": {
+    "confianza_promedio": 0.805,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:40:09.658972",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T10:41:47.428321",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.12,
+      "fin": 2.6,
+      "duracion": 2.48,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.16,
+      "fin": 8.67,
+      "duracion": 4.51,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.861
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.21,
+      "fin": 24.33,
+      "duracion": 3.12,
+      "texto": "Si estás conforme con el mensaje, marca 1.",
+      "confianza": 0.825
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.03,
+      "fin": 27.68,
+      "duracion": 2.64,
+      "texto": "Para revisar el mensaje, marca 2.",
+      "confianza": 0.785
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.01,
+      "fin": 31.68,
+      "duracion": 3.66,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3.",
+      "confianza": 0.781
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.22,
+      "fin": 35.32,
+      "duracion": 3.1,
+      "texto": "Para continuar grabando desde aquí marca 4.",
+      "confianza": 0.84
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.17,
+      "fin": 44.33,
+      "duracion": 3.16,
+      "texto": "Si estás conforme con el mensaje marca 1.",
+      "confianza": 0.765
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.05,
+      "fin": 47.48,
+      "duracion": 2.42,
+      "texto": "Para revisar el mensaje marca 2.",
+      "confianza": 0.703
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.18,
+      "fin": 51.76,
+      "duracion": 3.59,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3.",
+      "confianza": 0.834
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.26,
+      "fin": 55.59,
+      "duracion": 3.32,
+      "texto": "Para continuar grabando desde aquí marca 4.",
+      "confianza": 0.842
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.03,
+      "fin": 64.19,
+      "duracion": 3.15,
+      "texto": "Si estás conforme con el mensaje, marca 1.",
+      "confianza": 0.787
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.89,
+      "fin": 67.26,
+      "duracion": 2.37,
+      "texto": "Para revisar el mensaje, marca 2.",
+      "confianza": 0.87
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 67.98,
+      "fin": 71.18,
+      "duracion": 3.19,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente, marca",
+      "confianza": 0.798
+    }
+  ]
+}

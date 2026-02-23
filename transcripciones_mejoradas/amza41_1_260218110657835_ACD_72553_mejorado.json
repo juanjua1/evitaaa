@@ -1,0 +1,271 @@
+{
+  "archivo": "amza41_1_260218110657835_ACD_72553.wav",
+  "duracion_segundos": 94.4,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 31.19,
+    "Hablante B": 23.42
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 6.3,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.1,
+      "fin": 29.3,
+      "texto": "Tu mensaje ha sido cancelado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.1,
+      "fin": 36.3,
+      "texto": "Si estás conforme con el mensaje marca 1."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.9,
+      "fin": 39.4,
+      "texto": "Para revisar el mensaje marca 2."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.0,
+      "fin": 43.7,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.2,
+      "fin": 47.3,
+      "texto": "Para continuar grabando desde aquí marca 4."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.1,
+      "fin": 56.2,
+      "texto": "Si estás conforme con el mensaje marca 1."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.9,
+      "fin": 59.4,
+      "texto": "Para revisar el mensaje marca 2."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.0,
+      "fin": 62.5,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.8,
+      "fin": 63.6,
+      "texto": "Marca 3."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.1,
+      "fin": 67.2,
+      "texto": "Para continuar grabando desde aquí, marca 4."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 73.0,
+      "fin": 76.2,
+      "texto": "Si estás conforme con el mensaje, marca 1."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 76.9,
+      "fin": 79.4,
+      "texto": "Para revisar el mensaje, marca 2."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 80.0,
+      "fin": 83.7,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente, marca 3."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 84.2,
+      "fin": 87.5,
+      "texto": "Para continuar grabando desde aquí, marca 4."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 93.0,
+      "fin": 94.4,
+      "texto": "Muchas gracias."
+    }
+  ],
+  "transcripcion_completa": "Para finalizar, corta o marca la tecla numeral para más opciones. Tu mensaje ha sido cancelado. Si estás conforme con el mensaje marca 1. Para revisar el mensaje marca 2. Para borrar el mensaje y grabarlo nuevamente marca 3. Para continuar grabando desde aquí marca 4. Si estás conforme con el mensaje marca 1. Para revisar el mensaje marca 2. Para borrar el mensaje y grabarlo nuevamente Marca 3. Para continuar grabando desde aquí, marca 4. Si estás conforme con el mensaje, marca 1. Para revisar el mensaje, marca 2. Para borrar el mensaje y grabarlo nuevamente, marca 3. Para continuar grabando desde aquí, marca 4. Muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.79,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:47:30.843687",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron errores menores de transcripción y se identificaron los roles de los hablantes."
+    },
+    "fecha_mejora": "2026-02-20T10:43:18.089736",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 6.26,
+      "duracion": 6.23,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.679
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.11,
+      "fin": 29.26,
+      "duracion": 10.15,
+      "texto": "Tu mensaje ha sido cancelado.",
+      "confianza": 0.864
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.12,
+      "fin": 36.27,
+      "duracion": 3.14,
+      "texto": "Si estás conforme con el mensaje marca 1.",
+      "confianza": 0.608
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.93,
+      "fin": 39.39,
+      "duracion": 2.46,
+      "texto": "Para revisar el mensaje marca 2.",
+      "confianza": 0.737
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.01,
+      "fin": 43.69,
+      "duracion": 3.68,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente marca 3.",
+      "confianza": 0.852
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.19,
+      "fin": 47.26,
+      "duracion": 3.06,
+      "texto": "Para continuar grabando desde aquí marca 4.",
+      "confianza": 0.845
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.08,
+      "fin": 56.19,
+      "duracion": 3.1,
+      "texto": "Si estás conforme con el mensaje marca 1.",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 56.91,
+      "fin": 59.35,
+      "duracion": 2.44,
+      "texto": "Para revisar el mensaje marca 2.",
+      "confianza": 0.722
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.99,
+      "fin": 62.47,
+      "duracion": 2.48,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente",
+      "confianza": 0.818
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 62.79,
+      "fin": 63.57,
+      "duracion": 0.78,
+      "texto": "Marca 3.",
+      "confianza": 0.764
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 64.07,
+      "fin": 67.19,
+      "duracion": 3.12,
+      "texto": "Para continuar grabando desde aquí, marca 4.",
+      "confianza": 0.866
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 73.0,
+      "fin": 76.24,
+      "duracion": 3.24,
+      "texto": "Si estás conforme con el mensaje, marca 1.",
+      "confianza": 0.883
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 76.94,
+      "fin": 79.39,
+      "duracion": 2.44,
+      "texto": "Para revisar el mensaje, marca 2.",
+      "confianza": 0.839
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.05,
+      "fin": 83.71,
+      "duracion": 3.66,
+      "texto": "Para borrar el mensaje y grabarlo nuevamente, marca 3.",
+      "confianza": 0.849
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 84.23,
+      "fin": 87.51,
+      "duracion": 3.28,
+      "texto": "Para continuar grabando desde aquí, marca 4.",
+      "confianza": 0.879
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 93.05,
+      "fin": 94.4,
+      "duracion": 1.35,
+      "texto": "Muchas gracias.",
+      "confianza": 0.714
+    }
+  ]
+}

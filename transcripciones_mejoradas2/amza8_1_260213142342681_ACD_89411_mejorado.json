@@ -1,0 +1,341 @@
+{
+  "archivo": "amza8_1_260213142342681_ACD_89411.wav",
+  "duracion_segundos": 65.02,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 28.47,
+    "Hablante B": 18.6
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.4,
+      "fin": 5.3,
+      "texto": "¿Tú?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.3,
+      "fin": 5.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.4,
+      "fin": 8.1,
+      "texto": "Hola, ¿qué tal, Ricardo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.1,
+      "fin": 8.4,
+      "texto": "¿Con quién hablo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.5,
+      "fin": 9.2,
+      "texto": "¿Qué tal, Ricardo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.2,
+      "fin": 9.7,
+      "texto": "Mucho gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.8,
+      "fin": 10.9,
+      "texto": "Mi nombre es Daniela."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.9,
+      "fin": 14.5,
+      "texto": "Me estoy comunicando del área comercial de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.6,
+      "fin": 16.0,
+      "texto": "No, escuchaba a Daniela."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.0,
+      "fin": 16.6,
+      "texto": "No, gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.6,
+      "fin": 17.0,
+      "texto": "Esperaré esto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.3,
+      "fin": 20.0,
+      "texto": "Únicamente para que sepa que estamos al día de la fecha."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.0,
+      "fin": 25.1,
+      "texto": "Estamos ofreciendo un descuento del 80%."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.2,
+      "fin": 25.9,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.9,
+      "fin": 26.1,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.1,
+      "fin": 26.3,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.3,
+      "fin": 27.6,
+      "texto": "Chau, chau."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.6,
+      "fin": 27.9,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.9,
+      "fin": 28.1,
+      "texto": "¿Cómo va?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.4,
+      "fin": 53.0,
+      "texto": "No, no, no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 63.5,
+      "fin": 65.0,
+      "texto": "Por favor, no se vaya."
+    }
+  ],
+  "transcripcion_completa": "¿Tú? Hola. Hola, ¿qué tal, Ricardo? ¿Con quién hablo? ¿Qué tal, Ricardo? Mucho gusto. Mi nombre es Daniela. Me estoy comunicando del área comercial de Movistar. No, escuchaba a Daniela. No, gracias. Esperaré esto. Únicamente para que sepa que estamos al día de la fecha. Estamos ofreciendo un descuento del 80%. Gracias. Gracias. Gracias. Chau, chau. Hasta luego. ¿Cómo va? No, no, no. Por favor, no se vaya.",
+  "calidad": {
+    "confianza_promedio": 0.301,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 18.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T20:52:08.110674",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se mejoró la fluidez de la conversación."
+    },
+    "fecha_mejora": "2026-02-18T08:14:22.785062",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.4,
+      "fin": 5.29,
+      "duracion": 4.88,
+      "texto": "¿Tú?",
+      "confianza": 0.234
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.31,
+      "fin": 5.41,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.094
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.43,
+      "fin": 8.11,
+      "duracion": 2.68,
+      "texto": "Hola, ¿qué tal, Ricardo?",
+      "confianza": 0.546
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.13,
+      "fin": 8.45,
+      "duracion": 0.32,
+      "texto": "¿Quién hablamos?",
+      "confianza": 0.036
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.47,
+      "fin": 9.19,
+      "duracion": 0.72,
+      "texto": "¿Qué tal, Ricardo?",
+      "confianza": 0.292
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.21,
+      "fin": 9.73,
+      "duracion": 0.52,
+      "texto": "Mucho gusto.",
+      "confianza": 0.405
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.75,
+      "fin": 10.87,
+      "duracion": 1.12,
+      "texto": "Mi nombre es Daniela.",
+      "confianza": 0.362
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.89,
+      "fin": 14.54,
+      "duracion": 3.64,
+      "texto": "Me estoy comunicando del área comercial de Modistar.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.55,
+      "fin": 15.96,
+      "duracion": 1.4,
+      "texto": "No, escuchaba de Daniela.",
+      "confianza": 0.23
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 15.98,
+      "fin": 16.56,
+      "duracion": 0.58,
+      "texto": "No, gracias.",
+      "confianza": 0.274
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.58,
+      "fin": 17.0,
+      "duracion": 0.42,
+      "texto": "Esperaré esto.",
+      "confianza": 0.336
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.28,
+      "fin": 19.98,
+      "duracion": 2.7,
+      "texto": "Únicamente para usted saber que estamos del día de la fecha.",
+      "confianza": 0.639
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.0,
+      "fin": 25.14,
+      "duracion": 5.14,
+      "texto": "Estamos ofreciendo una descuenta del 80%.",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.16,
+      "fin": 25.89,
+      "duracion": 0.72,
+      "texto": "Gracias.",
+      "confianza": 0.217
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.91,
+      "fin": 26.07,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.036
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.09,
+      "fin": 26.27,
+      "duracion": 0.18,
+      "texto": "Gracias.",
+      "confianza": 0.106
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.29,
+      "fin": 27.59,
+      "duracion": 1.3,
+      "texto": "Chau, chau.",
+      "confianza": 0.281
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.61,
+      "fin": 27.85,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.007
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.87,
+      "fin": 28.05,
+      "duracion": 0.18,
+      "texto": "¿Cómo va?",
+      "confianza": 0.17
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.35,
+      "fin": 52.95,
+      "duracion": 18.6,
+      "texto": "No, no, no.",
+      "confianza": 0.51
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.55,
+      "fin": 65.02,
+      "duracion": 1.47,
+      "texto": "Por favor, no te dejes ir.",
+      "confianza": 0.503
+    }
+  ]
+}

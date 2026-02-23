@@ -1,0 +1,201 @@
+{
+  "archivo": "amza18_1_260210135754415_ACD_98539.wav",
+  "duracion_segundos": 59.08,
+  "num_segmentos": 11,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 12.9,
+    "Hablante B": 38.49
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 8.9,
+      "texto": "Hablante A: Mi nombre es Marciel, nos comunicamos del área de beneficios Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.4,
+      "fin": 12.6,
+      "texto": "Hablante B: Queríamos ofrecerte, Franco, un mejor plan para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.6,
+      "fin": 17.4,
+      "texto": "Hablante B: Vemos que te encuentras con un plan increíble actualmente."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.4,
+      "fin": 20.9,
+      "texto": "Hablante B: La idea es, obviamente, mejorar el precio y el plan que tienes actualmente en tu compañía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.0,
+      "fin": 26.5,
+      "texto": "Hablante B: Para eso queríamos consultarte qué tipo de plan estás contratando en tu compañía actual, que te brinda mensualmente."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.5,
+      "fin": 29.3,
+      "texto": "Hablante B: Si recuerdas qué cantidad de gigas tienes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.1,
+      "fin": 34.1,
+      "texto": "Hablante B: No, no recuerdo, pero ya te cuento, ¿sabes?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.1,
+      "fin": 35.5,
+      "texto": "Hablante B: ¿Vuelvo en un momento?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.5,
+      "fin": 45.6,
+      "texto": "Hablante B: Dale, no hay problema, te espero. Te llamo en un rato."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.6,
+      "fin": 51.9,
+      "texto": "Hablante B: Más que nada, para ofrecerte algo que sea acorde a tu consumo y lo que te convenga el traspaso, obviamente."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.6,
+      "fin": 59.1,
+      "texto": "Hablante A: Vale, vuelvo en un momento porque... Dale, no hay problema."
+    }
+  ],
+  "transcripcion_completa": "Hablante A: Mi nombre es Marciel, nos comunicamos del área de beneficios Movistar. Hablante B: Queríamos ofrecerte, Franco, un mejor plan para tu línea. Hablante B: Vemos que te encuentras con un plan increíble actualmente. Hablante B: La idea es, obviamente, mejorar el precio y el plan que tienes actualmente en tu compañía. Hablante B: Para eso queríamos consultarte qué tipo de plan estás contratando en tu compañía actual, que te brinda mensualmente. Hablante B: Si recuerdas qué cantidad de gigas tienes. Hablante B: No, no recuerdo, pero ya te cuento, ¿sabes? Hablante B: ¿Vuelvo en un momento? Hablante B: Dale, no hay problema, te espero. Te llamo en un rato. Hablante B: Más que nada, para ofrecerte algo que sea acorde a tu consumo y lo que te convenga el traspaso, obviamente. Hablante A: Vale, vuelvo en un momento porque... Dale, no hay problema.",
+  "calidad": {
+    "confianza_promedio": 0.467,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T00:03:55.253178",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, palabras cortadas, y errores de transcripción comunes (gigas)."
+    },
+    "fecha_mejora": "2026-02-20T01:24:47.118769",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.48,
+      "fin": 8.87,
+      "duracion": 7.39,
+      "texto": "Marciel es mi nombre, nos comunicamos del área de beneficio movistar.",
+      "confianza": 0.585
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.39,
+      "fin": 12.57,
+      "duracion": 2.18,
+      "texto": "Queríamos Franco, mejorarte el plan de tu niña.",
+      "confianza": 0.553
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.59,
+      "fin": 17.42,
+      "duracion": 4.82,
+      "texto": "Vemos que te encontraste increíble actualmente.",
+      "confianza": 0.663
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.44,
+      "fin": 20.9,
+      "duracion": 3.46,
+      "texto": "La idea bueno es mejorarte obviamente el precio y el plan que tenés actualmente en tu compañía.",
+      "confianza": 0.549
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.0,
+      "fin": 26.51,
+      "duracion": 4.5,
+      "texto": "Para eso queríamos consultarte qué clase de plan estás contratando en tu compañía actual que te brinda mensualmente.",
+      "confianza": 0.673
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.53,
+      "fin": 29.33,
+      "duracion": 1.8,
+      "texto": "Si recordás que cantidad de gigas tenés.",
+      "confianza": 0.354
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.12,
+      "fin": 34.1,
+      "duracion": 3.99,
+      "texto": "No, sabe que no me acuerdo, pero ahí te cuento, ¿sabes?",
+      "confianza": 0.402
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.12,
+      "fin": 35.49,
+      "duracion": 1.36,
+      "texto": "¿Volverá un cachito?",
+      "confianza": 0.132
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.51,
+      "fin": 45.58,
+      "duracion": 10.07,
+      "texto": "Dale, no hay problema, yo te abordo.",
+      "confianza": 0.272
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.6,
+      "fin": 51.91,
+      "duracion": 6.31,
+      "texto": "Más que nada, como para ofrecerte algo que sea acorde, digamos, a tu consumo y lo que te convenga el traspaso, obviamente.",
+      "confianza": 0.674
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.57,
+      "fin": 59.08,
+      "duracion": 5.51,
+      "texto": "Vale, me volví a un cachito porque como... Dale, no hay problema.",
+      "confianza": 0.28
+    }
+  ]
+}

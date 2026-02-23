@@ -1,0 +1,327 @@
+{
+  "archivo": "amza19_1_260218125809182_ACD_64315.wav",
+  "duracion_segundos": 71.94,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 52.0,
+    "Hablante B": 10.21
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.6,
+      "fin": 2.7,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.8,
+      "fin": 5.8,
+      "texto": "¿Me comunico con Eduardo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 5.8,
+      "fin": 6.1,
+      "texto": "Sí, señorita."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.1,
+      "fin": 7.6,
+      "texto": "Hola, Eduardo, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.6,
+      "fin": 11.0,
+      "texto": "Te hablo de la tía Recupero en Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.1,
+      "fin": 12.9,
+      "texto": "Hoy en día estamos brindando un 85% de descuento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.0,
+      "fin": 22.3,
+      "texto": "No, pero estoy con Movistar hace un año y algo, me fui a Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.4,
+      "fin": 26.4,
+      "texto": "Correcto, a eso iba, la persona que necesitaba me asegura que estaba en Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.5,
+      "fin": 28.2,
+      "texto": "¿Por qué motivo se cambió de empresa?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.1,
+      "fin": 33.5,
+      "texto": "Sí, porque no me mandaban nunca la factura, tenía que andar buscando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.3,
+      "fin": 37.9,
+      "texto": "Así que aparte no tenía señal acá en ProTier."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.9,
+      "fin": 40.5,
+      "texto": "Bien, ¿usted en qué parte es que le dice que no tiene señal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.5,
+      "fin": 45.9,
+      "texto": "En ProTier."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.9,
+      "fin": 47.3,
+      "texto": "Perdón, no lo escuché."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.3,
+      "fin": 53.5,
+      "texto": "En ProTier, en ProTier."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.5,
+      "fin": 55.8,
+      "texto": "A ver, lo busco y le confirmo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.6,
+      "fin": 64.2,
+      "texto": "Pero no me voy a retirar de Claro, así que no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.2,
+      "fin": 69.8,
+      "texto": "Y en este momento estoy trabajando, por eso no puedo atenderla bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 69.8,
+      "fin": 71.8,
+      "texto": "Bueno, que tengan buen día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 71.8,
+      "fin": 71.9,
+      "texto": "Igualmente."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Me comunico con Eduardo? Sí, señorita. Hola, Eduardo, ¿cómo estás? Te hablo de la tía Recupero en Movistar. Hoy en día estamos brindando un 85% de descuento. No, pero estoy con Movistar hace un año y algo, me fui a Claro. Correcto, a eso iba, la persona que necesitaba me asegura que estaba en Claro. ¿Por qué motivo se cambió de empresa? Sí, porque no me mandaban nunca la factura, tenía que andar buscando. Así que aparte no tenía señal acá en ProTier. Bien, ¿usted en qué parte es que le dice que no tiene señal? En ProTier. Perdón, no lo escuché. En ProTier, en ProTier. A ver, lo busco y le confirmo. Pero no me voy a retirar de Claro, así que no. Y en este momento estoy trabajando, por eso no puedo atenderla bien. Bueno, que tengan buen día. Igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.438,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T00:18:21.152380",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T01:43:29.038276",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.64,
+      "fin": 2.74,
+      "duracion": 2.1,
+      "texto": "Hola, ¿qué tal, monita?",
+      "confianza": 0.362
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.76,
+      "fin": 5.83,
+      "duracion": 3.06,
+      "texto": "¿Me comunico con Eduardo?",
+      "confianza": 0.464
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.84,
+      "fin": 6.11,
+      "duracion": 0.26,
+      "texto": "Sí, señorita.",
+      "confianza": 0.036
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.12,
+      "fin": 7.57,
+      "duracion": 1.44,
+      "texto": "Hola, Eduardo, ¿cómo estás?",
+      "confianza": 0.468
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.59,
+      "fin": 10.99,
+      "duracion": 3.41,
+      "texto": "Se está hablando de la tía Recupero en Movistar.",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.07,
+      "fin": 12.94,
+      "duracion": 1.86,
+      "texto": "Hoy en día estamos brindando un 85% de descuento.",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.96,
+      "fin": 22.33,
+      "duracion": 9.37,
+      "texto": "No, pero estoy más con Movistar yo hace un año y algo, me fui a Claro.",
+      "confianza": 0.454
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.35,
+      "fin": 26.35,
+      "duracion": 4.01,
+      "texto": "Correcto, a eso ahí, la que actualmente necesitaba me asegura que estaba en Claro.",
+      "confianza": 0.621
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.51,
+      "fin": 28.21,
+      "duracion": 1.7,
+      "texto": "¿Por qué motivo se cambió de empresa?",
+      "confianza": 0.732
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.11,
+      "fin": 33.55,
+      "duracion": 4.45,
+      "texto": "Sí, porque no me mandaban nunca la factura, tenía que andar buscando.",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.34,
+      "fin": 37.92,
+      "duracion": 3.59,
+      "texto": "Así que a parte no tenía señal acá en ProTier.",
+      "confianza": 0.439
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.94,
+      "fin": 40.47,
+      "duracion": 2.52,
+      "texto": "Bien, ¿usted qué parte es que le dice que no tiene señal?",
+      "confianza": 0.696
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.51,
+      "fin": 45.85,
+      "duracion": 0.34,
+      "texto": "En ProTier.",
+      "confianza": 0.087
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.87,
+      "fin": 47.32,
+      "duracion": 1.44,
+      "texto": "Perdón, no lo escuché.",
+      "confianza": 0.058
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.34,
+      "fin": 53.45,
+      "duracion": 6.11,
+      "texto": "En ProTier, en ProTier.",
+      "confianza": 0.391
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.47,
+      "fin": 55.79,
+      "duracion": 2.32,
+      "texto": "A ver, lo busco y le confirmo.",
+      "confianza": 0.331
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.64,
+      "fin": 64.18,
+      "duracion": 6.54,
+      "texto": "Pero no me voy a retirar de claro, así que no.",
+      "confianza": 0.699
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.2,
+      "fin": 69.77,
+      "duracion": 5.57,
+      "texto": "Y en este momento que estoy trabajando, por eso no puedo atenderla bien.",
+      "confianza": 0.492
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 69.79,
+      "fin": 71.8,
+      "duracion": 2.0,
+      "texto": "Bueno, que tengan buen día.",
+      "confianza": 0.46
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 71.82,
+      "fin": 71.94,
+      "duracion": 0.12,
+      "texto": "Igual.",
+      "confianza": 0.167
+    }
+  ]
+}

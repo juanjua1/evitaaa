@@ -1,0 +1,371 @@
+{
+  "archivo": "amza40_1_260220102740938_ACD_91767.wav",
+  "duracion_segundos": 67.45,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 14.63,
+    "Hablante A": 31.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 3.0,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.0,
+      "fin": 4.9,
+      "texto": "¿Habla con Gabriela, con alguna de sus líneas?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.2,
+      "fin": 9.3,
+      "texto": "Eh, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.3,
+      "fin": 9.8,
+      "texto": "La línea no se encuentra."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.9,
+      "fin": 10.0,
+      "texto": "Ah, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.0,
+      "fin": 10.1,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.1,
+      "fin": 11.1,
+      "texto": "¿Me asegura que es la titular?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.1,
+      "fin": 14.3,
+      "texto": "Yo me comunicaba hoy para hacerle llegar un beneficio para sus líneas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.5,
+      "fin": 18.2,
+      "texto": "A ver, decime cuando viene que digo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.2,
+      "fin": 18.4,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.4,
+      "fin": 23.2,
+      "texto": "Bueno, tenemos un beneficio de 18 gigas por 10.700 pesos de parte de Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.9,
+      "fin": 27.1,
+      "texto": "¿18 gigas?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.1,
+      "fin": 27.7,
+      "texto": "¿Cuánto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.7,
+      "fin": 27.9,
+      "texto": "Dígame."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.1,
+      "fin": 30.4,
+      "texto": "18 gigas, sí, por 10.700 pesos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.5,
+      "fin": 35.2,
+      "texto": "Bueno, a ver, entonces le comunico."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.2,
+      "fin": 35.6,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.7,
+      "fin": 38.5,
+      "texto": "Cualquier cosa, le mando un mensaje y estamos en contacto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 39.5,
+      "fin": 40.8,
+      "texto": "Dale, mandame un mensaje."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.8,
+      "fin": 41.2,
+      "texto": "Dale, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.2,
+      "fin": 44.4,
+      "texto": "Perfecto, hasta luego, que tenga un lindo día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.4,
+      "fin": 55.7,
+      "texto": "Gracias igualmente."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.5,
+      "fin": 67.5,
+      "texto": "Sí, ahí está, ahí está."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Habla con Gabriela, con alguna de sus líneas? Eh, no. La línea no se encuentra. Ah, no. Bien. ¿Me asegura que es la titular? Yo me comunicaba hoy para hacerle llegar un beneficio para sus líneas. A ver, decime cuando viene que digo. Bien. Bueno, tenemos un beneficio de 18 gigas por 10.700 pesos de parte de Movistar. ¿18 gigas? ¿Cuánto? Dígame. 18 gigas, sí, por 10.700 pesos. Bueno, a ver, entonces le comunico. Bien, perfecto. Cualquier cosa, le mando un mensaje y estamos en contacto. Dale, mandame un mensaje. Dale, gracias. Perfecto, hasta luego, que tenga un lindo día. Gracias igualmente. Sí, ahí está, ahí está.",
+  "calidad": {
+    "confianza_promedio": 0.412,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T16:02:41.484136",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "18 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: 'gigas' en lugar de otras palabras similares), identificación de roles, y mejora de la puntuación y claridad."
+    },
+    "fecha_mejora": "2026-02-22T23:05:52.524710",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.89,
+      "fin": 2.97,
+      "duracion": 1.08,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.514
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.99,
+      "fin": 4.87,
+      "duracion": 1.88,
+      "texto": "¿Habla Don Gabriela con alguna de sus líneas?",
+      "confianza": 0.68
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.17,
+      "fin": 9.31,
+      "duracion": 0.14,
+      "texto": "Eh, no.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.33,
+      "fin": 9.84,
+      "duracion": 0.5,
+      "texto": "La línea no se encuentra.",
+      "confianza": 0.11
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.86,
+      "fin": 9.99,
+      "duracion": 0.14,
+      "texto": "Ah, no.",
+      "confianza": 0.244
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.02,
+      "fin": 10.12,
+      "duracion": 0.1,
+      "texto": "Bien.",
+      "confianza": 0.116
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.13,
+      "fin": 11.1,
+      "duracion": 0.96,
+      "texto": "Me asegura que es la titular.",
+      "confianza": 0.675
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.14,
+      "fin": 14.32,
+      "duracion": 3.18,
+      "texto": "Yo me comunicaba hoy para hacerle llegar un beneficio para sus líneas.",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.46,
+      "fin": 18.18,
+      "duracion": 0.72,
+      "texto": "A ver, decime cuando viene que digo.",
+      "confianza": 0.023
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.2,
+      "fin": 18.4,
+      "duracion": 0.2,
+      "texto": "Bien.",
+      "confianza": 0.695
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.42,
+      "fin": 23.21,
+      "duracion": 4.79,
+      "texto": "Bueno, tenemos un beneficio de 18 gigas por 10.700 pesos de parte de Movistar.",
+      "confianza": 0.812
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.87,
+      "fin": 27.07,
+      "duracion": 0.2,
+      "texto": "¿18 gigas?",
+      "confianza": 0.024
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.09,
+      "fin": 27.67,
+      "duracion": 0.58,
+      "texto": "¿Cuánto?",
+      "confianza": 0.447
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.69,
+      "fin": 27.91,
+      "duracion": 0.22,
+      "texto": "Dígame.",
+      "confianza": 0.552
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.11,
+      "fin": 30.38,
+      "duracion": 2.26,
+      "texto": "18 gigas, sí, por 10.700 pesos.",
+      "confianza": 0.626
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.52,
+      "fin": 35.16,
+      "duracion": 3.64,
+      "texto": "Bueno, a ver, entonces le comunico.",
+      "confianza": 0.358
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.18,
+      "fin": 35.65,
+      "duracion": 0.46,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.18
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.66,
+      "fin": 38.51,
+      "duracion": 2.84,
+      "texto": "Cualquier cosa, le mando un mensaje y estamos en contacto.",
+      "confianza": 0.683
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 39.45,
+      "fin": 40.81,
+      "duracion": 1.36,
+      "texto": "Dale, mandame un mensaje.",
+      "confianza": 0.368
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.83,
+      "fin": 41.19,
+      "duracion": 0.36,
+      "texto": "Dale, gracias.",
+      "confianza": 0.251
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.21,
+      "fin": 44.4,
+      "duracion": 3.18,
+      "texto": "Perfecto, hasta luego, que tengo un lindo día.",
+      "confianza": 0.476
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.41,
+      "fin": 55.69,
+      "duracion": 11.27,
+      "texto": "Gracias igualmente.",
+      "confianza": 0.416
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.49,
+      "fin": 67.45,
+      "duracion": 5.96,
+      "texto": "Sí, ahí está, ahí está.",
+      "confianza": 0.502
+    }
+  ]
+}

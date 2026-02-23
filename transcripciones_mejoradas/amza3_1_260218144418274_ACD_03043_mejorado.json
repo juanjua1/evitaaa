@@ -1,0 +1,145 @@
+{
+  "archivo": "amza3_1_260218144418274_ACD_03043.wav",
+  "duracion_segundos": 69.88,
+  "num_segmentos": 7,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 11.12,
+    "Hablante B": 14.78
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 3.7,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.7,
+      "fin": 5.2,
+      "texto": "Hablo con el Sr. Luque."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 8.1,
+      "fin": 14.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.7,
+      "fin": 15.6,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.5,
+      "fin": 27.1,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.9,
+      "fin": 37.5,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 64.4,
+      "fin": 69.9,
+      "texto": "Gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con el Sr. Luque. Hola. Hola, buenos días. Hola. Hola, buenos días. Gracias.",
+  "calidad": {
+    "confianza_promedio": 0.603,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:31:54.259154",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se mejoró la puntuación."
+    },
+    "fecha_mejora": "2026-02-20T10:39:21.937312",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 3.7,
+      "duracion": 3.67,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.406
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.72,
+      "fin": 5.18,
+      "duracion": 1.46,
+      "texto": "Salve con su predignado Luque.",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.1,
+      "fin": 14.39,
+      "duracion": 6.29,
+      "texto": "Hola.",
+      "confianza": 0.598
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.67,
+      "fin": 15.55,
+      "duracion": 0.88,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.736
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.51,
+      "fin": 27.05,
+      "duracion": 0.54,
+      "texto": "Hola.",
+      "confianza": 0.747
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.85,
+      "fin": 37.46,
+      "duracion": 7.61,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.624
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.43,
+      "fin": 69.88,
+      "duracion": 5.45,
+      "texto": "Gracias.",
+      "confianza": 0.515
+    }
+  ]
+}

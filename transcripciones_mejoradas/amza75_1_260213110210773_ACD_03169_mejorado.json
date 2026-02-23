@@ -1,0 +1,159 @@
+{
+  "archivo": "amza75_1_260213110210773_ACD_03169.wav",
+  "duracion_segundos": 30.17,
+  "num_segmentos": 9,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 27.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.7,
+      "fin": 3.2,
+      "texto": "Hola, ¿qué tal? Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.2,
+      "fin": 7.4,
+      "texto": "¿Me comunico con Juan Marcelo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.4,
+      "fin": 8.0,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.1,
+      "fin": 9.1,
+      "texto": "Mi nombre es Macarena."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.7,
+      "fin": 16.1,
+      "texto": "Me comunicaba con usted el día de la área de NSTJ de Movistar porque estamos lanzando ofertas en el 80%."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.1,
+      "fin": 30.1,
+      "texto": "¿Usted solamente está en Claro, cierto?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.1,
+      "fin": 30.2,
+      "texto": "Hola."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. ¿Me comunico con Juan Marcelo? Hola, ¿qué tal? Mi nombre es Macarena. Me comunicaba con usted el día de la área de NSTJ de Movistar porque estamos lanzando ofertas en el 80%. ¿Usted solamente está en Claro, cierto? Hola.",
+  "calidad": {
+    "confianza_promedio": 0.474,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T10:43:33.854855",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T11:07:18.132634",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.69,
+      "fin": 2.69,
+      "duracion": 1.0,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.553
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.71,
+      "fin": 3.21,
+      "duracion": 0.5,
+      "texto": "Buen día.",
+      "confianza": 0.473
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.23,
+      "fin": 7.37,
+      "duracion": 4.14,
+      "texto": "¿Me comunicó con Juan Marcello?",
+      "confianza": 0.621
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.39,
+      "fin": 7.51,
+      "duracion": 0.12,
+      "texto": "Hola.",
+      "confianza": 0.274
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.53,
+      "fin": 7.97,
+      "duracion": 0.44,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.487
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.09,
+      "fin": 9.09,
+      "duracion": 1.0,
+      "texto": "Mi nombre es Macarena.",
+      "confianza": 0.532
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.67,
+      "fin": 16.06,
+      "duracion": 6.39,
+      "texto": "Me comunicaba con usted el día de la área de NSTJ de Montar porque estamos lanzando nuestros feriles en el 80%.",
+      "confianza": 0.599
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.08,
+      "fin": 30.05,
+      "duracion": 13.97,
+      "texto": "¿Vos solamente estás en claro, cierto?",
+      "confianza": 0.532
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.07,
+      "fin": 30.17,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.199
+    }
+  ]
+}

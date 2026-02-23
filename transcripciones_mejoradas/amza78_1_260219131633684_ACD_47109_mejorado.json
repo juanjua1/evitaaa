@@ -1,0 +1,317 @@
+{
+  "archivo": "amza78_1_260219131633684_ACD_47109.wav",
+  "duracion_segundos": 63.3,
+  "num_segmentos": 21,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 23.98,
+    "Hablante B": 31.57
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.0,
+      "fin": 4.4,
+      "texto": "Buenas, con Paola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.5,
+      "fin": 7.3,
+      "texto": "Paola, soy Tamara Ungusto, asesora de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.7,
+      "fin": 9.6,
+      "texto": "Me comunico para brindarte un descuento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.6,
+      "fin": 15.0,
+      "texto": "Pero no tengo Movistar, yo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.0,
+      "fin": 16.0,
+      "texto": "Justamente por eso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.0,
+      "fin": 20.0,
+      "texto": "¿Has estado antes en Movistar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.0,
+      "fin": 20.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.9,
+      "fin": 23.5,
+      "texto": "Bueno, justamente por eso me han asignado tu línea, Paola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.7,
+      "fin": 30.4,
+      "texto": "Para que yo pueda brindarte un descuento que es exclusivo para los que han estado antes en Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.4,
+      "fin": 34.8,
+      "texto": "No, pero acá en la localidad que vivo no andaba Movistar, por eso me cambié."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.4,
+      "fin": 38.5,
+      "texto": "¿En qué localidad te encontrás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 38.5,
+      "fin": 41.8,
+      "texto": "En Puerto San Julián, Santa Cruz."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.9,
+      "fin": 45.0,
+      "texto": "Ah, eso es en la provincia de... Santa Cruz."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.4,
+      "fin": 62.3,
+      "texto": "No, pero no anda bien, me voy a caer en eso porque no anda bien, o sea, se corta, no hay fibra óptica, es malísima la señal acá, así que te agradezco."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 62.3,
+      "fin": 62.8,
+      "texto": "Bueno, no hay problema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 62.8,
+      "fin": 63.0,
+      "texto": "Dale, chau."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 63.1,
+      "fin": 63.3,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Buenas, con Paola. Paola, soy Tamara Ungusto, asesora de Movistar. Me comunico para brindarte un descuento. Pero no tengo Movistar, yo. Justamente por eso. ¿Has estado antes en Movistar? Sí. Bueno, justamente por eso me han asignado tu línea, Paola. Para que yo pueda brindarte un descuento que es exclusivo para los que han estado antes en Movistar. No, pero acá en la localidad que vivo no andaba Movistar, por eso me cambié. ¿En qué localidad te encontrás? En Puerto San Julián, Santa Cruz. Ah, eso es en la provincia de... Santa Cruz. No, pero no anda bien, me voy a caer en eso porque no anda bien, o sea, se corta, no hay fibra óptica, es malísima la señal acá, así que te agradezco. Bueno, no hay problema. Dale, chau. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.464,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T17:23:23.649870",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, palabras cortadas y leves errores de transcripción. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:30:29.634656",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.98,
+      "fin": 4.38,
+      "duracion": 3.4,
+      "texto": "Buenas, con Paola.",
+      "confianza": 0.052
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.4,
+      "fin": 4.46,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.191
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.48,
+      "fin": 7.32,
+      "duracion": 2.84,
+      "texto": "Paola, soy Tamara Ungusto, soy asesora de Movistar.",
+      "confianza": 0.643
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.72,
+      "fin": 9.59,
+      "duracion": 1.86,
+      "texto": "Me comunicó para brindarte un descuento.",
+      "confianza": 0.68
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.63,
+      "fin": 14.99,
+      "duracion": 2.36,
+      "texto": "Pero no tengo Movistar, yo.",
+      "confianza": 0.212
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.01,
+      "fin": 16.01,
+      "duracion": 1.0,
+      "texto": "Justamente por eso.",
+      "confianza": 0.907
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.03,
+      "fin": 19.98,
+      "duracion": 3.94,
+      "texto": "¿Has estado antes en el Movistar?",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.0,
+      "fin": 20.12,
+      "duracion": 0.12,
+      "texto": "Sí.",
+      "confianza": 0.634
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.14,
+      "fin": 20.84,
+      "duracion": 0.7,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.86,
+      "fin": 23.54,
+      "duracion": 2.68,
+      "texto": "Bueno, justamente por eso me han asignado tu línea, Paola.",
+      "confianza": 0.575
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.74,
+      "fin": 30.43,
+      "duracion": 6.69,
+      "texto": "Para que yo pueda brindarle un descuento que es exclusivo para los que han estado antes en Movistar.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.45,
+      "fin": 34.8,
+      "duracion": 4.35,
+      "texto": "No, pero acá en la localidad que vivo no andaba en Movistar, por eso me cambié.",
+      "confianza": 0.723
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.58,
+      "fin": 36.34,
+      "duracion": 0.76,
+      "texto": "Ah, bien.",
+      "confianza": 0.456
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.36,
+      "fin": 38.5,
+      "duracion": 2.14,
+      "texto": "¿En qué localidad te encontraste?",
+      "confianza": 0.538
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.52,
+      "fin": 41.83,
+      "duracion": 3.3,
+      "texto": "En Puerto San Julián, Santa Cruz.",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.85,
+      "fin": 45.03,
+      "duracion": 3.19,
+      "texto": "Ah, eso es en la provincia de... Santa Cruz.",
+      "confianza": 0.633
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.37,
+      "fin": 45.72,
+      "duracion": 0.34,
+      "texto": "Ah, bien.",
+      "confianza": 0.338
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.42,
+      "fin": 62.31,
+      "duracion": 14.9,
+      "texto": "No, pero no anda bien, me voy a caer en eso porque no anda bien, o sea, se corta, no hay fibra óptica, es malísimo la señal acá, así que te agradezco.",
+      "confianza": 0.636
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.34,
+      "fin": 62.8,
+      "duracion": 0.46,
+      "texto": "Bueno, no hay problema.",
+      "confianza": 0.009
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.82,
+      "fin": 63.04,
+      "duracion": 0.22,
+      "texto": "Dale, chau.",
+      "confianza": 0.024
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.06,
+      "fin": 63.3,
+      "duracion": 0.24,
+      "texto": "Hasta luego.",
+      "confianza": 0.085
+    }
+  ]
+}

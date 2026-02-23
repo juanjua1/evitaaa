@@ -1,0 +1,159 @@
+{
+  "archivo": "amza8_1_260213110150670_ACD_02277.wav",
+  "duracion_segundos": 56.09,
+  "num_segmentos": 8,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 22.29,
+    "Hablante B": 20.31
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 7.7,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.7,
+      "fin": 8.5,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.5,
+      "fin": 17.4,
+      "texto": "Hola, ¿me escucha?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.7,
+      "fin": 25.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.8,
+      "fin": 27.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.5,
+      "fin": 35.4,
+      "texto": "Hola, ¿me escuchan?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.2,
+      "fin": 44.8,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.8,
+      "fin": 56.1,
+      "texto": "Hola."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, ¿me escucha? Hola. Hola. Hola, ¿me escuchan? Hola. Hola.",
+  "calidad": {
+    "confianza_promedio": 0.618,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 10.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T20:42:48.886292",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron errores menores de puntuación y se identificaron los roles de hablantes."
+    },
+    "fecha_mejora": "2026-02-18T08:13:42.988577",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 7.66,
+      "duracion": 7.63,
+      "texto": "Hola.",
+      "confianza": 0.349
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.68,
+      "fin": 8.48,
+      "duracion": 0.8,
+      "texto": "Hola.",
+      "confianza": 0.519
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.5,
+      "fin": 17.41,
+      "duracion": 8.91,
+      "texto": "Hola, ¿me escucha?",
+      "confianza": 0.535
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.73,
+      "fin": 25.62,
+      "duracion": 4.89,
+      "texto": "Hola.",
+      "confianza": 0.667
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.82,
+      "fin": 27.42,
+      "duracion": 1.6,
+      "texto": "Hola.",
+      "confianza": 0.76
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.46,
+      "fin": 35.4,
+      "duracion": 4.95,
+      "texto": "Hola, ¿me escuchan?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.25,
+      "fin": 44.8,
+      "duracion": 2.54,
+      "texto": "Hola.",
+      "confianza": 0.761
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.82,
+      "fin": 56.09,
+      "duracion": 11.28,
+      "texto": "Hola.",
+      "confianza": 0.673
+    }
+  ]
+}

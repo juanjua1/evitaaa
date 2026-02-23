@@ -1,0 +1,287 @@
+{
+  "archivo": "amza3_1_260212172232700_ACD_41399.wav",
+  "duracion_segundos": 62.19,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 32.42,
+    "Hablante A": 21.36
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.0,
+      "fin": 2.9,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.0,
+      "fin": 5.2,
+      "texto": "Buenas tardes, ¿me comunico con Google Yari?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.9,
+      "fin": 9.4,
+      "texto": "No, no está en este momento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.1,
+      "fin": 12.8,
+      "texto": "Perfecto, ¿con quién me estoy comunicando?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.8,
+      "fin": 14.4,
+      "texto": "Con el marido."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.5,
+      "fin": 17.8,
+      "texto": "¿Y cómo se llama usted, caballero?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.8,
+      "fin": 18.8,
+      "texto": "Roberto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.8,
+      "fin": 19.8,
+      "texto": "Roberto, ¿cómo anda?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.9,
+      "fin": 24.4,
+      "texto": "Mire, la estoy llamando de Oriana, del área de agrocomercialización de Movistar, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.4,
+      "fin": 29.1,
+      "texto": "Ya que hoy en día estamos ofreciendo un descuento de portabilidad para tu línea al 80%."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.0,
+      "fin": 42.1,
+      "texto": "No, no, te puedo asegurar que no, no va a querer seguramente porque ella es la que paga y ella es la que revisa y ella es la que hace los pedidos a las empresas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.1,
+      "fin": 50.4,
+      "texto": "Así que no, la verdad que no sé qué decirte hasta que no esté ella, ella es la que ve todo eso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.4,
+      "fin": 51.0,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.0,
+      "fin": 52.5,
+      "texto": "¿En qué hora ya me puedo comunicar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.7,
+      "fin": 55.7,
+      "texto": "A las ocho más o menos, si te querés comunicar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.8,
+      "fin": 60.5,
+      "texto": "Bueno, Dele, muchísimas gracias por su tiempo, que tenga buenas tardes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.2,
+      "fin": 62.2,
+      "texto": "Chau, igualmente."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buenas tardes, ¿me comunico con Google Yari? No, no está en este momento. Perfecto, ¿con quién me estoy comunicando? Con el marido. ¿Y cómo se llama usted, caballero? Roberto. Roberto, ¿cómo anda? Mire, la estoy llamando de Oriana, del área de agrocomercialización de Movistar, ¿sí? Ya que hoy en día estamos ofreciendo un descuento de portabilidad para tu línea al 80%. No, no, te puedo asegurar que no, no va a querer seguramente porque ella es la que paga y ella es la que revisa y ella es la que hace los pedidos a las empresas. Así que no, la verdad que no sé qué decirte hasta que no esté ella, ella es la que ve todo eso. Perfecto. ¿En qué hora ya me puedo comunicar? A las ocho más o menos, si te querés comunicar. Bueno, Dele, muchísimas gracias por su tiempo, que tenga buenas tardes. Chau, igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.529,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 18.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T17:24:39.318736",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "descuento de portabilidad"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios, y se mejoró la puntuación y fluidez."
+    },
+    "fecha_mejora": "2026-02-18T07:57:16.707695",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.96,
+      "fin": 2.92,
+      "duracion": 0.96,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.637
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.96,
+      "fin": 5.16,
+      "duracion": 2.2,
+      "texto": "Buenas tardes, ¿me comunico con Google Yari?",
+      "confianza": 0.65
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.88,
+      "fin": 9.4,
+      "duracion": 2.52,
+      "texto": "No, no lo están haciendo en este momento.",
+      "confianza": 0.625
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.13,
+      "fin": 12.83,
+      "duracion": 2.7,
+      "texto": "Perfecto, ¿con quién me estoy comunicando?",
+      "confianza": 0.473
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.85,
+      "fin": 14.45,
+      "duracion": 1.6,
+      "texto": "Con el marido.",
+      "confianza": 0.378
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.47,
+      "fin": 17.8,
+      "duracion": 3.32,
+      "texto": "¿Y cómo se llama usted caballero?",
+      "confianza": 0.65
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.82,
+      "fin": 18.8,
+      "duracion": 0.98,
+      "texto": "Roberto.",
+      "confianza": 0.312
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.82,
+      "fin": 19.84,
+      "duracion": 1.02,
+      "texto": "Roberto, ¿cómo anda?",
+      "confianza": 0.604
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.86,
+      "fin": 24.43,
+      "duracion": 4.57,
+      "texto": "Mire, la estoy llamando Oriana, de la área de agrocomersión de movilizar, ¿sí?",
+      "confianza": 0.602
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.45,
+      "fin": 29.09,
+      "duracion": 4.65,
+      "texto": "Ya que hoy en día estamos viniendo un descuento de portabilidad para tu línea al 80%.",
+      "confianza": 0.633
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.96,
+      "fin": 42.12,
+      "duracion": 11.15,
+      "texto": "No, no, te puedo asegurar que no, no va a querer seguramente porque ella es la que paga y ella es la que revisa y ella es la que hace los pedidos a las empresas.",
+      "confianza": 0.504
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.13,
+      "fin": 50.38,
+      "duracion": 8.25,
+      "texto": "Así que no, la verdad que no sé qué decirte hasta que no esté ella, ella es la que vive todo eso.",
+      "confianza": 0.463
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.4,
+      "fin": 50.98,
+      "duracion": 0.58,
+      "texto": "Perfecto.",
+      "confianza": 0.169
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.0,
+      "fin": 52.51,
+      "duracion": 1.5,
+      "texto": "¿En qué hora ya me puedo comunicar?",
+      "confianza": 0.344
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.67,
+      "fin": 55.73,
+      "duracion": 2.06,
+      "texto": "A las ocho más o menos, si te querés comunicar.",
+      "confianza": 0.57
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.75,
+      "fin": 60.51,
+      "duracion": 4.77,
+      "texto": "Bueno, Dele, muchísimas gracias por su tiempo, que tenga buenas tardes.",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.24,
+      "fin": 62.19,
+      "duracion": 0.95,
+      "texto": "Chau, igualmente.",
+      "confianza": 0.727
+    }
+  ]
+}

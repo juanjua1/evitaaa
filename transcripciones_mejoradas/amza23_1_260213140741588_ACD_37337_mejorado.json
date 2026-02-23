@@ -1,0 +1,315 @@
+{
+  "archivo": "amza23_1_260213140741588_ACD_37337.wav",
+  "duracion_segundos": 60.65,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 22.76,
+    "Hablante B": 15.46
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.4,
+      "fin": 0.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.7,
+      "fin": 2.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 3.9,
+      "texto": "Buenas tardes, Ana María."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.3,
+      "fin": 6.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.3,
+      "fin": 12.1,
+      "texto": "Un momento, Macarena es mi nombre, nos estamos contactando para ofrecerle en el día de hoy una muy buena promoción en la línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.0,
+      "fin": 15.3,
+      "texto": "¿Ustedes actualmente se encuentran en Claro, verdad?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.4,
+      "fin": 18.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.4,
+      "fin": 19.5,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.0,
+      "fin": 28.3,
+      "texto": "Le comento, sí, que al día de hoy tenemos una muy buena promoción en un valor final de 7,790 con 14 gigas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.3,
+      "fin": 33.2,
+      "texto": "¿Usted dice...?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.3,
+      "fin": 35.4,
+      "texto": "No, pero yo estoy para... Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.4,
+      "fin": 36.4,
+      "texto": "¿Cuánto está abonando?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.8,
+      "fin": 43.1,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.3,
+      "fin": 45.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.5,
+      "fin": 47.7,
+      "texto": "Sí, ahí se me ha cortado la comunicación."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.7,
+      "fin": 49.3,
+      "texto": "¿Cuánto estás abonando con Claro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.2,
+      "fin": 53.6,
+      "texto": "Cinco mil cuarenta."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.6,
+      "fin": 58.4,
+      "texto": "Bueno, lo dejamos en el sistema y en cuanto sea mejor la oferta, yo me vuelvo a contactar, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.7,
+      "fin": 60.6,
+      "texto": "Bueno, listo."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buenas tardes, Ana María. Sí. Un momento, Macarena es mi nombre, nos estamos contactando para ofrecerle en el día de hoy una muy buena promoción en la línea. ¿Ustedes actualmente se encuentran en Claro, verdad? Sí. Bien, perfecto. Le comento, sí, que al día de hoy tenemos una muy buena promoción en un valor final de 7,790 con 14 gigas. ¿Usted dice...? No, pero yo estoy para... Sí. ¿Cuánto está abonando? Hola. Hola. Sí, ahí se me ha cortado la comunicación. ¿Cuánto estás abonando con Claro? Cinco mil cuarenta. Bueno, lo dejamos en el sistema y en cuanto sea mejor la oferta, yo me vuelvo a contactar, ¿sí? Bueno, listo.",
+  "calidad": {
+    "confianza_promedio": 0.471,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T01:14:03.275712",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "plan 14 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, nombres propios, y palabras cortadas. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T02:46:01.401340",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.44,
+      "fin": 0.62,
+      "duracion": 0.18,
+      "texto": "Hola.",
+      "confianza": 0.365
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.72,
+      "fin": 2.36,
+      "duracion": 0.64,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.493
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.38,
+      "fin": 3.94,
+      "duracion": 1.56,
+      "texto": "Buenas tardes, Ana María.",
+      "confianza": 0.623
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.26,
+      "fin": 6.33,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.34,
+      "fin": 12.11,
+      "duracion": 5.77,
+      "texto": "Un busco, Macarena es mi nombre, nos estamos contactando para abritarle en el día de hoy una muy buena promoción en la línea.",
+      "confianza": 0.692
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.96,
+      "fin": 15.26,
+      "duracion": 2.3,
+      "texto": "Ustedes actualmente se encuentran claro, ¿verdad?",
+      "confianza": 0.616
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.36,
+      "fin": 18.42,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.008
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.44,
+      "fin": 19.47,
+      "duracion": 1.02,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.834
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.97,
+      "fin": 28.3,
+      "duracion": 8.33,
+      "texto": "Le comento, sí, que al día de hoy tenemos una muy buena promoción en un valor final de 7,790 con 14 gigas.",
+      "confianza": 0.755
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.29,
+      "fin": 33.24,
+      "duracion": 3.95,
+      "texto": "Usted dice...",
+      "confianza": 0.092
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.26,
+      "fin": 35.4,
+      "duracion": 2.14,
+      "texto": "No, pero yo estoy para... Sí.",
+      "confianza": 0.097
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.42,
+      "fin": 36.38,
+      "duracion": 0.96,
+      "texto": "¿Cuánto está abonando?",
+      "confianza": 0.678
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.79,
+      "fin": 43.09,
+      "duracion": 0.3,
+      "texto": "Hola.",
+      "confianza": 0.705
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.34,
+      "fin": 45.44,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.008
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.45,
+      "fin": 47.72,
+      "duracion": 2.26,
+      "texto": "Sí, ahí se me ha aportado la comunicación.",
+      "confianza": 0.744
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.74,
+      "fin": 49.3,
+      "duracion": 1.56,
+      "texto": "¿Cuánto estás abonando con Claro?",
+      "confianza": 0.795
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.25,
+      "fin": 53.63,
+      "duracion": 0.38,
+      "texto": "Cinco mil cuarenta.",
+      "confianza": 0.054
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.65,
+      "fin": 58.35,
+      "duracion": 4.71,
+      "texto": "Bueno, lo dejamos en todo el sistema y en cuanto es mejor la oferta, yo me vuelvo a contactar, ¿sí?",
+      "confianza": 0.713
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.7,
+      "fin": 60.65,
+      "duracion": 1.94,
+      "texto": "Bueno, listo.",
+      "confianza": 0.672
+    }
+  ]
+}

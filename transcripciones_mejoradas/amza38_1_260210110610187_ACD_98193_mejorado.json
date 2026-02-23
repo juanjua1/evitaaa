@@ -1,0 +1,355 @@
+{
+  "archivo": "amza38_1_260210110610187_ACD_98193.wav",
+  "duracion_segundos": 67.16,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 12.25,
+    "Hablante A": 38.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.1,
+      "fin": 3.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.4,
+      "fin": 4.0,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 8.3,
+      "texto": "Hablo con Urbana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.3,
+      "fin": 10.6,
+      "texto": "¿Cómo le va acá?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.6,
+      "fin": 13.8,
+      "texto": "Mi nombre es Adriana y le estábamos hablando desde Administración Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.9,
+      "fin": 19.6,
+      "texto": "Vemos que usted es usuario de una de las líneas del Mercado Poblete."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.9,
+      "fin": 22.0,
+      "texto": "Exacto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.0,
+      "fin": 22.8,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.2,
+      "fin": 26.9,
+      "texto": "Tenemos para ofrecerle el plan económico para todas las líneas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.3,
+      "fin": 30.8,
+      "texto": "A ver, espera para antes que largues el speech."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.8,
+      "fin": 32.9,
+      "texto": "¿Vos has visto que es un número de empresa?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.8,
+      "fin": 34.0,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.5,
+      "fin": 35.7,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.7,
+      "fin": 43.9,
+      "texto": "Entonces, si estás sintiendo que soy hombre y la titular es una mujer, ¿qué es lo que sucede?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.0,
+      "fin": 45.8,
+      "texto": "Bien, queríamos hacerle llegar un plan."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.8,
+      "fin": 47.1,
+      "texto": "¿Qué es lo que sucede?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 48.4,
+      "fin": 51.1,
+      "texto": "A veces también es un número de empresa, pero no familiar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.1,
+      "fin": 52.8,
+      "texto": "No, ¿qué es lo que sucede?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.8,
+      "fin": 53.8,
+      "texto": "No, si es la titular,"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.5,
+      "fin": 58.2,
+      "texto": "una mujer y es una empresa, entonces el marido."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.5,
+      "fin": 60.8,
+      "texto": "Cómo es el marido?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.9,
+      "fin": 67.2,
+      "texto": "Y sí, señorita, es una es una empresa, entonces ubíquense."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. Hablo con Urbana. ¿Cómo le va acá? Mi nombre es Adriana y le estábamos hablando desde Administración Movistar. Vemos que usted es usuario de una de las líneas del Mercado Poblete. Exacto. Bien, perfecto. Tenemos para ofrecerle el plan económico para todas las líneas. A ver, espera para antes que largues el speech. ¿Vos has visto que es un número de empresa? Sí. Bien. Entonces, si estás sintiendo que soy hombre y la titular es una mujer, ¿qué es lo que sucede? Bien, queríamos hacerle llegar un plan. ¿Qué es lo que sucede? A veces también es un número de empresa, pero no familiar. No, ¿qué es lo que sucede? No, si es la titular, una mujer y es una empresa, entonces el marido. Cómo es el marido? Y sí, señorita, es una es una empresa, entonces ubíquense.",
+  "calidad": {
+    "confianza_promedio": 0.615,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:01:31.993163",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T10:31:41.984580",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.14,
+      "fin": 3.38,
+      "duracion": 1.24,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.775
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.4,
+      "fin": 3.98,
+      "duracion": 0.58,
+      "texto": "Buen día.",
+      "confianza": 0.562
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.25,
+      "fin": 8.31,
+      "duracion": 1.06,
+      "texto": "Hablo con Urbana.",
+      "confianza": 0.214
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.33,
+      "fin": 10.57,
+      "duracion": 2.24,
+      "texto": "¿Cómo le va acá?",
+      "confianza": 0.569
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.59,
+      "fin": 13.84,
+      "duracion": 3.24,
+      "texto": "Mi nombre es Adriana y le estábamos hablando desde Administración Movistar.",
+      "confianza": 0.565
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.92,
+      "fin": 19.57,
+      "duracion": 5.65,
+      "texto": "Vemos que usted es usuario de una de las líneas del Mercado Poblete.",
+      "confianza": 0.687
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.85,
+      "fin": 21.99,
+      "duracion": 0.14,
+      "texto": "Exacto.",
+      "confianza": 0.001
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.01,
+      "fin": 22.81,
+      "duracion": 0.8,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.495
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.21,
+      "fin": 26.9,
+      "duracion": 3.69,
+      "texto": "Tenemos para adivinarle el plan económico para todas las líneas.",
+      "confianza": 0.76
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.27,
+      "fin": 30.81,
+      "duracion": 3.54,
+      "texto": "A ver, Bella, espera para antes que largues el speech.",
+      "confianza": 0.727
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.83,
+      "fin": 32.87,
+      "duracion": 2.04,
+      "texto": "¿Vos has visto que es un número de empresa?",
+      "confianza": 0.784
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.77,
+      "fin": 33.99,
+      "duracion": 0.22,
+      "texto": "Sí.",
+      "confianza": 0.853
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.5,
+      "fin": 35.74,
+      "duracion": 0.24,
+      "texto": "Bien.",
+      "confianza": 0.922
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.7,
+      "fin": 43.92,
+      "duracion": 7.23,
+      "texto": "Entonces, si estás sintiendo que soy hombre y la titular es una mujer, ¿qué es lo que sucede?",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.95,
+      "fin": 45.81,
+      "duracion": 1.86,
+      "texto": "Bien, queríamos hacerle llegar un plan.",
+      "confianza": 0.847
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.83,
+      "fin": 47.07,
+      "duracion": 1.24,
+      "texto": "¿Qué es lo que sucede?",
+      "confianza": 0.663
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.35,
+      "fin": 51.09,
+      "duracion": 2.74,
+      "texto": "A veces también es un número de empresa, pero no familiar.",
+      "confianza": 0.502
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 51.11,
+      "fin": 52.81,
+      "duracion": 1.7,
+      "texto": "No, ¿qué es lo que sucede?",
+      "confianza": 0.35
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.83,
+      "fin": 53.81,
+      "duracion": 0.98,
+      "texto": "No, si es la titular,",
+      "confianza": 0.496
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.5,
+      "fin": 58.2,
+      "duracion": 3.69,
+      "texto": "una mujer y es una empresa, entonces el marido.",
+      "confianza": 0.648
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.5,
+      "fin": 60.78,
+      "duracion": 1.28,
+      "texto": "Cómo es el marido?",
+      "confianza": 0.768
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.93,
+      "fin": 67.16,
+      "duracion": 5.24,
+      "texto": "Y sí, señorita, es una es una empresa, entonces ubíquense.",
+      "confianza": 0.634
+    }
+  ]
+}

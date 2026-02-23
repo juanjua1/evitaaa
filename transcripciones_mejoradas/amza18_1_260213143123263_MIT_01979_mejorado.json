@@ -1,0 +1,311 @@
+{
+  "archivo": "amza18_1_260213143123263_MIT_01979.wav",
+  "duracion_segundos": 78.5,
+  "num_segmentos": 19,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 74.82
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 0.8,
+      "fin": 30.2,
+      "texto": "Hola, disculpe."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.5,
+      "fin": 32.8,
+      "texto": "Sí, no hay problema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.9,
+      "fin": 33.9,
+      "texto": "¿Sabes qué?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.9,
+      "fin": 34.2,
+      "texto": "¿Sabes qué?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.2,
+      "fin": 36.5,
+      "texto": "No debes... ¿Cuánto se puede llamar mañana?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.5,
+      "fin": 40.4,
+      "texto": "Por lo que pasa es que estoy entrando al trabajo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.4,
+      "fin": 41.3,
+      "texto": "Ah, bien, bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.3,
+      "fin": 43.7,
+      "texto": "¿Logró llamar de igual forma?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.7,
+      "fin": 48.2,
+      "texto": "Sí, sí, mañana se llame bien, por favor."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.3,
+      "fin": 48.6,
+      "texto": "A la misma hora."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 48.6,
+      "fin": 49.1,
+      "texto": "Ah, bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.1,
+      "fin": 50.4,
+      "texto": "Igual ya estaría todo, digamos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.4,
+      "fin": 53.3,
+      "texto": "Lo único que falta es que usted me diga si logró llamar al número o nada más."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.3,
+      "fin": 56.9,
+      "texto": "No, no, porque no contesta nadie."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.1,
+      "fin": 66.9,
+      "texto": "No contesta nadie, por eso no... la computadora... disculpe, ¿entro al trabajo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.9,
+      "fin": 70.3,
+      "texto": "No, no hay problema, estamos en contacto, no hay problema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 70.4,
+      "fin": 77.4,
+      "texto": "Si puede ser mañana, por favor."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 77.4,
+      "fin": 78.2,
+      "texto": "Sí, no hay problema, muchas gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 78.2,
+      "fin": 78.5,
+      "texto": "Gracias, Grecia."
+    }
+  ],
+  "transcripcion_completa": "Hola, disculpe. Sí, no hay problema. ¿Sabes qué? ¿Sabes qué? No debes... ¿Cuánto se puede llamar mañana? Por lo que pasa es que estoy entrando al trabajo. Ah, bien, bien. ¿Logró llamar de igual forma? Sí, sí, mañana se llame bien, por favor. A la misma hora. Ah, bien. Igual ya estaría todo, digamos. Lo único que falta es que usted me diga si logró llamar al número o nada más. No, no, porque no contesta nadie. No contesta nadie, por eso no... la computadora... disculpe, ¿entro al trabajo? No, no hay problema, estamos en contacto, no hay problema. Si puede ser mañana, por favor. Sí, no hay problema, muchas gracias. Gracias, Grecia.",
+  "calidad": {
+    "confianza_promedio": 0.337,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T00:10:10.833911",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T01:32:41.164958",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.76,
+      "fin": 30.17,
+      "duracion": 29.42,
+      "texto": "Hola, disculpen.",
+      "confianza": 0.468
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.54,
+      "fin": 32.84,
+      "duracion": 2.3,
+      "texto": "Sí, no hay problema.",
+      "confianza": 0.166
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 32.87,
+      "fin": 33.89,
+      "duracion": 1.02,
+      "texto": "¿Sabes qué?",
+      "confianza": 0.237
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.91,
+      "fin": 34.19,
+      "duracion": 0.28,
+      "texto": "¿Sabes qué?",
+      "confianza": 0.123
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.21,
+      "fin": 36.45,
+      "duracion": 2.24,
+      "texto": "No debes... ¿Cuánto se puede llamar mañana?",
+      "confianza": 0.536
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.49,
+      "fin": 40.4,
+      "duracion": 3.91,
+      "texto": "Por lo que pasa es que estoy entrando al trabajo.",
+      "confianza": 0.439
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.42,
+      "fin": 41.3,
+      "duracion": 0.88,
+      "texto": "Ah, bien, bien.",
+      "confianza": 0.19
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.32,
+      "fin": 43.68,
+      "duracion": 2.36,
+      "texto": "¿Logró llamar de igual forma?",
+      "confianza": 0.517
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.7,
+      "fin": 48.25,
+      "duracion": 4.55,
+      "texto": "Sí, sí, mañana se llame bien, por favor.",
+      "confianza": 0.367
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.27,
+      "fin": 48.59,
+      "duracion": 0.32,
+      "texto": "A la misma hora.",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 48.61,
+      "fin": 49.13,
+      "duracion": 0.52,
+      "texto": "Ah, bien.",
+      "confianza": 0.221
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.15,
+      "fin": 50.39,
+      "duracion": 1.24,
+      "texto": "Igual ya estaría todo, digamos.",
+      "confianza": 0.539
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 50.41,
+      "fin": 53.3,
+      "duracion": 2.88,
+      "texto": "Lo único que falta es que usted me diga si logró llamar al número o nada más.",
+      "confianza": 0.58
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.32,
+      "fin": 56.9,
+      "duracion": 2.58,
+      "texto": "No, no, porque no contesta nadie.",
+      "confianza": 0.408
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.06,
+      "fin": 66.92,
+      "duracion": 8.86,
+      "texto": "No contesta nadie, por eso no... la computadora... disculpe, ¿entro al trabajo?",
+      "confianza": 0.613
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 66.94,
+      "fin": 70.35,
+      "duracion": 3.41,
+      "texto": "No, no hay problema, estamos en contacto, no hay problema.",
+      "confianza": 0.264
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 70.41,
+      "fin": 77.42,
+      "duracion": 7.01,
+      "texto": "Si puede ser mi mañana, por favor.",
+      "confianza": 0.624
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 77.44,
+      "fin": 78.16,
+      "duracion": 0.72,
+      "texto": "Sí, no hay problema, muchas gracias.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 78.18,
+      "fin": 78.5,
+      "duracion": 0.32,
+      "texto": "Gracias, Grecia.",
+      "confianza": 0.096
+    }
+  ]
+}

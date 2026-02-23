@@ -1,0 +1,327 @@
+{
+  "archivo": "amza38_1_260219120200539_ACD_80991.wav",
+  "duracion_segundos": 66.49,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 49.78,
+    "Hablante B": 5.65
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.4,
+      "fin": 3.7,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.7,
+      "fin": 4.7,
+      "texto": "Hablo con Gabriel."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.8,
+      "fin": 8.1,
+      "texto": "No, equivocado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.1,
+      "fin": 9.8,
+      "texto": "¿Cómo le va, señorita? Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.8,
+      "fin": 13.5,
+      "texto": "Me figura que Gabriela Loic es titular de las líneas, ¿es correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.4,
+      "fin": 17.7,
+      "texto": "No, no se trata."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.7,
+      "fin": 19.1,
+      "texto": "Discúlpame, ¿de dónde hablas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.1,
+      "fin": 20.9,
+      "texto": "Yo hablo de la empresa Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.4,
+      "fin": 26.6,
+      "texto": "Tenía una promoción para brindarte con el 80% de descuento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.7,
+      "fin": 33.6,
+      "texto": "Te agradezco mucho por el llamado, pero no, este teléfono es mío y no es de mí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.6,
+      "fin": 35.5,
+      "texto": "La otra persona que mencionaste es mi papá."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.5,
+      "fin": 41.7,
+      "texto": "Sí, pero... Sí, sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.7,
+      "fin": 45.3,
+      "texto": "Es el titular de mi línea, pero yo no puedo tomar ningún tipo de decisión."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.8,
+      "fin": 52.4,
+      "texto": "Así que a este teléfono te pido disculpas, pero no llames, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.5,
+      "fin": 52.7,
+      "texto": "Ah, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.7,
+      "fin": 54.4,
+      "texto": "¿No puedes tomar decisiones sobre tu línea?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.5,
+      "fin": 56.8,
+      "texto": "No, porque la paga mi papá, gracias a Dios."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.0,
+      "fin": 61.5,
+      "texto": "Tengo el privilegio que todavía me lo paga mi papá."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.5,
+      "fin": 63.3,
+      "texto": "Qué lindo, igual, entonces, a disfrutarlo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.3,
+      "fin": 66.5,
+      "texto": "Y se agradezco igualmente por el llamado."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Hablo con Gabriel. No, equivocado. ¿Cómo le va, señorita? Un gusto. Me figura que Gabriela Loic es titular de las líneas, ¿es correcto? No, no se trata. Discúlpame, ¿de dónde hablas? Yo hablo de la empresa Movistar. Tenía una promoción para brindarte con el 80% de descuento. Te agradezco mucho por el llamado, pero no, este teléfono es mío y no es de mí. La otra persona que mencionaste es mi papá. Sí, pero... Sí, sí, sí. Es el titular de mi línea, pero yo no puedo tomar ningún tipo de decisión. Así que a este teléfono te pido disculpas, pero no llames, ¿sí? Ah, perfecto. ¿No puedes tomar decisiones sobre tu línea? No, porque la paga mi papá, gracias a Dios. Tengo el privilegio que todavía me lo paga mi papá. Qué lindo, igual, entonces, a disfrutarlo. Y se agradezco igualmente por el llamado.",
+  "calidad": {
+    "confianza_promedio": 0.495,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:44:19.045066",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles de agente y cliente, y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:00:52.947707",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.42,
+      "fin": 3.66,
+      "duracion": 3.24,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.563
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.68,
+      "fin": 4.72,
+      "duracion": 1.04,
+      "texto": "Hablo con Gabriel.",
+      "confianza": 0.823
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.81,
+      "fin": 8.11,
+      "duracion": 0.3,
+      "texto": "No, equivocado.",
+      "confianza": 0.018
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.13,
+      "fin": 9.77,
+      "duracion": 1.64,
+      "texto": "¿Cómo le va, señorita, a un gusto?",
+      "confianza": 0.636
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.81,
+      "fin": 13.52,
+      "duracion": 3.71,
+      "texto": "Me figura que Gabriela Loic es titular de las líneas, ¿es correcto?",
+      "confianza": 0.599
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.38,
+      "fin": 17.7,
+      "duracion": 0.32,
+      "texto": "No, no se trata.",
+      "confianza": 0.022
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.72,
+      "fin": 19.1,
+      "duracion": 1.38,
+      "texto": "Discúlpame, ¿de dónde hablas?",
+      "confianza": 0.202
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.12,
+      "fin": 20.91,
+      "duracion": 1.78,
+      "texto": "Yo hablo de la empresa Movistar.",
+      "confianza": 0.563
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.43,
+      "fin": 26.61,
+      "duracion": 5.19,
+      "texto": "Teníamos una promoción para brindarte con el 80% de descuento.",
+      "confianza": 0.817
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.74,
+      "fin": 33.63,
+      "duracion": 5.89,
+      "texto": "Te agradezco mucho por el llamado, pero no, este teléfono es mío y no es de mí.",
+      "confianza": 0.608
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.65,
+      "fin": 35.53,
+      "duracion": 1.88,
+      "texto": "La otra persona que mencionaste es mi papá.",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.55,
+      "fin": 41.66,
+      "duracion": 6.11,
+      "texto": "Sí, pero... Sí, sí, sí.",
+      "confianza": 0.578
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.68,
+      "fin": 45.27,
+      "duracion": 3.59,
+      "texto": "Es el titulado de mi línea, pero a mí no puedo tomar ningún tipo de decisión.",
+      "confianza": 0.7
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.79,
+      "fin": 52.44,
+      "duracion": 6.65,
+      "texto": "Así que a este teléfono te pido disculpas, pero no llames, ¿sí?",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.46,
+      "fin": 52.72,
+      "duracion": 0.26,
+      "texto": "Ah, perfecto.",
+      "confianza": 0.003
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.74,
+      "fin": 54.44,
+      "duracion": 1.7,
+      "texto": "¿No puedes tomar decisiones sobre tu línea?",
+      "confianza": 0.01
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 54.46,
+      "fin": 56.8,
+      "duracion": 2.34,
+      "texto": "No, porque la paga mi papá, gracias a Dios.",
+      "confianza": 0.655
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.05,
+      "fin": 61.48,
+      "duracion": 3.44,
+      "texto": "Tengo el privilegio que todavía me lo paga mi papá.",
+      "confianza": 0.767
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.5,
+      "fin": 63.31,
+      "duracion": 1.81,
+      "texto": "Qué lindo, igual, entonces, a disfrutarlo.",
+      "confianza": 0.307
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.33,
+      "fin": 66.49,
+      "duracion": 3.16,
+      "texto": "Y se agradezco igualmente por el llamado.",
+      "confianza": 0.698
+    }
+  ]
+}

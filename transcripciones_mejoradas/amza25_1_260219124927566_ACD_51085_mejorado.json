@@ -1,0 +1,271 @@
+{
+  "archivo": "amza25_1_260219124927566_ACD_51085.wav",
+  "duracion_segundos": 46.15,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 28.24,
+    "Hablante A": 10.3
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.1,
+      "fin": 3.3,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 4.2,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.2,
+      "fin": 7.5,
+      "texto": "Hablo con Rodrigo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.6,
+      "fin": 8.0,
+      "texto": "Sí, él habla."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.0,
+      "fin": 8.8,
+      "texto": "Hola, Rodrigo, un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.9,
+      "fin": 9.8,
+      "texto": "Te habla Ayanna."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.4,
+      "fin": 16.6,
+      "texto": "Te contacto desde el área de recupero de clientes de Movistar porque al día de hoy te queríamos brindar una promo exclusiva."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.3,
+      "fin": 18.9,
+      "texto": "Me aseguro que ustedes tienen una línea en Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.9,
+      "fin": 22.2,
+      "texto": "¿Puede ser?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.3,
+      "fin": 22.3,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.4,
+      "fin": 23.1,
+      "texto": "Perfecto, Rodrigo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.1,
+      "fin": 23.7,
+      "texto": "Y te consulto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.7,
+      "fin": 26.5,
+      "texto": "¿Cuánto estás abonando por tu plan actualmente?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.4,
+      "fin": 34.8,
+      "texto": "Algo de 30-35 mil."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.2,
+      "fin": 39.1,
+      "texto": "Y vos tenés muchos gigas en tu plan, ¿lo usas mucho o poco?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.7,
+      "fin": 46.1,
+      "texto": "Tengo 35 gigas."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. Hablo con Rodrigo. Sí, él habla. Hola, Rodrigo, un gusto. Te habla Ayanna. Te contacto desde el área de recupero de clientes de Movistar porque al día de hoy te queríamos brindar una promo exclusiva. Me aseguro que ustedes tienen una línea en Claro. ¿Puede ser? Sí. Perfecto, Rodrigo. Y te consulto. ¿Cuánto estás abonando por tu plan actualmente? Algo de 30-35 mil. Y vos tenés muchos gigas en tu plan, ¿lo usas mucho o poco? Tengo 35 gigas.",
+  "calidad": {
+    "confianza_promedio": 0.576,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:28:14.499471",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como 'Ayanna' en lugar de 'Ayanna', y se mejoró la puntuación y la claridad general."
+    },
+    "fecha_mejora": "2026-02-22T22:39:31.618051",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.07,
+      "fin": 3.29,
+      "duracion": 1.22,
+      "texto": "Hola.",
+      "confianza": 0.447
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.31,
+      "fin": 4.24,
+      "duracion": 0.92,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.478
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.25,
+      "fin": 7.54,
+      "duracion": 3.28,
+      "texto": "Se habló con Rodrigo.",
+      "confianza": 0.22
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.56,
+      "fin": 8.0,
+      "duracion": 0.44,
+      "texto": "Sí, él habla.",
+      "confianza": 0.401
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.02,
+      "fin": 8.82,
+      "duracion": 0.8,
+      "texto": "Hola, Rodrigo, un gusto.",
+      "confianza": 0.558
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.86,
+      "fin": 9.76,
+      "duracion": 0.9,
+      "texto": "Se habla de Ayanna.",
+      "confianza": 0.73
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.42,
+      "fin": 16.61,
+      "duracion": 6.19,
+      "texto": "Te contacto desde el área de recupero de clientes de Movistar porque al día de hoy te queríamos brindar una promo exclusiva.",
+      "confianza": 0.691
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.27,
+      "fin": 18.91,
+      "duracion": 1.64,
+      "texto": "Me aseguro que ustedes tienen una línea en claro.",
+      "confianza": 0.589
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.93,
+      "fin": 22.25,
+      "duracion": 3.32,
+      "texto": "¿Puede ser?",
+      "confianza": 0.822
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.27,
+      "fin": 22.34,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.067
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.36,
+      "fin": 23.12,
+      "duracion": 0.76,
+      "texto": "Perfecto, Rodrigo.",
+      "confianza": 0.752
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.14,
+      "fin": 23.72,
+      "duracion": 0.58,
+      "texto": "Y te consulto.",
+      "confianza": 0.729
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.74,
+      "fin": 26.46,
+      "duracion": 2.72,
+      "texto": "¿Cuánto estás abonando por tu plan actualmente?",
+      "confianza": 0.834
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.4,
+      "fin": 34.77,
+      "duracion": 6.37,
+      "texto": "algo de 30-35 mil.",
+      "confianza": 0.546
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.21,
+      "fin": 39.14,
+      "duracion": 3.93,
+      "texto": "Y vos tenes muchos gigas en tu plan, lo usas mucho o poco?",
+      "confianza": 0.671
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.74,
+      "fin": 46.15,
+      "duracion": 5.41,
+      "texto": "Tengo 35 gigas.",
+      "confianza": 0.681
+    }
+  ]
+}

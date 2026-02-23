@@ -1,0 +1,287 @@
+{
+  "archivo": "amza38_1_260210131255267_ACD_72547.wav",
+  "duracion_segundos": 57.07,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 20.37,
+    "Hablante B": 26.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 2.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 3.0,
+      "texto": "Buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.1,
+      "fin": 6.8,
+      "texto": "Hablo con Marcelino."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.8,
+      "fin": 6.9,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.9,
+      "fin": 7.7,
+      "texto": "¿Qué tal, Marcelino?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.8,
+      "fin": 8.4,
+      "texto": "Un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.4,
+      "fin": 13.9,
+      "texto": "Mi nombre es Naldana y te estábamos llamando para ofrecerte un plan de 8.000 pesos para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.9,
+      "fin": 14.8,
+      "texto": "¿Qué te parece?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.5,
+      "fin": 19.6,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.6,
+      "fin": 24.5,
+      "texto": "Bien, Marcelino, vas a tener un plan de 8 gigas más 10 gigas de regalo, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 24.9,
+      "fin": 29.5,
+      "texto": "El plan contiene el 85% de descuento fijo por seis meses."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.1,
+      "fin": 36.4,
+      "texto": "Y tenés llamadas gratis a cualquier compañía y a América."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.4,
+      "fin": 43.8,
+      "texto": "¿Qué te parece?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.8,
+      "fin": 45.3,
+      "texto": "Sí, ya me habló, pero no sé si llamé a mi agendado o no sé si quiero."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.3,
+      "fin": 47.3,
+      "texto": "Disculpe, caballero, no lo escucho bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.2,
+      "fin": 55.1,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 55.1,
+      "fin": 57.1,
+      "texto": "Hola, Marcelino, ¿me escuchas?"
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Buen día. Hablo con Marcelino. Sí. ¿Qué tal, Marcelino? Un gusto. Mi nombre es Naldana y te estábamos llamando para ofrecerte un plan de 8.000 pesos para tu línea. ¿Qué te parece? Sí, sí. Bien, Marcelino, vas a tener un plan de 8 gigas más 10 gigas de regalo, ¿sí? El plan contiene el 85% de descuento fijo por seis meses. Y tenés llamadas gratis a cualquier compañía y a América. ¿Qué te parece? Sí, ya me habló, pero no sé si llamé a mi agendado o no sé si quiero. Disculpe, caballero, no lo escucho bien. Hola. Hola, Marcelino, ¿me escuchas?",
+  "calidad": {
+    "confianza_promedio": 0.548,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:03:12.517242",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "plan 8GB"
+      ],
+      "plan_vendido": "plan 8GB",
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: gigas, nombres), mejora de la fluidez y claridad."
+    },
+    "fecha_mejora": "2026-02-20T10:32:14.921767",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 2.39,
+      "duracion": 2.36,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.378
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.41,
+      "fin": 3.05,
+      "duracion": 0.64,
+      "texto": "Buen día.",
+      "confianza": 0.25
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.07,
+      "fin": 6.78,
+      "duracion": 3.7,
+      "texto": "Hablo con Marcelino.",
+      "confianza": 0.634
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.8,
+      "fin": 6.86,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.03
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.88,
+      "fin": 7.74,
+      "duracion": 0.86,
+      "texto": "¿Qué tal, Marcelino?",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.8,
+      "fin": 8.38,
+      "duracion": 0.58,
+      "texto": "Un gusto.",
+      "confianza": 0.65
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.4,
+      "fin": 13.92,
+      "duracion": 5.53,
+      "texto": "Mi nombre es Naldana y te estábamos hablando para ofrecerte un plan de 8.000 pesos para tu línea.",
+      "confianza": 0.774
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.94,
+      "fin": 14.79,
+      "duracion": 0.84,
+      "texto": "¿Qué te parece?",
+      "confianza": 0.781
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.47,
+      "fin": 19.61,
+      "duracion": 0.14,
+      "texto": "Sí, sí.",
+      "confianza": 0.148
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.63,
+      "fin": 24.49,
+      "duracion": 4.86,
+      "texto": "Bien, Marcelino, vas a tener un plan de 8 gigas más 10 gigas de regalo, ¿sí?",
+      "confianza": 0.73
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.95,
+      "fin": 29.5,
+      "duracion": 4.54,
+      "texto": "El plan contiene el 85% de descuento fijo por seis meses.",
+      "confianza": 0.74
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.1,
+      "fin": 36.41,
+      "duracion": 6.31,
+      "texto": "Y tenés buenas gratis llamar libre a cualquier compañía América de Aprecio Localismo en América.",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.43,
+      "fin": 43.8,
+      "duracion": 7.37,
+      "texto": "¿Qué te parece?",
+      "confianza": 0.861
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.82,
+      "fin": 45.28,
+      "duracion": 1.46,
+      "texto": "Sí, ya me hablo, pero no sé si llame a mi agendado o no sé si en querer.",
+      "confianza": 0.007
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.3,
+      "fin": 47.28,
+      "duracion": 1.98,
+      "texto": "Disculpe, caballero, no lo escucho bien.",
+      "confianza": 0.67
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 51.25,
+      "fin": 55.11,
+      "duracion": 3.86,
+      "texto": "Hola.",
+      "confianza": 0.896
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.13,
+      "fin": 57.07,
+      "duracion": 1.94,
+      "texto": "Hola, Marcelino, ¿me escuchas?",
+      "confianza": 0.796
+    }
+  ]
+}

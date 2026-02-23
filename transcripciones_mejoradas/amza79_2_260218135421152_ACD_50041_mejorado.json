@@ -1,0 +1,159 @@
+{
+  "archivo": "amza79_2_260218135421152_ACD_50041.wav",
+  "duracion_segundos": 58.39,
+  "num_segmentos": 8,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 39.73,
+    "Hablante B": 3.2
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 0.0,
+      "fin": 19.6,
+      "texto": "No, se cortó, se cortó, se cortó."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.9,
+      "fin": 27.9,
+      "texto": "Pero no me lo alcanzó a adjudicar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.9,
+      "fin": 28.4,
+      "texto": "Bienvenida, claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.5,
+      "fin": 33.9,
+      "texto": "Después del tono, deja tu mensaje."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.5,
+      "fin": 40.0,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.1,
+      "fin": 44.9,
+      "texto": "Ay, se le apagó."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.2,
+      "fin": 56.0,
+      "texto": "Sí, se le apagó porque no me lo borró el Forte."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.0,
+      "fin": 58.4,
+      "texto": "Ay, no me descansó ni a dictar, por Dios."
+    }
+  ],
+  "transcripcion_completa": "No, se cortó, se cortó, se cortó. Pero no me lo alcanzó a adjudicar. Bienvenida, claro. Después del tono, deja tu mensaje. Para finalizar, cortá o marca la tecla numeral para más opciones. Ay, se le apagó. Sí, se le apagó porque no me lo borró el Forte. Ay, no me descansó ni a dictar, por Dios.",
+  "calidad": {
+    "confianza_promedio": 0.534,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T17:35:34.290040",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "CORTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción y se identificaron los roles de los hablantes."
+    },
+    "fecha_mejora": "2026-02-22T23:33:11.562939",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 19.57,
+      "duracion": 19.54,
+      "texto": "No, se cortó, se cortó, se cortó.",
+      "confianza": 0.443
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.91,
+      "fin": 27.86,
+      "duracion": 7.95,
+      "texto": "Pero no me lo alcanzo a adjudicar.",
+      "confianza": 0.378
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.88,
+      "fin": 28.4,
+      "duracion": 0.52,
+      "texto": "Bienvenida, claro.",
+      "confianza": 0.18
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.47,
+      "fin": 33.91,
+      "duracion": 2.44,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.777
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.45,
+      "fin": 39.98,
+      "duracion": 4.53,
+      "texto": "Para finalizar, cortá o marca la tecla numeral para más opciones.",
+      "confianza": 0.767
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.13,
+      "fin": 44.89,
+      "duracion": 0.76,
+      "texto": "Ay, se le apagó.",
+      "confianza": 0.664
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 51.18,
+      "fin": 56.01,
+      "duracion": 4.83,
+      "texto": "Sí, se le apagó porque no me lo borró el Forte.",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.02,
+      "fin": 58.39,
+      "duracion": 2.36,
+      "texto": "Ay, no me descansó ni a dictar, por Dios.",
+      "confianza": 0.563
+    }
+  ]
+}

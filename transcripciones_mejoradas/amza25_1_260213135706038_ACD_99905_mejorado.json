@@ -1,0 +1,269 @@
+{
+  "archivo": "amza25_1_260213135706038_ACD_99905.wav",
+  "duracion_segundos": 34.63,
+  "num_segmentos": 16,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 30.92
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 5.5,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.6,
+      "fin": 5.9,
+      "texto": "Hablo con Marcos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.9,
+      "fin": 6.2,
+      "texto": "¿Sí, quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.3,
+      "fin": 7.2,
+      "texto": "¿Cómo estás, Marcos?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 8.0,
+      "texto": "Te hablo de Ayana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.5,
+      "fin": 14.7,
+      "texto": "Te contacto desde el área de beneficios de Movistar, porque el día de hoy tenemos una promoción del 80% para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.3,
+      "fin": 20.6,
+      "texto": "¿Vos estás en Claro, verdad, Marcos?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.6,
+      "fin": 22.1,
+      "texto": "Sí, Ayana, pero otra vez con ese momento estoy trabajando, no puedo hablar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.1,
+      "fin": 22.8,
+      "texto": "Dale, no te hagas problema."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.8,
+      "fin": 27.2,
+      "texto": "¿En qué momento te puedo volver a llamar, o si no te perdés la promo más que nada?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.3,
+      "fin": 28.1,
+      "texto": "Después de las seis de la tarde."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.5,
+      "fin": 29.7,
+      "texto": "Dale, no tengas problemas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.7,
+      "fin": 33.5,
+      "texto": "Te dejo un mensajito y ahí estamos contactándonos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.5,
+      "fin": 33.8,
+      "texto": "Muchas gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.8,
+      "fin": 34.0,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.0,
+      "fin": 34.6,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hablo con Marcos. ¿Sí, quién habla? ¿Cómo estás, Marcos? Te hablo de Ayana. Te contacto desde el área de beneficios de Movistar, porque el día de hoy tenemos una promoción del 80% para tu línea. ¿Vos estás en Claro, verdad, Marcos? Sí, Ayana, pero otra vez con ese momento estoy trabajando, no puedo hablar. Dale, no te hagas problema. ¿En qué momento te puedo volver a llamar, o si no te perdés la promo más que nada? Después de las seis de la tarde. Dale, no tengas problemas. Te dejo un mensajito y ahí estamos contactándonos. Muchas gracias. Gracias. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.405,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T01:46:00.716968",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron errores menores de transcripción y se mejoró la claridad de algunas frases."
+    },
+    "fecha_mejora": "2026-02-20T03:29:24.853960",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.94,
+      "fin": 5.54,
+      "duracion": 3.6,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.182
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.56,
+      "fin": 5.9,
+      "duracion": 0.34,
+      "texto": "Hablo con Marcos.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.92,
+      "fin": 6.24,
+      "duracion": 0.32,
+      "texto": "Sí, quién habla.",
+      "confianza": 0.013
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.26,
+      "fin": 7.24,
+      "duracion": 0.98,
+      "texto": "¿Cómo estás, Marcos?",
+      "confianza": 0.782
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.26,
+      "fin": 8.03,
+      "duracion": 0.76,
+      "texto": "Te hablé de Ayana.",
+      "confianza": 0.485
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.53,
+      "fin": 14.73,
+      "duracion": 6.21,
+      "texto": "Te contacto desde el área de beneficios de Movistar, porque el día de hoy tenemos una promoción del 80% para tu línea.",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.33,
+      "fin": 20.56,
+      "duracion": 5.23,
+      "texto": "Vos estás en claro, ¿verdad, Marcos?",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.58,
+      "fin": 22.08,
+      "duracion": 1.5,
+      "texto": "Sí, Ayana, pero otra vez con ese momento estoy trabajando, no puedo hablar.",
+      "confianza": 0.01
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.1,
+      "fin": 22.8,
+      "duracion": 0.7,
+      "texto": "Dale, no te hagas problema.",
+      "confianza": 0.249
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.82,
+      "fin": 27.25,
+      "duracion": 4.42,
+      "texto": "¿En qué momento te puedo volver a llamar, o si no te perdés la promo más que nada?",
+      "confianza": 0.542
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.27,
+      "fin": 28.05,
+      "duracion": 0.78,
+      "texto": "Después de las seis de la tarde.",
+      "confianza": 0.141
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.46,
+      "fin": 29.67,
+      "duracion": 1.21,
+      "texto": "Dale, no tengas problemas.",
+      "confianza": 0.648
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.69,
+      "fin": 33.5,
+      "duracion": 3.81,
+      "texto": "Te dejo un mensajito y ahí estamos contactándonos.",
+      "confianza": 0.743
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.52,
+      "fin": 33.82,
+      "duracion": 0.3,
+      "texto": "Muchas gracias.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.84,
+      "fin": 34.0,
+      "duracion": 0.16,
+      "texto": "Gracias.",
+      "confianza": 0.016
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.02,
+      "fin": 34.63,
+      "duracion": 0.6,
+      "texto": "Hasta luego.",
+      "confianza": 0.583
+    }
+  ]
+}

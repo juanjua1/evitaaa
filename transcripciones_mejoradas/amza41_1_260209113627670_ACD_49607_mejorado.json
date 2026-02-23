@@ -1,0 +1,131 @@
+{
+  "archivo": "amza41_1_260209113627670_ACD_49607.wav",
+  "duracion_segundos": 102.7,
+  "num_segmentos": 6,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 29.42,
+    "Hablante B": 46.13
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.4,
+      "fin": 8.1,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.1,
+      "fin": 48.9,
+      "texto": "No, ya está, ya está."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.0,
+      "fin": 51.0,
+      "texto": "Venimos andando, y viene también."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.9,
+      "fin": 58.4,
+      "texto": "Vamos todos antes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.3,
+      "fin": 78.1,
+      "texto": "Igual la estoy intentando."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 81.0,
+      "fin": 102.7,
+      "texto": "Hola, Marco."
+    }
+  ],
+  "transcripcion_completa": "Para finalizar, corta o marca la tecla numeral para más opciones. No, ya está, ya está. Venimos andando, y viene también. Vamos todos antes. Igual la estoy intentando. Hola, Marco.",
+  "calidad": {
+    "confianza_promedio": 0.507,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:40:43.071680",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción y se identificaron los roles de los hablantes."
+    },
+    "fecha_mejora": "2026-02-20T10:41:51.739929",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.44,
+      "fin": 8.12,
+      "duracion": 7.68,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.82
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.15,
+      "fin": 48.91,
+      "duracion": 18.76,
+      "texto": "No, ya está, ya está.",
+      "confianza": 0.384
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.97,
+      "fin": 51.02,
+      "duracion": 2.04,
+      "texto": "Venimos andando, y viene también.",
+      "confianza": 0.457
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.88,
+      "fin": 58.41,
+      "duracion": 6.53,
+      "texto": "Vamos todos antes.",
+      "confianza": 0.268
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.28,
+      "fin": 78.08,
+      "duracion": 18.8,
+      "texto": "Igual la estoy intentando.",
+      "confianza": 0.608
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.96,
+      "fin": 102.7,
+      "duracion": 21.74,
+      "texto": "Hola, Marco.",
+      "confianza": 0.506
+    }
+  ]
+}

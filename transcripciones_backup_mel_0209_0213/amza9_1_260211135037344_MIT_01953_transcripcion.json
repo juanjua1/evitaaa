@@ -1,0 +1,62 @@
+{
+  "archivo": "amza9_1_260211135037344_MIT_01953.wav",
+  "duracion_segundos": 63.28,
+  "num_segmentos": 4,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 19.22,
+    "Hablante A": 3.56
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.24,
+      "fin": 43.12,
+      "duracion": 13.88,
+      "texto": "Usted está comunicado con la casilla de mensajes de Movistar de 2, 9, 7, 5, 1, 3, 4, 6, 7, 4.",
+      "confianza": 0.541
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.14,
+      "fin": 46.02,
+      "duracion": 2.88,
+      "texto": "Si querés dejar un mensaje predeterminado, presiona 3.",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.52,
+      "fin": 48.99,
+      "duracion": 2.46,
+      "texto": "Si querés grabar un mensaje, presiona 2.",
+      "confianza": 0.83
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.72,
+      "fin": 63.28,
+      "duracion": 3.56,
+      "texto": "Usted está comunicado con la casilla de mensajes de Movistar.",
+      "confianza": 0.732
+    }
+  ],
+  "transcripcion_completa": "Usted está comunicado con la casilla de mensajes de Movistar de 2, 9, 7, 5, 1, 3, 4, 6, 7, 4. Si querés dejar un mensaje predeterminado, presiona 3. Si querés grabar un mensaje, presiona 2. Usted está comunicado con la casilla de mensajes de Movistar.",
+  "calidad": {
+    "confianza_promedio": 0.678,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 11.9
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T21:07:54.648872",
+    "version": "5.0_ecapa"
+  }
+}

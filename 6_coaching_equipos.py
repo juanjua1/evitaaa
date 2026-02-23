@@ -364,10 +364,10 @@ def recopilar_metricas_equipo(equipo, vendedores_equipo, datos, listado_vendedor
         
         if len(df_equipo) > 0:
             total = len(df_equipo)
-            con_plan = len(df_equipo[df_equipo['cantidad_planes'] > 0])
-            ofrece_fibra = len(df_equipo[df_equipo['ofrece_fibra'] == True])
-            df_promo = df_equipo[df_equipo['es_dia_promo'] == True]
-            menciona_promo = len(df_promo[df_promo['menciona_promo'] == True])
+            con_plan = len(df_equipo[df_equipo['cantidad_planes'] > 0]) if 'cantidad_planes' in df_equipo.columns else 0
+            ofrece_fibra = len(df_equipo[df_equipo['ofrece_fibra'] == True]) if 'ofrece_fibra' in df_equipo.columns else 0
+            df_promo = df_equipo[df_equipo['es_dia_promo'] == True] if 'es_dia_promo' in df_equipo.columns else pd.DataFrame()
+            menciona_promo = len(df_promo[df_promo['menciona_promo'] == True]) if len(df_promo) > 0 and 'menciona_promo' in df_promo.columns else 0
             
             metricas['planes'] = {
                 'total_llamadas': total,
@@ -792,12 +792,11 @@ def main():
     coaching_existente = []
     equipos_procesados = []
     
-    # Filtrar equipos pendientes - SOLO BYL y DIANA
-    equipos_a_procesar = ['BYL', 'DIANA']
-    equipos_pendientes = [e for e in equipos_a_procesar if e in equipos_validos.keys()]
+    # Procesar TODOS los equipos válidos
+    equipos_pendientes = list(equipos_validos.keys())
     
     if not equipos_pendientes:
-        log("No se encontraron los equipos BYL y DIANA", "warning")
+        log("No se encontraron equipos para procesar", "warning")
         return
     
     log(f"Pendientes a procesar: {len(equipos_pendientes)} - {equipos_pendientes}")

@@ -1,0 +1,371 @@
+{
+  "archivo": "amza35_1_260209141023718_ACD_43709.wav",
+  "duracion_segundos": 126.02,
+  "num_segmentos": 23,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 47.51,
+    "Hablante B": 16.77
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.3,
+      "fin": 4.3,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.3,
+      "fin": 9.5,
+      "texto": "Hola, hablo con la línea de Andrea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.6,
+      "fin": 10.0,
+      "texto": "Andrea no se encuentra."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.0,
+      "fin": 14.1,
+      "texto": "Bien, pero me figura ella como titular, ¿puede ser?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.1,
+      "fin": 16.2,
+      "texto": "Ya, sí, pero ahora."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.2,
+      "fin": 19.0,
+      "texto": "Claro, sería para venderte lo que es un descuento en tus cuatro líneas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.0,
+      "fin": 28.5,
+      "texto": "Es un plan que tiene 14 gigas en total, tan solo 7,790 pesos, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.5,
+      "fin": 28.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.6,
+      "fin": 30.9,
+      "texto": "Tiene un descuento por seis meses del 80%."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.2,
+      "fin": 31.8,
+      "texto": "Por ciento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.2,
+      "fin": 38.7,
+      "texto": "¿Esto sería en la línea de Claro?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.3,
+      "fin": 41.6,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.6,
+      "fin": 45.6,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.5,
+      "fin": 52.7,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.8,
+      "fin": 53.2,
+      "texto": "¿Buen día?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.2,
+      "fin": 55.8,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 57.6,
+      "fin": 58.4,
+      "texto": "Hola, hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.9,
+      "fin": 62.9,
+      "texto": "Hola, ¿me escucha bien?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 73.0,
+      "fin": 74.8,
+      "texto": "Hola, ¿se escucha?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 78.3,
+      "fin": 86.5,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 89.7,
+      "fin": 99.0,
+      "texto": "Hola, ¿me escuchas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 99.0,
+      "fin": 100.4,
+      "texto": "Hola, ¿me escuchas?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 124.3,
+      "fin": 126.0,
+      "texto": "Por saltar el agua."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, hablo con la línea de Andrea. Andrea no se encuentra. Bien, pero me figura ella como titular, ¿puede ser? Ya, sí, pero ahora. Claro, sería para venderte lo que es un descuento en tus cuatro líneas. Es un plan que tiene 14 gigas en total, tan solo 7,790 pesos, ¿sí? Sí. Tiene un descuento por seis meses del 80%. Por ciento. ¿Esto sería en la línea de Claro? ¿Hola? ¿Hola? Hola, ¿qué tal? ¿Buen día? ¿Hola? Hola, hola. Hola, ¿me escucha bien? Hola, ¿se escucha? Hola. Hola, ¿me escuchas? Hola, ¿me escuchas? Por saltar el agua.",
+  "calidad": {
+    "confianza_promedio": 0.52,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:26:48.605893",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "plan 14gb"
+      ],
+      "plan_vendido": "plan 14gb",
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, identificación de roles y clasificación de la llamada."
+    },
+    "fecha_mejora": "2026-02-20T09:37:43.605798",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.33,
+      "fin": 4.29,
+      "duracion": 2.96,
+      "texto": "Hola, hablé.",
+      "confianza": 0.244
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.31,
+      "fin": 9.54,
+      "duracion": 5.23,
+      "texto": "Hola, habló con la línea Andrea.",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.56,
+      "fin": 10.02,
+      "duracion": 0.46,
+      "texto": "Andrea no se encuentra.",
+      "confianza": 0.006
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.04,
+      "fin": 14.11,
+      "duracion": 4.07,
+      "texto": "Bien, pero me figura ella como titular, ¿puedes ser?",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.12,
+      "fin": 16.19,
+      "duracion": 2.06,
+      "texto": "Ya, sí, pero ahora.",
+      "confianza": 0.136
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.21,
+      "fin": 18.99,
+      "duracion": 2.78,
+      "texto": "Claro, sería para venderte lo que es un descuento en tus cuatro líneas.",
+      "confianza": 0.677
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 19.01,
+      "fin": 28.5,
+      "duracion": 9.49,
+      "texto": "Es un plan que tiene 14 gigas en total, tan solo 7,790 pesos, ¿sí?",
+      "confianza": 0.648
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.52,
+      "fin": 28.58,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.013
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.6,
+      "fin": 30.86,
+      "duracion": 2.26,
+      "texto": "Tiene un descuento por seis meses del 80%",
+      "confianza": 0.575
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.16,
+      "fin": 31.75,
+      "duracion": 0.58,
+      "texto": "por ciento.",
+      "confianza": 0.67
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.17,
+      "fin": 38.69,
+      "duracion": 1.52,
+      "texto": "¿Esto sería en la línea del claro?",
+      "confianza": 0.542
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.34,
+      "fin": 41.59,
+      "duracion": 0.26,
+      "texto": "¿Hola?",
+      "confianza": 0.619
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.62,
+      "fin": 45.62,
+      "duracion": 4.0,
+      "texto": "¿Hola?",
+      "confianza": 0.693
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.48,
+      "fin": 52.73,
+      "duracion": 1.24,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.75,
+      "fin": 53.21,
+      "duracion": 0.46,
+      "texto": "¿Buen día?",
+      "confianza": 0.756
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.23,
+      "fin": 55.79,
+      "duracion": 2.56,
+      "texto": "¿Hola?",
+      "confianza": 0.785
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.65,
+      "fin": 58.37,
+      "duracion": 0.72,
+      "texto": "Hola, hola.",
+      "confianza": 0.642
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.93,
+      "fin": 62.93,
+      "duracion": 1.0,
+      "texto": "Hola, ¿me escucha bien?",
+      "confianza": 0.544
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 72.96,
+      "fin": 74.79,
+      "duracion": 1.82,
+      "texto": "Hola, ¿se escucha?",
+      "confianza": 0.535
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 78.27,
+      "fin": 86.5,
+      "duracion": 8.23,
+      "texto": "Hola.",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 89.65,
+      "fin": 99.02,
+      "duracion": 9.36,
+      "texto": "Hola, ¿me escuchas?",
+      "confianza": 0.648
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 99.04,
+      "fin": 100.44,
+      "duracion": 1.4,
+      "texto": "Hola, ¿me escuchas?",
+      "confianza": 0.581
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 124.27,
+      "fin": 126.02,
+      "duracion": 1.76,
+      "texto": "por saltar el agua.",
+      "confianza": 0.424
+    }
+  ]
+}

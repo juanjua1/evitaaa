@@ -1,0 +1,315 @@
+{
+  "archivo": "amza40_1_260210120503189_ACD_53697.wav",
+  "duracion_segundos": 76.26,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 10.3,
+    "Hablante A": 57.92
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.6,
+      "fin": 2.8,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.8,
+      "fin": 6.6,
+      "texto": "¿Hablo con Franco?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.6,
+      "fin": 6.7,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.7,
+      "fin": 9.1,
+      "texto": "Como le da mucho gusto, mi nombre es Juliana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.1,
+      "fin": 12.0,
+      "texto": "¿Me contactaba de Movistar para mejorar la promoción de su línea?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.4,
+      "fin": 16.8,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.8,
+      "fin": 20.9,
+      "texto": "De parte de Movistar, tenemos planes en promoción porque queremos que revise la compañía."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.9,
+      "fin": 27.6,
+      "texto": "Le agradezco, pero en este momento no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.6,
+      "fin": 28.8,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.8,
+      "fin": 29.8,
+      "texto": "¿Le puedo preguntar el motivo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.9,
+      "fin": 30.5,
+      "texto": "Disculpe."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.8,
+      "fin": 32.6,
+      "texto": "No sé si me puedo comunicar más adelante."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.7,
+      "fin": 44.0,
+      "texto": "En realidad estoy teniendo un plan muy bueno entre fibra óptica y celular con Claro y por eso me quedo con Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.0,
+      "fin": 44.6,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.6,
+      "fin": 49.8,
+      "texto": "Le comento, nosotros también tenemos un beneficio con la fibra óptica más la portabilidad por 24.000 pesos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.8,
+      "fin": 58.3,
+      "texto": "24.000 pesos, las dos cosas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 58.5,
+      "fin": 63.3,
+      "texto": "Exactamente, tiene una fibra de 300 megabytes y la portabilidad numérica de 8 gigas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.3,
+      "fin": 73.5,
+      "texto": "Sí, igual no me alcanza la cantidad de gigas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 73.5,
+      "fin": 76.3,
+      "texto": "Bien, que tenga un lindo día."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Hablo con Franco? Sí. Como le da mucho gusto, mi nombre es Juliana. ¿Me contactaba de Movistar para mejorar la promoción de su línea? Sí. De parte de Movistar, tenemos planes en promoción porque queremos que revise la compañía. Le agradezco, pero en este momento no. Bien, perfecto. ¿Le puedo preguntar el motivo? Disculpe. No sé si me puedo comunicar más adelante. En realidad estoy teniendo un plan muy bueno entre fibra óptica y celular con Claro y por eso me quedo con Claro. Bien. Le comento, nosotros también tenemos un beneficio con la fibra óptica más la portabilidad por 24.000 pesos. 24.000 pesos, las dos cosas. Exactamente, tiene una fibra de 300 megabytes y la portabilidad numérica de 8 gigas. Sí, igual no me alcanza la cantidad de gigas. Bien, que tenga un lindo día.",
+  "calidad": {
+    "confianza_promedio": 0.542,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:34:25.784928",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "combo fibra+móvil"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": true,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, especialmente en palabras como 'gigas' y 'fibra'. Se identificaron roles y se mejoró la puntuación y la claridad general."
+    },
+    "fecha_mejora": "2026-02-20T10:40:15.412904",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.63,
+      "fin": 2.79,
+      "duracion": 1.16,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.339
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.81,
+      "fin": 6.6,
+      "duracion": 3.78,
+      "texto": "¿Hablo con Franco?",
+      "confianza": 0.816
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.62,
+      "fin": 6.68,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.183
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.7,
+      "fin": 9.08,
+      "duracion": 2.38,
+      "texto": "Como le da mucho gusto, mi nombre es Juliana.",
+      "confianza": 0.724
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.1,
+      "fin": 12.03,
+      "duracion": 2.92,
+      "texto": "¿Me contactaba a Lodi para mejorar la promoción de su línea?",
+      "confianza": 0.691
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.41,
+      "fin": 16.79,
+      "duracion": 0.38,
+      "texto": "Sí.",
+      "confianza": 0.446
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.81,
+      "fin": 20.92,
+      "duracion": 4.11,
+      "texto": "De parte de Movistar, tenemos planes en promoción porque queremos que revivese la compañía.",
+      "confianza": 0.71
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.94,
+      "fin": 27.62,
+      "duracion": 6.69,
+      "texto": "Me agradezco, pero en este momento no.",
+      "confianza": 0.074
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.64,
+      "fin": 28.75,
+      "duracion": 1.1,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.609
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.77,
+      "fin": 29.83,
+      "duracion": 1.06,
+      "texto": "¿Le puedo preguntar el motivo?",
+      "confianza": 0.518
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.87,
+      "fin": 30.53,
+      "duracion": 0.66,
+      "texto": "Disculpe.",
+      "confianza": 0.834
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.79,
+      "fin": 32.56,
+      "duracion": 1.76,
+      "texto": "No sé si me puedo comunicar más adelante.",
+      "confianza": 0.202
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.74,
+      "fin": 43.99,
+      "duracion": 10.25,
+      "texto": "En realidad estoy teniendo un plan muy bueno entre fibra óptica y celular con claro y por eso me quedo con claro.",
+      "confianza": 0.626
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.01,
+      "fin": 44.61,
+      "duracion": 0.6,
+      "texto": "Bien.",
+      "confianza": 0.816
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.63,
+      "fin": 49.75,
+      "duracion": 5.12,
+      "texto": "Les comento, nosotros también tenemos un beneficio con la fibra óptica más la portabilidad por 24.000 pesos.",
+      "confianza": 0.68
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.77,
+      "fin": 58.32,
+      "duracion": 8.55,
+      "texto": "24.000 pesos, las dos cosas.",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.55,
+      "fin": 63.3,
+      "duracion": 4.75,
+      "texto": "Exactamente, tiene una fibra de 302 megabytes y la portabilidad numérica de 8 gigas.",
+      "confianza": 0.78
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.34,
+      "fin": 73.51,
+      "duracion": 10.17,
+      "texto": "Sí, igual no me alcanzo la cantidad de días.",
+      "confianza": 0.114
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 73.53,
+      "fin": 76.26,
+      "duracion": 2.72,
+      "texto": "Bien, antes, que tengan un lindo día.",
+      "confianza": 0.51
+    }
+  ]
+}

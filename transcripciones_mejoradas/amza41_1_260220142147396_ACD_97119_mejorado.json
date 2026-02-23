@@ -1,0 +1,257 @@
+{
+  "archivo": "amza41_1_260220142147396_ACD_97119.wav",
+  "duracion_segundos": 78.7,
+  "num_segmentos": 15,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 23.83,
+    "Hablante B": 45.08
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.0,
+      "fin": 3.8,
+      "texto": "Hola, buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.8,
+      "fin": 3.9,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.9,
+      "fin": 4.1,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.1,
+      "fin": 7.3,
+      "texto": "Te habla Marina, me comunico de Aceleradora de Beneficios de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 9.6,
+      "texto": "Te llamo para brindarte una promoción en la línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.9,
+      "fin": 15.0,
+      "texto": "Sí, sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.0,
+      "fin": 23.1,
+      "texto": "Mira, yo lo que quería averiguar de Movistar es fibra, digamos, si tienen."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.2,
+      "fin": 24.2,
+      "texto": "¿Crees que si tenéis?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.3,
+      "fin": 26.9,
+      "texto": "¿Querés hacer una dirección para verificar la cobertura?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.6,
+      "fin": 29.7,
+      "texto": "Dale, voy a buscarla."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.7,
+      "fin": 30.2,
+      "texto": "Vale."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.0,
+      "fin": 59.6,
+      "texto": "¿Sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 63.4,
+      "fin": 72.3,
+      "texto": "¿Te parece si te dejo un mensajito por WhatsApp y me decís por ahí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 72.3,
+      "fin": 74.3,
+      "texto": "A este número."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 74.3,
+      "fin": 78.7,
+      "texto": "Sí, a este número, por favor."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Sí. ¿Qué tal? Te habla Marina, me comunico de Aceleradora de Beneficios de Movistar. Te llamo para brindarte una promoción en la línea. Sí, sí. Mira, yo lo que quería averiguar de Movistar es fibra, digamos, si tienen. ¿Crees que si tenéis? ¿Querés hacer una dirección para verificar la cobertura? Dale, voy a buscarla. Vale. ¿Sí? ¿Te parece si te dejo un mensajito por WhatsApp y me decís por ahí? A este número. Sí, a este número, por favor.",
+  "calidad": {
+    "confianza_promedio": 0.481,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T16:08:03.750824",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como 'Acelería' a 'Aceleradora', se mejoró la puntuación y se corrigieron algunas palabras cortadas."
+    },
+    "fecha_mejora": "2026-02-22T23:07:04.447728",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.98,
+      "fin": 3.82,
+      "duracion": 2.84,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.076
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.84,
+      "fin": 3.9,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.022
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.92,
+      "fin": 4.1,
+      "duracion": 0.18,
+      "texto": "¿Qué tal?",
+      "confianza": 0.043
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.12,
+      "fin": 7.32,
+      "duracion": 3.2,
+      "texto": "Te habla Marina, me comunicó de Acelería de Beneficios de Movistar.",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.34,
+      "fin": 9.61,
+      "duracion": 2.26,
+      "texto": "Te llamó para brindarte una promoción en la línea.",
+      "confianza": 0.621
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.95,
+      "fin": 15.01,
+      "duracion": 2.06,
+      "texto": "Sí, sí.",
+      "confianza": 0.422
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.03,
+      "fin": 23.14,
+      "duracion": 8.11,
+      "texto": "Mira, yo lo que quería averiguar de Movistar es fibra, digamos, si tienen.",
+      "confianza": 0.546
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.16,
+      "fin": 24.24,
+      "duracion": 1.08,
+      "texto": "¿Cree que si tenéis mosme?",
+      "confianza": 0.693
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.26,
+      "fin": 26.91,
+      "duracion": 2.64,
+      "texto": "¿Querés hacer una dirección para verificar la cobertura?",
+      "confianza": 0.736
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.59,
+      "fin": 29.69,
+      "duracion": 2.1,
+      "texto": "Dale, van a que la busco.",
+      "confianza": 0.601
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.71,
+      "fin": 30.19,
+      "duracion": 0.48,
+      "texto": "Vale.",
+      "confianza": 0.601
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.01,
+      "fin": 59.62,
+      "duracion": 28.61,
+      "texto": "¿Sí?",
+      "confianza": 0.463
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.38,
+      "fin": 72.28,
+      "duracion": 8.9,
+      "texto": "¿Te parece si te dejo un mensajito por WhatsApp y me decís por ahí?",
+      "confianza": 0.554
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 72.3,
+      "fin": 74.3,
+      "duracion": 2.0,
+      "texto": "A este número.",
+      "confianza": 0.685
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 74.32,
+      "fin": 78.7,
+      "duracion": 4.39,
+      "texto": "Sí, a este número, por favor.",
+      "confianza": 0.579
+    }
+  ]
+}

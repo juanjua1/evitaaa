@@ -1,0 +1,297 @@
+{
+  "archivo": "amza77_1_260209103134064_ACD_27557.wav",
+  "duracion_segundos": 74.17,
+  "num_segmentos": 18,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 69.02
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 4.3,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.4,
+      "fin": 4.5,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.5,
+      "fin": 4.8,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.8,
+      "fin": 10.4,
+      "texto": "¿Me comunico con... Hola, sí, me comunico con... Sí, ¿le hablo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.4,
+      "fin": 10.9,
+      "texto": "¿Qué tal está?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.9,
+      "fin": 12.1,
+      "texto": "Un gusto, mi nombre es Jaira."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.4,
+      "fin": 16.1,
+      "texto": "Le comento que me comunicaba de ofrecerle beneficios Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.2,
+      "fin": 20.0,
+      "texto": "Teníamos una promoción especial para su línea, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.1,
+      "fin": 21.6,
+      "texto": "No, no, yo..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.6,
+      "fin": 23.7,
+      "texto": "No, no, Movistar no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.7,
+      "fin": 30.7,
+      "texto": "Estoy con Claro, yo no... Sí, sí, me estudié que... Exacto, me estudié que usted ahora está con Claro, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.0,
+      "fin": 37.0,
+      "texto": "Y nosotros nos comunicamos porque queríamos saber más que nada por qué se fue."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.0,
+      "fin": 43.2,
+      "texto": "¿Si ustedes saben mejor que yo, por qué no me atendieron bien?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.2,
+      "fin": 44.0,
+      "texto": "Por eso me fui de ahí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.6,
+      "fin": 47.3,
+      "texto": "Entonces, nos interesa ahora mediar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.6,
+      "fin": 52.1,
+      "texto": "Le agradezco su tiempo, pero no me interesa mediar ahora."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.1,
+      "fin": 58.4,
+      "texto": "Nosotros nos volvemos a contactar, yo obviamente lo entiendo y le soy sincero."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 58.9,
+      "fin": 74.2,
+      "texto": "Bueno, en este workshop obviamente tratamos de contactarnos con los clientes que se han ido, más que nada por esto, por una mala atención o ha sido por esto."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. Hola. ¿Qué tal? ¿Me comunico con... Hola, sí, me comunico con... Sí, ¿le hablo? ¿Qué tal está? Un gusto, mi nombre es Jaira. Le comento que me comunicaba de ofrecerle beneficios Movistar. Teníamos una promoción especial para su línea, ¿sí? No, no, yo... No, no, Movistar no. Estoy con Claro, yo no... Sí, sí, me estudié que... Exacto, me estudié que usted ahora está con Claro, sí. Y nosotros nos comunicamos porque queríamos saber más que nada por qué se fue. ¿Si ustedes saben mejor que yo, por qué no me atendieron bien? Por eso me fui de ahí. Entonces, nos interesa ahora mediar. Le agradezco su tiempo, pero no me interesa mediar ahora. Nosotros nos volvemos a contactar, yo obviamente lo entiendo y le soy sincero. Bueno, en este workshop obviamente tratamos de contactarnos con los clientes que se han ido, más que nada por esto, por una mala atención o ha sido por esto.",
+  "calidad": {
+    "confianza_promedio": 0.43,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T11:02:34.968871",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, identificación de roles, y mejora de la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T11:12:17.139068",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.92,
+      "fin": 4.34,
+      "duracion": 2.42,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.056
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.36,
+      "fin": 4.46,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.095
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.48,
+      "fin": 4.83,
+      "duracion": 0.34,
+      "texto": "¿Qué tal?",
+      "confianza": 0.448
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.84,
+      "fin": 10.41,
+      "duracion": 5.57,
+      "texto": "¿Me comunicó con... Hola, sí, me comunicó con... Sí, ¿le hablás?",
+      "confianza": 0.239
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.43,
+      "fin": 10.93,
+      "duracion": 0.5,
+      "texto": "¿Qué tal está?",
+      "confianza": 0.114
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.95,
+      "fin": 12.07,
+      "duracion": 1.12,
+      "texto": "Un gusto, mi nombre es Jaira.",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.36,
+      "fin": 16.14,
+      "duracion": 2.78,
+      "texto": "Le comenté que se me comunicaba de leer beneficios movistar.",
+      "confianza": 0.498
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.16,
+      "fin": 20.04,
+      "duracion": 3.88,
+      "texto": "Teníamos eleccional promoción para su línea, ¿sí?",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.06,
+      "fin": 21.55,
+      "duracion": 1.48,
+      "texto": "No, no, yo...",
+      "confianza": 0.418
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.57,
+      "fin": 23.71,
+      "duracion": 2.14,
+      "texto": "No, no, movistar no.",
+      "confianza": 0.465
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.73,
+      "fin": 30.7,
+      "duracion": 6.97,
+      "texto": "Estoy con claro, yo no... Sí, sí, me estudié que... Exacto, me estudié que usted ahora está con claro, sí.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.01,
+      "fin": 36.98,
+      "duracion": 5.97,
+      "texto": "Y nosotros nos comunicamos porque queríamos saber más que nada por qué se fue.",
+      "confianza": 0.674
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.0,
+      "fin": 43.19,
+      "duracion": 6.19,
+      "texto": "Si ustedes saben mejor que yo, ¿por qué no me sentieron mal?",
+      "confianza": 0.431
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.21,
+      "fin": 44.05,
+      "duracion": 0.84,
+      "texto": "Por eso me fui de ahí.",
+      "confianza": 0.432
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 44.59,
+      "fin": 47.29,
+      "duracion": 2.7,
+      "texto": "Entonces, nos interesa ahora meditar.",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.57,
+      "fin": 52.12,
+      "duracion": 4.55,
+      "texto": "Le agradezco su tiempo, pero no me interesa meditar ahora.",
+      "confianza": 0.576
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.14,
+      "fin": 58.39,
+      "duracion": 6.25,
+      "texto": "Nosotros nos volvemos a contactar, yo obviamente lo entiendo y le estoy sincero,",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 58.94,
+      "fin": 74.17,
+      "duracion": 15.22,
+      "texto": "Bueno, en este workshop obviamente tratamos de contactarnos con los clientes que se han ido, más que nada por esto, por una mala atención o ha sido por esto.",
+      "confianza": 0.758
+    }
+  ]
+}

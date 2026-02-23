@@ -1,0 +1,331 @@
+{
+  "archivo": "amza29_1_260211185216988_ACD_03607.wav",
+  "duracion_segundos": 72.33,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 60.08,
+    "Hablante B": 4.03
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.6,
+      "fin": 2.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 3.1,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.1,
+      "fin": 3.9,
+      "texto": "Buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 7.2,
+      "texto": "¿Me comunico con Lisandro?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.2,
+      "fin": 10.2,
+      "texto": "No, este no es el celular de Lisandro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.4,
+      "fin": 13.9,
+      "texto": "Era un corporativo y otra persona."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.9,
+      "fin": 16.8,
+      "texto": "¿De dónde llama?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.8,
+      "fin": 22.3,
+      "texto": "Yo estoy, me estoy comunicando del área que comencé de Movistar porque estoy verificando el sistema que pertenece."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.4,
+      "fin": 23.7,
+      "texto": "Claro, ese número es correcto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.7,
+      "fin": 25.9,
+      "texto": "Exacto, es correcto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.4,
+      "fin": 27.7,
+      "texto": "Nos fuimos de Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.3,
+      "fin": 29.6,
+      "texto": "Se fueron de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.7,
+      "fin": 41.3,
+      "texto": "Bueno, justamente hoy hemos activado ofertas exclusivas al diálogo para clientes individuales y también corporativos con un 85% de descuento, además de tener gigas de regalo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.3,
+      "fin": 44.1,
+      "texto": "Ya me avisaron, ya me avisaron, pero yo no puedo hacer nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 44.2,
+      "fin": 49.9,
+      "texto": "El que maneja el corporativo al diálogo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.0,
+      "fin": 52.6,
+      "texto": "Ok, ¿no hay un horario en el que pueda contactarlo?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.7,
+      "fin": 57.0,
+      "texto": "Si te atiende, cualquiera, pero..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.5,
+      "fin": 63.1,
+      "texto": "No, si no te tiene agendado no te voy a atender."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 63.1,
+      "fin": 65.0,
+      "texto": "No tiene intención de volver."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 68.3,
+      "fin": 72.3,
+      "texto": "Bueno, igualmente."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? Buenas tardes. ¿Me comunico con Lisandro? No, este no es el celular de Lisandro. Era un corporativo y otra persona. ¿De dónde llama? Yo estoy, me estoy comunicando del área que comencé de Movistar porque estoy verificando el sistema que pertenece. Claro, ese número es correcto. Exacto, es correcto. Nos fuimos de Movistar. Se fueron de Movistar. Bueno, justamente hoy hemos activado ofertas exclusivas al diálogo para clientes individuales y también corporativos con un 85% de descuento, además de tener gigas de regalo. Ya me avisaron, ya me avisaron, pero yo no puedo hacer nada. El que maneja el corporativo al diálogo. Ok, ¿no hay un horario en el que pueda contactarlo? Si te atiende, cualquiera, pero... No, si no te tiene agendado no te voy a atender. No tiene intención de volver. Bueno, igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.52,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T02:31:02.522426",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "ofertas exclusivas",
+        "85% de descuento",
+        "gigas de regalo"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T09:08:52.597112",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.57,
+      "fin": 2.39,
+      "duracion": 1.82,
+      "texto": "Hola.",
+      "confianza": 0.343
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.41,
+      "fin": 3.09,
+      "duracion": 0.68,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.495
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.11,
+      "fin": 3.94,
+      "duracion": 0.82,
+      "texto": "Buenas tardes.",
+      "confianza": 0.342
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.96,
+      "fin": 7.18,
+      "duracion": 3.22,
+      "texto": "¿Me comunicó con Lisandro?",
+      "confianza": 0.594
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.2,
+      "fin": 10.16,
+      "duracion": 2.96,
+      "texto": "No, no, este no es el celular de Lisandro.",
+      "confianza": 0.628
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.38,
+      "fin": 13.93,
+      "duracion": 3.54,
+      "texto": "Era un corporativo y otra persona.",
+      "confianza": 0.507
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 13.95,
+      "fin": 16.79,
+      "duracion": 2.84,
+      "texto": "¿De dónde llamás?",
+      "confianza": 0.173
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 16.81,
+      "fin": 22.34,
+      "duracion": 5.53,
+      "texto": "Yo estoy, me estoy comunicando del área que comencé de movistar porque estoy verificando el sistema que pertenece.",
+      "confianza": 0.365
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.36,
+      "fin": 23.7,
+      "duracion": 1.34,
+      "texto": "Claro, ese número es correcto.",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.74,
+      "fin": 25.86,
+      "duracion": 1.12,
+      "texto": "Exacto, es correcto.",
+      "confianza": 0.744
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.42,
+      "fin": 27.73,
+      "duracion": 1.3,
+      "texto": "Nos fuimos de movistar.",
+      "confianza": 0.695
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.33,
+      "fin": 29.63,
+      "duracion": 1.3,
+      "texto": "Se fueron de movistar.",
+      "confianza": 0.474
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.71,
+      "fin": 41.3,
+      "duracion": 11.59,
+      "texto": "Bueno, justamente hoy hemos activado ofertas exclusivas al diálogo y para clientes individuales y también corporativos con un 85% de descuento, además de tener desquigas de regalo.",
+      "confianza": 0.604
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.33,
+      "fin": 44.15,
+      "duracion": 2.82,
+      "texto": "Ya me avisaron, ya me avisaron, pero yo no puedo hacer nada.",
+      "confianza": 0.44
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.17,
+      "fin": 49.94,
+      "duracion": 5.77,
+      "texto": "El que maneja el corporativo al diálogo.",
+      "confianza": 0.453
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.96,
+      "fin": 52.62,
+      "duracion": 2.66,
+      "texto": "Ok, ¿no hay un horario en el que pueda contactarlo?",
+      "confianza": 0.547
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.68,
+      "fin": 57.0,
+      "duracion": 3.32,
+      "texto": "Si te atiende, cualquiera, pero...",
+      "confianza": 0.297
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.49,
+      "fin": 63.06,
+      "duracion": 5.57,
+      "texto": "No, si no te tiene agendado no te voy a atender.",
+      "confianza": 0.622
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 63.08,
+      "fin": 64.97,
+      "duracion": 1.88,
+      "texto": "No tiene intención de volver.",
+      "confianza": 0.737
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 68.3,
+      "fin": 72.33,
+      "duracion": 4.03,
+      "texto": "Bueno, igualmente.",
+      "confianza": 0.82
+    }
+  ]
+}

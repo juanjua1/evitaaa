@@ -1,0 +1,54 @@
+{
+  "archivo": "amza35_1_260209103257454_ACD_31827.wav",
+  "duracion_segundos": 87.24,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 31.36,
+    "Hablante B": 16.59
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.77,
+      "fin": 25.87,
+      "duracion": 25.1,
+      "texto": "O le habló con Joaquín.",
+      "confianza": 0.561
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.56,
+      "fin": 59.15,
+      "duracion": 16.59,
+      "texto": "¿Qué?",
+      "confianza": 0.545
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.98,
+      "fin": 87.24,
+      "duracion": 6.26,
+      "texto": "Esta es la parte más difícil de la camiseta pinchada.",
+      "confianza": 0.197
+    }
+  ],
+  "transcripcion_completa": "O le habló con Joaquín. ¿Qué? Esta es la parte más difícil de la camiseta pinchada.",
+  "calidad": {
+    "confianza_promedio": 0.434,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:23:19.275188",
+    "version": "5.0_ecapa"
+  }
+}

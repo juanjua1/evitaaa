@@ -1,0 +1,217 @@
+{
+  "archivo": "amza33_1_260212135508393_ACD_05711.wav",
+  "duracion_segundos": 77.37,
+  "num_segmentos": 12,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 68.41,
+    "Hablante B": 3.83
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.8,
+      "fin": 8.6,
+      "texto": "Hola, ¿cómo estás Walter?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.6,
+      "fin": 21.4,
+      "texto": "Walter, un placer, mi nombre es Katy y te contacto del área de recupero de clientes de Movistar porque tenemos preparado el 80% de descuento para los clientes que fueron de la compañía con la gestión anterior."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.4,
+      "fin": 27.6,
+      "texto": "Más que nada para que aproveches nuestra nueva gestión en cuanto a calidad, atención y precio."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.0,
+      "fin": 34.8,
+      "texto": "Tengo una consulta Walter, ¿vos solamente tenés esta línea a tu nombre, verdad?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.8,
+      "fin": 35.1,
+      "texto": "¿O tenés más?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.2,
+      "fin": 41.6,
+      "texto": "En mi caso, sinceramente, en este momento ya cuento con la promoción en la cuenta que tengo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.7,
+      "fin": 46.0,
+      "texto": "Yo tengo dos líneas y en las dos líneas me han hecho promoción, ¿me entendés?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 46.0,
+      "fin": 50.6,
+      "texto": "Así que por el momento no me está haciendo falta."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 50.6,
+      "fin": 56.4,
+      "texto": "No sabría decirte porque directamente yo los debito con la tarjeta."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.9,
+      "fin": 67.4,
+      "texto": "Yo tengo el 80% para brindarte un plan de 18 euros y lo tenés a $7,790, debe ser que por las dos pagarías $15,000."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.1,
+      "fin": 72.0,
+      "texto": "Lo bueno es que tenés el 80% de descuento, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 73.5,
+      "fin": 77.4,
+      "texto": "Sí, sí, sí, el descuento con ese descuento, así que le agradezco, muchísimas gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿cómo estás Walter? Walter, un placer, mi nombre es Katy y te contacto del área de recupero de clientes de Movistar porque tenemos preparado el 80% de descuento para los clientes que fueron de la compañía con la gestión anterior. Más que nada para que aproveches nuestra nueva gestión en cuanto a calidad, atención y precio. Tengo una consulta Walter, ¿vos solamente tenés esta línea a tu nombre, verdad? ¿O tenés más? En mi caso, sinceramente, en este momento ya cuento con la promoción en la cuenta que tengo. Yo tengo dos líneas y en las dos líneas me han hecho promoción, ¿me entendés? Así que por el momento no me está haciendo falta. No sabría decirte porque directamente yo los debito con la tarjeta. Yo tengo el 80% para brindarte un plan de 18 euros y lo tenés a $7,790, debe ser que por las dos pagarías $15,000. Lo bueno es que tenés el 80% de descuento, ¿sí? Sí, sí, sí, el descuento con ese descuento, así que le agradezco, muchísimas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.518,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:13:49.995965",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 18 euros"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T09:34:20.524133",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.84,
+      "fin": 8.57,
+      "duracion": 7.73,
+      "texto": "Hola, ¿cómo estás Walter?",
+      "confianza": 0.279
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.59,
+      "fin": 21.37,
+      "duracion": 12.78,
+      "texto": "Walter, un placer, mi nombre es Katy y yo me contacto del área de recupero de clientes en Movistar porque tenemos preparado el 80% de descuento para los clientes que fueron de la compañía con la gestión anterior.",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 22.35,
+      "fin": 27.56,
+      "duracion": 5.21,
+      "texto": "Más que nada para que aprovechen nuestra nueva gestión en cuanto a calidad, atención y precio.",
+      "confianza": 0.79
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 27.98,
+      "fin": 34.81,
+      "duracion": 6.83,
+      "texto": "Tengo una consulta Walter, vos solamente tenés esta línea al nombretudo, ¿verdad?",
+      "confianza": 0.019
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.83,
+      "fin": 35.15,
+      "duracion": 0.32,
+      "texto": "¿O tenés más?",
+      "confianza": 0.129
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.17,
+      "fin": 41.58,
+      "duracion": 6.41,
+      "texto": "En mi, sinceramente, en este momento ya cuento ya con la promoción en la cuenta que tengo.",
+      "confianza": 0.675
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.74,
+      "fin": 46.0,
+      "duracion": 4.27,
+      "texto": "Yo tengo dos líneas y en las dos líneas me han hecho promoción, ¿me entiendes?",
+      "confianza": 0.701
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 46.02,
+      "fin": 50.59,
+      "duracion": 4.57,
+      "texto": "Así que por el momento no me estoy haciendo falta.",
+      "confianza": 0.426
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 50.61,
+      "fin": 56.38,
+      "duracion": 5.77,
+      "texto": "No sabría decirle porque directamente yo los debito con la tarjeta.",
+      "confianza": 0.731
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.88,
+      "fin": 67.44,
+      "duracion": 10.55,
+      "texto": "Yo tengo el 80% para brindarte un plan de 18 euros y lo tenés a $7,790, debe ser que por las dos pagarías $15,000.",
+      "confianza": 0.677
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.06,
+      "fin": 72.02,
+      "duracion": 3.97,
+      "texto": "Lo bueno es que tenés el 80% de descuento, ¿sí?",
+      "confianza": 0.602
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 73.55,
+      "fin": 77.37,
+      "duracion": 3.83,
+      "texto": "Sí, sí, sí, el descuento con ese descuento, así que le agradezco, muchísimas gracias.",
+      "confianza": 0.411
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "archivo": "amza1_1_260213105923284_ACD_94021.wav",
+  "duracion_segundos": 78.54,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 7.35,
+    "Hablante B": 64.13
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 6.1,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.2,
+      "fin": 6.4,
+      "texto": "¿Hola?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.5,
+      "fin": 8.6,
+      "texto": "¿Hablo con Andrea Soledad?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.5,
+      "fin": 13.0,
+      "texto": "Sí, habla conmigo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 13.0,
+      "fin": 13.9,
+      "texto": "Hola, Andrea, ¿cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.2,
+      "fin": 16.3,
+      "texto": "Le habla Gabriel, ejecutivo comercial."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 16.4,
+      "fin": 18.5,
+      "texto": "Tengo un beneficio exclusivo para usted."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.6,
+      "fin": 21.1,
+      "texto": "Estamos trabajando en la recuperación del cliente del móvil."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.2,
+      "fin": 25.3,
+      "texto": "Estamos trabajando con un 80% de descuento en lo que es su línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.3,
+      "fin": 28.8,
+      "texto": "¿Sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.8,
+      "fin": 29.4,
+      "texto": "¿Cómo?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 29.8,
+      "fin": 40.0,
+      "texto": "Me comenta un poco por qué no quiere volver con nosotros, por la mala experiencia."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.0,
+      "fin": 45.3,
+      "texto": "Ha tenido una mala experiencia como cinco veces."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.3,
+      "fin": 48.0,
+      "texto": "No puedo saber nada."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 48.0,
+      "fin": 51.1,
+      "texto": "OK, desde ya le pido mis disculpas por la mala experiencia que ha tenido."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.1,
+      "fin": 54.3,
+      "texto": "Si me puede comentar un poquito más así."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.3,
+      "fin": 58.5,
+      "texto": "Porque estoy trabajando yo también y no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.2,
+      "fin": 75.3,
+      "texto": "Ok, ok, si le parece le puedo dejar un mensaje vía WhatsApp, así me puede comentar un poco, podemos seguir con esta sección, porque estamos presionando... No, no quiero nada, nada de movimientos, no quiero nada de movimientos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 75.3,
+      "fin": 78.5,
+      "texto": "Está bien, muchísimas gracias, hasta luego."
+    }
+  ],
+  "transcripcion_completa": "¿Hola? ¿Hola? ¿Hablo con Andrea Soledad? Sí, habla conmigo. Hola, Andrea, ¿cómo le va? Le habla Gabriel, ejecutivo comercial. Tengo un beneficio exclusivo para usted. Estamos trabajando en la recuperación del cliente del móvil. Estamos trabajando con un 80% de descuento en lo que es su línea. ¿Sí? ¿Cómo? Me comenta un poco por qué no quiere volver con nosotros, por la mala experiencia. Ha tenido una mala experiencia como cinco veces. No puedo saber nada. OK, desde ya le pido mis disculpas por la mala experiencia que ha tenido. Si me puede comentar un poquito más así. Porque estoy trabajando yo también y no. Ok, ok, si le parece le puedo dejar un mensaje vía WhatsApp, así me puede comentar un poco, podemos seguir con esta sección, porque estamos presionando... No, no quiero nada, nada de movimientos, no quiero nada de movimientos. Está bien, muchísimas gracias, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.477,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 18.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T16:32:53.655827",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "descuento en línea móvil"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, especialmente en palabras cortadas y frases sin sentido. Se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-18T07:52:25.714900",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 6.14,
+      "duracion": 6.11,
+      "texto": "¿Hola?",
+      "confianza": 0.16
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.16,
+      "fin": 6.38,
+      "duracion": 0.22,
+      "texto": "¿Hola?",
+      "confianza": 0.369
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.54,
+      "fin": 8.56,
+      "duracion": 1.02,
+      "texto": "¿Hablo con Andrea Soledad?",
+      "confianza": 0.603
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.53,
+      "fin": 12.97,
+      "duracion": 0.44,
+      "texto": "Sí, habla conmigo.",
+      "confianza": 0.073
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.99,
+      "fin": 13.93,
+      "duracion": 0.94,
+      "texto": "Hola, Andrea, ¿cómo le va?",
+      "confianza": 0.535
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.17,
+      "fin": 16.33,
+      "duracion": 2.16,
+      "texto": "Le hablo a Gabriel, ejecutivo comercial.",
+      "confianza": 0.665
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.37,
+      "fin": 18.47,
+      "duracion": 2.1,
+      "texto": "Tengo un beneficio exclusivo para usted.",
+      "confianza": 0.516
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.65,
+      "fin": 21.12,
+      "duracion": 2.46,
+      "texto": "Estamos trabajando en la recuperación del cliente del móvil.",
+      "confianza": 0.604
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.16,
+      "fin": 25.3,
+      "duracion": 4.14,
+      "texto": "Estamos trabajando con un 80% de descuento en lo que es su línea.",
+      "confianza": 0.661
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.32,
+      "fin": 28.82,
+      "duracion": 3.5,
+      "texto": "¿Sí?",
+      "confianza": 0.34
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.84,
+      "fin": 29.35,
+      "duracion": 0.5,
+      "texto": "¿Cómo?",
+      "confianza": 0.582
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.77,
+      "fin": 40.0,
+      "duracion": 10.23,
+      "texto": "Me comento un poco por qué no no quieres volver a nosotros a tener una mala experiencia.",
+      "confianza": 0.755
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.02,
+      "fin": 45.3,
+      "duracion": 5.29,
+      "texto": "Ha tenido una mala experiencia como cinco veces.",
+      "confianza": 0.397
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 45.32,
+      "fin": 47.98,
+      "duracion": 2.66,
+      "texto": "No puedo saber nada.",
+      "confianza": 0.311
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 48.0,
+      "fin": 51.09,
+      "duracion": 3.08,
+      "texto": "OK, desde ya le pido mis disculpas por la mala experiencia que ha tenido.",
+      "confianza": 0.642
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.13,
+      "fin": 54.27,
+      "duracion": 3.14,
+      "texto": "Si me puedo comentar un poquito más así.",
+      "confianza": 0.782
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.29,
+      "fin": 58.45,
+      "duracion": 4.16,
+      "texto": "Porque estoy trabajando yo también y no.",
+      "confianza": 0.28
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.2,
+      "fin": 75.31,
+      "duracion": 16.12,
+      "texto": "Ok, ok, si les parece les puedo dejar un mensaje vía whatsapp, así me puede comentar un poco, podemos seguir con esta sección, porque estamos presionando... No, no quiero nada, nada de movimientos, no quiero nada de movimientos.",
+      "confianza": 0.503
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 75.33,
+      "fin": 78.54,
+      "duracion": 3.21,
+      "texto": "Está bien, muchísimas gracias, hasta luego.",
+      "confianza": 0.287
+    }
+  ]
+}

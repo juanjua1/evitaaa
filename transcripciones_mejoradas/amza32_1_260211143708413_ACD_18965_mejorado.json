@@ -1,0 +1,89 @@
+{
+  "archivo": "amza32_1_260211143708413_ACD_18965.wav",
+  "duracion_segundos": 68.5,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 13.33,
+    "Hablante A": 14.93
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 4.4,
+      "texto": "Después del tono, deje su mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.9,
+      "fin": 20.8,
+      "texto": "Para finalizar, corte o marque la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 57.6,
+      "fin": 68.5,
+      "texto": "Gracias por ver el video."
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deje su mensaje. Para finalizar, corte o marque la tecla numeral para más opciones. Gracias por ver el video.",
+  "calidad": {
+    "confianza_promedio": 0.668,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T03:48:46.318336",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "BUENA",
+      "correcciones_realizadas": "Se corrigieron errores menores de puntuación y se identificaron los roles de hablante."
+    },
+    "fecha_mejora": "2026-02-20T09:27:19.639714",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.94,
+      "fin": 4.36,
+      "duracion": 2.43,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.754
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.91,
+      "fin": 20.84,
+      "duracion": 14.93,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.859
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 57.59,
+      "fin": 68.5,
+      "duracion": 10.9,
+      "texto": "Gracias por ver el video.",
+      "confianza": 0.39
+    }
+  ]
+}

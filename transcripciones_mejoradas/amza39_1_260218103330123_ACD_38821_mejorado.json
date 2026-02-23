@@ -1,0 +1,187 @@
+{
+  "archivo": "amza39_1_260218103330123_ACD_38821.wav",
+  "duracion_segundos": 22.53,
+  "num_segmentos": 10,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 4.54,
+    "Hablante B": 13.38
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 1.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.6,
+      "fin": 2.5,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.7,
+      "fin": 4.8,
+      "texto": "¿Hablo con la línea de José?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.0,
+      "fin": 9.9,
+      "texto": "No, no se encuentra en este momento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.0,
+      "fin": 10.3,
+      "texto": "Él está trabajando."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.4,
+      "fin": 10.8,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.9,
+      "fin": 12.8,
+      "texto": "Me comunico después nuevamente."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 12.8,
+      "fin": 22.0,
+      "texto": "Gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.0,
+      "fin": 22.4,
+      "texto": "Bueno, hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.4,
+      "fin": 22.5,
+      "texto": "Chao."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. ¿Hablo con la línea de José? No, no se encuentra en este momento. Él está trabajando. Perfecto. Me comunico después nuevamente. Gracias. Bueno, hasta luego. Chao.",
+  "calidad": {
+    "confianza_promedio": 0.404,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 5.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:24:25.061881",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción y se mejoró la redacción. Se identificaron los roles y se clasificó la llamada como 'Sin Contacto' ya que no se logró hablar con la persona deseada."
+    },
+    "fecha_mejora": "2026-02-20T10:38:09.644354",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 1.63,
+      "duracion": 1.6,
+      "texto": "Hola.",
+      "confianza": 0.456
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.65,
+      "fin": 2.46,
+      "duracion": 0.8,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.509
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.67,
+      "fin": 4.82,
+      "duracion": 2.14,
+      "texto": "Hablo con alguna línea en nombre de José.",
+      "confianza": 0.76
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.03,
+      "fin": 9.95,
+      "duracion": 0.92,
+      "texto": "No, no se encuentra en este momento.",
+      "confianza": 0.06
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.97,
+      "fin": 10.35,
+      "duracion": 0.38,
+      "texto": "Él está trabajando.",
+      "confianza": 0.015
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.37,
+      "fin": 10.85,
+      "duracion": 0.48,
+      "texto": "Perfecto.",
+      "confianza": 0.798
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.87,
+      "fin": 12.75,
+      "duracion": 1.88,
+      "texto": "Me comunico después nuevamente.",
+      "confianza": 0.663
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.77,
+      "fin": 22.01,
+      "duracion": 9.24,
+      "texto": "Gracias.",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.03,
+      "fin": 22.41,
+      "duracion": 0.38,
+      "texto": "Bueno, hasta luego.",
+      "confianza": 0.009
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.43,
+      "fin": 22.53,
+      "duracion": 0.1,
+      "texto": "Chao.",
+      "confianza": 0.197
+    }
+  ]
+}

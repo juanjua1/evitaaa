@@ -1,0 +1,285 @@
+{
+  "archivo": "amza35_1_260220105139473_ACD_89429.wav",
+  "duracion_segundos": 49.58,
+  "num_segmentos": 17,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 12.23,
+    "Hablante B": 32.83
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 5.4,
+      "texto": "¿Habló con Natalia?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.5,
+      "fin": 7.3,
+      "texto": "No, Carlos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.4,
+      "fin": 8.2,
+      "texto": "Ah, Carlos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.2,
+      "fin": 12.3,
+      "texto": "En la línea de nombre de Natalia Verónica, no sé si es así, que se encuentra en Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.1,
+      "fin": 18.9,
+      "texto": "Sí, es esa la línea, por eso."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.9,
+      "fin": 19.2,
+      "texto": "Ah, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.2,
+      "fin": 22.5,
+      "texto": "Bien, o sea, vos sos el usuario y ella toma lo que es."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.6,
+      "fin": 28.7,
+      "texto": "Sí, por cualquier cosa que quiera de Movistar o de quien sea, te tenés que comunicar con ella, yo no tengo nada que ver con ella."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.1,
+      "fin": 30.0,
+      "texto": "Claro, entiendo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.8,
+      "fin": 33.0,
+      "texto": "¿Puede ser que la línea 10 termina en 21-10?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.2,
+      "fin": 35.6,
+      "texto": "Exactamente."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.6,
+      "fin": 36.3,
+      "texto": "Dale, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 36.4,
+      "fin": 41.4,
+      "texto": "Entonces ahí me contacto directamente con ella, así no te dejo algo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.4,
+      "fin": 41.7,
+      "texto": "Dale, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.7,
+      "fin": 42.7,
+      "texto": "Que tengas muy lindo día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 42.7,
+      "fin": 49.3,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.4,
+      "fin": 49.6,
+      "texto": "Igualmente."
+    }
+  ],
+  "transcripcion_completa": "¿Habló con Natalia? No, Carlos. Ah, Carlos. En la línea de nombre de Natalia Verónica, no sé si es así, que se encuentra en Claro. Sí, es esa la línea, por eso. Ah, perfecto. Bien, o sea, vos sos el usuario y ella toma lo que es. Sí, por cualquier cosa que quiera de Movistar o de quien sea, te tenés que comunicar con ella, yo no tengo nada que ver con ella. Claro, entiendo. ¿Puede ser que la línea 10 termina en 21-10? Exactamente. Dale, perfecto. Entonces ahí me contacto directamente con ella, así no te dejo algo. Dale, gracias. Que tengas muy lindo día. Hasta luego. Igualmente.",
+  "calidad": {
+    "confianza_promedio": 0.402,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:36:10.049215",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, nombres propios y se mejoró la claridad general."
+    },
+    "fecha_mejora": "2026-02-22T22:58:40.024736",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 5.44,
+      "duracion": 5.41,
+      "texto": "¿O él habló con Natalia?",
+      "confianza": 0.431
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.46,
+      "fin": 7.34,
+      "duracion": 1.88,
+      "texto": "No, Carlos.",
+      "confianza": 0.118
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.36,
+      "fin": 8.22,
+      "duracion": 0.86,
+      "texto": "Ah, Carlos.",
+      "confianza": 0.382
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.24,
+      "fin": 12.33,
+      "duracion": 4.08,
+      "texto": "Enfiguraste la línea de nombre de Natalia Verónica, no sé si es así, que se encuentran en claro.",
+      "confianza": 0.66
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.13,
+      "fin": 18.93,
+      "duracion": 3.8,
+      "texto": "Sí, es esa la línea, por eso.",
+      "confianza": 0.205
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.95,
+      "fin": 19.22,
+      "duracion": 0.26,
+      "texto": "Ah, perfecto.",
+      "confianza": 0.019
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.24,
+      "fin": 22.54,
+      "duracion": 3.3,
+      "texto": "Bien, o sea, vos sos el usuario y ella toma lo que es.",
+      "confianza": 0.582
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.56,
+      "fin": 28.69,
+      "duracion": 6.13,
+      "texto": "Sí, por cualquier cosa que quiera de movistar o de quien sea, te tenés que comunicar con ella, yo no tengo nada que ver con ella.",
+      "confianza": 0.577
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.11,
+      "fin": 30.01,
+      "duracion": 0.9,
+      "texto": "Claro, entiendo.",
+      "confianza": 0.31
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.81,
+      "fin": 32.97,
+      "duracion": 2.16,
+      "texto": "¿Puede ser que la línea 10 termina en 21-10?",
+      "confianza": 0.721
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.17,
+      "fin": 35.6,
+      "duracion": 2.42,
+      "texto": "Exactamente.",
+      "confianza": 0.084
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.62,
+      "fin": 36.34,
+      "duracion": 0.72,
+      "texto": "Dale, perfecto.",
+      "confianza": 0.738
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.36,
+      "fin": 41.41,
+      "duracion": 5.05,
+      "texto": "Entonces ahí me contacto directamente con ella, así no te dejo algo.",
+      "confianza": 0.72
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.43,
+      "fin": 41.71,
+      "duracion": 0.28,
+      "texto": "Dale, gracias.",
+      "confianza": 0.018
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.73,
+      "fin": 42.71,
+      "duracion": 0.98,
+      "texto": "Que tengas muy lindo día.",
+      "confianza": 0.548
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.73,
+      "fin": 49.34,
+      "duracion": 6.61,
+      "texto": "Hasta luego.",
+      "confianza": 0.626
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.36,
+      "fin": 49.58,
+      "duracion": 0.22,
+      "texto": "Igualmente.",
+      "confianza": 0.089
+    }
+  ]
+}

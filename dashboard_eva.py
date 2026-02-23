@@ -2012,11 +2012,10 @@ def extraer_fecha_de_archivo(nombre_archivo):
     if pd.isna(nombre_archivo) or not isinstance(nombre_archivo, str):
         return None
     
-    # Buscar patrón de 6 dígitos que comience con 26 (2026)
-    match = re.search(r'26(01\d{2})\d+', nombre_archivo)
+    # Buscar patrón de 6 dígitos que comience con 26 (2026) seguido de más dígitos
+    match = re.search(r'_(26\d{4})\d+', nombre_archivo)
     if match:
-        # Extraer MMDD del match
-        fecha_str = match.group(0)[:6]  # Primeros 6 dígitos: YYMMDD
+        fecha_str = match.group(1)  # YYMMDD
         try:
             year = 2000 + int(fecha_str[:2])  # 26 -> 2026
             month = int(fecha_str[2:4])
@@ -2586,20 +2585,8 @@ def pagina_quejas_no_resueltas(datos):
 
 
 def pagina_planes_ofrecidos(datos, df):
-    """Página de análisis de planes ofrecidos, fibra y promociones"""
+    """Página de análisis de planes ofrecidos y fibra"""
     st.markdown('<div class="main-header">📱 COMMAND · Análisis de Portafolio de Productos</div>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <div style='background: #F1F5F9; padding: 20px; border-radius: 12px; border-left: 5px solid #3B82F6;'>
-            <h3 style='margin: 0; color: #1E293B;'>🛠️ En desarrollo</h3>
-            <p style='margin: 8px 0 0 0; color: #475569;'>
-                Este apartado estará disponible pronto con análisis detallado de productos del equipo.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    return
     
     # Obtener permisos del usuario actual
     permisos = obtener_permisos_usuario()
@@ -2732,12 +2719,6 @@ def pagina_planes_ofrecidos(datos, df):
         no_ofrece_fibra = len(df_filtrado[df_filtrado['ofrece_fibra'] == False])
         pct_fibra = ofrece_fibra / total_llamadas * 100 if total_llamadas > 0 else 0
         
-        # Estadísticas de promociones filtradas
-        df_promo = df_filtrado[df_filtrado['es_dia_promo'] == True]
-        dias_promo_total = len(df_promo)
-        menciona_promo = len(df_promo[df_promo['menciona_promo'] == True])
-        no_menciona_promo = len(df_promo[df_promo['menciona_promo'] == False])
-        
         # Mostrar indicador de filtro activo (solo para admin)
         if permisos['puede_ver_todos'] and (equipo_seleccionado != "Todos los Equipos" or agente_seleccionado != "Todos"):
             filtro_texto = []
@@ -2754,9 +2735,6 @@ def pagina_planes_ofrecidos(datos, df):
         ofrece_fibra = stats.get('fibra', {}).get('ofrece', 0)
         no_ofrece_fibra = stats.get('fibra', {}).get('no_ofrece', 0)
         pct_fibra = stats.get('fibra', {}).get('porcentaje_ofrece', 0)
-        dias_promo_total = stats.get('promociones', {}).get('dias_promo_total', 0)
-        menciona_promo = stats.get('promociones', {}).get('dias_promo_menciona', 0)
-        no_menciona_promo = stats.get('promociones', {}).get('dias_promo_no_menciona', 0)
         df_filtrado = pd.DataFrame()
     
     st.markdown("---")
@@ -2971,54 +2949,6 @@ def pagina_planes_ofrecidos(datos, df):
                     st.markdown("**🚨 Vendedores con Menor Oferta de Fibra:**")
                     st.dataframe(df_sin_fibra, use_container_width=True, hide_index=True, height=180)
     
-    st.markdown("---")
-    
-    # =========================================================================
-    # SECCIÓN 3: PROMOCIONES
-    # =========================================================================
-    #st.markdown('<p class="section-header">🎁 Análisis de Cumplimiento de Promociones</p>', unsafe_allow_html=True)
-    
-    #col1, col2, col3, col4 = st.columns(4)
-    
-    #with col1:
-    #    st.metric("📅 Llamadas en Días Promo", f"{dias_promo_total:,}")
-    #with col2:
-    #    pct_menciona = menciona_promo / dias_promo_total * 100 if dias_promo_total > 0 else 0
-    #    st.metric("✅ Menciona Promo", f"{menciona_promo:,}", f"{pct_menciona:.1f}%")
-    #with col3:
-    #    pct_no = 100 - pct_menciona if pct_menciona else 0
-    #    st.metric("❌ NO Menciona Promo", f"{no_menciona_promo:,}", f"-{pct_no:.1f}%", delta_color="inverse")
-    #with col4:
-        # Menciona promo en total (incluyendo días no promo)
-    #    if not df_filtrado.empty and 'menciona_promo' in df_filtrado.columns:
-    #        menciona_total = len(df_filtrado[df_filtrado['menciona_promo'] == True])
-    #    else:
-    #        menciona_total = stats.get('promociones', {}).get('menciona_promo', 0)
-    #    pct_total = menciona_total / total_llamadas * 100 if total_llamadas > 0 else 0
-    #    st.metric("📣 Menciona Promo (Total)", f"{menciona_total:,}", f"{pct_total:.1f}%")
-    
-    # Gráfico de promociones
-    #col1, col2 = st.columns(2)
-    
-    #with col1:
-    #    if dias_promo_total > 0:
-    #        fig = go.Figure(data=[
-    #            go.Bar(name='Menciona Promo', x=['Días de Promo'], y=[menciona_promo], marker_color='#27AE60', 
-    #                   text=[f'{menciona_promo} ({pct_menciona:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12)),
-    #            go.Bar(name='NO Menciona', x=['Días de Promo'], y=[no_menciona_promo], marker_color='#E74C3C',
-    #                   text=[f'{no_menciona_promo} ({pct_no:.1f}%)'], textposition='inside', textfont=dict(color='#FFFFFF', size=12))
-    #        ])
-    #        fig.update_layout(
-    #            barmode='stack',
-    #            height=250,
-    #            title={'text': 'Cumplimiento en Días de Promoción', 'font': {'size': 13, 'color': '#2C3E50'}},
-    #            margin=dict(t=50, b=30, l=40, r=20),
-    #            paper_bgcolor='#FFFFFF',
-    #            plot_bgcolor='#FAFBFC',
-    #            legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='center', x=0.5, font=dict(size=10))
-    #        )
-    #        st.plotly_chart(fig, use_container_width=True)
-
 
 def pagina_coaching_vendedores(datos):
     """Página de Coaching personalizado para cada vendedor"""
@@ -3655,16 +3585,25 @@ def pagina_coaching_vendedores(datos):
         
         df_equipo = pd.DataFrame(metricas_equipo)
         df_equipo = df_equipo.sort_values('Puntaje', ascending=False)
+        df_equipo['Estado'] = pd.cut(
+            df_equipo['Puntaje'],
+            bins=[-1, 60, 80, 100],
+            labels=['🔴 Mal', '🟡 Regular', '🟢 Mejor']
+        )
         
         # Gráfico de ranking
         fig = px.bar(
             df_equipo,
             x='Agente',
             y='Puntaje',
-            color='vs Equipo',
-            color_continuous_scale=['#EF4444', '#F59E0B', '#10B981'],
-            range_color=[0, 100],
-            title='Ranking de Puntaje por Agente'
+            color='Estado',
+            color_discrete_map={
+                '🔴 Mal': '#DC2626',
+                '🟡 Regular': '#F59E0B',
+                '🟢 Mejor': '#10B981'
+            },
+            category_orders={'Estado': ['🔴 Mal', '🟡 Regular', '🟢 Mejor']},
+            title='Ranking de Puntaje por Agente (Semáforo)'
         )
         fig.add_hline(
             y=df_equipo['Puntaje'].mean(),
@@ -3799,20 +3738,18 @@ def pagina_coaching_vendedores(datos):
         
         # Definir colores por zona para las barras del histograma
         colores_zona = {
-            'Crítico': '#DC2626',      # Rojo
-            'En Desarrollo': '#F59E0B', # Amarillo/Naranja
-            'Bueno': '#3B82F6',         # Azul
-            'Excelente': '#10B981'      # Verde
+            'Crítico': '#DC2626',
+            'Regular': '#F59E0B',
+            'Mejor': '#10B981'
         }
         
         # Crear datos para histograma coloreado por zona
         puntajes = df_grafico['Puntaje'].values
         
         # Separar datos por zona
-        criticos_data = [p for p in puntajes if p < 30]
-        desarrollo_data = [p for p in puntajes if 30 <= p < 60]
-        buenos_data = [p for p in puntajes if 60 <= p < 80]
-        excelentes_data = [p for p in puntajes if p >= 80]
+        criticos_data = [p for p in puntajes if p < 60]
+        desarrollo_data = [p for p in puntajes if 60 <= p < 80]
+        solidos_data = [p for p in puntajes if p >= 80]
         
         fig3 = go.Figure()
         
@@ -3820,37 +3757,28 @@ def pagina_coaching_vendedores(datos):
         if criticos_data:
             fig3.add_trace(go.Histogram(
                 x=criticos_data,
-                name='Crítico (<30)',
+                name='Crítico (<60)',
                 marker=dict(color=colores_zona['Crítico'], line=dict(color='#991B1B', width=1)),
-                xbins=dict(start=0, end=30, size=10),
+                xbins=dict(start=0, end=60, size=10),
                 hovertemplate='<b>Zona Crítica</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
             ))
         
         if desarrollo_data:
             fig3.add_trace(go.Histogram(
                 x=desarrollo_data,
-                name='En Desarrollo (30-60)',
-                marker=dict(color=colores_zona['En Desarrollo'], line=dict(color='#B45309', width=1)),
-                xbins=dict(start=30, end=60, size=10),
-                hovertemplate='<b>En Desarrollo</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
-            ))
-        
-        if buenos_data:
-            fig3.add_trace(go.Histogram(
-                x=buenos_data,
-                name='Bueno (60-80)',
-                marker=dict(color=colores_zona['Bueno'], line=dict(color='#1D4ED8', width=1)),
+                name='Regular (60-80)',
+                marker=dict(color=colores_zona['Regular'], line=dict(color='#B45309', width=1)),
                 xbins=dict(start=60, end=80, size=10),
-                hovertemplate='<b>Bueno</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+                hovertemplate='<b>Regular</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
             ))
         
-        if excelentes_data:
+        if solidos_data:
             fig3.add_trace(go.Histogram(
-                x=excelentes_data,
-                name='Excelente (≥80)',
-                marker=dict(color=colores_zona['Excelente'], line=dict(color='#047857', width=1)),
+                x=solidos_data,
+                name='Mejor (≥80)',
+                marker=dict(color=colores_zona['Mejor'], line=dict(color='#047857', width=1)),
                 xbins=dict(start=80, end=100, size=10),
-                hovertemplate='<b>Excelente</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
+                hovertemplate='<b>Mejor</b><br>Rango: %{x}<br>Agentes: %{y}<extra></extra>'
             ))
         
         # Línea de promedio del equipo
@@ -3916,19 +3844,16 @@ def pagina_coaching_vendedores(datos):
         st.plotly_chart(fig3, use_container_width=True)
         
         # Resumen estadístico compacto debajo del gráfico (con colores que coinciden)
-        col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
         with col_stat1:
-            criticos = len(df_ranking[df_ranking['Puntaje'] < 30])
-            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEE2E2; border-radius:8px; border-left: 4px solid #DC2626;'><span style='font-size:24px; font-weight:bold; color:#DC2626;'>{criticos}</span><br><small style='color:#991B1B; font-weight:600;'>Críticos (&lt;30)</small></div>", unsafe_allow_html=True)
+            criticos = len(df_ranking[df_ranking['Puntaje'] < 60])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEE2E2; border-radius:8px; border-left: 4px solid #DC2626;'><span style='font-size:24px; font-weight:bold; color:#DC2626;'>{criticos}</span><br><small style='color:#991B1B; font-weight:600;'>Críticos (&lt;60)</small></div>", unsafe_allow_html=True)
         with col_stat2:
-            bajos = len(df_ranking[(df_ranking['Puntaje'] >= 30) & (df_ranking['Puntaje'] < 60)])
-            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEF3C7; border-radius:8px; border-left: 4px solid #F59E0B;'><span style='font-size:24px; font-weight:bold; color:#B45309;'>{bajos}</span><br><small style='color:#78350F; font-weight:600;'>En Desarrollo (30-60)</small></div>", unsafe_allow_html=True)
+            desarrollo = len(df_ranking[(df_ranking['Puntaje'] >= 60) & (df_ranking['Puntaje'] < 80)])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#FEF3C7; border-radius:8px; border-left: 4px solid #F59E0B;'><span style='font-size:24px; font-weight:bold; color:#B45309;'>{desarrollo}</span><br><small style='color:#78350F; font-weight:600;'>Regulares (60-80)</small></div>", unsafe_allow_html=True)
         with col_stat3:
-            buenos = len(df_ranking[(df_ranking['Puntaje'] >= 60) & (df_ranking['Puntaje'] < 80)])
-            st.markdown(f"<div style='text-align:center; padding:10px; background:#DBEAFE; border-radius:8px; border-left: 4px solid #3B82F6;'><span style='font-size:24px; font-weight:bold; color:#1D4ED8;'>{buenos}</span><br><small style='color:#1E3A8A; font-weight:600;'>Buenos (60-80)</small></div>", unsafe_allow_html=True)
-        with col_stat4:
-            excelentes = len(df_ranking[df_ranking['Puntaje'] >= 80])
-            st.markdown(f"<div style='text-align:center; padding:10px; background:#D1FAE5; border-radius:8px; border-left: 4px solid #10B981;'><span style='font-size:24px; font-weight:bold; color:#059669;'>{excelentes}</span><br><small style='color:#065F46; font-weight:600;'>Excelentes (≥80)</small></div>", unsafe_allow_html=True)
+            solidos = len(df_ranking[df_ranking['Puntaje'] >= 80])
+            st.markdown(f"<div style='text-align:center; padding:10px; background:#D1FAE5; border-radius:8px; border-left: 4px solid #10B981;'><span style='font-size:24px; font-weight:bold; color:#059669;'>{solidos}</span><br><small style='color:#065F46; font-weight:600;'>Mejor (≥80)</small></div>", unsafe_allow_html=True)
         
         # Recomendaciones generales
         st.markdown("---")
@@ -6279,20 +6204,49 @@ def pagina_evaluaciones_gemini(datos):
             df_agentes_resumen.columns = ['Puntaje_Prom', 'Evaluaciones']
             df_agentes_resumen = df_agentes_resumen.reset_index()
             df_agentes_resumen = df_agentes_resumen[df_agentes_resumen['Evaluaciones'] >= 5]
+
+            def estado_semaforo(puntaje):
+                if puntaje < 60:
+                    return '🔴 Mal'
+                if puntaje < 80:
+                    return '🟡 Regular'
+                return '🟢 Mejor'
             
             col1, col2 = st.columns(2)
             
             with col1:
                 st.markdown("**🏆 Top 10 - Mejor Rendimiento:**")
-                top_10 = df_agentes_resumen.nlargest(10, 'Puntaje_Prom')
+                top_10 = df_agentes_resumen.nlargest(10, 'Puntaje_Prom').copy()
+                top_10 = top_10.sort_values('Puntaje_Prom', ascending=False).reset_index(drop=True)
+                top_10['Posicion'] = top_10.index + 1
+
+                total_top = len(top_10)
+                limite_verde = max(1, int(np.ceil(total_top * 0.3)))
+                limite_amarillo = max(limite_verde + 1, int(np.ceil(total_top * 0.7)))
+
+                def estado_top_por_posicion(posicion):
+                    if posicion <= limite_verde:
+                        return '🟢 Mejor'
+                    if posicion <= limite_amarillo:
+                        return '🟡 Regular'
+                    return '🔴 Mal'
+
+                top_10['Estado'] = top_10['Posicion'].apply(estado_top_por_posicion)
                 fig = px.bar(
                     top_10,
                     x='Puntaje_Prom',
                     y='agente',
                     orientation='h',
-                    text='Puntaje_Prom'
+                    text='Puntaje_Prom',
+                    color='Estado',
+                    color_discrete_map={
+                        '🔴 Mal': '#DC2626',
+                        '🟡 Regular': '#F59E0B',
+                        '🟢 Mejor': '#10B981'
+                    },
+                    category_orders={'Estado': ['🔴 Mal', '🟡 Regular', '🟢 Mejor']}
                 )
-                fig.update_traces(marker_color="#27AE60", texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
                 fig.update_layout(
                     height=350, 
                     paper_bgcolor='#FFFFFF', 
@@ -6307,15 +6261,37 @@ def pagina_evaluaciones_gemini(datos):
             
             with col2:
                 st.markdown("**⚠️ Requieren Plan de Mejora:**")
-                bottom_10 = df_agentes_resumen.nsmallest(10, 'Puntaje_Prom')
+                bottom_10 = df_agentes_resumen.nsmallest(10, 'Puntaje_Prom').copy()
+                bottom_10 = bottom_10.sort_values('Puntaje_Prom', ascending=True).reset_index(drop=True)
+                bottom_10['Posicion'] = bottom_10.index + 1
+
+                total_bottom = len(bottom_10)
+                limite_rojo = max(1, int(np.ceil(total_bottom * 0.3)))
+                limite_amarillo = max(limite_rojo + 1, int(np.ceil(total_bottom * 0.7)))
+
+                def estado_bottom_por_posicion(posicion):
+                    if posicion <= limite_rojo:
+                        return '🔴 Mal'
+                    if posicion <= limite_amarillo:
+                        return '🟡 Regular'
+                    return '🟢 Mejor'
+
+                bottom_10['Estado'] = bottom_10['Posicion'].apply(estado_bottom_por_posicion)
                 fig = px.bar(
                     bottom_10,
                     x='Puntaje_Prom',
                     y='agente',
                     orientation='h',
-                    text='Puntaje_Prom'
+                    text='Puntaje_Prom',
+                    color='Estado',
+                    color_discrete_map={
+                        '🔴 Mal': '#DC2626',
+                        '🟡 Regular': '#F59E0B',
+                        '🟢 Mejor': '#10B981'
+                    },
+                    category_orders={'Estado': ['🔴 Mal', '🟡 Regular', '🟢 Mejor']}
                 )
-                fig.update_traces(marker_color="#E74C3C", texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
+                fig.update_traces(texttemplate='%{text:.1f}', textposition='outside', textfont=dict(color='#1E293B', size=11))
                 fig.update_layout(
                     height=350, 
                     paper_bgcolor='#FFFFFF', 
@@ -6347,15 +6323,24 @@ def pagina_evaluaciones_gemini(datos):
                 col1, col2 = st.columns([2, 1])
 
                 with col1:
+                    df_criterios['Estado'] = pd.cut(
+                        df_criterios['Puntaje'],
+                        bins=[-1, 60, 80, 100],
+                        labels=['🔴 Mal', '🟡 Regular', '🟢 Mejor']
+                    )
                     fig = px.bar(
                         df_criterios,
                         y='Criterio',
                         x='Puntaje',
                         orientation='h',
                         title="Puntaje Promedio por Criterio",
-                        color='Puntaje',
-                        color_continuous_scale=['#E74C3C', '#F39C12', '#27AE60'],
-                        range_color=[0, 100]
+                        color='Estado',
+                        color_discrete_map={
+                            '🔴 Mal': '#DC2626',
+                            '🟡 Regular': '#F59E0B',
+                            '🟢 Mejor': '#10B981'
+                        },
+                        category_orders={'Estado': ['🔴 Mal', '🟡 Regular', '🟢 Mejor']}
                     )
                     fig.update_layout(
                         height=450,
@@ -6377,13 +6362,13 @@ def pagina_evaluaciones_gemini(datos):
                         title=dict(font=dict(color="#000000"))
                     )
 
-                    fig.add_vline(x=50, line_dash="dash", line_color="gray", annotation_text="Meta: 50")
+                    fig.add_vline(x=80, line_dash="dash", line_color="#059669", annotation_text="Meta: 80")
                     st.plotly_chart(fig, use_container_width=True)
 
                 with col2:
                     st.markdown("**📋 Detalle por Criterio:**")
                     for criterio, puntaje in sorted(promedios.items(), key=lambda x: -x[1]):
-                        emoji = "🟢" if puntaje >= 50 else "🟡" if puntaje >= 30 else "🔴"
+                        emoji = "🟢" if puntaje >= 80 else "🟡" if puntaje >= 60 else "🔴"
                         st.markdown(f"{emoji} **{criterio}**: {puntaje:.1f}/100")
 
             # =============================================================================
@@ -6413,15 +6398,33 @@ def pagina_evaluaciones_gemini(datos):
 
                     with col1:
                         df_areas = pd.DataFrame(top_areas, columns=['Área', 'Frecuencia'])
+                        df_areas = df_areas.sort_values('Frecuencia', ascending=False).reset_index(drop=True)
+                        total_areas = len(df_areas)
+                        limite_rojo = max(1, int(np.ceil(total_areas * 0.34)))
+                        limite_amarillo = max(limite_rojo + 1, int(np.ceil(total_areas * 0.67)))
+
+                        def estado_area(posicion):
+                            if posicion <= limite_rojo:
+                                return '🔴 Mal'
+                            if posicion <= limite_amarillo:
+                                return '🟡 Regular'
+                            return '🟢 Mejor'
+
+                        df_areas['Posicion'] = df_areas.index + 1
+                        df_areas['Estado'] = df_areas['Posicion'].apply(estado_area)
                         fig = px.bar(
                             df_areas,
                             x='Frecuencia',
                             y='Área',
                             orientation='h',
                             title="Top 7 Áreas de Mejora Identificadas",
-                            color='Frecuencia',
-                            color_continuous_scale='Reds',
-                            range_color=[0, df_areas['Frecuencia'].max()]
+                            color='Estado',
+                            color_discrete_map={
+                                '🔴 Mal': '#DC2626',
+                                '🟡 Regular': '#F59E0B',
+                                '🟢 Mejor': '#10B981'
+                            },
+                            category_orders={'Estado': ['🔴 Mal', '🟡 Regular', '🟢 Mejor']}
                         )
                         fig.update_layout(
                             height=450,
@@ -9469,6 +9472,772 @@ def pagina_metricas_calidad():
                 st.dataframe(df_ll_display, use_container_width=True, height=400)
 
 
+def pagina_manual_uso():
+    """Página del Manual de Uso de COMMAND"""
+    st.markdown('<div class="main-header">📖 COMMAND · Manual de Uso</div>', unsafe_allow_html=True)
+    
+    # Tabs principales
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+        "🏠 ¿Qué es COMMAND?",
+        "📊 Módulos",
+        "🤖 Evaluación Automatizada",
+        "📱 Productos y Fibra",
+        "📊 Métricas de Calidad",
+        "❓ Preguntas Frecuentes"
+    ])
+    
+    # =========================================================================
+    # TAB 1: ¿Qué es COMMAND?
+    # =========================================================================
+    with tab1:
+        st.markdown("""
+        <div style='background: linear-gradient(135deg, #1E3A5F 0%, #3B82F6 100%); 
+                    padding: 40px; border-radius: 16px; margin-bottom: 30px;'>
+            <h1 style='color: white; margin: 0; font-size: 2rem;'>📈 COMMAND</h1>
+            <h3 style='color: #FFFFFF; margin: 5px 0 15px 0; font-weight: 600;'>
+                Sistema de Rendimiento Comercial
+            </h3>
+            <p style='color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.7; margin: 0;'>
+                COMMAND es una plataforma de análisis de calidad comercial que evalúa 
+                automáticamente las llamadas de venta de forma automatizada con COMMAND. 
+                Transcribe los audios, analiza la conversación y genera evaluaciones, 
+                coaching personalizado y métricas de rendimiento para cada vendedor y equipo.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("### 🔄 ¿Cómo funciona el proceso?")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        pasos = [
+            ("col1", "1️⃣", "Descarga de Audios", "Se descargan automáticamente los audios de las llamadas desde el sistema telefónico."),
+            ("col2", "2️⃣", "Transcripción", "Los audios se convierten a texto y se separa lo que dice el agente y lo que dice el cliente."),
+            ("col3", "3️⃣", "Mejora con COMMAND", "COMMAND mejora la transcripción: corrige errores, identifica roles y limpia el texto."),
+            ("col4", "4️⃣", "Evaluación", "COMMAND evalúa la llamada en 10 criterios de calidad comercial y genera coaching."),
+        ]
+        
+        for col_obj, num, titulo, desc in zip([col1, col2, col3, col4], *zip(*[(p[1], p[2], p[3]) for p in pasos])):
+            with col_obj:
+                st.markdown(f"""
+                <div style='background: #FFFFFF; padding: 20px; border-radius: 12px; 
+                            border: 2px solid #3B82F6; min-height: 180px;'>
+                    <div style='font-size: 2rem; margin-bottom: 8px;'>{num}</div>
+                    <h4 style='color: #000000; margin: 0 0 8px 0;'>{titulo}</h4>
+                    <p style='color: #111111; font-size: 0.85rem; margin: 0; line-height: 1.5;'>{desc}</p>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        
+        st.markdown("### 👥 Roles y Permisos")
+        st.markdown("""
+        | Rol | Qué puede ver | Ejemplo |
+        |-----|--------------|---------|
+        | **Administrador** | Todos los módulos, todos los equipos y vendedores. Acceso total. | Matías, Calidad |
+        | **Supervisor** | Los módulos de su equipo. Ve a todos los vendedores de su equipo. | Líderes de equipo |
+        | **Vendedor** | Solo sus propias métricas, evaluaciones y plan de mejora. | Agentes de venta |
+        """)
+        
+        st.markdown("---")
+        
+        st.markdown("### 📅 Filtro por Fechas")
+        st.markdown("""
+        <div style='background: #FFFFFF; padding: 16px 20px; border-radius: 10px; border: 2px solid #3B82F6;'>
+            <p style='color: #000000; margin: 0 0 8px 0; font-size: 0.93rem;'>
+                En la <strong>barra lateral izquierda</strong> podés seleccionar el período a analizar:
+            </p>
+            <ul style='margin: 0 0 10px 20px; color: #111111; line-height: 1.6;'>
+                <li><strong>Todo el período</strong>: Muestra todas las llamadas evaluadas</li>
+                <li><strong>Semanas predefinidas</strong>: Semanas ya cargadas en el sistema</li>
+                <li><strong>Personalizado</strong>: Elegí un rango de fechas específico</li>
+            </ul>
+            <div style='background: #1E3A5F; padding: 8px 12px; border-radius: 6px;'>
+                <span style='color: #FFFFFF; font-size: 0.88rem;'>⚠️ El filtro de fechas aplica a todos los módulos simultáneamente.</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # =========================================================================
+    # TAB 2: Módulos
+    # =========================================================================
+    with tab2:
+        st.markdown("### 📊 Módulos disponibles en COMMAND")
+        st.markdown("")
+        
+        modulos = [
+            {
+                "icono": "📱",
+                "nombre": "Análisis de Productos",
+                "color": "#3B82F6",
+                "fondo": "#EFF6FF",
+                "desc": "Analiza qué planes móviles (4GB, 8GB, 15GB, 30GB) y fibra óptica ofreció cada vendedor en sus llamadas.",
+                "detalle": [
+                    "Porcentaje de llamadas donde se ofreció un plan",
+                    "Cuál fue el primer plan ofrecido (estrategia inicial)",
+                    "Distribución de planes más ofrecidos",
+                    "Porcentaje de ofrecimiento de fibra óptica",
+                    "Ranking de vendedores con menor oferta de fibra",
+                ]
+            },
+            {
+                "icono": "🤖",
+                "nombre": "Evaluación Automatizada",
+                "color": "#10B981",
+                "fondo": "#ECFDF5",
+                "desc": "El sistema evalúa cada llamada en 10 criterios de calidad comercial y asigna un puntaje de 0 a 100.",
+                "detalle": [
+                    "Puntaje promedio general y por vendedor",
+                    "Distribución por rangos (Crítico, Bajo, Regular, Bueno, Excelente)",
+                    "10 vendedores con mejor rendimiento y 10 con menor rendimiento",
+                    "Áreas de mejora más frecuentes",
+                    "Comparativa individual vs promedio del equipo",
+                ]
+            },
+            {
+                "icono": "🎯",
+                "nombre": "Planes de Mejora (Coaching)",
+                "color": "#F59E0B",
+                "fondo": "#FFFBEB",
+                "desc": "Plan de coaching personalizado generado automáticamente para cada vendedor basado en sus evaluaciones.",
+                "detalle": [
+                    "Plan de acción con prioridades (Alta, Media, Baja)",
+                    "Fortalezas detectadas del vendedor",
+                    "Áreas específicas de mejora",
+                    "Recursos y recomendaciones",
+                    "Comparativa de rendimiento dentro del equipo",
+                ]
+            },
+            {
+                "icono": "👥",
+                "nombre": "Análisis de Equipos",
+                "color": "#8B5CF6",
+                "fondo": "#F5F3FF",
+                "desc": "Vista consolidada del rendimiento por equipo, permitiendo comparar entre equipos y detectar brechas.",
+                "detalle": [
+                    "Métricas agregadas por equipo",
+                    "Puntaje promedio del equipo",
+                    "Gráfico de puntajes individuales dentro del equipo",
+                    "Tabla de detalle por vendedor",
+                    "Comparativa entre equipos (solo admin)",
+                ]
+            },
+            {
+                "icono": "📊",
+                "nombre": "Resumen Corporativo",
+                "color": "#EF4444",
+                "fondo": "#FEF2F2",
+                "desc": "Vista ejecutiva que consolida la información de equipos y vendedores con análisis de coaching.",
+                "detalle": [
+                    "Resumen de equipo con puntaje y llamadas analizadas",
+                    "Gráfico de criterios de evaluación vs meta (80 puntos)",
+                    "Análisis de coaching del equipo completo",
+                    "Vista individual por vendedor con percentil en el equipo",
+                ]
+            },
+            {
+                "icono": "📊",
+                "nombre": "Métricas de Calidad",
+                "color": "#0EA5E9",
+                "fondo": "#F0F9FF",
+                "desc": "Métricas operativas de tiempos auxiliares, ventas y llamadas. Integra datos de Mitrol, Customer y Basurita para dar una visión completa del rendimiento.",
+                "detalle": [
+                    "Tiempos auxiliares por agente (Break, Coaching, Admin, Baño, Almuerzo, Logueo)",
+                    "Distribución de tiempos y Top 10 mayor tiempo auxiliar",
+                    "Ventas: total, aprobadas, canceladas, tasa de aprobación y promedio esperado",
+                    "Llamadas: TMO, cortadas, superan 1min/5min y % capta atención",
+                    "Filtros por vista General, por Equipo o por Agente individual",
+                ]
+            },
+        ]
+        
+        for i, mod in enumerate(modulos, start=1):
+            items_html = "".join([f"<li>{item}</li>" for item in mod['detalle']])
+            st.markdown(f"""
+            <div style='background: #FFFFFF; border: 2px solid {mod['color']}; border-radius: 12px; overflow: hidden; margin-bottom: 22px;'>
+                <div style='background: {mod['color']}; padding: 10px 14px;'>
+                    <p style='color: #FFFFFF; margin: 0; font-size: 0.92rem; font-weight: 700;'>Módulo {i} · {mod['icono']} {mod['nombre']}</p>
+                </div>
+                <div style='padding: 14px;'>
+                    <div style='background: {mod['fondo']}; border: 1px solid {mod['color']}; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                        <p style='color: #000000; margin: 0 0 4px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué hace este módulo</p>
+                        <p style='color: #111111; margin: 0; font-size: 0.95rem; line-height: 1.6;'>{mod['desc']}</p>
+                    </div>
+                    <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px;'>
+                        <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué vas a encontrar</p>
+                        <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                            {items_html}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    # =========================================================================
+    # TAB 3: Evaluación Automatizada
+    # =========================================================================
+    with tab3:
+        st.markdown("### 🤖 ¿Cómo se evalúa cada llamada?")
+        st.markdown("""
+        Cada llamada es evaluada automáticamente por **COMMAND** en **10 criterios** 
+        de calidad comercial. Cada criterio se puntúa de 0 a 100, y el puntaje total es el 
+        promedio de todos los criterios.
+        """)
+        
+        st.markdown("---")
+        st.markdown("### 📋 Los 10 Criterios de Evaluación")
+        
+        criterios = [
+            ("1. Saludo y Presentación", "🤝", "El agente se presenta correctamente, dice su nombre, la empresa y saluda al cliente de forma cordial."),
+            ("2. Identificación del Cliente", "🔍", "El agente identifica al cliente por nombre, verifica datos y personaliza la conversación."),
+            ("3. Detección de Necesidades", "🎯", "El agente hace preguntas para entender qué necesita el cliente antes de ofrecer un producto."),
+            ("4. Oferta de Productos", "📱", "El agente presenta planes y productos de forma clara, menciona beneficios y adapta la oferta al cliente."),
+            ("5. Manejo de Objeciones", "🛡️", "El agente responde objeciones del cliente con argumentos, no se rinde ante el primer 'no'."),
+            ("6. Cierre de Venta", "✅", "El agente intenta cerrar la venta, propone pasos concretos y busca el compromiso del cliente."),
+            ("7. Despedida", "👋", "El agente se despide cordialmente, agradece y cierra la conversación de forma profesional."),
+            ("8. Proactividad", "💡", "El agente toma la iniciativa, sugiere productos adicionales (fibra, upgrades) sin que el cliente lo pida."),
+            ("9. Empatía", "❤️", "El agente muestra comprensión, se pone en el lugar del cliente y adapta su tono a la situación."),
+            ("10. Resolución de Problemas", "🔧", "El agente resuelve dudas o problemas del cliente de forma efectiva durante la llamada."),
+        ]
+        
+        for titulo, icono, desc in criterios:
+            st.markdown(f"""
+            <div style='background: #FFFFFF; padding: 14px 18px; border-radius: 10px; 
+                        margin-bottom: 8px; border: 2px solid #6366F1;'>
+                <strong style='color: #000000; font-size: 0.95rem;'>{icono} {titulo}</strong>
+                <p style='color: #111111; margin: 6px 0 0 0; font-size: 0.88rem;'>{desc}</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        st.markdown("### 📊 Rangos de Puntaje")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("""
+            | Rango | Puntaje | Significado |
+            |-------|---------|-------------|
+            | 🔴 **Crítico** | 0 - 20 | Requiere atención inmediata |
+            | 🟠 **Bajo** | 21 - 40 | Por debajo del estándar |
+            | 🟡 **Regular** | 41 - 60 | Cumple parcialmente |
+            | 🟢 **Bueno** | 61 - 80 | Cumple el estándar |
+            | 🌟 **Excelente** | 81 - 100 | Supera expectativas |
+            """)
+        with col2:
+            st.markdown("""
+            <div style='background: #FFFFFF; padding: 14px 16px; border-radius: 10px; border: 2px solid #10B981;'>
+                <p style='color: #000000; margin: 0 0 8px 0; font-size: 0.9rem;'><strong>Meta del equipo:</strong> alcanzar un puntaje promedio de <strong>80 puntos</strong> o más.</p>
+                <p style='color: #111111; margin: 0 0 8px 0; font-size: 0.9rem;'><strong>¿Cómo mejorar?</strong> Revisá tu <strong>Plan de Mejora</strong> en el módulo de Coaching para ver fortalezas y áreas de mejora.</p>
+                <p style='color: #111111; margin: 0 0 8px 0; font-size: 0.9rem;'><strong>Puntaje por vendedor:</strong> promedio de los puntajes totales de sus llamadas (ej.: 70, 80 y 75 → 75).</p>
+                <p style='color: #111111; margin: 0; font-size: 0.9rem;'><strong>Puntaje por equipo:</strong> promedio de los puntajes de todos los vendedores del equipo.</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.markdown("### 🧭 ¿Qué representa cada gráfico del módulo de Evaluación?")
+        st.markdown("""
+        Esta guía te ayuda a interpretar cada visual del módulo para tomar decisiones de coaching más rápido.
+        """)
+
+        graficos_eval = [
+            (
+                "📌 Indicadores de Evaluación (tarjetas superiores)",
+                "Muestran el estado general: total de evaluaciones, índice promedio, porcentaje excelente y casos críticos.",
+                "Si suben los críticos o baja el índice promedio, priorizá acompañamiento inmediato en ese equipo."
+            ),
+            (
+                "🥧 Distribución por Rango de Desempeño",
+                "Reparte las evaluaciones por nivel de puntaje (crítico, bajo, regular, bueno, excelente).",
+                "Sirve para ver si el volumen está concentrado en niveles saludables o en niveles con riesgo."
+            ),
+            (
+                "🏆 Top 10 - Mejor Rendimiento",
+                "Compara a los 10 vendedores con mejor puntaje promedio.",
+                "Usalo para detectar referentes del equipo y replicar sus buenas prácticas."
+            ),
+            (
+                "⚠️ Requieren Plan de Mejora",
+                "Muestra los 10 vendedores con menor puntaje promedio.",
+                "Ayuda a definir prioridades de entrenamiento y seguimiento semanal."
+            ),
+            (
+                "📊 Puntaje Promedio por Criterio",
+                "Compara el promedio de cada criterio comercial (saludo, objeciones, cierre, empatía, etc.).",
+                "Te indica exactamente en qué parte del proceso comercial está la brecha principal."
+            ),
+            (
+                "🎯 Top 7 Áreas de Mejora Identificadas",
+                "Lista las áreas de mejora que más se repiten en las evaluaciones.",
+                "Si un tema aparece primero de forma recurrente, ese tema debe ser foco del plan de capacitación."
+            ),
+        ]
+
+        for titulo, que_muestra, como_usarlo in graficos_eval:
+            st.markdown(f"""
+            <div style='background: #FFFFFF; padding: 14px 16px; border-radius: 10px; border: 1px solid #D1D5DB; margin-bottom: 10px;'>
+                <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.93rem; font-weight: 700;'>{titulo}</p>
+                <p style='color: #111111; margin: 0 0 6px 0; font-size: 0.88rem; line-height: 1.55;'><strong>Qué muestra:</strong> {que_muestra}</p>
+                <p style='color: #111111; margin: 0; font-size: 0.88rem; line-height: 1.55;'><strong>Cómo usarlo:</strong> {como_usarlo}</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style='background: #FFFFFF; padding: 12px 14px; border-radius: 10px; border: 2px solid #1E3A5F;'>
+            <p style='color: #000000; margin: 0; font-size: 0.88rem; line-height: 1.6;'>
+                <strong>Regla rápida de lectura:</strong> Verde = mejor desempeño, Amarillo = zona intermedia, Rojo = prioridad de mejora.
+                Primero mirá tendencia general (indicadores y distribución), después bajá a causas (criterios y áreas de mejora), y por último definí acciones por vendedor.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # =========================================================================
+    # TAB 4: Productos y Fibra
+    # =========================================================================
+    with tab4:
+        st.markdown("""
+        <div style='background: #F0F4FF; padding: 28px 32px; 
+                    border-radius: 16px; margin-bottom: 24px; border: 2px solid #2563EB;'>
+            <h2 style='color: #1E293B; margin: 0 0 8px 0; font-size: 1.5rem;'>📱 Análisis de Productos Ofrecidos</h2>
+            <p style='color: #475569; margin: 0; font-size: 0.95rem;'>
+                Detección automática de planes móviles y fibra óptica ofrecidos por cada agente en sus llamadas.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # --- Planes detectados ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 0 0 10px 4px;'>Planes que se detectan</p>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3, col4 = st.columns(4)
+        planes_info = [
+            (col1, "4GB", "Básico", "#3B82F6"),
+            (col2, "8GB", "Estándar", "#10B981"),
+            (col3, "15GB", "Avanzado", "#F59E0B"),
+            (col4, "30GB", "Premium", "#EC4899"),
+        ]
+        for col_obj, plan, desc, color in planes_info:
+            with col_obj:
+                st.markdown(f"""
+                <div style='background: #FFFFFF; padding: 18px 14px; border-radius: 12px; 
+                            text-align: center; border-top: 4px solid {color};
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.06);'>
+                    <h2 style='color: #1E293B; margin: 0; font-size: 1.4rem; font-weight: 800;'>{plan}</h2>
+                    <p style='color: #64748B; margin: 4px 0 0 0; font-size: 0.82rem;'>{desc}</p>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        st.markdown("")
+        
+        # --- Fibra + Errores en dos columnas ---
+        col_fibra, col_errores = st.columns(2)
+        
+        with col_fibra:
+            st.markdown("""
+            <div style='background: #FFFFFF; padding: 20px 22px; border-radius: 12px; 
+                        border-left: 4px solid #F59E0B; box-shadow: 0 2px 8px rgba(0,0,0,0.06); height: 100%;'>
+                <strong style='color: #1E293B; font-size: 1.05rem;'>🏠 Detección de Fibra Óptica</strong>
+                <p style='color: #475569; margin: 10px 0 8px 0; font-size: 0.88rem; line-height: 1.5;'>
+                    Se detectan menciones del agente sobre internet hogar:
+                </p>
+                <div style='display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;'>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>fibra</span>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>fibra óptica</span>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>internet hogar</span>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>movistar hogar</span>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>100 megas</span>
+                    <span style='background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;'>wifi casa</span>
+                </div>
+                <p style='color: #94A3B8; margin: 0; font-size: 0.78rem; font-style: italic;'>
+                    ⚠️ Solo se analiza lo que dice el agente, no el cliente.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_errores:
+            st.markdown("""
+            <div style='background: #FFFFFF; padding: 20px 22px; border-radius: 12px; 
+                        border-left: 4px solid #8B5CF6; box-shadow: 0 2px 8px rgba(0,0,0,0.06); height: 100%;'>
+                <strong style='color: #1E293B; font-size: 1.05rem;'>🔍 Corrección de errores de Whisper</strong>
+                <p style='color: #475569; margin: 10px 0 8px 0; font-size: 0.88rem; line-height: 1.5;'>
+                    El sistema reconoce transcripciones erróneas automáticamente:
+                </p>
+                <table style='width: 100%; font-size: 0.82rem; border-collapse: collapse;'>
+                    <tr style='border-bottom: 1px solid #E2E8F0;'>
+                        <td style='padding: 5px 8px; color: #64748B;'>Dijo</td>
+                        <td style='padding: 5px 8px; color: #64748B;'>Whisper transcribió</td>
+                        <td style='padding: 5px 8px; color: #64748B;'>Detecta</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid #F1F5F9;'>
+                        <td style='padding: 5px 8px; color: #1E293B;'>"4 gigas"</td>
+                        <td style='padding: 5px 8px; color: #EF4444;'>"4 llenas"</td>
+                        <td style='padding: 5px 8px; color: #10B981; font-weight: 700;'>✅ 4GB</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid #F1F5F9;'>
+                        <td style='padding: 5px 8px; color: #1E293B;'>"8 gigas"</td>
+                        <td style='padding: 5px 8px; color: #EF4444;'>"ocho libras"</td>
+                        <td style='padding: 5px 8px; color: #10B981; font-weight: 700;'>✅ 8GB</td>
+                    </tr>
+                    <tr style='border-bottom: 1px solid #F1F5F9;'>
+                        <td style='padding: 5px 8px; color: #1E293B;'>"15 gigas"</td>
+                        <td style='padding: 5px 8px; color: #EF4444;'>"quince chicas"</td>
+                        <td style='padding: 5px 8px; color: #10B981; font-weight: 700;'>✅ 15GB</td>
+                    </tr>
+                    <tr>
+                        <td style='padding: 5px 8px; color: #1E293B;'>"30 gigas"</td>
+                        <td style='padding: 5px 8px; color: #EF4444;'>"treinta siglas"</td>
+                        <td style='padding: 5px 8px; color: #10B981; font-weight: 700;'>✅ 30GB</td>
+                    </tr>
+                </table>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("")
+        
+        # --- Métricas clave ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 20px 0 14px 4px;'>Métricas clave y cómo se calculan</p>
+        """, unsafe_allow_html=True)
+        
+        metricas = [
+            ("📌", "% Oferta Realizada", "#3B82F6",
+             "Porcentaje de llamadas donde el vendedor ofreció <b>al menos un plan móvil</b>.",
+             "(Llamadas con plan / Total llamadas) × 100"),
+            ("📱", "Plan Principal", "#10B981",
+             "El <b>primer plan</b> mencionado por el agente. Refleja su estrategia inicial de venta.",
+             "Primera mención de plan en el texto del agente (por orden de aparición)"),
+            ("🏠", "% Ofreció Fibra", "#F59E0B",
+             "Porcentaje de llamadas donde el agente ofreció <b>internet hogar / fibra óptica</b>.",
+             "(Llamadas con fibra / Total llamadas) × 100"),
+            ("📉", "Ranking Menor Fibra", "#EC4899",
+             "Vendedores con <b>menor porcentaje</b> de ofrecimiento de fibra. Prioridad de refuerzo.",
+             "Ordenado de menor a mayor % de fibra ofrecida"),
+        ]
+        
+        col_a, col_b = st.columns(2)
+        for idx, (icon, title, color, desc, formula) in enumerate(metricas):
+            with col_a if idx % 2 == 0 else col_b:
+                st.markdown(f"""
+                <div style='background: #FFFFFF; padding: 18px 20px; border-radius: 12px; 
+                            border-left: 4px solid {color}; margin-bottom: 12px;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.06);'>
+                    <strong style='color: #1E293B; font-size: 0.98rem;'>{icon} {title}</strong>
+                    <p style='color: #475569; margin: 6px 0; font-size: 0.85rem; line-height: 1.5;'>{desc}</p>
+                    <div style='background: #F8FAFC; padding: 6px 10px; border-radius: 6px; 
+                                border: 1px solid #E2E8F0;'>
+                        <span style='color: #64748B; font-size: 0.8rem; font-family: monospace;'>{formula}</span>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+        
+
+    
+    # =========================================================================
+    # TAB 5: Métricas de Calidad
+    # =========================================================================
+    with tab5:
+        st.markdown("""
+        <div style='background: #F0F9FF; padding: 28px 32px; 
+                    border-radius: 16px; margin-bottom: 24px; border: 2px solid #0EA5E9;'>
+            <h2 style='color: #1E293B; margin: 0 0 8px 0; font-size: 1.5rem;'>📊 Métricas de Calidad</h2>
+            <p style='color: #475569; margin: 0; font-size: 0.95rem;'>
+                Análisis operativo integrado de tiempos auxiliares, ventas y llamadas por agente y equipo.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # --- Fuente de datos ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 0 0 10px 4px;'>Origen de los datos</p>
+        """, unsafe_allow_html=True)
+
+        col1, col2, col3 = st.columns(3)
+        fuentes = [
+            (col1, "Acumuladores (Mitrol)", "⏱️", "#3B82F6", "Tiempos auxiliares: Break, Coaching, Administrativo, Baño, Almuerzo, Logueo."),
+            (col2, "Solicitudes (Customer)", "💼", "#10B981", "Ventas: cargadas, aprobadas, canceladas, preventa y pendientes."),
+            (col3, "Basurita (Llamadas)", "📞", "#F59E0B", "Llamadas: cantidad, TMO, cortadas, duración y capta atención."),
+        ]
+        for col_obj, titulo, icono, color, desc in fuentes:
+            with col_obj:
+                st.markdown(f"""
+                <div style='background: #FFFFFF; padding: 18px 14px; border-radius: 12px; 
+                            text-align: center; border-top: 4px solid {color};
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.06); min-height: 160px;'>
+                    <div style='font-size: 2rem; margin-bottom: 6px;'>{icono}</div>
+                    <h4 style='color: #1E293B; margin: 0 0 6px 0; font-size: 0.95rem;'>{titulo}</h4>
+                    <p style='color: #64748B; margin: 0; font-size: 0.82rem; line-height: 1.5;'>{desc}</p>
+                </div>
+                """, unsafe_allow_html=True)
+
+        st.markdown("")
+
+        # --- Filtros disponibles ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 20px 0 10px 4px;'>Filtros de visualización</p>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style='background: #FFFFFF; padding: 20px 22px; border-radius: 12px; 
+                    border-left: 4px solid #6366F1; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;'>
+            <strong style='color: #1E293B; font-size: 1.05rem;'>🔍 Tipos de Vista</strong>
+            <table style='width: 100%; font-size: 0.88rem; border-collapse: collapse; margin-top: 10px;'>
+                <tr style='border-bottom: 1px solid #E2E8F0;'>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>🌐 General</td>
+                    <td style='padding: 8px; color: #475569;'>Muestra los datos de todos los agentes y equipos. Solo disponible para administradores.</td>
+                </tr>
+                <tr style='border-bottom: 1px solid #E2E8F0;'>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>🏢 Por Equipo</td>
+                    <td style='padding: 8px; color: #475569;'>Filtra por un equipo específico. Muestra cantidad de agentes y disponibilidad en cada sección.</td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>👤 Por Agente</td>
+                    <td style='padding: 8px; color: #475569;'>Muestra datos individuales de un agente. Gráficos se adaptan al desglose personal.</td>
+                </tr>
+            </table>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # --- Permisos ---
+        st.markdown("""
+        <div style='background: #FFFFFF; padding: 20px 22px; border-radius: 12px; 
+                    border-left: 4px solid #F59E0B; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px;'>
+            <strong style='color: #1E293B; font-size: 1.05rem;'>🔒 Permisos según rol</strong>
+            <table style='width: 100%; font-size: 0.88rem; border-collapse: collapse; margin-top: 10px;'>
+                <tr style='border-bottom: 1px solid #E2E8F0;'>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>Administrador</td>
+                    <td style='padding: 8px; color: #475569;'>Vista General + filtro por Equipo o Agente. Acceso a todos los datos.</td>
+                </tr>
+                <tr style='border-bottom: 1px solid #E2E8F0;'>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>Supervisor</td>
+                    <td style='padding: 8px; color: #475569;'>Ve solo los datos de su equipo. Puede filtrar por agente dentro de su equipo.</td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px; color: #1E293B; font-weight: 700;'>Vendedor</td>
+                    <td style='padding: 8px; color: #475569;'>Solo ve sus propios datos. Sin filtros.</td>
+                </tr>
+            </table>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("")
+
+        # --- Las 3 secciones (tabs) ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 20px 0 14px 4px;'>Las 3 secciones del módulo</p>
+        """, unsafe_allow_html=True)
+
+        # TIEMPOS
+        st.markdown("""
+        <div style='background: #FFFFFF; border: 2px solid #3B82F6; border-radius: 12px; overflow: hidden; margin-bottom: 18px;'>
+            <div style='background: #3B82F6; padding: 10px 14px;'>
+                <p style='color: #FFFFFF; margin: 0; font-size: 0.92rem; font-weight: 700;'>Sección 1 · ⏱️ Tiempos</p>
+            </div>
+            <div style='padding: 14px;'>
+                <div style='background: #EFF6FF; border: 1px solid #3B82F6; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                    <p style='color: #000000; margin: 0 0 4px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué muestra</p>
+                    <p style='color: #111111; margin: 0; font-size: 0.92rem; line-height: 1.6;'>Tiempos auxiliares de cada agente: Break, Coaching, Administrativo, Baño, Almuerzo y Logueo. Muestra promedios generales y el desglose individual.</p>
+                </div>
+                <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px;'>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué vas a encontrar</p>
+                    <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                        <li>6 KPIs con promedios de cada tipo de tiempo auxiliar</li>
+                        <li>Gráfico de torta con la distribución de tiempos auxiliares (en horas)</li>
+                        <li>Top 10 agentes con mayor tiempo auxiliar (o desglose individual si filtrás un agente)</li>
+                        <li>Tabla detallada con tiempos formateados y % productivo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # VENTAS
+        st.markdown("""
+        <div style='background: #FFFFFF; border: 2px solid #10B981; border-radius: 12px; overflow: hidden; margin-bottom: 18px;'>
+            <div style='background: #10B981; padding: 10px 14px;'>
+                <p style='color: #FFFFFF; margin: 0; font-size: 0.92rem; font-weight: 700;'>Sección 2 · 💼 Ventas</p>
+            </div>
+            <div style='padding: 14px;'>
+                <div style='background: #ECFDF5; border: 1px solid #10B981; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                    <p style='color: #000000; margin: 0 0 4px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué muestra</p>
+                    <p style='color: #111111; margin: 0; font-size: 0.92rem; line-height: 1.6;'>Datos de ventas cargadas en Customer: total, aprobadas, canceladas, tasa de aprobación y promedio esperado. Incluye estado por vendedor.</p>
+                </div>
+                <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px;'>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué vas a encontrar</p>
+                    <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                        <li>5 KPIs: Total Ventas, Aprobadas, Canceladas, Tasa de Aprobación % y Promedio Esperado</li>
+                        <li>Top 10 vendedores coloreados por tasa (🟢 ≥70%, 🟡 ≥50%, 🔴 &lt;50%) con línea de meta</li>
+                        <li>Gráfico de torta con distribución de estados (Aprobadas / Canceladas / Preventa / Pendientes)</li>
+                        <li>Tabla detallada con diferencia vs promedio y estado del vendedor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # LLAMADAS
+        st.markdown("""
+        <div style='background: #FFFFFF; border: 2px solid #F59E0B; border-radius: 12px; overflow: hidden; margin-bottom: 18px;'>
+            <div style='background: #F59E0B; padding: 10px 14px;'>
+                <p style='color: #FFFFFF; margin: 0; font-size: 0.92rem; font-weight: 700;'>Sección 3 · 📞 Llamadas</p>
+            </div>
+            <div style='padding: 14px;'>
+                <div style='background: #FFFBEB; border: 1px solid #F59E0B; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                    <p style='color: #000000; margin: 0 0 4px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué muestra</p>
+                    <p style='color: #111111; margin: 0; font-size: 0.92rem; line-height: 1.6;'>Métricas de llamadas: cantidad total, TMO (Tiempo Medio Operativo), cortadas, duración y porcentaje de captación de atención del cliente.</p>
+                </div>
+                <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px;'>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué vas a encontrar</p>
+                    <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                        <li>6 KPIs: Total Llamadas, TMO, Cortadas (% y cantidad), >1 min, >5 min y % Capta Atención</li>
+                        <li>Distribución por duración: &lt;30 seg, 30s-1min, 1-5 min, >5 min</li>
+                        <li>Gráfico de Capta Atención (llamadas >1min y no cortadas vs total)</li>
+                        <li>Top 10 agentes por cantidad (barras agrupadas: total vs capta atención)</li>
+                        <li>Tabla detallada con estilo condicional por % Capta (🟢 ≥50%, 🟡 ≥35%, 🔴 &lt;35%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("")
+
+        # --- Conceptos clave ---
+        st.markdown("""
+        <p style='color: #64748B; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; 
+                  font-weight: 700; margin: 20px 0 14px 4px;'>Conceptos clave</p>
+        """, unsafe_allow_html=True)
+
+        conceptos = [
+            ("⏱️", "TMO", "#3B82F6",
+             "Tiempo Medio Operativo. Es el <b>promedio de duración</b> de las llamadas de cada agente.",
+             "Se calcula sumando la duración de todas las llamadas y dividiendo por la cantidad."),
+            ("🎯", "Capta Atención", "#10B981",
+             "Indica si el agente logra <b>retener al cliente más de 1 minuto</b> sin que cuelgue.",
+             "(Llamadas >1min y no cortadas por cliente / Total llamadas) × 100"),
+            ("📊", "Tasa de Aprobación", "#F59E0B",
+             "Porcentaje de ventas que fueron <b>aprobadas</b> sobre el total de ventas cargadas.",
+             "(Ventas Aprobadas / Total Ventas Cargadas) × 100"),
+            ("⏰", "% Productivo", "#8B5CF6",
+             "Porcentaje del tiempo de logueo que el agente estuvo <b>en actividad productiva</b> (no en auxiliares).",
+             "(Tiempo Logueo - Tiempo Auxiliar Total) / Tiempo Logueo × 100"),
+        ]
+
+        col_a, col_b = st.columns(2)
+        for idx, (icon, title, color, desc, formula) in enumerate(conceptos):
+            with col_a if idx % 2 == 0 else col_b:
+                st.markdown(f"""
+                <div style='background: #FFFFFF; padding: 18px 20px; border-radius: 12px; 
+                            border-left: 4px solid {color}; margin-bottom: 12px;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.06);'>
+                    <strong style='color: #1E293B; font-size: 0.98rem;'>{icon} {title}</strong>
+                    <p style='color: #475569; margin: 6px 0; font-size: 0.85rem; line-height: 1.5;'>{desc}</p>
+                    <div style='background: #F8FAFC; padding: 6px 10px; border-radius: 6px; 
+                                border: 1px solid #E2E8F0;'>
+                        <span style='color: #64748B; font-size: 0.8rem; font-family: monospace;'>{formula}</span>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+        st.markdown("")
+
+        # --- Nota importante ---
+        st.markdown("""
+        <div style='background: #1E3A5F; padding: 18px 22px; border-radius: 10px;'>
+            <p style='color: #FFFFFF; margin: 0; font-size: 0.93rem; line-height: 1.6;'>
+                💡 <strong>Importante:</strong> Los datos de este módulo se generan ejecutando <code style='background: rgba(255,255,255,0.15); padding: 2px 6px; border-radius: 4px;'>procesar_calidad.py</code> que unifica los 3 archivos fuente. 
+                Si no ves datos, consultá con el equipo de Calidad para verificar que los archivos fueron cargados y procesados.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # =========================================================================
+    # TAB 6: Preguntas Frecuentes
+    # =========================================================================
+    with tab6:
+        st.markdown("### ❓ Preguntas Frecuentes")
+        st.markdown("")
+        st.markdown("""
+        <style>
+        div[data-testid="stExpander"] details summary {
+            background: #FFFFFF !important;
+            border-radius: 10px !important;
+            padding: 6px 10px !important;
+        }
+        div[data-testid="stExpander"] details summary:hover {
+            background: #EAF2FF !important;
+        }
+        div[data-testid="stExpander"] details summary,
+        div[data-testid="stExpander"] details summary * {
+            color: #0F172A !important;
+            font-weight: 700 !important;
+        }
+        div[data-testid="stExpander"] {
+            margin-bottom: 10px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        
+        faqs = [
+            ("¿Cada cuánto se actualizan los datos?", "🔄",
+             "Los datos se actualizan cada vez que se ejecuta el pipeline de procesamiento. "
+             "Esto incluye la descarga de nuevos audios, transcripción, mejora con COMMAND y evaluación."),
+            
+            ("¿Por qué mi puntaje es bajo si creo que hice una buena llamada?", "📉",
+             "El sistema evalúa aspectos específicos y medibles (presentación, identificación del cliente, "
+             "oferta de productos, cierre, etc.). Puede que la llamada haya sido buena en tono general "
+             "pero faltaron pasos específicos del protocolo de venta."),
+            
+            ("¿Qué hago si no me aparecen datos?", "🔍",
+             "Verificá con tu supervisor que tus llamadas hayan sido procesadas en el período seleccionado. "
+             "También revisá el filtro de fechas en la barra lateral."),
+            
+            ("¿Puedo ver las llamadas de mis compañeros?", "🔒",
+             "No. Cada vendedor solo ve sus propios datos. Los supervisores ven a su equipo completo "
+             "y los administradores ven todos los equipos."),
+            
+            ("¿El puntaje afecta mi evaluación laboral?", "📋",
+             "El puntaje es una herramienta de mejora continua. Consultá con tu supervisor cómo se "
+             "utiliza en el contexto de tu evaluación de desempeño."),
+            
+            ("¿Qué es el Plan de Mejora?", "🎯",
+             "Es un plan de coaching personalizado generado automáticamente basado en tus evaluaciones. Incluye "
+             "tus fortalezas, áreas de mejora y acciones concretas con prioridades para que sepas en qué enfocarte."),
+            
+            ("¿Cómo se calcula el puntaje total?", "🧮",
+             "Es el <b>promedio de los 10 criterios</b> de evaluación. Cada criterio se puntúa de 0 a 100. "
+             "El sistema evalúa la llamada y asigna un puntaje a cada uno de los 10 criterios "
+             "(Saludo, Identificación, Detección de Necesidades, Oferta, Manejo de Objeciones, Cierre, "
+             "Despedida, Proactividad, Empatía, Resolución de Problemas). Luego suma los 10 puntajes "
+             "y los divide entre 10 para obtener el promedio.<br><br>"
+             "<b>Ejemplo:</b> si los criterios suman 720 puntos en total → 720 / 10 = <b>72 puntos</b>.<br>"
+             "El puntaje del vendedor es el promedio de los puntajes totales de todas sus llamadas evaluadas."),
+        ]
+        
+        for pregunta, icono, respuesta in faqs:
+            with st.expander(f"{icono} {pregunta}"):
+                st.markdown(f"""
+                <div style='background: #F8FAFC; padding: 16px 20px; border-radius: 10px;'>
+                    <p style='color: #000000; margin: 0; font-size: 0.93rem; line-height: 1.7;'>
+                        {respuesta}
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        st.markdown("""
+        <div style='background: #1E3A5F; padding: 18px 22px; border-radius: 10px;'>
+            <p style='color: #FFFFFF; margin: 0; font-size: 0.95rem; font-weight: 500;'>
+                💡 <strong>¿Tenés otra pregunta?</strong> Consultá con tu supervisor o con el equipo de Calidad.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+
 def pagina_resumen_corporativo(datos):
     """Página de Resumen Corporativo - Vista consolidada de equipos y vendedores"""
     st.markdown('<div class="main-header">📊 COMMAND · Resumen Corporativo</div>', unsafe_allow_html=True)
@@ -10134,6 +10903,7 @@ def main():
         # Vendedores equipo Mel: Solo ven su resumen corporativo
         paginas = {
             "📊 Resumen Corporativo": "resumen_corporativo",
+            "📖 Manual de Uso": "manual",
         }
     elif rol_usuario == 'vendedor':
         # Vendedores otros equipos: Ven módulos relevantes para ellos
@@ -10142,6 +10912,7 @@ def main():
             "⚠️ Mis Reclamos": "quejas",
             "🤖 Mi Evaluación": "gemini",
             "🎯 Mi Plan de Mejora": "coaching",
+            "📖 Manual de Uso": "manual",
         }
     elif rol_usuario == 'supervisor':
         # Supervisores: Ven módulos de su equipo
@@ -10152,7 +10923,8 @@ def main():
             "🎯 Planes de Mejora": "coaching",
             "👥 Análisis de Mi Equipo": "equipos",
             "📊 Resumen Corporativo": "resumen_corporativo",
-            "📊 Métricas de Calidad": "metricas_calidad"
+            "📊 Métricas de Calidad": "metricas_calidad",
+            "📖 Manual de Uso": "manual",
         }
     else:
         # Admin: Acceso completo
@@ -10170,6 +10942,7 @@ def main():
             paginas["📞 Indicadores de Calidad (Admin)"] = "calidad"
         # Agregar Comparativa de Períodos solo para admin/supervisor
         paginas["📅 Comparativa de Períodos"] = "comparativa"
+        paginas["📖 Manual de Uso"] = "manual"
     seleccion = st.sidebar.radio("Módulos disponibles:", list(paginas.keys()))
     
     # =========================================================================
@@ -10285,6 +11058,8 @@ def main():
         pagina_calidad()
     elif paginas[seleccion] == "comparativa":
         pagina_comparativa_periodos(datos)
+    elif paginas[seleccion] == "manual":
+        pagina_manual_uso()
     
     # Footer
     st.sidebar.markdown("---")

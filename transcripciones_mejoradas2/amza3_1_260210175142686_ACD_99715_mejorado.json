@@ -1,0 +1,299 @@
+{
+  "archivo": "amza3_1_260210175142686_ACD_99715.wav",
+  "duracion_segundos": 67.96,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 16.1,
+    "Hablante B": 46.36
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 1.5,
+      "texto": "Hola, buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 5.0,
+      "texto": "Sí, buenas tardes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.0,
+      "fin": 9.3,
+      "texto": "Me comunico con López González Matías, Gonzalo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.4,
+      "fin": 11.9,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.9,
+      "fin": 16.2,
+      "texto": "Eh, se está comunicando Oriana del área técnica de Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.9,
+      "fin": 21.8,
+      "texto": "Oriana, con todo respeto, señorita."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.9,
+      "fin": 21.9,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.9,
+      "fin": 27.1,
+      "texto": "Todos los días me llama, todos los días, no me interesa pasarme a Movistar, por favor."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.1,
+      "fin": 29.7,
+      "texto": "Ni con abono, con las situaciones que estamos..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.1,
+      "fin": 34.4,
+      "texto": "Está difícil para tener una línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.6,
+      "fin": 35.4,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 35.4,
+      "fin": 43.4,
+      "texto": "Mil veces me dijo, le dije a tantos como compañeros suyos, que me pongan como si fueran a llamar, porque me llaman todos los días."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.4,
+      "fin": 50.4,
+      "texto": "A veces duermen en siesta, a veces tienen trabajo, a veces día de semana, fin de semana, me llaman todos los días."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 51.8,
+      "fin": 53.2,
+      "texto": "Perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 53.2,
+      "fin": 59.9,
+      "texto": "Yo ya me pasé a Claro y por favor."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.4,
+      "fin": 66.8,
+      "texto": "Perfecto, lo entiendo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.9,
+      "fin": 67.2,
+      "texto": "Gracias, saludo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 67.2,
+      "fin": 68.0,
+      "texto": "Espero buenas tardes."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenas tardes. Sí, buenas tardes. Me comunico con López González Matías, Gonzalo. Sí. Eh, se está comunicando Oriana del área técnica de Movistar. Oriana, con todo respeto, señorita. Sí. Todos los días me llama, todos los días, no me interesa pasarme a Movistar, por favor. Ni con abono, con las situaciones que estamos... Está difícil para tener una línea. Perfecto. Mil veces me dijo, le dije a tantos como compañeros suyos, que me pongan como si fueran a llamar, porque me llaman todos los días. A veces duermen en siesta, a veces tienen trabajo, a veces día de semana, fin de semana, me llaman todos los días. Perfecto. Yo ya me pasé a Claro y por favor. Perfecto, lo entiendo. Gracias, saludo. Espero buenas tardes.",
+  "calidad": {
+    "confianza_promedio": 0.537,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 18.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-17T17:18:20.049691",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, eliminación de palabras innecesarias, y mejora de la puntuación para mayor claridad."
+    },
+    "fecha_mejora": "2026-02-18T07:56:37.856718",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 1.49,
+      "duracion": 1.46,
+      "texto": "Hola, buenas tardes.",
+      "confianza": 0.3
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.51,
+      "fin": 5.0,
+      "duracion": 3.48,
+      "texto": "Sí, buenas tardes.",
+      "confianza": 0.624
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.02,
+      "fin": 9.34,
+      "duracion": 4.33,
+      "texto": "Me comunico con López González Matías, Gonzalo.",
+      "confianza": 0.736
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.36,
+      "fin": 11.87,
+      "duracion": 2.5,
+      "texto": "Sí.",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.88,
+      "fin": 16.21,
+      "duracion": 4.33,
+      "texto": "Ehm, se está comunicando con Oriana del área técnica de movistar.",
+      "confianza": 0.737
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.91,
+      "fin": 21.84,
+      "duracion": 2.92,
+      "texto": "Mirana, con todo respeto, señorita.",
+      "confianza": 0.611
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.86,
+      "fin": 21.92,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.004
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.94,
+      "fin": 27.12,
+      "duracion": 5.19,
+      "texto": "Todos los días me llama, todos los días, no me interesa pasarme a movistar, por favor.",
+      "confianza": 0.533
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.14,
+      "fin": 29.67,
+      "duracion": 2.52,
+      "texto": "Ni con abono, con las situaciones que estamos",
+      "confianza": 0.753
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.05,
+      "fin": 34.36,
+      "duracion": 4.3,
+      "texto": "está difícil para tener una bonita.",
+      "confianza": 0.732
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.6,
+      "fin": 35.38,
+      "duracion": 0.78,
+      "texto": "Perfecto.",
+      "confianza": 0.415
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.4,
+      "fin": 43.37,
+      "duracion": 7.97,
+      "texto": "Mil de veces me dijo, le dije tantas como compañeros tusos, que me pongan como si fueran a llamar, porque me llaman todos los días.",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.41,
+      "fin": 50.36,
+      "duracion": 6.95,
+      "texto": "A veces duermen en siesta, a veces tienen trabajo, a veces día de semana, fin de semana, me llaman todos los días.",
+      "confianza": 0.633
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.78,
+      "fin": 53.16,
+      "duracion": 1.38,
+      "texto": "Perfecto.",
+      "confianza": 0.431
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.18,
+      "fin": 59.91,
+      "duracion": 6.73,
+      "texto": "Yo ya me pasé a claro y por favor.",
+      "confianza": 0.63
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 60.36,
+      "fin": 66.85,
+      "duracion": 6.49,
+      "texto": "Perfecto, lo entiendo.",
+      "confianza": 0.73
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 66.87,
+      "fin": 67.19,
+      "duracion": 0.32,
+      "texto": "Gracias, saludo.",
+      "confianza": 0.008
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 67.21,
+      "fin": 67.96,
+      "duracion": 0.75,
+      "texto": "Espero buenas tardes.",
+      "confianza": 0.616
+    }
+  ]
+}

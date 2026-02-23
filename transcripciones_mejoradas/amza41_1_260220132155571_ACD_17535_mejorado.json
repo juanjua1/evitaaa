@@ -1,0 +1,128 @@
+{
+  "archivo": "amza41_1_260220132155571_ACD_17535.wav",
+  "duracion_segundos": 94.74,
+  "num_segmentos": 10,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 58.83,
+    "Hablante B": 25.77
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 13.9,
+      "texto": "Después del tono, deja tu mensaje para finalizar, cortar o marcar la tecla general para más opciones."
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deja tu mensaje para finalizar, cortar o marcar la tecla general para más opciones.",
+  "calidad": {
+    "confianza_promedio": 0.416,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 9.5
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T16:07:36.598731",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "reparación parcial por truncamiento"
+    },
+    "fecha_mejora": "2026-02-22T23:07:26.664518",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 13.93,
+      "duracion": 13.9,
+      "texto": "Después del tono, deja tu mensaje para finalizar, cortar o marcar la tecla general para más opciones.",
+      "confianza": 0.453
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.13,
+      "fin": 26.93,
+      "duracion": 12.8,
+      "texto": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,",
+      "confianza": 0.127
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.47,
+      "fin": 56.24,
+      "duracion": 25.77,
+      "texto": "Yo jamás te mentiría.",
+      "confianza": 0.375
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.24,
+      "fin": 74.37,
+      "duracion": 13.13,
+      "texto": "Bueno, ¿por qué me cambiaste?",
+      "confianza": 0.499
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 74.39,
+      "fin": 77.19,
+      "duracion": 2.8,
+      "texto": "Quería hablar de... ¿Por qué me cambiaste?",
+      "confianza": 0.514
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 77.21,
+      "fin": 84.34,
+      "duracion": 7.13,
+      "texto": "Quería hablar de tu pestaña.",
+      "confianza": 0.594
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 84.36,
+      "fin": 86.98,
+      "duracion": 2.62,
+      "texto": "Te había mostrado porque decías, hay alerta de tormenta.",
+      "confianza": 0.469
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 87.0,
+      "fin": 88.44,
+      "duracion": 1.44,
+      "texto": "Digo, se recibió el meteor.",
+      "confianza": 0.503
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 88.46,
+      "fin": 91.24,
+      "duracion": 2.78,
+      "texto": "La dejaron para...",
+      "confianza": 0.413
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 92.51,
+      "fin": 94.74,
+      "duracion": 2.23,
+      "texto": "Gracias por ver el video",
+      "confianza": 0.215
+    }
+  ]
+}

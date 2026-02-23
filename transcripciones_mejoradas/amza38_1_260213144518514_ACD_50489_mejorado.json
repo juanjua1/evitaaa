@@ -1,0 +1,444 @@
+{
+  "archivo": "amza38_1_260213144518514_ACD_50489.wav",
+  "duracion_segundos": 163.05,
+  "num_segmentos": 39,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 42.84,
+    "Hablante A": 104.25
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 2.5,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.5,
+      "fin": 2.9,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.2,
+      "fin": 4.2,
+      "texto": "¿Hablo con Julio?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 5.1,
+      "fin": 5.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 5.6,
+      "fin": 7.3,
+      "texto": "Julio, gusto en saludarte."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.3,
+      "fin": 8.1,
+      "texto": "Te habla Marcos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.1,
+      "fin": 11.4,
+      "texto": "Te llamo el día de hoy para brindarte una oferta exclusiva."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.4,
+      "fin": 15.6,
+      "texto": "Yo verifico, Julio, que actualmente estás en la compañía de Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.7,
+      "fin": 16.3,
+      "texto": "¿Es correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.7,
+      "fin": 19.5,
+      "texto": "Sí, sí, me llamaron."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.5,
+      "fin": 22.7,
+      "texto": "Yo ya le dije que..."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.8,
+      "fin": 28.8,
+      "texto": "Que... Bueno, que lo que... Es lo que tengo ahora en Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.4,
+      "fin": 30.5,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.5,
+      "fin": 30.7,
+      "texto": "O sea..."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.7,
+      "fin": 35.2,
+      "texto": "Es mucho mejor, digamos, que tú hiciste lo que no sé, no sé de Movistar."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? ¿Cómo estás? ¿Hablo con Julio? Sí. Julio, gusto en saludarte. Te habla Marcos. Te llamo el día de hoy para brindarte una oferta exclusiva. Yo verifico, Julio, que actualmente estás en la compañía de Claro. ¿Es correcto? Sí, sí, me llamaron. Yo ya le dije que... Que... Bueno, que lo que... Es lo que tengo ahora en Claro. Sí. O sea... Es mucho mejor, digamos, que tú hiciste lo que no sé, no sé de Movistar.",
+  "calidad": {
+    "confianza_promedio": 0.538,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 12.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:10:52.905152",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "reparación parcial por truncamiento"
+    },
+    "fecha_mejora": "2026-02-20T10:34:56.846883",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.53,
+      "fin": 2.47,
+      "duracion": 0.94,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.51
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.49,
+      "fin": 2.93,
+      "duracion": 0.44,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.23,
+      "fin": 4.18,
+      "duracion": 0.94,
+      "texto": "¿Hablo con Julio?",
+      "confianza": 0.756
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.14,
+      "fin": 5.62,
+      "duracion": 0.48,
+      "texto": "Sí.",
+      "confianza": 0.572
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.64,
+      "fin": 7.26,
+      "duracion": 1.62,
+      "texto": "Julio, ¿cómo te va a gusto saludarte?",
+      "confianza": 0.608
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.28,
+      "fin": 8.06,
+      "duracion": 0.78,
+      "texto": "Te habla Marcos.",
+      "confianza": 0.699
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.08,
+      "fin": 11.42,
+      "duracion": 3.34,
+      "texto": "Te llamo el día de hoy para brindarte lo que es una oferta exclusiva.",
+      "confianza": 0.704
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.44,
+      "fin": 15.63,
+      "duracion": 4.18,
+      "texto": "Yo verifico, Julio, que actualmente estás en la compañía de Claro.",
+      "confianza": 0.733
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.65,
+      "fin": 16.31,
+      "duracion": 0.66,
+      "texto": "¿Es correcto?",
+      "confianza": 0.79
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.69,
+      "fin": 19.47,
+      "duracion": 1.78,
+      "texto": "Sí, vos ya... Sí, sí, me llamaron.",
+      "confianza": 0.113
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.49,
+      "fin": 22.73,
+      "duracion": 3.24,
+      "texto": "Yo ya le dije que... ¿Cómo es?",
+      "confianza": 0.66
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.75,
+      "fin": 28.78,
+      "duracion": 6.03,
+      "texto": "Que... Bueno, que lo que... Es lo que tengo ahora en Claro.",
+      "confianza": 0.613
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.42,
+      "fin": 30.48,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.006
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.5,
+      "fin": 30.66,
+      "duracion": 0.16,
+      "texto": "O sea...",
+      "confianza": 0.084
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.66,
+      "fin": 35.22,
+      "duracion": 3.56,
+      "texto": "Es mucho mejor, digamos, que tú hiciste lo que no sé, no sé de Movistar.",
+      "confianza": 0.182
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 35.24,
+      "fin": 56.38,
+      "duracion": 21.14,
+      "texto": "De Movistar, claro, mirá, te comento porque... Sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí, sí",
+      "confianza": 0.384
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.68,
+      "fin": 64.43,
+      "duracion": 7.75,
+      "texto": "Pero comentame, vos actualmente en la compañía actual de Claro, en el abono que vos estás teniendo, ¿cuánto le estás abonando en cada línea más o menos?",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.45,
+      "fin": 71.51,
+      "duracion": 7.07,
+      "texto": "Y cada línea estoy más o menos en 9.000 y algo estoy.",
+      "confianza": 0.088
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 71.53,
+      "fin": 75.26,
+      "duracion": 3.72,
+      "texto": "Bien, casi 10.000 pesos, si haces alguna recarga te viene la factura, ¿verdad?",
+      "confianza": 0.711
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 76.28,
+      "fin": 77.16,
+      "duracion": 0.88,
+      "texto": "Sí, sí.",
+      "confianza": 0.475
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 77.18,
+      "fin": 77.44,
+      "duracion": 0.26,
+      "texto": "Perfecto.",
+      "confianza": 0.396
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 77.46,
+      "fin": 80.22,
+      "duracion": 2.76,
+      "texto": "Bueno, mira, te comento.",
+      "confianza": 0.575
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 80.24,
+      "fin": 84.31,
+      "duracion": 4.06,
+      "texto": "Lo que es la promoción hoy la tenemos con 14 gigas de navegación, 4 más 10.",
+      "confianza": 0.708
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 84.34,
+      "fin": 84.86,
+      "duracion": 0.52,
+      "texto": "¿Cómo?",
+      "confianza": 0.59
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 85.33,
+      "fin": 91.12,
+      "duracion": 5.79,
+      "texto": "La promoción que tenemos justamente al día de hoy se ha inaugurado con un 80% del descuento, ¿bien?",
+      "confianza": 0.619
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 91.14,
+      "fin": 105.05,
+      "duracion": 13.9,
+      "texto": "Tendrían lo que son los 4 de base más 10 de regalo, el WhatsApp totalmente bonificado, lo que eres llamadas libres a cualquier parte de Argentina y también te activaríamos un beneficio para los juegos gratis, lo que es Free Fire y todo eso.",
+      "confianza": 0.763
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 105.47,
+      "fin": 110.52,
+      "duracion": 5.05,
+      "texto": "Vas a tener el descuento del 80 y te queda el día de hoy en 7.790, ¿bien?",
+      "confianza": 0.553
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 110.8,
+      "fin": 126.66,
+      "duracion": 15.86,
+      "texto": "Y bueno que por tener justamente más de una línea, o sea, tener justamente más líneas como titular, te adicionamos un beneficio que se llama familia Movistar, que quiere decir que te regalamos cuatro gigas más y justamente todas tendrían el mismo beneficio, ¿bien?",
+      "confianza": 0.759
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 126.68,
+      "fin": 130.02,
+      "duracion": 3.34,
+      "texto": "El chip te lo enviamos gratis a la casa porque estamos con envío gratis.",
+      "confianza": 0.714
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 130.44,
+      "fin": 136.63,
+      "duracion": 6.19,
+      "texto": "Justamente la idea es que en ningún momento se quede usted incomunicado, sino que aproveche todos los beneficios, ¿sí?",
+      "confianza": 0.727
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 137.09,
+      "fin": 139.27,
+      "duracion": 2.18,
+      "texto": "Acá verifico que sos de Rosario Santa Fe.",
+      "confianza": 0.644
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 141.98,
+      "fin": 142.71,
+      "duracion": 0.72,
+      "texto": "¿Es correcto?",
+      "confianza": 0.605
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 143.79,
+      "fin": 146.41,
+      "duracion": 2.62,
+      "texto": "Sí, escucha, eh...",
+      "confianza": 0.493
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 146.43,
+      "fin": 151.88,
+      "duracion": 5.45,
+      "texto": "Vas a quedar ahora, estoy en el colegio, vos me puedes llamar mucho más tarde, vos, ahora estoy en el coro, sé que no te escucho bien.",
+      "confianza": 0.329
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 151.9,
+      "fin": 159.2,
+      "duracion": 7.3,
+      "texto": "Dale, dale, te hablo por WhatsApp, te voy a dejar asignado un ejecutivo comercial para que te hable y van charlando por ahí, ¿sí?",
+      "confianza": 0.601
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 159.22,
+      "fin": 159.76,
+      "duracion": 0.54,
+      "texto": "Dale, dale, dale.",
+      "confianza": 0.134
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 159.78,
+      "fin": 161.02,
+      "duracion": 1.24,
+      "texto": "Dale, gracias Julio, hasta luego.",
+      "confianza": 0.526
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 162.49,
+      "fin": 162.61,
+      "duracion": 0.12,
+      "texto": "Vale.",
+      "confianza": 0.299
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 162.63,
+      "fin": 163.05,
+      "duracion": 0.42,
+      "texto": "Adiós.",
+      "confianza": 0.86
+    }
+  ]
+}

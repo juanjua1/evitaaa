@@ -1,0 +1,624 @@
+{
+  "archivo": "amza24_1_260219114530627_ACD_37041.wav",
+  "duracion_segundos": 250.98,
+  "num_segmentos": 63,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 188.53,
+    "Hablante B": 26.48
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.3,
+      "fin": 1.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.9,
+      "fin": 3.2,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 4.0,
+      "texto": "Sí, hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.0,
+      "fin": 4.8,
+      "texto": "Hola, ¿cómo le va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.8,
+      "fin": 7.2,
+      "texto": "Buenos días, habla Ceferino."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 8.0,
+      "texto": "Sí, sí, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.0,
+      "fin": 8.4,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.4,
+      "fin": 14.3,
+      "texto": "Ceferino Bucines, mi nombre, me comunico de la idea de recupero de clientes Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.3,
+      "fin": 17.0,
+      "texto": "Me figura, Ceferino, que vos actualmente estás en Claro, ¿verdad?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.4,
+      "fin": 18.7,
+      "texto": "Sí, sí, sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.7,
+      "fin": 23.1,
+      "texto": "Te consulté, ¿el motivo por el que te fuiste de Movistar cuál fue?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.1,
+      "fin": 26.5,
+      "texto": "No, no, mi falta de trabajo, igual que ahora."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.5,
+      "fin": 30.7,
+      "texto": "Ahora que estoy en una changa, me faltó trabajo y bueno, me meto a Movistar como era un..."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Sí, hola. Hola, ¿cómo le va? Buenos días, habla Ceferino. Sí, sí, sí. ¿Cómo estás? Ceferino Bucines, mi nombre, me comunico de la idea de recupero de clientes Movistar. Me figura, Ceferino, que vos actualmente estás en Claro, ¿verdad? Sí, sí, sí. Te consulté, ¿el motivo por el que te fuiste de Movistar cuál fue? No, no, mi falta de trabajo, igual que ahora. Ahora que estoy en una changa, me faltó trabajo y bueno, me meto a Movistar como era un...",
+  "calidad": {
+    "confianza_promedio": 0.475,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 14.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:18:42.479695",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "reparación parcial por truncamiento"
+    },
+    "fecha_mejora": "2026-02-22T22:37:55.791357",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.26,
+      "fin": 1.9,
+      "duracion": 0.64,
+      "texto": "Hola.",
+      "confianza": 0.256
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.92,
+      "fin": 3.25,
+      "duracion": 1.32,
+      "texto": "Hola.",
+      "confianza": 0.824
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.27,
+      "fin": 4.03,
+      "duracion": 0.76,
+      "texto": "Sí, hola.",
+      "confianza": 0.381
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.05,
+      "fin": 4.75,
+      "duracion": 0.7,
+      "texto": "Hola, ¿cómo le va?",
+      "confianza": 0.452
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.77,
+      "fin": 7.23,
+      "duracion": 2.46,
+      "texto": "Buenos días, habló con Ceferiño.",
+      "confianza": 0.358
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.25,
+      "fin": 7.97,
+      "duracion": 0.72,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.196
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.99,
+      "fin": 8.41,
+      "duracion": 0.42,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.45
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.43,
+      "fin": 14.3,
+      "duracion": 5.87,
+      "texto": "Ceferiño Bucines, mi nombre, me comunico de la idea de recupero de clientes Movistar.",
+      "confianza": 0.717
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.32,
+      "fin": 17.0,
+      "duracion": 2.68,
+      "texto": "Me figura, Ceferiño, que vos actualmente estás en claro, ¿verdad?",
+      "confianza": 0.573
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.45,
+      "fin": 18.67,
+      "duracion": 0.22,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.086
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 18.69,
+      "fin": 23.13,
+      "duracion": 4.45,
+      "texto": "Te consulté, ¿el motivo por el que te pudiste de Movistar cuál fue?",
+      "confianza": 0.426
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.15,
+      "fin": 26.48,
+      "duracion": 3.32,
+      "texto": "No, no, mi falta de trabajo, igual que ahora.",
+      "confianza": 0.513
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.5,
+      "fin": 30.66,
+      "duracion": 4.17,
+      "texto": "Ahora que estoy en una changa, me faltó trabajo y bueno, me meto a Movistar como era un...",
+      "confianza": 0.326
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.91,
+      "fin": 59.27,
+      "duracion": 28.35,
+      "texto": "dos meses gratis, bueno, digo, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",
+      "confianza": 0.257
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 62.25,
+      "fin": 66.93,
+      "duracion": 4.68,
+      "texto": "Pago la línea mía y el internet de mi casa que la paga mi señora.",
+      "confianza": 0.396
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 66.95,
+      "fin": 67.45,
+      "duracion": 0.5,
+      "texto": "Ajá.",
+      "confianza": 0.568
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 67.47,
+      "fin": 69.82,
+      "duracion": 2.34,
+      "texto": "Con la asignación, digamos.",
+      "confianza": 0.329
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 69.84,
+      "fin": 76.52,
+      "duracion": 6.69,
+      "texto": "Claro, bien, en este caso nosotros le estábamos, la idea es que usted pueda pagar menos de lo que está pagando en este momento con un plan más completo.",
+      "confianza": 0.493
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 77.44,
+      "fin": 81.87,
+      "duracion": 4.43,
+      "texto": "Y en este caso tenemos para brindar de lo que es un plan de 14 días por 7.780.",
+      "confianza": 0.535
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 81.89,
+      "fin": 84.17,
+      "duracion": 2.28,
+      "texto": "Sí, qué lindo, qué bueno, qué bueno.",
+      "confianza": 0.302
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 86.59,
+      "fin": 88.24,
+      "duracion": 1.64,
+      "texto": "Sí, qué bueno.",
+      "confianza": 0.228
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 88.26,
+      "fin": 90.72,
+      "duracion": 2.46,
+      "texto": "Usted actualmente cuánto está pagando con Claro?",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 91.24,
+      "fin": 91.8,
+      "duracion": 0.56,
+      "texto": "11.000.",
+      "confianza": 0.834
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 92.71,
+      "fin": 94.57,
+      "duracion": 1.86,
+      "texto": "¿Podría pagar menos entonces?",
+      "confianza": 0.504
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 95.27,
+      "fin": 97.73,
+      "duracion": 2.46,
+      "texto": "Sí, sí, sí, sí.",
+      "confianza": 0.153
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 97.75,
+      "fin": 99.17,
+      "duracion": 1.42,
+      "texto": "¿Y por qué se le dificultaría?",
+      "confianza": 0.627
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 100.64,
+      "fin": 102.54,
+      "duracion": 1.9,
+      "texto": "Es el trabajo, que no tengo trabajo.",
+      "confianza": 0.812
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 102.56,
+      "fin": 105.38,
+      "duracion": 2.82,
+      "texto": "¿Pero qué va a pagar menos?",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 105.44,
+      "fin": 108.97,
+      "duracion": 3.52,
+      "texto": "Yo no le estoy brindando un teléfono, ¿sí?",
+      "confianza": 0.521
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 108.99,
+      "fin": 109.21,
+      "duracion": 0.22,
+      "texto": "Sí, sí, sí.",
+      "confianza": 0.061
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 109.23,
+      "fin": 111.11,
+      "duracion": 1.88,
+      "texto": "Le estoy brindando que usted pague menos.",
+      "confianza": 0.477
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 112.11,
+      "fin": 113.33,
+      "duracion": 1.22,
+      "texto": "Claro.",
+      "confianza": 0.715
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 113.91,
+      "fin": 116.05,
+      "duracion": 2.14,
+      "texto": "Y por eso no entiendo cuál sería el problema.",
+      "confianza": 0.49
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 116.09,
+      "fin": 117.64,
+      "duracion": 1.54,
+      "texto": "No comprendo.",
+      "confianza": 0.726
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 118.29,
+      "fin": 123.72,
+      "duracion": 5.43,
+      "texto": "No, o sea, son changuitas que me salen para ahí y yo tengo que ir guardando para pagar.",
+      "confianza": 0.548
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 123.86,
+      "fin": 125.06,
+      "duracion": 1.2,
+      "texto": "Son 11.000 pesos.",
+      "confianza": 0.628
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 125.08,
+      "fin": 127.17,
+      "duracion": 2.08,
+      "texto": "Saben, es muy malo mucho para barato.",
+      "confianza": 0.457
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 127.19,
+      "fin": 135.76,
+      "duracion": 8.58,
+      "texto": "Pero, se me complica, yo tengo que estar de un mes que no pago y el otro mes y así, ando así.",
+      "confianza": 0.745
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 135.78,
+      "fin": 140.77,
+      "duracion": 4.99,
+      "texto": "Yo hace dos meses que me quedé sin trabajo, ando en changa, en changa y...",
+      "confianza": 0.606
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 141.04,
+      "fin": 151.13,
+      "duracion": 10.09,
+      "texto": "Pero, Seferino, no le comprendo, Seferino, a usted le cuesta mucho, me dice juntar 11.000 pesos, por eso le estoy brindando algo que pueda pagar 7.",
+      "confianza": 0.578
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 152.09,
+      "fin": 152.93,
+      "duracion": 0.84,
+      "texto": "Claro.",
+      "confianza": 0.585
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 152.95,
+      "fin": 157.12,
+      "duracion": 4.16,
+      "texto": "O es más fácil juntar 11 que 7, no comprendo.",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 157.14,
+      "fin": 161.62,
+      "duracion": 4.49,
+      "texto": "No, no, no, muy bien, 7 es más fácil.",
+      "confianza": 0.39
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 161.64,
+      "fin": 166.27,
+      "duracion": 4.63,
+      "texto": "Lo que pasa es que, bueno, está la línea en mi casa, claro, y bueno,",
+      "confianza": 0.563
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 167.28,
+      "fin": 187.41,
+      "duracion": 20.13,
+      "texto": "podemos ver si tenemos cobertura de claro en su domicilio le podríamos brindar todo el servicio completo para su casa más las niñas le va a quedar al guardia",
+      "confianza": 0.725
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 196.78,
+      "fin": 198.26,
+      "duracion": 1.48,
+      "texto": "Le quedarían 39.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 198.28,
+      "fin": 199.84,
+      "duracion": 1.56,
+      "texto": "¿El Internet con las dos líneas?",
+      "confianza": 0.623
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 199.9,
+      "fin": 202.42,
+      "duracion": 2.52,
+      "texto": "No sé, ¿usted actualmente cuánto está pagando de Internet?",
+      "confianza": 0.719
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 208.01,
+      "fin": 208.63,
+      "duracion": 0.62,
+      "texto": "Eh... 25, creo.",
+      "confianza": 0.462
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 208.79,
+      "fin": 209.83,
+      "duracion": 1.04,
+      "texto": "No, no, no se acuerdo.",
+      "confianza": 0.752
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 209.91,
+      "fin": 212.23,
+      "duracion": 2.32,
+      "texto": "No se acuerdo, no se acuerdo.",
+      "confianza": 0.305
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 212.25,
+      "fin": 219.08,
+      "duracion": 6.83,
+      "texto": "O sea, sería 25 más los 11 que me dice que paga por su línea.",
+      "confianza": 0.512
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 219.1,
+      "fin": 219.22,
+      "duracion": 0.12,
+      "texto": "Claro.",
+      "confianza": 0.007
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 219.24,
+      "fin": 219.58,
+      "duracion": 0.34,
+      "texto": "Ajá.",
+      "confianza": 0.422
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 219.6,
+      "fin": 223.54,
+      "duracion": 3.94,
+      "texto": "¿Y esos 11 solamente por su línea o es por la línea suya y la de su esposa?",
+      "confianza": 0.695
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 224.42,
+      "fin": 226.24,
+      "duracion": 1.82,
+      "texto": "No, la línea mía es de la esposa.",
+      "confianza": 0.165
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 226.7,
+      "fin": 235.06,
+      "duracion": 8.36,
+      "texto": "11 y 16, 16 de Internet, creo, algo así, en mi caso, no me acuerdo bien.",
+      "confianza": 0.588
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 236.08,
+      "fin": 240.21,
+      "duracion": 4.13,
+      "texto": "Y 11 en las dos líneas, digamos.",
+      "confianza": 0.513
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 240.23,
+      "fin": 244.97,
+      "duracion": 4.73,
+      "texto": "Sí, son 16, 27, 26.",
+      "confianza": 0.469
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 244.99,
+      "fin": 245.23,
+      "duracion": 0.24,
+      "texto": "Claro, bien.",
+      "confianza": 0.065
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 245.25,
+      "fin": 245.49,
+      "duracion": 0.24,
+      "texto": "Perfecto.",
+      "confianza": 0.14
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 245.51,
+      "fin": 250.84,
+      "duracion": 5.34,
+      "texto": "Bien, Cefería, me lo agradezco mucho el tiempo.",
+      "confianza": 0.612
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 250.86,
+      "fin": 250.98,
+      "duracion": 0.12,
+      "texto": "Bueno.",
+      "confianza": 0.165
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "archivo": "amza75_1_260212103537721_ACD_86345.wav",
+  "duracion_segundos": 74.92,
+  "num_segmentos": 13,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 40.44,
+    "Hablante B": 27.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 0.0,
+      "fin": 2.6,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 2.6,
+      "fin": 3.1,
+      "texto": "Buenos días."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 3.1,
+      "fin": 4.5,
+      "texto": "¿Me comunicó con Cristina?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.0,
+      "fin": 6.2,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.2,
+      "fin": 7.8,
+      "texto": "¿Qué tal, Cristina?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.8,
+      "fin": 9.0,
+      "texto": "Mi nombre es Macarena."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.5,
+      "fin": 19.0,
+      "texto": "Me comunicaba con vos el día de hoy desde el área de beneficios de Movistar porque estamos ofreciendo nuestros planes con un 80% de descuento."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.9,
+      "fin": 26.3,
+      "texto": "Sí, ya le expliqué a tus dos compañeras que no me voy a cambiar de línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 26.5,
+      "fin": 34.4,
+      "texto": "A Movistar, porque desde que pasé las dos líneas de mis menores hace un año, vengo teniendo problemas con Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.8,
+      "fin": 48.8,
+      "texto": "Por ahora con la facturación, me cobran cualquier cosa, estoy pidiendo que me cambien los gigas que tiene mi línea porque me están cobrando 8 gigas, 20 mil pesos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.3,
+      "fin": 58.1,
+      "texto": "Cuando ya tengo Wi-Fi acá, o tanto en la casa de mi pareja cuando nos vamos para allá, así que como que no tenemos tanto gasto de los gigas que tenemos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.0,
+      "fin": 70.1,
+      "texto": "Desde la app de Mi Movistar, fíjese que abre la aplicación de Mi Movistar, ahí puede ver más los planes y puede ir bajando los planes."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 70.2,
+      "fin": 74.9,
+      "texto": "Y ahora por fin agradezco y hago eso porque la verdad es que... Bueno, es mucho, es mucho."
+    }
+  ],
+  "transcripcion_completa": "¿Qué tal? Buenos días. ¿Me comunicó con Cristina? Sí. ¿Qué tal, Cristina? Mi nombre es Macarena. Me comunicaba con vos el día de hoy desde el área de beneficios de Movistar porque estamos ofreciendo nuestros planes con un 80% de descuento. Sí, ya le expliqué a tus dos compañeras que no me voy a cambiar de línea. A Movistar, porque desde que pasé las dos líneas de mis menores hace un año, vengo teniendo problemas con Movistar. Por ahora con la facturación, me cobran cualquier cosa, estoy pidiendo que me cambien los gigas que tiene mi línea porque me están cobrando 8 gigas, 20 mil pesos. Cuando ya tengo Wi-Fi acá, o tanto en la casa de mi pareja cuando nos vamos para allá, así que como que no tenemos tanto gasto de los gigas que tenemos. Desde la app de Mi Movistar, fíjese que abre la aplicación de Mi Movistar, ahí puede ver más los planes y puede ir bajando los planes. Y ahora por fin agradezco y hago eso porque la verdad es que... Bueno, es mucho, es mucho.",
+  "calidad": {
+    "confianza_promedio": 0.562,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.2
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T10:41:53.899643",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "planes con 80% de descuento"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como 'gigas' en lugar de 'llenas', nombres propios, y se mejoró la fluidez del texto."
+    },
+    "fecha_mejora": "2026-02-20T11:06:52.843396",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 2.58,
+      "duracion": 2.54,
+      "texto": "¿Qué tal?",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.6,
+      "fin": 3.12,
+      "duracion": 0.52,
+      "texto": "Buenos días.",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.13,
+      "fin": 4.48,
+      "duracion": 1.34,
+      "texto": "¿Me comunicó con Cristina?",
+      "confianza": 0.585
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.0,
+      "fin": 6.16,
+      "duracion": 0.16,
+      "texto": "Sí.",
+      "confianza": 0.476
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.18,
+      "fin": 7.78,
+      "duracion": 1.6,
+      "texto": "¿Qué tal Cristina?",
+      "confianza": 0.538
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.84,
+      "fin": 8.98,
+      "duracion": 1.14,
+      "texto": "Mi nombre es Macarena.",
+      "confianza": 0.516
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.48,
+      "fin": 19.02,
+      "duracion": 9.53,
+      "texto": "Me comunicaba con vos el día de hoy de la área de beneficio de Movistar porque estamos utilizando lo que son nuestros planes al 80% de descuento.",
+      "confianza": 0.642
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 20.92,
+      "fin": 26.31,
+      "duracion": 5.39,
+      "texto": "Sí, ya le expliqué a tus dos compañeras y que no me voy a cambiar de la línea mía",
+      "confianza": 0.591
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 26.54,
+      "fin": 34.4,
+      "duracion": 7.85,
+      "texto": "a movistar porque desde que pasé las dos líneas de las menores mías hace un año, vengo teniendo problemas con movistar.",
+      "confianza": 0.811
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.8,
+      "fin": 48.8,
+      "duracion": 14.01,
+      "texto": "Por ahora con la faturación, me cobran cualquier cosa, estoy pidiendo que me cambien los gigas que tiene Misa porque me están cobrando 8 gigas, 20 mil pesos.",
+      "confianza": 0.687
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.29,
+      "fin": 58.08,
+      "duracion": 8.79,
+      "texto": "cuando ya tengo wifi acá, o tanto en la casa de mi pareja cuando nos vamos para allá, así que como que no tenemos tanto gasto de los siglas que tenemos.",
+      "confianza": 0.663
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.96,
+      "fin": 70.14,
+      "duracion": 10.17,
+      "texto": "Desde el selfie de mi hija, fíjense de que abre la aplicación de mi movistar, ahí puedes ver más los planes y puedes ir bajando los planes.",
+      "confianza": 0.357
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 70.16,
+      "fin": 74.92,
+      "duracion": 4.77,
+      "texto": "Y ahora por fin agradezco y hago eso porque la verdad es que... Bueno, es mucho, es mucho.",
+      "confianza": 0.397
+    }
+  ]
+}

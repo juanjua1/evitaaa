@@ -1,0 +1,355 @@
+{
+  "archivo": "amza74_1_260213115028253_ACD_65457.wav",
+  "duracion_segundos": 63.59,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 46.94,
+    "Hablante A": 7.56
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.9,
+      "fin": 4.4,
+      "texto": "Hola, buen día, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.5,
+      "fin": 8.6,
+      "texto": "Me comunico con Carlos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.6,
+      "fin": 9.0,
+      "texto": "Con él, hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.0,
+      "fin": 9.7,
+      "texto": "¿Cómo estás, Carlos?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.7,
+      "fin": 11.2,
+      "texto": "Soy Sara, un gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 11.2,
+      "fin": 15.1,
+      "texto": "Me comunicaba con usted para poder brindarle un beneficio para su línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 15.2,
+      "fin": 19.7,
+      "texto": "Al día de hoy hemos aplicado un descuento del 180% del descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.6,
+      "fin": 25.8,
+      "texto": "¿Me contaría si usted es cliente de Claro, es correcto?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.8,
+      "fin": 28.0,
+      "texto": "Sí, por ahora sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.1,
+      "fin": 28.5,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.6,
+      "fin": 31.7,
+      "texto": "¿Y es cliente de Claro o te pagó?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 31.7,
+      "fin": 31.9,
+      "texto": "A vos, ¿no?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.7,
+      "fin": 34.4,
+      "texto": "Ah, bueno."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.4,
+      "fin": 39.2,
+      "texto": "¿Y cuántos días están tardando con este plan?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 39.2,
+      "fin": 41.3,
+      "texto": "Por ahora estoy conforme con Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.9,
+      "fin": 48.0,
+      "texto": "Movistar no quiero saber más nada."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 48.0,
+      "fin": 51.9,
+      "texto": "Bien, Carlos, pero todavía no me ha dejado contarles las ofertas que hemos tenido."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.0,
+      "fin": 52.4,
+      "texto": "No, igual."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.0,
+      "fin": 58.9,
+      "texto": "No quiero saber nada con Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.0,
+      "fin": 61.2,
+      "texto": "Bueno, muchas gracias, Carlos."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 61.2,
+      "fin": 61.9,
+      "texto": "Que tengan un lindo día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.8,
+      "fin": 63.6,
+      "texto": "Sí, gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola, buen día, ¿qué tal? Me comunico con Carlos. Con él, hola. ¿Cómo estás, Carlos? Soy Sara, un gusto. Me comunicaba con usted para poder brindarle un beneficio para su línea. Al día de hoy hemos aplicado un descuento del 180% del descuento. ¿Me contaría si usted es cliente de Claro, es correcto? Sí, por ahora sí. Bien. ¿Y es cliente de Claro o te pagó? A vos, ¿no? Ah, bueno. ¿Y cuántos días están tardando con este plan? Por ahora estoy conforme con Claro. Movistar no quiero saber más nada. Bien, Carlos, pero todavía no me ha dejado contarles las ofertas que hemos tenido. No, igual. No quiero saber nada con Movistar. Bueno, muchas gracias, Carlos. Que tengan un lindo día. Sí, gracias.",
+  "calidad": {
+    "confianza_promedio": 0.483,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T07:19:30.030966",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, identificación de roles y clasificación de la llamada."
+    },
+    "fecha_mejora": "2026-02-20T11:03:23.740060",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.93,
+      "fin": 4.43,
+      "duracion": 1.5,
+      "texto": "Hola, buen día, ¿qué tal?",
+      "confianza": 0.64
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.46,
+      "fin": 8.6,
+      "duracion": 4.14,
+      "texto": "Me comunicó con Carlos.",
+      "confianza": 0.84
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.62,
+      "fin": 8.98,
+      "duracion": 0.36,
+      "texto": "Con él, hola.",
+      "confianza": 0.152
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.0,
+      "fin": 9.72,
+      "duracion": 0.72,
+      "texto": "¿Cómo estás, Carlos?",
+      "confianza": 0.272
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.74,
+      "fin": 11.18,
+      "duracion": 1.44,
+      "texto": "Soy Sara, un gusto.",
+      "confianza": 0.597
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.2,
+      "fin": 15.13,
+      "duracion": 3.92,
+      "texto": "Me comunicaba con usted para poder brindarle un beneficio para su línea.",
+      "confianza": 0.704
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.15,
+      "fin": 19.73,
+      "duracion": 4.59,
+      "texto": "Al día de hoy hemos aplicado un descuento del 180% del descuento.",
+      "confianza": 0.639
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.59,
+      "fin": 25.76,
+      "duracion": 5.17,
+      "texto": "Me contaría si usted es claro, ¿es correcto?",
+      "confianza": 0.684
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.78,
+      "fin": 28.04,
+      "duracion": 2.26,
+      "texto": "Sí, por ahora sí.",
+      "confianza": 0.172
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.06,
+      "fin": 28.54,
+      "duracion": 0.48,
+      "texto": "Bien.",
+      "confianza": 0.293
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.56,
+      "fin": 31.7,
+      "duracion": 3.14,
+      "texto": "¿Y es claro a vos o te pagó?",
+      "confianza": 0.299
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 31.73,
+      "fin": 31.95,
+      "duracion": 0.22,
+      "texto": "A vos, ¿no?",
+      "confianza": 0.089
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.67,
+      "fin": 34.39,
+      "duracion": 1.72,
+      "texto": "Ah, bueno.",
+      "confianza": 0.479
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.41,
+      "fin": 39.2,
+      "duracion": 4.79,
+      "texto": "¿Y cuántos días están tardando con este plan?",
+      "confianza": 0.469
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.22,
+      "fin": 41.26,
+      "duracion": 2.04,
+      "texto": "Por ahora estoy conforme con claro.",
+      "confianza": 0.795
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 41.88,
+      "fin": 47.95,
+      "duracion": 6.07,
+      "texto": "Movistar no quiero saber más nada.",
+      "confianza": 0.674
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 47.97,
+      "fin": 51.91,
+      "duracion": 3.94,
+      "texto": "Bien, Carlos, pero todavía no me ha dejado contarles las ofertas que hemos tenido.",
+      "confianza": 0.542
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.95,
+      "fin": 52.39,
+      "duracion": 0.44,
+      "texto": "No, igual.",
+      "confianza": 0.651
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.03,
+      "fin": 58.94,
+      "duracion": 3.91,
+      "texto": "No quiero saber nada con Movistar.",
+      "confianza": 0.539
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.96,
+      "fin": 61.18,
+      "duracion": 2.22,
+      "texto": "Bueno, muchas gracias, Carlos.",
+      "confianza": 0.242
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 61.2,
+      "fin": 61.88,
+      "duracion": 0.68,
+      "texto": "Que tengan un lindo día.",
+      "confianza": 0.273
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.84,
+      "fin": 63.59,
+      "duracion": 0.75,
+      "texto": "Sí, gracias.",
+      "confianza": 0.572
+    }
+  ]
+}

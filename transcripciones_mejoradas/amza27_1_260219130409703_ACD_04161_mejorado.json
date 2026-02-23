@@ -1,0 +1,327 @@
+{
+  "archivo": "amza27_1_260219130409703_ACD_04161.wav",
+  "duracion_segundos": 79.52,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 59.82,
+    "Hablante B": 9.73
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.8,
+      "fin": 3.2,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.2,
+      "fin": 4.2,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.2,
+      "fin": 6.9,
+      "texto": "¿Con Manuel?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.9,
+      "fin": 8.5,
+      "texto": "¿Quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.6,
+      "fin": 9.7,
+      "texto": "Buen día, Rocío."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.7,
+      "fin": 10.3,
+      "texto": "¿Le saludan?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.5,
+      "fin": 12.7,
+      "texto": "Me estoy contactando del área de recupero de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.7,
+      "fin": 13.4,
+      "texto": "¿Cómo le va?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 15.8,
+      "fin": 16.4,
+      "texto": "¿Movistar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.9,
+      "fin": 21.6,
+      "texto": "Sí, me estoy contactando por el servicio de Internet para su casa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.7,
+      "fin": 24.3,
+      "texto": "¿Ustedes tienen algún servicio de Internet?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.2,
+      "fin": 27.9,
+      "texto": "Escúcheme, ¿ustedes de Movistar?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.0,
+      "fin": 39.0,
+      "texto": "Movistar, perdóneme lo que voy a decir, pero eso es una mierda, porque yo me cambié a los 6 y 7 meses."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.2,
+      "fin": 47.9,
+      "texto": "Me cortaban antes de que terminara el mes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.9,
+      "fin": 49.5,
+      "texto": "Un desastre, escúcheme."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.5,
+      "fin": 55.6,
+      "texto": "Me pasé a Claro, con Claro, no tengo ningún problema, llego hasta la frontera."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.1,
+      "fin": 65.7,
+      "texto": "No tengo ningún problema, las empleadas que tienen Movistar atienden cuando se les canta las pelotas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.7,
+      "fin": 70.7,
+      "texto": "Claro, lamento mucho la mala experiencia que ha tenido con nuestra compañía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 70.7,
+      "fin": 73.8,
+      "texto": "Nunca más Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 73.8,
+      "fin": 79.5,
+      "texto": "Bueno, disculpe entonces las molestias ocasionadas."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenos días. ¿Con Manuel? ¿Quién habla? Buen día, Rocío. ¿Le saludan? Me estoy contactando del área de recupero de Movistar. ¿Cómo le va? ¿Movistar? Sí, me estoy contactando por el servicio de Internet para su casa. ¿Ustedes tienen algún servicio de Internet? Escúcheme, ¿ustedes de Movistar? Movistar, perdóneme lo que voy a decir, pero eso es una mierda, porque yo me cambié a los 6 y 7 meses. Me cortaban antes de que terminara el mes. Un desastre, escúcheme. Me pasé a Claro, con Claro, no tengo ningún problema, llego hasta la frontera. No tengo ningún problema, las empleadas que tienen Movistar atienden cuando se les canta las pelotas. Claro, lamento mucho la mala experiencia que ha tenido con nuestra compañía. Nunca más Movistar. Bueno, disculpe entonces las molestias ocasionadas.",
+  "calidad": {
+    "confianza_promedio": 0.572,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:36:12.354909",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "RECLAMO",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada como reclamo con rechazo."
+    },
+    "fecha_mejora": "2026-02-22T22:41:33.534047",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.84,
+      "fin": 3.16,
+      "duracion": 2.32,
+      "texto": "Hola.",
+      "confianza": 0.491
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.22,
+      "fin": 4.19,
+      "duracion": 0.96,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.6
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 4.21,
+      "fin": 6.87,
+      "duracion": 2.66,
+      "texto": "¿Con Manuel?",
+      "confianza": 0.322
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.89,
+      "fin": 8.53,
+      "duracion": 1.64,
+      "texto": "¿Quién habla?",
+      "confianza": 0.252
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.55,
+      "fin": 9.65,
+      "duracion": 1.1,
+      "texto": "Buen día, Rocío.",
+      "confianza": 0.598
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.67,
+      "fin": 10.27,
+      "duracion": 0.6,
+      "texto": "¿Le saludan?",
+      "confianza": 0.723
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.47,
+      "fin": 12.68,
+      "duracion": 2.2,
+      "texto": "Me estoy contactando del área de recupero de Movistar.",
+      "confianza": 0.567
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.7,
+      "fin": 13.36,
+      "duracion": 0.66,
+      "texto": "¿Cómo le van?",
+      "confianza": 0.77
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 15.76,
+      "fin": 16.44,
+      "duracion": 0.68,
+      "texto": "¿Movistar?",
+      "confianza": 0.7
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.88,
+      "fin": 21.65,
+      "duracion": 3.77,
+      "texto": "Sí, me estoy contactando de lo que es el servicio de Internet para su casa.",
+      "confianza": 0.637
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.67,
+      "fin": 24.27,
+      "duracion": 2.6,
+      "texto": "¿Ustedes tienen algún servicio de Internet?",
+      "confianza": 0.53
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.19,
+      "fin": 27.88,
+      "duracion": 2.68,
+      "texto": "Escúcheme, ¿ustedes de Movistar?",
+      "confianza": 0.514
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 30.0,
+      "fin": 38.99,
+      "duracion": 8.99,
+      "texto": "Movistar, perdóneme lo que voy a decir, pero eso es una mierda, porque yo me cambié a las 6 y 7 meses.",
+      "confianza": 0.658
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.23,
+      "fin": 47.89,
+      "duracion": 7.65,
+      "texto": "Me cortaban antes de que terminara el mes.",
+      "confianza": 0.789
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.91,
+      "fin": 49.45,
+      "duracion": 1.54,
+      "texto": "Un desastre, escúcheme.",
+      "confianza": 0.224
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 49.47,
+      "fin": 55.64,
+      "duracion": 6.17,
+      "texto": "Me pasé a claro, con claro, no tengo ningún problema, llego hasta la frontera.",
+      "confianza": 0.819
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.12,
+      "fin": 65.7,
+      "duracion": 9.57,
+      "texto": "No tengo ningún problema, las empleadas que tienen Movistar atienden cuando se les canta las pelotas.",
+      "confianza": 0.714
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 65.72,
+      "fin": 70.7,
+      "duracion": 4.99,
+      "texto": "Claro, lamento mucho la mala experiencia que ha tenido con nuestra compañía.",
+      "confianza": 0.649
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 70.72,
+      "fin": 73.79,
+      "duracion": 3.06,
+      "texto": "Nunca más Movistar.",
+      "confianza": 0.664
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 73.81,
+      "fin": 79.52,
+      "duracion": 5.71,
+      "texto": "Bueno, disculpe entonces las molestias ocasionadas.",
+      "confianza": 0.214
+    }
+  ]
+}

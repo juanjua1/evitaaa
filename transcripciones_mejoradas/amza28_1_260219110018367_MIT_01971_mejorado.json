@@ -1,0 +1,357 @@
+{
+  "archivo": "amza28_1_260219110018367_MIT_01971.wav",
+  "duracion_segundos": 74.71,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 17.17,
+    "Hablante A": 32.45
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.2,
+      "fin": 21.8,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.9,
+      "fin": 22.1,
+      "texto": "Hola, Luis."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.1,
+      "fin": 22.4,
+      "texto": "Sí, ¿cómo estás?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.4,
+      "fin": 22.8,
+      "texto": "Luis, ¿cómo te va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.8,
+      "fin": 23.2,
+      "texto": "Soy González de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.3,
+      "fin": 23.8,
+      "texto": "Ah, González, aquí mismo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.8,
+      "fin": 25.0,
+      "texto": "Sí, mira, bueno, te había pasado, ¿viste?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 25.0,
+      "fin": 27.5,
+      "texto": "Lo que eran unas promociones por el día de ayer."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 27.6,
+      "fin": 29.4,
+      "texto": "No sé más o menos cuál te había interesado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 33.5,
+      "fin": 34.1,
+      "texto": "La de 5800."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.1,
+      "fin": 34.8,
+      "texto": "La de 5800."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.0,
+      "fin": 38.9,
+      "texto": "Bien, te comento lo que pasó."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 39.4,
+      "fin": 42.5,
+      "texto": "Esa promoción era el 85% de descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 43.4,
+      "fin": 50.7,
+      "texto": "No sé si viste el mensaje que te mandé ayer, que mañana avisaron que hasta ayer la podríamos vender, pero ahora tenemos el 80%."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.4,
+      "fin": 54.4,
+      "texto": "¿Vos tenías dos líneas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.5,
+      "fin": 55.7,
+      "texto": "¿Puede ser bajo tu nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 57.4,
+      "fin": 58.1,
+      "texto": "No, una."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.1,
+      "fin": 59.2,
+      "texto": "Una sola línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.2,
+      "fin": 61.0,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.0,
+      "fin": 67.3,
+      "texto": "Esta línea es el mismo plan, nada más que en vez de 5835 están 7780."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 67.8,
+      "fin": 72.1,
+      "texto": "Se asumió a 2000 pesos."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 72.1,
+      "fin": 74.7,
+      "texto": "Del 85 pasó al 80 por ciento del..."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, Luis. Sí, ¿cómo estás? Luis, ¿cómo te va? Soy González de Movistar. Ah, González, aquí mismo. Sí, mira, bueno, te había pasado, ¿viste? Lo que eran unas promociones por el día de ayer. No sé más o menos cuál te había interesado. La de 5800. La de 5800. Bien, te comento lo que pasó. Esa promoción era el 85% de descuento. No sé si viste el mensaje que te mandé ayer, que mañana avisaron que hasta ayer la podríamos vender, pero ahora tenemos el 80%. ¿Vos tenías dos líneas? ¿Puede ser bajo tu nombre? No, una. Una sola línea. Bien. Esta línea es el mismo plan, nada más que en vez de 5835 están 7780. Se asumió a 2000 pesos. Del 85 pasó al 80 por ciento del...",
+  "calidad": {
+    "confianza_promedio": 0.63,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:42:46.716643",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [
+        "plan 5800"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción, identificación de roles, y clasificación de la llamada."
+    },
+    "fecha_mejora": "2026-02-22T22:43:31.164210",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.22,
+      "fin": 21.83,
+      "duracion": 7.61,
+      "texto": "Hola.",
+      "confianza": 0.452
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.85,
+      "fin": 22.07,
+      "duracion": 0.22,
+      "texto": "Hola, Luis.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.09,
+      "fin": 22.41,
+      "duracion": 0.32,
+      "texto": "Sí, ¿cómo estás?",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.43,
+      "fin": 22.79,
+      "duracion": 0.36,
+      "texto": "Luis, ¿cómo te va?",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.81,
+      "fin": 23.25,
+      "duracion": 0.44,
+      "texto": "Soy González Movistar.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.27,
+      "fin": 23.77,
+      "duracion": 0.5,
+      "texto": "Ah, González, aquí mismo.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.8,
+      "fin": 24.96,
+      "duracion": 1.16,
+      "texto": "Sí, mira, bueno, te había pasado, ¿viste?",
+      "confianza": 0.318
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 24.98,
+      "fin": 27.5,
+      "duracion": 2.52,
+      "texto": "Lo que eran unas promociones por el día de ayer.",
+      "confianza": 0.754
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.56,
+      "fin": 29.44,
+      "duracion": 1.88,
+      "texto": "No sé más o menos cuál te había interesado.",
+      "confianza": 0.746
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.51,
+      "fin": 34.09,
+      "duracion": 0.58,
+      "texto": "La de 5.800.",
+      "confianza": 0.517
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.11,
+      "fin": 34.83,
+      "duracion": 0.72,
+      "texto": "La de 5.800.",
+      "confianza": 0.446
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.95,
+      "fin": 38.87,
+      "duracion": 3.93,
+      "texto": "Bien, te comento lo que pasó.",
+      "confianza": 0.763
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 39.37,
+      "fin": 42.46,
+      "duracion": 3.08,
+      "texto": "Esa promoción era el 85% de descuento.",
+      "confianza": 0.702
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.37,
+      "fin": 50.73,
+      "duracion": 7.37,
+      "texto": "No sé si viste el mensaje que te mandé ayer, que mañana avisaron que hasta ayer la podríamos vender, pero ahora tenemos el 80%.",
+      "confianza": 0.598
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.36,
+      "fin": 54.4,
+      "duracion": 1.04,
+      "texto": "¿Vos tenías dos líneas?",
+      "confianza": 0.748
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.54,
+      "fin": 55.66,
+      "duracion": 1.12,
+      "texto": "¿Puede ser bajo tu nombre?",
+      "confianza": 0.69
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 57.4,
+      "fin": 58.12,
+      "duracion": 0.72,
+      "texto": "No, una.",
+      "confianza": 0.39
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.14,
+      "fin": 59.23,
+      "duracion": 1.08,
+      "texto": "Una sola línea.",
+      "confianza": 0.926
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.24,
+      "fin": 60.95,
+      "duracion": 1.7,
+      "texto": "Bien.",
+      "confianza": 0.882
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.97,
+      "fin": 67.31,
+      "duracion": 6.35,
+      "texto": "Esta línea es el mismo plan, nada más que en vez de 5835 están 7780.",
+      "confianza": 0.68
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 67.77,
+      "fin": 72.07,
+      "duracion": 4.3,
+      "texto": "se asumió a 2.000 pesos.",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 72.09,
+      "fin": 74.71,
+      "duracion": 2.62,
+      "texto": "Del 85 pasó al 80 por ciento del...",
+      "confianza": 0.575
+    }
+  ]
+}

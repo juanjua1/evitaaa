@@ -1,0 +1,315 @@
+{
+  "archivo": "amza28_1_260219130051616_ACD_92553.wav",
+  "duracion_segundos": 72.5,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 49.33,
+    "Hablante A": 9.47
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.8,
+      "fin": 3.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.0,
+      "fin": 7.5,
+      "texto": "Hola, me comunico con Lucía."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.6,
+      "fin": 7.8,
+      "texto": "¿Quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.8,
+      "fin": 8.8,
+      "texto": "Mi nombre es Gonzalo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 9.3,
+      "fin": 13.7,
+      "texto": "Yo me comunicaba con usted porque me figuraba que usted tenía esta línea en Claro, ¿puede ser?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.1,
+      "fin": 23.3,
+      "texto": "Sí, pero yo soy la dueña del teléfono, pero por ahora no, nada."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.3,
+      "fin": 23.7,
+      "texto": "¿Qué necesitabas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.7,
+      "fin": 30.6,
+      "texto": "Nada, brindarle un descuento del 80%, donde va a pagar menos de 8.000 pesos por lo que es su línea, por 14 gigas."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.2,
+      "fin": 49.6,
+      "texto": "A ver, espera que le voy a dar a mi nieta, ella sabe mucho de su tía, así que bueno."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.6,
+      "fin": 49.7,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 49.7,
+      "fin": 50.1,
+      "texto": "Hola, ¿cómo estás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.1,
+      "fin": 50.4,
+      "texto": "¿Todo bien?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.4,
+      "fin": 51.0,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.0,
+      "fin": 54.3,
+      "texto": "Mirá, le llamaba más que nada porque venía a brindarle una promoción para la línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.3,
+      "fin": 58.0,
+      "texto": "¿Esta línea está a nombre de Lucía Victoria, puede ser?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.0,
+      "fin": 60.6,
+      "texto": "Sí, pero te agradezco."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.7,
+      "fin": 65.0,
+      "texto": "Yo soy la nieta de la señora del teléfono y ella es mi tía."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 66.1,
+      "fin": 69.2,
+      "texto": "Ella se hace cargo del celular de mi abuela como el de esa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 69.2,
+      "fin": 72.5,
+      "texto": "Así que en este momento ella no está como para consultar."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, me comunico con Lucía. ¿Quién habla? Mi nombre es Gonzalo. Yo me comunicaba con usted porque me figuraba que usted tenía esta línea en Claro, ¿puede ser? Sí, pero yo soy la dueña del teléfono, pero por ahora no, nada. ¿Qué necesitabas? Nada, brindarle un descuento del 80%, donde va a pagar menos de 8.000 pesos por lo que es su línea, por 14 gigas. A ver, espera que le voy a dar a mi nieta, ella sabe mucho de su tía, así que bueno. Hola. Hola, ¿cómo estás? ¿Todo bien? Sí. Mirá, le llamaba más que nada porque venía a brindarle una promoción para la línea. ¿Esta línea está a nombre de Lucía Victoria, puede ser? Sí, pero te agradezco. Yo soy la nieta de la señora del teléfono y ella es mi tía. Ella se hace cargo del celular de mi abuela como el de esa. Así que en este momento ella no está como para consultar.",
+  "calidad": {
+    "confianza_promedio": 0.469,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:43:14.962789",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 14 gigas"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de nombres propios, palabras cortadas y errores de transcripción (ej: gigas)."
+    },
+    "fecha_mejora": "2026-02-22T22:43:38.371960",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.82,
+      "fin": 2.96,
+      "duracion": 1.14,
+      "texto": "Hola.",
+      "confianza": 0.472
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.98,
+      "fin": 7.55,
+      "duracion": 4.57,
+      "texto": "Hola, me comunico con Lucía.",
+      "confianza": 0.614
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.57,
+      "fin": 7.83,
+      "duracion": 0.26,
+      "texto": "¿Quién habla?",
+      "confianza": 0.032
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.85,
+      "fin": 8.77,
+      "duracion": 0.92,
+      "texto": "Mi nombre es Gonzalo.",
+      "confianza": 0.366
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.35,
+      "fin": 13.68,
+      "duracion": 4.33,
+      "texto": "Yo me comunicaba con usted porque me figuraba el que tenía usted esta línea en claro, ¿puede ser?",
+      "confianza": 0.793
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.05,
+      "fin": 23.31,
+      "duracion": 2.26,
+      "texto": "Sí, pero yo sería mío el teléfono, pero por ahora no nada.",
+      "confianza": 0.044
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.33,
+      "fin": 23.67,
+      "duracion": 0.34,
+      "texto": "¿Qué necesitabas?",
+      "confianza": 0.012
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 23.69,
+      "fin": 30.56,
+      "duracion": 6.87,
+      "texto": "Nada, brindarle un descuento del 80%, donde va a pagar menos de 8.000 pesos por lo que es su línea, por 14 gigas.",
+      "confianza": 0.772
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.16,
+      "fin": 49.6,
+      "duracion": 17.44,
+      "texto": "A ver, espera que le voy a dar a mi nieta, ella sabe mucho de su tía, así que bueno.",
+      "confianza": 0.407
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.62,
+      "fin": 49.72,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.74,
+      "fin": 50.1,
+      "duracion": 0.36,
+      "texto": "Hola, ¿cómo estás?",
+      "confianza": 0.0
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.12,
+      "fin": 50.4,
+      "duracion": 0.28,
+      "texto": "¿Todo bien?",
+      "confianza": 0.114
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.42,
+      "fin": 51.0,
+      "duracion": 0.58,
+      "texto": "Sí.",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.02,
+      "fin": 54.29,
+      "duracion": 3.26,
+      "texto": "Mirá, le llamaba más que nada porque venía a brindarle una promoción para la línea.",
+      "confianza": 0.731
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.33,
+      "fin": 58.03,
+      "duracion": 3.7,
+      "texto": "Esta línea está en nombre de mensales de Lucía Victoria, ¿puedes ser?",
+      "confianza": 0.693
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.01,
+      "fin": 60.65,
+      "duracion": 1.64,
+      "texto": "Sí, pero te agradezco.",
+      "confianza": 0.511
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 60.67,
+      "fin": 65.02,
+      "duracion": 4.35,
+      "texto": "Yo soy la nieta de la señora de teléfono y ella es mi tía.",
+      "confianza": 0.597
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 66.08,
+      "fin": 69.15,
+      "duracion": 3.07,
+      "texto": "Ella se hace cargo del celular de mi abuela como el de esa.",
+      "confianza": 0.697
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 69.17,
+      "fin": 72.5,
+      "duracion": 3.33,
+      "texto": "Así que en este momento ella no está como para consultar.",
+      "confianza": 0.591
+    }
+  ]
+}

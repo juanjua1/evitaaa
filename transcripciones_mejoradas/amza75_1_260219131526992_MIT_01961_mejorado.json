@@ -1,0 +1,329 @@
+{
+  "archivo": "amza75_1_260219131526992_MIT_01961.wav",
+  "duracion_segundos": 72.33,
+  "num_segmentos": 20,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 60.77
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.0,
+      "fin": 17.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 17.6,
+      "fin": 18.1,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 18.2,
+      "fin": 19.4,
+      "texto": "¿Buenas tardes, Carlos?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 20.8,
+      "fin": 21.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 21.4,
+      "fin": 22.4,
+      "texto": "¿Cómo estás, Carlos?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 22.7,
+      "fin": 25.7,
+      "texto": "Bueno, nosotros hoy hemos estado hablando hace un momento por WhatsApp."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 26.3,
+      "fin": 28.1,
+      "texto": "Me enviaron."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.1,
+      "fin": 33.7,
+      "texto": "Entonces, el DNI que me envió me aparece al nombre de Mariano Einsteinberg."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.7,
+      "fin": 34.2,
+      "texto": "¿Puede ser?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 35.5,
+      "fin": 38.7,
+      "texto": "Eh, mi cuñado."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.8,
+      "fin": 39.3,
+      "texto": "Ah, ok, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 39.3,
+      "fin": 43.7,
+      "texto": "¿A nombre de él está esta línea?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.7,
+      "fin": 43.8,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 43.8,
+      "fin": 46.0,
+      "texto": "Ah, ok, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 46.0,
+      "fin": 49.5,
+      "texto": "Bueno, no sé si querés que repasemos los planes que habíamos visto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 49.6,
+      "fin": 55.7,
+      "texto": "Tenés el de 8 gigas, el de 4 gigas, 2 con 10 gigas más de regalo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 55.7,
+      "fin": 59.7,
+      "texto": "Pero vos no eres un cliente, no sos de Claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.7,
+      "fin": 63.6,
+      "texto": "Nosotros llamamos del área de beneficiarios de Movistar."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 63.6,
+      "fin": 64.6,
+      "texto": "De Movistar, por eso."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 65.2,
+      "fin": 72.3,
+      "texto": "no no no no no no no no no no"
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, ¿qué tal? ¿Buenas tardes, Carlos? Sí. ¿Cómo estás, Carlos? Bueno, nosotros hoy hemos estado hablando hace un momento por WhatsApp. Me enviaron. Entonces, el DNI que me envió me aparece al nombre de Mariano Einsteinberg. ¿Puede ser? Eh, mi cuñado. Ah, ok, perfecto. ¿A nombre de él está esta línea? Sí. Ah, ok, perfecto. Bueno, no sé si querés que repasemos los planes que habíamos visto. Tenés el de 8 gigas, el de 4 gigas, 2 con 10 gigas más de regalo. Pero vos no eres un cliente, no sos de Claro. Nosotros llamamos del área de beneficiarios de Movistar. De Movistar, por eso. no no no no no no no no no no",
+  "calidad": {
+    "confianza_promedio": 0.5,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T17:01:26.542179",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "PENDIENTE",
+      "productos_mencionados": [
+        "plan 8 gigas",
+        "plan 4 gigas",
+        "plan 10 gigas (regalo)"
+      ],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: 'gigas'), nombres propios, y palabras cortadas. Identificación de roles y clasificación de la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:25:34.509478",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.98,
+      "fin": 17.6,
+      "duracion": 10.62,
+      "texto": "Hola.",
+      "confianza": 0.482
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.62,
+      "fin": 18.14,
+      "duracion": 0.52,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.196
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.18,
+      "fin": 19.42,
+      "duracion": 1.24,
+      "texto": "¿Buenas tardes, Carlos?",
+      "confianza": 0.52
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.78,
+      "fin": 21.4,
+      "duracion": 0.62,
+      "texto": "Sí.",
+      "confianza": 0.546
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.42,
+      "fin": 22.43,
+      "duracion": 1.0,
+      "texto": "¿Cómo estás, Carlos?",
+      "confianza": 0.485
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.69,
+      "fin": 25.69,
+      "duracion": 3.0,
+      "texto": "Bueno, nosotros hoy hemos estado hablando hace un momento por WhatsApp.",
+      "confianza": 0.513
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 26.33,
+      "fin": 28.07,
+      "duracion": 1.74,
+      "texto": "Me vieron enviado.",
+      "confianza": 0.593
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.09,
+      "fin": 33.66,
+      "duracion": 5.57,
+      "texto": "Entonces, el DNI que me envió me aparece al nombre de Mariano Einsteinberg.",
+      "confianza": 0.699
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 33.68,
+      "fin": 34.22,
+      "duracion": 0.54,
+      "texto": "¿Puede ser?",
+      "confianza": 0.496
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 35.55,
+      "fin": 38.74,
+      "duracion": 3.18,
+      "texto": "Eh, mi cuñado.",
+      "confianza": 0.261
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.76,
+      "fin": 39.26,
+      "duracion": 0.5,
+      "texto": "Ah, ok, perfecto.",
+      "confianza": 0.489
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.28,
+      "fin": 43.72,
+      "duracion": 4.45,
+      "texto": "¿A nombre de él está esta línea?",
+      "confianza": 0.764
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.74,
+      "fin": 43.8,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.01
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.82,
+      "fin": 45.98,
+      "duracion": 2.16,
+      "texto": "Ah, ok, perfecto.",
+      "confianza": 0.341
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 46.0,
+      "fin": 49.53,
+      "duracion": 3.52,
+      "texto": "Bueno, no sé si querés que repasemos los planes que habíamos visto.",
+      "confianza": 0.585
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 49.61,
+      "fin": 55.67,
+      "duracion": 6.07,
+      "texto": "Tenés el de 8 gigas, el de 4 gigas, 2 con 10 gigas más de regalo.",
+      "confianza": 0.656
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 55.7,
+      "fin": 59.7,
+      "duracion": 4.0,
+      "texto": "Pero vos no eres un colsento, no sos de claro.",
+      "confianza": 0.604
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 59.72,
+      "fin": 63.6,
+      "duracion": 3.88,
+      "texto": "Nosotros llamamos del área de beneficiaria de Movistar.",
+      "confianza": 0.494
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 63.62,
+      "fin": 64.56,
+      "duracion": 0.94,
+      "texto": "De Movistar, por eso.",
+      "confianza": 0.538
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 65.17,
+      "fin": 72.33,
+      "duracion": 7.16,
+      "texto": "no no no no no no no no no no",
+      "confianza": 0.734
+    }
+  ]
+}

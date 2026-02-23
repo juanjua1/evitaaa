@@ -1,0 +1,54 @@
+{
+  "archivo": "amza41_1_260218113442161_ACD_78023.wav",
+  "duracion_segundos": 56.26,
+  "num_segmentos": 3,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 7.58,
+    "Hablante B": 4.67
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 4.91,
+      "duracion": 4.88,
+      "texto": "Después de tono, deja tu mensaje.",
+      "confianza": 0.652
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.53,
+      "fin": 11.21,
+      "duracion": 4.67,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.813
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 53.56,
+      "fin": 56.26,
+      "duracion": 2.7,
+      "texto": "Gracias por ver el video",
+      "confianza": 0.123
+    }
+  ],
+  "transcripcion_completa": "Después de tono, deja tu mensaje. Para finalizar, corta o marca la tecla numeral para más opciones. Gracias por ver el video",
+  "calidad": {
+    "confianza_promedio": 0.529,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 4.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:47:42.668037",
+    "version": "5.0_ecapa"
+  }
+}

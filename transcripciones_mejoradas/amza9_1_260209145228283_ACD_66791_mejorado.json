@@ -1,0 +1,365 @@
+{
+  "archivo": "amza9_1_260209145228283_ACD_66791.wav",
+  "duracion_segundos": 63.38,
+  "num_segmentos": 24,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 31.59,
+    "Hablante A": 25.01
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.6,
+      "fin": 3.3,
+      "texto": "Hola. ¿Qué tal? ¿Buenas tardes?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 5.8,
+      "texto": "¿Habla con Daniel?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 5.8,
+      "fin": 9.0,
+      "texto": "Daniel, no. Daniel, no, no, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.0,
+      "fin": 10.5,
+      "texto": "O sea, no tiene ese número."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.5,
+      "fin": 13.4,
+      "texto": "Ya no sé quién es Daniel."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.4,
+      "fin": 18.7,
+      "texto": "Ah, yo que estaba contactándole al Aeropuerto Clientes Movistar a que tenemos un descuento, pero a la línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 18.7,
+      "fin": 19.4,
+      "texto": "No sé."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 19.5,
+      "fin": 21.7,
+      "texto": "No, no, no es Daniel."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.7,
+      "fin": 23.0,
+      "texto": "No es el número de Daniel."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 23.0,
+      "fin": 28.3,
+      "texto": "Bien, ¿pero usted es titular de esta línea, señor?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.3,
+      "fin": 29.4,
+      "texto": "Sí, pero no soy Daniel."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.8,
+      "fin": 30.3,
+      "texto": "Claro, bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 30.6,
+      "fin": 34.2,
+      "texto": "Yo justamente me quería contactar con el titular porque teníamos un descuento para las líneas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.3,
+      "fin": 37.9,
+      "texto": "Sí, pero no estamos interesados."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.4,
+      "fin": 40.7,
+      "texto": "Tenemos claro."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.7,
+      "fin": 43.4,
+      "texto": "Claro, sé que tienen claro algún motivo, ¿por qué no están interesados?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 43.4,
+      "fin": 45.2,
+      "texto": "¿Han podido al menos escuchar las promociones?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 45.2,
+      "fin": 51.9,
+      "texto": "Es que nos vamos, en un mes, ya nos vamos de Argentina."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.5,
+      "fin": 56.7,
+      "texto": "Por eso tenemos un prepago, así."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.7,
+      "fin": 58.0,
+      "texto": "No nos interesa, en realidad."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.0,
+      "fin": 63.4,
+      "texto": "Pero gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola. ¿Qué tal? ¿Buenas tardes? ¿Habla con Daniel? Daniel, no. Daniel, no, no, no. O sea, no tiene ese número. Ya no sé quién es Daniel. Ah, yo que estaba contactándole al Aeropuerto Clientes Movistar a que tenemos un descuento, pero a la línea. No sé. No, no, no es Daniel. No es el número de Daniel. Bien, ¿pero usted es titular de esta línea, señor? Sí, pero no soy Daniel. Claro, bien. Yo justamente me quería contactar con el titular porque teníamos un descuento para las líneas. Sí, pero no estamos interesados. Tenemos claro. Claro, sé que tienen claro algún motivo, ¿por qué no están interesados? ¿Han podido al menos escuchar las promociones? Es que nos vamos, en un mes, ya nos vamos de Argentina. Por eso tenemos un prepago, así. No nos interesa, en realidad. Pero gracias.",
+  "calidad": {
+    "confianza_promedio": 0.526,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T13:05:04.241697",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:51:45.484638",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.58,
+      "fin": 1.78,
+      "duracion": 0.2,
+      "texto": "Hola.",
+      "confianza": 0.343
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.8,
+      "fin": 2.92,
+      "duracion": 1.12,
+      "texto": "¿Qué tal?",
+      "confianza": 0.115
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 2.94,
+      "fin": 3.27,
+      "duracion": 0.32,
+      "texto": "¿Buenas tardes?",
+      "confianza": 0.242
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.29,
+      "fin": 5.81,
+      "duracion": 2.52,
+      "texto": "¿Hablas con Daniel?",
+      "confianza": 0.215
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 5.83,
+      "fin": 6.73,
+      "duracion": 0.9,
+      "texto": "Daniel, no.",
+      "confianza": 0.387
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.75,
+      "fin": 9.01,
+      "duracion": 2.26,
+      "texto": "Daniel, no, no, no.",
+      "confianza": 0.205
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 9.03,
+      "fin": 10.48,
+      "duracion": 1.44,
+      "texto": "O sea, no tiene ese número.",
+      "confianza": 0.612
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.5,
+      "fin": 13.38,
+      "duracion": 2.88,
+      "texto": "Ya no sé quién es Daniel.",
+      "confianza": 0.72
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.4,
+      "fin": 18.69,
+      "duracion": 5.29,
+      "texto": "Ah, yo que estaba contactándole al Aerocopero Clientes Movistar a que tenemos un descuento, pero a la línea.",
+      "confianza": 0.55
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 18.71,
+      "fin": 19.45,
+      "duracion": 0.74,
+      "texto": "No sé.",
+      "confianza": 0.58
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.47,
+      "fin": 21.67,
+      "duracion": 2.2,
+      "texto": "No, no, no es Daniel.",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.69,
+      "fin": 22.97,
+      "duracion": 1.28,
+      "texto": "No es el número de Daniel.",
+      "confianza": 0.872
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.99,
+      "fin": 28.32,
+      "duracion": 5.33,
+      "texto": "Bien, ¿pero usted es titular de esta línea, señor?",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.34,
+      "fin": 29.36,
+      "duracion": 1.02,
+      "texto": "Sí, pero no soy Daniel.",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.83,
+      "fin": 30.33,
+      "duracion": 0.5,
+      "texto": "Claro, bien.",
+      "confianza": 0.462
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.63,
+      "fin": 34.22,
+      "duracion": 3.59,
+      "texto": "Yo justamente me quería contactar con el titular porque teníamos un descuento para las líneas.",
+      "confianza": 0.778
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.32,
+      "fin": 37.94,
+      "duracion": 1.62,
+      "texto": "Sí, pero no estamos interesados.",
+      "confianza": 0.602
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 38.42,
+      "fin": 40.67,
+      "duracion": 2.24,
+      "texto": "Tenemos claro.",
+      "confianza": 0.758
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 40.69,
+      "fin": 43.39,
+      "duracion": 2.7,
+      "texto": "Claro, sé que tienen claro algún motivo, ¿por qué no están interesados?",
+      "confianza": 0.598
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.41,
+      "fin": 45.21,
+      "duracion": 1.8,
+      "texto": "¿Han podido al menos escuchar las promociones?",
+      "confianza": 0.45
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.23,
+      "fin": 51.92,
+      "duracion": 6.69,
+      "texto": "Es que nos vamos, en un mes, ya nos vamos de Argentina.",
+      "confianza": 0.709
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.46,
+      "fin": 56.67,
+      "duracion": 4.21,
+      "texto": "Por eso tenemos un prepago, así.",
+      "confianza": 0.768
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.69,
+      "fin": 58.05,
+      "duracion": 1.36,
+      "texto": "No nos interesa, en realidad.",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.99,
+      "fin": 63.38,
+      "duracion": 4.39,
+      "texto": "Pero gracias.",
+      "confianza": 0.516
+    }
+  ]
+}

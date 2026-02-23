@@ -1,0 +1,211 @@
+{
+  "archivo": "amza39_1_260219104117273_MIT_01994.wav",
+  "duracion_segundos": 75.58,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 27.92,
+    "Hablante A": 30.58
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 13.6,
+      "fin": 22.6,
+      "texto": "Hola, buenos días."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 22.6,
+      "fin": 27.8,
+      "texto": "¿Me comunico con Evelyn?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 27.8,
+      "fin": 28.6,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.6,
+      "fin": 34.5,
+      "texto": "¿Me escucha?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.7,
+      "fin": 41.7,
+      "texto": "Hola, buen día."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 44.1,
+      "fin": 75.6,
+      "texto": "¿Has hablado con alguien? No sé."
+    }
+  ],
+  "transcripcion_completa": "Hola, buenos días. ¿Me comunico con Evelyn? Hola, buen día. ¿Me escucha? Hola, buen día. ¿Has hablado con alguien? No sé.",
+  "calidad": {
+    "confianza_promedio": 0.345,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T15:50:07.422583",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron repeticiones y se identificaron los roles. Se eliminaron las repeticiones del agente."
+    },
+    "fecha_mejora": "2026-02-22T23:02:20.302969",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 13.62,
+      "fin": 22.59,
+      "duracion": 8.97,
+      "texto": "Hola, buenos días.",
+      "confianza": 0.485
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 22.61,
+      "fin": 27.8,
+      "duracion": 5.19,
+      "texto": "¿Me comunico con Evelyn?",
+      "confianza": 0.427
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 27.82,
+      "fin": 28.56,
+      "duracion": 0.74,
+      "texto": "Hola, buen día.",
+      "confianza": 0.476
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.58,
+      "fin": 34.55,
+      "duracion": 5.97,
+      "texto": "¿Me escucha?",
+      "confianza": 0.476
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.66,
+      "fin": 41.72,
+      "duracion": 7.05,
+      "texto": "Hola, buen día.",
+      "confianza": 0.651
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 44.11,
+      "fin": 62.93,
+      "duracion": 18.82,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.309
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.95,
+      "fin": 64.05,
+      "duracion": 1.1,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.237
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.07,
+      "fin": 65.59,
+      "duracion": 1.52,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.341
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 65.61,
+      "fin": 67.13,
+      "duracion": 1.52,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.375
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 67.15,
+      "fin": 68.15,
+      "duracion": 1.0,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.186
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.17,
+      "fin": 69.21,
+      "duracion": 1.04,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.371
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 69.23,
+      "fin": 70.13,
+      "duracion": 0.9,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.16
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 70.15,
+      "fin": 71.74,
+      "duracion": 1.58,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.271
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 71.76,
+      "fin": 72.62,
+      "duracion": 0.86,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.255
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 72.64,
+      "fin": 73.14,
+      "duracion": 0.5,
+      "texto": "¿Has hablado con alguien?",
+      "confianza": 0.071
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 73.84,
+      "fin": 75.58,
+      "duracion": 1.74,
+      "texto": "No sé.",
+      "confianza": 0.425
+    }
+  ]
+}

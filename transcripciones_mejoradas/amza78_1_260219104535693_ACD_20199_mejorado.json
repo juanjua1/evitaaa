@@ -1,0 +1,313 @@
+{
+  "archivo": "amza78_1_260219104535693_ACD_20199.wav",
+  "duracion_segundos": 64.63,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 17.04,
+    "Hablante B": 29.69
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.4,
+      "fin": 2.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.0,
+      "fin": 3.1,
+      "texto": "Hola, hablo con Norma."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.1,
+      "fin": 4.7,
+      "texto": "¿Tiene alguna línea a su nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 7.9,
+      "fin": 8.9,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.0,
+      "fin": 10.2,
+      "texto": "¿Cómo estás?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.3,
+      "fin": 10.5,
+      "texto": "¿Qué pasó?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.5,
+      "fin": 14.9,
+      "texto": "Soy Tamara, asesora de Movistar, para brindarte un descuento para tu línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.5,
+      "fin": 17.9,
+      "texto": "No, te agradezco."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.9,
+      "fin": 21.1,
+      "texto": "Yo ahora estoy de viaje, estoy en Córdoba."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.1,
+      "fin": 24.5,
+      "texto": "Bueno, no hay problema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.6,
+      "fin": 24.9,
+      "texto": "Estoy en el auto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 24.9,
+      "fin": 25.0,
+      "texto": "Chao."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.0,
+      "fin": 25.8,
+      "texto": "Chao, hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.1,
+      "fin": 34.1,
+      "texto": "¿Cómo se llama?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.4,
+      "fin": 36.1,
+      "texto": "¿Nombre?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.2,
+      "fin": 36.8,
+      "texto": "¿Nombre?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.8,
+      "fin": 54.7,
+      "texto": "¿Nombre?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 54.7,
+      "fin": 55.3,
+      "texto": "¿Nombre?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.0,
+      "fin": 64.6,
+      "texto": "Miren ahí la foto."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, hablo con Norma. ¿Tiene alguna línea a su nombre? Sí. ¿Cómo estás? ¿Qué pasó? Soy Tamara, asesora de Movistar, para brindarte un descuento para tu línea. No, te agradezco. Yo ahora estoy de viaje, estoy en Córdoba. Bueno, no hay problema. Estoy en el auto. Chao. Chao, hasta luego. ¿Cómo se llama? ¿Nombre? ¿Nombre? ¿Nombre? ¿Nombre? Miren ahí la foto.",
+  "calidad": {
+    "confianza_promedio": 0.384,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T17:21:55.991691",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:30:09.512109",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.45,
+      "fin": 2.03,
+      "duracion": 0.58,
+      "texto": "Hola.",
+      "confianza": 0.295
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.05,
+      "fin": 3.11,
+      "duracion": 1.06,
+      "texto": "Hola, hablo con Norma.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.13,
+      "fin": 4.71,
+      "duracion": 1.58,
+      "texto": "¿Alguna línea a su nombre?",
+      "confianza": 0.803
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.9,
+      "fin": 8.94,
+      "duracion": 1.04,
+      "texto": "Sí.",
+      "confianza": 0.483
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.98,
+      "fin": 10.24,
+      "duracion": 1.26,
+      "texto": "¿Cómo estás?",
+      "confianza": 0.601
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.26,
+      "fin": 10.46,
+      "duracion": 0.2,
+      "texto": "¿Qué pasó?",
+      "confianza": 0.067
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.48,
+      "fin": 14.93,
+      "duracion": 4.45,
+      "texto": "Soy Tamara, soy asesora del Movistar, para brindarte un descuento para tu línea.",
+      "confianza": 0.706
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.46,
+      "fin": 17.9,
+      "duracion": 0.44,
+      "texto": "No, te agradezco.",
+      "confianza": 0.081
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 17.92,
+      "fin": 21.08,
+      "duracion": 3.17,
+      "texto": "Yo ahora estoy de viaje, estoy en Córdoba.",
+      "confianza": 0.51
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.1,
+      "fin": 24.53,
+      "duracion": 3.43,
+      "texto": "Bueno, no hay problema.",
+      "confianza": 0.342
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.55,
+      "fin": 24.89,
+      "duracion": 0.34,
+      "texto": "Estoy en el auto.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 24.91,
+      "fin": 25.01,
+      "duracion": 0.1,
+      "texto": "Chao.",
+      "confianza": 0.102
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 25.03,
+      "fin": 25.75,
+      "duracion": 0.72,
+      "texto": "Chao, hasta luego.",
+      "confianza": 0.212
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.09,
+      "fin": 34.08,
+      "duracion": 1.98,
+      "texto": "¿Qué se llama?",
+      "confianza": 0.382
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.44,
+      "fin": 36.12,
+      "duracion": 1.68,
+      "texto": "¿Nombre?",
+      "confianza": 0.371
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.18,
+      "fin": 36.78,
+      "duracion": 0.6,
+      "texto": "¿Nombre?",
+      "confianza": 0.467
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 36.8,
+      "fin": 54.66,
+      "duracion": 17.86,
+      "texto": "¿Nombre?",
+      "confianza": 0.349
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.68,
+      "fin": 55.3,
+      "duracion": 0.62,
+      "texto": "¿Nombre?",
+      "confianza": 0.427
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.01,
+      "fin": 64.63,
+      "duracion": 5.62,
+      "texto": "Miren ahí la foto.",
+      "confianza": 0.423
+    }
+  ]
+}

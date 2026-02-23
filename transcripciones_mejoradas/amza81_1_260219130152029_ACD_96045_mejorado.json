@@ -1,0 +1,327 @@
+{
+  "archivo": "amza81_1_260219130152029_ACD_96045.wav",
+  "duracion_segundos": 69.98,
+  "num_segmentos": 20,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 29.82,
+    "Hablante A": 6.5
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.1,
+      "fin": 4.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 4.9,
+      "fin": 6.0,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.1,
+      "fin": 7.0,
+      "texto": "Hola, ¿cómo te va, Cristian?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.0,
+      "fin": 7.7,
+      "texto": "¿Maximiliano?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 9.7,
+      "fin": 9.9,
+      "texto": "Sí, hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 32.7,
+      "fin": 37.5,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.5,
+      "fin": 37.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.7,
+      "fin": 38.6,
+      "texto": "Sí, te escucho."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.6,
+      "fin": 38.9,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 38.9,
+      "fin": 39.8,
+      "texto": "¿Cómo te va?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 39.8,
+      "fin": 40.8,
+      "texto": "Mi nombre es Maxi."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 40.8,
+      "fin": 42.5,
+      "texto": "Quería hablar con Cristian Maximiliano."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 42.5,
+      "fin": 51.3,
+      "texto": "¿Quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 51.3,
+      "fin": 53.6,
+      "texto": "Maxi, mucho gusto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.6,
+      "fin": 53.9,
+      "texto": "Sí, te escucho."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 53.9,
+      "fin": 58.1,
+      "texto": "Cristian, quería hablar con vos ya que te quería brindar lo que es un descuentito en tu línea."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.5,
+      "fin": 61.0,
+      "texto": "¿De qué?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.0,
+      "fin": 63.4,
+      "texto": "El de muy tarde, estoy hablando solo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 64.7,
+      "fin": 68.3,
+      "texto": "No, yo me llamaron como 50 veces, yo le dije como un montón de veces que no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 69.2,
+      "fin": 70.0,
+      "texto": "Dale, dale."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. Hola, ¿cómo te va, Cristian? ¿Maximiliano? Sí, hola. Hola. Hola. Sí, te escucho. ¿Qué tal? ¿Cómo te va? Mi nombre es Maxi. Quería hablar con Cristian Maximiliano. ¿Quién habla? Maxi, mucho gusto. Sí, te escucho. Cristian, quería hablar con vos ya que te quería brindar lo que es un descuentito en tu línea. ¿De qué? El de muy tarde, estoy hablando solo. No, yo me llamaron como 50 veces, yo le dije como un montón de veces que no. Dale, dale.",
+  "calidad": {
+    "confianza_promedio": 0.399,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.1
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T18:02:58.481803",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de nombres propios, se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-22T23:42:30.607755",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 3.08,
+      "fin": 4.89,
+      "duracion": 1.81,
+      "texto": "Hola.",
+      "confianza": 0.621
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 4.91,
+      "fin": 6.04,
+      "duracion": 1.12,
+      "texto": "Hola.",
+      "confianza": 0.563
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.06,
+      "fin": 7.02,
+      "duracion": 0.96,
+      "texto": "Hola, ¿cómo te va, Cristian?",
+      "confianza": 0.538
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 7.04,
+      "fin": 7.74,
+      "duracion": 0.7,
+      "texto": "¿Maximiliano?",
+      "confianza": 0.733
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 9.69,
+      "fin": 9.87,
+      "duracion": 0.18,
+      "texto": "Sí, hola.",
+      "confianza": 0.102
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.7,
+      "fin": 37.53,
+      "duracion": 4.83,
+      "texto": "Hola.",
+      "confianza": 0.489
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.55,
+      "fin": 37.65,
+      "duracion": 0.1,
+      "texto": "Hola.",
+      "confianza": 0.054
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 37.67,
+      "fin": 38.61,
+      "duracion": 0.94,
+      "texto": "Sí, te escucho.",
+      "confianza": 0.104
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.63,
+      "fin": 38.91,
+      "duracion": 0.28,
+      "texto": "¿Qué tal?",
+      "confianza": 0.314
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 38.93,
+      "fin": 39.81,
+      "duracion": 0.88,
+      "texto": "¿Cómo te va?",
+      "confianza": 0.489
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.83,
+      "fin": 40.77,
+      "duracion": 0.94,
+      "texto": "Mi nombre es Maxi.",
+      "confianza": 0.352
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.79,
+      "fin": 42.51,
+      "duracion": 1.72,
+      "texto": "Quería hablar con Cristian Maximiliano.",
+      "confianza": 0.607
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 42.53,
+      "fin": 51.33,
+      "duracion": 8.79,
+      "texto": "¿Quién habla?",
+      "confianza": 0.474
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 51.34,
+      "fin": 53.57,
+      "duracion": 2.22,
+      "texto": "Maxi, mucho gusto.",
+      "confianza": 0.1
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.59,
+      "fin": 53.89,
+      "duracion": 0.3,
+      "texto": "Sí, te escucho.",
+      "confianza": 0.014
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 53.91,
+      "fin": 58.13,
+      "duracion": 4.23,
+      "texto": "Cristian, quería hablar con vos ya que te quería brindar lo que es un descuentito en tu línea.",
+      "confianza": 0.606
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.46,
+      "fin": 61.04,
+      "duracion": 0.58,
+      "texto": "¿De qué?",
+      "confianza": 0.316
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.01,
+      "fin": 63.38,
+      "duracion": 1.37,
+      "texto": "El de muy tarde, estoy hablando solo.",
+      "confianza": 0.446
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 64.68,
+      "fin": 68.31,
+      "duracion": 3.63,
+      "texto": "No, yo me llamaron como 50 veces, yo le dije como un montón de veces que no.",
+      "confianza": 0.446
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 69.24,
+      "fin": 69.98,
+      "duracion": 0.74,
+      "texto": "Dale, dale.",
+      "confianza": 0.616
+    }
+  ]
+}

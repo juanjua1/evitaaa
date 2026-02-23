@@ -1,0 +1,299 @@
+{
+  "archivo": "amza81_1_260212174924724_ACD_63511.wav",
+  "duracion_segundos": 63.3,
+  "num_segmentos": 18,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante B": 0.46,
+    "Hablante A": 47.39
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 1.8,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 1.9,
+      "fin": 2.1,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 10.0,
+      "fin": 11.1,
+      "texto": "Me estoy contactando con el eminente de Vecónica Muñoz."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 11.1,
+      "fin": 12.1,
+      "texto": "¿Te puedo pedir un favor?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.8,
+      "fin": 13.2,
+      "texto": "Sí, decime."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.1,
+      "fin": 21.9,
+      "texto": "¿Será que puede actualizar las bases de datos y sacar el número del registro de este?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.9,
+      "fin": 31.5,
+      "texto": "Porque me llaman todos los días y, qué sé yo, estoy haciendo algo importante, tengo que dejar lo que estoy haciendo para ir a ver quién está llamando y son ustedes."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 31.8,
+      "fin": 37.0,
+      "texto": "Claro, claro, no es algo que esté en mi poder, eso de poder hacerlo sí lo haría, pero no es algo que esté en mi poder."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 37.0,
+      "fin": 38.5,
+      "texto": "Ah, bien."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 38.5,
+      "fin": 41.1,
+      "texto": "¿Me puede decir el nombre de la sucursal?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 41.2,
+      "fin": 42.6,
+      "texto": "¿Así yo mando una carta de documento?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.4,
+      "fin": 45.7,
+      "texto": "O alguna información, no sé."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 45.8,
+      "fin": 46.2,
+      "texto": "La verdad."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 47.0,
+      "fin": 55.3,
+      "texto": "O mandar un correo para que me dejen de llamar, boludo, porque te juro estoy haciendo algo importante y me llaman, tengo que dejar de hacer lo que estoy haciendo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 56.2,
+      "fin": 58.0,
+      "texto": "Y no, por este tema."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 58.6,
+      "fin": 59.4,
+      "texto": "Claro, entendible."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 59.6,
+      "fin": 62.0,
+      "texto": "A ver, dame un sondeo que lo consulta, que me puedan decir."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 62.7,
+      "fin": 63.3,
+      "texto": "Dale, por favor."
+    }
+  ],
+  "transcripcion_completa": "Hola. Sí. Me estoy contactando con el eminente de Vecónica Muñoz. ¿Te puedo pedir un favor? Sí, decime. ¿Será que puede actualizar las bases de datos y sacar el número del registro de este? Porque me llaman todos los días y, qué sé yo, estoy haciendo algo importante, tengo que dejar lo que estoy haciendo para ir a ver quién está llamando y son ustedes. Claro, claro, no es algo que esté en mi poder, eso de poder hacerlo sí lo haría, pero no es algo que esté en mi poder. Ah, bien. ¿Me puede decir el nombre de la sucursal? ¿Así yo mando una carta de documento? O alguna información, no sé. La verdad. O mandar un correo para que me dejen de llamar, boludo, porque te juro estoy haciendo algo importante y me llaman, tengo que dejar de hacer lo que estoy haciendo. Y no, por este tema. Claro, entendible. A ver, dame un sondeo que lo consulta, que me puedan decir. Dale, por favor.",
+  "calidad": {
+    "confianza_promedio": 0.546,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 7.3
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T12:15:51.231167",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante B",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "RECLAMO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles de hablantes y se clasificó la llamada como reclamo."
+    },
+    "fecha_mejora": "2026-02-20T11:28:28.582943",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.52,
+      "fin": 1.76,
+      "duracion": 0.24,
+      "texto": "Hola.",
+      "confianza": 0.55
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 1.86,
+      "fin": 2.08,
+      "duracion": 0.22,
+      "texto": "Sí.",
+      "confianza": 0.49
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 10.02,
+      "fin": 11.12,
+      "duracion": 1.1,
+      "texto": "Me estoy contactando con el eminente de Vecónica Muñoz.",
+      "confianza": 0.01
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 11.14,
+      "fin": 12.11,
+      "duracion": 0.96,
+      "texto": "¿Te puedo pedir un favor?",
+      "confianza": 0.497
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.83,
+      "fin": 13.21,
+      "duracion": 0.38,
+      "texto": "Sí, decime.",
+      "confianza": 0.305
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.05,
+      "fin": 21.91,
+      "duracion": 7.87,
+      "texto": "¿Será que puede actualizar los base de datos y sacar el número del registro de este?",
+      "confianza": 0.694
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 21.93,
+      "fin": 31.52,
+      "duracion": 9.59,
+      "texto": "Porque me llaman todos los días y, qué sé yo, estoy haciendo algo importante, tengo que dejar lo que estoy haciendo para ir a ver quién está llamando y son ustedes.",
+      "confianza": 0.649
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 31.84,
+      "fin": 36.97,
+      "duracion": 5.13,
+      "texto": "Claro, claro, no es algo que esté en mi poder, eso de poder hacerlo sí lo haría, pero no es algo que esté en mi poder.",
+      "confianza": 0.035
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.98,
+      "fin": 38.45,
+      "duracion": 1.46,
+      "texto": "Ah, bien.",
+      "confianza": 0.588
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 38.47,
+      "fin": 41.15,
+      "duracion": 2.68,
+      "texto": "¿Me puede decir el nombre de la sucursal?",
+      "confianza": 0.717
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.17,
+      "fin": 42.61,
+      "duracion": 1.44,
+      "texto": "¿Así yo mando una carta de documento?",
+      "confianza": 0.773
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 43.35,
+      "fin": 45.73,
+      "duracion": 2.38,
+      "texto": "O alguna información, no sé.",
+      "confianza": 0.482
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 45.75,
+      "fin": 46.23,
+      "duracion": 0.48,
+      "texto": "La verdad.",
+      "confianza": 0.562
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.03,
+      "fin": 55.32,
+      "duracion": 8.29,
+      "texto": "O mandar un correo para que me dejen de llamar, boludo, porque te juro estoy haciendo algo importante y me llaman, tengo que dejar de hacer lo que estoy haciendo.",
+      "confianza": 0.718
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.2,
+      "fin": 58.03,
+      "duracion": 1.82,
+      "texto": "Y no, por este tema.",
+      "confianza": 0.882
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 58.61,
+      "fin": 59.37,
+      "duracion": 0.76,
+      "texto": "Claro, entendible.",
+      "confianza": 0.636
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.58,
+      "fin": 62.01,
+      "duracion": 2.42,
+      "texto": "A ver, dame un sondito que lo consulta, que me puedan decir.",
+      "confianza": 0.668
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 62.67,
+      "fin": 63.3,
+      "duracion": 0.63,
+      "texto": "Dale, por favor.",
+      "confianza": 0.57
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "archivo": "amza2_1_260219135420833_ACD_80513.wav",
+  "duracion_segundos": 55.3,
+  "num_segmentos": 19,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 10.08,
+    "Hablante B": 41.37
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 3.4,
+      "texto": "Hola, ¿qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.4,
+      "fin": 7.9,
+      "texto": "Hablo con Jamila."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.9,
+      "fin": 8.8,
+      "texto": "Bien, mil disculpas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.8,
+      "fin": 10.2,
+      "texto": "¿Usted es el titular de esta línea?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 11.8,
+      "fin": 16.2,
+      "texto": "¿Está asociado el número de ella con su número?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 16.2,
+      "fin": 17.3,
+      "texto": "Sí, exactamente."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 17.3,
+      "fin": 21.2,
+      "texto": "¿Usted también tiene un abono mensual?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 21.2,
+      "fin": 23.0,
+      "texto": "Eso no te puedo decir."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.1,
+      "fin": 25.8,
+      "texto": "Ah, bueno, pero si ustedes pueden, que te dan una pregunta."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.8,
+      "fin": 29.4,
+      "texto": "¿Voy a estar asociado a ese número?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.8,
+      "fin": 32.8,
+      "texto": "¿Cómo, perdón?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 32.8,
+      "fin": 34.6,
+      "texto": "¿Qué me dices?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 34.6,
+      "fin": 39.3,
+      "texto": "Que va a estar asociado, que ese número no pasa a esa."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 39.3,
+      "fin": 40.2,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 40.3,
+      "fin": 41.9,
+      "texto": "Sí, ahora lo vamos a dejar asociado."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 43.3,
+      "fin": 50.9,
+      "texto": "De todas maneras, me comentó que el motivo de mi llamada es para poder ofrecer algún descuento a la línea, ¿sí?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 50.9,
+      "fin": 52.8,
+      "texto": "Lo abusa un montón."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 52.8,
+      "fin": 54.1,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 54.1,
+      "fin": 55.3,
+      "texto": "Bueno, hasta luego."
+    }
+  ],
+  "transcripcion_completa": "Hola, ¿qué tal? Hablo con Jamila. Bien, mil disculpas. ¿Usted es el titular de esta línea? ¿Está asociado el número de ella con su número? Sí, exactamente. ¿Usted también tiene un abono mensual? Eso no te puedo decir. Ah, bueno, pero si ustedes pueden, que te dan una pregunta. ¿Voy a estar asociado a ese número? ¿Cómo, perdón? ¿Qué me dices? Que va a estar asociado, que ese número no pasa a esa. Bien, perfecto. Sí, ahora lo vamos a dejar asociado. De todas maneras, me comentó que el motivo de mi llamada es para poder ofrecer algún descuento a la línea, ¿sí? Lo abusa un montón. Hasta luego. Bueno, hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.499,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.4
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-21T14:57:21.275789",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "SEGUIMIENTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción, se identificaron los roles y se mejoró la fluidez de la conversación."
+    },
+    "fecha_mejora": "2026-02-22T22:49:08.181121",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 3.42,
+      "duracion": 3.38,
+      "texto": "Hola, ¿qué tal?",
+      "confianza": 0.509
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.44,
+      "fin": 7.92,
+      "duracion": 4.48,
+      "texto": "Hablo con Jamila.",
+      "confianza": 0.665
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.94,
+      "fin": 8.8,
+      "duracion": 0.86,
+      "texto": "Bien, mil disculpas.",
+      "confianza": 0.842
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.82,
+      "fin": 10.18,
+      "duracion": 1.36,
+      "texto": "¿Usted es el ilustrador de esta línea?",
+      "confianza": 0.642
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 11.84,
+      "fin": 16.19,
+      "duracion": 4.35,
+      "texto": "¿Es asentado el número de ella con su número?",
+      "confianza": 0.264
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 16.21,
+      "fin": 17.29,
+      "duracion": 1.08,
+      "texto": "Sí, exactamente.",
+      "confianza": 0.688
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 17.31,
+      "fin": 21.17,
+      "duracion": 3.86,
+      "texto": "¿Usted igual tiene un abono mensual?",
+      "confianza": 0.695
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 21.19,
+      "fin": 23.04,
+      "duracion": 1.84,
+      "texto": "Eso no te puedo decir.",
+      "confianza": 0.245
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.06,
+      "fin": 25.8,
+      "duracion": 2.74,
+      "texto": "Ah, bueno, pero si ustedes pueden, que te dan una pregunta.",
+      "confianza": 0.223
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.82,
+      "fin": 29.36,
+      "duracion": 3.54,
+      "texto": "¿Voy a estar asentado, que es su número que",
+      "confianza": 0.325
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 29.75,
+      "fin": 32.75,
+      "duracion": 3.0,
+      "texto": "¿Cómo perdón?",
+      "confianza": 0.595
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 32.77,
+      "fin": 34.57,
+      "duracion": 1.8,
+      "texto": "¿Qué me dices?",
+      "confianza": 0.73
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 34.59,
+      "fin": 39.3,
+      "duracion": 4.71,
+      "texto": "Que Vol es asentado, que ese número no pasa a esa.",
+      "confianza": 0.479
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 39.32,
+      "fin": 40.24,
+      "duracion": 0.92,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.442
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 40.26,
+      "fin": 41.86,
+      "duracion": 1.6,
+      "texto": "Sí, ahora lo vamos a dejar asentado.",
+      "confianza": 0.547
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 43.3,
+      "fin": 50.9,
+      "duracion": 7.59,
+      "texto": "De todas maneras, me comento que el motivo de mis hermanos es para poder ofrecer algún descuento a la línea, ¿sí?",
+      "confianza": 0.624
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 50.91,
+      "fin": 52.82,
+      "duracion": 1.9,
+      "texto": "Lo abuso un montón.",
+      "confianza": 0.26
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 52.84,
+      "fin": 54.1,
+      "duracion": 1.26,
+      "texto": "Hasta luego.",
+      "confianza": 0.193
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 54.12,
+      "fin": 55.3,
+      "duracion": 1.18,
+      "texto": "Bueno, hasta luego.",
+      "confianza": 0.519
+    }
+  ]
+}

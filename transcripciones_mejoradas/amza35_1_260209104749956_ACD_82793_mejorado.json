@@ -1,0 +1,271 @@
+{
+  "archivo": "amza35_1_260209104749956_ACD_82793.wav",
+  "duracion_segundos": 69.51,
+  "num_segmentos": 16,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 4.02,
+    "Hablante B": 52.41
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 4.7,
+      "texto": "¿Hablo con la línea de Ana María?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 6.6,
+      "fin": 8.3,
+      "texto": "No, el esposo."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 8.3,
+      "fin": 10.0,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 10.0,
+      "fin": 12.8,
+      "texto": "Me contacto con vos por tu línea, escribiendo en Claro, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.8,
+      "fin": 14.1,
+      "texto": "Para poder unirte a un descuento."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 14.7,
+      "fin": 19.8,
+      "texto": "Creo que tiene una línea a nombre de Ana."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 19.8,
+      "fin": 20.9,
+      "texto": "¿Vos me hablás de...?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 20.9,
+      "fin": 23.4,
+      "texto": "De Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 23.5,
+      "fin": 25.2,
+      "texto": "No, gracias."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 25.2,
+      "fin": 27.6,
+      "texto": "Ana María tiene Movistar y yo tengo Claro."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.6,
+      "fin": 29.8,
+      "texto": "Ah, bien, perfecto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 30.0,
+      "fin": 59.0,
+      "texto": "Y que tenemos uno y uno de cada compañía porque vamos a lugares donde hay Claro, más señal de Claro y donde no hay Movistar."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 60.4,
+      "fin": 61.3,
+      "texto": "Bien, perfecto."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 61.3,
+      "fin": 62.5,
+      "texto": "Entonces ahora le dejo el saludo."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 68.7,
+      "fin": 69.1,
+      "texto": "Hasta luego."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 69.1,
+      "fin": 69.5,
+      "texto": "Hasta luego."
+    }
+  ],
+  "transcripcion_completa": "¿Hablo con la línea de Ana María? No, el esposo. ¿Qué tal? Me contacto con vos por tu línea, escribiendo en Claro, ¿sí? Para poder unirte a un descuento. Creo que tiene una línea a nombre de Ana. ¿Vos me hablás de...? De Movistar. No, gracias. Ana María tiene Movistar y yo tengo Claro. Ah, bien, perfecto. Y que tenemos uno y uno de cada compañía porque vamos a lugares donde hay Claro, más señal de Claro y donde no hay Movistar. Bien, perfecto. Entonces ahora le dejo el saludo. Hasta luego. Hasta luego.",
+  "calidad": {
+    "confianza_promedio": 0.507,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.7
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T04:23:25.931961",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de transcripción como 'sigas' por 'gracias', se identificaron los roles y se mejoró la fluidez de la conversación."
+    },
+    "fecha_mejora": "2026-02-20T09:36:47.166714",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.48,
+      "fin": 4.71,
+      "duracion": 3.22,
+      "texto": "¿Hablo con la línea de Ana María?",
+      "confianza": 0.657
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 6.57,
+      "fin": 8.29,
+      "duracion": 1.72,
+      "texto": "No, el esposo.",
+      "confianza": 0.36
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.31,
+      "fin": 9.99,
+      "duracion": 1.68,
+      "texto": "¿Qué tal?",
+      "confianza": 0.587
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 10.01,
+      "fin": 12.77,
+      "duracion": 2.76,
+      "texto": "Me contacto con vos por tu línea escribiendo en claro, ¿sí?",
+      "confianza": 0.629
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 12.83,
+      "fin": 14.12,
+      "duracion": 1.28,
+      "texto": "Para poder unirte a un descuento.",
+      "confianza": 0.522
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 14.74,
+      "fin": 19.76,
+      "duracion": 5.02,
+      "texto": "Creo que tiene una línea hasta el nombre de Ana.",
+      "confianza": 0.339
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 19.78,
+      "fin": 20.88,
+      "duracion": 1.1,
+      "texto": "¿Vos me hablás de...?",
+      "confianza": 0.074
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 20.9,
+      "fin": 23.45,
+      "duracion": 2.54,
+      "texto": "De Movistar.",
+      "confianza": 0.832
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 23.46,
+      "fin": 25.17,
+      "duracion": 1.7,
+      "texto": "No sigas.",
+      "confianza": 0.742
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 25.19,
+      "fin": 27.63,
+      "duracion": 2.44,
+      "texto": "Ana María tiene Movistar y yo tengo claro.",
+      "confianza": 0.664
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.55,
+      "fin": 29.75,
+      "duracion": 1.2,
+      "texto": "Ah, bien, perfecto.",
+      "confianza": 0.749
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 30.04,
+      "fin": 59.03,
+      "duracion": 28.99,
+      "texto": "Y que tenemos uno y uno de cada compañía porque vamos a lugares donde hay claro, más señal de claro y donde no hay movistar.",
+      "confianza": 0.606
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 60.44,
+      "fin": 61.28,
+      "duracion": 0.84,
+      "texto": "Bien, perfecto.",
+      "confianza": 0.499
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 61.3,
+      "fin": 62.45,
+      "duracion": 1.14,
+      "texto": "Entonces ahora le dejo el sentado.",
+      "confianza": 0.395
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 68.69,
+      "fin": 69.11,
+      "duracion": 0.42,
+      "texto": "Hasta luego.",
+      "confianza": 0.268
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 69.13,
+      "fin": 69.51,
+      "duracion": 0.38,
+      "texto": "Hasta luego.",
+      "confianza": 0.183
+    }
+  ]
+}

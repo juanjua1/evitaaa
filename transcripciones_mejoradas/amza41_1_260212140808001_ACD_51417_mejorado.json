@@ -1,0 +1,357 @@
+{
+  "archivo": "amza41_1_260212140808001_ACD_51417.wav",
+  "duracion_segundos": 64.65,
+  "num_segmentos": 22,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 41.43,
+    "Hablante B": 0.66
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 1.5,
+      "fin": 2.4,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 2.4,
+      "fin": 3.1,
+      "texto": "Hola, buenas."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 3.3,
+      "fin": 5.6,
+      "texto": "¿Habló con Isabel?"
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 5.6,
+      "fin": 6.2,
+      "texto": "Sí, ¿quién habla?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 6.9,
+      "fin": 7.2,
+      "texto": "¿Qué tal?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 7.2,
+      "fin": 11.5,
+      "texto": "Te habla Marina, te llamo de Movistar para mejorar la promoción de tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 12.1,
+      "fin": 14.1,
+      "texto": "Me figura que estás actualmente en la compañía."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 14.1,
+      "fin": 15.1,
+      "texto": "Claro, es correcto."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.5,
+      "fin": 28.6,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 28.6,
+      "fin": 29.2,
+      "texto": "Sí, ¿me escuchas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 33.3,
+      "fin": 34.2,
+      "texto": "Hola, perdón."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 34.3,
+      "fin": 36.0,
+      "texto": "Hola, ¿me escuchas?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 36.1,
+      "fin": 37.0,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 37.0,
+      "fin": 40.6,
+      "texto": "Bien, mira, nosotros te llamamos para ofrecerte una promoción para tu línea."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 41.3,
+      "fin": 47.1,
+      "texto": "Tenemos un plan ahora de 18 gigas que te va a quedar con WhatsApp, llamadas libres, en 1720."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 47.2,
+      "fin": 55.3,
+      "texto": "Este plan también te va a incluir lo que es América, precio local y roaming en América, ¿sí?"
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 55.3,
+      "fin": 55.4,
+      "texto": "Sí."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 55.4,
+      "fin": 56.6,
+      "texto": "Bien, coméntame."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 56.6,
+      "fin": 59.3,
+      "texto": "Por ahora no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.3,
+      "fin": 59.4,
+      "texto": "Bien."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 59.4,
+      "fin": 59.9,
+      "texto": "Por ahora no."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 60.7,
+      "fin": 64.7,
+      "texto": "Bien, bueno, muchas gracias."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola, buenas. ¿Habló con Isabel? Sí, ¿quién habla? ¿Qué tal? Te habla Marina, te llamo de Movistar para mejorar la promoción de tu línea. Me figura que estás actualmente en la compañía. Claro, es correcto. Sí. Sí, ¿me escuchas? Hola, perdón. Hola, ¿me escuchas? Sí. Bien, mira, nosotros te llamamos para ofrecerte una promoción para tu línea. Tenemos un plan ahora de 18 gigas que te va a quedar con WhatsApp, llamadas libres, en 1720. Este plan también te va a incluir lo que es América, precio local y roaming en América, ¿sí? Sí. Bien, coméntame. Por ahora no. Bien. Por ahora no. Bien, bueno, muchas gracias.",
+  "calidad": {
+    "confianza_promedio": 0.442,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.8
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T05:45:58.192299",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [
+        "plan 18 gigas"
+      ],
+      "plan_vendido": "18 gigas",
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Corrección de errores de transcripción (ej: 'gigas'), nombres propios, y frases cortadas. Se identificaron roles y se clasificó la llamada."
+    },
+    "fecha_mejora": "2026-02-20T10:42:52.968112",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 1.47,
+      "fin": 2.37,
+      "duracion": 0.9,
+      "texto": "Hola.",
+      "confianza": 0.313
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 2.39,
+      "fin": 3.07,
+      "duracion": 0.68,
+      "texto": "Hola, buenas.",
+      "confianza": 0.489
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 3.33,
+      "fin": 5.57,
+      "duracion": 2.24,
+      "texto": "¿Habló con Isabel?",
+      "confianza": 0.45
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 5.59,
+      "fin": 6.17,
+      "duracion": 0.58,
+      "texto": "Sí, ¿quién habla?",
+      "confianza": 0.373
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 6.89,
+      "fin": 7.23,
+      "duracion": 0.34,
+      "texto": "¿Qué tal?",
+      "confianza": 0.592
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 7.25,
+      "fin": 11.46,
+      "duracion": 4.2,
+      "texto": "Te habló Marina, me comunicó de hacer movistar para mejorar la promoción de tu línea.",
+      "confianza": 0.692
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 12.12,
+      "fin": 14.08,
+      "duracion": 1.96,
+      "texto": "Me figuró que estás actualmente en la compañía.",
+      "confianza": 0.665
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 14.12,
+      "fin": 15.1,
+      "duracion": 0.98,
+      "texto": "Claro, es correcto.",
+      "confianza": 0.663
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.51,
+      "fin": 28.57,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.133
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 28.59,
+      "fin": 29.19,
+      "duracion": 0.6,
+      "texto": "Sí, ¿me escuchas?",
+      "confianza": 0.209
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 33.31,
+      "fin": 34.25,
+      "duracion": 0.94,
+      "texto": "Hola, perdón.",
+      "confianza": 0.724
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 34.27,
+      "fin": 36.05,
+      "duracion": 1.78,
+      "texto": "Hola, ¿me escuchas?",
+      "confianza": 0.543
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 36.07,
+      "fin": 37.01,
+      "duracion": 0.94,
+      "texto": "Sí.",
+      "confianza": 0.507
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 37.03,
+      "fin": 40.58,
+      "duracion": 3.54,
+      "texto": "Bien, mira, nosotros te llamamos para vendarte una promoción para tu línea.",
+      "confianza": 0.612
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 41.28,
+      "fin": 47.14,
+      "duracion": 5.87,
+      "texto": "Tenemos un plan ahora de 18 gigas que te va a quedar con WhatsApp, llamadas libres, en 1720.",
+      "confianza": 0.661
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 47.2,
+      "fin": 55.31,
+      "duracion": 8.11,
+      "texto": "Este plan también te va a incluir lo que es América, precio local y romina en América, ¿sí?",
+      "confianza": 0.521
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.33,
+      "fin": 55.39,
+      "duracion": 0.06,
+      "texto": "Sí.",
+      "confianza": 0.04
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.41,
+      "fin": 56.61,
+      "duracion": 1.2,
+      "texto": "Bien, coméntame.",
+      "confianza": 0.362
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 56.63,
+      "fin": 59.26,
+      "duracion": 2.62,
+      "texto": "Por ahora no.",
+      "confianza": 0.259
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.27,
+      "fin": 59.38,
+      "duracion": 0.1,
+      "texto": "Bien.",
+      "confianza": 0.043
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 59.4,
+      "fin": 59.86,
+      "duracion": 0.46,
+      "texto": "Por ahora no.",
+      "confianza": 0.224
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 60.71,
+      "fin": 64.65,
+      "duracion": 3.93,
+      "texto": "Bien, bueno, muchas gracias.",
+      "confianza": 0.64
+    }
+  ]
+}

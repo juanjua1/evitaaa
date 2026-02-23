@@ -1,0 +1,101 @@
+{
+  "archivo": "amza8_1_260212184958763_ACD_30143.wav",
+  "duracion_segundos": 66.1,
+  "num_segmentos": 4,
+  "num_hablantes": 1,
+  "hablantes": [
+    "Hablante A"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 63.79
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "CLIENTE",
+      "inicio": 0.0,
+      "fin": 7.7,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 8.7,
+      "fin": 28.9,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 29.8,
+      "fin": 55.5,
+      "texto": "No, no, no, no, no, no, no."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 55.8,
+      "fin": 66.1,
+      "texto": "No, no, no, no."
+    }
+  ],
+  "transcripcion_completa": "Hola. Hola. No, no, no, no, no, no, no. No, no, no, no.",
+  "calidad": {
+    "confianza_promedio": 0.6,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.0
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-19T12:56:52.508746",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "ALTA",
+      "tipo_llamada": "VENTA",
+      "resultado": "RECHAZO",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigió la repetición de 'no' para mejorar la legibilidad y se identificaron los roles."
+    },
+    "fecha_mejora": "2026-02-22T23:49:09.191809",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 7.72,
+      "duracion": 7.69,
+      "texto": "Hola.",
+      "confianza": 0.53
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 8.74,
+      "fin": 28.94,
+      "duracion": 20.2,
+      "texto": "Hola.",
+      "confianza": 0.605
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 29.83,
+      "fin": 55.45,
+      "duracion": 25.62,
+      "texto": "No, no, no, no, no, no, no.",
+      "confianza": 0.705
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 55.82,
+      "fin": 66.1,
+      "duracion": 10.28,
+      "texto": "No, no, no, no.",
+      "confianza": 0.561
+    }
+  ]
+}

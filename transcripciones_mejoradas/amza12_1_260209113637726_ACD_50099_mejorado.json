@@ -1,0 +1,117 @@
+{
+  "archivo": "amza12_1_260209113637726_ACD_50099.wav",
+  "duracion_segundos": 91.38,
+  "num_segmentos": 5,
+  "num_hablantes": 2,
+  "hablantes": [
+    "Hablante A",
+    "Hablante B"
+  ],
+  "tiempo_por_hablante": {
+    "Hablante A": 57.19,
+    "Hablante B": 27.35
+  },
+  "idioma": "es",
+  "conversacion": [
+    {
+      "hablante": "AGENTE",
+      "inicio": 0.0,
+      "fin": 6.9,
+      "texto": "Después del tono, deje su mensaje."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 8.5,
+      "fin": 25.7,
+      "texto": "Para finalizar, corte o marque la tecla numeral para más opciones."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 28.7,
+      "fin": 51.5,
+      "texto": "Bueno, y la mando a control."
+    },
+    {
+      "hablante": "AGENTE",
+      "inicio": 52.1,
+      "fin": 79.6,
+      "texto": "Hola."
+    },
+    {
+      "hablante": "CLIENTE",
+      "inicio": 81.3,
+      "fin": 91.4,
+      "texto": "¿Cuál es el problema?"
+    }
+  ],
+  "transcripcion_completa": "Después del tono, deje su mensaje. Para finalizar, corte o marque la tecla numeral para más opciones. Bueno, y la mando a control. Hola. ¿Cuál es el problema?",
+  "calidad": {
+    "confianza_promedio": 0.635,
+    "metodo_diarizacion": "pausas_fallback",
+    "tiempo_procesamiento": 6.6
+  },
+  "metadata": {
+    "modelo": "whisperx_medium",
+    "diarizacion": "pausas",
+    "dispositivo": "cuda",
+    "fecha": "2026-02-18T22:57:03.100807",
+    "version": "5.0_ecapa"
+  },
+  "mejora_gemini": {
+    "analisis": {
+      "agente_detectado": "Hablante A",
+      "confianza_roles": "MEDIA",
+      "tipo_llamada": "SIN_CONTACTO",
+      "resultado": "SIN_DECISION",
+      "productos_mencionados": [],
+      "plan_vendido": null,
+      "incluye_fibra": false,
+      "calidad_transcripcion_original": "REGULAR",
+      "correcciones_realizadas": "Se corrigieron errores de puntuación y se identificaron los roles de hablante."
+    },
+    "fecha_mejora": "2026-02-22T22:19:31.411913",
+    "modelo": "gemini-2.0-flash-lite"
+  },
+  "conversacion_original": [
+    {
+      "hablante": "Hablante A",
+      "inicio": 0.03,
+      "fin": 6.92,
+      "duracion": 6.89,
+      "texto": "Después del tono, deja tu mensaje.",
+      "confianza": 0.697
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 8.46,
+      "fin": 25.72,
+      "duracion": 17.26,
+      "texto": "Para finalizar, corta o marca la tecla numeral para más opciones.",
+      "confianza": 0.836
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 28.73,
+      "fin": 51.45,
+      "duracion": 22.72,
+      "texto": "Bueno, y la mando a control.",
+      "confianza": 0.61
+    },
+    {
+      "hablante": "Hablante A",
+      "inicio": 52.06,
+      "fin": 79.63,
+      "duracion": 27.58,
+      "texto": "Hola.",
+      "confianza": 0.594
+    },
+    {
+      "hablante": "Hablante B",
+      "inicio": 81.28,
+      "fin": 91.38,
+      "duracion": 10.09,
+      "texto": "¿Cuál es el problema?",
+      "confianza": 0.44
+    }
+  ]
+}

@@ -40,7 +40,7 @@ model = genai.GenerativeModel("gemini-2.0-flash-lite")
 # Rutas de archivos y carpetas - RUTAS LOCALES
 BASE_DIR = Path(__file__).parent
 # USAR ARCHIVOS MEJORADOS POR GEMINI (con roles AGENTE/CLIENTE ya identificados)
-CARPETA_TRANSCRIPCIONES = BASE_DIR / "transcripts" / "mejorados_gemini"
+CARPETA_TRANSCRIPCIONES = BASE_DIR / "transcripciones_mejoradas"
 CARPETA_REGLAS = BASE_DIR / "reglas"
 CSV_CLASIFICACION = BASE_DIR / "reportes" / "clasificacion_completa" / "clasificacion_completa.csv"
 CSV_CONSOLIDADO = BASE_DIR / "reportes" / "para_gemini" / "datos_consolidados_para_gemini.csv"
@@ -462,13 +462,16 @@ def procesar_transcripciones(limite: int = None) -> None:
             with open(archivo_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
             
-            # Obtener metadata
-            metadata = data.get('metadata_llamada', {})
-            info = data.get('info_llamada', {})
+            # Obtener metadata - extraer agente del nombre del archivo
+            # Formato: amza10_1_260209105133829_ACD_95297_mejorado.json
+            agente_id = archivo.split('_')[0] if '_' in archivo else 'desconocido'
+            # Quitar prefijo 'a' si existe (amza10 -> mza10)
+            if agente_id.startswith('a') and not agente_id.startswith('amza'):
+                agente_id = agente_id[1:]
             
             metadata_eval = {
                 'archivo': archivo,
-                'agente': metadata.get('agente_nombre', '') or info.get('agente', {}).get('nombre', 'desconocido'),
+                'agente': agente_id,
             }
             
             # Construir diálogo
