@@ -250,13 +250,23 @@ def main():
     mapeo = cargar_mapeo_vendedores()
     
     archivos = {'acumuladores': None, 'solicitudes': None, 'interacciones': None}
-    for p in ['Acumuladores*.csv']: 
-        f = glob.glob(os.path.join(RUTA_BASE, p))
-        if f: archivos['acumuladores'] = f[0]; break
+    # Buscar en raíz y en carpeta Reporte-llamadas-mitrol-agostina
+    ruta_agostina = os.path.join(RUTA_BASE, 'Reporte-llamadas-mitrol-agostina')
+    rutas_busqueda = [RUTA_BASE, ruta_agostina]
+    
+    for ruta in rutas_busqueda:
+        if archivos['acumuladores']: break
+        for p in ['Acumuladores*.csv']:
+            f = glob.glob(os.path.join(ruta, p))
+            if f: archivos['acumuladores'] = f[0]; break
+    
     if os.path.exists(os.path.join(RUTA_BASE, 'solicitudes.csv')): archivos['solicitudes'] = os.path.join(RUTA_BASE, 'solicitudes.csv')
-    for p in ['basurita.csv', 'Detalle*.csv']:
-        f = glob.glob(os.path.join(RUTA_BASE, p))
-        if f: archivos['interacciones'] = f[0]; break
+    
+    for ruta in rutas_busqueda:
+        if archivos['interacciones']: break
+        for p in ['basurita.csv', 'Detalle Interacciones*.csv', 'Detalle*.csv']:
+            f = glob.glob(os.path.join(ruta, p))
+            if f: archivos['interacciones'] = f[0]; break
     
     print("\n📁 Archivos:")
     for t, r in archivos.items(): print(f"   {'✅' if r else '❌'} {t}: {os.path.basename(r) if r else 'No encontrado'}")
