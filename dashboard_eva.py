@@ -8699,27 +8699,453 @@ def pagina_metricas_calidad():
     """Página de Métricas de Calidad - 3 Apartados: Tiempos, Ventas, Llamadas + Comparativa"""
     
     st.markdown('<p class="main-header">📊 COMMAND · Métricas de Calidad</p>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <div style='background: #F1F5F9; padding: 20px; border-radius: 12px; border-left: 5px solid #6366F1;'>
-            <h3 style='margin: 0; color: #1E293B;'>🛠️ En desarrollo</h3>
-            <p style='margin: 8px 0 0 0; color: #475569;'>
-                Este apartado estara disponible pronto con metricas de tiempos, ventas y llamadas.
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    return
     
     # Obtener permisos del usuario actual
     permisos = obtener_permisos_usuario()
+    
+    # =========================================================================
+    # GESTIÓN DE DATOS - Solo admin y supervisores con acceso total
+    # =========================================================================
+    ruta_json_calidad = os.path.join(os.path.dirname(__file__), 'datos_calidad', 'datos_calidad_procesados.json')
+    
+    if permisos.get('es_admin') or permisos.get('puede_ver_todos'):
+        # Estilo para que el expander de gestión sea visible
+        st.markdown("""
+        <style>
+        div[data-testid="stExpander"] > details > summary {
+            background: linear-gradient(135deg, #1E3A5F 0%, #334155 100%);
+            color: #FFFFFF !important;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        div[data-testid="stExpander"] > details > summary:hover {
+            background: linear-gradient(135deg, #2563EB 0%, #475569 100%);
+        }
+        div[data-testid="stExpander"] > details > summary svg {
+            fill: #FFFFFF !important;
+        }
+        div[data-testid="stExpander"] > details > summary p {
+            color: #FFFFFF !important;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] {
+            background: #F8FAFC !important;
+            border: 1px solid #CBD5E1;
+            border-radius: 0 0 10px 10px;
+            padding: 15px;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] label,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] p,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] span,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h1,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h2,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h3,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h4,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h5,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] h6,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] li,
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] div {
+            color: #1E293B !important;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] .stTabs [data-baseweb="tab"] {
+            color: #1E293B !important;
+            background: #E2E8F0 !important;
+            border-radius: 6px 6px 0 0;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] .stTabs [aria-selected="true"] {
+            color: #FFFFFF !important;
+            background: #2563EB !important;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] input[type="text"] {
+            color: #1E293B !important;
+            background: #FFFFFF !important;
+            border: 1px solid #94A3B8 !important;
+        }
+        div[data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"] .stCheckbox label span {
+            color: #1E293B !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        with st.expander("⚙️ Gestión de Datos — Cargar / Borrar información", expanded=False):
+            st.markdown("""
+            <div style='background: #EFF6FF; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6; margin-bottom: 15px;'>
+                <p style='margin: 0; color: #1E40AF; font-size: 0.9rem;'>
+                    📂 Cargá los archivos CSV exportados de Mitrol para actualizar las métricas.<br>
+                    <strong>Acumuladores</strong> → Tiempos (Break, Coaching, Admin, Baño, etc.)<br>
+                    <strong>Solicitudes</strong> → Ventas (aprobadas, canceladas, preventa)<br>
+                    <strong>Detalle Interacciones</strong> → Llamadas (duración, cortadas, capta atención)
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Mostrar estado actual
+            datos_existentes = cargar_datos_calidad_procesados()
+            if datos_existentes:
+                fecha_actual = datos_existentes.get('fecha_proceso', 'N/A')
+                n_tiempos = len(datos_existentes.get('tiempos', {}).get('por_vendedor', []))
+                n_ventas = len(datos_existentes.get('ventas', {}).get('por_vendedor', []))
+                n_llamadas = len(datos_existentes.get('llamadas', {}).get('por_vendedor', []))
+                st.markdown(f"""
+                <div style='background: #DCFCE7; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #22C55E; margin-bottom: 15px;'>
+                    <p style='margin: 0; color: #166534; font-size: 0.85rem;'>
+                        ✅ <strong>Datos cargados</strong> — Última actualización: <strong>{fecha_actual}</strong><br>
+                        ⏱️ Tiempos: {n_tiempos} agentes | 💼 Ventas: {n_ventas} vendedores | 📞 Llamadas: {n_llamadas} agentes
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div style='background: #FEF3C7; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #F59E0B; margin-bottom: 15px;'>
+                    <p style='margin: 0; color: #92400E;'>⚠️ No hay datos cargados actualmente.</p>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            # Tabs para Cargar / Borrar
+            tab_cargar, tab_borrar = st.tabs(["📤 Cargar Archivos", "🗑️ Borrar Datos"])
+            
+            with tab_cargar:
+                st.markdown("##### 📂 Subí los archivos CSV de Mitrol")
+                col_up1, col_up2, col_up3 = st.columns(3)
+                
+                with col_up1:
+                    st.markdown("**⏱️ Acumuladores** (Tiempos)")
+                    archivo_acumuladores = st.file_uploader(
+                        "CSV de Acumuladores de Agentes", 
+                        type=['csv'], 
+                        key='upload_acumuladores',
+                        help="Archivo: Acumuladores de Agentes (Detalle de Interacciones).csv"
+                    )
+                
+                with col_up2:
+                    st.markdown("**💼 Solicitudes** (Ventas)")
+                    archivo_solicitudes = st.file_uploader(
+                        "CSV de Solicitudes", 
+                        type=['csv'], 
+                        key='upload_solicitudes',
+                        help="Archivo: solicitudes.csv con columnas Vendedor, Estado Solicitud"
+                    )
+                
+                with col_up3:
+                    st.markdown("**📞 Detalle Interacciones** (Llamadas)")
+                    archivo_interacciones = st.file_uploader(
+                        "CSV de Detalle Interacciones", 
+                        type=['csv'], 
+                        key='upload_interacciones',
+                        help="Archivo: Detalle Interacciones (Campaña - Lote).csv o basurita.csv"
+                    )
+                
+                st.markdown("---")
+                
+                col_btn1, col_btn2 = st.columns([1, 3])
+                with col_btn1:
+                    procesar_btn = st.button("🚀 Procesar y Guardar", type="primary", use_container_width=True)
+                with col_btn2:
+                    if not archivo_acumuladores and not archivo_solicitudes and not archivo_interacciones:
+                        st.info("📌 Subí al menos un archivo para procesar. Podés subir solo los que quieras actualizar.")
+                    else:
+                        archivos_subidos = []
+                        if archivo_acumuladores: archivos_subidos.append("⏱️ Acumuladores")
+                        if archivo_solicitudes: archivos_subidos.append("💼 Solicitudes")
+                        if archivo_interacciones: archivos_subidos.append("📞 Interacciones")
+                        st.success(f"Archivos listos: {' | '.join(archivos_subidos)}")
+                
+                if procesar_btn:
+                    if not archivo_acumuladores and not archivo_solicitudes and not archivo_interacciones:
+                        st.error("❌ Subí al menos un archivo para procesar.")
+                    else:
+                        with st.spinner("🔄 Procesando archivos..."):
+                            try:
+                                # Cargar mapeo de vendedores
+                                ruta_listado = os.path.join(os.path.dirname(__file__), 'LISTADO-DE-VENDEDORES.csv')
+                                mapeo_vend = {}
+                                if os.path.exists(ruta_listado):
+                                    df_map = pd.read_csv(ruta_listado, encoding='latin-1')
+                                    df_map.columns = ['Usuario', 'Nombre', 'Equipo'] + [f'col_{i}' for i in range(len(df_map.columns)-3)]
+                                    df_map = df_map[['Usuario', 'Nombre', 'Equipo']].dropna(subset=['Usuario'])
+                                    df_map = df_map[df_map['Usuario'] != 'Usuario']
+                                    for _, row in df_map.iterrows():
+                                        usuario = str(row['Usuario']).lower().strip().replace(' ', '')
+                                        mapeo_vend[usuario] = {'nombre': str(row['Nombre']).strip(), 'equipo': str(row['Equipo']).strip()}
+                                
+                                # Cargar datos existentes para mantener secciones no actualizadas
+                                resultado_existente = cargar_datos_calidad_procesados() or {}
+                                
+                                def _tiempo_a_seg(t):
+                                    if pd.isna(t) or t == '' or t == '0': return 0
+                                    try:
+                                        partes = str(t).strip().split(':')
+                                        if len(partes) == 3: return int(partes[0])*3600 + int(partes[1])*60 + int(partes[2])
+                                        elif len(partes) == 2: return int(partes[0])*60 + int(partes[1])
+                                        return int(float(t))
+                                    except: return 0
+                                
+                                def _seg_a_tiempo(s):
+                                    if s == 0: return "00:00:00"
+                                    return f"{int(s//3600):02d}:{int((s%3600)//60):02d}:{int(s%60):02d}"
+                                
+                                # ===== PROCESAR ACUMULADORES (TIEMPOS) =====
+                                datos_tiempos_new = resultado_existente.get('tiempos', {'por_vendedor': [], 'totales': {}})
+                                if archivo_acumuladores:
+                                    st.info("⏱️ Procesando Acumuladores...")
+                                    df_ac = pd.read_csv(archivo_acumuladores, encoding='latin-1', sep=';')
+                                    df_ac.columns = df_ac.columns.str.replace('ï»¿', '').str.strip()
+                                    col_agente = next((c for c in df_ac.columns if c.lower() == 'agente'), None)
+                                    if col_agente:
+                                        col_map = {}
+                                        for c in df_ac.columns:
+                                            cl = c.lower()
+                                            if 'break' in cl and 'tipo' not in cl: col_map['break'] = c
+                                            elif 'coaching' in cl: col_map['coaching'] = c
+                                            elif 'administrativo' in cl: col_map['administrativo'] = c
+                                            elif 'baño' in cl or 'bano' in cl: col_map['baño'] = c
+                                            elif 'manual' in cl: col_map['llamada_manual'] = c
+                                            elif 'disponible' in cl and 'no' not in cl and 'tiempo' in cl: col_map['disponible'] = c
+                                            elif 'tiempo real' in cl and 'logueo' in cl: col_map['logueo'] = c
+                                            elif 'no disponible' in cl: col_map['no_disponible'] = c
+                                            elif 'lunch' in cl or 'almuerzo' in cl: col_map['almuerzo'] = c
+                                        
+                                        datos_v = []
+                                        totales = {k: 0 for k in ['break','coaching','administrativo','baño','llamada_manual','disponible','logueo','no_disponible','almuerzo']}
+                                        totales['total_agentes'] = 0
+                                        for agente in df_ac[col_agente].dropna().unique():
+                                            a_str = str(agente).strip()
+                                            if not a_str or a_str.lower() == 'nan': continue
+                                            df_a = df_ac[df_ac[col_agente] == agente]
+                                            info = mapeo_vend.get(a_str.lower().replace(' ', ''), {})
+                                            reg = {'agente': a_str, 'vendedor': info.get('nombre', a_str.upper()), 'equipo': info.get('equipo', 'Sin Equipo')}
+                                            for key, col in col_map.items():
+                                                val = df_a[col].apply(_tiempo_a_seg).sum() if col in df_a.columns else 0
+                                                reg[f'{key}_seg'] = int(val)
+                                                reg[f'{key}_fmt'] = _seg_a_tiempo(val)
+                                                totales[key] = totales.get(key, 0) + val
+                                            for key in ['break','coaching','administrativo','baño','llamada_manual','disponible','logueo','no_disponible','almuerzo']:
+                                                if f'{key}_seg' not in reg:
+                                                    reg[f'{key}_seg'] = 0
+                                                    reg[f'{key}_fmt'] = "00:00:00"
+                                            t_aux = sum(reg.get(f'{k}_seg', 0) for k in ['break','coaching','administrativo','baño','almuerzo'])
+                                            reg['tiempo_auxiliar_seg'] = t_aux
+                                            reg['tiempo_auxiliar_fmt'] = _seg_a_tiempo(t_aux)
+                                            t_log = reg.get('logueo_seg', 0)
+                                            reg['pct_productivo'] = round((t_log - t_aux) / t_log * 100, 1) if t_log > 0 else 0
+                                            datos_v.append(reg)
+                                            totales['total_agentes'] += 1
+                                        for key in ['break','coaching','administrativo','baño','llamada_manual','disponible','logueo','no_disponible','almuerzo']:
+                                            totales[f'{key}_fmt'] = _seg_a_tiempo(totales.get(key, 0))
+                                            if totales['total_agentes'] > 0:
+                                                totales[f'{key}_prom'] = int(totales.get(key, 0) / totales['total_agentes'])
+                                                totales[f'{key}_prom_fmt'] = _seg_a_tiempo(totales[f'{key}_prom'])
+                                        datos_tiempos_new = {'por_vendedor': datos_v, 'totales': totales}
+                                        st.success(f"✅ Tiempos: {len(datos_v)} agentes procesados")
+                                    else:
+                                        st.warning("⚠️ No se encontró columna 'Agente' en el archivo de Acumuladores")
+                                
+                                # ===== PROCESAR SOLICITUDES (VENTAS) =====
+                                datos_ventas_new = resultado_existente.get('ventas', {'por_vendedor': [], 'totales': {}, 'por_supervisor': []})
+                                if archivo_solicitudes:
+                                    st.info("💼 Procesando Solicitudes...")
+                                    df_sol = pd.read_csv(archivo_solicitudes, encoding='latin-1')
+                                    col_vend = col_sup = col_est = None
+                                    for c in df_sol.columns:
+                                        cl = c.lower()
+                                        if 'vendedor' in cl: col_vend = c
+                                        elif 'supervisor' in cl: col_sup = c
+                                        elif 'estado' in cl and 'solicitud' in cl: col_est = c
+                                    if col_vend and col_est:
+                                        df_sol['estado_norm'] = df_sol[col_est].astype(str).str.upper()
+                                        df_sol['es_aprobada'] = df_sol['estado_norm'].str.contains('APROB', na=False)
+                                        df_sol['es_cancelada'] = df_sol['estado_norm'].str.contains('CANCEL', na=False)
+                                        df_sol['es_preventa'] = df_sol['estado_norm'].str.contains('PREVENTA', na=False)
+                                        total = len(df_sol)
+                                        aprob = int(df_sol['es_aprobada'].sum())
+                                        n_vend = df_sol[col_vend].nunique()
+                                        prom_esp = round(total / n_vend, 1) if n_vend > 0 else 0
+                                        prom_aprob = round(aprob / n_vend, 1) if n_vend > 0 else 0
+                                        totales_v = {'total_ventas': total, 'total_aprobadas': aprob, 
+                                                     'total_canceladas': int(df_sol['es_cancelada'].sum()),
+                                                     'total_preventa': int(df_sol['es_preventa'].sum()), 'num_vendedores': n_vend,
+                                                     'promedio_ventas_esperado': prom_esp, 'promedio_aprobadas_esperado': prom_aprob,
+                                                     'tasa_aprobacion_global': round(aprob/total*100, 1) if total > 0 else 0}
+                                        datos_vend = []
+                                        for vend in df_sol[col_vend].dropna().unique():
+                                            v_str = str(vend).strip()
+                                            if not v_str or v_str.lower() == 'nan': continue
+                                            df_v = df_sol[df_sol[col_vend] == vend]
+                                            t = len(df_v)
+                                            a = int(df_v['es_aprobada'].sum())
+                                            sup = str(df_v[col_sup].dropna().iloc[0]).strip() if col_sup and len(df_v[col_sup].dropna()) > 0 else 'Sin Supervisor'
+                                            tasa = round(a/t*100, 1) if t > 0 else 0
+                                            estado = '🟢 Excelente' if tasa >= 70 else '🟡 Bueno' if tasa >= 50 else '🟠 Regular' if tasa >= 30 else '🔴 Bajo'
+                                            datos_vend.append({'vendedor': v_str, 'supervisor': sup, 'total_ventas': t, 'aprobadas': a,
+                                                               'canceladas': int(df_v['es_cancelada'].sum()), 'preventa': int(df_v['es_preventa'].sum()),
+                                                               'tasa_aprobacion': tasa, 'dif_vs_promedio': round(t - prom_esp, 1),
+                                                               'dif_aprobadas_vs_esperado': round(a - prom_aprob, 1), 'estado': estado})
+                                        datos_vend.sort(key=lambda x: x['aprobadas'], reverse=True)
+                                        datos_sup = []
+                                        if col_sup:
+                                            for sup in df_sol[col_sup].dropna().unique():
+                                                s_str = str(sup).strip()
+                                                if not s_str or s_str.lower() == 'nan': continue
+                                                df_s = df_sol[df_sol[col_sup] == sup]
+                                                datos_sup.append({'supervisor': s_str, 'num_vendedores': df_s[col_vend].nunique(),
+                                                                  'total_ventas': len(df_s), 'aprobadas': int(df_s['es_aprobada'].sum()),
+                                                                  'tasa_aprobacion': round(df_s['es_aprobada'].sum()/len(df_s)*100, 1) if len(df_s) > 0 else 0})
+                                            datos_sup.sort(key=lambda x: x['aprobadas'], reverse=True)
+                                        datos_ventas_new = {'por_vendedor': datos_vend, 'totales': totales_v, 'por_supervisor': datos_sup}
+                                        st.success(f"✅ Ventas: {len(datos_vend)} vendedores, {total} solicitudes")
+                                    else:
+                                        st.warning("⚠️ No se encontraron columnas 'Vendedor' o 'Estado Solicitud' en el archivo")
+                                
+                                # ===== PROCESAR INTERACCIONES (LLAMADAS) =====
+                                datos_llamadas_new = resultado_existente.get('llamadas', {'por_vendedor': [], 'totales': {}})
+                                if archivo_interacciones:
+                                    st.info("📞 Procesando Interacciones...")
+                                    df_int = pd.read_csv(archivo_interacciones, encoding='latin-1', sep=';', low_memory=False)
+                                    col_ag = col_talk = col_tip = col_orig = None
+                                    for c in df_int.columns:
+                                        cl = c.lower()
+                                        if c == 'LoginId' or 'loginid' in cl: col_ag = c
+                                        elif 'talkingtime' in cl or 'talking' in cl: col_talk = c
+                                        elif c == 'Tipificación' or 'tipificación' == cl or 'tipificacion' in cl: col_tip = c
+                                        elif 'origen' in cl and 'corte' in cl: col_orig = c
+                                    if col_ag:
+                                        df_int['talking_seg'] = pd.to_numeric(df_int[col_talk], errors='coerce').fillna(0) if col_talk else 0
+                                        df_int['es_cortada'] = df_int[col_tip].astype(str).str.upper().str.contains('CORTADA|MUDA|CORTO', na=False) if col_tip else False
+                                        df_int['corte_cliente'] = df_int[col_orig].astype(str).str.contains('Cliente', case=False, na=False) if col_orig else False
+                                        df_int['corte_agente'] = df_int[col_orig].astype(str).str.contains('Agente', case=False, na=False) if col_orig else False
+                                        df_int['supera_1min'] = df_int['talking_seg'] >= 60
+                                        df_int['supera_5min'] = df_int['talking_seg'] >= 300
+                                        df_int['menos_30seg'] = df_int['talking_seg'] < 30
+                                        df_int['capta_atencion'] = (df_int['talking_seg'] >= 60) & (~df_int['es_cortada'])
+                                        total_ll = len(df_int)
+                                        tmo = round(df_int['talking_seg'].mean(), 1) if total_ll > 0 else 0
+                                        totales_ll = {'total_llamadas': total_ll, 'total_cortadas': int(df_int['es_cortada'].sum()),
+                                                      'pct_cortadas': round(df_int['es_cortada'].sum()/total_ll*100, 1) if total_ll > 0 else 0,
+                                                      'supera_1min': int(df_int['supera_1min'].sum()), 'pct_supera_1min': round(df_int['supera_1min'].sum()/total_ll*100, 1) if total_ll > 0 else 0,
+                                                      'supera_5min': int(df_int['supera_5min'].sum()), 'pct_supera_5min': round(df_int['supera_5min'].sum()/total_ll*100, 1) if total_ll > 0 else 0,
+                                                      'menos_30seg': int(df_int['menos_30seg'].sum()), 'pct_menos_30seg': round(df_int['menos_30seg'].sum()/total_ll*100, 1) if total_ll > 0 else 0,
+                                                      'capta_atencion': int(df_int['capta_atencion'].sum()), 'pct_capta_atencion': round(df_int['capta_atencion'].sum()/total_ll*100, 1) if total_ll > 0 else 0,
+                                                      'tmo_global_seg': tmo, 'tmo_global_fmt': _seg_a_tiempo(int(tmo)), 'num_agentes': df_int[col_ag].nunique()}
+                                        datos_ag = []
+                                        for agente in df_int[col_ag].dropna().unique():
+                                            a_str = str(agente).strip()
+                                            if not a_str or a_str.lower() == 'nan': continue
+                                            df_a = df_int[df_int[col_ag] == agente]
+                                            info = mapeo_vend.get(a_str.lower().replace(' ', ''), {})
+                                            t_ll = len(df_a)
+                                            cortadas = int(df_a['es_cortada'].sum())
+                                            sup1 = int(df_a['supera_1min'].sum())
+                                            sup5 = int(df_a['supera_5min'].sum())
+                                            capta = int(df_a['capta_atencion'].sum())
+                                            tmo_a = round(df_a['talking_seg'].mean(), 1) if t_ll > 0 else 0
+                                            pct_capta = round(capta/t_ll*100, 1) if t_ll > 0 else 0
+                                            estado = '🟢 Excelente' if pct_capta >= 50 else '🟡 Bueno' if pct_capta >= 35 else '🟠 Regular' if pct_capta >= 20 else '🔴 Bajo'
+                                            datos_ag.append({'agente': a_str, 'vendedor': info.get('nombre', a_str.upper()), 'equipo': info.get('equipo', 'Sin Equipo'),
+                                                             'total_llamadas': t_ll, 'tmo_seg': tmo_a, 'tmo_fmt': _seg_a_tiempo(int(tmo_a)),
+                                                             'cortadas': cortadas, 'pct_cortadas': round(cortadas/t_ll*100, 1) if t_ll > 0 else 0,
+                                                             'supera_1min': sup1, 'pct_supera_1min': round(sup1/t_ll*100, 1) if t_ll > 0 else 0,
+                                                             'supera_5min': sup5, 'pct_supera_5min': round(sup5/t_ll*100, 1) if t_ll > 0 else 0,
+                                                             'menos_30seg': int(df_a['menos_30seg'].sum()), 'capta_atencion': capta, 'pct_capta_atencion': pct_capta,
+                                                             'corte_cliente': int(df_a['corte_cliente'].sum()), 'corte_agente': int(df_a['corte_agente'].sum()), 'estado': estado})
+                                        datos_ag.sort(key=lambda x: x['total_llamadas'], reverse=True)
+                                        datos_llamadas_new = {'por_vendedor': datos_ag, 'totales': totales_ll}
+                                        st.success(f"✅ Llamadas: {len(datos_ag)} agentes, {total_ll:,} interacciones")
+                                    else:
+                                        st.warning("⚠️ No se encontró columna 'LoginId' en el archivo de interacciones")
+                                
+                                # Guardar resultado
+                                os.makedirs(os.path.dirname(ruta_json_calidad), exist_ok=True)
+                                resultado_final = {
+                                    'fecha_proceso': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                                    'tiempos': datos_tiempos_new,
+                                    'ventas': datos_ventas_new,
+                                    'llamadas': datos_llamadas_new
+                                }
+                                
+                                def _convert_native(obj):
+                                    if isinstance(obj, dict): return {k: _convert_native(v) for k, v in obj.items()}
+                                    elif isinstance(obj, list): return [_convert_native(i) for i in obj]
+                                    elif hasattr(obj, 'item'): return obj.item()
+                                    return obj
+                                
+                                resultado_final = _convert_native(resultado_final)
+                                with open(ruta_json_calidad, 'w', encoding='utf-8') as f:
+                                    json.dump(resultado_final, f, ensure_ascii=False, indent=2)
+                                
+                                st.success("🎉 **Datos procesados y guardados correctamente.** Recargá la página para ver los nuevos datos.")
+                                st.balloons()
+                                
+                            except Exception as e:
+                                st.error(f"❌ Error procesando archivos: {str(e)}")
+                                import traceback
+                                st.code(traceback.format_exc())
+            
+            with tab_borrar:
+                st.markdown("""
+                <div style='background: #FEF2F2; padding: 18px; border-radius: 10px; border-left: 5px solid #EF4444; margin-bottom: 20px;'>
+                    <p style='margin: 0; color: #7F1D1D; font-size: 1rem; font-weight: 600;'>
+                        ⚠️ Zona de Borrado
+                    </p>
+                    <p style='margin: 8px 0 0 0; color: #991B1B; font-size: 0.9rem;'>
+                        Al borrar los datos se eliminará la información de métricas de calidad seleccionada.<br>
+                        Deberás volver a cargar los archivos CSV para regenerar los datos.
+                    </p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                st.markdown("##### Seleccioná qué secciones borrar:")
+                col_del1, col_del2, col_del3 = st.columns(3)
+                with col_del1:
+                    borrar_tiempos = st.checkbox("⏱️ Borrar Tiempos", key='borrar_tiempos')
+                with col_del2:
+                    borrar_ventas = st.checkbox("💼 Borrar Ventas", key='borrar_ventas')
+                with col_del3:
+                    borrar_llamadas = st.checkbox("📞 Borrar Llamadas", key='borrar_llamadas')
+                
+                st.markdown("")
+                borrar_todo = st.checkbox("🗑️ Borrar TODOS los datos", key='borrar_todo')
+                
+                st.markdown("---")
+                st.markdown("##### Confirmación de seguridad")
+                confirmar_borrar = st.text_input("Escribí BORRAR para confirmar:", key='confirmar_borrar', placeholder="BORRAR")
+                
+                if st.button("🗑️ Ejecutar Borrado", type="secondary"):
+                    if confirmar_borrar != "BORRAR":
+                        st.error("❌ Escribí BORRAR para confirmar la acción.")
+                    else:
+                        if borrar_todo:
+                            if os.path.exists(ruta_json_calidad):
+                                os.remove(ruta_json_calidad)
+                            st.success("✅ Todos los datos de calidad borrados.")
+                            st.rerun()
+                        elif borrar_tiempos or borrar_ventas or borrar_llamadas:
+                            datos_mod = cargar_datos_calidad_procesados()
+                            if datos_mod:
+                                if borrar_tiempos:
+                                    datos_mod['tiempos'] = {'por_vendedor': [], 'totales': {}}
+                                if borrar_ventas:
+                                    datos_mod['ventas'] = {'por_vendedor': [], 'totales': {}, 'por_supervisor': []}
+                                if borrar_llamadas:
+                                    datos_mod['llamadas'] = {'por_vendedor': [], 'totales': {}}
+                                datos_mod['fecha_proceso'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                with open(ruta_json_calidad, 'w', encoding='utf-8') as f:
+                                    json.dump(datos_mod, f, ensure_ascii=False, indent=2)
+                                borrados = []
+                                if borrar_tiempos: borrados.append("Tiempos")
+                                if borrar_ventas: borrados.append("Ventas")
+                                if borrar_llamadas: borrados.append("Llamadas")
+                                st.success(f"✅ Datos borrados: {', '.join(borrados)}")
+                                st.rerun()
+                        else:
+                            st.warning("⚠️ Seleccioná al menos una sección para borrar.")
+        
+        st.markdown("---")
     
     # Cargar datos preprocesados
     datos = cargar_datos_calidad_procesados()
     
     if datos is None:
-        st.warning("⚠️ **No hay datos procesados.** Ejecute el proceso `procesar_calidad.py` primero.")
+        st.warning("⚠️ **No hay datos procesados.** Usá el panel de Gestión de Datos para cargar archivos CSV.")
         return
     
     fecha_proceso = datos.get('fecha_proceso', 'N/A')
