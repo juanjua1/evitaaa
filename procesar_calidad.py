@@ -103,6 +103,9 @@ def procesar_tiempos(ruta_archivo, mapeo):
             registro['tiempo_auxiliar_seg'] = tiempo_aux
             registro['tiempo_auxiliar_fmt'] = segundos_a_tiempo(tiempo_aux)
             t_log = registro.get('logueo_seg', 0)
+            t_disponible = max(t_log - tiempo_aux, 0)
+            registro['disponible_seg'] = t_disponible
+            registro['disponible_fmt'] = segundos_a_tiempo(t_disponible)
             registro['pct_productivo'] = round((t_log - tiempo_aux) / t_log * 100, 1) if t_log > 0 else 0
             datos_vendedor.append(registro)
             totales['total_agentes'] += 1

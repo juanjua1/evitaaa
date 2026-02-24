@@ -8927,6 +8927,9 @@ def pagina_metricas_calidad():
                                             reg['tiempo_auxiliar_seg'] = t_aux
                                             reg['tiempo_auxiliar_fmt'] = _seg_a_tiempo(t_aux)
                                             t_log = reg.get('logueo_seg', 0)
+                                            t_disponible = max(t_log - t_aux, 0)
+                                            reg['disponible_seg'] = t_disponible
+                                            reg['disponible_fmt'] = _seg_a_tiempo(t_disponible)
                                             reg['pct_productivo'] = round((t_log - t_aux) / t_log * 100, 1) if t_log > 0 else 0
                                             datos_v.append(reg)
                                             totales['total_agentes'] += 1
@@ -9145,7 +9148,13 @@ def pagina_metricas_calidad():
     datos = cargar_datos_calidad_procesados()
     
     if datos is None:
-        st.warning("⚠️ **No hay datos procesados.** Usá el panel de Gestión de Datos para cargar archivos CSV.")
+        st.markdown("""
+        <div style='background: #FEF3C7; padding: 18px; border-radius: 10px; border-left: 5px solid #F59E0B;'>
+            <p style='margin: 0; color: #000000; font-size: 1rem; font-weight: 600;'>
+                ⚠️ No hay datos procesados. Usá el panel de Gestión de Datos para cargar archivos CSV.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
         return
     
     fecha_proceso = datos.get('fecha_proceso', 'N/A')
@@ -9155,6 +9164,30 @@ def pagina_metricas_calidad():
     
     # Obtener listas de agentes y equipos para filtros
     tiempos_vendedor = datos_tiempos.get('por_vendedor', [])
+    
+    # Recalcular T. Disponible = Logueo - T. Auxiliar (por si los datos vienen con fórmula vieja)
+    for v in tiempos_vendedor:
+        t_log = v.get('logueo_seg', 0)
+        t_aux = v.get('tiempo_auxiliar_seg', 0)
+        t_disp = max(t_log - t_aux, 0)
+        v['disponible_seg'] = t_disp
+        h = int(t_disp // 3600)
+        m = int((t_disp % 3600) // 60)
+        s = int(t_disp % 60)
+        v['disponible_fmt'] = f"{h:02d}:{m:02d}:{s:02d}"
+    # Recalcular totales de disponible
+    if tiempos_vendedor:
+        total_disp = sum(v.get('disponible_seg', 0) for v in tiempos_vendedor)
+        n = len(tiempos_vendedor)
+        totales_t = datos_tiempos.get('totales', {})
+        totales_t['disponible'] = total_disp
+        h = int(total_disp // 3600); m = int((total_disp % 3600) // 60); s = int(total_disp % 60)
+        totales_t['disponible_fmt'] = f"{h:02d}:{m:02d}:{s:02d}"
+        prom = int(total_disp / n) if n > 0 else 0
+        totales_t['disponible_prom'] = prom
+        h = int(prom // 3600); m = int((prom % 3600) // 60); s = int(prom % 60)
+        totales_t['disponible_prom_fmt'] = f"{h:02d}:{m:02d}:{s:02d}"
+    
     ventas_vendedor = datos_ventas.get('por_vendedor', [])
     llamadas_vendedor = datos_llamadas.get('por_vendedor', [])
     
@@ -9453,7 +9486,7 @@ def pagina_metricas_calidad():
                     'coaching_prom_fmt': pd.to_timedelta(df_temp['coaching_seg'].mean(), unit='s').components if 'coaching_seg' in df_temp.columns else '00:00:00',
                     'administrativo_prom_fmt': pd.to_timedelta(df_temp['administrativo_seg'].mean(), unit='s').components if 'administrativo_seg' in df_temp.columns else '00:00:00',
                     'baño_prom_fmt': pd.to_timedelta(df_temp['baño_seg'].mean(), unit='s').components if 'baño_seg' in df_temp.columns else '00:00:00',
-                    'almuerzo_prom_fmt': pd.to_timedelta(df_temp['almuerzo_seg'].mean(), unit='s').components if 'almuerzo_seg' in df_temp.columns else '00:00:00',
+                    'disponible_prom_fmt': pd.to_timedelta(df_temp['disponible_seg'].mean(), unit='s').components if 'disponible_seg' in df_temp.columns else '00:00:00',
                     'logueo_prom_fmt': pd.to_timedelta(df_temp['logueo_seg'].mean(), unit='s').components if 'logueo_seg' in df_temp.columns else '00:00:00',
                 }
                 # Formatear tiempos
@@ -9475,7 +9508,6 @@ def pagina_metricas_calidad():
                 totales_t['coaching'] = df_temp['coaching_seg'].sum() if 'coaching_seg' in df_temp.columns else 0
                 totales_t['administrativo'] = df_temp['administrativo_seg'].sum() if 'administrativo_seg' in df_temp.columns else 0
                 totales_t['baño'] = df_temp['baño_seg'].sum() if 'baño_seg' in df_temp.columns else 0
-                totales_t['almuerzo'] = df_temp['almuerzo_seg'].sum() if 'almuerzo_seg' in df_temp.columns else 0
                 totales_t['llamada_manual'] = df_temp['llamada_manual_seg'].sum() if 'llamada_manual_seg' in df_temp.columns else 0
             
             # Título según filtro
@@ -9496,7 +9528,7 @@ def pagina_metricas_calidad():
             with col4:
                 st.metric("🚻 Baño", totales_t.get('baño_prom_fmt', '00:00:00'))
             with col5:
-                st.metric("🍽️ Almuerzo", totales_t.get('almuerzo_prom_fmt', '00:00:00'))
+                st.metric("✅ T. Disponible", totales_t.get('disponible_prom_fmt', '00:00:00'))
             with col6:
                 st.metric("⏰ Logueo", totales_t.get('logueo_prom_fmt', '00:00:00'))
             
@@ -9510,7 +9542,6 @@ def pagina_metricas_calidad():
                 'Coaching': totales_t.get('coaching', 0) / 3600 if totales_t.get('coaching') else 0,
                 'Administrativo': totales_t.get('administrativo', 0) / 3600 if totales_t.get('administrativo') else 0,
                 'Baño': totales_t.get('baño', 0) / 3600 if totales_t.get('baño') else 0,
-                'Almuerzo': totales_t.get('almuerzo', 0) / 3600 if totales_t.get('almuerzo') else 0,
                 'Llamada Manual': totales_t.get('llamada_manual', 0) / 3600 if totales_t.get('llamada_manual') else 0
             }
             
@@ -9520,7 +9551,7 @@ def pagina_metricas_calidad():
                     labels=list(tiempos_dist.keys()),
                     values=list(tiempos_dist.values()),
                     hole=0.4,
-                    marker_colors=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#10B981', '#6366F1']
+                    marker_colors=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#6366F1']
                 )])
                 fig_pie.update_layout(title="Distribución de Tiempos Auxiliares (horas)", height=350)
                 st.plotly_chart(fig_pie, use_container_width=True)
@@ -9548,14 +9579,13 @@ def pagina_metricas_calidad():
                         'Coaching': agente_data.get('coaching_seg', 0) / 60,
                         'Admin': agente_data.get('administrativo_seg', 0) / 60,
                         'Baño': agente_data.get('baño_seg', 0) / 60,
-                        'Almuerzo': agente_data.get('almuerzo_seg', 0) / 60,
                         'Logueo': agente_data.get('logueo_seg', 0) / 60
                     }
                     fig_bar = go.Figure()
                     fig_bar.add_trace(go.Bar(
                         x=list(tiempos_ind.keys()),
                         y=list(tiempos_ind.values()),
-                        marker_color=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#10B981', '#6366F1'],
+                        marker_color=['#3B82F6', '#8B5CF6', '#F59E0B', '#EF4444', '#6366F1'],
                         text=[f"{v:.1f} min" for v in tiempos_ind.values()],
                         textposition='outside'
                     ))
@@ -9570,11 +9600,17 @@ def pagina_metricas_calidad():
             df_tiempos = pd.DataFrame(tiempos_filtrados)
             
             # Seleccionar columnas relevantes
-            cols_mostrar = ['vendedor', 'equipo', 'break_fmt', 'coaching_fmt', 'administrativo_fmt', 
-                           'baño_fmt', 'almuerzo_fmt', 'logueo_fmt', 'tiempo_auxiliar_fmt', 'pct_productivo']
+            cols_mostrar = ['vendedor', 'equipo', 'logueo_fmt', 'disponible_fmt', 'break_fmt', 'coaching_fmt', 'administrativo_fmt', 
+                           'baño_fmt', 'llamada_manual_fmt', 'tiempo_auxiliar_fmt']
             cols_disponibles = [c for c in cols_mostrar if c in df_tiempos.columns]
             df_display = df_tiempos[cols_disponibles].copy()
-            df_display.columns = ['Vendedor', 'Equipo', 'Break', 'Coaching', 'Admin', 'Baño', 'Almuerzo', 'Logueo', 'T. Auxiliar', '% Productivo'][:len(cols_disponibles)]
+            nombres_cols = {
+                'vendedor': 'Vendedor', 'equipo': 'Equipo', 'logueo_fmt': 'Logueo Total',
+                'disponible_fmt': 'T. Disponible', 'break_fmt': 'Break', 'coaching_fmt': 'Coaching',
+                'administrativo_fmt': 'Admin', 'baño_fmt': 'Baño', 'llamada_manual_fmt': 'Llamada Manual',
+                'tiempo_auxiliar_fmt': 'T. Auxiliar'
+            }
+            df_display.columns = [nombres_cols.get(c, c) for c in cols_disponibles]
             
             st.dataframe(df_display.sort_values('Vendedor' if 'Vendedor' in df_display.columns else df_display.columns[0]), use_container_width=True, height=400)
     
@@ -10068,7 +10104,7 @@ def pagina_manual_uso():
                 "fondo": "#F0F9FF",
                 "desc": "Métricas operativas de tiempos auxiliares, ventas y llamadas. Integra datos de Mitrol, Customer y Basurita para dar una visión completa del rendimiento.",
                 "detalle": [
-                    "Tiempos auxiliares por agente (Break, Coaching, Admin, Baño, Almuerzo, Logueo)",
+                    "Tiempos auxiliares por agente (Break, Coaching, Admin, Baño, Logueo)",
                     "Distribución de tiempos y Top 10 mayor tiempo auxiliar",
                     "Ventas: total, aprobadas, canceladas, tasa de aprobación y promedio esperado",
                     "Llamadas: TMO, cortadas, superan 1min/5min y % capta atención",
@@ -10382,7 +10418,7 @@ def pagina_manual_uso():
 
         col1, col2, col3 = st.columns(3)
         fuentes = [
-            (col1, "Acumuladores (Mitrol)", "⏱️", "#3B82F6", "Tiempos auxiliares: Break, Coaching, Administrativo, Baño, Almuerzo, Logueo."),
+            (col1, "Acumuladores (Mitrol)", "⏱️", "#3B82F6", "Tiempos auxiliares: Break, Coaching, Administrativo, Baño, Logueo."),
             (col2, "Solicitudes (Customer)", "💼", "#10B981", "Ventas: cargadas, aprobadas, canceladas, preventa y pendientes."),
             (col3, "Basurita (Llamadas)", "📞", "#F59E0B", "Llamadas: cantidad, TMO, cortadas, duración y capta atención."),
         ]
