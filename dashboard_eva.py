@@ -9168,8 +9168,16 @@ def pagina_metricas_calidad():
                                     """Parsea CSV de ventas con estructura de bloques por equipo.
                                     Soporta múltiples equipos separados por filas vacías."""
                                     import csv, io
-                                    contenido = archivo_csv.read().decode('utf-8-sig')
+                                    raw = archivo_csv.read()
                                     archivo_csv.seek(0)
+                                    # Intentar decodificar con utf-8-sig, luego latin-1
+                                    try:
+                                        contenido = raw.decode('utf-8-sig')
+                                    except (UnicodeDecodeError, AttributeError):
+                                        try:
+                                            contenido = raw.decode('latin-1')
+                                        except:
+                                            contenido = raw if isinstance(raw, str) else raw.decode('utf-8', errors='replace')
                                     reader = csv.reader(io.StringIO(contenido))
                                     filas = list(reader)
                                     
@@ -9906,34 +9914,37 @@ def pagina_metricas_calidad():
                 pass
         
         tiene_semanal = 'semanal' in datos_ventas_csv and datos_ventas_csv['semanal'].get('equipos')
-        tiene_mensual = 'mensual' in datos_ventas_csv and datos_ventas_csv['mensual'].get('equipos')
+        tiene_mensual_csv = 'mensual' in datos_ventas_csv and datos_ventas_csv['mensual'].get('equipos')
         tiene_solicitudes = bool(datos_ventas.get('por_vendedor')) or bool(datos_ventas.get('por_equipo'))
+        # Mensual se muestra si hay datos CSV mensual O datos de solicitudes
+        tiene_mensual = tiene_mensual_csv or tiene_solicitudes
         
-        if not tiene_semanal and not tiene_mensual and not tiene_solicitudes:
+        if not tiene_semanal and not tiene_mensual:
             st.info("📌 No hay datos de ventas cargados. Subí un CSV de ventas semanal o mensual en la sección **Cargar Datos**.")
         else:
-            # Toggle Semanal / Mensual / Solicitudes
+            # =====================================================================
+            # TOGGLE SEMANAL / MENSUAL
+            # =====================================================================
             opciones_vista = []
             if tiene_semanal: opciones_vista.append("📅 Semanal")
             if tiene_mensual: opciones_vista.append("📆 Mensual")
-            if tiene_solicitudes: opciones_vista.append("📋 Solicitudes")
             
-            col_toggle1, col_toggle2 = st.columns([1, 2])
-            with col_toggle1:
-                vista_ventas = st.selectbox("📊 Vista", opciones_vista, key='vista_ventas', label_visibility='collapsed')
-            with col_toggle2:
-                if "Semanal" in vista_ventas:
-                    label_vista, color_badge, icon_vista = "Semanal", "#3B82F6", "📅"
-                elif "Mensual" in vista_ventas:
-                    label_vista, color_badge, icon_vista = "Mensual", "#8B5CF6", "📆"
-                else:
-                    label_vista, color_badge, icon_vista = "Solicitudes", "#F59E0B", "📋"
-                st.markdown(f"""
-                <div style='display: flex; align-items: center; height: 100%; padding-top: 6px;'>
-                    <span style='background: {color_badge}; color: white; padding: 6px 18px; border-radius: 20px; font-weight: 600; font-size: 0.95rem;'>
-                        {icon_vista} Vista {label_vista}
-                    </span>
-                </div>
+            # Si solo hay una opción, usarla directamente
+            if len(opciones_vista) == 1:
+                vista_ventas = opciones_vista[0]
+            else:
+                col_toggle1, col_toggle2 = st.columns([1, 2])
+                with col_toggle1:
+                    vista_ventas = st.selectbox("📊 Vista", opciones_vista, key='vista_ventas', label_visibility='collapsed')
+                with col_toggle2:
+                    label_vista = "Semanal" if "Semanal" in vista_ventas else "Mensual"
+                    color_badge = "#3B82F6" if "Semanal" in vista_ventas else "#8B5CF6"
+                    st.markdown(f"""
+                    <div style='display: flex; align-items: center; height: 100%; padding-top: 6px;'>
+                        <span style='background: {color_badge}; color: white; padding: 6px 18px; border-radius: 20px; font-weight: 600; font-size: 0.95rem;'>
+                            {'📅' if 'Semanal' in vista_ventas else '📆'} Vista {label_vista}
+                        </span>
+                    </div>
                 """, unsafe_allow_html=True)
             
             st.markdown("---")
@@ -10089,375 +10100,315 @@ def pagina_metricas_calidad():
             
             # ===== VISTA MENSUAL =====
             elif vista_ventas == "📆 Mensual" and tiene_mensual:
-                equipos_men = datos_ventas_csv['mensual']['equipos']
-                fecha_men = datos_ventas_csv['mensual'].get('fecha_proceso', '')
-                if fecha_men:
-                    st.caption(f"📆 Datos procesados: {fecha_men}")
-                
-                # Totales generales sumando todos los equipos
-                total_cargadas = sum(eq['totales'].get('ventas_cargadas', 0) for eq in equipos_men)
-                total_aprobadas = sum(eq['totales'].get('ventas_aprobadas', 0) for eq in equipos_men)
-                total_canceladas = sum(eq['totales'].get('ventas_canceladas', 0) for eq in equipos_men)
-                total_pendientes = sum(eq['totales'].get('ventas_pendientes', 0) for eq in equipos_men)
-                efectividad_global = round(total_aprobadas / total_cargadas * 100, 1) if total_cargadas > 0 else 0
-                
-                # KPIs generales
-                st.markdown("#### 📊 Resumen General Mensual")
-                col1, col2, col3, col4, col5 = st.columns(5)
-                with col1:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>📦 CARGADAS</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_cargadas}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col2:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>✅ APROBADAS</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_aprobadas}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col3:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>❌ CANCELADAS</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_canceladas}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col4:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>⏳ PENDIENTES</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_pendientes}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col5:
-                    color_ef = '#10B981' if efectividad_global >= 70 else '#F59E0B' if efectividad_global >= 50 else '#EF4444'
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, {color_ef} 0%, {color_ef}CC 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>📈 EFECTIVIDAD</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{efectividad_global}%</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                
-                st.markdown("---")
-                
-                # Por cada equipo
-                for eq in equipos_men:
-                    nombre_eq = eq['equipo']
-                    tot_eq = eq['totales']
-                    vendedores_aprob = eq['vendedores']  # Tabla 1: Efectividad Aprobación
-                    vendedores_carga = eq.get('vendedores_carga', [])  # Tabla 2: Efectividad Carga
+                # --- Parte A: Datos CSV Mensual (si existen) ---
+                if tiene_mensual_csv:
+                    equipos_men = datos_ventas_csv['mensual']['equipos']
+                    fecha_men = datos_ventas_csv['mensual'].get('fecha_proceso', '')
+                    if fecha_men:
+                        st.caption(f"📆 Datos procesados: {fecha_men}")
                     
-                    if not vendedores_aprob:
-                        continue
+                    total_cargadas = sum(eq['totales'].get('ventas_cargadas', 0) for eq in equipos_men)
+                    total_aprobadas = sum(eq['totales'].get('ventas_aprobadas', 0) for eq in equipos_men)
+                    total_canceladas = sum(eq['totales'].get('ventas_canceladas', 0) for eq in equipos_men)
+                    total_pendientes = sum(eq['totales'].get('ventas_pendientes', 0) for eq in equipos_men)
+                    efectividad_global = round(total_aprobadas / total_cargadas * 100, 1) if total_cargadas > 0 else 0
                     
-                    with st.expander(f"🏢 {nombre_eq}", expanded=True):
-                        # Totales del equipo
-                        c1, c2, c3, c4, c5 = st.columns(5)
-                        with c1:
-                            st.metric("📦 Cargadas", tot_eq.get('ventas_cargadas', 0))
-                        with c2:
-                            st.metric("✅ Aprobadas", tot_eq.get('ventas_aprobadas', 0))
-                        with c3:
-                            st.metric("❌ Canceladas", tot_eq.get('ventas_canceladas', 0))
-                        with c4:
-                            st.metric("⏳ Pendientes", tot_eq.get('ventas_pendientes', 0))
-                        with c5:
-                            ef_eq = tot_eq.get('efectividad_equipo', '0')
-                            st.metric("📈 Efect. Equipo", f"{ef_eq}%")
+                    st.markdown("#### 📊 Resumen General Mensual")
+                    col1, col2, col3, col4, col5 = st.columns(5)
+                    with col1:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>📦 CARGADAS</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_cargadas}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col2:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>✅ APROBADAS</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_aprobadas}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col3:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>❌ CANCELADAS</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_canceladas}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col4:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>⏳ PENDIENTES</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_pendientes}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col5:
+                        color_ef = '#10B981' if efectividad_global >= 70 else '#F59E0B' if efectividad_global >= 50 else '#EF4444'
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, {color_ef} 0%, {color_ef}CC 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>📈 EFECTIVIDAD</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{efectividad_global}%</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    
+                    st.markdown("---")
+                    
+                    for eq in equipos_men:
+                        nombre_eq = eq['equipo']
+                        tot_eq = eq['totales']
+                        vendedores_aprob = eq['vendedores']
+                        vendedores_carga = eq.get('vendedores_carga', [])
                         
-                        # ---- GRÁFICO 1: Efectividad de Aprobación ----
-                        st.markdown("##### ✅ Efectividad de Aprobación")
-                        df_aprob = pd.DataFrame(vendedores_aprob)
-                        # Ordenar por mejor % de aprobación primero
-                        df_aprob = df_aprob.sort_values('efectividad_aprobacion', ascending=False).reset_index(drop=True)
+                        if not vendedores_aprob:
+                            continue
                         
-                        fig_aprob = go.Figure()
-                        # Barra 1: Cargadas (azul)
-                        fig_aprob.add_trace(go.Bar(
-                            x=df_aprob['vendedor'],
-                            y=df_aprob['cargadas'],
-                            name='Cargadas',
-                            marker_color='#3B82F6',
-                            text=df_aprob['cargadas'],
-                            textposition='outside'
-                        ))
-                        # Barra 2: Aprobadas (verde)
-                        fig_aprob.add_trace(go.Bar(
-                            x=df_aprob['vendedor'],
-                            y=df_aprob['aprobadas'],
-                            name='Aprobadas',
-                            marker_color='#10B981',
-                            text=df_aprob['aprobadas'],
-                            textposition='outside'
-                        ))
-                        # Barra 3: Canceladas (rojo)
-                        fig_aprob.add_trace(go.Bar(
-                            x=df_aprob['vendedor'],
-                            y=df_aprob['canceladas'],
-                            name='Canceladas',
-                            marker_color='#EF4444',
-                            text=df_aprob['canceladas'],
-                            textposition='outside'
-                        ))
-                        fig_aprob.update_layout(
+                        with st.expander(f"🏢 {nombre_eq}", expanded=True):
+                            c1, c2, c3, c4, c5 = st.columns(5)
+                            with c1:
+                                st.metric("📦 Cargadas", tot_eq.get('ventas_cargadas', 0))
+                            with c2:
+                                st.metric("✅ Aprobadas", tot_eq.get('ventas_aprobadas', 0))
+                            with c3:
+                                st.metric("❌ Canceladas", tot_eq.get('ventas_canceladas', 0))
+                            with c4:
+                                st.metric("⏳ Pendientes", tot_eq.get('ventas_pendientes', 0))
+                            with c5:
+                                ef_eq = tot_eq.get('efectividad_equipo', '0')
+                                st.metric("📈 Efect. Equipo", f"{ef_eq}%")
+                            
+                            st.markdown("##### ✅ Efectividad de Aprobación")
+                            df_aprob = pd.DataFrame(vendedores_aprob)
+                            df_aprob = df_aprob.sort_values('efectividad_aprobacion', ascending=False).reset_index(drop=True)
+                            
+                            fig_aprob = go.Figure()
+                            fig_aprob.add_trace(go.Bar(x=df_aprob['vendedor'], y=df_aprob['cargadas'], name='Cargadas', marker_color='#3B82F6', text=df_aprob['cargadas'], textposition='outside'))
+                            fig_aprob.add_trace(go.Bar(x=df_aprob['vendedor'], y=df_aprob['aprobadas'], name='Aprobadas', marker_color='#10B981', text=df_aprob['aprobadas'], textposition='outside'))
+                            fig_aprob.add_trace(go.Bar(x=df_aprob['vendedor'], y=df_aprob['canceladas'], name='Canceladas', marker_color='#EF4444', text=df_aprob['canceladas'], textposition='outside'))
+                            fig_aprob.update_layout(barmode='group', height=420, xaxis_tickangle=-45, yaxis_title="Cantidad",
+                                                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1), margin=dict(b=100))
+                            st.plotly_chart(fig_aprob, use_container_width=True)
+                            
+                            st.markdown("##### 📋 Detalle — Efectividad de Aprobación")
+                            df_t1 = df_aprob[['vendedor', 'cargadas', 'aprobadas', 'canceladas', 'efectividad_aprobacion']].copy()
+                            df_t1.columns = ['Vendedor', 'Cargadas', 'Aprobadas', 'Canceladas', 'Efectividad Aprobación %']
+                            
+                            def _color_efect(val):
+                                try:
+                                    v = float(val)
+                                    if v >= 70: return 'background-color: #D1FAE5; color: #065F46;'
+                                    elif v >= 50: return 'background-color: #FEF3C7; color: #92400E;'
+                                    else: return 'background-color: #FEE2E2; color: #991B1B;'
+                                except:
+                                    return ''
+                            
+                            styled_t1 = df_t1.style.applymap(_color_efect, subset=['Efectividad Aprobación %'])
+                            styled_t1 = styled_t1.format({'Efectividad Aprobación %': '{:.2f}%'})
+                            st.dataframe(styled_t1, use_container_width=True, height=min(450, 40 + len(df_t1) * 35))
+                            
+                            if vendedores_carga:
+                                st.markdown("---")
+                                st.markdown("##### 🎯 Efectividad de Carga vs Objetivo")
+                                df_carga = pd.DataFrame(vendedores_carga)
+                                df_carga = df_carga.sort_values('efectividad_carga', ascending=False).reset_index(drop=True)
+                                
+                                fig_carga = go.Figure()
+                                fig_carga.add_trace(go.Bar(x=df_carga['vendedor'], y=df_carga['cargadas'], name='Cargadas', marker_color='#3B82F6', text=df_carga['cargadas'], textposition='outside'))
+                                fig_carga.add_trace(go.Bar(x=df_carga['vendedor'], y=df_carga['aprobadas'], name='Aprobadas', marker_color='#10B981', text=df_carga['aprobadas'], textposition='outside'))
+                                fig_carga.add_trace(go.Bar(x=df_carga['vendedor'], y=df_carga['objetivo'], name='Objetivo', marker_color='#F59E0B', text=df_carga['objetivo'], textposition='outside'))
+                                fig_carga.update_layout(barmode='group', height=420, xaxis_tickangle=-45, yaxis_title="Cantidad",
+                                                        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1), margin=dict(b=100))
+                                st.plotly_chart(fig_carga, use_container_width=True)
+                                
+                                st.markdown("##### 📋 Detalle — Efectividad de Carga")
+                                df_t2 = df_carga[['vendedor', 'cargadas', 'aprobadas', 'objetivo', 'efectividad_carga']].copy()
+                                df_t2.columns = ['Vendedor', 'Cargadas', 'Aprobadas', 'Objetivo', 'Efectividad Carga %']
+                                styled_t2 = df_t2.style.applymap(_color_efect, subset=['Efectividad Carga %'])
+                                styled_t2 = styled_t2.format({'Efectividad Carga %': '{:.2f}%'})
+                                st.dataframe(styled_t2, use_container_width=True, height=min(450, 40 + len(df_t2) * 35))
+                
+                # --- Parte B: Solicitudes (siempre visible en Mensual) ---
+                if tiene_solicitudes:
+                    st.markdown("---")
+                    st.markdown("""
+                    <div style='background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); 
+                                padding: 12px 20px; border-radius: 10px; margin-bottom: 15px;'>
+                        <p style='margin: 0; font-size: 1.1rem; font-weight: 700; color: white;'>
+                            📋 SOLICITUDES — Detalle desde archivo de Solicitudes
+                        </p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    totales_sol = datos_ventas.get('totales', {})
+                    equipos_sol = datos_ventas.get('por_equipo', [])
+                    vendedores_sol = datos_ventas.get('por_vendedor', [])
+                    
+                    total_v = totales_sol.get('total_ventas', 0)
+                    total_a = totales_sol.get('total_aprobadas', 0)
+                    total_c = totales_sol.get('total_canceladas', 0)
+                    total_p = totales_sol.get('total_pendientes', 0)
+                    tasa_global = totales_sol.get('tasa_aprobacion_global', 0)
+                    
+                    # KPIs generales
+                    st.markdown("#### 📊 Resumen General de Solicitudes")
+                    col1, col2, col3, col4, col5 = st.columns(5)
+                    with col1:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>📦 TOTAL</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_v}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col2:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>✅ APROBADAS</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_a}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col3:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>❌ CANCELADAS</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_c}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col4:
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>⏳ PENDIENTES</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_p}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    with col5:
+                        color_tasa = "#10B981" if tasa_global >= 60 else "#F59E0B" if tasa_global >= 40 else "#EF4444"
+                        st.markdown(f"""
+                        <div style='background: linear-gradient(135deg, {color_tasa} 0%, {color_tasa}CC 100%); 
+                                    padding: 15px; border-radius: 12px; text-align: center; color: white;'>
+                            <p style='margin: 0; font-size: 0.8rem;'>📊 TASA APROB.</p>
+                            <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{tasa_global}%</p>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    
+                    st.markdown("---")
+                    
+                    # Gráfico general por equipo
+                    if equipos_sol:
+                        st.markdown("#### 📊 Resumen por Equipo")
+                        
+                        eq_sorted = sorted(equipos_sol, key=lambda x: x.get('tasa_aprobacion', 0), reverse=True)
+                        eq_nombres = [e['equipo'] for e in eq_sorted]
+                        
+                        fig_eq = go.Figure()
+                        fig_eq.add_trace(go.Bar(name='Aprobadas', x=eq_nombres, y=[e['aprobadas'] for e in eq_sorted],
+                                                marker_color='#10B981'))
+                        fig_eq.add_trace(go.Bar(name='Canceladas', x=eq_nombres, y=[e['canceladas'] for e in eq_sorted],
+                                                marker_color='#EF4444'))
+                        fig_eq.add_trace(go.Bar(name='Pendientes', x=eq_nombres, y=[e['pendientes'] for e in eq_sorted],
+                                                marker_color='#9CA3AF'))
+                        fig_eq.update_layout(
                             barmode='group',
-                            height=420, 
-                            xaxis_tickangle=-45,
+                            height=420,
+                            xaxis_tickangle=-25,
                             yaxis_title="Cantidad",
                             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                            margin=dict(b=100)
+                            margin=dict(b=80)
                         )
-                        st.plotly_chart(fig_aprob, use_container_width=True)
+                        st.plotly_chart(fig_eq, use_container_width=True)
                         
-                        # Tabla Efectividad Aprobación
-                        st.markdown("##### 📋 Detalle — Efectividad de Aprobación")
-                        df_t1 = df_aprob[['vendedor', 'cargadas', 'aprobadas', 'canceladas', 'efectividad_aprobacion']].copy()
-                        df_t1.columns = ['Vendedor', 'Cargadas', 'Aprobadas', 'Canceladas', 'Efectividad Aprobación %']
+                        # Tabla resumen por equipo
+                        st.markdown("##### 📋 Detalle por Equipo")
+                        df_eq = pd.DataFrame(equipos_sol)
+                        df_eq_display = df_eq[['equipo', 'ejecutivo', 'num_vendedores', 'total_ventas', 'aprobadas', 'canceladas', 'pendientes', 'tasa_aprobacion']].copy()
+                        df_eq_display.columns = ['Equipo', 'Ejecutivo', 'Vendedores', 'Total', 'Aprobadas', 'Canceladas', 'Pendientes', 'Tasa Aprob. %']
+                        df_eq_display = df_eq_display.sort_values('Tasa Aprob. %', ascending=False)
                         
-                        def _color_efect(val):
+                        def _color_tasa_sol(val):
                             try:
                                 v = float(val)
-                                if v >= 70: return 'background-color: #D1FAE5; color: #065F46;'
-                                elif v >= 50: return 'background-color: #FEF3C7; color: #92400E;'
-                                else: return 'background-color: #FEE2E2; color: #991B1B;'
+                                if v >= 70: return 'background-color: #D1FAE5; color: #065F46'
+                                elif v >= 50: return 'background-color: #FEF3C7; color: #92400E'
+                                elif v >= 30: return 'background-color: #FFEDD5; color: #9A3412'
+                                else: return 'background-color: #FEE2E2; color: #991B1B'
                             except:
                                 return ''
                         
-                        styled_t1 = df_t1.style.applymap(_color_efect, subset=['Efectividad Aprobación %'])
-                        styled_t1 = styled_t1.format({'Efectividad Aprobación %': '{:.2f}%'})
-                        st.dataframe(styled_t1, use_container_width=True, height=min(450, 40 + len(df_t1) * 35))
-                        
-                        # ---- GRÁFICO 2: Efectividad de Carga ----
-                        if vendedores_carga:
-                            st.markdown("---")
-                            st.markdown("##### 🎯 Efectividad de Carga vs Objetivo")
-                            df_carga = pd.DataFrame(vendedores_carga)
-                            # Ordenar por mejor % de efectividad de carga primero
-                            df_carga = df_carga.sort_values('efectividad_carga', ascending=False).reset_index(drop=True)
+                        styled_eq = df_eq_display.style.applymap(_color_tasa_sol, subset=['Tasa Aprob. %'])
+                        styled_eq = styled_eq.format({'Tasa Aprob. %': '{:.1f}%'})
+                        st.dataframe(styled_eq, use_container_width=True, height=min(400, 40 + len(df_eq_display) * 35))
+                    
+                    st.markdown("---")
+                    
+                    # Detalle por equipo con expanders
+                    if equipos_sol:
+                        st.markdown("#### 👥 Detalle por Equipo")
+                        for eq_data in sorted(equipos_sol, key=lambda x: x.get('aprobadas', 0), reverse=True):
+                            eq_nombre = eq_data['equipo']
+                            eq_ejecutivo = eq_data.get('ejecutivo', '')
+                            eq_tasa = eq_data.get('tasa_aprobacion', 0)
+                            semaforo_eq = '🟢' if eq_tasa >= 70 else '🟡' if eq_tasa >= 50 else '🟠' if eq_tasa >= 30 else '🔴'
                             
-                            fig_carga = go.Figure()
-                            # Barra 1: Cargadas (azul)
-                            fig_carga.add_trace(go.Bar(
-                                x=df_carga['vendedor'],
-                                y=df_carga['cargadas'],
-                                name='Cargadas',
-                                marker_color='#3B82F6',
-                                text=df_carga['cargadas'],
-                                textposition='outside'
-                            ))
-                            # Barra 2: Aprobadas (verde)
-                            fig_carga.add_trace(go.Bar(
-                                x=df_carga['vendedor'],
-                                y=df_carga['aprobadas'],
-                                name='Aprobadas',
-                                marker_color='#10B981',
-                                text=df_carga['aprobadas'],
-                                textposition='outside'
-                            ))
-                            # Barra 3: Objetivo (amarillo)
-                            fig_carga.add_trace(go.Bar(
-                                x=df_carga['vendedor'],
-                                y=df_carga['objetivo'],
-                                name='Objetivo',
-                                marker_color='#F59E0B',
-                                text=df_carga['objetivo'],
-                                textposition='outside'
-                            ))
-                            fig_carga.update_layout(
-                                barmode='group',
-                                height=420,
-                                xaxis_tickangle=-45,
-                                yaxis_title="Cantidad",
-                                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                                margin=dict(b=100)
-                            )
-                            st.plotly_chart(fig_carga, use_container_width=True)
-                            
-                            # Tabla Efectividad de Carga
-                            st.markdown("##### 📋 Detalle — Efectividad de Carga")
-                            df_t2 = df_carga[['vendedor', 'cargadas', 'aprobadas', 'objetivo', 'efectividad_carga']].copy()
-                            df_t2.columns = ['Vendedor', 'Cargadas', 'Aprobadas', 'Objetivo', 'Efectividad Carga %']
-                            
-                            styled_t2 = df_t2.style.applymap(_color_efect, subset=['Efectividad Carga %'])
-                            styled_t2 = styled_t2.format({'Efectividad Carga %': '{:.2f}%'})
-                            st.dataframe(styled_t2, use_container_width=True, height=min(450, 40 + len(df_t2) * 35))
-            
-            # ===== VISTA SOLICITUDES =====
-            if vista_ventas == "📋 Solicitudes" and tiene_solicitudes:
-                totales_sol = datos_ventas.get('totales', {})
-                equipos_sol = datos_ventas.get('por_equipo', [])
-                vendedores_sol = datos_ventas.get('por_vendedor', [])
-                
-                total_v = totales_sol.get('total_ventas', 0)
-                total_a = totales_sol.get('total_aprobadas', 0)
-                total_c = totales_sol.get('total_canceladas', 0)
-                total_p = totales_sol.get('total_pendientes', 0)
-                tasa_global = totales_sol.get('tasa_aprobacion_global', 0)
-                
-                # KPIs generales
-                st.markdown("#### 📊 Resumen General de Solicitudes")
-                col1, col2, col3, col4, col5 = st.columns(5)
-                with col1:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>📦 TOTAL</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_v}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col2:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #10B981 0%, #059669 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>✅ APROBADAS</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_a}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col3:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>❌ CANCELADAS</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_c}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col4:
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>⏳ PENDIENTES</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{total_p}</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                with col5:
-                    color_tasa = "#10B981" if tasa_global >= 60 else "#F59E0B" if tasa_global >= 40 else "#EF4444"
-                    st.markdown(f"""
-                    <div style='background: linear-gradient(135deg, {color_tasa} 0%, {color_tasa}CC 100%); 
-                                padding: 15px; border-radius: 12px; text-align: center; color: white;'>
-                        <p style='margin: 0; font-size: 0.8rem;'>📊 TASA APROB.</p>
-                        <p style='margin: 5px 0 0 0; font-size: 1.8rem; font-weight: bold;'>{tasa_global}%</p>
-                    </div>
-                    """, unsafe_allow_html=True)
-                
-                st.markdown("---")
-                
-                # Gráfico general por equipo
-                if equipos_sol:
-                    st.markdown("#### 📊 Resumen por Equipo")
-                    import plotly.graph_objects as go
-                    
-                    eq_sorted = sorted(equipos_sol, key=lambda x: x.get('tasa_aprobacion', 0), reverse=True)
-                    eq_nombres = [e['equipo'] for e in eq_sorted]
-                    
-                    fig_eq = go.Figure()
-                    fig_eq.add_trace(go.Bar(name='Aprobadas', x=eq_nombres, y=[e['aprobadas'] for e in eq_sorted],
-                                            marker_color='#10B981'))
-                    fig_eq.add_trace(go.Bar(name='Canceladas', x=eq_nombres, y=[e['canceladas'] for e in eq_sorted],
-                                            marker_color='#EF4444'))
-                    fig_eq.add_trace(go.Bar(name='Pendientes', x=eq_nombres, y=[e['pendientes'] for e in eq_sorted],
-                                            marker_color='#9CA3AF'))
-                    fig_eq.update_layout(
-                        barmode='group',
-                        height=420,
-                        xaxis_tickangle=-25,
-                        yaxis_title="Cantidad",
-                        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                        margin=dict(b=80)
-                    )
-                    st.plotly_chart(fig_eq, use_container_width=True)
-                    
-                    # Tabla resumen por equipo
-                    st.markdown("##### 📋 Detalle por Equipo")
-                    df_eq = pd.DataFrame(equipos_sol)
-                    df_eq_display = df_eq[['equipo', 'ejecutivo', 'num_vendedores', 'total_ventas', 'aprobadas', 'canceladas', 'pendientes', 'tasa_aprobacion']].copy()
-                    df_eq_display.columns = ['Equipo', 'Ejecutivo', 'Vendedores', 'Total', 'Aprobadas', 'Canceladas', 'Pendientes', 'Tasa Aprob. %']
-                    df_eq_display = df_eq_display.sort_values('Tasa Aprob. %', ascending=False)
-                    
-                    def _color_tasa_sol(val):
-                        try:
-                            v = float(val)
-                            if v >= 70: return 'background-color: #D1FAE5; color: #065F46'
-                            elif v >= 50: return 'background-color: #FEF3C7; color: #92400E'
-                            elif v >= 30: return 'background-color: #FFEDD5; color: #9A3412'
-                            else: return 'background-color: #FEE2E2; color: #991B1B'
-                        except:
-                            return ''
-                    
-                    styled_eq = df_eq_display.style.applymap(_color_tasa_sol, subset=['Tasa Aprob. %'])
-                    styled_eq = styled_eq.format({'Tasa Aprob. %': '{:.1f}%'})
-                    st.dataframe(styled_eq, use_container_width=True, height=min(400, 40 + len(df_eq_display) * 35))
-                
-                st.markdown("---")
-                
-                # Detalle por equipo con expanders
-                if equipos_sol:
-                    st.markdown("#### 👥 Detalle por Equipo")
-                    for eq_data in sorted(equipos_sol, key=lambda x: x.get('aprobadas', 0), reverse=True):
-                        eq_nombre = eq_data['equipo']
-                        eq_ejecutivo = eq_data.get('ejecutivo', '')
-                        eq_tasa = eq_data.get('tasa_aprobacion', 0)
-                        semaforo_eq = '🟢' if eq_tasa >= 70 else '🟡' if eq_tasa >= 50 else '🟠' if eq_tasa >= 30 else '🔴'
-                        
-                        with st.expander(f"{semaforo_eq} {eq_nombre} — Ejecutivo: {eq_ejecutivo} | {eq_data['total_ventas']} solicitudes | Tasa: {eq_tasa}%", expanded=False):
-                            # KPIs del equipo
-                            ck1, ck2, ck3, ck4 = st.columns(4)
-                            with ck1:
-                                st.metric("Total", eq_data['total_ventas'])
-                            with ck2:
-                                st.metric("Aprobadas", eq_data['aprobadas'])
-                            with ck3:
-                                st.metric("Canceladas", eq_data['canceladas'])
-                            with ck4:
-                                st.metric("Pendientes", eq_data['pendientes'])
-                            
-                            # Vendedores de este equipo
-                            vends_eq = [v for v in vendedores_sol if v.get('equipo') == eq_nombre]
-                            if vends_eq:
-                                vends_eq_sorted = sorted(vends_eq, key=lambda x: x.get('aprobadas', 0), reverse=True)
+                            with st.expander(f"{semaforo_eq} {eq_nombre} — Ejecutivo: {eq_ejecutivo} | {eq_data['total_ventas']} solicitudes | Tasa: {eq_tasa}%", expanded=False):
+                                # KPIs del equipo
+                                ck1, ck2, ck3, ck4 = st.columns(4)
+                                with ck1:
+                                    st.metric("Total", eq_data['total_ventas'])
+                                with ck2:
+                                    st.metric("Aprobadas", eq_data['aprobadas'])
+                                with ck3:
+                                    st.metric("Canceladas", eq_data['canceladas'])
+                                with ck4:
+                                    st.metric("Pendientes", eq_data['pendientes'])
                                 
-                                # Gráfico de barras agrupadas por vendedor
-                                v_nombres = [v['vendedor'] for v in vends_eq_sorted]
-                                fig_v = go.Figure()
-                                fig_v.add_trace(go.Bar(name='Aprobadas', x=v_nombres, y=[v['aprobadas'] for v in vends_eq_sorted],
-                                                       marker_color='#10B981'))
-                                fig_v.add_trace(go.Bar(name='Canceladas', x=v_nombres, y=[v['canceladas'] for v in vends_eq_sorted],
-                                                       marker_color='#EF4444'))
-                                fig_v.add_trace(go.Bar(name='Pendientes', x=v_nombres, y=[v['pendientes'] for v in vends_eq_sorted],
-                                                       marker_color='#9CA3AF'))
-                                fig_v.update_layout(
-                                    barmode='group',
-                                    height=380,
-                                    xaxis_tickangle=-35,
-                                    yaxis_title="Cantidad",
-                                    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-                                    margin=dict(b=100)
-                                )
-                                st.plotly_chart(fig_v, use_container_width=True)
-                                
-                                # Tabla de vendedores
-                                st.markdown("##### 📋 Detalle de Vendedores")
-                                df_v_eq = pd.DataFrame(vends_eq_sorted)
-                                cols_show = ['vendedor', 'total_ventas', 'aprobadas', 'canceladas', 'pendientes', 'tasa_aprobacion', 'estado']
-                                cols_show = [c for c in cols_show if c in df_v_eq.columns]
-                                df_v_display = df_v_eq[cols_show].copy()
-                                nombres_v = {'vendedor': 'Vendedor', 'total_ventas': 'Total', 'aprobadas': 'Aprobadas',
-                                             'canceladas': 'Canceladas', 'pendientes': 'Pendientes',
-                                             'tasa_aprobacion': 'Tasa %', 'estado': 'Estado'}
-                                df_v_display.columns = [nombres_v.get(c, c) for c in cols_show]
-                                if 'Tasa %' in df_v_display.columns:
-                                    styled_v = df_v_display.style.applymap(_color_tasa_sol, subset=['Tasa %'])
-                                    styled_v = styled_v.format({'Tasa %': '{:.1f}%'})
-                                    st.dataframe(styled_v, use_container_width=True, height=min(400, 40 + len(df_v_display) * 35))
-                                else:
-                                    st.dataframe(df_v_display, use_container_width=True, height=min(400, 40 + len(df_v_display) * 35))
+                                # Vendedores de este equipo
+                                vends_eq = [v for v in vendedores_sol if v.get('equipo') == eq_nombre]
+                                if vends_eq:
+                                    vends_eq_sorted = sorted(vends_eq, key=lambda x: x.get('aprobadas', 0), reverse=True)
+                                    
+                                    # Gráfico de barras agrupadas por vendedor
+                                    v_nombres = [v['vendedor'] for v in vends_eq_sorted]
+                                    fig_v = go.Figure()
+                                    fig_v.add_trace(go.Bar(name='Aprobadas', x=v_nombres, y=[v['aprobadas'] for v in vends_eq_sorted],
+                                                           marker_color='#10B981'))
+                                    fig_v.add_trace(go.Bar(name='Canceladas', x=v_nombres, y=[v['canceladas'] for v in vends_eq_sorted],
+                                                           marker_color='#EF4444'))
+                                    fig_v.add_trace(go.Bar(name='Pendientes', x=v_nombres, y=[v['pendientes'] for v in vends_eq_sorted],
+                                                           marker_color='#9CA3AF'))
+                                    fig_v.update_layout(
+                                        barmode='group',
+                                        height=380,
+                                        xaxis_tickangle=-35,
+                                        yaxis_title="Cantidad",
+                                        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+                                        margin=dict(b=100)
+                                    )
+                                    st.plotly_chart(fig_v, use_container_width=True)
+                                    
+                                    # Tabla de vendedores
+                                    st.markdown("##### 📋 Detalle de Vendedores")
+                                    df_v_eq = pd.DataFrame(vends_eq_sorted)
+                                    cols_show = ['vendedor', 'total_ventas', 'aprobadas', 'canceladas', 'pendientes', 'tasa_aprobacion', 'estado']
+                                    cols_show = [c for c in cols_show if c in df_v_eq.columns]
+                                    df_v_display = df_v_eq[cols_show].copy()
+                                    nombres_v = {'vendedor': 'Vendedor', 'total_ventas': 'Total', 'aprobadas': 'Aprobadas',
+                                                 'canceladas': 'Canceladas', 'pendientes': 'Pendientes',
+                                                 'tasa_aprobacion': 'Tasa %', 'estado': 'Estado'}
+                                    df_v_display.columns = [nombres_v.get(c, c) for c in cols_show]
+                                    if 'Tasa %' in df_v_display.columns:
+                                        styled_v = df_v_display.style.applymap(_color_tasa_sol, subset=['Tasa %'])
+                                        styled_v = styled_v.format({'Tasa %': '{:.1f}%'})
+                                        st.dataframe(styled_v, use_container_width=True, height=min(400, 40 + len(df_v_display) * 35))
+                                    else:
+                                        st.dataframe(df_v_display, use_container_width=True, height=min(400, 40 + len(df_v_display) * 35))
     
     # =========================================================================
     # TAB 3: LLAMADAS
