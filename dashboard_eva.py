@@ -10764,13 +10764,14 @@ def pagina_manual_uso():
                 "nombre": "Métricas de Calidad",
                 "color": "#0EA5E9",
                 "fondo": "#F0F9FF",
-                "desc": "Métricas operativas de tiempos auxiliares, ventas y llamadas. Integra datos de Mitrol, Customer y Basurita para dar una visión completa del rendimiento.",
+                "desc": "Métricas operativas de tiempos auxiliares, ventas y llamadas. Integra datos de Mitrol, Solicitudes (Customer) y Basurita para dar una visión completa del rendimiento.",
                 "detalle": [
                     "Tiempos auxiliares por agente (Break, Coaching, Admin, Baño, Almuerzo, Logueo)",
                     "Distribución de tiempos y Top 10 mayor tiempo auxiliar",
-                    "Ventas: total, aprobadas, canceladas, tasa de aprobación y promedio esperado",
+                    "Ventas Semanal: selector por semana ISO, KPIs (Cargadas/Aprobadas/Canceladas/Pendientes/Vendedores/Tasa Aprob.), comparativa y detalle por equipo",
+                    "Ventas Mensual: visión completa del mes con filtro multiselect por equipo, mismos KPIs y detalle por equipo con semáforo",
                     "Llamadas: TMO, cortadas, superan 1min/5min y % capta atención",
-                    "Filtros por vista General, por Equipo o por Agente individual",
+                    "Filtros por vista General, por Equipo o por Agente individual (en Tiempos y Llamadas)",
                 ]
             },
         ]
@@ -11081,7 +11082,7 @@ def pagina_manual_uso():
         col1, col2, col3 = st.columns(3)
         fuentes = [
             (col1, "Acumuladores (Mitrol)", "⏱️", "#3B82F6", "Tiempos auxiliares: Break, Coaching, Administrativo, Baño, Almuerzo, Logueo."),
-            (col2, "Solicitudes (Customer)", "💼", "#10B981", "Ventas: cargadas, aprobadas, canceladas, preventa y pendientes."),
+            (col2, "Solicitudes (Customer)", "💼", "#10B981", "Ventas: cargadas, aprobadas, canceladas y pendientes. Vista Semanal y Mensual."),
             (col3, "Basurita (Llamadas)", "📞", "#F59E0B", "Llamadas: cantidad, TMO, cortadas, duración y capta atención."),
         ]
         for col_obj, titulo, icono, color, desc in fuentes:
@@ -11188,15 +11189,35 @@ def pagina_manual_uso():
             <div style='padding: 14px;'>
                 <div style='background: #ECFDF5; border: 1px solid #10B981; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
                     <p style='color: #000000; margin: 0 0 4px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué muestra</p>
-                    <p style='color: #111111; margin: 0; font-size: 0.92rem; line-height: 1.6;'>Datos de ventas cargadas en Customer: total, aprobadas, canceladas, tasa de aprobación y promedio esperado. Incluye estado por vendedor.</p>
+                    <p style='color: #111111; margin: 0; font-size: 0.92rem; line-height: 1.6;'>Datos de ventas cargadas desde el CSV de Solicitudes (Customer). Se sube un único archivo y el sistema genera automáticamente las vistas <b>Semanal</b> y <b>Mensual</b>, agrupando por semana ISO y por equipo (derivado del Ejecutivo).</p>
+                </div>
+                <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>📅 Vista Semanal</p>
+                    <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                        <li><b>Selector de semana:</b> elegí la semana ISO a visualizar (ej: "Semana 3 (12/01 - 17/01) — 831 solicitudes")</li>
+                        <li><b>6 KPIs:</b> Cargadas, Aprobadas, Canceladas, Pendientes, Vendedores y Tasa de Aprobación %</li>
+                        <li><b>Gráfico comparativo por equipo:</b> barras agrupadas con Cargadas / Aprobadas / Canceladas / Pendientes</li>
+                        <li><b>Tabla resumen por equipo:</b> con Ejecutivo, cantidad de Vendedores y Tasa Aprob. % (coloreada por semáforo)</li>
+                        <li><b>Detalle por equipo (expanders):</b> semáforo (🟢 ≥70%, 🟡 ≥50%, 🔴 &lt;50%), KPIs del equipo, gráfico de vendedores coloreado por tasa individual, y tabla detallada con estado</li>
+                    </ul>
+                </div>
+                <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px; margin-bottom: 10px;'>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>📆 Vista Mensual</p>
+                    <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
+                        <li><b>Rango de fechas:</b> muestra el período completo del mes cargado</li>
+                        <li><b>6 KPIs globales:</b> misma estructura que Semanal pero con datos del mes completo</li>
+                        <li><b>Filtro multiselect de equipos:</b> seleccioná qué equipos querés visualizar</li>
+                        <li><b>Gráfico comparativo y tabla resumen:</b> idénticos a Semanal pero con datos mensuales</li>
+                        <li><b>Detalle por equipo (expanders):</b> misma estructura: semáforo + KPIs + gráfico + tabla por vendedor</li>
+                    </ul>
                 </div>
                 <div style='background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: 8px; padding: 10px 12px;'>
-                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>Qué vas a encontrar</p>
+                    <p style='color: #000000; margin: 0 0 6px 0; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;'>🔧 Cómo se procesan los datos</p>
                     <ul style='color: #111111; margin: 0 0 0 18px; padding: 0; line-height: 1.6;'>
-                        <li>5 KPIs: Total Ventas, Aprobadas, Canceladas, Tasa de Aprobación % y Promedio Esperado</li>
-                        <li>Top 10 vendedores coloreados por tasa (🟢 ≥70%, 🟡 ≥50%, 🔴 &lt;50%) con línea de meta</li>
-                        <li>Gráfico de torta con distribución de estados (Aprobadas / Canceladas / Preventa / Pendientes)</li>
-                        <li>Tabla detallada con diferencia vs promedio y estado del vendedor</li>
+                        <li><b>Equipo:</b> se deriva del campo "Ejecutivo" — la segunda palabra se convierte en nombre de equipo (ej: "CARMONA MELANIE" → EQUIPO MELANIE)</li>
+                        <li><b>Estado:</b> se clasifica automáticamente desde "Estado de Solicitud": APROB/ACTIVAD → aprobada, CANCEL/OTRO CALL/DEVOLUCION → cancelada, el resto → pendiente</li>
+                        <li><b>Semana:</b> se agrupa por semana ISO a partir de "Fecha de Venta" (formato dd/mm/yyyy)</li>
+                        <li><b>Tasa de Aprobación:</b> (Aprobadas / Cargadas) × 100</li>
                     </ul>
                 </div>
             </div>
@@ -11273,8 +11294,8 @@ def pagina_manual_uso():
         st.markdown("""
         <div style='background: #1E3A5F; padding: 18px 22px; border-radius: 10px;'>
             <p style='color: #FFFFFF; margin: 0; font-size: 0.93rem; line-height: 1.6;'>
-                💡 <strong>Importante:</strong> Los datos de este módulo se generan ejecutando <code style='background: rgba(255,255,255,0.15); padding: 2px 6px; border-radius: 4px;'>procesar_calidad.py</code> que unifica los 3 archivos fuente. 
-                Si no ves datos, consultá con el equipo de Calidad para verificar que los archivos fueron cargados y procesados.
+                💡 <strong>Importante:</strong> Los datos de este módulo se activan cargando los archivos correspondientes en el área de Métricas de Calidad y ejecutando COMMAND. 
+                Si no ves datos, consultá con el equipo de Calidad para verificar que los archivos fueron cargados correctamente.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -12061,19 +12082,19 @@ def main():
             "📊 Resumen Corporativo": "resumen_corporativo",
             "📊 Métricas de Calidad": "metricas_calidad"
         }
-        # Agregar Indicadores de Calidad solo para admin/calidad
-        if es_admin_calidad:
-            paginas["📞 Indicadores de Calidad (Admin)"] = "calidad"
+        # Indicadores de Calidad (Admin) — desactivado temporalmente
+        # if es_admin_calidad:
+        #     paginas["📞 Indicadores de Calidad (Admin)"] = "calidad"
         # Agregar Comparativa de Períodos solo para admin/supervisor
         paginas["📅 Comparativa de Períodos"] = "comparativa"
         paginas["📖 Manual de Uso"] = "manual"
     seleccion = st.sidebar.radio("Módulos disponibles:", list(paginas.keys()))
     
     # =========================================================================
-    # FILTROS DE FECHA EN SIDEBAR
+    # FILTROS DE FECHA EN SIDEBAR (desactivado temporalmente)
     # =========================================================================
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📅 Filtro por Fechas")
+    # st.sidebar.markdown("---")
+    # st.sidebar.markdown("### 📅 Filtro por Fechas")
     
     # Obtener rango de fechas disponibles desde evaluaciones_gemini_df
     fecha_min_disp = None
@@ -12094,62 +12115,9 @@ def main():
         st.session_state['filtro_fecha_fin'] = fecha_max_disp
     
     if fecha_min_disp and fecha_max_disp:
-        # Selector de período predefinido
-        periodos_predefinidos = {
-            "📆 Todo el período": None,
-            "📅 Semana 12-16 Enero": (datetime(2026, 1, 12).date(), datetime(2026, 1, 16).date()),
-            "📅 Semana 19-24 Enero": (datetime(2026, 1, 19).date(), datetime(2026, 1, 24).date()),
-            "🔧 Personalizado": "custom"
-        }
-        
-        periodo_sel = st.sidebar.selectbox(
-            "Período a analizar:",
-            list(periodos_predefinidos.keys()),
-            key="periodo_predefinido"
-        )
-        
-        if periodo_sel == "📆 Todo el período":
-            st.session_state['filtro_fecha_inicio'] = fecha_min_disp
-            st.session_state['filtro_fecha_fin'] = fecha_max_disp
-        elif periodo_sel == "🔧 Personalizado":
-            col_f1, col_f2 = st.sidebar.columns(2)
-            with col_f1:
-                fecha_inicio = st.date_input(
-                    "Desde:",
-                    value=st.session_state.get('filtro_fecha_inicio', fecha_min_disp),
-                    min_value=fecha_min_disp,
-                    max_value=fecha_max_disp,
-                    key="date_input_inicio"
-                )
-                st.session_state['filtro_fecha_inicio'] = fecha_inicio
-            with col_f2:
-                fecha_fin = st.date_input(
-                    "Hasta:",
-                    value=st.session_state.get('filtro_fecha_fin', fecha_max_disp),
-                    min_value=fecha_min_disp,
-                    max_value=fecha_max_disp,
-                    key="date_input_fin"
-                )
-                st.session_state['filtro_fecha_fin'] = fecha_fin
-        else:
-            # Período predefinido
-            rango = periodos_predefinidos.get(periodo_sel)
-            if rango and isinstance(rango, tuple):
-                st.session_state['filtro_fecha_inicio'] = rango[0]
-                st.session_state['filtro_fecha_fin'] = rango[1]
-        
-        # Mostrar período seleccionado
-        fecha_ini = st.session_state.get('filtro_fecha_inicio', fecha_min_disp)
-        fecha_fin = st.session_state.get('filtro_fecha_fin', fecha_max_disp)
-        if fecha_ini and fecha_fin:
-            st.sidebar.markdown(f"""
-            <div style='background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%); padding: 10px 14px; border-radius: 8px; margin: 5px 0; border-left: 4px solid #60A5FA; box-shadow: 0 2px 8px rgba(0,0,0,0.2);'>
-                <small style='color: #FFFFFF;'>
-                    <strong style='color: #93C5FD;'>📅 Mostrando:</strong><br>
-                    <span style='color: #FFFFFF; font-weight: 600;'>{fecha_ini.strftime('%d/%m/%Y')} - {fecha_fin.strftime('%d/%m/%Y')}</span>
-                </small>
-            </div>
-            """, unsafe_allow_html=True)
+        # Período por defecto: todo el rango disponible
+        st.session_state['filtro_fecha_inicio'] = fecha_min_disp
+        st.session_state['filtro_fecha_fin'] = fecha_max_disp
     else:
         st.sidebar.info("📊 Las fechas se cargarán con los datos")
     
