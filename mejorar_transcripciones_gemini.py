@@ -26,7 +26,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # ============================================================================
 
 BASE_DIR = Path(r"C:\Users\rodri\Documents\codigo-WC\eva")
-INPUT_DIR = BASE_DIR / "transcripciones"
+INPUT_DIR = BASE_DIR / "transcripciones" / "transcripciones"
 OUTPUT_DIR = BASE_DIR / "transcripciones_mejoradas"
 REPORTE_DIR = BASE_DIR / "reportes" / "mejora_gemini"
 

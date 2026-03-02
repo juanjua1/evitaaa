@@ -9098,12 +9098,16 @@ def pagina_metricas_calidad():
                                 if archivo_interacciones:
                                     st.info("📞 Procesando Interacciones...")
                                     df_int = pd.read_csv(archivo_interacciones, encoding='latin-1', sep=';', low_memory=False)
+                                    df_int.columns = df_int.columns.str.replace('ï»¿', '').str.replace('\ufeff', '').str.strip()
                                     col_ag = col_talk = col_tip = col_orig = None
                                     for c in df_int.columns:
                                         cl = c.lower()
-                                        if c == 'LoginId' or 'loginid' in cl: col_ag = c
+                                        # Normalizar caracteres especiales para detección
+                                        cl_norm = cl.replace('ã³', 'o').replace('ã±', 'n').replace('á', 'a').replace('é', 'e').replace('í', 'i').replace('ó', 'o').replace('ú', 'u').replace('ñ', 'n')
+                                        if c == 'LoginId' or cl == 'loginid': col_ag = c
+                                        elif 'loginid' in cl and col_ag is None: col_ag = c
                                         elif 'talkingtime' in cl or 'talking' in cl: col_talk = c
-                                        elif c == 'Tipificación' or 'tipificación' == cl or 'tipificacion' in cl: col_tip = c
+                                        elif 'tipificacion' in cl_norm: col_tip = c
                                         elif 'origen' in cl and 'corte' in cl: col_orig = c
                                     if col_ag:
                                         df_int['talking_seg'] = pd.to_numeric(df_int[col_talk], errors='coerce').fillna(0) if col_talk else 0
