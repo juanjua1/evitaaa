@@ -1,6 +1,6 @@
 {
   "equipo": "DIANA",
-  "fecha_generacion": "2026-02-23T10:13:46.565665",
+  "fecha_generacion": "2026-03-10T00:00:52.167572",
   "metricas": {
     "equipo": "DIANA",
     "vendedores": [
@@ -54,156 +54,164 @@
     "clasificacion": {},
     "planes": {},
     "quejas": {},
-    "calidad": {},
+    "calidad": {
+      "tiempos": {
+        "vendedores_con_datos": 35,
+        "break_promedio_seg": 0,
+        "coaching_promedio_seg": 0,
+        "disponible_promedio_seg": 13057,
+        "no_disponible_promedio_seg": 0
+      },
+      "llamadas": {
+        "vendedores_con_datos": 39,
+        "total_llamadas": 17051,
+        "llamadas_promedio": 437.2,
+        "atendidas_promedio": 0.0
+      }
+    },
     "cierres": {}
   },
   "comparativa": {},
   "coaching_ia": {
-    "resumen_ejecutivo": "El equipo Diana presenta un rendimiento general en desarrollo, con un puntaje IA promedio de 37.5 y una tasa de conversión del 3.2%. Si bien existen áreas de oportunidad significativas, el equipo muestra potencial de crecimiento con un enfoque estratégico en capacitación y mejora de procesos. La implementación de un plan de acción enfocado en la optimización de la gestión de quejas y el desarrollo de habilidades de venta consultiva puede impulsar significativamente el rendimiento del equipo.",
+    "resumen_ejecutivo": "El equipo Diana muestra un rendimiento general en desarrollo, con un puntaje IA promedio de 40.9, ubicándose en la parte baja del ranking (5 de 5 equipos). Si bien el tiempo disponible promedio es considerable (13057 segundos), la tasa de conversión es baja (2.2%). Se requiere un enfoque estratégico en mejorar la efectividad de las llamadas y optimizar la gestión del tiempo para impulsar la portabilidad.",
     "diagnostico": {
       "nivel_rendimiento": "EN DESARROLLO",
-      "puntaje_equipo": 37.5,
-      "posicion_ranking": "N/A de 5 equipos",
+      "puntaje_equipo": 40.9,
+      "posicion_ranking": "5 de 5 equipos",
       "tendencia": "ESTABLE"
     },
     "fortalezas_equipo": [
       {
-        "area": "Tamaño del equipo",
-        "evidencia": "43 vendedores",
-        "impacto": "Mayor alcance potencial de clientes y portabilidades."
+        "area": "Disponibilidad",
+        "evidencia": "Tiempo disponible promedio de 13057 segundos por vendedor.",
+        "impacto": "Potencial para realizar un alto volumen de llamadas y contactar a más clientes."
       }
     ],
     "areas_mejora_prioritarias": [
       {
         "area": "Tasa de Conversión",
-        "situacion_actual": "Tasa de conversión general del 3.2%, por debajo del promedio ideal.",
-        "meta": "Aumentar la tasa de conversión al 4.5% en 90 días.",
-        "impacto_potencial": "Aumento significativo en el número de portabilidades y ventas de planes/fibra."
+        "situacion_actual": "Tasa de conversión general del 2.2%, significativamente baja.",
+        "meta": "Aumentar la tasa de conversión al 3.5% en 90 días.",
+        "impacto_potencial": "Aumento significativo en la adquisición de nuevos clientes a través de portabilidad."
       },
       {
-        "area": "Puntaje IA",
-        "situacion_actual": "Puntaje IA promedio general de 37.5, indicando áreas de mejora en habilidades de venta y conocimiento del producto.",
-        "meta": "Aumentar el puntaje IA promedio a 50 en 60 días.",
-        "impacto_potencial": "Mejora en la calidad de las interacciones con los clientes y el cierre de ventas."
+        "area": "Efectividad de Llamadas",
+        "situacion_actual": "Promedio de 437.2 llamadas por vendedor, con un promedio de llamadas atendidas no especificado, lo que sugiere una baja efectividad en la conexión.",
+        "meta": "Aumentar el porcentaje de llamadas atendidas en un 15% en 60 días.",
+        "impacto_potencial": "Mayor número de oportunidades para presentar ofertas y cerrar ventas."
       },
       {
-        "area": "Gestión de Quejas",
-        "situacion_actual": "Datos no disponibles, pero la gestión ineficiente de quejas puede afectar la satisfacción del cliente y la reputación de la empresa.",
-        "meta": "Reducir el tiempo promedio de resolución de quejas en un 20% en 30 días.",
-        "impacto_potencial": "Mejora en la satisfacción del cliente y la retención."
+        "area": "Gestión del Tiempo",
+        "situacion_actual": "Tiempo de break y coaching promedio en 0 segundos, lo que sugiere falta de pausas y desarrollo individual.",
+        "meta": "Implementar pausas activas programadas (5 minutos cada 2 horas) y sesiones de coaching individuales (30 minutos por vendedor al mes).",
+        "impacto_potencial": "Mejora en el bienestar del equipo, reducción del estrés y desarrollo de habilidades individuales."
       }
     ],
     "analisis_vendedores": {
       "top_performers": [
-        "Identificar a los 5 mejores vendedores (Mza XX) y destacar sus habilidades en cierre de ventas y conocimiento del producto."
+        "Identificar a los vendedores con mayor tasa de conversión y analizar sus técnicas de venta para replicarlas.",
+        "Fortalezas: Técnicas de cierre efectivas, manejo de objeciones, conocimiento profundo del producto."
       ],
       "necesitan_apoyo": [
-        "Identificar a los 5 vendedores con menor puntaje IA (Mza YY) y ofrecer coaching individualizado en habilidades de venta y conocimiento del producto."
+        "Identificar a los vendedores con baja tasa de conversión y bajo volumen de llamadas atendidas.",
+        "Necesitan apoyo en: Técnicas de prospección, habilidades de comunicación, manejo de objeciones."
       ],
       "potencial_alto": [
-        "Identificar a los 5 vendedores con mayor mejora en el puntaje IA en el último mes (Mza ZZ) y ofrecer oportunidades de desarrollo de liderazgo."
+        "Identificar a los vendedores con alto volumen de llamadas pero baja tasa de conversión.",
+        "Potencial: Gran capacidad de contacto, necesitan mejorar la calidad de la interacción y el cierre de ventas."
       ]
     },
     "plan_accion_equipo": [
       {
         "prioridad": 1,
-        "accion": "Implementar un programa de coaching individualizado para los vendedores con menor puntaje IA.",
+        "accion": "Implementar un programa de coaching individualizado para los vendedores con menor rendimiento.",
         "responsable": "Líder del equipo",
         "plazo": "Inmediato",
-        "indicador_exito": "Aumento del puntaje IA promedio de los vendedores en coaching en un 10% en 30 días.",
+        "indicador_exito": "Aumento del 10% en la tasa de conversión de los vendedores con menor rendimiento en 30 días.",
         "recursos_necesarios": "Tiempo del líder del equipo, materiales de capacitación."
       },
       {
         "prioridad": 2,
-        "accion": "Realizar talleres semanales sobre técnicas de venta consultiva y manejo de objeciones.",
+        "accion": "Realizar sesiones de role-playing enfocadas en el manejo de objeciones y técnicas de cierre.",
         "responsable": "Todos",
         "plazo": "Corto plazo",
-        "indicador_exito": "Aumento de la tasa de conversión del equipo en un 0.5% en 30 días.",
-        "recursos_necesarios": "Sala de capacitación, facilitador, materiales de capacitación."
+        "indicador_exito": "Mejora en la confianza y efectividad de los vendedores al enfrentar objeciones.",
+        "recursos_necesarios": "Espacio para reuniones, guiones de role-playing."
       },
       {
         "prioridad": 3,
-        "accion": "Optimizar el proceso de gestión de quejas, implementando un sistema de seguimiento y resolución eficiente.",
-        "responsable": "Líder del equipo",
+        "accion": "Optimizar la segmentación de leads para dirigir las ofertas a los clientes más propensos a la portabilidad.",
+        "responsable": "Líder del equipo / Departamento de Marketing",
         "plazo": "Mediano plazo",
-        "indicador_exito": "Reducción del tiempo promedio de resolución de quejas en un 20% en 30 días.",
-        "recursos_necesarios": "Software de gestión de quejas, capacitación en atención al cliente."
+        "indicador_exito": "Aumento en la tasa de conversión de leads segmentados.",
+        "recursos_necesarios": "Datos de clientes, herramientas de segmentación."
       }
     ],
     "capacitaciones_recomendadas": [
       {
         "tema": "Técnicas de Venta Consultiva",
-        "objetivo": "Mejorar la capacidad de los vendedores para identificar las necesidades de los clientes y ofrecer soluciones personalizadas.",
+        "objetivo": "Mejorar la capacidad de los vendedores para entender las necesidades de los clientes y ofrecer soluciones personalizadas.",
         "modalidad": "Grupal",
-        "duracion_sugerida": "4 horas",
+        "duracion_sugerida": "8 horas",
         "vendedores_prioritarios": [
-          "Mza YY (vendedores con menor puntaje IA)"
+          "Vendedores que necesitan apoyo",
+          "Vendedores con potencial alto"
         ]
       },
       {
-        "tema": "Manejo de Objeciones",
-        "objetivo": "Proporcionar a los vendedores herramientas y técnicas para superar las objeciones de los clientes y cerrar ventas.",
-        "modalidad": "Grupal",
-        "duracion_sugerida": "3 horas",
+        "tema": "Manejo de Objeciones Avanzado",
+        "objetivo": "Proporcionar a los vendedores herramientas y estrategias para superar las objeciones comunes de los clientes.",
+        "modalidad": "Mixta (Grupal y Individual)",
+        "duracion_sugerida": "4 horas grupal + 2 horas individual",
         "vendedores_prioritarios": [
-          "Todos"
-        ]
-      },
-      {
-        "tema": "Conocimiento Profundo de Productos y Servicios (Planes y Fibra)",
-        "objetivo": "Asegurar que todos los vendedores tengan un conocimiento completo de los productos y servicios ofrecidos por Movistar.",
-        "modalidad": "Mixta (Individual y Grupal)",
-        "duracion_sugerida": "5 horas",
-        "vendedores_prioritarios": [
-          "Mza YY (vendedores con menor puntaje IA)"
+          "Vendedores que necesitan apoyo"
         ]
       }
     ],
     "dinamicas_equipo": [
       {
-        "nombre": "Role-Playing de Ventas",
-        "objetivo": "Practicar técnicas de venta y manejo de objeciones en un entorno simulado.",
+        "nombre": "Compartiendo Éxitos",
+        "objetivo": "Fomentar el aprendizaje entre pares y la motivación del equipo.",
         "frecuencia": "Semanal",
-        "descripcion": "Los vendedores se turnan para representar diferentes escenarios de venta, con retroalimentación del líder del equipo y sus compañeros."
+        "descripcion": "Cada semana, un vendedor comparte una venta exitosa y las estrategias que utilizó."
       },
       {
-        "nombre": "Compartir Historias de Éxito",
-        "objetivo": "Motivar al equipo y compartir mejores prácticas.",
-        "frecuencia": "Semanal",
-        "descripcion": "Cada semana, un vendedor comparte una historia de éxito reciente, destacando las estrategias y técnicas que utilizó."
+        "nombre": "Simulación de Llamadas",
+        "objetivo": "Practicar habilidades de venta y recibir retroalimentación constructiva.",
+        "frecuencia": "Diaria",
+        "descripcion": "Al inicio del día, los vendedores realizan simulaciones de llamadas con diferentes escenarios."
       }
     ],
     "metas_equipo": {
       "corto_plazo_30_dias": [
         {
           "meta": "Aumentar la tasa de conversión en un 0.5%.",
-          "valor_actual": "3.2%",
-          "valor_objetivo": "3.7%",
-          "estrategia": "Implementar talleres semanales sobre técnicas de venta consultiva y manejo de objeciones."
+          "valor_actual": "2.2%",
+          "valor_objetivo": "2.7%",
+          "estrategia": "Implementar el programa de coaching individualizado y las sesiones de role-playing."
         }
       ],
       "mediano_plazo_90_dias": [
         {
-          "meta": "Aumentar la tasa de conversión al 4.5%.",
-          "valor_actual": "3.2%",
-          "valor_objetivo": "4.5%",
-          "estrategia": "Continuar con los talleres semanales, implementar un programa de coaching individualizado y optimizar el proceso de gestión de quejas."
+          "meta": "Aumentar la tasa de conversión en un 1.3%.",
+          "valor_actual": "2.2%",
+          "valor_objetivo": "3.5%",
+          "estrategia": "Optimizar la segmentación de leads y continuar con el programa de coaching y las sesiones de role-playing."
         }
       ]
     },
     "seguimiento": {
-      "reuniones_sugeridas": "Reuniones de equipo semanales de 30 minutos para revisar el progreso hacia las metas y compartir mejores prácticas. Reuniones individuales mensuales de 60 minutos con cada vendedor para discutir su desempeño y establecer objetivos individuales.",
+      "reuniones_sugeridas": "Reuniones de equipo semanales para revisar el progreso y compartir mejores prácticas. Reuniones individuales mensuales con cada vendedor para evaluar su desempeño y brindar apoyo.",
       "metricas_monitorear": [
         "Tasa de conversión",
-        "Puntaje IA promedio",
-        "Tiempo promedio de resolución de quejas",
-        "Número de portabilidades",
-        "Ventas de planes y fibra"
+        "Volumen de llamadas atendidas",
+        "Tiempo promedio de llamada",
+        "Satisfacción del cliente"
       ],
       "alertas": [
         "Disminución en la tasa de conversión",
-        "Aumento en el tiempo promedio de resolución de quejas",
-        "Bajo rendimiento individual persistente"
+        "Aumento en el tiempo promedio de llamada sin aumento en la tasa de conversión",
+        "Quejas recurrentes de clientes sobre un vendedor específico"
       ]
     }
   }

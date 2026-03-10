@@ -1,160 +1,215 @@
 {
   "agente": "amza35",
-  "fecha_generacion": "2026-02-23T09:31:10.668620",
+  "fecha_generacion": "2026-03-09T23:42:39.672277",
   "metricas": {
     "agente": "amza35",
     "evaluaciones": {
-      "total_evaluadas": 106,
-      "puntaje_promedio": 28.1,
+      "total_evaluadas": 85,
+      "puntaje_promedio": 31.4,
       "puntaje_min": 0.0,
-      "puntaje_max": 85.0,
-      "desviacion_std": 25.7,
-      "llamadas_excelentes": 2,
-      "llamadas_criticas": 52,
+      "puntaje_max": 97.0,
+      "desviacion_std": 25.8,
+      "llamadas_excelentes": 4,
+      "llamadas_criticas": 31,
       "criterios": {
-        "saludo_presentacion": 15.0,
-        "identificacion_cliente": 56.5,
-        "deteccion_necesidades": 6.2,
-        "oferta_productos": 34.3,
-        "manejo_objeciones": 26.7,
-        "cierre": 20.4,
-        "despedida": 54.6,
-        "proactividad": 6.7,
-        "empatia": 36.4,
-        "resolucion_problemas": 21.8
+        "saludo_presentacion": 20.6,
+        "identificacion_cliente": 53.5,
+        "deteccion_necesidades": 3.9,
+        "oferta_productos": 42.1,
+        "manejo_objeciones": 31.1,
+        "cierre": 23.5,
+        "despedida": 54.9,
+        "proactividad": 16.1,
+        "empatia": 40.0,
+        "resolucion_problemas": 17.8
       },
       "areas_mejora_frecuentes": {
-        "Detección de necesidades": 66,
-        "Proactividad": 39,
-        "Presentación": 38,
-        "Manejo de objeciones": 38,
-        "Identificación del cliente": 29
+        "Detección de necesidades": 51,
+        "Proactividad": 32,
+        "Manejo de objeciones": 27,
+        "Cierre": 19,
+        "Identificación del cliente": 18
       },
       "fortalezas_frecuentes": {
-        "Identificación del cliente": 36,
-        "Despedida": 19,
-        "Empatía": 18,
-        "Manejo de objeciones": 12,
+        "Identificación del cliente": 26,
+        "Despedida": 17,
+        "Empatía": 16,
+        "Manejo de objeciones": 10,
         "Despedida cordial": 8
       },
       "ejemplos_mejores": [
         {
-          "puntaje_total": 85.0,
-          "resumen": "El agente se presentó correctamente, identificó al cliente, ofreció un plan con descuento y manejo las objeciones. El cierre se intento, pero no se ofreció fibra ni otros productos."
+          "puntaje_total": 97.0,
+          "resumen": "El agente se presenta y verifica la identidad, ofrece un plan de manera clara y directa, maneja objeciones y completa el cierre. Muestra empatía y proactividad al ofrecer otros productos."
         },
         {
-          "puntaje_total": 81.0,
-          "resumen": "El agente se presentó correctamente, verificó la identidad del cliente y ofreció planes. Completó el cierre asignando sucursal. Debe mejorar la detección de necesidades y la proactividad al ofrecer otros productos."
+          "puntaje_total": 82.0,
+          "resumen": "El agente se presenta y ofrece planes y fibra de forma directa. Identifica al cliente correctamente. Maneja objeciones y ofrece soluciones. Realiza un cierre parcial. Muestra empatía."
         },
         {
-          "puntaje_total": 75.0,
-          "resumen": "El agente se presentó y verificó la identidad del cliente. Ofreció un plan directamente y manejó las objeciones con empatía. No realizó preguntas de detección de necesidades ni ofreció productos adicionales. El cierre no se completó completamente."
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presentó correctamente, verificó la identidad del cliente, ofreció un plan y manejó una objeción. Faltó realizar preguntas para detectar necesidades.  Se intentó el cierre y se despidió correctamente."
         }
       ],
       "ejemplos_peores": [
         {
           "puntaje_total": 0.0,
-          "resumen": "Llamada muy deficiente. El agente no se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos ni realiza el cierre. No se observa proactividad ni empatía."
+          "resumen": "El agente no cumple con los criterios de evaluación.  No se presenta, no verifica la identidad del cliente, no detecta necesidades, no cierra la venta.  Solo se despide correctamente."
         },
         {
           "puntaje_total": 0.0,
-          "resumen": "Llamada muy deficiente. No se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos, no maneja objeciones y no cierra la venta."
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no maneja objeciones y no cierra la venta."
         },
         {
           "puntaje_total": 0.0,
-          "resumen": "Llamada muy corta, sin interacción. El agente corta por falta de audio."
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no detecta necesidades, no ofrece productos, no maneja objeciones y no cierra la venta."
         }
       ]
     },
-    "evaluaciones_semana_anterior": {},
+    "evaluaciones_semana_anterior": {
+      "periodo": "12-16 Enero 2026",
+      "total_evaluadas": 70,
+      "puntaje_promedio": 30.3,
+      "llamadas_excelentes": 4,
+      "llamadas_criticas": 29,
+      "criterios": {
+        "saludo_presentacion": 18.9,
+        "identificacion_cliente": 52.1,
+        "deteccion_necesidades": 4.4,
+        "oferta_productos": 40.1,
+        "manejo_objeciones": 28.6,
+        "cierre": 24.1,
+        "despedida": 53.0,
+        "proactividad": 19.0,
+        "empatia": 36.0,
+        "resolucion_problemas": 18.6
+      }
+    },
     "evaluaciones_semana_actual": {
       "periodo": "19-24 Enero 2026",
-      "total_evaluadas": 106,
-      "puntaje_promedio": 28.1,
-      "llamadas_excelentes": 2,
-      "llamadas_criticas": 52,
+      "total_evaluadas": 15,
+      "puntaje_promedio": 36.3,
+      "llamadas_excelentes": 0,
+      "llamadas_criticas": 2,
       "criterios": {
-        "saludo_presentacion": 15.0,
-        "identificacion_cliente": 56.5,
-        "deteccion_necesidades": 6.2,
-        "oferta_productos": 34.3,
-        "manejo_objeciones": 26.7,
-        "cierre": 20.4,
-        "despedida": 54.6,
-        "proactividad": 6.7,
-        "empatia": 36.4,
-        "resolucion_problemas": 21.8
+        "saludo_presentacion": 28.7,
+        "identificacion_cliente": 60.0,
+        "deteccion_necesidades": 1.3,
+        "oferta_productos": 51.3,
+        "manejo_objeciones": 42.7,
+        "cierre": 20.7,
+        "despedida": 64.0,
+        "proactividad": 2.7,
+        "empatia": 58.7,
+        "resolucion_problemas": 14.0
       }
     },
     "clasificacion": {},
     "integral": {},
     "cierres": {},
     "calidad_llamadas": {},
-    "calidad_ventas": {}
+    "calidad_ventas": {},
+    "evolucion": {
+      "cambio_puntaje": 6.0,
+      "mejoro": true,
+      "criterios_mejoraron": [
+        "saludo_presentacion (+9.8)",
+        "identificacion_cliente (+7.9)",
+        "oferta_productos (+11.2)",
+        "manejo_objeciones (+14.1)",
+        "despedida (+11.0)",
+        "empatia (+22.7)"
+      ],
+      "criterios_empeoraron": [
+        "deteccion_necesidades (-3.1)",
+        "cierre (-3.5)",
+        "proactividad (-16.3)",
+        "resolucion_problemas (-4.6)"
+      ],
+      "criterios_igual": []
+    }
   },
   "comparativa": {
     "puntaje_ia": {
-      "agente": 28.1,
-      "general": 37.5,
-      "diferencia": -9.4,
-      "percentil": 39.3
+      "agente": 31.4,
+      "general": 40.9,
+      "diferencia": -9.5,
+      "percentil": 44.6
     },
     "criterios": {
       "saludo_presentacion": {
-        "agente": 15.0,
-        "general": 31.4,
-        "diferencia": -16.4
+        "agente": 20.6,
+        "general": 37.6,
+        "diferencia": -17.0
       },
       "identificacion_cliente": {
-        "agente": 56.5,
-        "general": 61.3,
-        "diferencia": -4.8
+        "agente": 53.5,
+        "general": 61.2,
+        "diferencia": -7.7
       },
       "deteccion_necesidades": {
-        "agente": 6.2,
-        "general": 25.6,
-        "diferencia": -19.4
+        "agente": 3.9,
+        "general": 27.9,
+        "diferencia": -24.0
       },
       "oferta_productos": {
-        "agente": 34.3,
-        "general": 41.8,
-        "diferencia": -7.4
+        "agente": 42.1,
+        "general": 44.4,
+        "diferencia": -2.3
       },
       "manejo_objeciones": {
-        "agente": 26.7,
-        "general": 35.1,
-        "diferencia": -8.4
+        "agente": 31.1,
+        "general": 34.0,
+        "diferencia": -3.0
       },
       "cierre": {
-        "agente": 20.4,
-        "general": 22.4,
-        "diferencia": -2.0
+        "agente": 23.5,
+        "general": 23.6,
+        "diferencia": -0.0
       },
       "despedida": {
-        "agente": 54.6,
-        "general": 59.7,
-        "diferencia": -5.1
+        "agente": 54.9,
+        "general": 62.6,
+        "diferencia": -7.6
       },
       "proactividad": {
-        "agente": 6.7,
-        "general": 12.5,
-        "diferencia": -5.8
+        "agente": 16.1,
+        "general": 15.1,
+        "diferencia": 1.0
       },
       "empatia": {
-        "agente": 36.4,
-        "general": 47.6,
-        "diferencia": -11.2
+        "agente": 40.0,
+        "general": 45.1,
+        "diferencia": -5.1
       },
       "resolucion_problemas": {
-        "agente": 21.8,
-        "general": 30.4,
-        "diferencia": -8.6
+        "agente": 17.8,
+        "general": 25.0,
+        "diferencia": -7.2
       }
     }
   },
-  "analisis_coaching": "## ANÁLISIS DEL VENDEDOR: amza35\n\n### 1. DIAGNÓSTICO GENERAL Y EVOLUCIÓN\n\namza35 se encuentra actualmente por debajo del promedio del equipo, con un puntaje IA de 28.1 comparado con el promedio general de 37.5. Su nivel actual es **Necesita Mejora**. Su desempeño se encuentra en el percentil 39.3, lo que indica que está en la parte inferior del grupo en términos de rendimiento evaluado por IA.\n\nEl vendedor muestra áreas de mejora significativas, particularmente en la detección de necesidades, proactividad, presentación y manejo de objeciones. Aunque demuestra fortalezas en la identificación del cliente y la despedida, es crucial que desarrolle habilidades más robustas en las áreas deficientes para alcanzar un rendimiento óptimo. El potencial de mejora es considerable, especialmente si se enfoca en implementar las acciones y técnicas sugeridas.\n\n### 2. ANÁLISIS DE EVOLUCIÓN SEMANAL\n\n*   **QUÉ MEJORÓ**: No hay información disponible para determinar si hubo mejoras con respecto a períodos anteriores. Es importante recopilar datos comparativos en el futuro para realizar este análisis.\n*   **QUÉ EMPEORÓ**: Sin datos de períodos anteriores, no es posible identificar qué áreas han empeorado.\n*   **QUÉ SIGUE PENDIENTE**: Las áreas de mejora más frecuentes identificadas por la IA (Detección de necesidades, Proactividad, Presentación, Manejo de objeciones) son los focos principales que se deben trabajar para lograr un impacto positivo en su rendimiento.\n*   **TENDENCIA GENERAL**: Sin datos de evolución, es difícil establecer una tendencia. Sin embargo, con el puntaje actual, se necesita una intervención activa para mejorar su rendimiento.\n\n### 3. FORTALEZAS IDENTIFICADAS\n\n*   **Identificación del Cliente:** consistentemente identifica correctamente al cliente al inicio de la llamada. Esto establece una base sólida para la interacción y asegura que está hablando con la persona correcta. Ejemplo: \"Hola, ¿me comunico con [Nombre]?\"\n*   **Despedida:** La despedida cordial es un punto fuerte. Finalizar las llamadas de manera profesional deja una buena impresión en el cliente.\n*   **Empatía:** El agente demuestra empatía, lo cual ayuda a construir una mejor relación con el cliente, aunque este criterio tiene mucho por mejorar.\n\n### 4. ÁREAS CRÍTICAS DE MEJORA\n\n*   **Detección de Necesidades (PERSISTENTE):** Es la principal área de mejora, siendo deficiente en 66 de las 106 llamadas. No indaga sobre las necesidades específicas del cliente antes de ofrecer un plan. Esto lleva a ofrecer planes que no se ajustan a las necesidades reales, lo que reduce la probabilidad de cierre.\n*   **Proactividad (PERSISTENTE):** El ofrecimiento de fibra es bajo (39 de 106 llamadas). No aprovecha las oportunidades para ofrecer servicios adicionales (fibra), lo que limita el potencial de ingresos.\n*   **Presentación (PERSISTENTE):** No se presenta de forma efectiva en 38 de 106 llamadas. La presentación es el primer punto de contacto con el cliente y es crucial para establecer confianza y credibilidad. Una presentación débil puede generar desconfianza y afectar el resto de la llamada.\n\n### 5. ANÁLISIS DE MÉTRICAS DE CALIDAD\n\nNo hay métricas de duración, cierre y calidad disponibles.\nPor lo tanto, no es posible realizar el análisis.\n\n### 6. ANÁLISIS DETALLADO POR COMPETENCIA\n\n*   **Saludo y Presentación:** Nivel **Crítico**. La presentación inicial es débil. Debe ser más profesional y generar confianza.\n    *   **Qué está haciendo mal:** No se presenta de manera clara y convincente al inicio de la llamada. Puede estar utilizando frases genéricas o poco atractivas.\n    *   **Cómo mejorar específicamente:** Utilizar un saludo enérgico y profesional, indicando claramente su nombre y el propósito de la llamada. Ejemplo: \"¡Hola! Mi nombre es [Nombre] y lo llamo de Movistar. Tengo una oferta que le VA a interesar.\"\n*   **Identificación del Cliente:** Nivel **Bueno**. Generalmente identifica al cliente de forma correcta.\n    *   **Qué está haciendo bien:** Verifica la identidad del cliente al inicio de la llamada.\n    *   **Cómo mejorar específicamente:** Mantener esta práctica en todas las llamadas. Asegurarse de confirmar que está hablando con la persona correcta antes de continuar.\n*   **Detección de Necesidades:** Nivel **Crítico**. No indaga sobre las necesidades del cliente.\n    *   **Qué está haciendo mal:** No realiza preguntas para comprender las necesidades y preferencias del cliente. Ofrece planes sin tener en cuenta lo que el cliente realmente necesita.\n    *   **Cómo mejorar específicamente:** Realizar preguntas abiertas para entender el uso que el cliente le da a su celular, \"¿Qué es lo que más usás del celular?\" / \"¿Cuántos GB tenés en tu plan?\". Luego, utilizar esta información para ofrecer un plan que se ajuste a sus necesidades.\n*   **Oferta de Productos:** Nivel **Regular**. La presentación de los planes podría ser más atractiva.\n    *   **Qué está haciendo mal:** Puede estar presentando los planes de forma genérica, sin destacar los beneficios específicos para el cliente.\n    *   **Cómo mejorar específicamente:** Adaptar la presentación de los planes a las necesidades identificadas del cliente. Destacar los beneficios que le VA a interesar en función de sus respuestas.\n*   **Manejo de Objeciones:** Nivel **Bajo**. No siempre responde a las objeciones de forma efectiva.\n    *   **Qué está haciendo mal:** Utiliza respuestas genéricas y no personaliza las respuestas a las objeciones específicas de cada cliente.\n    *   **Cómo mejorar específicamente:** Escuchar atentamente la objeción del cliente y responder de forma específica y personalizada. Ejemplo: \"Es lógico que mire el precio. A varios clientes les pasó eso al comienzo, y cuando empezaron a usar la conexión y vieron la diferencia en el servicio, entendieron que el valor estaba ahí.\"\n*   **Cierre:** Nivel **Bajo**. Dificultad para concretar la venta.\n    *   **Qué está haciendo mal:** No cierra la venta de forma directa y efectiva. Puede estar siendo demasiado pasivo o no ofrece las opciones necesarias para finalizar la transacción.\n    *   **Cómo mejorar específicamente:** Después de presentar el plan y manejar las objeciones, proceder directamente a asignar la sucursal o buscar el domicilio del cliente para completar la venta.\n*   **Despedida:** Nivel **Bueno**. Se despide de forma cordial.\n    *   **Qué está haciendo bien:** Finaliza la llamada de forma educada y profesional.\n    *   **Cómo mejorar específicamente:** Mantener esta práctica en todas las llamadas.\n*   **Proactividad:** Nivel **Crítico**. No ofrece fibra de forma consistente.\n    *   **Qué está haciendo mal:** No ofrece los servicios de fibra de forma proactiva.\n    *   **Cómo mejorar específicamente:** Ofrecer fibra directamente, sin preguntar si le interesa. Ejemplo: \"Además del plan, quería comentarle que en su zona tenemos cobertura de fibra óptica de alta velocidad, lo que le VA a interesar si utiliza internet para trabajar desde casa o ver películas y series en streaming.\"\n*   **Empatía:** Nivel **Regular**.\n    *   **Qué está haciendo mal:** No demuestra la empatía necesaria.\n    *   **Cómo mejorar específicamente:** Escuchar atentamente y mostrar interés genuino en la situación del cliente.\n*   **Resolución de Problemas:** Nivel **Bajo**.\n\n### 7. PLAN DE ACCIÓN SEMANAL\n\n**Semana 1:** **Detección de Necesidades y Presentación.**\n*   **Acciones específicas:**\n    *   Capacitación intensiva sobre técnicas de preguntas efectivas para identificar las necesidades del cliente.\n    *   Role-playing enfocados en la presentación inicial y en la adaptación de la oferta a las necesidades identificadas.\n    *   Análisis diario de llamadas para identificar oportunidades de mejora en la detección de necesidades y la presentación.\n\n**Semana 2:** **Manejo de Objeciones y Proactividad.**\n*   **Acciones específicas:**\n    *   Desarrollo de scripts personalizados para manejar las objeciones más comunes.\n    *   Entrenamiento en la técnica de ofrecer fibra de forma directa y persuasiva.\n    *   Seguimiento individual para asegurar la correcta aplicación de los scripts y las técnicas de venta de fibra.\n\n**Semana 3:** **Cierre y Empatía.**\n*   **Acciones específicas:**\n    *   Entrenamiento en técnicas de cierre efectivas y directas.\n    *   Capacitación en cómo escuchar atentamente al cliente.\n    *   Análisis de llamadas y feedback individualizado.\n\n**Semana 4:** **Consolidación y Optimización.**\n*   **Acciones específicas:**\n    *   Seguimiento continuo del desempeño en todos los criterios evaluados.\n    *   Reforzamiento de las técnicas aprendidas.\n    *   Identificación de nuevas oportunidades de mejora.\n\n### 8. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Verificación de Identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Detección de Necesidades:**\n    *   \"¿Qué es lo que más usás del celular?\"\n    *   \"¿Cuántos GB tenés en tu plan actualmente?\"\n*   **Oferta de Fibra:** \"Además del plan de telefonía, quería comentarle que en su zona tenemos cobertura de fibra óptica de alta velocidad, lo que le VA a interesar si utiliza internet para trabajar desde casa o ver películas y series en streaming.\"\n*   **Cierre Directo:** \"Para activar el plan, podemos asignarle la sucursal más cercana o buscar su domicilio para coordinar la entrega del chip. ¿Qué opción le resulta más cómoda?\"\n*   **Manejo de Objeciones:**\n    *   **Precio:** \"Es lógico que mire el precio. A varios clientes les pasó eso al comienzo, y cuando empezaron a usar la conexión y vieron la diferencia en el servicio, entendieron que el valor estaba ahí.\"\n\n### 9. METAS CUANTIFICABLES\n\n*   **Meta de puntaje IA a alcanzar en 30 días:** 50\n*   **Meta de tasa de conversión:** 2%\n*   **Meta de ofrecimiento de productos (fibra):** 80% de las llamadas\n*   **Meta de % Capta Atención (llamadas >1 min):** 40%\n*   **Meta de TMO a alcanzar:** 120 seg (2 minutos)\n*   **KPIs específicos a mejorar:** Detección de necesidades, Proactividad.\n\n### 10. MENSAJE MOTIVACIONAL PERSONALIZADO\n\namza35, reconozco que el puntaje actual está por debajo del promedio del equipo, pero veo un gran potencial en vos. Tu capacidad para identificar al cliente y tu amabilidad en la despedida son puntos fuertes que podemos construir. Enfocándonos en mejorar la detección de necesidades y ofreciendo la fibra de manera proactiva, estoy seguro de que vas a lograr un crecimiento significativo en tus resultados. ¡Confío en tu capacidad para superar este desafío y alcanzar tu máximo potencial!\n",
+  "analisis_coaching": "## ANÁLISIS DEL VENDEDOR: amza35\n\n### 1. DIAGNÓSTICO GENERAL Y EVOLUCIÓN\namza35 presenta un desempeño por debajo del promedio del equipo, con un puntaje IA de 31.4 versus el 40.9 general. Su nivel actual se clasifica como **Necesita Mejora**. Sin embargo, es crucial destacar la **EVOLUCIÓN POSITIVA** de los últimos días, con un aumento de 6 puntos en su puntaje promedio en la última semana (19-24 de Enero). Esto indica que está respondiendo al feedback y tiene capacidad de crecimiento. Su potencial de mejora es considerable, especialmente en áreas clave como la detección de necesidades y el cierre de ventas. Hay que mantener la motivación y darle las herramientas para capitalizar esta tendencia positiva.\n\n### 2. ANÁLISIS DE EVOLUCIÓN SEMANAL (FUNDAMENTAL)\n*   **QUÉ MEJORÓ:** Felicito a amza35 por la notable mejora en **saludo_presentacion, identificacion_cliente, oferta_productos, manejo_objeciones, despedida y empatia.** Especialmente destacable el aumento en **empatía (+22.7)**, un indicador valioso de conexión con el cliente. Es importante reforzar estas áreas, pidiéndole que comparta con el equipo las estrategias que le están funcionando en estos puntos.\n*   **QUÉ EMPEORÓ:** Preocupante la caída en **deteccion_necesidades, cierre, proactividad y resolucion_problemas.** La **proactividad (-16.3)** es crítica porque impacta directamente en la venta de fibra, un producto estratégico. La disminución en la detección de necesidades puede estar afectando la personalización de la oferta y, por ende, la efectividad del cierre. Se debe abordar esto de forma urgente.\n*   **QUÉ SIGUE PENDIENTE:** La **detección de necesidades** ya aparecía como un área de mejora importante según el historial y, pese a que hubo un avance global, volvió a caer. Esto sugiere que la estrategia actual no está siendo efectiva.  También, la **resolución de problemas**, si bien es una tarea difícil, sigue siendo un área que necesita trabajo.\n*   **TENDENCIA GENERAL:** A pesar de las áreas que necesitan atención urgente, la **tendencia general es positiva**. El aumento en el puntaje promedio indica que amza35 está comprometido con mejorar. Es vital mantener este impulso corrigiendo los retrocesos y consolidando las fortalezas.\n\n### 3. FORTALEZAS IDENTIFICADAS (mínimo 3)\n*   **Identificación del Cliente:** Consistentemente obtiene puntajes altos en este criterio. Esto asegura que se comunica con la persona correcta y evita pérdidas de tiempo.\n*   **Manejo de Objeciones (Mejora reciente):** Un aumento de +14.1 puntos demuestra que está aprendiendo a rebatir las dudas de los clientes de forma más efectiva. Debe compartir sus estrategias con el equipo.\n*   **Despedida:** Cordial y profesional. Esto deja una buena impresión en el cliente, incluso si no se concreta la venta.\n\n### 4. ÁREAS CRÍTICAS DE MEJORA (mínimo 3)\n*   **Detección de Necesidades (PERSISTENTE):** El puntaje es alarmantemente bajo (3.9). Sin entender las necesidades del cliente, la oferta de productos será genérica y poco atractiva. Esto impacta directamente en la tasa de conversión. **IMPORTANTE:** Hay que evitar la pregunta genérica \"¿Qué es lo más importante para ti en un plan?\" y enfocarse en preguntas como \"¿Qué es lo que más usás del celular?\" o \"¿Cuántos GB tenés en tu plan?\".\n*   **Proactividad (NUEVA):** La drástica caída en proactividad (-16.3) es inaceptable. **TODOS** deben ofrecer fibra de forma directa, sin preguntar si les interesa. Esto es una regla del negocio y no puede ser ignorada.\n*   **Cierre (PERSISTENTE):** Un cierre débil impide capitalizar el resto de la llamada. Debe enfocar sus esfuerzos en asegurar el cierre, incluso si hay interrupciones. **IMPORTANTE:** Asignar sucursal o buscar domicilio del cliente para completar la venta.\n\n### 5. ANÁLISIS DE MÉTRICAS DE CALIDAD (FUNDAMENTAL)\nDado que no se proporcionaron las métricas de llamadas y ventas específicas para el vendedor, basaré el análisis en los promedios del equipo y en los datos disponibles:\n\n*   **TMO (Tiempo Medio Operativo):** El promedio del equipo es de 2.4 segundos, lo cual es extremadamente bajo y probablemente un error en la unidad de medida (debería ser minutos).  Si el TMO de amza35 es similar, es posible que esté apresurando las llamadas y no dedicando suficiente tiempo a la detección de necesidades o al manejo de objeciones. **Acción:** Monitorear las llamadas de amza35 para determinar su TMO real y compararlo con el promedio del equipo (corregido). Si es bajo, trabajar en extender la duración de las llamadas enfocándose en la personalización de la oferta.\n*   **% Capta Atención:** El promedio del equipo es de 0.6%, lo cual es muy bajo. Asumiendo que el porcentaje de amza35 es similar, indica que no está logrando enganchar al cliente en los primeros segundos de la llamada. **Acción:** Revisar el saludo y la presentación de amza35. Asegurarse de que sea atractivo y que comunique el valor de la oferta desde el principio. Ofrecerle un script inicial más efectivo (ver sección de scripts recomendados).\n*   **Cortes de llamada:**  Sin datos específicos, no podemos determinar si hay un problema con los cortes de llamada. **Acción:** Monitorear las llamadas de amza35 y registrar quién finaliza la llamada (cliente o agente). Si hay una alta tasa de cortes por parte del cliente, revisar el pitch inicial y la forma en que maneja las objeciones.\n*   **Llamadas <30 seg:** Sin datos específicos, no podemos determinar si hay un problema con las llamadas cortas. **Acción:** Monitorear las llamadas de amza35 y registrar la cantidad de llamadas que duran menos de 30 segundos. Si es alta, revisar el saludo inicial y la forma en que intenta enganchar al cliente en los primeros segundos de la llamada.\n*   **Tasa de aprobación de ventas:**  Sin datos específicos, no podemos determinar si hay un problema con la tasa de aprobación. **Acción:** Monitorear la tasa de aprobación de ventas de amza35 y compararla con el promedio del equipo. Si es baja, investigar las causas (datos incorrectos, mal procesamiento, etc.) y brindar capacitación adicional sobre el proceso de venta.\n\n### 6. ANÁLISIS DETALLADO POR COMPETENCIA\n*   **Saludo y Presentación:** **Bajo.** El puntaje de 20.6 es muy inferior al promedio del equipo (37.6). **Está haciendo mal:** Probablemente está usando frases genéricas como \"Tengo una oferta que podría interesarle\". **Cómo mejorar:** Debe usar frases directas y persuasivas como \"Tengo una oferta que LE VA a interesar\". Evitar mencionar información de visitas web (no tienen acceso).\n*   **Identificación del Cliente:** **Regular.** El puntaje de 53.5 está por debajo del promedio del equipo (61.2). **Está haciendo mal:** Podría estar omitiendo la verificación de identidad o utilizando frases poco efectivas. **Cómo mejorar:** Siempre usar la frase: \"Hola, ¿me comunico con [Nombre]?\" para verificar que es la persona correcta.\n*   **Detección de Necesidades:** **Crítico.** El puntaje de 3.9 es inaceptable. **Está haciendo mal:** Probablemente está haciendo preguntas genéricas como \"¿Qué es lo más importante para ti en un plan?\". **Cómo mejorar:** Hacer preguntas específicas sobre el uso del celular, como \"¿Qué es lo que más usás del celular?\" o \"¿Cuántos GB tenés en tu plan?\".\n*   **Oferta de Productos:** **Regular.** El puntaje de 42.1 está cerca del promedio del equipo (44.4). **Está haciendo mal:** Podría estar presentando la oferta de forma poco clara o sin destacar los beneficios para el cliente. **Cómo mejorar:** Adaptar la oferta a las necesidades identificadas (aunque sean mínimas). Enfatizar los beneficios específicos que el cliente obtendrá con el plan.\n*   **Manejo de Objeciones:** **Regular.** El puntaje de 31.1 está por debajo del promedio del equipo (34.0). **Está haciendo mal:** Probablemente está usando respuestas genéricas para todas las objeciones. **Cómo mejorar:** Rebatir la objeción PUNTUAL de CADA cliente. Sincronizar/personalizar la respuesta según el cliente específico.\n*   **Cierre:** **Bajo.** El puntaje de 23.5 es similar al promedio del equipo (23.6), pero necesita mejorar. **Está haciendo mal:** Podría estar dudando o usando frases poco directas al cerrar la venta. **Cómo mejorar:** Asignar sucursal o buscar domicilio del cliente para completar la venta. Mostrar seguridad y confianza al cerrar.\n*   **Despedida:** **Regular.** El puntaje de 54.9 está por debajo del promedio del equipo (62.6). **Está haciendo mal:** Podría estar omitiendo el ofrecimiento de acompañamiento durante la portabilidad. **Cómo mejorar:** Despedirse de forma cordial y profesional. Ofrecer acompañamiento durante la portabilidad (opcional).\n*   **Proactividad:** **Crítico.** El puntaje de 16.1 está cerca del promedio del equipo (15.1), pero con una gran caida esta semana, esto no es bueno. **Está haciendo mal:** Probablemente está preguntando si el cliente está interesado en fibra en lugar de ofrecerla directamente. **Cómo mejorar:** Comentar DIRECTAMENTE sobre fibra sin preguntar. Decir: \"Además, le ofrezco nuestro servicio de fibra...\" en lugar de \"¿Le interesaría conocer nuestros servicios de fibra?\".\n*   **Empatía:** **Regular.** El puntaje de 40.0 está cerca del promedio del equipo (45.1), pero con una gran mejora esta semana. **Está haciendo mal:** No hay un error notable. **Cómo mejorar:** Seguir conectando con el cliente, mostrando interés genuino y adaptando la comunicación a su estilo.\n*   **Resolución de Problemas:** **Bajo.** El puntaje de 17.8 está por debajo del promedio del equipo (25.0). **Está haciendo mal:** No hay un error notable. **Cómo mejorar:** Prestar atención para escuchar las preguntas del cliente y ofrecer un mensaje de soporte y acompañamiento si se debe hacer.\n\n### 7. PLAN DE ACCIÓN SEMANAL (4 semanas)\n**Semana 1:** **Foco principal: Detección de Necesidades y Proactividad.**\n*   Acción: Capacitación intensiva sobre técnicas de detección de necesidades (preguntas efectivas, escucha activa). Revisión y práctica de scripts para ofrecer fibra de forma directa. Simulación de llamadas con feedback específico.\n\n**Semana 2:** **Siguiente prioridad: Cierre y Manejo de Objeciones.**\n*   Acción: Capacitación sobre técnicas de cierre efectivas (cierre directo, cierre por escasez). Revisión y práctica de manejo de objeciones comunes (precio, competencia, etc.). Simulación de llamadas con feedback específico.\n\n**Semana 3:** **Consolidación: Saludo y Presentación, y Empatía.**\n*   Acción: Reforzar los puntos fuertes del saludo y la presentación. Revisión de las reglas del negocio de las frases prohibidas. Escuchar las grabaciones del vendedor, auto-evaluar su trabajo y ver la de sus compañeros.\n\n**Semana 4:** **Optimización: Resolución de Problemas y Despedida.**\n*   Acción: Brindar entrenamiento en resolución de problemas comunes (facturación, servicio técnico, etc.). Revisar y practicar el protocolo de despedida. Monitoreo continuo del desempeño y feedback personalizado.\n\n### 8. TÉCNICAS Y SCRIPTS RECOMENDADOS\n*   **Verificación de Identidad:**\n    *   \"Hola, ¿me comunico con [Nombre y Apellido]?\"\n*   **Detección de Necesidades:**\n    *   \"¿Qué es lo que más usás de tu celular?\"\n    *   \"¿Cuántos GB tenés en tu plan actual?\"\n    *   \"¿Con qué frecuencia usás redes sociales/ves videos/hacés videollamadas en tu celular?\"\n*   **Oferta de Fibra (Directa):**\n    *   \"Además, le VA a interesar nuestro servicio de fibra óptica, que le ofrece [beneficios específicos].\"\n    *   \"Y para que tenga una experiencia completa, le VA a interesar la fibra de Movistar que le permite [beneficios específicos].\"\n*   **Cierre Directo:**\n    *   \"Perfecto, entonces le asigno la sucursal más cercana para que retire su nuevo plan.\"\n    *   \"Para completar la venta, ¿me indica su dirección así le enviamos un técnico para la instalación?\"\n*   **Manejo de Precio:**\n    *   \"Entiendo que el precio es importante. A varios clientes les pasó lo mismo al principio, pero después de probar la velocidad y estabilidad de la conexión, se dieron cuenta de que el valor está ahí.\"\n    *   \"Sé que estás mirando el precio, pero enfocarse en los beneficios que te va a dar al contratar este plan son muy importantes. Pensá en [Beneficios].\"\n\n### 9. METAS CUANTIFICABLES\n*   Meta de puntaje IA a alcanzar en 30 días: 50\n*   Meta de tasa de conversión: 1.5%\n*   Meta de ofrecimiento de productos (Fibra): 100% de las llamadas\n*   Meta de % Capta Atención (llamadas >1 min): 40%\n*   Meta de TMO a alcanzar: 3 minutos\n*   KPIs específicos a mejorar: Detección de Necesidades, Proactividad y Cierre.\n\n### 10. MENSAJE MOTIVACIONAL PERSONALIZADO\namza35, ¡felicitaciones por el avance de esta última semana! Tu esfuerzo y compromiso son evidentes en el aumento de tu puntaje promedio y en la mejora de áreas como la empatía y el manejo de objeciones. Ahora, el desafío es corregir los retrocesos y consolidar tus fortalezas. Sé que tenés el potencial para superar estos obstáculos y convertirte en un vendedor de alto rendimiento. ¡Contá con mi apoyo para alcanzar tus metas!\n",
   "modelo_usado": "gemini-2.0-flash",
   "tiene_historial": false,
   "fecha_coaching_anterior": null,
-  "evolucion": null
+  "evolucion": {
+    "cambio_puntaje": 6.0,
+    "mejoro": true,
+    "criterios_mejoraron": [
+      "saludo_presentacion (+9.8)",
+      "identificacion_cliente (+7.9)",
+      "oferta_productos (+11.2)",
+      "manejo_objeciones (+14.1)",
+      "despedida (+11.0)",
+      "empatia (+22.7)"
+    ],
+    "criterios_empeoraron": [
+      "deteccion_necesidades (-3.1)",
+      "cierre (-3.5)",
+      "proactividad (-16.3)",
+      "resolucion_problemas (-4.6)"
+    ],
+    "criterios_igual": []
+  }
 }
