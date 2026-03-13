@@ -771,28 +771,28 @@ USUARIOS = {
         'password_hash': hash_password('Yx3gRk7v'),
         'nombre': 'Melani',
         'rol': 'supervisor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
     },
     'josefina': {
         'password_hash': hash_password('Nt5cWq8m'),
         'nombre': 'Josefina',
         'rol': 'supervisor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
     },
     'yasmin': {
         'password_hash': hash_password('Bv2jHs6p'),
         'nombre': 'Yasmin',
         'rol': 'supervisor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
     },
     'nati': {
         'password_hash': hash_password('Zf4dKt9r'),
         'nombre': 'Nati',
         'rol': 'supervisor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
     },
     'capacitacion': {
@@ -1201,302 +1201,302 @@ USUARIOS = {
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     # ========================================
-    # VENDEDORES EQUIPO MELANIE CARMONA
+    # VENDEDORES EQUIPO MELANIE
     # ========================================
     'mza1': {
         'password_hash': hash_password('Rf4nBk9t'),
         'nombre': 'MZA 1',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza2': {
         'password_hash': hash_password('Yc7mHw3p'),
         'nombre': 'MZA 2',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza3': {
         'password_hash': hash_password('Ks2vPq8j'),
         'nombre': 'MZA 3',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza4': {
         'password_hash': hash_password('Bn6xRt4f'),
         'nombre': 'MZA 4',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza5': {
         'password_hash': hash_password('Dw9cLm2s'),
         'nombre': 'MZA 5',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza6': {
         'password_hash': hash_password('Hj3kNp7v'),
         'nombre': 'MZA 6',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza7': {
         'password_hash': hash_password('Tq8bGs4y'),
         'nombre': 'MZA 7',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza8': {
         'password_hash': hash_password('Xn5rWk9c'),
         'nombre': 'MZA 8',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza9': {
         'password_hash': hash_password('Fm2jVt6h'),
         'nombre': 'MZA 9',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza10': {
         'password_hash': hash_password('Pc7sDq3n'),
         'nombre': 'MZA 10',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza12': {
         'password_hash': hash_password('Zk4wMr8b'),
         'nombre': 'MZA 12',
         'rol': 'vendedor',
-        'equipo': 'MELANIE CARMONA',
+        'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     # ========================================
-    # VENDEDORES EQUIPO ARENAS YASMIN
+    # VENDEDORES EQUIPO YASMIN
     # ========================================
     'mza13': {
         'password_hash': hash_password('Gt9hXn2f'),
         'nombre': 'MZA 13',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza14': {
         'password_hash': hash_password('Lv6cBp4k'),
         'nombre': 'MZA 14',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza15': {
         'password_hash': hash_password('Qw3rKs7m'),
         'nombre': 'MZA 15',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza16': {
         'password_hash': hash_password('Jn8fTq2x'),
         'nombre': 'MZA 16',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza18': {
         'password_hash': hash_password('Yb5mPv9d'),
         'nombre': 'MZA 18',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza19': {
         'password_hash': hash_password('Ck2wRn6j'),
         'nombre': 'MZA 19',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza20': {
         'password_hash': hash_password('Hs7kDt3p'),
         'nombre': 'MZA 20',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza21': {
         'password_hash': hash_password('Nr4cGm8v'),
         'nombre': 'MZA 21',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza22': {
         'password_hash': hash_password('Wf9jLs5b'),
         'nombre': 'MZA 22',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza23': {
         'password_hash': hash_password('Xq2nYk7r'),
         'nombre': 'MZA 23',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza24': {
         'password_hash': hash_password('Bm6hPt3w'),
         'nombre': 'MZA 24',
         'rol': 'vendedor',
-        'equipo': 'ARENAS YASMIN',
+        'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     # ========================================
-    # VENDEDORES EQUIPO JOSEFINA ZEBALLOS
+    # VENDEDORES EQUIPO JOSEFINA
     # ========================================
     'mza25': {
         'password_hash': hash_password('Vk8rFn4c'),
         'nombre': 'MZA 25',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza26': {
         'password_hash': hash_password('Tn3wSq9j'),
         'nombre': 'MZA 26',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza27': {
         'password_hash': hash_password('Md7cXk2p'),
         'nombre': 'MZA 27',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza28': {
         'password_hash': hash_password('Rj5nBv8f'),
         'nombre': 'MZA 28',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza29': {
         'password_hash': hash_password('Yh2kLm6s'),
         'nombre': 'MZA 29',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza30': {
         'password_hash': hash_password('Gw9pRt4n'),
         'nombre': 'MZA 30',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza31': {
         'password_hash': hash_password('Kb4fDq7x'),
         'nombre': 'MZA 31',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza32': {
         'password_hash': hash_password('Zn8cHs3v'),
         'nombre': 'MZA 32',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza33': {
         'password_hash': hash_password('Pt6jWm9k'),
         'nombre': 'MZA 33',
         'rol': 'vendedor',
-        'equipo': 'JOSEFINA ZEBALLOS',
+        'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     # ========================================
-    # VENDEDORES EQUIPO NATALI SANCHE
+    # VENDEDORES EQUIPO NATALI
     # ========================================
     'mza34': {
         'password_hash': hash_password('Fc2rNb7h'),
         'nombre': 'MZA 34',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza35': {
         'password_hash': hash_password('Xk5wPq3d'),
         'nombre': 'MZA 35',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza36': {
         'password_hash': hash_password('Lm9cVt4j'),
         'nombre': 'MZA 36',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza37': {
         'password_hash': hash_password('Qs7hKn2f'),
         'nombre': 'MZA 37',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza38': {
         'password_hash': hash_password('Br4jGs8p'),
         'nombre': 'MZA 38',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza39': {
         'password_hash': hash_password('Wn6dYm3c'),
         'nombre': 'MZA 39',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza40': {
         'password_hash': hash_password('Hv8kRq5x'),
         'nombre': 'MZA 40',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza41': {
         'password_hash': hash_password('Tc2pLs9n'),
         'nombre': 'MZA 41',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza42': {
         'password_hash': hash_password('Jf7bXw4k'),
         'nombre': 'MZA 42',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     'mza43': {
         'password_hash': hash_password('Yk3nDt6v'),
         'nombre': 'MZA 43',
         'rol': 'vendedor',
-        'equipo': 'NATALI SANCHE',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
     # ========================================
@@ -11185,7 +11185,7 @@ def pagina_resumen_corporativo(datos):
     permisos = obtener_permisos_usuario()
     
     # Vendedores del equipo Mel: mostrar directamente su resumen individual
-    if permisos['rol'] == 'vendedor' and permisos.get('equipo') == 'MELANIE CARMONA':
+    if permisos['rol'] == 'vendedor' and permisos.get('equipo') == 'MELANIE':
         coaching_data = datos.get('coaching', {})
         if not coaching_data:
             st.warning("⚠️ No hay datos de coaching disponibles todavía.")
@@ -11829,7 +11829,7 @@ def main():
     
     # Menú según rol del usuario
     equipo_usuario = datos_usuario.get('equipo', '')
-    if rol_usuario == 'vendedor' and equipo_usuario == 'MELANIE CARMONA':
+    if rol_usuario == 'vendedor' and equipo_usuario == 'MELANIE':
         # Vendedores equipo Mel: Solo ven su resumen corporativo
         paginas = {
             "📊 Resumen Corporativo": "resumen_corporativo",
