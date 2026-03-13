@@ -2744,7 +2744,7 @@ def pagina_planes_ofrecidos(datos, df):
     # =========================================================================
     st.markdown('<p class="section-header">📱 Análisis de Ofertas de Planes Móviles</p>', unsafe_allow_html=True)
     
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.metric("📞 Total Operaciones", f"{total_llamadas:,}")
@@ -2754,24 +2754,6 @@ def pagina_planes_ofrecidos(datos, df):
         pct_sin = 100 - pct_con_plan if pct_con_plan else 0
         st.metric("❌ Sin Oferta", f"{sin_plan:,}", f"{pct_sin:.1f}%", delta_color="inverse")
     with col4:
-        # Calcular si se ofreció fibra desde el CSV de evaluaciones
-        if 'evaluaciones_gemini_df' in datos and datos['evaluaciones_gemini_df'] is not None:
-            df_eval = datos['evaluaciones_gemini_df'].copy()
-            # Si hay filtros aplicados por equipo/agente, aplicarlos también aquí
-            if not df_filtrado.empty and 'agente_display' in df_filtrado.columns:
-                # Usar los mismos agentes que en df_filtrado
-                agentes_filtrados = df_filtrado['agente_display'].unique()
-                df_eval = df_eval[df_eval['agente'].isin(agentes_filtrados)]
-            
-            if not df_eval.empty and 'se_ofrecio_fibra' in df_eval.columns:
-                total_con_fibra = df_eval['se_ofrecio_fibra'].sum()
-                pct_fibra_eval = (total_con_fibra / len(df_eval) * 100) if len(df_eval) > 0 else 0
-                st.metric("🌐 Ofreció Fibra", f"{int(total_con_fibra):,}", f"{pct_fibra_eval:.1f}%")
-            else:
-                st.metric("🌐 Ofreció Fibra", "N/D")
-        else:
-            st.metric("🌐 Ofreció Fibra", "N/D")
-    with col5:
         # Plan más usado como primer ofrecimiento
         if not df_filtrado.empty and 'primer_plan' in df_filtrado.columns:
             primer_plan_conteo = df_filtrado['primer_plan'].dropna().value_counts().to_dict()
@@ -7116,34 +7098,59 @@ def determinar_turno(hora_inicio):
     except:
         return "Sin Turno"
 
-def aplicar_semaforo_tiempo(valor_segundos, tipo_estado):
-    """Aplica semáforo según tipo de estado y valor"""
+def aplicar_semaforo_tiempo(valor_segundos, tipo_estado, **kwargs):
+    """Aplica semáforo según tipo de estado y valor.
+    kwargs opcionales:
+        - min_coaching_seg: valor mínimo de coaching entre todos los agentes (para comparar)
+        - ventas: cantidad de ventas del agente (para calcular admin permitido)
+    """
     if tipo_estado == "NO DISPONIBLE":
         if valor_segundos >= 300:  # >= 5 min
             return "🔴", "#DC2626", "Crítico"
-        elif valor_segundos >= 180:  # 3-5 min
+        elif valor_segundos >= 120:  # 2 min a 4:59 min
             return "🟡", "#F59E0B", "Alerta"
         else:
             return "🟢", "#10B981", "OK"
     
     elif tipo_estado == "BREAK":
-        if valor_segundos >= 1500:  # >= 25 min
+        if valor_segundos >= 2100:  # >= 35 min
             return "🔴", "#DC2626", "Excedido"
-        elif valor_segundos >= 1380:  # 23-25 min
+        elif valor_segundos >= 1260:  # 21 min a 24:59 min
             return "🟡", "#F59E0B", "Límite"
         else:
             return "🟢", "#10B981", "OK"
     
+    elif tipo_estado == "COACHING":
+        # Amarillo: 10 min de diferencia con el registro más bajo. Rojo: NO TIENE
+        min_coaching = kwargs.get('min_coaching_seg', 0)
+        if min_coaching > 0 and valor_segundos >= min_coaching + 600:  # 10 min más que el mínimo
+            return "🟡", "#F59E0B", "Diferencia"
+        else:
+            return "🟢", "#10B981", "OK"
+    
     elif tipo_estado == "BAÑO":
-        if valor_segundos > 600:  # > 10 min
+        # Amarillo: NO TIENE. Rojo: >= 10 min
+        if valor_segundos >= 600:  # >= 10 min
             return "🔴", "#DC2626", "Excedido"
         else:
             return "🟢", "#10B981", "OK"
     
+    elif tipo_estado == "ADMINISTRATIVO":
+        # Permitido: 10 min por venta. Amarillo: hasta 5 min pasado. Rojo: más de 5 min pasado.
+        ventas = kwargs.get('ventas', 0)
+        permitido_seg = ventas * 600  # 10 min por venta
+        excedente = valor_segundos - permitido_seg
+        if excedente > 300:  # más de 5 min pasado el permitido
+            return "🔴", "#DC2626", "Excedido"
+        elif excedente > 0:  # hasta 5 min pasado el permitido
+            return "🟡", "#F59E0B", "Límite"
+        else:
+            return "🟢", "#10B981", "OK"
+    
     elif tipo_estado == "TIEMPO_LOGUEO":
-        if valor_segundos < 16800:  # < 4:40:00
+        if valor_segundos <= 16799:  # 4:39:59 hacia abajo
             return "🔴", "#DC2626", "Bajo"
-        elif valor_segundos < 17100:  # 4:40:00 - 4:45:00
+        elif valor_segundos <= 17099:  # 4:40:00 a 4:44:59
             return "🟡", "#F59E0B", "Límite"
         else:
             return "🟢", "#10B981", "OK"
@@ -9749,25 +9756,93 @@ def pagina_metricas_calidad():
             
             st.markdown("---")
             
-            # Tabla detallada
+            # Tabla detallada con semáforo
             st.markdown("#### 📋 Detalle por Vendedor/Agente")
             
             df_tiempos = pd.DataFrame(tiempos_filtrados)
             
-            # Seleccionar columnas relevantes
-            cols_mostrar = ['vendedor', 'equipo', 'no_disponible_fmt', 'break_fmt', 'coaching_fmt', 'administrativo_fmt', 
-                           'baño_fmt', 'llamada_manual_fmt', 'disponible_fmt', 'logueo_fmt']
-            cols_disponibles = [c for c in cols_mostrar if c in df_tiempos.columns]
-            df_display = df_tiempos[cols_disponibles].copy()
-            nombres_cols = {
-                'vendedor': 'Vendedor', 'equipo': 'Equipo', 'no_disponible_fmt': 'No Disponible',
-                'break_fmt': 'Break', 'coaching_fmt': 'Coaching',
-                'administrativo_fmt': 'Admin', 'baño_fmt': 'Baño', 'llamada_manual_fmt': 'Llamada Manual',
-                'disponible_fmt': 'T. Disponible', 'logueo_fmt': 'T. Logueo'
-            }
-            df_display.columns = [nombres_cols.get(c, c) for c in cols_disponibles]
+            # Construir lookup de ventas por vendedor para cálculo de Administrativo
+            ventas_por_vendedor = {}
+            for v in ventas_vendedor:
+                vend_name = str(v.get('vendedor', '')).lower().replace(' ', '')
+                ventas_por_vendedor[vend_name] = v.get('total_ventas', 0)
             
-            st.dataframe(df_display.sort_values('Vendedor' if 'Vendedor' in df_display.columns else df_display.columns[0]), use_container_width=True, height=400)
+            # Calcular mínimo de coaching para semáforo Coaching
+            coaching_vals = [v.get('coaching_seg', 0) for v in tiempos_filtrados if v.get('coaching_seg', 0) > 0]
+            min_coaching_seg = min(coaching_vals) if coaching_vals else 0
+            
+            # Generar tabla HTML con semáforos
+            def _color_cell(valor_fmt, valor_seg, tipo, **kwargs):
+                """Retorna celda HTML con color de semáforo"""
+                emoji, color, _ = aplicar_semaforo_tiempo(valor_seg, tipo, **kwargs)
+                if color == "#10B981":
+                    bg = "#d1fae5"
+                    text_color = "#065f46"
+                elif color == "#F59E0B":
+                    bg = "#fef3c7"
+                    text_color = "#92400e"
+                elif color == "#DC2626":
+                    bg = "#fee2e2"
+                    text_color = "#991b1b"
+                else:
+                    bg = "#f3f4f6"
+                    text_color = "#374151"
+                return f'<td style="background:{bg}; color:{text_color}; padding:6px 10px; text-align:center; font-weight:500;">{emoji} {valor_fmt}</td>'
+            
+            # Construir tabla HTML
+            html_rows = []
+            df_sorted = df_tiempos.sort_values('vendedor' if 'vendedor' in df_tiempos.columns else df_tiempos.columns[0])
+            for _, row in df_sorted.iterrows():
+                vendedor = row.get('vendedor', '')
+                equipo = row.get('equipo', '')
+                vend_key = str(vendedor).lower().replace(' ', '')
+                num_ventas = ventas_por_vendedor.get(vend_key, 0)
+                
+                cells = f'<td style="padding:6px 10px; font-weight:600;">{vendedor}</td>'
+                cells += f'<td style="padding:6px 10px;">{equipo}</td>'
+                cells += _color_cell(row.get('no_disponible_fmt', '00:00:00'), row.get('no_disponible_seg', 0), "NO DISPONIBLE")
+                cells += _color_cell(row.get('break_fmt', '00:00:00'), row.get('break_seg', 0), "BREAK")
+                cells += _color_cell(row.get('coaching_fmt', '00:00:00'), row.get('coaching_seg', 0), "COACHING", min_coaching_seg=min_coaching_seg)
+                cells += f'<td style="padding:6px 10px; text-align:center;">{row.get("administrativo_fmt", "00:00:00")}</td>'
+                cells += _color_cell(row.get('baño_fmt', '00:00:00'), row.get('baño_seg', 0), "BAÑO")
+                cells += f'<td style="padding:6px 10px; text-align:center;">{row.get("llamada_manual_fmt", "00:00:00")}</td>'
+                cells += f'<td style="padding:6px 10px; text-align:center;">{row.get("disponible_fmt", "00:00:00")}</td>'
+                cells += _color_cell(row.get('logueo_fmt', '00:00:00'), row.get('logueo_seg', 0), "TIEMPO_LOGUEO")
+                html_rows.append(f'<tr>{cells}</tr>')
+            
+            # Leyenda de semáforo
+            st.markdown("""
+            <div style='display:flex; gap:15px; margin-bottom:10px; flex-wrap:wrap;'>
+                <span style='background:#d1fae5; color:#065f46; padding:3px 10px; border-radius:4px; font-size:0.85rem;'>🟢 OK</span>
+                <span style='background:#fef3c7; color:#92400e; padding:3px 10px; border-radius:4px; font-size:0.85rem;'>🟡 Alerta</span>
+                <span style='background:#fee2e2; color:#991b1b; padding:3px 10px; border-radius:4px; font-size:0.85rem;'>🔴 Crítico</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            tabla_html = f"""
+            <div style='overflow-x:auto;'>
+            <table style='width:100%; border-collapse:collapse; font-size:0.9rem;'>
+            <thead>
+                <tr style='background:#1E3A5F; color:white;'>
+                    <th style='padding:8px 10px; text-align:left;'>Vendedor</th>
+                    <th style='padding:8px 10px; text-align:left;'>Equipo</th>
+                    <th style='padding:8px 10px; text-align:center;'>No Disponible</th>
+                    <th style='padding:8px 10px; text-align:center;'>Break</th>
+                    <th style='padding:8px 10px; text-align:center;'>Coaching</th>
+                    <th style='padding:8px 10px; text-align:center;'>Admin</th>
+                    <th style='padding:8px 10px; text-align:center;'>Baño</th>
+                    <th style='padding:8px 10px; text-align:center;'>Ll. Manual</th>
+                    <th style='padding:8px 10px; text-align:center;'>T. Disponible</th>
+                    <th style='padding:8px 10px; text-align:center;'>T. Logueo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {''.join(html_rows)}
+            </tbody>
+            </table>
+            </div>
+            """
+            st.markdown(tabla_html, unsafe_allow_html=True)
     
     # =========================================================================
     # TAB 2: VENTAS (Semanal / Mensual)
