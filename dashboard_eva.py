@@ -6719,17 +6719,6 @@ def pagina_evaluaciones_gemini(datos):
                         annotation_font=dict(size=14, color="#10B981", family="Arial Black")
                     )
                     
-                    # Línea de promedio
-                    fig.add_vline(
-                        x=50, 
-                        line_dash="dash", 
-                        line_color="#94A3B8",
-                        line_width=1,
-                        annotation_text="50",
-                        annotation_position="bottom",
-                        annotation_font=dict(size=10, color="#94A3B8")
-                    )
-                    
                     fig.update_layout(
                         barmode='group',
                         height=700,  # Mucho más grande
