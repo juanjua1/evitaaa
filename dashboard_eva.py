@@ -739,13 +739,7 @@ USUARIOS = {
     # ========================================
     # SUPERVISORES
     # ========================================
-    'byl': {
-        'password_hash': hash_password('Kp7mNx2w'),
-        'nombre': 'Byl',
-        'rol': 'supervisor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
-    },
+
     'diana': {
         'password_hash': hash_password('Qr9sVt4y'),
         'nombre': 'Diana',
@@ -753,13 +747,7 @@ USUARIOS = {
         'equipo': 'DIANA',
         'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
     },
-    'marina': {
-        'password_hash': hash_password('Hj6bLm3c'),
-        'nombre': 'Marina',
-        'rol': 'supervisor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'coaching', 'evaluaciones', 'reportes']
-    },
+
     'calidad': {
         'password_hash': hash_password('Wd8fPn5z'),
         'nombre': 'Calidad',
@@ -1099,107 +1087,7 @@ USUARIOS = {
         'equipo': 'DIANA',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
-    # ========================================
-    # VENDEDORES EQUIPO BYL
-    # ========================================
-    'mza307': {
-        'password_hash': hash_password('Rw9sFt2p'),
-        'nombre': 'MZA 307',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza308': {
-        'password_hash': hash_password('Yn5cXk8j'),
-        'nombre': 'MZA 308',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza309': {
-        'password_hash': hash_password('Gq3hNm7r'),
-        'nombre': 'MZA 309',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza310': {
-        'password_hash': hash_password('Bv8pRt4w'),
-        'nombre': 'MZA 310',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza311': {
-        'password_hash': hash_password('Df6kLs9n'),
-        'nombre': 'MZA 311',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza312': {
-        'password_hash': hash_password('Jx2wQc5m'),
-        'nombre': 'MZA 312',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza315': {
-        'password_hash': hash_password('Ks7bYp3f'),
-        'nombre': 'MZA 315',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza99': {
-        'password_hash': hash_password('Pw4nHt8d'),
-        'nombre': 'MZA 99',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza100': {
-        'password_hash': hash_password('Tc9rMk2v'),
-        'nombre': 'MZA 100',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza301': {
-        'password_hash': hash_password('Xh5jGw7s'),
-        'nombre': 'MZA 301',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza302': {
-        'password_hash': hash_password('Zn3cFq9x'),
-        'nombre': 'MZA 302',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza303': {
-        'password_hash': hash_password('Lm8vDt4p'),
-        'nombre': 'MZA 303',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza304': {
-        'password_hash': hash_password('Qr6kBn2y'),
-        'nombre': 'MZA 304',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza305': {
-        'password_hash': hash_password('Ws4pJm7c'),
-        'nombre': 'MZA 305',
-        'rol': 'vendedor',
-        'equipo': 'BYL',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
+
     # ========================================
     # VENDEDORES EQUIPO MELANIE
     # ========================================
@@ -1276,6 +1164,34 @@ USUARIOS = {
     'mza12': {
         'password_hash': hash_password('Zk4wMr8b'),
         'nombre': 'MZA 12',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza81': {
+        'password_hash': hash_password('Mendozasmen2032'),
+        'nombre': 'MZA 81',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza82': {
+        'password_hash': hash_password('MzaMendoza856'),
+        'nombre': 'MZA 82',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza83': {
+        'password_hash': hash_password('MzaM170'),
+        'nombre': 'MZA 83',
+        'rol': 'vendedor',
+        'equipo': 'MELANIE',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza301': {
+        'password_hash': hash_password('MZA_A02'),
+        'nombre': 'MZA 301',
         'rol': 'vendedor',
         'equipo': 'MELANIE',
         'permisos': ['dashboard', 'mi_rendimiento']
@@ -1360,6 +1276,34 @@ USUARIOS = {
         'equipo': 'YASMIN',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
+    'mza73': {
+        'password_hash': hash_password('Mendozasbue2712'),
+        'nombre': 'MZA 73',
+        'rol': 'vendedor',
+        'equipo': 'YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza74': {
+        'password_hash': hash_password('Mendozasnos9422'),
+        'nombre': 'MZA 74',
+        'rol': 'vendedor',
+        'equipo': 'YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza77': {
+        'password_hash': hash_password('MzaM164'),
+        'nombre': 'MZA 77',
+        'rol': 'vendedor',
+        'equipo': 'YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza100': {
+        'password_hash': hash_password('MZA_A01'),
+        'nombre': 'MZA 100',
+        'rol': 'vendedor',
+        'equipo': 'YASMIN',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
     # ========================================
     # VENDEDORES EQUIPO JOSEFINA
     # ========================================
@@ -1422,6 +1366,34 @@ USUARIOS = {
     'mza33': {
         'password_hash': hash_password('Pt6jWm9k'),
         'nombre': 'MZA 33',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza75': {
+        'password_hash': hash_password('MzaM162'),
+        'nombre': 'MZA 75',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza76': {
+        'password_hash': hash_password('MzaM163'),
+        'nombre': 'MZA 76',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza80': {
+        'password_hash': hash_password('mza80'),
+        'nombre': 'MZA 80',
+        'rol': 'vendedor',
+        'equipo': 'JOSEFINA',
+        'permisos': ['dashboard', 'mi_rendimiento']
+    },
+    'mza302': {
+        'password_hash': hash_password('MZA_A03'),
+        'nombre': 'MZA 302',
         'rol': 'vendedor',
         'equipo': 'JOSEFINA',
         'permisos': ['dashboard', 'mi_rendimiento']
@@ -1499,56 +1471,18 @@ USUARIOS = {
         'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
-    # ========================================
-    # VENDEDORES EQUIPO MARINA MARTINEZ
-    # ========================================
-    'mza44': {
-        'password_hash': hash_password('Np8rFm2j'),
-        'nombre': 'MZA 44',
+    'mza78': {
+        'password_hash': hash_password('MzaM165'),
+        'nombre': 'MZA 78',
         'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
-    'mza45': {
-        'password_hash': hash_password('Gk5cBq7s'),
-        'nombre': 'MZA 45',
+    'mza79': {
+        'password_hash': hash_password('MzaM166'),
+        'nombre': 'MZA 79',
         'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza72': {
-        'password_hash': hash_password('Rw3hPn9d'),
-        'nombre': 'MZA 72',
-        'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza73': {
-        'password_hash': hash_password('Vb6jKt4x'),
-        'nombre': 'MZA 73',
-        'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza74': {
-        'password_hash': hash_password('Sm2wYq8f'),
-        'nombre': 'MZA 74',
-        'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza313': {
-        'password_hash': hash_password('Dn7kRs3p'),
-        'nombre': 'MZA 313',
-        'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
-        'permisos': ['dashboard', 'mi_rendimiento']
-    },
-    'mza314': {
-        'password_hash': hash_password('Xt4cLv9m'),
-        'nombre': 'MZA 314',
-        'rol': 'vendedor',
-        'equipo': 'MARINA MARTINEZ',
+        'equipo': 'NATALI',
         'permisos': ['dashboard', 'mi_rendimiento']
     },
 }

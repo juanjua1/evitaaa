@@ -1,46 +1,11 @@
 ﻿# ============================================
-# GITIGNORE PARA EVA DASHBOARD - DESPLIEGUE
+# EVA DASHBOARD - .gitignore
+# Solo se trackean los archivos de deployment
 # ============================================
 
-# =============== ARCHIVOS DE AUDIO Y DATOS GRANDES ===============
-audios_descargados/
-audios_descargados.zip
-muestras_volumen/
-muestra eva/
-transcripts/*
-!transcripts/mejorados_gemini/
-!transcripts/mejorados_gemini/**
-analisis_tono/
-productos_mejorado_*.json
-productos_transcripcion_*.json
-
-# =============== TRANSCRIPCIONES (DATOS PESADOS) ===============
-transcripciones/
-transcripciones_mejoradas/
-transcripciones.zip
-
-# =============== ARCHIVOS DE DATOS SENSIBLES ===============
-basurita.csv
-config.py
-
-# =============== REPORTES NO NECESARIOS ===============
-reportes/agentes/
-reportes/analisis_integral/
-reportes/cierres_comerciales/
-reportes/clasificacion_completa/
-reportes/correccion_planes/
-reportes/evaluaciones_detalle/
-reportes/para_gemini/
-# reportes/planes/  # Necesario para el dashboard
-# reportes/quejas/  # Necesario para el dashboard
-# reportes/coaching_vendedores/  # Necesario para el dashboard
-# reportes/coaching_equipos/  # Necesario para el dashboard
-reportes/gemini_procesados.json
-
-# =============== PYTHON ===============
+# ============ PYTHON ============
 __pycache__/
 *.py[cod]
-*.class
 *.so
 .Python
 env/
@@ -53,15 +18,62 @@ build/
 *.egg
 pip-log.txt
 
-# =============== JUPYTER ===============
-.ipynb_checkpoints/
-*.ipynb
+# ============ SCRIPTS DE PIPELINE (solo local) ============
+# Todos los scripts numerados (1_ a 17_)
+[0-9]_*.py
+[0-9][0-9]_*.py
+# Orquestadores de pipeline
+pipeline_completo.py
+pipeline_completo_automatico.py
+pipeline_enriquecimiento_masivo.py
+pipeline_mejora_gemini.py
+ejecutar_scraping_multi.py
+scraping_automatico.py
 
-# =============== ARCHIVOS DE PRUEBA ===============
+# ============ SCRIPTS UTILITARIOS (solo local) ============
+analizar_calidad_llamadas.py
+borrar_no_atendidas*.py
+comparar_ids.py
+config.py
+enriquecer_json.py
+generar_reporte_detallado.py
+generar_resumen_vendedores_equipos.py
+limpiar_csv_no_atendidas.py
+matchear_json_csv.py
+procesar_calidad.py
+procesar_transcripciones_*.py
+ver_ventas_sin_plan.py
 test_*.py
-*_CORREGIDO.json
 
-# =============== MODELOS ===============
+# ============ DATOS Y TRANSCRIPCIONES ============
+transcripciones*/
+transcripts*/
+total_transcripciones/
+audios_descargados/
+muestras_volumen/
+muestra eva/
+analisis_tono/
+backup_*/
+productos_*.json
+*_CORREGIDO.json
+basurita.csv
+solicitudes.csv
+interacciones*.csv
+
+# ============ REPORTES GENERADOS (no deployment) ============
+reportes/agentes/
+reportes/analisis_integral/
+reportes/cierres_comerciales/
+reportes/clasificacion_agentes_equipos/
+reportes/clasificacion_completa/
+reportes/correccion_planes/
+reportes/enriquecimiento_masivo/
+reportes/evaluaciones_detalle/
+reportes/mejora_gemini/
+reportes/para_gemini/
+reportes/gemini_procesados.json
+
+# ============ MODELOS ML ============
 pretrained_models/
 *.pth
 *.pt
@@ -70,64 +82,8 @@ pretrained_models/
 *.model
 checkpoint.json
 
-# =============== LOGS ===============
-*.log
-logs/
-
-# =============== IDE ===============
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# =============== OS ===============
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# =============== SCRIPTS NO NECESARIOS ===============
-1_scraper_eva.py
-2_preproc_audio.py
-3_speech_eva.py
-4_evaluacion_gemini.py
-4_lite.py
-4_test_gemini_to_csv_V2.py
-5_tablas_unificadas.py
-6_limpieza_csv_para_metricas.py
-7_*.py
-8_*.py
-9_*.py
-10_*.py
-11_*.py
-12_*.py
-13_*.py
-14_*.py
-15_*.py
-16_*.py
-analizar_calidad_llamadas.py
-borrar_no_atendidas*.py
-comparar_ids.py
-ejecutar_scraping_multi.py
-enriquecer_json.py
-fix_menu.py
-generar_reporte_detallado.py
-limpiar_csv_no_atendidas.py
-matchear_json_csv.py
-pipeline_completo.py
-scraping_automatico.py
-ver_ventas_sin_plan.py
-
-# Archivos Excel y Batch
-*.xlsx
-*.xls
-*.bat
-
-# Temporales
-*.tmp
-*.temp
-*.bak
-
-# =============== ARCHIVOS DE AUDIO ===============
+# ============ ARCHIVOS BINARIOS ============
+# Audio
 *.mp3
 *.wav
 *.ogg
@@ -137,8 +93,32 @@ ver_ventas_sin_plan.py
 *.wma
 *.opus
 *.webm
+# Documentos
+*.pdf
+*.zip
+# Excel y Batch
+*.xlsx
+*.xls
+*.bat
 
-# =============== REPORTES MITROL (CSV GRANDES) ===============
-Reporte-llamadas-mitrol-agostina/**/*.csv
-Reporte-llamadas-mitrol-agostina/*.csv
-Reporte-llamadas-mitrol-agostina/
+# ============ LOGS Y TEMPORALES ============
+*.log
+*.tmp
+*.temp
+*.bak
+logs/
+auto_yes.txt
+temp_output.txt
+
+# ============ JUPYTER ============
+.ipynb_checkpoints/
+*.ipynb
+
+# ============ IDE Y OS ============
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini

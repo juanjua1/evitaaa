@@ -1,0 +1,161 @@
+{
+  "agente": "Urzagasti Macarena",
+  "agente_codigo": "MZA 3",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-09T08:43:23.628647",
+  "metricas": {
+    "agente": "Urzagasti Macarena",
+    "agente_codigo": "MZA 3",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 35,
+      "puntaje_promedio": 40.8,
+      "puntaje_min": 0,
+      "puntaje_max": 80,
+      "desviacion_std": 24.4,
+      "llamadas_excelentes": 2,
+      "llamadas_buenas": 10,
+      "llamadas_regulares": 7,
+      "llamadas_criticas": 16,
+      "criterios": {
+        "saludo_presentacion": 39.7,
+        "identificacion_cliente": 80.0,
+        "deteccion_necesidades": 27.1,
+        "oferta_productos": 46.0,
+        "manejo_objeciones": 34.6,
+        "cierre": 28.9,
+        "despedida": 79.4,
+        "proactividad": 4.9,
+        "empatia": 43.1,
+        "resolucion_problemas": 20.3
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 9,
+        "Oferta de productos": 9,
+        "Proactividad": 8,
+        "Manejo de objeciones": 5,
+        "Profundizar en la detección de necesidades.": 5
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 8,
+        "Despedida cordial.": 7,
+        "Manejo de objeciones.": 6,
+        "Buen saludo y presentación.": 5,
+        "Saludo y presentación": 4
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, verifica la identidad del cliente, y ofrece un plan. Maneja objeciones y gestiona consultas.  Mejorar la proactividad al ofrecer otros productos."
+        },
+        {
+          "puntaje_total": 80.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente, detecta necesidades, ofrece promociones, cierra la llamada y se despide de forma cordial. No ofrece fibra."
+        },
+        {
+          "puntaje_total": 72.0,
+          "resumen": "El agente se presenta y verifica la identidad.  Detecta las necesidades del cliente de forma parcial. Ofrece planes directos. Intenta el cierre pero el cliente tiene una objeción. Muestra empatía. No ofrece fibra. Se despide correctamente."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "La llamada no cumple con los criterios obligatorios. El agente no se presenta correctamente, no detecta necesidades, no ofrece productos directamente ni intenta el cierre de venta."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "Llamada muy corta, sin presentación, identificación, detección de necesidades, oferta de productos ni cierre."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "Llamada de recupero. No se cumplen los criterios de evaluación al no ofrecer productos ni realizar un cierre de venta."
+        }
+      ],
+      "pct_ofrece_fibra": 5.7
+    },
+    "clasificacion": {},
+    "integral": {
+      "duracion_promedio_min": 4.2
+    },
+    "cierres": {},
+    "planes": {
+      "total_llamadas": 59,
+      "con_plan": 17,
+      "ofrece_fibra": 10,
+      "pct_plan": 28.8,
+      "pct_fibra": 16.9
+    },
+    "calidad_llamadas": {
+      "total_llamadas": 266,
+      "tmo_seg": 75.4,
+      "pct_capta_atencion": 24.1,
+      "menos_30seg": 145,
+      "corte_cliente": 176,
+      "corte_agente": 89
+    },
+    "calidad_ventas": {}
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 40.8,
+      "general": 30.6,
+      "diferencia": 10.2,
+      "percentil": 70.2
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 39.7,
+        "general": 17.9,
+        "diferencia": 21.8
+      },
+      "identificacion_cliente": {
+        "agente": 80.0,
+        "general": 49.4,
+        "diferencia": 30.6
+      },
+      "deteccion_necesidades": {
+        "agente": 27.1,
+        "general": 14.3,
+        "diferencia": 12.8
+      },
+      "oferta_productos": {
+        "agente": 46.0,
+        "general": 36.1,
+        "diferencia": 9.9
+      },
+      "manejo_objeciones": {
+        "agente": 34.6,
+        "general": 27.8,
+        "diferencia": 6.8
+      },
+      "cierre": {
+        "agente": 28.9,
+        "general": 19.5,
+        "diferencia": 9.3
+      },
+      "despedida": {
+        "agente": 79.4,
+        "general": 51.2,
+        "diferencia": 28.2
+      },
+      "proactividad": {
+        "agente": 4.9,
+        "general": 8.5,
+        "diferencia": -3.6
+      },
+      "empatia": {
+        "agente": 43.1,
+        "general": 37.5,
+        "diferencia": 5.7
+      },
+      "resolucion_problemas": {
+        "agente": 20.3,
+        "general": 21.0,
+        "diferencia": -0.8
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Urzagasti Macarena\n\n### 1. DIAGNOSTICO GENERAL\nMacarena, tu nivel actual se encuentra en \"Necesita Mejora\". Si bien superas el promedio general del equipo (40.8 vs 30.6), hay un margen importante para crecer y alcanzar tu máximo potencial. Tu puntaje anterior era el mismo, por lo que no se observa evolución en este periodo. Sin embargo, la diferencia con el promedio del equipo es considerable (10.2 puntos), lo que indica que tienes una base sólida y potencial para destacar aún más. Las llamadas evaluadas siguen siendo 35. El análisis muestra oportunidades claras para mejorar la efectividad de tus llamadas y, consecuentemente, tus resultados.\n\n### 2. FORTALEZAS\n*   **Identificación del cliente:** Con un puntaje de 80 de 100, demuestras ser excelente al verificar la identidad del cliente al inicio de la llamada. Continúa enfocándote en esta precisión.\n*   **Despedida:** Tu despedida es cordial y efectiva (79.4 de 100). Mantén esta actitud positiva al finalizar la comunicación.\n*   **Manejo de Objeciones:** Si bien es un área de mejora, tu puntaje (34.6 de 100) es superior al promedio del equipo (27.8 de 100), lo que indica que tienes cierta habilidad para abordar las dudas de los clientes.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Detección de necesidades:** Tu puntaje en este aspecto es bajo (27.1 de 100), lo que impide ofrecer planes y productos adecuados a cada cliente. Esta es el área de mejora más urgente.\n*   **Cierre:** Tu puntaje de 28.9 de 100 indica que debes mejorar las técnicas de cierre para concretar más ventas.\n*   **Proactividad:** Con un puntaje de 4.9 de 100, la proactividad es el aspecto más débil. Debes ofrecer fibra de manera directa a todos los clientes y buscar oportunidades adicionales para aumentar el valor de la venta.\n\n### 4. ANALISIS POR COMPETENCIA\n*   **Saludo y presentación:** (39.7 de 100) Bien al saludar, pero debes hacer una presentación más impactante. Menciona el motivo de tu llamada de forma clara y concisa.\n    *   **Mejora:** En lugar de un saludo genérico, di: \"Hola [Nombre], soy Macarena de Movistar, te llamo porque tengo una oferta que te VA a interesar para mejorar tu plan actual.\"\n*   **Identificación del cliente:** (80 de 100) Excelente, sigue verificando la identidad del cliente con precisión.\n*   **Detección de necesidades:** (27.1 de 100) Deficiente. No estás profundizando lo suficiente en las necesidades de cada cliente.\n    *   **Mejora:** En lugar de preguntar \"¿Cuántos GB tenés?\", pregunta: \"¿Qué es lo que más usás del celular? ¿Redes sociales, videos, videollamadas? ¿Te quedás sin datos a fin de mes?\" Luego pregunta: \"¿Cuántos GB tenés actualmente?\"\n*   **Oferta de productos:** (46 de 100) Estás ofreciendo planes, pero no estás personalizando la oferta ni ofreciendo fibra de manera consistente (16.9% de las llamadas).\n    *   **Mejora:** Después de detectar las necesidades, ofrece un plan concreto que se ajuste a lo que te comentó el cliente. \"Tengo un plan de [cantidad] GB que incluye [beneficios clave] y te VA a permitir [resolver la necesidad identificada].\"\n    *   **Oferta de fibra:** Comenta DIRECTAMENTE: \"Además, te comento que tenemos cobertura de fibra óptica en tu zona y te VA a interesar para tener una conexión mucho más rápida y estable en tu hogar.\"\n*   **Manejo de objeciones:** (34.6 de 100) Necesitas mejorar tu capacidad para rebatir objeciones específicas.\n    *   **Mejora:** Prepara respuestas para las objeciones más comunes (precio, competencia, etc.). No uses respuestas genéricas.\n        *   **Ejemplo:** \"Es lógico que mires el precio. A varios clientes les pasó eso... Lo que pasa es que este plan, además de [beneficios], te VA a permitir [resolver la necesidad], por lo que terminas ahorrando porque...\"\n*   **Cierre:** (28.9 de 100) Debes ser más directo para cerrar la venta.\n    *   **Mejora:** Después de presentar la oferta, asigna directamente la sucursal o busca el domicilio. \"Perfecto, para activar este plan necesito que me confirmes tu domicilio para coordinar la entrega del chip/instalación de la fibra.\"\n*   **Despedida:** (79.4 de 100) Muy bien, mantén la despedida cordial.\n*   **Proactividad:** (4.9 de 100) Urgente mejorar. Debes ser más proactivo al ofrecer productos adicionales y fibra.\n    *   **Mejora:** Ofrece fibra en TODAS las llamadas.\n*   **Empatía:** (43.1 de 100) Bien, sigue mostrando empatía con los clientes.\n*   **Resolución de problemas:** (20.3 de 100) Mejora este aspecto escuchando atentamente los problemas del cliente y ofreciendo soluciones concretas.\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Foco en Detección de Necesidades:** Implementar las preguntas detalladas para comprender las necesidades del cliente (ej: ¿Qué es lo que más usás del celular?). Practicar la escucha activa para identificar necesidades reales. Registrar las necesidades detectadas en el CRM.\n**Semana 2:** **Oferta Directa de Fibra y Cierre:** Integrar la oferta de fibra en todas las llamadas, sin preguntar si le interesa. Practicar técnicas de cierre directo (asignar sucursal o buscar domicilio).\n**Semana 3:** **Manejo de Objeciones:** Repasar las objeciones más comunes y practicar respuestas específicas y persuasivas. Escuchar grabaciones de llamadas exitosas y analizar cómo se manejan las objeciones.\n**Semana 4:** **Optimización General:** Revisar el proceso completo de la llamada, desde el saludo hasta la despedida. Identificar áreas de mejora adicionales y ajustar el enfoque según los resultados obtenidos.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Preguntas para detectar necesidades:** \"¿Qué es lo que más usás del celular? ¿Redes sociales, videos, videollamadas? ¿Te quedás sin datos a fin de mes?\"\n*   **Como ofrecer fibra directamente:** \"Además, te comento que tenemos cobertura de fibra óptica en tu zona y te VA a interesar para tener una conexión mucho más rápida y estable en tu hogar.\"\n*   **Técnicas de cierre directo:** \"Perfecto, para activar este plan necesito que me confirmes tu domicilio para coordinar la entrega del chip/instalación de la fibra.\"\n*   **Manejo de objeciones personalizado:**\n    *   **Precio:** \"Es lógico que mires el precio. A varios clientes les pasó eso... Lo que pasa es que este plan, además de [beneficios], te VA a permitir [resolver la necesidad], por lo que terminas ahorrando porque...\"\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio a 65 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas \"Buenas\" y \"Excelentes\" al 60%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar el porcentaje de llamadas con oferta de fibra al 80%.\n    *   Aumentar la tasa de cierre de ventas en un 15%.\n    *   Mejorar el puntaje en \"Detección de Necesidades\" a 60 de 100.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nMacarena, tenés la capacidad de superar tus resultados actuales. Tu identificación del cliente y despedida son excelentes, y eso te da una gran ventaja. Enfocándote en la detección de necesidades y la proactividad al ofrecer fibra, vas a ver un cambio significativo en tus ventas. ¡Confío en tu potencial para alcanzar tus metas y convertirte en una de las mejores vendedoras del equipo! ¡Vamos por ese 65!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": true
+}

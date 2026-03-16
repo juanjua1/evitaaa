@@ -1,6 +1,6 @@
 {
   "equipo": "DIANA",
-  "fecha_generacion": "2026-03-10T00:00:52.167572",
+  "fecha_generacion": "2026-03-16T11:32:42.543928",
   "metricas": {
     "equipo": "DIANA",
     "vendedores": [
@@ -45,13 +45,72 @@
       "Mza 325",
       "Mza 326",
       "Mza 327",
-      "Mza  Sup2",
+      "Mza Sup2",
       "Mza Sup5"
     ],
     "total_vendedores": 43,
-    "evaluaciones": {},
+    "evaluaciones": {
+      "total_evaluadas": 10,
+      "puntaje_promedio": 44.5,
+      "puntaje_min": 0.0,
+      "puntaje_max": 80.0,
+      "desviacion_std": 25.9,
+      "llamadas_excelentes": 1,
+      "llamadas_buenas": 2,
+      "llamadas_regulares": 4,
+      "llamadas_criticas": 3,
+      "criterios": {
+        "saludo_presentacion": 31.0,
+        "identificacion_cliente": 55.0,
+        "deteccion_necesidades": 36.0,
+        "oferta_productos": 66.0,
+        "manejo_objeciones": 50.0,
+        "cierre": 44.0,
+        "despedida": 61.0,
+        "proactividad": 24.0,
+        "empatia": 47.0,
+        "resolucion_problemas": 38.0
+      },
+      "areas_mejora": {
+        "Identificación del cliente": 3,
+        "Detección de necesidades": 3,
+        "Manejo de objeciones": 3,
+        "Cierre de ventas": 3,
+        "Proactividad": 2,
+        "Profundizar en la detección de necesidades": 1,
+        "Presentación y saludo": 1,
+        "Oferta de productos": 1,
+        "Cierre de la venta": 1,
+        "Mejorar la presentación al inicio de la llamada y realizar preguntas para detectar las necesidades del cliente.": 1
+      },
+      "fortalezas": {
+        "Manejo de objeciones": 2,
+        "Empatía": 1,
+        "Cierre de venta exitoso": 1,
+        "Identificación del cliente": 1,
+        "Presentación y verificación de identidad.": 1,
+        "Detección de necesidades y oferta de planes.": 1,
+        "Manejo de objeciones y cierre efectivo.": 1,
+        "Empatía y resolución de dudas.": 1,
+        "Oferta directa de productos": 1,
+        "Saludo y presentación": 1
+      },
+      "rendimiento_vendedores": []
+    },
     "coaching_resumen": [],
-    "clasificacion": {},
+    "clasificacion": {
+      "total_llamadas": 10,
+      "con_saludo": 7,
+      "con_cierre": 0,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 0,
+      "ventas": 1,
+      "pct_saludo": 70.0,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 0.0,
+      "tasa_conversion": 10.0
+    },
     "planes": {},
     "quejas": {},
     "calidad": {
@@ -59,159 +118,173 @@
         "vendedores_con_datos": 35,
         "break_promedio_seg": 0,
         "coaching_promedio_seg": 0,
-        "disponible_promedio_seg": 13057,
-        "no_disponible_promedio_seg": 0
-      },
-      "llamadas": {
-        "vendedores_con_datos": 39,
-        "total_llamadas": 17051,
-        "llamadas_promedio": 437.2,
-        "atendidas_promedio": 0.0
+        "disponible_promedio_seg": 13044,
+        "no_disponible_promedio_seg": 3243
       }
     },
     "cierres": {}
   },
-  "comparativa": {},
+  "comparativa": {
+    "puntaje_ia": {
+      "equipo": 44.5,
+      "general": 32.4,
+      "diferencia": 12.1,
+      "ranking": 1
+    },
+    "conversion": {
+      "equipo": 10.0,
+      "general": 5.2,
+      "diferencia": 4.8
+    }
+  },
   "coaching_ia": {
-    "resumen_ejecutivo": "El equipo Diana muestra un rendimiento general en desarrollo, con un puntaje IA promedio de 40.9, ubicándose en la parte baja del ranking (5 de 5 equipos). Si bien el tiempo disponible promedio es considerable (13057 segundos), la tasa de conversión es baja (2.2%). Se requiere un enfoque estratégico en mejorar la efectividad de las llamadas y optimizar la gestión del tiempo para impulsar la portabilidad.",
+    "resumen_ejecutivo": "El equipo Diana muestra un rendimiento superior al promedio general en puntaje de IA y tasa de conversión, ubicándose en el primer lugar del ranking. Sin embargo, existen áreas de mejora significativas en la identificación de necesidades, manejo de objeciones y cierre de ventas que, al ser abordadas, podrían impulsar aún más su desempeño. El plan de acción se enfoca en fortalecer estas áreas a través de capacitaciones, dinámicas de equipo y metas claras a corto y mediano plazo.",
     "diagnostico": {
-      "nivel_rendimiento": "EN DESARROLLO",
-      "puntaje_equipo": 40.9,
-      "posicion_ranking": "5 de 5 equipos",
+      "nivel_rendimiento": "BUENO",
+      "puntaje_equipo": 44.5,
+      "posicion_ranking": "1 de 5 equipos",
       "tendencia": "ESTABLE"
     },
     "fortalezas_equipo": [
       {
-        "area": "Disponibilidad",
-        "evidencia": "Tiempo disponible promedio de 13057 segundos por vendedor.",
-        "impacto": "Potencial para realizar un alto volumen de llamadas y contactar a más clientes."
+        "area": "Oferta de Productos",
+        "evidencia": "Puntaje de 66.0 en 'Oferta de productos'",
+        "impacto": "Facilita la presentación de soluciones a los clientes."
+      },
+      {
+        "area": "Despedida",
+        "evidencia": "Puntaje de 61.0 en 'Despedida'",
+        "impacto": "Deja una impresión positiva en el cliente."
       }
     ],
     "areas_mejora_prioritarias": [
       {
-        "area": "Tasa de Conversión",
-        "situacion_actual": "Tasa de conversión general del 2.2%, significativamente baja.",
-        "meta": "Aumentar la tasa de conversión al 3.5% en 90 días.",
-        "impacto_potencial": "Aumento significativo en la adquisición de nuevos clientes a través de portabilidad."
+        "area": "Detección de Necesidades",
+        "situacion_actual": "Puntaje de 36.0 en 'Detección de necesidades' y 3 menciones como área de mejora.",
+        "meta": "Aumentar el puntaje promedio en 'Detección de necesidades' a 60 en 30 días.",
+        "impacto_potencial": "Mejorar la personalización de la oferta y aumentar la tasa de conversión."
       },
       {
-        "area": "Efectividad de Llamadas",
-        "situacion_actual": "Promedio de 437.2 llamadas por vendedor, con un promedio de llamadas atendidas no especificado, lo que sugiere una baja efectividad en la conexión.",
-        "meta": "Aumentar el porcentaje de llamadas atendidas en un 15% en 60 días.",
-        "impacto_potencial": "Mayor número de oportunidades para presentar ofertas y cerrar ventas."
+        "area": "Cierre de Ventas",
+        "situacion_actual": "Puntaje de 44.0 en 'Cierre' y 3 menciones como área de mejora. 0% de las llamadas evaluadas tienen cierre.",
+        "meta": "Aumentar el porcentaje de llamadas con cierre a 30% en 30 días.",
+        "impacto_potencial": "Incrementar significativamente la tasa de conversión."
       },
       {
-        "area": "Gestión del Tiempo",
-        "situacion_actual": "Tiempo de break y coaching promedio en 0 segundos, lo que sugiere falta de pausas y desarrollo individual.",
-        "meta": "Implementar pausas activas programadas (5 minutos cada 2 horas) y sesiones de coaching individuales (30 minutos por vendedor al mes).",
-        "impacto_potencial": "Mejora en el bienestar del equipo, reducción del estrés y desarrollo de habilidades individuales."
+        "area": "Proactividad",
+        "situacion_actual": "Puntaje de 24.0 en 'Proactividad' y 2 menciones como área de mejora.",
+        "meta": "Aumentar el puntaje promedio en 'Proactividad' a 50 en 30 días.",
+        "impacto_potencial": "Generar más oportunidades de venta y mejorar la experiencia del cliente."
       }
     ],
     "analisis_vendedores": {
       "top_performers": [
-        "Identificar a los vendedores con mayor tasa de conversión y analizar sus técnicas de venta para replicarlas.",
-        "Fortalezas: Técnicas de cierre efectivas, manejo de objeciones, conocimiento profundo del producto."
+        "Identificar a los vendedores con puntajes superiores a 60 y destacar su habilidad en 'Oferta de Productos' y 'Despedida'."
       ],
       "necesitan_apoyo": [
-        "Identificar a los vendedores con baja tasa de conversión y bajo volumen de llamadas atendidas.",
-        "Necesitan apoyo en: Técnicas de prospección, habilidades de comunicación, manejo de objeciones."
+        "Identificar a los vendedores con puntajes inferiores a 30 y brindarles coaching individualizado en 'Detección de Necesidades' y 'Cierre de Ventas'."
       ],
       "potencial_alto": [
-        "Identificar a los vendedores con alto volumen de llamadas pero baja tasa de conversión.",
-        "Potencial: Gran capacidad de contacto, necesitan mejorar la calidad de la interacción y el cierre de ventas."
+        "Identificar a los vendedores con puntajes entre 40 y 60 y ofrecerles mentoría para desarrollar su 'Proactividad' y 'Manejo de Objeciones'."
       ]
     },
     "plan_accion_equipo": [
       {
         "prioridad": 1,
-        "accion": "Implementar un programa de coaching individualizado para los vendedores con menor rendimiento.",
+        "accion": "Implementar un taller intensivo sobre técnicas de detección de necesidades y preguntas clave para identificar las motivaciones del cliente.",
         "responsable": "Líder del equipo",
         "plazo": "Inmediato",
-        "indicador_exito": "Aumento del 10% en la tasa de conversión de los vendedores con menor rendimiento en 30 días.",
-        "recursos_necesarios": "Tiempo del líder del equipo, materiales de capacitación."
+        "indicador_exito": "Aumento del puntaje promedio en 'Detección de necesidades' en las evaluaciones de IA.",
+        "recursos_necesarios": "Material de capacitación, sala de reuniones."
       },
       {
         "prioridad": 2,
-        "accion": "Realizar sesiones de role-playing enfocadas en el manejo de objeciones y técnicas de cierre.",
+        "accion": "Realizar role-playing semanales enfocados en el manejo de objeciones comunes y técnicas de cierre efectivas.",
         "responsable": "Todos",
         "plazo": "Corto plazo",
-        "indicador_exito": "Mejora en la confianza y efectividad de los vendedores al enfrentar objeciones.",
-        "recursos_necesarios": "Espacio para reuniones, guiones de role-playing."
+        "indicador_exito": "Aumento del porcentaje de llamadas con cierre y mejora en el puntaje de 'Manejo de Objeciones'.",
+        "recursos_necesarios": "Guiones de objeciones, grabaciones de llamadas exitosas."
       },
       {
         "prioridad": 3,
-        "accion": "Optimizar la segmentación de leads para dirigir las ofertas a los clientes más propensos a la portabilidad.",
-        "responsable": "Líder del equipo / Departamento de Marketing",
+        "accion": "Establecer un sistema de reconocimiento para los vendedores que demuestren proactividad en la identificación de oportunidades de venta.",
+        "responsable": "Líder del equipo",
         "plazo": "Mediano plazo",
-        "indicador_exito": "Aumento en la tasa de conversión de leads segmentados.",
-        "recursos_necesarios": "Datos de clientes, herramientas de segmentación."
+        "indicador_exito": "Aumento del puntaje promedio en 'Proactividad' y del número de ofertas de productos realizadas.",
+        "recursos_necesarios": "Incentivos, plataforma de reconocimiento."
       }
     ],
     "capacitaciones_recomendadas": [
       {
-        "tema": "Técnicas de Venta Consultiva",
-        "objetivo": "Mejorar la capacidad de los vendedores para entender las necesidades de los clientes y ofrecer soluciones personalizadas.",
+        "tema": "Técnicas de Cierre de Ventas",
+        "objetivo": "Aumentar la confianza y habilidad de los vendedores para cerrar ventas de manera efectiva.",
         "modalidad": "Grupal",
-        "duracion_sugerida": "8 horas",
+        "duracion_sugerida": "4 horas",
         "vendedores_prioritarios": [
-          "Vendedores que necesitan apoyo",
-          "Vendedores con potencial alto"
+          "Vendedores con puntajes bajos en 'Cierre'"
         ]
       },
       {
-        "tema": "Manejo de Objeciones Avanzado",
-        "objetivo": "Proporcionar a los vendedores herramientas y estrategias para superar las objeciones comunes de los clientes.",
-        "modalidad": "Mixta (Grupal y Individual)",
-        "duracion_sugerida": "4 horas grupal + 2 horas individual",
+        "tema": "Escucha Activa y Detección de Necesidades",
+        "objetivo": "Mejorar la capacidad de los vendedores para comprender las necesidades de los clientes y ofrecer soluciones personalizadas.",
+        "modalidad": "Mixta (grupal e individual)",
+        "duracion_sugerida": "6 horas (2 grupales, 4 individuales)",
         "vendedores_prioritarios": [
-          "Vendedores que necesitan apoyo"
+          "Vendedores con puntajes bajos en 'Detección de Necesidades'"
         ]
       }
     ],
     "dinamicas_equipo": [
       {
-        "nombre": "Compartiendo Éxitos",
-        "objetivo": "Fomentar el aprendizaje entre pares y la motivación del equipo.",
+        "nombre": "El Cliente Misterioso",
+        "objetivo": "Practicar la detección de necesidades y la oferta de productos en un entorno simulado.",
         "frecuencia": "Semanal",
-        "descripcion": "Cada semana, un vendedor comparte una venta exitosa y las estrategias que utilizó."
+        "descripcion": "Un miembro del equipo actúa como cliente con necesidades específicas, y los demás vendedores deben identificar sus necesidades y ofrecer el plan adecuado."
       },
       {
-        "nombre": "Simulación de Llamadas",
-        "objetivo": "Practicar habilidades de venta y recibir retroalimentación constructiva.",
-        "frecuencia": "Diaria",
-        "descripcion": "Al inicio del día, los vendedores realizan simulaciones de llamadas con diferentes escenarios."
+        "nombre": "El Muro de las Objeciones",
+        "objetivo": "Compartir estrategias efectivas para manejar objeciones comunes.",
+        "frecuencia": "Mensual",
+        "descripcion": "Cada vendedor comparte una objeción que ha enfrentado y cómo la superó. Se crea un muro con las mejores estrategias."
       }
     ],
     "metas_equipo": {
       "corto_plazo_30_dias": [
         {
-          "meta": "Aumentar la tasa de conversión en un 0.5%.",
-          "valor_actual": "2.2%",
-          "valor_objetivo": "2.7%",
-          "estrategia": "Implementar el programa de coaching individualizado y las sesiones de role-playing."
+          "meta": "Aumentar el puntaje promedio del equipo en 'Detección de Necesidades'.",
+          "valor_actual": "36.0",
+          "valor_objetivo": "60.0",
+          "estrategia": "Implementar el taller intensivo y realizar role-playing semanales."
+        },
+        {
+          "meta": "Aumentar la tasa de conversión del equipo.",
+          "valor_actual": "10.0%",
+          "valor_objetivo": "15.0%",
+          "estrategia": "Mejorar las técnicas de cierre y ofrecer promociones atractivas."
         }
       ],
       "mediano_plazo_90_dias": [
         {
-          "meta": "Aumentar la tasa de conversión en un 1.3%.",
-          "valor_actual": "2.2%",
-          "valor_objetivo": "3.5%",
-          "estrategia": "Optimizar la segmentación de leads y continuar con el programa de coaching y las sesiones de role-playing."
+          "meta": "Aumentar el puntaje promedio del equipo en 'Proactividad'.",
+          "valor_actual": "24.0",
+          "valor_objetivo": "50.0",
+          "estrategia": "Implementar el sistema de reconocimiento y fomentar la identificación de oportunidades de venta."
+        },
+        {
+          "meta": "Reducir el número de llamadas clasificadas como 'críticas'.",
+          "valor_actual": "3",
+          "valor_objetivo": "1",
+          "estrategia": "Brindar coaching individualizado a los vendedores con bajo rendimiento y monitorear su progreso."
         }
       ]
     },
     "seguimiento": {
-      "reuniones_sugeridas": "Reuniones de equipo semanales para revisar el progreso y compartir mejores prácticas. Reuniones individuales mensuales con cada vendedor para evaluar su desempeño y brindar apoyo.",
+      "reuniones_sugeridas": "Reuniones semanales de equipo para revisar el progreso de las metas y compartir mejores prácticas. Reuniones individuales mensuales con cada vendedor para brindar feedback personalizado.",
       "metricas_monitorear": [
-        "Tasa de conversión",
-        "Volumen de llamadas atendidas",
-        "Tiempo promedio de llamada",
-        "Satisfacción del cliente"
+        "Puntaje promedio en 'Detección de Necesidades', 'Cierre', 'Proactividad', Tasa de Conversión, Número de llamadas 'críticas'"
       ],
       "alertas": [
-        "Disminución en la tasa de conversión",
-        "Aumento en el tiempo promedio de llamada sin aumento en la tasa de conversión",
-        "Quejas recurrentes de clientes sobre un vendedor específico"
+        "Disminución en la tasa de conversión, Aumento en el número de llamadas 'críticas', Bajo rendimiento persistente de un vendedor."
       ]
     }
   }

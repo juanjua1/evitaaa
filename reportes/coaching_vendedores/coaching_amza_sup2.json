@@ -1,0 +1,179 @@
+{
+  "agente": "amza_sup2",
+  "fecha_generacion": "2026-03-16T10:54:10.323278",
+  "metricas": {
+    "agente": "amza_sup2",
+    "evaluaciones": {
+      "total_evaluadas": 10,
+      "puntaje_promedio": 44.5,
+      "puntaje_min": 0.0,
+      "puntaje_max": 80.0,
+      "desviacion_std": 25.9,
+      "llamadas_excelentes": 1,
+      "llamadas_criticas": 2,
+      "criterios": {
+        "saludo_presentacion": 31.0,
+        "identificacion_cliente": 55.0,
+        "deteccion_necesidades": 36.0,
+        "oferta_productos": 66.0,
+        "manejo_objeciones": 50.0,
+        "cierre": 44.0,
+        "despedida": 61.0,
+        "proactividad": 24.0,
+        "empatia": 47.0,
+        "resolucion_problemas": 38.0
+      },
+      "areas_mejora_frecuentes": {
+        "Identificación del cliente": 3,
+        "Detección de necesidades": 3,
+        "Manejo de objeciones": 3,
+        "Cierre de ventas": 3,
+        "Proactividad": 2
+      },
+      "fortalezas_frecuentes": {
+        "Manejo de objeciones": 2,
+        "Empatía": 1,
+        "Cierre de venta exitoso": 1,
+        "Identificación del cliente": 1,
+        "Presentación y verificación de identidad.": 1
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 80.0,
+          "resumen": "La agente realiza una buena gestión, presentando la oferta de manera clara, manejando objeciones, completando el cierre y mostrando empatía. No ofrece productos adicionales."
+        },
+        {
+          "puntaje_total": 60.0,
+          "resumen": "La llamada tiene un cierre exitoso y se gestiona correctamente la venta.  La presentación y la detección de necesidades no se cumplen."
+        },
+        {
+          "puntaje_total": 60.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente, y ofrece un plan directo. Maneja una objeción, aunque el cierre no se completa. Muestra empatía."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios mínimos de la evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece planes de forma directa ni completa el cierre."
+        },
+        {
+          "puntaje_total": 2.0,
+          "resumen": "La llamada no cumple con los criterios mínimos. No se presenta, no identifica, no detecta necesidades, no ofrece productos ni intenta cerrar la venta."
+        },
+        {
+          "puntaje_total": 31.0,
+          "resumen": "El agente se presenta y ofrece planes, pero no realiza una detección de necesidades efectiva ni un cierre adecuado. El manejo de objeciones y la empatía son deficientes. No se ofrece fibra."
+        }
+      ]
+    },
+    "evaluaciones_semana_anterior": {},
+    "evaluaciones_semana_actual": {
+      "periodo": "19-24 Enero 2026",
+      "total_evaluadas": 10,
+      "puntaje_promedio": 44.5,
+      "llamadas_excelentes": 1,
+      "llamadas_criticas": 2,
+      "criterios": {
+        "saludo_presentacion": 31.0,
+        "identificacion_cliente": 55.0,
+        "deteccion_necesidades": 36.0,
+        "oferta_productos": 66.0,
+        "manejo_objeciones": 50.0,
+        "cierre": 44.0,
+        "despedida": 61.0,
+        "proactividad": 24.0,
+        "empatia": 47.0,
+        "resolucion_problemas": 38.0
+      }
+    },
+    "clasificacion": {
+      "total_llamadas": 10,
+      "con_saludo": 7,
+      "con_cierre": 0,
+      "con_identificacion": 0,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 0,
+      "ventas": 1,
+      "score_calidad_prom": 45.0,
+      "pct_saludo": 70.0,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 0.0,
+      "tasa_conversion": 10.0
+    },
+    "integral": {},
+    "cierres": {},
+    "calidad_llamadas": {},
+    "calidad_ventas": {}
+  },
+  "comparativa": {
+    "puntaje_ia": {
+      "agente": 44.5,
+      "general": 29.3,
+      "diferencia": 15.2,
+      "percentil": 73.1
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 31.0,
+        "general": 16.8,
+        "diferencia": 14.2
+      },
+      "identificacion_cliente": {
+        "agente": 55.0,
+        "general": 51.3,
+        "diferencia": 3.7
+      },
+      "deteccion_necesidades": {
+        "agente": 36.0,
+        "general": 18.4,
+        "diferencia": 17.6
+      },
+      "oferta_productos": {
+        "agente": 66.0,
+        "general": 35.2,
+        "diferencia": 30.8
+      },
+      "manejo_objeciones": {
+        "agente": 50.0,
+        "general": 27.6,
+        "diferencia": 22.4
+      },
+      "cierre": {
+        "agente": 44.0,
+        "general": 17.6,
+        "diferencia": 26.4
+      },
+      "despedida": {
+        "agente": 61.0,
+        "general": 50.2,
+        "diferencia": 10.8
+      },
+      "proactividad": {
+        "agente": 24.0,
+        "general": 10.6,
+        "diferencia": 13.4
+      },
+      "empatia": {
+        "agente": 47.0,
+        "general": 38.7,
+        "diferencia": 8.3
+      },
+      "resolucion_problemas": {
+        "agente": 38.0,
+        "general": 26.3,
+        "diferencia": 11.7
+      }
+    },
+    "conversion": {
+      "agente": 10.0,
+      "general": 3.9,
+      "diferencia": 6.1
+    }
+  },
+  "analisis_coaching": "## ANÁLISIS DEL VENDEDOR: amza_sup2\n\n### 1. DIAGNÓSTICO GENERAL Y EVOLUCIÓN\n\namza_sup2 presenta un desempeño superior al promedio del equipo, con un puntaje IA de 44.5 frente al 29.3 general y una tasa de conversión del 10% versus el 3.9% del equipo. Su nivel actual se ubica en el rango de \"Bueno\", con un potencial considerable para alcanzar la excelencia.\n\n**EVOLUCIÓN:** Sin acceso a datos del período anterior, no es posible determinar si ha mejorado o empeorado recientemente. Sin embargo, basándonos en las áreas de mejora frecuentes identificadas, es evidente que necesita enfocarse en aspectos clave del proceso de ventas para optimizar su rendimiento. Su alta tasa de conversión sugiere una habilidad natural para cerrar ventas, pero es crucial estructurar mejor su enfoque en las etapas iniciales y durante la conversación.\n\n### 2. ANÁLISIS DE EVOLUCIÓN SEMANAL\n\nComo no hay datos del período anterior, no se puede evaluar la evolución semanal. En cambio, me enfocaré en las áreas de mejora identificadas para esta semana.\n\n**QUÉ SIGUE PENDIENTE:**\n\n*   **Identificación del cliente**: Mejorar la validación del interlocutor al inicio de la llamada.\n*   **Detección de necesidades**: Profundizar en las necesidades del cliente para personalizar la oferta.\n*   **Manejo de objeciones**: Adaptar las respuestas a objeciones específicas en lugar de usar respuestas genéricas.\n*   **Cierre de ventas**: Mejorar la fluidez y la efectividad del cierre.\n*   **Proactividad**: Incorporar la oferta de fibra de manera obligatoria en todas las llamadas.\n\n**TENDENCIA GENERAL:** Sin datos de evolución, es crucial enfocarse en las áreas pendientes y monitorear su progreso en las próximas semanas.\n\n### 3. FORTALEZAS IDENTIFICADAS\n\n*   **Manejo de Objeciones:** Ha demostrado habilidad para rebatir objeciones, aunque necesita personalizarlas.\n*   **Empatía:** Transmite empatía a los clientes, lo que facilita la conexión.\n*   **Cierre de venta exitoso:** Tiene una alta tasa de conversión, lo que indica una capacidad para cerrar ventas.\n\n### 4. ÁREAS CRÍTICAS DE MEJORA\n\n*   **Detección de Necesidades (PERSISTENTE):** No está preguntando lo suficiente sobre lo que el cliente necesita y usa de su celular, lo que impide ofrecer el plan más adecuado. Mejorar esto lleva a una venta más fácil y a mayor satisfacción del cliente.\n*   **Proactividad (PERSISTENTE):** No está ofreciendo fibra en todas las llamadas. Es una regla crítica del negocio, y no cumplirla impacta directamente en los ingresos.\n*   **Cierre de Ventas (PERSISTENTE):** A pesar de tener cierres exitosos, en varias llamadas no se concreta el cierre. Mejorar la fluidez y la seguridad durante el cierre puede aumentar significativamente la tasa de conversión.\n\n### 5. ANÁLISIS DE MÉTRICAS DE CALIDAD\n\n*   **TMO (Tiempo Medio Operativo):** No hay información disponible. Es importante monitorear este dato para asegurar que las llamadas tengan la duración óptima para generar engagement y cerrar la venta. Si el TMO es muy bajo, puede indicar falta de profundización en las necesidades del cliente. Si es muy alto, puede ser un síntoma de dificultades para cerrar la venta de forma eficiente.\n*   **% Capta Atención:** No hay información disponible. Este KPI es crítico para evaluar si el agente está logrando enganchar al cliente.\n*   **Cortes de llamada:** No hay información disponible. Si hay más cortes del cliente que del agente, es un indicador de que el pitch inicial necesita mejoras.\n*   **Llamadas <30 seg:** No hay información disponible. Si hay una cantidad significativa de llamadas cortas, es importante analizar el saludo inicial y la presentación para identificar áreas de mejora.\n*   **Tasa de aprobación de ventas:** Asumiendo que la tasa de conversión del 10% se traduce en ventas aprobadas, la tasa es alta, lo que indica una buena calidad en la información proporcionada durante la venta.\n\n### 6. ANÁLISIS DETALLADO POR COMPETENCIA\n\n*   **Saludo y Presentación (Regular):** Nivel actual: Bajo. Debe presentarse de manera más efectiva y crear un impacto positivo desde el inicio.\n    *   *Cómo mejorar:* Utilizar un saludo más enérgico y personalizado, destacando la oferta que le VA a interesar al cliente.\n*   **Identificación del Cliente (Regular):** Nivel actual: Promedio. Es importante verificar que se está hablando con la persona correcta.\n    *   *Cómo mejorar:* Iniciar la llamada con \"Hola, ¿me comunico con [Nombre]?\" y esperar la confirmación antes de continuar.\n*   **Detección de Necesidades (Regular):** Nivel actual: Bajo. No está preguntando lo suficiente para entender las necesidades del cliente.\n    *   *Cómo mejorar:* Preguntar \"¿Qué es lo que más usás del celular?\" y \"¿Cuántos GB tenés en tu plan?\" en lugar de preguntas genéricas.\n*   **Oferta de Productos (Bueno):** Nivel actual: Promedio. Ofrece los planes de manera directa.\n    *   *Cómo mejorar:* Personalizar la oferta en función de las necesidades detectadas.\n*   **Manejo de Objeciones (Regular):** Nivel actual: Promedio. Responde a las objeciones, pero necesita personalizar sus respuestas.\n    *   *Cómo mejorar:* Escuchar atentamente la objeción específica del cliente y responder con argumentos personalizados que resalten los beneficios de la oferta para esa persona en particular.\n*   **Cierre (Regular):** Nivel actual: Promedio. Necesita mejorar la fluidez y la seguridad durante el cierre.\n    *   *Cómo mejorar:* Después de presentar la oferta, pasar directamente a la acción asignando la sucursal más cercana o preguntando por el domicilio para completar la venta.\n*   **Despedida (Bueno):** Nivel actual: Promedio. Se despide de forma cordial.\n    *   *Cómo mejorar:* Mantener la cordialidad y ofrecer acompañamiento durante la portabilidad (opcional).\n*   **Proactividad (Crítico):** Nivel actual: Bajo. No está ofreciendo fibra de manera proactiva.\n    *   *Cómo mejorar:* Comentar directamente sobre la oferta de fibra sin preguntar si le interesa. Por ejemplo: \"Además del plan, Movistar ofrece un excelente servicio de fibra óptica en tu zona, con velocidades increíbles y estabilidad para que puedas disfrutar al máximo de internet en tu hogar.\"\n*   **Empatía (Regular):** Nivel actual: Promedio. Muestra empatía, pero podría fortalecer este aspecto.\n    *   *Cómo mejorar:* Escuchar activamente al cliente, mostrar comprensión por sus inquietudes y adaptar el tono de voz y el lenguaje para conectar mejor con él.\n*   **Resolución de Problemas (Regular):** Nivel actual: Promedio. Necesita mejorar su capacidad para resolver problemas y ofrecer soluciones efectivas.\n    *   *Cómo mejorar:* Prepararse para manejar diferentes tipos de problemas y objeciones, y buscar soluciones creativas que satisfagan las necesidades del cliente.\n\n### 7. PLAN DE ACCIÓN SEMANAL (4 semanas)\n\n**Semana 1:** **Foco principal: Proactividad y Detección de Necesidades.**\n*   Acciones: Implementar obligatoriamente la oferta de fibra en todas las llamadas. Practicar las preguntas clave para detectar necesidades: \"¿Qué es lo que más usás del celular?\" y \"¿Cuántos GB tenés en tu plan?\".\n    *   *Seguimiento:* Monitorear el porcentaje de llamadas donde se ofrece fibra. Revisar grabaciones para evaluar la calidad de la detección de necesidades.\n\n**Semana 2:** **Cierre de Ventas y Manejo de Objeciones.**\n*   Acciones: Practicar técnicas de cierre directo: Asignar sucursal o buscar domicilio del cliente para completar la venta. Desarrollar scripts personalizados para las objeciones más comunes.\n    *   *Seguimiento:* Monitorear la tasa de conversión. Revisar grabaciones para evaluar la efectividad de las técnicas de cierre y el manejo de objeciones.\n\n**Semana 3:** **Saludo y Presentación, e Identificación del cliente.**\n*   Acciones: Refinar el saludo inicial para crear un impacto positivo. Practicar la verificación de la identidad del cliente al inicio de la llamada.\n    *   *Seguimiento:* Monitorear la duración promedio de las llamadas. Revisar grabaciones para evaluar la calidad del saludo y la identificación del cliente.\n\n**Semana 4:** **Consolidación y Optimización.**\n*   Acciones: Revisar todas las áreas de mejora y enfocar los esfuerzos en aquellas que aún necesiten atención. Buscar oportunidades para optimizar el proceso de ventas y aumentar la eficiencia.\n    *   *Seguimiento:* Analizar las métricas de calidad y compararlas con las metas establecidas. Identificar las áreas de mayor impacto y ajustar el plan de acción en consecuencia.\n\n### 7. TÉCNICAS Y SCRIPTS RECOMENDADOS\n\n*   **Verificación de Identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Detección de Necesidades:** \"¿Qué es lo que más usás del celular?\" \"¿Cuántos GB tenés en tu plan?\"\n*   **Oferta de Fibra (Directa):** \"Además del plan, Movistar ofrece un excelente servicio de fibra óptica en tu zona, con velocidades increíbles y estabilidad para que puedas disfrutar al máximo de internet en tu hogar.\"\n*   **Cierre Directo:** \"Perfecto, para activar tu plan, ¿te queda bien acercarte a la sucursal de [Nombre de Sucursal] o preferís que te ayudemos a encontrar un domicilio?\"\n*   **Manejo de Precio:** \"Es lógico que mires el precio. A varios clientes les pasó eso al comienzo, y cuando empezaron a usar la conexión y vieron la diferencia en el servicio, entendieron que el valor estaba ahí.\"\n\n### 9. METAS CUANTIFICABLES\n\n*   **Puntaje IA:** Alcanzar un puntaje IA de 65 en 30 días.\n*   **Tasa de Conversión:** Aumentar la tasa de conversión al 15% en 30 días.\n*   **Oferta de Productos:** Ofrecer fibra en el 100% de las llamadas.\n*   **% Capta Atención:** Aumentar el porcentaje de llamadas >1 min al 60%.\n*   **TMO:** Mantener el TMO entre 2 y 4 minutos.\n*   **KPIs Específicos:** Reducir el número de llamadas cortas (<30 segundos) en un 50%.\n\n### 10. MENSAJE MOTIVACIONAL PERSONALIZADO\n\namza_sup2, tu desempeño ya es superior al promedio del equipo, y eso demuestra que tenés el potencial para llegar aún más lejos. Concentráte en pulir esas áreas de mejora que identificamos, especialmente en ofrecer fibra en cada llamada y en preguntar más sobre las necesidades del cliente. Con tu habilidad para cerrar ventas y un enfoque más estructurado, vas a superar tus propias expectativas. ¡Confío en que vas a alcanzar tus metas y convertirte en uno de los mejores vendedores de Movistar!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": false,
+  "fecha_coaching_anterior": null,
+  "evolucion": null
+}

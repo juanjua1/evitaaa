@@ -1,6 +1,6 @@
 {
   "equipo": "YASMIN",
-  "fecha_generacion": "2026-03-09T23:59:54.061380",
+  "fecha_generacion": "2026-03-16T11:31:39.696941",
   "metricas": {
     "equipo": "YASMIN",
     "vendedores": [
@@ -18,59 +18,72 @@
       "Malena Rocío Segreti Ciffone",
       "Ortiz Lopez Ludmila Celeste",
       "Mza 77",
-      "Mza 100"
+      "Mza 100",
+      "Mza Sup"
     ],
-    "total_vendedores": 15,
+    "total_vendedores": 16,
     "evaluaciones": {
-      "total_evaluadas": 623,
-      "puntaje_promedio": 40.1,
+      "total_evaluadas": 952,
+      "puntaje_promedio": 30.4,
       "puntaje_min": 0.0,
-      "puntaje_max": 900.0,
-      "desviacion_std": 43.8,
-      "llamadas_excelentes": 54,
-      "llamadas_buenas": 119,
-      "llamadas_regulares": 155,
-      "llamadas_criticas": 340,
+      "puntaje_max": 160.0,
+      "desviacion_std": 26.7,
+      "llamadas_excelentes": 57,
+      "llamadas_buenas": 128,
+      "llamadas_regulares": 161,
+      "llamadas_criticas": 659,
       "criterios": {
-        "saludo_presentacion": 44.4,
-        "identificacion_cliente": 54.7,
-        "deteccion_necesidades": 30.5,
-        "oferta_productos": 45.6,
-        "manejo_objeciones": 33.0,
-        "cierre": 24.4,
-        "despedida": 62.1,
-        "proactividad": 15.5,
-        "empatia": 46.1,
-        "resolucion_problemas": 25.0
+        "saludo_presentacion": 21.2,
+        "identificacion_cliente": 53.0,
+        "deteccion_necesidades": 21.2,
+        "oferta_productos": 40.3,
+        "manejo_objeciones": 26.2,
+        "cierre": 21.5,
+        "despedida": 50.8,
+        "proactividad": 11.1,
+        "empatia": 39.5,
+        "resolucion_problemas": 25.9
       },
       "areas_mejora": {
-        "Detección de necesidades": 262,
-        "Proactividad": 160,
-        "Manejo de objeciones": 150,
-        "Oferta de productos": 136,
-        "Identificación del cliente": 134,
-        "Cierre": 125,
-        "Presentación": 85,
-        "Empatía": 82,
-        "Cierre de venta": 60,
-        "Cierre de ventas": 55
+        "Detección de necesidades": 445,
+        "Manejo de objeciones": 285,
+        "Proactividad": 251,
+        "Cierre": 215,
+        "Presentación": 212,
+        "Oferta de productos": 206,
+        "Identificación del cliente": 204,
+        "Empatía": 126,
+        "Cierre de venta": 117,
+        "Presentación y Saludo": 90
       },
       "fortalezas": {
-        "Identificación del cliente": 140,
-        "Despedida": 99,
-        "Empatía": 96,
-        "Saludo y presentación": 80,
-        "Despedida cordial.": 50,
-        "Identificación del cliente.": 48,
-        "Manejo de objeciones": 43,
-        "Manejo de objeciones.": 42,
-        "Despedida cordial": 42,
-        "Oferta de productos": 40
+        "Identificación del cliente": 236,
+        "Empatía": 140,
+        "Despedida": 125,
+        "Despedida cordial": 69,
+        "Manejo de objeciones": 62,
+        "Despedida cordial.": 57,
+        "Saludo y presentación": 57,
+        "Oferta de productos": 48,
+        "Identificación del cliente.": 42,
+        "Manejo de objeciones.": 36
       },
       "rendimiento_vendedores": []
     },
     "coaching_resumen": [],
-    "clasificacion": {},
+    "clasificacion": {
+      "total_llamadas": 952,
+      "con_saludo": 679,
+      "con_cierre": 0,
+      "ofrece_plan": 0,
+      "ofrece_fibra": 109,
+      "ventas": 38,
+      "pct_saludo": 71.3,
+      "pct_cierre": 0.0,
+      "pct_plan": 0.0,
+      "pct_fibra": 11.4,
+      "tasa_conversion": 4.0
+    },
     "planes": {
       "total_llamadas": 623,
       "con_plan": 220,
@@ -92,24 +105,23 @@
         "vendedores_con_datos": 11,
         "break_promedio_seg": 1398,
         "coaching_promedio_seg": 1976,
-        "disponible_promedio_seg": 8136,
-        "no_disponible_promedio_seg": 0
-      },
-      "llamadas": {
-        "vendedores_con_datos": 14,
-        "total_llamadas": 5214,
-        "llamadas_promedio": 372.4,
-        "atendidas_promedio": 0.0
+        "disponible_promedio_seg": 7302,
+        "no_disponible_promedio_seg": 496
       }
     },
     "cierres": {}
   },
   "comparativa": {
     "puntaje_ia": {
-      "equipo": 40.1,
-      "general": 41.9,
-      "diferencia": -1.8,
+      "equipo": 30.4,
+      "general": 32.4,
+      "diferencia": -2.0,
       "ranking": 3
+    },
+    "conversion": {
+      "equipo": 4.0,
+      "general": 5.2,
+      "diferencia": -1.2
     },
     "fibra": {
       "equipo": 14.8,
@@ -118,176 +130,168 @@
     }
   },
   "coaching_ia": {
-    "resumen_ejecutivo": "El equipo muestra un rendimiento promedio con un puntaje de 40.1 sobre 900 en las evaluaciones de IA, ubicándose en el tercer lugar de cinco equipos. Si bien existen fortalezas en la identificación del cliente y la despedida, hay áreas críticas de mejora en la detección de necesidades, proactividad y manejo de objeciones. El bajo porcentaje de oferta de fibra (14.8%) en comparación con el promedio general (19.6%) representa una oportunidad significativa de crecimiento.",
+    "resumen_ejecutivo": "El equipo Yasmin muestra un rendimiento que necesita mejoras significativas, evidenciado por un puntaje IA promedio de 30.4, ubicándose en el tercer puesto de cinco equipos. La tasa de conversión del 4.0% y la oferta de fibra del 14.8% están por debajo del promedio general. Las principales áreas de mejora se centran en la detección de necesidades, manejo de objeciones y proactividad, lo que sugiere la necesidad de un plan de acción enfocado en habilidades de venta y conocimiento del producto.",
     "diagnostico": {
       "nivel_rendimiento": "EN DESARROLLO",
-      "puntaje_equipo": 4.5,
+      "puntaje_equipo": 30,
       "posicion_ranking": "3 de 5 equipos",
       "tendencia": "ESTABLE"
     },
     "fortalezas_equipo": [
       {
         "area": "Identificación del cliente",
-        "evidencia": "El criterio 'Identificación del cliente' tiene un puntaje de 54.7 y aparece como fortaleza en 140 evaluaciones.",
+        "evidencia": "Puntaje de 53.0 en identificación del cliente y 236 menciones como fortaleza.",
         "impacto": "Permite personalizar la oferta y generar una mejor conexión inicial con el cliente."
       },
       {
         "area": "Despedida",
-        "evidencia": "El criterio 'Despedida' tiene un puntaje de 62.1 y aparece como fortaleza en 99 evaluaciones.",
-        "impacto": "Deja una impresión positiva en el cliente, aumentando la probabilidad de futuras interacciones."
+        "evidencia": "Puntaje de 50.8 en despedida y 125 menciones como fortaleza.",
+        "impacto": "Deja una impresión positiva en el cliente, fomentando la posibilidad de futuras interacciones."
       }
     ],
     "areas_mejora_prioritarias": [
       {
         "area": "Detección de necesidades",
-        "situacion_actual": "El criterio 'Detección de necesidades' tiene un puntaje de 30.5 y es el área de mejora más frecuente (262 menciones).",
-        "meta": "Aumentar el puntaje promedio en 'Detección de necesidades' a 50 en 30 días.",
-        "impacto_potencial": "Permitirá ofrecer planes y servicios más relevantes para cada cliente, incrementando la tasa de conversión."
-      },
-      {
-        "area": "Proactividad",
-        "situacion_actual": "La 'Proactividad' tiene un puntaje de 15.5 y es la segunda área de mejora más frecuente (160 menciones).",
-        "meta": "Aumentar el puntaje promedio en 'Proactividad' a 35 en 60 días.",
-        "impacto_potencial": "Generará mayores oportunidades de venta y mejorará la experiencia del cliente al anticipar sus necesidades."
+        "situacion_actual": "Solo el 21.2% de las llamadas evalúan la detección de necesidades correctamente, con 445 menciones como área de mejora.",
+        "meta": "Aumentar al 50% la correcta detección de necesidades en las llamadas evaluadas en los próximos 30 días.",
+        "impacto_potencial": "Aumentar la relevancia de la oferta para el cliente, incrementando la probabilidad de cierre de venta."
       },
       {
         "area": "Manejo de objeciones",
-        "situacion_actual": "El 'Manejo de objeciones' tiene un puntaje de 33.0 y es la tercera área de mejora más frecuente (150 menciones).",
-        "meta": "Aumentar el puntaje promedio en 'Manejo de objeciones' a 50 en 90 días.",
-        "impacto_potencial": "Reducirá la pérdida de oportunidades de venta y aumentará la confianza del cliente en la oferta."
+        "situacion_actual": "Solo el 26.2% de las llamadas demuestran un buen manejo de objeciones, con 285 menciones como área de mejora.",
+        "meta": "Incrementar al 40% el manejo efectivo de objeciones en las llamadas evaluadas en los próximos 30 días.",
+        "impacto_potencial": "Superar las dudas del cliente y aumentar la confianza en la oferta, mejorando la tasa de conversión."
       },
       {
-        "area": "Oferta de Fibra Óptica",
-        "situacion_actual": "Solo el 14.8% de las llamadas incluyen una oferta de fibra óptica, por debajo del promedio general de 19.6%.",
-        "meta": "Aumentar el porcentaje de llamadas con oferta de fibra óptica al 25% en 60 días.",
-        "impacto_potencial": "Incrementará las ventas de fibra óptica y diversificará los ingresos del equipo."
+        "area": "Cierre",
+        "situacion_actual": "El cierre de ventas es prácticamente inexistente (0% de las llamadas), con 215 menciones como área de mejora.",
+        "meta": "Implementar técnicas de cierre en al menos el 20% de las llamadas en los próximos 30 días.",
+        "impacto_potencial": "Convertir más oportunidades en ventas concretas, impactando directamente en los ingresos."
       }
     ],
     "analisis_vendedores": {
       "top_performers": [
-        "Analizar el rendimiento individual para identificar a los mejores vendedores y sus fortalezas específicas (no hay datos individuales disponibles)."
+        "Identificar a los vendedores con puntajes IA más altos y analizar sus fortalezas individuales (ej: excelente empatía, manejo de objeciones). Compartir sus mejores prácticas con el resto del equipo."
       ],
       "necesitan_apoyo": [
-        "Analizar el rendimiento individual para identificar a los vendedores con puntajes consistentemente bajos en las áreas de mejora prioritarias (no hay datos individuales disponibles)."
+        "Identificar a los vendedores con puntajes IA más bajos y ofrecer coaching individualizado enfocado en las áreas de mejora prioritarias. Monitorear su progreso de cerca."
       ],
       "potencial_alto": [
-        "Identificar a los vendedores que muestran buena disposición y habilidades básicas, pero necesitan capacitación adicional en áreas específicas (no hay datos individuales disponibles)."
+        "Identificar a los vendedores con puntajes IA moderados pero con un buen desempeño en áreas específicas (ej: identificación del cliente). Ofrecer oportunidades de capacitación y desarrollo para expandir sus habilidades."
       ]
     },
     "plan_accion_equipo": [
       {
         "prioridad": 1,
-        "accion": "Implementar sesiones de role-playing enfocadas en la detección de necesidades y el manejo de objeciones.",
+        "accion": "Implementar un taller intensivo sobre detección de necesidades y manejo de objeciones, con role-playing y ejemplos prácticos.",
         "responsable": "Líder del equipo",
         "plazo": "Inmediato",
-        "indicador_exito": "Aumento del puntaje promedio en 'Detección de necesidades' y 'Manejo de objeciones' en las evaluaciones de IA.",
-        "recursos_necesarios": "Guiones de role-playing, feedback estructurado."
+        "indicador_exito": "Aumento del puntaje promedio del equipo en 'Detección de necesidades' y 'Manejo de objeciones' en las evaluaciones de IA.",
+        "recursos_necesarios": "Material de capacitación, sala de reuniones, tiempo del líder del equipo."
       },
       {
         "prioridad": 2,
-        "accion": "Crear un repositorio de respuestas efectivas a objeciones comunes y compartirlo con el equipo.",
-        "responsable": "Líder del equipo",
+        "accion": "Crear un script de cierre de ventas efectivo y adaptarlo a diferentes escenarios.",
+        "responsable": "Todos",
         "plazo": "Corto plazo",
-        "indicador_exito": "Reducción en la frecuencia de menciones de 'Manejo de objeciones' como área de mejora.",
-        "recursos_necesarios": "Tiempo para recopilar y organizar la información."
+        "indicador_exito": "Aumento del porcentaje de llamadas con cierre de venta.",
+        "recursos_necesarios": "Tiempo para la creación del script, feedback del equipo."
       },
       {
         "prioridad": 3,
-        "accion": "Realizar un concurso semanal para incentivar la oferta de fibra óptica.",
-        "responsable": "Líder del equipo",
-        "plazo": "Corto plazo",
-        "indicador_exito": "Aumento en el porcentaje de llamadas con oferta de fibra óptica.",
-        "recursos_necesarios": "Premio para el ganador del concurso."
-      },
-      {
-        "prioridad": 4,
-        "accion": "Implementar un sistema de 'buddy system' donde los vendedores más experimentados apoyen a los nuevos en la detección de necesidades.",
+        "accion": "Realizar sesiones de coaching individualizado con los vendedores que necesitan más apoyo, enfocándose en sus áreas de mejora específicas.",
         "responsable": "Líder del equipo",
         "plazo": "Mediano plazo",
-        "indicador_exito": "Mejora en el rendimiento de los vendedores nuevos en el área de 'Detección de necesidades'.",
-        "recursos_necesarios": "Tiempo para emparejar a los vendedores y facilitar la comunicación."
+        "indicador_exito": "Mejora individual del puntaje IA de cada vendedor en las áreas trabajadas.",
+        "recursos_necesarios": "Tiempo del líder del equipo, herramientas de seguimiento."
       }
     ],
     "capacitaciones_recomendadas": [
       {
-        "tema": "Técnicas de sondeo y escucha activa para la detección de necesidades",
-        "objetivo": "Mejorar la capacidad de los vendedores para identificar las necesidades reales de los clientes.",
+        "tema": "Técnicas de cierre de ventas efectivas",
+        "objetivo": "Aprender a identificar el momento oportuno para cerrar la venta y utilizar diferentes técnicas para persuadir al cliente.",
         "modalidad": "Grupal",
         "duracion_sugerida": "4 horas",
         "vendedores_prioritarios": [
-          "Identificar a los vendedores con puntajes bajos en 'Detección de necesidades' (no hay datos individuales disponibles)."
+          "Todos"
         ]
       },
       {
-        "tema": "Manejo de objeciones: Técnicas de refutación y persuasión",
-        "objetivo": "Proporcionar a los vendedores herramientas para superar las objeciones de los clientes de manera efectiva.",
-        "modalidad": "Mixta (grupal e individual)",
-        "duracion_sugerida": "6 horas (4 grupal, 2 individual)",
+        "tema": "Conocimiento profundo de los productos y promociones de Movistar",
+        "objetivo": "Dominar las características y beneficios de los planes móviles y la fibra óptica, así como las promociones vigentes, para ofrecer la mejor opción al cliente.",
+        "modalidad": "Mixta (online y presencial)",
+        "duracion_sugerida": "8 horas",
         "vendedores_prioritarios": [
-          "Identificar a los vendedores con puntajes bajos en 'Manejo de objeciones' (no hay datos individuales disponibles)."
+          "Todos"
         ]
       },
       {
-        "tema": "Argumentación de valor de la Fibra Óptica",
-        "objetivo": "Que los vendedores puedan transmitir los beneficios de la fibra óptica de forma clara y concisa.",
-        "modalidad": "Grupal",
-        "duracion_sugerida": "2 horas",
+        "tema": "Manejo de la frustración y el estrés en ventas",
+        "objetivo": "Desarrollar habilidades para manejar el rechazo y mantener una actitud positiva frente a las dificultades.",
+        "modalidad": "Individual",
+        "duracion_sugerida": "2 sesiones",
         "vendedores_prioritarios": [
-          "Todos los vendedores"
+          "Identificar a los vendedores que muestran mayor dificultad para manejar el rechazo."
         ]
       }
     ],
     "dinamicas_equipo": [
       {
-        "nombre": "Compartir casos de éxito",
-        "objetivo": "Fomentar el aprendizaje mutuo y la identificación de buenas prácticas.",
+        "nombre": "Role-playing de llamadas",
+        "objetivo": "Practicar la detección de necesidades, el manejo de objeciones y el cierre de ventas en un entorno seguro.",
         "frecuencia": "Semanal",
-        "descripcion": "Cada semana, un vendedor comparte un caso de éxito reciente, explicando cómo detectó las necesidades del cliente y superó las objeciones."
+        "descripcion": "Dividir al equipo en parejas y simular llamadas de venta, intercambiando roles de vendedor y cliente. El líder del equipo debe proporcionar feedback constructivo."
       },
       {
-        "nombre": "Simulacro de llamadas en vivo",
-        "objetivo": "Practicar habilidades de venta en un entorno seguro y recibir feedback constructivo.",
-        "frecuencia": "Mensual",
-        "descripcion": "Realizar simulacros de llamadas en vivo, donde los vendedores se turnan para actuar como vendedor y cliente, mientras el resto del equipo observa y proporciona feedback."
+        "nombre": "Compartir casos de éxito",
+        "objetivo": "Aprender de las experiencias positivas de otros miembros del equipo y motivar a la mejora continua.",
+        "frecuencia": "Semanal",
+        "descripcion": "Cada semana, un vendedor comparte un caso de éxito reciente, explicando qué hizo bien y cómo superó los desafíos."
       }
     ],
     "metas_equipo": {
       "corto_plazo_30_dias": [
         {
-          "meta": "Aumentar el puntaje promedio en 'Detección de necesidades'.",
-          "valor_actual": "30.5",
+          "meta": "Aumentar la tasa de conversión del equipo",
+          "valor_actual": "4.0%",
+          "valor_objetivo": "5.5%",
+          "estrategia": "Implementar el script de cierre de ventas y realizar role-playing semanales."
+        },
+        {
+          "meta": "Mejorar el puntaje promedio del equipo en 'Detección de necesidades'",
+          "valor_actual": "21.2",
           "valor_objetivo": "40",
-          "estrategia": "Implementar sesiones de role-playing y compartir casos de éxito."
+          "estrategia": "Realizar el taller intensivo sobre detección de necesidades y proporcionar feedback individualizado."
         }
       ],
       "mediano_plazo_90_dias": [
         {
-          "meta": "Aumentar el porcentaje de llamadas con oferta de fibra óptica.",
+          "meta": "Aumentar la oferta de fibra óptica",
           "valor_actual": "14.8%",
-          "valor_objetivo": "25%",
-          "estrategia": "Realizar un concurso semanal y capacitar a los vendedores en la argumentación de valor de la fibra óptica."
+          "valor_objetivo": "20%",
+          "estrategia": "Capacitar al equipo en los beneficios de la fibra óptica y proporcionar incentivos por la venta de este producto."
         },
         {
-          "meta": "Aumentar el puntaje promedio general del equipo en las evaluaciones de IA.",
-          "valor_actual": "40.1",
-          "valor_objetivo": "50",
-          "estrategia": "Implementar todas las acciones del plan de acción y monitorear el progreso semanalmente."
+          "meta": "Reducir el número de quejas no resueltas",
+          "valor_actual": "60",
+          "valor_objetivo": "30",
+          "estrategia": "Implementar un protocolo de gestión de quejas y capacitar al equipo en habilidades de resolución de problemas."
         }
       ]
     },
     "seguimiento": {
-      "reuniones_sugeridas": "Reuniones de equipo semanales de 30 minutos para revisar el progreso, compartir buenas prácticas y abordar desafíos. Reuniones individuales mensuales de 1 hora con cada vendedor para proporcionar feedback personalizado y establecer objetivos.",
+      "reuniones_sugeridas": "Reuniones de equipo semanales para revisar el progreso hacia las metas y compartir mejores prácticas. Sesiones de coaching individualizado quincenales para los vendedores que necesitan más apoyo.",
       "metricas_monitorear": [
-        "Puntaje promedio en 'Detección de necesidades'",
-        "Puntaje promedio en 'Manejo de objeciones'",
-        "Porcentaje de llamadas con oferta de fibra óptica",
-        "Puntaje promedio general del equipo en las evaluaciones de IA",
-        "Tasa de conversión"
+        "Puntaje IA promedio del equipo",
+        "Tasa de conversión",
+        "Porcentaje de llamadas con cierre de venta",
+        "Porcentaje de llamadas con detección de necesidades",
+        "Número de quejas no resueltas"
       ],
       "alertas": [
-        "Disminución en el puntaje promedio en cualquiera de las áreas de mejora prioritarias.",
-        "Aumento en el número de quejas de clientes relacionadas con la falta de detección de necesidades.",
-        "Estancamiento en el porcentaje de llamadas con oferta de fibra óptica."
+        "Disminución en la tasa de conversión",
+        "Aumento en el número de quejas no resueltas",
+        "Vendedores con puntajes IA consistentemente bajos"
       ]
     }
   }

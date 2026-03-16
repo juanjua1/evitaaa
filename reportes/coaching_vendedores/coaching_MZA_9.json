@@ -1,0 +1,161 @@
+{
+  "agente": "Olave Tomas",
+  "agente_codigo": "MZA 9",
+  "equipo": "MELANIE CARMONA",
+  "fecha_generacion": "2026-02-09T08:33:03.270498",
+  "metricas": {
+    "agente": "Olave Tomas",
+    "agente_codigo": "MZA 9",
+    "equipo": "MELANIE CARMONA",
+    "evaluaciones": {
+      "total_evaluadas": 65,
+      "puntaje_promedio": 20.3,
+      "puntaje_min": 0,
+      "puntaje_max": 70,
+      "desviacion_std": 22.8,
+      "llamadas_excelentes": 0,
+      "llamadas_buenas": 6,
+      "llamadas_regulares": 11,
+      "llamadas_criticas": 48,
+      "criterios": {
+        "saludo_presentacion": 15.8,
+        "identificacion_cliente": 39.4,
+        "deteccion_necesidades": 18.3,
+        "oferta_productos": 27.4,
+        "manejo_objeciones": 15.5,
+        "cierre": 9.1,
+        "despedida": 37.8,
+        "proactividad": 6.8,
+        "empatia": 22.3,
+        "resolucion_problemas": 7.2
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 28,
+        "Proactividad": 23,
+        "Oferta de productos": 20,
+        "Manejo de objeciones": 19,
+        "Cierre": 15
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 13,
+        "Despedida": 6,
+        "Saludo y presentación": 6,
+        "Despedida cordial.": 5,
+        "Empatía": 4
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 70.0,
+          "resumen": "El agente se presenta y verifica la identidad, detecta las necesidades del cliente y ofrece un plan. Maneja las objeciones con empatía y explica las mejoras de la compañía. El cierre no se completa. No ofrece productos adicionales."
+        },
+        {
+          "puntaje_total": 70.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente. Detecta las necesidades del cliente y ofrece un plan. Maneja la objeción del cliente sobre el horario. Se despide correctamente. El agente necesita mejorar su proactividad al no ofrecer productos adicionales."
+        },
+        {
+          "puntaje_total": 64.0,
+          "resumen": "El agente se presenta y verifica la identidad, detecta necesidades y ofrece un plan. El cierre y la despedida no se completaron."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "Llamada improductiva. El agente no sigue los pasos correctos para una venta, no se presenta, no identifica al cliente, no detecta necesidades, no ofrece productos ni realiza un cierre."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no verifica la identidad del cliente, no detecta necesidades, no ofrece fibra, no maneja objeciones, no cierra la venta y no se despide correctamente."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no detecta necesidades, no ofrece productos, no maneja objeciones y no intenta cerrar la venta."
+        }
+      ],
+      "pct_ofrece_fibra": 7.7
+    },
+    "clasificacion": {},
+    "integral": {
+      "duracion_promedio_min": 3.1
+    },
+    "cierres": {},
+    "planes": {
+      "total_llamadas": 84,
+      "con_plan": 22,
+      "ofrece_fibra": 7,
+      "pct_plan": 26.2,
+      "pct_fibra": 8.3
+    },
+    "calidad_llamadas": {
+      "total_llamadas": 226,
+      "tmo_seg": 115.3,
+      "pct_capta_atencion": 44.7,
+      "menos_30seg": 30,
+      "corte_cliente": 158,
+      "corte_agente": 63
+    },
+    "calidad_ventas": {}
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 20.3,
+      "general": 30.6,
+      "diferencia": -10.2,
+      "percentil": 46.1
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 15.8,
+        "general": 17.9,
+        "diferencia": -2.0
+      },
+      "identificacion_cliente": {
+        "agente": 39.4,
+        "general": 49.4,
+        "diferencia": -10.0
+      },
+      "deteccion_necesidades": {
+        "agente": 18.3,
+        "general": 14.3,
+        "diferencia": 4.0
+      },
+      "oferta_productos": {
+        "agente": 27.4,
+        "general": 36.1,
+        "diferencia": -8.7
+      },
+      "manejo_objeciones": {
+        "agente": 15.5,
+        "general": 27.8,
+        "diferencia": -12.2
+      },
+      "cierre": {
+        "agente": 9.1,
+        "general": 19.5,
+        "diferencia": -10.5
+      },
+      "despedida": {
+        "agente": 37.8,
+        "general": 51.2,
+        "diferencia": -13.3
+      },
+      "proactividad": {
+        "agente": 6.8,
+        "general": 8.5,
+        "diferencia": -1.7
+      },
+      "empatia": {
+        "agente": 22.3,
+        "general": 37.5,
+        "diferencia": -15.2
+      },
+      "resolucion_problemas": {
+        "agente": 7.2,
+        "general": 21.0,
+        "diferencia": -13.8
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Olave Tomas\n\n### 1. DIAGNOSTICO GENERAL\nEl desempeño actual de Olave Tomas es **Crítico** y requiere una mejora sustancial. Su puntaje promedio de 20.3 de 100 lo ubica significativamente por debajo del promedio del equipo (30.6 de 100) y en el percentil 46.1, indicando que está en la mitad inferior del equipo. Si bien las fortalezas en Identificación del cliente y Despedida son puntos de partida positivos, existen áreas críticas que necesitan atención inmediata. Comparado con el coaching anterior del 8 de febrero, el puntaje promedio se mantiene igual, lo que sugiere que no ha habido una evolución significativa en su desempeño desde entonces. Esto resalta la necesidad de implementar un plan de acción intensivo y personalizado para desbloquear su potencial.\n\n### 2. FORTALEZAS\n*   **Identificación del cliente (39.4 de 100):** Olave tiene una base sólida para confirmar la identidad de los clientes, lo cual es fundamental para evitar errores y construir confianza.\n*   **Despedida (37.8 de 100):** Mantener una despedida cordial deja una impresión positiva, incluso si la venta no se concreta.\n*   **Empatía (22.3 de 100):** Conectar con el cliente a nivel emocional ayuda a construir una relación y entender mejor sus necesidades.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Proactividad (6.8 de 100):** La falta de proactividad limita las oportunidades de venta cruzada y aumenta el valor de la oferta inicial.\n*   **Cierre (9.1 de 100):** La baja puntuación en cierre indica dificultades para concretar la venta y convertir el interés en acción.\n*   **Manejo de objeciones (15.5 de 100):** La incapacidad para rebatir objeciones de manera efectiva resulta en la pérdida de clientes potenciales.\n\n### 4. ANALISIS POR COMPETENCIA\n*   **Saludo y presentación (15.8 de 100):** El saludo debe ser enérgico y profesional, estableciendo el tono para la conversación. **Mejora:** Comenzar con un saludo claro y conciso: \"¡Hola! Soy [Nombre], de Movistar. Tengo una oferta que le VA a interesar\".\n*   **Identificación del cliente (39.4 de 100):** Tiene un buen inicio, pero podría ser más directo. **Mejora:** Tras el saludo, confirmar directamente: \"Hola, ¿me comunico con [Nombre]?\"\n*   **Detección de necesidades (18.3 de 100):** No profundiza en las necesidades específicas del cliente. **Mejora:** Después de la identificación, preguntar: \"¿Qué es lo que más usás del celular?\" y \"¿Cuántos GB tenés?\".\n*   **Oferta de productos (27.4 de 100):** No ofrece productos de manera persuasiva y directa. **Mejora:** Sin preguntar, comentar: \"También tenemos Fibra óptica con [velocidad] que le VA a interesar para [beneficio clave]\".\n*   **Manejo de objeciones (15.5 de 100):** No responde a las objeciones de manera específica y convincente. **Mejora:** Identificar la objeción puntual y responder con un beneficio directo. Por ejemplo, si dice \"Es caro\", responder: \"Es lógico que mire el precio. A varios clientes les pasó eso... Pero si consideramos [beneficio específico], verá que vale la pena\".\n*   **Cierre (9.1 de 100):** No intenta cerrar la venta de manera efectiva. **Mejora:** Después de presentar la oferta, proceder directamente con: \"Perfecto, para activar la oferta, ¿le asigno la sucursal más cercana o prefiere que lo gestione a domicilio?\".\n*   **Despedida (37.8 de 100):** Si bien es cordial, podría ser más enfocada en el seguimiento. **Mejora:** Acompañar al cliente durante el proceso de portabilidad si acepta la oferta.\n*   **Proactividad (6.8 de 100):** No ofrece productos o servicios adicionales. **Mejora:** Después de cerrar la venta del plan principal, ofrecer directamente un servicio adicional: \"Además, para proteger su equipo, le recomiendo nuestro seguro de [nombre del seguro]\".\n*   **Empatía (22.3 de 100):** No muestra suficiente comprensión de las preocupaciones del cliente. **Mejora:** Escuchar atentamente las objeciones y responder con frases como: \"Entiendo perfectamente su preocupación...\"\n*   **Resolución de problemas (7.2 de 100):** No aborda las inquietudes del cliente de manera efectiva. **Mejora:** Validar la inquietud del cliente y ofrecer una solución concreta.\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Foco: Saludo, Identificación y Detección de Necesidades.** Acciones: Practicar el saludo inicial y la confirmación de identidad hasta que sean fluidos y naturales. Concentrarse en formular las preguntas clave para detectar las necesidades del cliente.\n**Semana 2:** **Foco: Oferta de Productos y Manejo de Objeciones.** Acciones: Practicar la presentación de la oferta de fibra sin preguntar si le interesa, y aprender a rebatir las objeciones más comunes con beneficios concretos.\n**Semana 3:** **Foco: Cierre y Proactividad.** Acciones: Implementar las técnicas de cierre directo y practicar la oferta de productos adicionales después de cerrar la venta principal.\n**Semana 4:** **Foco: Consolidación y Optimización.** Acciones: Revisar las grabaciones de las llamadas de la semana, identificar áreas de mejora y ajustar las estrategias según sea necesario.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Preguntas para detectar necesidades:** \"¿Qué es lo que más usás del celular?\" / \"¿Cuántos GB tenés?\"\n*   **Como ofrecer fibra directamente:** \"También tenemos Fibra óptica con [velocidad] que le VA a interesar para [beneficio clave]\".\n*   **Técnicas de cierre directo:** \"Perfecto, para activar la oferta, ¿le asigno la sucursal más cercana o prefiere que lo gestione a domicilio?\".\n*   **Manejo de objeciones personalizado:**\n    *   **\"Es caro\":** \"Es lógico que mire el precio. A varios clientes les pasó eso... Pero si consideramos [beneficio específico], verá que vale la pena\".\n    *   **\"Ya tengo un plan\":** \"Entiendo, pero nuestro plan de [nombre del plan] le ofrece [beneficios clave] que su plan actual no tiene. Le VA a interesar\".\n    *   **\"No me interesa la Fibra\":** \"Entiendo, pero con nuestra Fibra óptica de [velocidad], podrá [beneficios clave] sin interrupciones. Es una oferta que le VA a interesar, especialmente si [situación del cliente]\".\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio del modelo a 45 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas buenas a un 30% y reducir las llamadas críticas a un 25%.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar el porcentaje de \"Oferta de Fibra\" del 8.3% actual al 30%.\n    *   Aumentar el porcentaje de \"Cierres Exitosos\" en un 15%.\n    *   Disminuir el porcentaje de \"Cortes de Agente\" en un 50%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nOlave, sé que tenés la capacidad de superar este desafío. Tus fortalezas en la identificación del cliente y la despedida son una base sólida para construir un desempeño excepcional. Con un enfoque constante en mejorar la proactividad, el cierre y el manejo de objeciones, estoy seguro de que podrás alcanzar tus metas y convertirte en un referente dentro del equipo. ¡Confío en vos y estoy aquí para apoyarte en cada paso del camino!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": true
+}

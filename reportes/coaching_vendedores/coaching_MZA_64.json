@@ -1,0 +1,146 @@
+{
+  "agente": "Mza 64",
+  "agente_codigo": "MZA 64",
+  "equipo": "DIANA",
+  "fecha_generacion": "2026-02-09T08:34:31.182618",
+  "metricas": {
+    "agente": "Mza 64",
+    "agente_codigo": "MZA 64",
+    "equipo": "DIANA",
+    "evaluaciones": {
+      "total_evaluadas": 59,
+      "puntaje_promedio": 25.5,
+      "puntaje_min": 0,
+      "puntaje_max": 86,
+      "desviacion_std": 24.2,
+      "llamadas_excelentes": 1,
+      "llamadas_buenas": 6,
+      "llamadas_regulares": 13,
+      "llamadas_criticas": 39,
+      "criterios": {
+        "saludo_presentacion": 16.9,
+        "identificacion_cliente": 58.5,
+        "deteccion_necesidades": 15.8,
+        "oferta_productos": 27.1,
+        "manejo_objeciones": 26.8,
+        "cierre": 11.7,
+        "despedida": 56.9,
+        "proactividad": 6.8,
+        "empatia": 34.4,
+        "resolucion_problemas": 17.3
+      },
+      "areas_mejora_frecuentes": {
+        "Detección de necesidades": 29,
+        "Manejo de objeciones": 19,
+        "Presentación": 18,
+        "Oferta de productos": 17,
+        "Proactividad": 16
+      },
+      "fortalezas_frecuentes": {
+        "Identificación del cliente": 15,
+        "Despedida cordial": 9,
+        "Empatía": 7,
+        "Despedida": 7,
+        "Manejo de objeciones": 6
+      },
+      "ejemplos_mejores": [
+        {
+          "puntaje_total": 86.0,
+          "resumen": "El agente se presenta correctamente, identifica al cliente y detecta sus necesidades. Ofrece planes y la posibilidad de un descuento por tener fibra Movistar. Maneja las objeciones, y completa el proceso de cierre. Muestra proactividad al ofrecer otros productos."
+        },
+        {
+          "puntaje_total": 76.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente.  Ofrece un plan y menciona fibra.  Maneja las objeciones y realiza un intento de cierre.  Muestra empatía y se despide correctamente. El saludo inicial y la detección de necesidades podrían ser más sólidos."
+        },
+        {
+          "puntaje_total": 75.0,
+          "resumen": "El agente se presenta y verifica la identidad del cliente, ofrece un plan y maneja las objeciones con empatía. Sin embargo, no logra el cierre y no ofrece productos adicionales."
+        }
+      ],
+      "ejemplos_peores": [
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente tiene deficiencias en la presentación, identificación del cliente, detección de necesidades, manejo de objeciones y cierre. La comunicación es poco clara y no se enfoca en ofrecer soluciones personalizadas."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con los criterios de evaluación. No se presenta correctamente, no identifica al cliente, no detecta necesidades, no ofrece productos de forma directa, no completa el cierre y no muestra proactividad."
+        },
+        {
+          "puntaje_total": 0.0,
+          "resumen": "El agente no cumple con ninguna de las reglas del negocio, no se presenta correctamente, no detecta necesidades, no ofrece productos directamente, no cierra la venta."
+        }
+      ],
+      "pct_ofrece_fibra": 5.1
+    },
+    "clasificacion": {},
+    "integral": {},
+    "cierres": {},
+    "planes": {},
+    "calidad_llamadas": {},
+    "calidad_ventas": {}
+  },
+  "comparativa": {
+    "puntaje_modelo": {
+      "agente": 25.5,
+      "general": 30.6,
+      "diferencia": -5.0,
+      "percentil": 49.7
+    },
+    "criterios": {
+      "saludo_presentacion": {
+        "agente": 16.9,
+        "general": 17.9,
+        "diferencia": -0.9
+      },
+      "identificacion_cliente": {
+        "agente": 58.5,
+        "general": 49.4,
+        "diferencia": 9.0
+      },
+      "deteccion_necesidades": {
+        "agente": 15.8,
+        "general": 14.3,
+        "diferencia": 1.4
+      },
+      "oferta_productos": {
+        "agente": 27.1,
+        "general": 36.1,
+        "diferencia": -9.0
+      },
+      "manejo_objeciones": {
+        "agente": 26.8,
+        "general": 27.8,
+        "diferencia": -1.0
+      },
+      "cierre": {
+        "agente": 11.7,
+        "general": 19.5,
+        "diferencia": -7.8
+      },
+      "despedida": {
+        "agente": 56.9,
+        "general": 51.2,
+        "diferencia": 5.8
+      },
+      "proactividad": {
+        "agente": 6.8,
+        "general": 8.5,
+        "diferencia": -1.7
+      },
+      "empatia": {
+        "agente": 34.4,
+        "general": 37.5,
+        "diferencia": -3.1
+      },
+      "resolucion_problemas": {
+        "agente": 17.3,
+        "general": 21.0,
+        "diferencia": -3.8
+      }
+    }
+  },
+  "analisis_coaching": "## ANALISIS DEL VENDEDOR: Mza 64\n\n### 1. DIAGNOSTICO GENERAL\nEl nivel actual del vendedor Mza 64 es **Crítico**. Su puntaje promedio de 25.5 de 100 está significativamente por debajo del promedio del equipo, que es de 30.6 de 100, ubicándolo en el percentil 49.7. Esto indica que casi la mitad del equipo tiene un mejor desempeño. El análisis revela deficiencias en áreas clave como la oferta de productos y el cierre de ventas. Comparado con el coaching anterior, no se observa una mejora significativa en las áreas previamente identificadas como prioritarias. Existe un gran potencial de mejora, especialmente si se enfoca en estrategias de venta más directas y efectivas.\n\n### 2. FORTALEZAS\n*   **Identificación del Cliente:** Con un puntaje de 58.5 de 100, Mza 64 muestra una habilidad aceptable para verificar la identidad del cliente. Esto permite asegurar que se está hablando con la persona correcta al inicio de la llamada.\n*   **Despedida:** Un puntaje de 56.9 de 100 en la despedida indica que el vendedor es cordial al finalizar la llamada, dejando una impresión positiva.\n*   **Empatía:** Un puntaje de 34.4 de 100, aunque mejorable, sugiere que Mza 64 muestra cierta comprensión hacia los clientes, lo cual es importante para construir una relación.\n\n### 3. AREAS CRITICAS DE MEJORA\n*   **Oferta de Productos:** Con un puntaje de 27.1 de 100, Mza 64 necesita mejorar drásticamente la forma en que presenta los productos. Debe ofrecerlos de manera más directa y persuasiva, sin preguntar si el cliente está interesado, sino afirmando que el producto le será de utilidad.\n*   **Cierre:** El puntaje de 11.7 de 100 indica una gran dificultad para cerrar ventas. Es crucial implementar técnicas de cierre más agresivas y efectivas, asignando sucursal o buscando domicilio sin vacilar.\n*   **Proactividad:** Con un puntaje de 6.8 de 100, el vendedor no está mostrando iniciativa para ofrecer productos adicionales o soluciones complementarias. Debe ser más proactivo en identificar y satisfacer las necesidades del cliente.\n\n### 4. ANALISIS POR COMPETENCIA\n\n*   **Saludo y Presentación:** 16.9 de 100. Debe ser más enérgico y directo al saludar. Evitar frases genéricas y concentrarse en captar la atención desde el inicio.\n    *   **Cómo mejorar:** Comienza con un saludo entusiasta y una frase que genere curiosidad. Por ejemplo: \"Hola [Nombre], tengo una oferta exclusiva de Movistar que le va a interesar\".\n*   **Identificación del Cliente:** 58.5 de 100. Ya lo hace bien.\n    *   **Cómo mejorar:** Seguir preguntando al inicio: \"Hola, ¿me comunico con [Nombre]?\"\n*   **Detección de Necesidades:** 15.8 de 100. No está haciendo las preguntas necesarias para entender las necesidades del cliente.\n    *   **Qué hace mal:** No indaga lo suficiente sobre el uso actual del cliente y sus necesidades específicas.\n    *   **Cómo mejorar:** Preguntar directamente: \"¿Qué es lo que más usás del celular?\" y \"¿Cuántos GB tenés?\".\n*   **Oferta de Productos:** 27.1 de 100. La oferta no es directa ni persuasiva.\n    *   **Qué hace mal:** Utiliza frases como \"podría interesarle\" en lugar de afirmar que le va a interesar.\n    *   **Cómo mejorar:** Presentar la oferta como algo valioso y útil para el cliente. \"Tengo una oferta que le VA a interesar. Con este plan, va a tener [beneficio] y [beneficio].\"\n*   **Manejo de Objeciones:** 26.8 de 100. No está rebatido las objeciones de manera efectiva.\n    *   **Qué hace mal:** No responde de manera puntual a cada objeción.\n    *   **Cómo mejorar:** Escuchar atentamente la objeción y responder con un argumento específico. \"Es lógico que mire el precio. A varios clientes les pasó eso, pero cuando ven los beneficios adicionales, se dan cuenta de que vale la pena\".\n*   **Cierre:** 11.7 de 100. No está cerrando las ventas.\n    *   **Qué hace mal:** No está asignando sucursal o buscando domicilio de manera directa.\n    *   **Cómo mejorar:** Después de presentar la oferta, cerrar con: \"Perfecto, ¿le queda bien que lo activemos en la sucursal de [ubicación] o prefiere que lo activemos directamente en su domicilio?\"\n*   **Despedida:** 56.9 de 100. Ya lo hace bien.\n    *   **Cómo mejorar:** Seguir con la cordialidad al despedirse.\n*   **Proactividad:** 6.8 de 100. No ofrece productos adicionales.\n    *   **Qué hace mal:** No aprovecha la oportunidad para ofrecer fibra o otros servicios.\n    *   **Cómo mejorar:** Después de presentar el plan móvil, ofrecer fibra directamente: \"Además, tengo una excelente oferta de fibra óptica para su hogar. Le va a encantar la velocidad y estabilidad\".\n*   **Empatía:** 34.4 de 100. Puede mejorar la conexión con el cliente.\n    *   **Qué hace mal:** No demuestra suficiente comprensión hacia las preocupaciones del cliente.\n    *   **Cómo mejorar:** Escuchar activamente y mostrar interés genuino en resolver sus problemas.\n*   **Resolución de Problemas:** 17.3 de 100. No ofrece soluciones personalizadas.\n    *   **Qué hace mal:** No se enfoca en ofrecer soluciones específicas a las necesidades del cliente.\n    *   **Cómo mejorar:** Adaptar la oferta a las necesidades del cliente y destacar los beneficios que le son relevantes.\n\n### 5. PLAN DE ACCION SEMANAL\n**Semana 1:** **Cierre Directo y Oferta de Fibra.**  Practicar técnicas de cierre directo, asignando sucursal o buscando domicilio de inmediato después de presentar la oferta. Incorporar la oferta de fibra en cada llamada, sin preguntar si le interesa.\n**Semana 2:** **Manejo de Objeciones.** Enfocarse en identificar las objeciones más comunes y preparar respuestas puntuales para cada una. Practicar role-playing con el equipo para mejorar la confianza y la capacidad de rebatir objeciones de manera efectiva.\n**Semana 3:** **Detección de Necesidades.** Practicar preguntas para detectar necesidades. Incorporar preguntas claves como \"¿Qué es lo que más usás del celular?\" y \"¿Cuántos GB tenés?\".\n**Semana 4:** **Optimización y Proactividad.** Revisar las grabaciones de las llamadas de la semana anterior e identificar áreas de mejora. Fomentar la proactividad ofreciendo productos adicionales y soluciones complementarias.\n\n### 6. TECNICAS Y SPEACH RECOMENDADOS\n*   **Frases para verificar identidad:** \"Hola, ¿me comunico con [Nombre]?\"\n*   **Preguntas para detectar necesidades:** \"¿Qué es lo que más usás del celular?\" / \"¿Cuántos GB tenés?\"\n*   **Como ofrecer fibra directamente:** \"Además, tengo una excelente oferta de fibra óptica para su hogar. Le va a encantar la velocidad y estabilidad. ¿Le parece bien si vemos las opciones disponibles?\"\n*   **Técnicas de cierre directo:** \"Perfecto, ¿le queda bien que lo activemos en la sucursal de [ubicación] o prefiere que lo activemos directamente en su domicilio?\"\n*   **Manejo de objeciones personalizado:** \"Es lógico que mire el precio. A varios clientes les pasó eso, pero cuando ven los beneficios adicionales, se dan cuenta de que vale la pena. Con este plan, va a tener [beneficio] y [beneficio].\"\n\n### 7. METAS CUANTIFICABLES\n*   **Meta de puntaje del modelo a 30 días:** Aumentar el puntaje promedio del modelo a 45 de 100.\n*   **Meta de calidad de llamadas:** Aumentar el porcentaje de llamadas \"buenas\" y \"excelentes\" a un 30% del total.\n*   **KPIs específicos a mejorar:**\n    *   Aumentar el porcentaje de llamadas en las que se ofrece fibra al 75%.\n    *   Mejorar la tasa de cierre en un 15%.\n\n### 8. MENSAJE MOTIVACIONAL PERSONALIZADO\nMza 64, sé que tenés el potencial para superar este desafío. Con un enfoque más directo y agresivo en la oferta de productos y el cierre de ventas, estoy seguro de que podrás alcanzar tus metas y convertirte en un vendedor de alto rendimiento en Movistar. Confío en vos y en tu capacidad para lograrlo. ¡Vamos por más!\n",
+  "modelo_usado": "gemini-2.0-flash",
+  "tiene_historial": true
+}
