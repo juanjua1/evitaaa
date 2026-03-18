@@ -7060,12 +7060,11 @@ def pagina_calidad():
             <ul style='margin: 10px 0;'>
                 <li><strong>Acumuladores de Agentes (Mitrol)</strong> - Tiempos y métricas de llamadas</li>
                 <li><strong>Solicitudes (Customer)</strong> - Datos de ventas</li>
-                <li><strong>Usuarios Mitrol (.xlsx)</strong> - Mapeo de agentes a equipos/turnos</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
         
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         
         with col1:
             st.markdown("#### 📞 Archivo Mitrol (Acumuladores)")
@@ -7103,66 +7102,34 @@ def pagina_calidad():
                 except Exception as e:
                     st.error(f"❌ Error: {str(e)}")
         
-        with col3:
-            st.markdown("#### 👥 Usuarios Mitrol (Mapeo)")
-            archivo_usuarios = st.file_uploader(
-                "Subir Usuarios Mitrol (XLSX)", 
-                type=['xlsx'], 
-                key='calidad_usuarios_mitrol'
-            )
-            
-            if archivo_usuarios is not None:
-                try:
-                    df_usuarios = pd.read_excel(archivo_usuarios, engine='openpyxl')
-                    df_usuarios.columns = df_usuarios.columns.str.strip()
-                    # Filtrar solo agentes (no supervisores)
-                    df_agentes_mitrol = df_usuarios[df_usuarios['Perfil'] == 'Agentes'].copy()
-                    # Normalizar columna Agente para matching
-                    df_agentes_mitrol['Agente_norm'] = df_agentes_mitrol['Agente'].str.lower().str.strip().str.replace(' ', '').str.replace('_', '')
-                    # Obtener equipo desde columna Turno mañana
-                    col_turno = next((c for c in df_agentes_mitrol.columns if 'turno' in c.lower() and 'maña' in c.lower()), None)
-                    if col_turno:
-                        df_agentes_mitrol['Equipo'] = df_agentes_mitrol[col_turno].fillna('Sin Equipo').str.strip()
-                    else:
-                        df_agentes_mitrol['Equipo'] = 'Sin Equipo'
-                    # Normalizar Usuario para cruzar con LISTADO-DE-VENDEDORES
-                    df_agentes_mitrol['Usuario_norm'] = df_agentes_mitrol['Usuario'].str.lower().str.strip()
-                    # Intentar obtener nombres reales desde LISTADO-DE-VENDEDORES
-                    ruta_listado = os.path.join(os.path.dirname(__file__), 'LISTADO-DE-VENDEDORES.csv')
-                    if os.path.exists(ruta_listado):
-                        try:
-                            df_listado = pd.read_csv(ruta_listado)
-                            df_listado.columns = ['Lst_Usuario', 'Lst_Nombre', 'Lst_Equipo'] + [f'col_{i}' for i in range(len(df_listado.columns)-3)]
-                            df_listado['Usuario_norm'] = df_listado['Lst_Usuario'].str.lower().str.strip().str.replace(' ', '').str.replace('\t', '')
-                            df_listado = df_listado[df_listado['Usuario_norm'] != 'usuario']
-                            df_agentes_mitrol = df_agentes_mitrol.merge(
-                                df_listado[['Usuario_norm', 'Lst_Nombre']],
-                                on='Usuario_norm',
-                                how='left'
-                            )
-                            df_agentes_mitrol['Nombre'] = df_agentes_mitrol['Lst_Nombre'].fillna(df_agentes_mitrol['Agente'])
-                            df_agentes_mitrol.drop(columns=['Lst_Nombre'], inplace=True)
-                        except Exception:
-                            df_agentes_mitrol['Nombre'] = df_agentes_mitrol['Agente']
-                    else:
-                        df_agentes_mitrol['Nombre'] = df_agentes_mitrol['Agente']
-                    
-                    st.session_state['df_mapeo_vendedores'] = df_agentes_mitrol
-                    st.success(f"✅ Usuarios Mitrol cargado: {len(df_agentes_mitrol)} agentes")
-                    
-                    # Resumen por equipo (filtrar estados especiales)
-                    equipos = df_agentes_mitrol['Equipo'].value_counts()
-                    equipos = equipos[~equipos.index.isin(['DADO DE BAJA', 'LIBRE', 'CAPA', 'Sin Equipo', ''])]
-                    if len(equipos) > 0:
-                        cols_eq = st.columns(min(len(equipos), 6))
-                        for i, (equipo, count) in enumerate(equipos.items()):
-                            with cols_eq[i % len(cols_eq)]:
-                                st.metric(f"👥 {equipo}", count)
-                    
-                    with st.expander("👁️ Vista previa Usuarios"):
-                        st.dataframe(df_agentes_mitrol[['Agente', 'Usuario', 'Nombre', 'Equipo']].head(10), use_container_width=True)
-                except Exception as e:
-                    st.error(f"❌ Error: {str(e)}")
+        # Cargar mapeo de vendedores
+        st.markdown("---")
+        st.markdown("#### 🗂️ Mapeo de Vendedores")
+        
+        # Intentar cargar el archivo de listado automáticamente
+        ruta_listado = os.path.join(os.path.dirname(__file__), 'LISTADO-DE-VENDEDORES.csv')
+        if os.path.exists(ruta_listado):
+            try:
+                df_listado = pd.read_csv(ruta_listado, encoding='latin-1')
+                # Limpiar columnas y crear mapeo
+                df_listado.columns = ['Usuario', 'Nombre', 'Equipo'] + [f'col_{i}' for i in range(len(df_listado.columns)-3)]
+                df_listado = df_listado[['Usuario', 'Nombre', 'Equipo']].dropna(subset=['Usuario'])
+                df_listado = df_listado[df_listado['Usuario'] != 'Usuario']  # Quitar header
+                # Normalizar Usuario
+                df_listado['Usuario_norm'] = df_listado['Usuario'].str.lower().str.strip().str.replace(' ', '').str.replace('\t', '')
+                st.session_state['df_mapeo_vendedores'] = df_listado
+                st.success(f"✅ Mapeo de vendedores cargado: {len(df_listado)} agentes")
+                
+                # Mostrar resumen por equipo
+                equipos = df_listado['Equipo'].value_counts()
+                cols_eq = st.columns(len(equipos))
+                for i, (equipo, count) in enumerate(equipos.items()):
+                    with cols_eq[i]:
+                        st.metric(f"👥 {equipo}", count)
+            except Exception as e:
+                st.warning(f"⚠️ No se pudo cargar el mapeo automático: {str(e)}")
+        else:
+            st.info("ℹ️ Coloca el archivo LISTADO-DE-VENDEDORES.csv en la carpeta del proyecto")
         
         # Botón procesar
         st.markdown("---")
@@ -7172,8 +7139,6 @@ def pagina_calidad():
                 errores.append("Falta archivo Mitrol")
             if 'df_calidad_solicitudes' not in st.session_state:
                 errores.append("Falta archivo Solicitudes")
-            if 'df_mapeo_vendedores' not in st.session_state:
-                errores.append("Falta archivo Usuarios Mitrol (.xlsx)")
             
             if errores:
                 st.warning(f"⚠️ {', '.join(errores)}")
@@ -7181,21 +7146,21 @@ def pagina_calidad():
                 with st.spinner("Procesando datos..."):
                     # Procesar Mitrol
                     df_mitrol = st.session_state['df_calidad_mitrol'].copy()
-                    df_mapeo = st.session_state['df_mapeo_vendedores']
+                    df_mapeo = st.session_state.get('df_mapeo_vendedores', pd.DataFrame())
                     
                     # Normalizar columna Agente de Mitrol
                     if 'Agente' in df_mitrol.columns:
-                        df_mitrol['Agente_norm'] = df_mitrol['Agente'].str.lower().str.strip().str.replace(' ', '').str.replace('_', '')
+                        df_mitrol['Agente_norm'] = df_mitrol['Agente'].str.lower().str.strip().str.replace(' ', '')
                     
-                    # Unir con mapeo del xlsx subido (match por Agente_norm)
-                    if 'Agente_norm' in df_mitrol.columns:
+                    # Unir con mapeo
+                    if not df_mapeo.empty and 'Agente_norm' in df_mitrol.columns:
                         df_mitrol = df_mitrol.merge(
-                            df_mapeo[['Agente_norm', 'Nombre', 'Equipo']],
-                            on='Agente_norm',
+                            df_mapeo[['Usuario_norm', 'Nombre', 'Equipo']],
+                            left_on='Agente_norm',
+                            right_on='Usuario_norm',
                             how='left'
                         )
                         df_mitrol['Vendedor'] = df_mitrol['Nombre'].fillna(df_mitrol['Agente'])
-                        df_mitrol['Equipo'] = df_mitrol['Equipo'].fillna('Sin Equipo')
                     else:
                         df_mitrol['Vendedor'] = df_mitrol.get('Agente', 'Desconocido')
                         df_mitrol['Equipo'] = 'Sin Equipo'
@@ -8158,6 +8123,70 @@ def pagina_metricas_calidad():
     
     st.markdown('<p class="main-header">📊 COMMAND · Métricas de Calidad</p>', unsafe_allow_html=True)
     
+    # =========================================================================
+    # UPLOADER: Usuarios Mitrol (xlsx)
+    # =========================================================================
+    st.markdown("""
+    <div style='background: #EFF6FF; padding: 15px; border-radius: 10px; border-left: 4px solid #3B82F6; margin-bottom: 20px;'>
+        <strong>📋 Mapeo de Agentes:</strong> Suba el archivo de Usuarios Mitrol (.xlsx) para mapear
+        los códigos de agente (MZA xx) a nombres reales y equipos en las secciones de <strong>Tiempos</strong> y <strong>Llamadas</strong>.
+    </div>
+    """, unsafe_allow_html=True)
+    
+    archivo_usuarios_mitrol = st.file_uploader(
+        "📄 Subir Usuarios Mitrol (xlsx)",
+        type=['xlsx'],
+        key='metricas_usuarios_mitrol'
+    )
+    
+    mapeo_mitrol = {}  # agente_norm -> {'nombre': ..., 'equipo': ...}
+    
+    if archivo_usuarios_mitrol is not None:
+        try:
+            df_xlsx = pd.read_excel(archivo_usuarios_mitrol, engine='openpyxl')
+            # Filtrar solo perfil "Agentes" y estado activo
+            if 'Perfil' in df_xlsx.columns:
+                df_xlsx = df_xlsx[df_xlsx['Perfil'].astype(str).str.strip().str.lower() == 'agentes']
+            if 'Estado' in df_xlsx.columns:
+                df_xlsx = df_xlsx[df_xlsx['Estado'].astype(str).str.strip().str.upper() != 'DADO DE BAJA']
+            
+            # Cargar LISTADO-DE-VENDEDORES.csv para obtener nombres reales
+            ruta_listado = os.path.join(os.path.dirname(__file__), 'LISTADO-DE-VENDEDORES.csv')
+            mapeo_nombres = {}
+            if os.path.exists(ruta_listado):
+                try:
+                    df_listado = pd.read_csv(ruta_listado, encoding='latin-1')
+                    df_listado.columns = ['Usuario', 'Nombre', 'Equipo'] + [f'col_{i}' for i in range(len(df_listado.columns) - 3)]
+                    df_listado = df_listado[['Usuario', 'Nombre']].dropna(subset=['Usuario'])
+                    df_listado = df_listado[df_listado['Usuario'] != 'Usuario']
+                    for _, row in df_listado.iterrows():
+                        usr_norm = str(row['Usuario']).lower().strip().replace(' ', '').replace('\t', '')
+                        mapeo_nombres[usr_norm] = str(row['Nombre']).strip()
+                except Exception:
+                    pass
+            
+            # Construir mapeo desde xlsx
+            col_agente = 'Agente' if 'Agente' in df_xlsx.columns else None
+            col_turno = 'Turno mañana' if 'Turno mañana' in df_xlsx.columns else ('Turno Mañana' if 'Turno Mañana' in df_xlsx.columns else None)
+            col_usuario = 'Usuario' if 'Usuario' in df_xlsx.columns else None
+            
+            if col_agente:
+                for _, row in df_xlsx.iterrows():
+                    agente_raw = str(row[col_agente]).strip()
+                    agente_norm = agente_raw.lower().replace(' ', '').replace('_', '')
+                    equipo = str(row[col_turno]).strip() if col_turno and pd.notna(row.get(col_turno)) else 'Sin Equipo'
+                    usuario_norm = str(row[col_usuario]).lower().strip().replace(' ', '') if col_usuario and pd.notna(row.get(col_usuario)) else agente_norm
+                    nombre_real = mapeo_nombres.get(usuario_norm, agente_raw)
+                    mapeo_mitrol[agente_norm] = {'nombre': nombre_real, 'equipo': equipo}
+                
+                st.success(f"✅ Usuarios Mitrol cargado: {len(mapeo_mitrol)} agentes activos")
+            else:
+                st.warning("⚠️ No se encontró la columna 'Agente' en el archivo xlsx")
+        except Exception as e:
+            st.error(f"❌ Error al leer el archivo xlsx: {str(e)}")
+    
+    st.markdown("---")
+    
     # Obtener permisos del usuario actual
     permisos = obtener_permisos_usuario()
     
@@ -8177,6 +8206,21 @@ def pagina_metricas_calidad():
     tiempos_vendedor = datos_tiempos.get('por_vendedor', [])
     ventas_vendedor = datos_ventas.get('por_vendedor', [])
     llamadas_vendedor = datos_llamadas.get('por_vendedor', [])
+    
+    # =========================================================================
+    # APLICAR MAPEO XLSX A TIEMPOS Y LLAMADAS (no a ventas)
+    # =========================================================================
+    if mapeo_mitrol:
+        for v in tiempos_vendedor:
+            agente_norm = str(v.get('agente', '')).lower().replace(' ', '').replace('_', '')
+            if agente_norm in mapeo_mitrol:
+                v['vendedor'] = mapeo_mitrol[agente_norm]['nombre']
+                v['equipo'] = mapeo_mitrol[agente_norm]['equipo']
+        for v in llamadas_vendedor:
+            agente_norm = str(v.get('agente', '')).lower().replace(' ', '').replace('_', '')
+            if agente_norm in mapeo_mitrol:
+                v['vendedor'] = mapeo_mitrol[agente_norm]['nombre']
+                v['equipo'] = mapeo_mitrol[agente_norm]['equipo']
     
     # =========================================================================
     # APLICAR FILTRO POR PERMISOS
